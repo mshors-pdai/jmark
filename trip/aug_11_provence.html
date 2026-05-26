@@ -1316,27 +1316,92 @@
 
     </div>
 
-    <!-- Budget summary -->
-    <div style="max-width: 850px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px;">
+    <!-- Selections callout -->
+    <div style="max-width: 850px; margin: 4rem auto 1.5rem; padding: 1.75rem 2.5rem; background: rgba(196,98,45,0.1); border-radius: 12px; border-left: 4px solid var(--provence-terra); display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div>
+        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.6); margin-bottom: 0.4rem;">Selected hotel</div>
+        <div style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: white;">The Address Cassis ✓</div>
+        <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 0.25rem;">Adults-only · 5 nights</div>
+      </div>
+      <div>
+        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.6); margin-bottom: 0.4rem;">Selected restaurant</div>
+        <div style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: white;">La Villa Madie ★★★ ✓</div>
+        <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 0.25rem;">Day 3 · with wine pairing</div>
+      </div>
+    </div>
+
+    <!-- Budget table -->
+    <div style="max-width: 850px; margin: 0 auto; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px;">
       <div style="text-align: center; margin-bottom: 2rem;">
         <span class="eyebrow" style="color: rgba(255,255,255,0.7);">Estimated Total</span>
         <h3 style="color: white; margin-top: 0.5rem;">Trip Budget · Two Travelers</h3>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem 3rem;">
-        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>Flights (2 × AF65 round-trip)</span> <strong style="color: white;">$1,800</strong></div>
-        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>Hotel (5 nights · Les Roches Blanches)</span> <strong style="color: white;">$4,800</strong></div>
-        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>Car rental + fuel</span> <strong style="color: white;">$450</strong></div>
-        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>Boat charter (private RIB)</span> <strong style="color: white;">$900</strong></div>
-        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>Wineries + tastings</span> <strong style="color: white;">$300</strong></div>
-        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>La Villa Madie dinner</span> <strong style="color: white;">$700</strong></div>
-        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>Other meals (5 dinners + 5 lunches)</span> <strong style="color: white;">$2,200</strong></div>
-        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>Activities + spa + cooking class</span> <strong style="color: white;">$550</strong></div>
-      </div>
-      <div style="display: flex; justify-content: space-between; padding: 1.5rem 0 0; margin-top: 1rem; border-top: 2px solid rgba(255,255,255,0.2); font-family: 'Playfair Display', serif; font-size: 1.5rem;">
-        <span style="color: white;">Total · all in</span>
-        <strong style="color: var(--provence-terra);">≈ $11,700</strong>
-      </div>
-      <p style="text-align: center; color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 1rem;">Per person: ~$5,850 · Range: $9,500 (lower-priced hotel + skip 3-Michelin) to $14,000 (Les Roches Blanches sea-view suite)</p>
+
+      <table style="width: 100%; border-collapse: collapse; color: white;">
+        <thead>
+          <tr style="border-bottom: 2px solid rgba(255,255,255,0.15);">
+            <th style="text-align: left; padding: 1rem 0.5rem; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.7);">Category</th>
+            <th style="text-align: left; padding: 1rem 0.5rem; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.7);">Detail</th>
+            <th style="text-align: right; padding: 1rem 0.5rem; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.7);">USD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.85);">✈️ Flights</td>
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.6); font-size: 0.9rem;">2 × Air France AF65, LAX↔MRS via CDG</td>
+            <td style="padding: 1rem 0.5rem; text-align: right; font-weight: 600;">$1,800</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(196,98,45,0.05);">
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.85);">🏨 Hotel</td>
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.6); font-size: 0.9rem;">The Address Cassis · 5 nights · ~€550/night</td>
+            <td style="padding: 1rem 0.5rem; text-align: right; font-weight: 600;">$2,950</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.85);">🚗 Car rental</td>
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.6); font-size: 0.9rem;">Compact automatic + fuel, 5 days</td>
+            <td style="padding: 1rem 0.5rem; text-align: right; font-weight: 600;">$450</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(196,98,45,0.05);">
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.85);">⛵ Boat charter</td>
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.6); font-size: 0.9rem;">L'Eden Boat private RIB, 6 hours</td>
+            <td style="padding: 1rem 0.5rem; text-align: right; font-weight: 600;">$900</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.85);">🍷 Wineries</td>
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.6); font-size: 0.9rem;">4 tastings (Tempier, Pibarnon, Clos SM, Bagnol)</td>
+            <td style="padding: 1rem 0.5rem; text-align: right; font-weight: 600;">$300</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(196,98,45,0.05);">
+            <td style="padding: 1rem 0.5rem; color: white; font-weight: 600;">⭐ La Villa Madie ★★★</td>
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.6); font-size: 0.9rem;">Tasting menu + wine pairing for two</td>
+            <td style="padding: 1rem 0.5rem; text-align: right; font-weight: 600;">$850</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.85);">🍽️ Other meals</td>
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.6); font-size: 0.9rem;">4 dinners + 5 lunches + breakfasts</td>
+            <td style="padding: 1rem 0.5rem; text-align: right; font-weight: 600;">$2,200</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(196,98,45,0.05);">
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.85);">🧖 Activities &amp; spa</td>
+            <td style="padding: 1rem 0.5rem; color: rgba(255,255,255,0.6); font-size: 0.9rem;">Sea-water spa, cooking class, e-bike, fuel</td>
+            <td style="padding: 1rem 0.5rem; text-align: right; font-weight: 600;">$550</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr style="border-top: 2px solid rgba(255,255,255,0.25);">
+            <td colspan="2" style="padding: 1.5rem 0.5rem 0.5rem; font-family: 'Playfair Display', serif; font-size: 1.5rem; color: white;">Total · all in</td>
+            <td style="padding: 1.5rem 0.5rem 0.5rem; text-align: right; font-family: 'Playfair Display', serif; font-size: 1.75rem; color: var(--provence-terra); font-weight: 700;">$10,000</td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding: 0 0.5rem 0.5rem; color: rgba(255,255,255,0.6); font-size: 0.95rem;">Per person</td>
+            <td style="padding: 0 0.5rem 0.5rem; text-align: right; color: rgba(255,255,255,0.85); font-size: 1.1rem;">$5,000</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <p style="text-align: center; color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 1.5rem;">
+        Honest range: <strong style="color: rgba(255,255,255,0.7);">$8,500</strong> (skip Michelin + boat charter) to <strong style="color: rgba(255,255,255,0.7);">$13,500</strong> (upgrade to Les Roches Blanches sea-view suite).
+      </p>
     </div>
   </div>
 </section>
