@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>August 2026 — Galicia vs. Provence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --galicia-deep: #0d3b4f;
+    --galicia-sea: #2a7a8c;
+    --galicia-sage: #7ba696;
+    --galicia-cream: #f5f0e6;
+    --galicia-accent: #c8553d;
+    --provence-lavender: #5a4a7a;
+    --provence-terra: #c4622d;
+    --provence-olive: #8a8f5a;
+    --provence-cream: #faf4e8;
+    --provence-sky: #4a90a4;
+    --mallorca-stone: #b8895b;
+    --mallorca-sea: #1e6091;
+    --mallorca-olive: #6b7a3f;
+    --mallorca-cream: #f8f1e4;
+    --mallorca-accent: #c97b3e;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    line-height: 1.6;
+    background: #fafaf7;
+  }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
+  h3 { font-size: 1.6rem; line-height: 1.25; }
+  h4 { font-size: 1.15rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    opacity: 0.7;
+  }
+
+  /* ===== Top Nav ===== */
+  .topnav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    padding: 1rem 0;
+  }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; }
+  .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
+  .topnav .tabs { display: flex; gap: 0.5rem; }
+  .topnav .tab {
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+  }
+  .topnav .tab:hover { background: rgba(0,0,0,0.04); }
+  .topnav .tab.galicia { color: var(--galicia-deep); border-color: var(--galicia-sea); }
+  .topnav .tab.galicia:hover { background: var(--galicia-deep); color: white; }
+  .topnav .tab.provence { color: var(--provence-lavender); border-color: var(--provence-lavender); }
+  .topnav .tab.provence:hover { background: var(--provence-lavender); color: white; }
+  .topnav .tab.mallorca { color: var(--mallorca-sea); border-color: var(--mallorca-stone); }
+  .topnav .tab.mallorca:hover { background: var(--mallorca-sea); color: white; }
+
+  /* ===== Intro Hero ===== */
+  .intro-hero {
+    padding: 6rem 0 4rem;
+    text-align: center;
+    background: linear-gradient(180deg, #faf4e8 0%, #fafaf7 100%);
+  }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; }
+  .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
+  .intro-hero .meta {
+    display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap;
+    margin-top: 2rem; padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    max-width: 800px; margin-left: auto; margin-right: auto;
+  }
+  .intro-hero .meta-item .label {
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em;
+    color: var(--muted); margin-bottom: 0.3rem;
+  }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+
+  /* ===== Destination Section ===== */
+  .destination { padding: 6rem 0 4rem; }
+  .destination.galicia { background: var(--galicia-cream); }
+  .destination.provence { background: var(--provence-cream); }
+  .destination.mallorca { background: var(--mallorca-cream); }
+
+  .hero-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    margin-bottom: 4rem;
+  }
+  .hero-card .hero-image {
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .galicia .hero-image {
+    background-image:
+      linear-gradient(135deg, rgba(13,59,79,0.3), rgba(42,122,140,0.4)),
+      url('https://images.unsplash.com/photo-1583531352515-8884af6ce97c?w=1200&q=80');
+    background-color: var(--galicia-sea);
+  }
+  .provence .hero-image {
+    background-image:
+      linear-gradient(135deg, rgba(196,98,45,0.25), rgba(90,74,122,0.35)),
+      url('https://images.unsplash.com/photo-1568849676085-51415703900f?w=1200&q=80');
+    background-color: var(--provence-terra);
+  }
+  .mallorca .hero-image {
+    background-image:
+      linear-gradient(135deg, rgba(30,96,145,0.3), rgba(184,137,91,0.35)),
+      url('https://images.unsplash.com/photo-1602391833977-358a52198938?w=1200&q=80');
+    background-color: var(--mallorca-sea);
+  }
+  .hero-card .hero-content {
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .galicia .hero-content { background: white; }
+  .provence .hero-content { background: white; }
+  .hero-card .eyebrow { margin-bottom: 1.25rem; }
+  .galicia .eyebrow { color: var(--galicia-sea); }
+  .provence .eyebrow { color: var(--provence-terra); }
+  .mallorca .eyebrow { color: var(--mallorca-sea); }
+  .hero-card h2 { margin-bottom: 1.5rem; }
+  .galicia h2 { color: var(--galicia-deep); }
+  .provence h2 { color: var(--provence-lavender); }
+  .mallorca h2 { color: var(--mallorca-sea); }
+  .hero-card .tagline { font-size: 1.15rem; color: var(--muted); margin-bottom: 2rem; }
+
+  /* Stats row */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+  .stat .stat-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin-bottom: 0.2rem;
+  }
+  .galicia .stat-value { color: var(--galicia-deep); }
+  .provence .stat-value { color: var(--provence-lavender); }
+  .mallorca .stat-value { color: var(--mallorca-sea); }
+  .stat .stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+
+  /* Section headers */
+  .section-header {
+    text-align: center;
+    margin: 5rem auto 3rem;
+    max-width: 700px;
+  }
+  .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; }
+  .galicia .section-header .eyebrow { color: var(--galicia-sea); }
+  .provence .section-header .eyebrow { color: var(--provence-terra); }
+  .mallorca .section-header .eyebrow { color: var(--mallorca-accent); }
+  .section-header h2 { margin-bottom: 1rem; }
+  .section-header p { color: var(--muted); font-size: 1.05rem; }
+
+  /* ===== Itinerary Timeline ===== */
+  .itinerary { max-width: 950px; margin: 0 auto; }
+  .day {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+  .day:last-child { border-bottom: none; }
+  .day-number {
+    position: relative;
+  }
+  .day-number .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: 600;
+    font-style: italic;
+  }
+  .galicia .day-number .num { color: var(--galicia-sea); }
+  .provence .day-number .num { color: var(--provence-terra); }
+  .mallorca .day-number .num { color: var(--mallorca-accent); }
+  .day-number .date {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .day-content h3 { margin-bottom: 0.75rem; }
+  .galicia .day-content h3 { color: var(--galicia-deep); }
+  .provence .day-content h3 { color: var(--provence-lavender); }
+  .mallorca .day-content h3 { color: var(--mallorca-sea); }
+  .day-content .location {
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .galicia .day-content .location { background: var(--galicia-sea); color: white; }
+  .provence .day-content .location { background: var(--provence-lavender); color: white; }
+  .mallorca .day-content .location { background: var(--mallorca-sea); color: white; }
+  .day-content ul { list-style: none; }
+  .day-content ul li {
+    padding: 0.4rem 0 0.4rem 1.5rem;
+    position: relative;
+    color: #333;
+  }
+  .day-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.95rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  .galicia .day-content ul li::before { background: var(--galicia-accent); }
+  .provence .day-content ul li::before { background: var(--provence-terra); }
+  .mallorca .day-content ul li::before { background: var(--mallorca-accent); }
+  .day-image {
+    margin-top: 1.5rem;
+    height: 220px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+  }
+
+  /* ===== Hotels Grid ===== */
+  .hotels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .hotel-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .hotel-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .hotel-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .galicia .hotel-image { background-color: var(--galicia-sage); }
+  .provence .hotel-image { background-color: var(--provence-olive); }
+  .mallorca .hotel-image { background-color: var(--mallorca-stone); }
+  .hotel-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4));
+  }
+  .hotel-tier {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255,255,255,0.95);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    z-index: 2;
+  }
+  .galicia .hotel-tier { color: var(--galicia-deep); }
+  .provence .hotel-tier { color: var(--provence-lavender); }
+  .mallorca .hotel-tier { color: var(--mallorca-sea); }
+  .hotel-body { padding: 1.5rem; }
+  .hotel-body h4 { margin-bottom: 0.25rem; }
+  .hotel-body .loc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+  .hotel-body p { font-size: 0.92rem; color: #333; margin-bottom: 1rem; }
+  .hotel-meta {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.85rem;
+  }
+  .hotel-meta .price { font-weight: 600; }
+  .galicia .hotel-meta .price { color: var(--galicia-deep); }
+  .provence .hotel-meta .price { color: var(--provence-lavender); }
+  .mallorca .hotel-meta .price { color: var(--mallorca-sea); }
+  .book-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: all 0.2s;
+  }
+  .provence .book-link {
+    color: var(--provence-terra);
+    border: 1.5px solid var(--provence-terra);
+  }
+  .provence .book-link:hover {
+    background: var(--provence-terra);
+    color: white;
+  }
+  .winery .name a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .winery .name a:hover {
+    border-bottom-color: var(--provence-terra);
+  }
+  .activity h4 a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .activity h4 a:hover {
+    border-bottom-color: var(--provence-terra);
+  }
+
+  /* ===== Activities Grid ===== */
+  .activities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .activity {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.2s;
+    border: 1px solid var(--line);
+  }
+  .activity:hover { transform: translateY(-2px); }
+  .activity .icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+  .activity h4 { margin-bottom: 0.5rem; font-size: 1.05rem; }
+  .activity p { font-size: 0.85rem; color: var(--muted); }
+
+  /* ===== Wine highlight ===== */
+  .wine-block {
+    background: white;
+    border-radius: 24px;
+    padding: 4rem;
+    margin: 4rem auto;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  }
+  .wine-image {
+    height: 400px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+  }
+  .galicia .wine-image {
+    background-color: var(--galicia-sage);
+    background-image:
+      linear-gradient(135deg, rgba(13,59,79,0.2), rgba(123,166,150,0.3)),
+      url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80');
+  }
+  .provence .wine-image {
+    background-color: var(--provence-olive);
+    background-image:
+      linear-gradient(135deg, rgba(196,98,45,0.2), rgba(138,143,90,0.3)),
+      url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80');
+  }
+  .mallorca .wine-image {
+    background-color: var(--mallorca-olive);
+    background-image:
+      linear-gradient(135deg, rgba(30,96,145,0.2), rgba(107,122,63,0.3)),
+      url('https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80');
+  }
+  .wine-text h3 { margin-bottom: 1.5rem; }
+  .wine-text .winery-list { margin-top: 1.5rem; }
+  .wine-text .winery {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .wine-text .winery:last-child { border-bottom: none; }
+  .wine-text .winery .name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+  .wine-text .winery .desc {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+
+  /* ===== Flight box ===== */
+  .flight-box {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    max-width: 800px;
+    margin: 2rem auto 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+  .flight-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .flight-row:last-child { border-bottom: none; }
+  .flight-airport .code {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 700;
+  }
+  .galicia .flight-airport .code { color: var(--galicia-deep); }
+  .provence .flight-airport .code { color: var(--provence-lavender); }
+  .mallorca .flight-airport .code { color: var(--mallorca-sea); }
+  .flight-airport .city {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 0.3rem;
+  }
+  .flight-line {
+    text-align: center;
+    color: var(--muted);
+  }
+  .flight-line .dash {
+    height: 1px;
+    background: var(--line);
+    position: relative;
+    margin: 0.5rem 0;
+  }
+  .flight-line .dash::after {
+    content: '✈';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 0 0.5rem;
+  }
+  .flight-line .info { font-size: 0.8rem; }
+  .flight-meta {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    border-top: 2px solid var(--line);
+  }
+  .flight-meta .item {
+    text-align: center;
+  }
+  .flight-meta .item .label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+  }
+  .flight-meta .item .val {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+  }
+
+  /* ===== Verdict ===== */
+  .verdict {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: white;
+    padding: 6rem 0;
+  }
+  .verdict .section-header h2 { color: white; }
+  .verdict .section-header p { color: rgba(255,255,255,0.7); }
+  .verdict-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .verdict-card {
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .verdict-card.galicia { border-top: 4px solid var(--galicia-sea); }
+  .verdict-card.provence { border-top: 4px solid var(--provence-terra); }
+  .verdict-card.mallorca { border-top: 4px solid var(--mallorca-sea); }
+  .verdict-card h3 { color: white; margin-bottom: 1rem; }
+  .verdict-card h3.gal { color: var(--galicia-sage); }
+  .verdict-card h3.prov { color: #e8a878; }
+  .verdict-card h3.mall { color: #6bb6d9; }
+  .verdict-card .pros, .verdict-card .cons {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+  .verdict-card .pros li::before { content: '✓ '; color: #7bcb95; }
+  .verdict-card .cons li::before { content: '✕ '; color: #d97766; }
+  .verdict-card .pros li, .verdict-card .cons li {
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+  }
+
+  /* ===== Footer ===== */
+  footer {
+    background: #1a1a1a;
+    color: rgba(255,255,255,0.6);
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 900px) {
+    .hero-card { grid-template-columns: 1fr; }
+    .hero-card .hero-image { min-height: 300px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .day { grid-template-columns: 1fr; gap: 1rem; }
+    .day-number .num { font-size: 3rem; }
+    .hotels-grid, .activities { grid-template-columns: 1fr 1fr; }
+    .wine-block { grid-template-columns: 1fr; padding: 2rem; }
+    .verdict-grid { grid-template-columns: 1fr; }
+    .topnav .tabs { flex-wrap: wrap; }
+    .flight-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .container { padding: 0 1.25rem; }
+  }
+  @media (max-width: 600px) {
+    .hotels-grid, .activities { grid-template-columns: 1fr; }
+    .intro-hero .meta { gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="topnav">
+  <div class="container">
+    <div class="brand">August 11 → 17, 2026</div>
+    <div class="tabs">
+      <a href="#provence" class="tab provence">Itinerary</a>
+      <a href="#hotels" class="tab provence">Hotels</a>
+      <a href="#wine" class="tab provence">Wine</a>
+      <a href="#food" class="tab provence">Food</a>
+      <a href="#activities" class="tab provence">Activities</a>
+      <a href="#book" class="tab provence">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== INTRO ===== -->
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">France · Provence · 5 Hotel Nights</span>
+    <h1>Cassis &<br>the Calanques.</h1>
+    <p style="max-width: 700px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem;">
+      The fishing port at the foot of Europe's tallest sea cliff. Limestone fjords carved into turquoise water.
+      One of France's most underrated wine regions in walking distance. A single hotel for all five nights,
+      a 1:05 PM landing in Marseille, and zero compromises.
+    </p>
+    <div class="meta">
+      <div class="meta-item">
+        <div class="label">Departure</div>
+        <div class="value">Tue, Aug 11</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Return</div>
+        <div class="value">Mon, Aug 17</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Travelers</div>
+        <div class="value">Two</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Origin</div>
+        <div class="value">LAX</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================================== -->
+<!-- ===== PROVENCE ======================================================= -->
+<!-- ====================================================================== -->
+<section class="destination provence" id="provence">
+  <div class="container">
+
+    <!-- Hero Card -->
+    <div class="hero-card">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Option B · France · Provence</span>
+        <h2>Cassis &<br>the Calanques</h2>
+        <p class="tagline">A working fishing port at the foot of Europe's tallest sea cliff, with limestone fjords carved into the Mediterranean and one of France's most underrated wine regions in walking distance.</p>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-value">78–82°F</div>
+            <div class="stat-label">August High</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">High</div>
+            <div class="stat-label">Crowd Level</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">Bandol</div>
+            <div class="stat-label">Signature Wine</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">35 min</div>
+            <div class="stat-label">Max Drive</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flight Section -->
+    <div class="section-header">
+      <span class="eyebrow">Getting There</span>
+      <h2>Flight Plan</h2>
+      <p>Take the daytime LAX departure on Air France — lands Marseille at <strong>1:05 PM</strong>. Lunch in Cassis by 2:30, swim by 4.</p>
+    </div>
+    <div class="flight-box">
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">LAX</div><div class="city">Los Angeles · Tue Aug 11 · dep 1:40 PM</div></div>
+        <div class="flight-line"><div class="info">Air France AF65</div><div class="dash"></div><div class="info">10h 55m nonstop</div></div>
+        <div class="flight-airport"><div class="code">CDG</div><div class="city">Paris · Wed Aug 12 · arr 9:35 AM</div></div>
+      </div>
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">CDG</div><div class="city">Paris · 2h layover</div></div>
+        <div class="flight-line"><div class="info">Air France AF6004</div><div class="dash"></div><div class="info">1h 30m</div></div>
+        <div class="flight-airport"><div class="code">MRS</div><div class="city">Marseille · arr <strong>1:05 PM</strong> · 35 min drive to Cassis</div></div>
+      </div>
+      <div class="flight-meta">
+        <div class="item"><div class="label">Est. Round-trip</div><div class="val">$700–$950</div></div>
+        <div class="item"><div class="label">At hotel by</div><div class="val">2:30 PM</div></div>
+        <div class="item"><div class="label">Carrier</div><div class="val">Air France</div></div>
+      </div>
+    </div>
+
+    <!-- Itinerary -->
+    <div class="section-header">
+      <span class="eyebrow">Day by Day</span>
+      <h2>The Itinerary</h2>
+      <p>One base — the village of Cassis — with everything reachable in under 35 minutes by car or boat.</p>
+    </div>
+
+    <!-- ===== SPECIAL TO YOUR DATES ===== -->
+    <div style="max-width: 1100px; margin: 0 auto 4rem; padding: 3rem; background: linear-gradient(135deg, #faf4e8, #f5e8d8); border-radius: 24px;">
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <span class="eyebrow" style="color: var(--provence-terra);">Only This Week</span>
+        <h3 style="color: var(--provence-lavender); font-size: 2rem; margin-top: 0.5rem;">Don't-Miss Events on Your Exact Dates</h3>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 700px; margin-left: auto; margin-right: auto;">Four experiences that only happen during the week you're there. Plan the itinerary around these.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+
+        <!-- Perseid -->
+        <div style="background: white; border-radius: 16px; padding: 2rem; border-left: 4px solid var(--provence-lavender);">
+          <div style="display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem;">
+            <span style="font-size: 2.2rem;">☄️</span>
+            <div>
+              <h4 style="margin: 0; color: var(--provence-lavender);">Perseid Meteor Shower Peak</h4>
+              <div style="font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem;">Night of <strong>Wed Aug 12 → Thu Aug 13</strong></div>
+            </div>
+          </div>
+          <p style="font-size: 0.95rem; color: #333; margin-bottom: 1rem;"><strong>The best Perseid year of the decade.</strong> New moon on Aug 12 = moonless sky, 90+ meteors/hour at peak (1–4 AM local). Drive to <strong>Cap Canaille</strong> after midnight — France's highest sea cliff, 394m, zero light pollution toward the sea. Bring blankets, thermoses, a bottle of Bandol rosé. Plan to be back at hotel by 4 AM.</p>
+          <a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener" class="book-link">Viewing guide →</a>
+        </div>
+
+        <!-- Aug 15 Cassis -->
+        <div style="background: white; border-radius: 16px; padding: 2rem; border-left: 4px solid var(--provence-terra);">
+          <div style="display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem;">
+            <span style="font-size: 2.2rem;">🎆</span>
+            <div>
+              <h4 style="margin: 0; color: var(--provence-terra);">Assumption Day in Cassis</h4>
+              <div style="font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem;"><strong>Sat Aug 15</strong> — French national holiday</div>
+            </div>
+          </div>
+          <p style="font-size: 0.95rem; color: #333; margin-bottom: 1rem;">Cassis throws its biggest party of the year. <strong>7 PM</strong> apéro-concert with band "Years" at Place Baragnon. <strong>10 PM</strong> the fireworks at Port de Cassis — they're famous for the pyrotechnic quality. <strong>10:30 PM</strong> the August 15 Ball at Place Baragnon. Stay in town this evening — no Aix or Marseille trip on Saturday.</p>
+          <a href="https://provence-alpes-cotedazur.com/en/things-to-do/events/all-events/august-15-festivities-cassis-en-2886681/" target="_blank" rel="noopener" class="book-link">Event details →</a>
+        </div>
+
+        <!-- Piano festival -->
+        <div style="background: white; border-radius: 16px; padding: 2rem; border-left: 4px solid var(--provence-olive);">
+          <div style="display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem;">
+            <span style="font-size: 2.2rem;">🎹</span>
+            <div>
+              <h4 style="margin: 0; color: var(--provence-olive);">Festival de La Roque d'Anthéron</h4>
+              <div style="font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem;">Runs through your trip until <strong>Aug 16</strong></div>
+            </div>
+          </div>
+          <p style="font-size: 0.95rem; color: #333; margin-bottom: 1rem;">The world's largest piano festival — 46th edition, ~100 concerts in the Parc de Florans under giant sequoias. <strong>1h drive</strong> from Cassis. Tickets released April 2026; book a concert on Day 5 (Aug 16) as a refined alternative to a beach day. Final-week recitals are typically the highest-caliber.</p>
+          <a href="https://www.festival-piano.com/" target="_blank" rel="noopener" class="book-link">Program →</a>
+        </div>
+
+        <!-- Night market -->
+        <div style="background: white; border-radius: 16px; padding: 2rem; border-left: 4px solid var(--provence-sky);">
+          <div style="display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem;">
+            <span style="font-size: 2.2rem;">🎨</span>
+            <div>
+              <h4 style="margin: 0; color: var(--provence-sky);">Cassis Night Market &amp; Quai des Artistes</h4>
+              <div style="font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem;"><strong>Every evening</strong> in your week, 7 PM–midnight</div>
+            </div>
+          </div>
+          <p style="font-size: 0.95rem; color: #333; margin-bottom: 1rem;">Place Baragnon and Place Clémenceau fill with local painters, portraitists, caricaturists, and engravers from 7 PM to midnight, June 25 → Aug 31. Best after dinner — wander through, watch artists work, occasionally something is worth taking home. Free; built into your evening walks.</p>
+          <a href="https://provence-alpes-cotedazur.com/en/things-to-do/events/all-events/cassis-night-market-cassis-en-2879033/" target="_blank" rel="noopener" class="book-link">Market info →</a>
+        </div>
+
+      </div>
+
+      <!-- Optional: Sault lavender -->
+      <div style="margin-top: 2rem; padding: 1.5rem 2rem; background: rgba(90,74,122,0.06); border-radius: 12px; border-left: 4px solid var(--provence-lavender);">
+        <h4 style="margin-bottom: 0.5rem; color: var(--provence-lavender);">💜 Bonus — Sault lavender (the ambitious add-on)</h4>
+        <p style="font-size: 0.95rem; color: #333; margin: 0;">Most Provence lavender is harvested by mid-July. But the <strong>Sault plateau</strong> (800m elevation, above the Mont Ventoux foothills) holds bloom into mid-August by tradition — locals don't cut until the <strong>Aug 15 Lavender Harvest Festival</strong>. The catch: it's a <strong>2-hour drive</strong> from Cassis (above the 1.5h budget). Doable as a long day trip if you really want to see the fields — leave at dawn, return for the Cassis fireworks. <a href="https://www.ot-sault.com/en/" target="_blank" rel="noopener" style="color: var(--provence-lavender); font-weight: 600;">Sault tourism →</a></p>
+      </div>
+    </div>
+
+    <!-- Day at a glance table -->
+    <div style="max-width: 1000px; margin: 0 auto 4rem; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem;">
+        <thead>
+          <tr style="background: var(--provence-lavender); color: white;">
+            <th style="padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600;">Day</th>
+            <th style="padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600;">Date</th>
+            <th style="padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600;">Theme</th>
+            <th style="padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600;">Highlight</th>
+            <th style="padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600;">Dinner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--line);"><td style="padding: 1rem; font-weight: 600; color: var(--provence-terra);">1</td><td style="padding: 1rem;">Wed Aug 12</td><td style="padding: 1rem;">Arrival + Perseids ☄️</td><td style="padding: 1rem;">Pool, sunset apéro, meteor shower at Cap Canaille</td><td style="padding: 1rem;">Le Bistrot de Nino</td></tr>
+          <tr style="border-bottom: 1px solid var(--line); background: rgba(196,98,45,0.03);"><td style="padding: 1rem; font-weight: 600; color: var(--provence-terra);">2</td><td style="padding: 1rem;">Thu Aug 13</td><td style="padding: 1rem;">Calanques by boat</td><td style="padding: 1rem;">Private RIB, swim in En-Vau</td><td style="padding: 1rem;">Les Belles Canailles</td></tr>
+          <tr style="border-bottom: 1px solid var(--line);"><td style="padding: 1rem; font-weight: 600; color: var(--provence-terra);">3</td><td style="padding: 1rem;">Fri Aug 14</td><td style="padding: 1rem;">Wine day</td><td style="padding: 1rem;">Cassis whites + Bandol Mourvèdre</td><td style="padding: 1rem;"><strong>La Villa Madie ★★★</strong></td></tr>
+          <tr style="border-bottom: 1px solid var(--line); background: rgba(196,98,45,0.03);"><td style="padding: 1rem; font-weight: 600; color: var(--provence-terra);">4</td><td style="padding: 1rem;">Sat Aug 15</td><td style="padding: 1rem;">Assumption Day 🎆</td><td style="padding: 1rem;">Hike, pool, port fireworks at 10 PM</td><td style="padding: 1rem;">Le Bonaparte (early)</td></tr>
+          <tr style="border-bottom: 1px solid var(--line);"><td style="padding: 1rem; font-weight: 600; color: var(--provence-terra);">5</td><td style="padding: 1rem;">Sun Aug 16</td><td style="padding: 1rem;">Aix · Marseille · or 🎹 Piano</td><td style="padding: 1rem;">Cézanne, Cosquer cave, or piano festival</td><td style="padding: 1rem;">Le Chai Cassidain</td></tr>
+          <tr style="background: rgba(196,98,45,0.03);"><td style="padding: 1rem; font-weight: 600; color: var(--provence-terra);">6</td><td style="padding: 1rem;">Mon Aug 17</td><td style="padding: 1rem;">Departure</td><td style="padding: 1rem;">Bouillabaisse class or Marseille bouillabaisse</td><td style="padding: 1rem;">On the plane</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="itinerary">
+
+      <div class="day">
+        <div class="day-number"><div class="num">01</div><div class="date">Wed Aug 12</div></div>
+        <div class="day-content">
+          <span class="location">Marseille → Cassis (35 min)</span>
+          <h3>Arrival, Lunch &amp; the Meteor Shower</h3>
+          <ul>
+            <li>Land Marseille 1:05 PM; pre-arranged transfer along the coastal corniche</li>
+            <li>Check in at <strong>Les Roches Blanches</strong> by 2:30 PM — drop bags, change for the pool</li>
+            <li>Late lunch on the hotel terrace + first swim in the infinity pool over the harbor</li>
+            <li>Sunset apéro on the port at <strong>Le Chai Cassidain</strong> — rosé, oysters, the boats coming in</li>
+            <li>Welcome dinner at <strong>Le Bistrot de Nino</strong>, the fish house on the harbor</li>
+            <li><strong>11 PM</strong> — Caffeine up. Drive 15 min to <strong>Cap Canaille</strong> for the <strong>Perseid meteor shower peak</strong> (peak 1–4 AM, moonless sky, 90+/hr). Bring blankets. Back to hotel ~3 AM.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">02</div><div class="date">Thu Aug 13</div></div>
+        <div class="day-content">
+          <span class="location">Calanques National Park</span>
+          <h3>The Limestone Fjords</h3>
+          <ul>
+            <li><strong>8:30 AM</strong> — Private RIB departure with L'Eden Boat. Before the cruise crowds.</li>
+            <li>Visit 5 calanques: <strong>Port-Miou</strong>, <strong>Port-Pin</strong>, <strong>En-Vau</strong> (iconic), <strong>Sugiton</strong>, <strong>Sormiou</strong></li>
+            <li>Swim stops at En-Vau and Sormiou. Water so clear you see the bottom 20 feet down. Bring snorkel gear.</li>
+            <li><strong>2 PM</strong> — Late lunch at <strong>La Presqu'île</strong>, the cliff-edge terrace overlooking the harbor</li>
+            <li><strong>Afternoon swap:</strong> nap by the hotel pool — OR sea-water spa circuit at Hôtel des Calanques (2 hours, ~€95)</li>
+            <li><strong>7:30 PM</strong> — Sunset apéro on the port. Rosé and oysters at <strong>Le Petit Oyster Bar</strong>.</li>
+            <li><strong>9 PM</strong> — Dinner at <strong>Les Belles Canailles</strong> (modern Mediterranean, Chef Sintes)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">03</div><div class="date">Fri Aug 14</div></div>
+        <div class="day-content">
+          <span class="location">Cassis &amp; Bandol (30 min east)</span>
+          <h3>Wine Day — Cassis Whites + Bandol Reds</h3>
+          <ul>
+            <li><strong>10 AM</strong> — <strong>Clos Sainte Magdeleine</strong>: Cassis AOC whites tasted on a cliff over the sea. The most beautiful winery setting in Provence.</li>
+            <li><strong>11:30 AM</strong> — Drive 30 minutes east to the Bandol AOC</li>
+            <li><strong>Noon</strong> — <strong>Domaine Tempier</strong>: tasting of the famous reds (La Migoua, La Tourtine, Cabassaou) plus the rosé that put Provence on the map. Bring cash or card for case purchases.</li>
+            <li><strong>1:30 PM</strong> — Long lunch in Le Castellet village at <strong>Le Castel Lumière</strong> or <strong>La Table du Castellet</strong></li>
+            <li><strong>4 PM</strong> — <strong>Château de Pibarnon</strong>: tasting on the terrace at 300m, panoramic over the Bandol amphitheater of vines</li>
+            <li><strong>6 PM</strong> — Return to Cassis. Quick swim, change for dinner.</li>
+            <li><strong>8 PM</strong> — <strong>★★ La Villa Madie</strong> dinner. The big one. Tasting menu, 3 hours, terrace over the Anse de Corton.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">04</div><div class="date">Sat Aug 15</div></div>
+        <div class="day-content">
+          <span class="location">Cassis — Assumption Day · Stay In Town</span>
+          <h3>Hike, Pool &amp; the Big Fireworks Night 🎆</h3>
+          <ul>
+            <li><strong>6:30 AM</strong> — Sunrise hike from Port-Miou. 2.5h round trip via Port-Pin, finish at En-Vau before the heat (and the boats)</li>
+            <li><strong>9 AM</strong> — Cliff-jump or swim from the rock platform at En-Vau. Pack a thermos coffee + croissants.</li>
+            <li><strong>11 AM</strong> — Hike back to Cassis; brunch at <strong>La Brise du Port</strong></li>
+            <li><strong>Note:</strong> Aug 15 is Assumption Day — banks, post offices, most shops closed. Restaurants and waterfront open. Plan around it.</li>
+            <li><strong>1–4 PM</strong> — Long lunch + nap at the hotel pool. Stay in town: tonight is the year's biggest event in Cassis.</li>
+            <li><strong>4–7 PM</strong> — Stand-up paddle the Port-Miou or e-bike Cap Canaille (afternoon, before the crowd arrives)</li>
+            <li><strong>7 PM</strong> — <strong>Apéro-concert at Place Baragnon</strong>: band "Years" + Provençal rosé in the square</li>
+            <li><strong>8:30 PM</strong> — Casual seafood dinner at <strong>Le Bonaparte</strong> on the harbor — earlier than usual to make the fireworks</li>
+            <li><strong>10 PM</strong> — <strong>Cassis Fireworks at Port de Cassis</strong> — famously good pyrotechnics, choreographed to music. Best viewing from the hotel terrace or from the rocks at the port mouth.</li>
+            <li><strong>10:30 PM</strong> — The <strong>Bal du 15 août</strong> at Place Baragnon. Dance with locals until 2 AM.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">05</div><div class="date">Sun Aug 16</div></div>
+        <div class="day-content">
+          <span class="location">Day trip — Aix, Marseille, OR Piano Festival</span>
+          <h3>Choose Your Day</h3>
+          <ul>
+            <li><strong>Pick one of three:</strong></li>
+            <li><strong>Option A · Aix-en-Provence (1h):</strong> Place des Prêcheurs Sunday market 9 AM, coffee on Cours Mirabeau. Lunch at Le Petit Verdot. Afternoon at Atelier Cézanne (verify open — closed for renovation late 2025). Return by 5 PM.</li>
+            <li><strong>Option B · Marseille (35 min):</strong> MUCEM + Cosquer Méditerranée (the underwater cave replica). Bouillabaisse lunch at Chez Fonfon. Vieux Port + Notre-Dame de la Garde at sunset.</li>
+            <li><strong>Option C · 🎹 Piano Festival at La Roque d'Anthéron (1h):</strong> Last day of the festival (Aug 16). Afternoon concert in the Parc de Florans under the sequoias. Lunch in the village beforehand. The most singular cultural experience of the trip.</li>
+            <li>Either choice: back to Cassis by 6 PM</li>
+            <li><strong>7 PM</strong> — Final-night apéro at <strong>Le Chai Cassidain</strong> on the port; wander the <strong>Quai des Artistes night market</strong></li>
+            <li><strong>9 PM</strong> — Casual final dinner at <strong>Le Poisson Rouge</strong>, or call for La Villa Madie if you saved it for tonight</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">06</div><div class="date">Mon Aug 17</div></div>
+        <div class="day-content">
+          <span class="location">Cassis → Marseille → LAX</span>
+          <h3>Farewell to the Med</h3>
+          <ul>
+            <li><strong>8 AM</strong> — Slow morning at the hotel — last swim, last espresso on the terrace</li>
+            <li><strong>10 AM</strong> — Check out, drive to Marseille (35 min)</li>
+            <li><strong>Final option:</strong> <strong>Bouillabaisse cooking class</strong> at Chez Gilles or <strong>Provence Gourmet</strong> — morning market visit + cook + eat. Half-day, perfect bookend before the airport.</li>
+            <li><strong>2:30 PM</strong> — Drop rental at Marseille Airport (MRS)</li>
+            <li><strong>4:25 PM</strong> — Air France AF6005 MRS → CDG (1h 30m)</li>
+            <li><strong>7:30 PM</strong> — AF66 CDG → LAX (~11h 30m nonstop)</li>
+            <li><strong>10 PM same day</strong> — Arrive LAX (gain 9 hours on the way back)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Hotels -->
+    <div class="section-header" id="hotels">
+      <span class="eyebrow">Where to Stay</span>
+      <h2>Six Hotels, One Decision</h2>
+      <p>Cassis is small — pick one and stay all five nights. Ranked top-down for romance, location, and how well they fit the $500–1,000/night budget in mid-August.</p>
+    </div>
+    <div class="hotels-grid">
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(196,98,45,0.3), rgba(90,74,122,0.4)), url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');">
+          <span class="hotel-tier">★ Top Pick</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Les Roches Blanches</h4>
+          <div class="loc">Cliffside · 5-min walk to port</div>
+          <p>The 1885 grand dame of Cassis — recently restored by Maisons Pariente. Infinity pool cantilevered over the Med, every room with a sea view, original Art Deco bar. Private boat for hotel guests to the Calanques. Direct sea access via a ladder. <strong>The one to book first.</strong></p>
+          <div class="hotel-meta">
+            <span class="price">€859–€1,280 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.roches-blanches-cassis.com/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(196,98,45,0.3), rgba(74,144,164,0.4)), url('https://images.unsplash.com/photo-1551516114-c39ed83b3946?w=600&q=80');">
+          <span class="hotel-tier">Best value</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hôtel &amp; Spa des Calanques</h4>
+          <div class="loc">Plage du Bestouan · 3-min walk to port</div>
+          <p>Boutique 38-room hotel directly facing the Plage du Bestouan, with a sea-water spa, garden pool, and direct walking access to the Port-Miou trailhead. Quieter than Les Roches Blanches, half the price, and frankly the room views are nearly as good.</p>
+          <div class="hotel-meta">
+            <span class="price">€380–€620 / night</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.hoteldescalanquescassis.com/en" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(196,98,45,0.3), rgba(138,143,90,0.4)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80');">
+          <span class="hotel-tier">Vineyard B&amp;B</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Maison 9</h4>
+          <div class="loc">In the Cassis vineyards · 10-min drive to port</div>
+          <p>A converted 19th-century property in the AOC Cassis vineyards. Just <strong>four suites</strong>, crisp white linens, private terraces, kitchenettes, a garden pool, and morning breakfast among the vines. The hideaway pick — quiet, intimate, walkable to two Cassis wineries.</p>
+          <div class="hotel-meta">
+            <span class="price">€310–€450 / night</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.maison9.net/booking-bed-and-breakfast-cassis/?lang=en" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(90,74,122,0.3), rgba(196,98,45,0.4)), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80');">
+          <span class="hotel-tier">Adults only</span>
+        </div>
+        <div class="hotel-body">
+          <h4>The Address Cassis</h4>
+          <div class="loc">Hillside · 5-min walk down to port · adults only</div>
+          <p>Adults-only 5-star guest house with a year-round outdoor pool, electric vehicle charging, garden, and sea-view rooms. 9.8 guest score. The kind of place that feels like a private villa someone happens to be running as a hotel. Walk-everywhere location.</p>
+          <div class="hotel-meta">
+            <span class="price">€420–€680 / night</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.booking.com/hotel/fr/the-address-cassis.html" target="_blank" rel="noopener" class="book-link">Book on Booking.com →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(196,98,45,0.25), rgba(74,144,164,0.4)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80');">
+          <span class="hotel-tier">Sea-view B&amp;B</span>
+        </div>
+        <div class="hotel-body">
+          <h4>La Demeure Insoupçonnée</h4>
+          <div class="loc">Hillside · 10-min walk to port</div>
+          <p>A B&amp;B with panoramic views over the sea, vineyards, and Cap Canaille from a south-facing outdoor pool. Five rooms, sun terrace, summer kitchen, and the best sunset view of any Cassis property. Lower-key but the location is unbeatable.</p>
+          <div class="hotel-meta">
+            <span class="price">€350–€550 / night</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.google.com/search?q=La+Demeure+Insoupçonnée+Cassis+booking" target="_blank" rel="noopener" class="book-link">Find on Google →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(138,143,90,0.3), rgba(196,98,45,0.35)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80');">
+          <span class="hotel-tier">Splurge</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Le Château de Berne</h4>
+          <div class="loc">Provence interior · 1h20m drive — alternative base</div>
+          <p>Relais &amp; Châteaux vineyard estate in the Var with cottages among the vines, a Michelin-starred restaurant (Le Jardin de Berne), and the winery tour included. <strong>Trade-off:</strong> not in Cassis — you'd be commuting to the Calanques. Best if you'd rather wake up in vineyards.</p>
+          <div class="hotel-meta">
+            <span class="price">€600–€950 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.chateauberne.com/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Wine -->
+    <div class="section-header" id="wine">
+      <span class="eyebrow">The Glass</span>
+      <h2>Two AOCs, 30 Minutes Apart</h2>
+      <p>The whites of Cassis and the reds of Bandol — both small, both serious, and both rarely poured outside the region. Most visits are by appointment; details below.</p>
+    </div>
+    <div class="wine-block">
+      <div class="wine-image"></div>
+      <div class="wine-text">
+        <span class="eyebrow" style="color: var(--provence-terra);">Cassis AOC · the whites</span>
+        <h3>France's First AOC (1936)</h3>
+        <p>Mineral, herb-scented whites from <strong>Clairette and Marsanne</strong>, ripened on terraces between the limestone cliffs and the sea. Only 12 estates produce Cassis AOC. The microclimate — sheltered by Cap Canaille's wind shadow — is what makes the wines unmistakable. Most estates are 5–15 minutes from the port; some you can walk to.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://www.clossaintemagdeleine.fr" target="_blank" rel="noopener">Clos Sainte Magdeleine ↗</a></div>
+            <div class="desc">On the cliff over the Med — arguably Provence's most beautiful winery setting. Tue–Sat 10–12 &amp; 3–7. €12 visit, +€3 tasting. +33 4 42 01 70 28.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.google.com/search?q=Domaine+du+Bagnol+Cassis" target="_blank" rel="noopener">Domaine du Bagnol ↗</a></div>
+            <div class="desc">Tiny producer, walking distance from town. The benchmark Cassis white. +33 4 42 01 32 16.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.google.com/search?q=Domaine+du+Paternel+Cassis+wine" target="_blank" rel="noopener">Domaine du Paternel ↗</a></div>
+            <div class="desc">Third-generation Santini family. Vineyards in Cassis, Bandol AND Saint-Cyr — taste all three from one cellar.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.google.com/search?q=Château+de+Fontblanche+Cassis" target="_blank" rel="noopener">Château de Fontblanche ↗</a></div>
+            <div class="desc">Long-established Cassis house, less polished than the others — and more honest for it.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wine-block" style="margin-top: 2rem;">
+      <div class="wine-image" style="order: 2;"></div>
+      <div class="wine-text" style="order: 1;">
+        <span class="eyebrow" style="color: var(--provence-terra);">Bandol AOC · the reds</span>
+        <h3>Mourvèdre Country — 30 min East</h3>
+        <p>Bandol is Provence taken seriously. At least <strong>50% Mourvèdre</strong> in every red and rosé — a grape that needs heat to ripen and gives back wines that age for decades. The vineyards climb amphitheaters above the sea. This is the Provence wine list at three-star restaurants in Paris, made by families you've never heard of.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://www.domainetempier.com/en/homepage/" target="_blank" rel="noopener">Domaine Tempier ★ ↗</a></div>
+            <div class="desc">The legend. Mon–Fri 9–12 &amp; 1:30–5:30. Book online or call +33 4 94 98 70 21. Tastings of red, rosé, and white. Le Plan du Castellet.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.pibarnon.com/en/" target="_blank" rel="noopener">Château de Pibarnon ↗</a></div>
+            <div class="desc">Highest vineyards in Bandol (300m). Panoramic terrace tastings, elegant age-worthy reds. By appointment, Mon–Sat. +33 4 94 90 12 73.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.google.com/search?q=Domaine+de+Terrebrune+Bandol" target="_blank" rel="noopener">Domaine de Terrebrune ↗</a></div>
+            <div class="desc">Biodynamic since the 1970s. Reds with extraordinary aging potential. Appointment only.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.google.com/search?q=Château+Sainte-Anne+Bandol+wine" target="_blank" rel="noopener">Château Sainte-Anne ↗</a></div>
+            <div class="desc">Family estate near La Cadière. Classic Bandol style, generous welcome, lower profile than Tempier.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Food -->
+    <div class="section-header" id="food">
+      <span class="eyebrow">The Table</span>
+      <h2>Where You'll Eat</h2>
+      <p>From a two-Michelin dinner above the sea to oysters with a glass of white on the harbor. <strong>Reserve La Villa Madie now</strong> — it books out months ahead.</p>
+    </div>
+    <div class="hotels-grid">
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(196,98,45,0.4), rgba(90,74,122,0.5)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
+          <span class="hotel-tier">★★ Michelin</span>
+        </div>
+        <div class="hotel-body">
+          <h4>La Villa Madie</h4>
+          <div class="loc">Anse de Corton · 10-min walk from port</div>
+          <p>Now <strong>three Michelin stars</strong> (promoted 2022). Chef Dimitri Droisneau builds tasting menus on a clifftop terrace over the Mediterranean. Closed Mon–Wed; Thu–Sun lunch 12–1 &amp; dinner 7:30–8:45. Lunch tasting from €180; dinner from €280.</p>
+          <div class="hotel-meta">
+            <span class="price">€180–€350 / person</span>
+            <span>★★★ Michelin</span>
+          </div>
+          <a href="https://lavillamadie.com/en/reservation/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(196,98,45,0.3), rgba(74,144,164,0.45)), url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80');">
+          <span class="hotel-tier">Harbor seafood</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Le Bistrot de Nino</h4>
+          <div class="loc">1 quai J.-J. Barthélemy · on the harbor since 1962</div>
+          <p>The fish house. Three generations on, the blue-façade veranda is still the institution it was. Provençal mussels, bouillabaisse, grilled sea bream, fish of the day. Closed Mondays. Call +33 4 42 01 74 32 to book.</p>
+          <div class="hotel-meta">
+            <span class="price">€36 menu / €60 à la carte</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.le-bistrot-de-nino-restaurant-cassis.com/" target="_blank" rel="noopener" class="book-link">Visit site →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(196,98,45,0.3), rgba(138,143,90,0.45)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80');">
+          <span class="hotel-tier">Oyster bar</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Le Petit Oyster Bar</h4>
+          <div class="loc">Tucked off the port</div>
+          <p>A counter and twelve seats. Oysters from Normandy and Ireland by the half-dozen, seafood platters, a tight list of Cassis whites by the glass. The right late-night stop after dinner somewhere bigger.</p>
+          <div class="hotel-meta">
+            <span class="price">€40–€90 / person</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.google.com/search?q=Le+Petit+Oyster+Bar+Cassis" target="_blank" rel="noopener" class="book-link">Find on Google →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(196,98,45,0.3), rgba(74,144,164,0.4)), url('https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80');">
+          <span class="hotel-tier">Gastronomic</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Les Belles Canailles</h4>
+          <div class="loc">At Les Roches Blanches · 180° terrace</div>
+          <p>Chef Nicolas Sintes' Mediterranean tasting menu, dominated by fish. 180° panoramic terrace facing Cap Canaille — the in-hotel restaurant at Les Roches Blanches, open to non-guests. The right pick for a "special but not three-hour" dinner.</p>
+          <div class="hotel-meta">
+            <span class="price">€95–€180 / person</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.roches-blanches-cassis.com/en/restaurants-and-bars/restaurant-belles-canailles/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(196,98,45,0.3), rgba(90,74,122,0.45)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
+          <span class="hotel-tier">Trailhead lunch</span>
+        </div>
+        <div class="hotel-body">
+          <h4>La Presqu'île</h4>
+          <div class="loc">Cliffside near Port-Miou trailhead</div>
+          <p>Cliff-edge terrace overlooking the harbor and Cap Canaille. Lunch destination after the morning Calanques boat. Bouillabaisse, grilled prawns, ratatouille — Provençal classics done well.</p>
+          <div class="hotel-meta">
+            <span class="price">€60–€110 / person</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.google.com/maps/search/La+Presqu'île+Cassis+restaurant" target="_blank" rel="noopener" class="book-link">Find on Maps →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(138,143,90,0.3), rgba(196,98,45,0.45)), url('https://images.unsplash.com/photo-1481833761820-0509d3217039?w=600&q=80');">
+          <span class="hotel-tier">Marseille trip</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Chez Fonfon</h4>
+          <div class="loc">Marseille · 140 rue du Vallon-des-Auffes</div>
+          <p>The bouillabaisse pilgrimage. Since 1952, four generations of the same family in Marseille's hidden fishing inlet ten minutes from the Vieux Port. Order the bouillabaisse — they bring out the whole fish first. Call +33 4 91 52 14 38.</p>
+          <div class="hotel-meta">
+            <span class="price">€70–€130 / person</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.chez-fonfon.com/en/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activities -->
+    <div class="section-header" id="activities">
+      <span class="eyebrow">Unique Experiences</span>
+      <h2>Things You Won't Do Anywhere Else</h2>
+      <p>Anyone can take a boat tour. Here are the 16 that turn a good week into the one you'll talk about.</p>
+    </div>
+    <div class="activities">
+      <div class="activity"><span class="icon">⛵</span><h4><a href="https://rent.ledenboat.com/" target="_blank" rel="noopener">Private RIB charter ↗</a></h4><p>L'Eden Boat — 6-hour private, swim in 5 calanques. €700–€900/day for two.</p></div>
+      <div class="activity"><span class="icon">🌅</span><h4><a href="https://rent.ledenboat.com/" target="_blank" rel="noopener">Sunset cruise + dinner ↗</a></h4><p>Apéro and dinner on board as the cliffs turn pink. Book via L'Eden Boat.</p></div>
+      <div class="activity"><span class="icon">🥾</span><h4><a href="https://www.calanques-parcnational.fr/en" target="_blank" rel="noopener">Sunrise En-Vau hike ↗</a></h4><p>Start 6:30 AM, hit the iconic calanque before any footprints in the sand. Check trail status (fire closures) before going.</p></div>
+      <div class="activity"><span class="icon">🛶</span><h4><a href="https://www.google.com/search?q=sea+kayak+Cassis+Port+Miou+tour" target="_blank" rel="noopener">Sea kayak Port-Miou ↗</a></h4><p>Paddle into Port-Pin and Sugiton — calanques only boats and kayaks can reach.</p></div>
+      <div class="activity"><span class="icon">🐠</span><h4><a href="https://www.google.com/search?q=scuba+diving+Cassis+Calanques+marine+reserve" target="_blank" rel="noopener">Scuba in the reserve ↗</a></h4><p>Calanques are a marine national park. Octopus, grouper, posidonia meadows.</p></div>
+      <div class="activity"><span class="icon">🍷</span><h4><a href="https://www.domainetempier.com/en/homepage/" target="_blank" rel="noopener">Domaine Tempier visit ↗</a></h4><p>The legendary Bandol estate — book online or call to book. Taste reds aging in barrel.</p></div>
+      <div class="activity"><span class="icon">🥂</span><h4><a href="https://www.clossaintemagdeleine.fr" target="_blank" rel="noopener">Clos Sainte Magdeleine ↗</a></h4><p>Cassis white tasting on the cliff over the sea. Tue–Sat 10–12 &amp; 3–7. €12 + €3 tasting.</p></div>
+      <div class="activity"><span class="icon">🚲</span><h4><a href="https://www.google.com/search?q=ebike+rental+Cassis+Cap+Canaille" target="_blank" rel="noopener">E-bike Cap Canaille ↗</a></h4><p>France's highest sea cliff (394m). Highest road in the south. Self-guided e-bike.</p></div>
+      <div class="activity"><span class="icon">🍲</span><h4><a href="https://www.provence-plaisirs.com/blog/en/marseille-discover-bouillabaisse/" target="_blank" rel="noopener">Bouillabaisse class ↗</a></h4><p>Marseille fish market with Chef Gilles, then make it together in his kitchen. €220/person.</p></div>
+      <div class="activity"><span class="icon">🏛️</span><h4><a href="https://www.grotte-cosquer.com/en/homepage/" target="_blank" rel="noopener">Cosquer Méditerranée ↗</a></h4><p>Replica of the underwater Paleolithic cave found by a diver. Marseille. €16 adults.</p></div>
+      <div class="activity"><span class="icon">🎨</span><h4><a href="https://www.cezanne-en-provence.com/en/prepare-your-visit/individual/visit-atelier-cezanne/" target="_blank" rel="noopener">Cézanne's studio ↗</a></h4><p>Atelier des Lauves in Aix. <strong>Note:</strong> closed for renovation late 2025 — check reopening status before Aug.</p></div>
+      <div class="activity"><span class="icon">🥖</span><h4><a href="https://www.aixenprovencetourism.com/en/" target="_blank" rel="noopener">Aix markets ↗</a></h4><p>Place Richelme daily, Place des Prêcheurs on Sundays. Peaches, olives, brebis cheese.</p></div>
+      <div class="activity"><span class="icon">🛁</span><h4><a href="https://www.hoteldescalanquescassis.com/en" target="_blank" rel="noopener">Sea-water spa ↗</a></h4><p>Hôtel des Calanques' thalasso circuit. Two hours, total reset.</p></div>
+      <div class="activity"><span class="icon">⭐</span><h4><a href="https://lavillamadie.com/en/reservation/" target="_blank" rel="noopener">La Villa Madie ★★★ ↗</a></h4><p>Three Michelin, clifftop terrace. The one big dinner of the trip.</p></div>
+      <div class="activity"><span class="icon">🌇</span><h4><a href="https://www.google.com/maps/search/Cap+Canaille+route+des+crêtes" target="_blank" rel="noopener">Sunset at Cap Canaille ↗</a></h4><p>Drive the Route des Crêtes with a bottle of rosé. Marseille glittering to the west.</p></div>
+      <div class="activity"><span class="icon">🎣</span><h4><a href="https://www.google.com/maps/search/marché+poisson+Cassis+port" target="_blank" rel="noopener">Morning fish market ↗</a></h4><p>The Cassis port fish market opens around 8 AM. Watch the fishermen, smell the catch.</p></div>
+      <div class="activity"><span class="icon">🚁</span><h4><a href="https://www.sport-decouverte.com/bapteme-air-helicoptere-calanques-marseille.html" target="_blank" rel="noopener">Helicopter over Calanques ↗</a></h4><p>30-min Bell 206 flight from Castellet airport. €240/person. See every calanque + Cap Canaille from the air.</p></div>
+      <div class="activity"><span class="icon">🏄</span><h4><a href="https://calanco-kayak-paddle.com/en/" target="_blank" rel="noopener">SUP through the calanques ↗</a></h4><p>Calanc'O 3-hour guided stand-up paddle into Port-Miou, Port-Pin, En-Vau. €74/person. Quietest way in.</p></div>
+      <div class="activity"><span class="icon">☄️</span><h4><a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener">Perseid meteor shower ↗</a></h4><p>Aug 12–13 peak with a moonless sky. Cap Canaille is the perfect dark-sky vantage. 90+ meteors/hour.</p></div>
+      <div class="activity"><span class="icon">🎆</span><h4><a href="https://provence-alpes-cotedazur.com/en/things-to-do/events/all-events/august-15-festivities-cassis-en-2886681/" target="_blank" rel="noopener">Aug 15 fireworks + ball ↗</a></h4><p>Cassis' biggest night of the year. Free. 10 PM at the port, then dancing in Place Baragnon till late.</p></div>
+      <div class="activity"><span class="icon">🎹</span><h4><a href="https://www.festival-piano.com/" target="_blank" rel="noopener">Piano festival ↗</a></h4><p>Festival de la Roque d'Anthéron — world's largest piano festival, runs through Aug 16. 1h drive.</p></div>
+      <div class="activity"><span class="icon">🎨</span><h4><a href="https://provence-alpes-cotedazur.com/en/things-to-do/events/all-events/cassis-night-market-cassis-en-2879033/" target="_blank" rel="noopener">Quai des Artistes ↗</a></h4><p>Cassis night market with local painters and engravers. Every evening 7 PM–midnight, Place Baragnon.</p></div>
+      <div class="activity"><span class="icon">💜</span><h4><a href="https://www.ot-sault.com/en/" target="_blank" rel="noopener">Sault lavender (long day) ↗</a></h4><p>2h drive — but the only Provence lavender still in bloom in August. Aug 15 harvest festival.</p></div>
+    </div>
+
+    <!-- Crowd warning -->
+    <div style="max-width: 800px; margin: 4rem auto 0; padding: 2rem; background: rgba(196,98,45,0.08); border-left: 4px solid var(--provence-terra); border-radius: 8px;">
+      <h4 style="margin-bottom: 0.5rem; color: var(--provence-terra);">⚠ August crowd note</h4>
+      <p style="font-size: 0.95rem; color: #333;">Cassis is at peak crowd in your week. Mitigation built into this itinerary: (1) early-morning boat departures (8:30 AM), (2) sunrise hikes, (3) Sunday day-trip to Aix when day-trippers are sleeping, (4) winery appointments mid-week. You'll see the busy port — you won't get stuck in it.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====================================================================== -->
+<!-- ===== BOOKING CHECKLIST ============================================== -->
+<!-- ====================================================================== -->
+<section style="background: #1a1a1a; color: white; padding: 6rem 0;" id="book">
+  <div class="container">
+    <div class="section-header" style="margin-top: 0;">
+      <span class="eyebrow" style="color: rgba(255,255,255,0.7);">Pre-Trip Punch List</span>
+      <h2 style="color: white;">Book These Now</h2>
+      <p style="color: rgba(255,255,255,0.7);">Listed in priority order. Items 1–3 sell out 60+ days ahead in August. Today is Day 78 — you're inside the booking window for everything except a few wineries.</p>
+    </div>
+
+    <div style="max-width: 850px; margin: 0 auto;">
+      <!-- Step 1 -->
+      <div style="display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--provence-terra); font-style: italic;">1</div>
+        <div>
+          <h4 style="color: white; margin-bottom: 0.5rem;">Flight — Air France AF65, Aug 11 1:40 PM LAX → CDG → MRS</h4>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem;">Book on flytap.com or via Chase/Amex travel portal. Premium Economy adds ~$600 each but the daytime arrival is worth it. Round-trip target: <strong style="color: white;">$700–$950</strong>.</p>
+          <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5);">→ airfrance.us · airline confirmation # to your hotel concierge for transfer</div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div style="display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--provence-terra); font-style: italic;">2</div>
+        <div>
+          <h4 style="color: white; margin-bottom: 0.5rem;">Hotel — Les Roches Blanches (or your alternate from the six)</h4>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem;">Aug 12 → Aug 17 (5 nights). Sea-view room. Request airport transfer. Mid-August is their fully-booked week — call directly rather than booking through a third party for better room assignment.</p>
+          <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5);">→ roches-blanches-cassis.com · +33 4 42 01 09 30</div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div style="display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--provence-terra); font-style: italic;">3</div>
+        <div>
+          <h4 style="color: white; margin-bottom: 0.5rem;">La Villa Madie ★★ — pick a night, lock it in</h4>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem;">Recommend dinner on Day 3 (Friday Aug 14) or Day 5 (Sunday Aug 16). Tasting menu only. <strong style="color: white;">Book directly with the restaurant 60+ days ahead</strong> — third-party platforms have limited inventory.</p>
+          <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5);">→ lavillamadie.com · +33 4 96 18 00 00</div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div style="display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--provence-terra); font-style: italic;">4</div>
+        <div>
+          <h4 style="color: white; margin-bottom: 0.5rem;">Private Calanques boat — L'Eden Boat</h4>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem;">Book the 6-hour private RIB tour for Aug 13 (Thursday), 8:30 AM departure. Skipper, 5 calanques, swim stops. €700–€900 for two. <strong style="color: white;">Avoid the 9 AM Saturday slot</strong> — it overlaps with public boats.</p>
+          <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5);">→ rent.ledenboat.com · choose "Calanques · 6h · Private"</div>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div style="display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--provence-terra); font-style: italic;">5</div>
+        <div>
+          <h4 style="color: white; margin-bottom: 0.5rem;">Wineries — phone calls, 4 to make</h4>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem;">
+            <strong style="color: white;">Domaine Tempier</strong> (+33 4 94 98 70 21, Mon–Fri 9–12 &amp; 2–6) — request Friday Aug 14 morning.<br>
+            <strong style="color: white;">Château de Pibarnon</strong> (+33 4 94 90 12 73) — same day, afternoon.<br>
+            <strong style="color: white;">Clos Sainte Magdeleine</strong> (+33 4 42 01 70 28) — Sat Aug 15, 10 AM.<br>
+            <strong style="color: white;">Domaine du Bagnol</strong> (+33 4 42 01 32 16) — walk-in welcome.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 6 -->
+      <div style="display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--provence-terra); font-style: italic;">6</div>
+        <div>
+          <h4 style="color: white; margin-bottom: 0.5rem;">Rental car — pick up MRS, drop MRS</h4>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem;">Compact automatic. Sixt or Europcar at Marseille airport. ~€350 for 5 days. Note: manuals are €100 cheaper if you can drive stick — most cars in France are manual.</p>
+          <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5);">→ sixt.com or europcar.com</div>
+        </div>
+      </div>
+
+      <!-- Step 7 -->
+      <div style="display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div style="font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--provence-terra); font-style: italic;">7</div>
+        <div>
+          <h4 style="color: white; margin-bottom: 0.5rem;">Bouillabaisse cooking class — optional but recommended</h4>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem;">Half-day class with Chef Gilles in Marseille — morning fish market visit at the Vieux Port, then cooking. Pair with the Marseille day or add as a Day 6 morning before flying. ~€220/person.</p>
+          <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5);">→ provence-plaisirs.com or cooking-classes-in-provence.com</div>
+        </div>
+      </div>
+
+      <!-- Step 8 -->
+      <div style="display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0;">
+        <div style="font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--provence-terra); font-style: italic;">8</div>
+        <div>
+          <h4 style="color: white; margin-bottom: 0.5rem;">Other dinner reservations</h4>
+          <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem;">Reserve <strong style="color: white;">Nino</strong>, <strong style="color: white;">Les Belles Canailles</strong>, and <strong style="color: white;">Chez Fonfon</strong> (Marseille). All take direct reservations by phone or through their websites. 30 days ahead is enough for these.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Budget summary -->
+    <div style="max-width: 850px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px;">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="eyebrow" style="color: rgba(255,255,255,0.7);">Estimated Total</span>
+        <h3 style="color: white; margin-top: 0.5rem;">Trip Budget · Two Travelers</h3>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem 3rem;">
+        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>Flights (2 × AF65 round-trip)</span> <strong style="color: white;">$1,800</strong></div>
+        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>Hotel (5 nights · Les Roches Blanches)</span> <strong style="color: white;">$4,800</strong></div>
+        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>Car rental + fuel</span> <strong style="color: white;">$450</strong></div>
+        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>Boat charter (private RIB)</span> <strong style="color: white;">$900</strong></div>
+        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>Wineries + tastings</span> <strong style="color: white;">$300</strong></div>
+        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>La Villa Madie dinner</span> <strong style="color: white;">$700</strong></div>
+        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>Other meals (5 dinners + 5 lunches)</span> <strong style="color: white;">$2,200</strong></div>
+        <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.85);"><span>Activities + spa + cooking class</span> <strong style="color: white;">$550</strong></div>
+      </div>
+      <div style="display: flex; justify-content: space-between; padding: 1.5rem 0 0; margin-top: 1rem; border-top: 2px solid rgba(255,255,255,0.2); font-family: 'Playfair Display', serif; font-size: 1.5rem;">
+        <span style="color: white;">Total · all in</span>
+        <strong style="color: var(--provence-terra);">≈ $11,700</strong>
+      </div>
+      <p style="text-align: center; color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-top: 1rem;">Per person: ~$5,850 · Range: $9,500 (lower-priced hotel + skip 3-Michelin) to $14,000 (Les Roches Blanches sea-view suite)</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Built for Mark · August 11–17, 2026 · LAX origin · Prices in USD, subject to live booking</p>
+  </div>
+</footer>
+
+</body>
+</html>
