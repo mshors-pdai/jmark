@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supplements — Q2 2026 stack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #a14a3e;
+    --accent-deep: #762d24;
+    --soft: #d18674;
+    --cream: #f7eee9;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.65; background: #faf8f5; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.015em; }
+  h1 { font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); }
+  h3 { font-size: 1.3rem; }
+  em { font-style: italic; color: var(--accent); font-weight: 500; }
+  a { color: inherit; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif; text-transform: uppercase;
+    letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; color: var(--accent);
+  }
+
+  .back-bar { background: var(--ink); color: white; padding: 0.75rem 0; font-size: 0.85rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; }
+  .back-link { color: rgba(255,255,255,0.8); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
+  .back-link:hover { color: var(--soft); }
+  .meta-mini { color: rgba(255,255,255,0.5); font-size: 0.78rem; letter-spacing: 0.06em; }
+  .brand-mini { font-family: 'Playfair Display', serif; font-size: 1rem; color: white; text-decoration: none; }
+  .brand-mini .dot { color: var(--accent); }
+
+  .intro-hero { padding: 6rem 0 4rem; background: linear-gradient(180deg, var(--cream) 0%, #faf8f5 100%); text-align: center; }
+  .intro-hero .eyebrow { margin-bottom: 1.25rem; display: inline-block; }
+  .intro-hero h1 em { color: var(--accent); font-weight: 400; }
+  .intro-hero .lede { font-size: 1.1rem; color: var(--muted); max-width: 640px; margin: 1.25rem auto 0; }
+  .disclaimer { font-size: 0.78rem; color: var(--muted); margin-top: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto; font-style: italic; }
+
+  .stack { padding: 4rem 0; }
+  .quarter-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .quarter-head h2 { color: var(--accent-deep); }
+  .quarter-head .meta { font-size: 0.85rem; color: var(--muted); }
+
+  .category {
+    margin-bottom: 2.5rem;
+  }
+  .category-head {
+    margin-bottom: 1rem;
+    color: var(--accent-deep);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    border-left: 3px solid var(--accent);
+    padding-left: 0.75rem;
+  }
+  .item-list { display: grid; gap: 0.85rem; }
+  .item {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 1rem;
+    align-items: center;
+  }
+  .item .name { font-weight: 600; font-size: 1rem; }
+  .item .dose {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent);
+    font-size: 1rem;
+  }
+  .item .why {
+    grid-column: 1 / -1;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 0.15rem;
+  }
+  .item .timing {
+    grid-column: 1 / -1;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+
+  .history {
+    background: white;
+    padding: 3rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .history h2 { color: var(--accent-deep); margin-bottom: 0.5rem; }
+  .history p { color: var(--muted); margin-bottom: 1.5rem; }
+  .history-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 0;
+    border-bottom: 1px dotted var(--line);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .history-row .q { font-family: 'Playfair Display', serif; font-style: italic; color: var(--accent); }
+  .history-row .desc { color: var(--muted); font-size: 0.9rem; }
+
+  footer { padding: 3rem 0 2.5rem; background: var(--ink); color: rgba(255,255,255,0.7); font-size: 0.88rem; }
+  footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  footer .brand-foot { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: white; }
+  footer .brand-foot .dot { color: var(--accent); }
+  footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  footer a:hover { color: var(--soft); }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 1.25rem; }
+    .intro-hero { padding: 4rem 0 3rem; }
+    .item { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All of j.mark</a>
+    <span class="meta-mini">Section · Supplements</span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">Supplements</span>
+    <h1>What's <em>in the body</em>.</h1>
+    <p class="lede">Current stack, versioned by quarter. History retained so what worked stays visible after rotation. Substrate matters — the practice runs on the body's chemistry, not on willpower.</p>
+    <p class="disclaimer">Personal log, not medical advice. Dosing and stack composition are individual and should be reviewed with a clinician for anyone reading this who isn't me.</p>
+  </div>
+</section>
+
+<section class="stack">
+  <div class="container">
+    <div class="quarter-head">
+      <h2>Q2 2026 · Current stack</h2>
+      <div class="meta">Apr · May · Jun 2026 · last updated May 20</div>
+    </div>
+
+    <div class="category">
+      <div class="category-head">Sleep · pre-bed</div>
+      <div class="item-list">
+        <div class="item">
+          <div class="name">Magnesium glycinate</div>
+          <div class="dose">400 mg</div>
+          <div class="timing">60 min before sleep</div>
+          <div class="why">Glycine form is gentler on the gut than oxide; supports deep sleep architecture and morning HRV.</div>
+        </div>
+        <div class="item">
+          <div class="name">L-theanine</div>
+          <div class="dose">200 mg</div>
+          <div class="timing">60 min before sleep</div>
+          <div class="why">Promotes alpha-wave activity, calms onset latency without sedation.</div>
+        </div>
+        <div class="item">
+          <div class="name">Glycine</div>
+          <div class="dose">3 g</div>
+          <div class="timing">30 min before sleep</div>
+          <div class="why">Lowers core body temp; improves sleep quality at clinical doses in small RCTs.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category">
+      <div class="category-head">Cognition · daily baseline</div>
+      <div class="item-list">
+        <div class="item">
+          <div class="name">Creatine monohydrate</div>
+          <div class="dose">5 g</div>
+          <div class="timing">Morning, with water</div>
+          <div class="why">2024–2025 evidence is strongest of the cognitive enhancers — improves working memory under sleep deprivation, supports muscle function.</div>
+        </div>
+        <div class="item">
+          <div class="name">Omega-3 (EPA/DHA)</div>
+          <div class="dose">2 g combined</div>
+          <div class="timing">With breakfast</div>
+          <div class="why">Anti-inflammatory baseline; brain DHA support; matters for nervous-system plasticity.</div>
+        </div>
+        <div class="item">
+          <div class="name">B-complex</div>
+          <div class="dose">1 cap</div>
+          <div class="timing">Morning</div>
+          <div class="why">Methylated forms (folate, B12). Energy metabolism + methylation pathways.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category">
+      <div class="category-head">Recovery &amp; substrate</div>
+      <div class="item-list">
+        <div class="item">
+          <div class="name">Vitamin D3 + K2</div>
+          <div class="dose">5,000 IU + 100 µg</div>
+          <div class="timing">Morning with fat</div>
+          <div class="why">Sun is primary; supplement when sun isn't enough. K2 directs calcium to bone rather than soft tissue.</div>
+        </div>
+        <div class="item">
+          <div class="name">Electrolyte mix</div>
+          <div class="dose">1 packet</div>
+          <div class="timing">Post-exercise / hot days</div>
+          <div class="why">Sodium / potassium / magnesium. Pre-empts the post-workout slump.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="history">
+  <div class="container">
+    <h2>Stack history</h2>
+    <p>What was running in earlier quarters. Drops without rotation are noted — usually means it didn't move the needle.</p>
+    <div class="history-row">
+      <span class="q">Q1 2026</span>
+      <span class="desc">Stack established — same core, no creatine yet, smaller mag dose</span>
+    </div>
+    <div class="history-row">
+      <span class="q">Q4 2025</span>
+      <span class="desc">Pre-stack period; ad-hoc supplementation</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="brand-foot">j<span class="dot">.</span>mark</div>
+    <div>
+      <a href="../index.html">All sections</a> · <a href="../practice/#substrate">Substrate section</a> · <a href="https://github.com/mshors-pdai/jmark" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

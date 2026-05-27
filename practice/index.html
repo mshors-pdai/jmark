@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice — Daily protocol & cadence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sage: #5a6b30;
+    --sage-deep: #3d4920;
+    --moss: #8a9550;
+    --olive: #b8a96a;
+    --cream: #f6f3e8;
+    --warm: #f0ecdb;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    line-height: 1.65;
+    background: #faf9f4;
+  }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.015em; }
+  h1 { font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.15; }
+  h3 { font-size: 1.5rem; line-height: 1.25; }
+  h4 { font-size: 1.1rem; }
+  a { color: inherit; }
+  em { font-style: italic; color: var(--sage); font-weight: 500; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--sage);
+  }
+
+  /* ===== Back bar ===== */
+  .back-bar {
+    background: var(--ink);
+    color: white;
+    padding: 0.75rem 0;
+    font-size: 0.85rem;
+  }
+  .back-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .back-link {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .back-link:hover { color: var(--moss); }
+  .back-link .arrow { transition: transform 0.2s; }
+  .back-link:hover .arrow { transform: translateX(-3px); }
+  .meta-mini { color: rgba(255,255,255,0.5); font-size: 0.78rem; letter-spacing: 0.06em; }
+  .brand-mini {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+  .brand-mini .dot { color: var(--sage); }
+
+  /* ===== Top nav ===== */
+  .topnav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--sage);
+    padding: 0.85rem 0;
+  }
+  .topnav .container {
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  }
+  .topnav .tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+  .tab {
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .tab:hover { background: var(--cream); color: var(--sage-deep); }
+
+  /* ===== Hero ===== */
+  .intro-hero {
+    padding: 6rem 0 4rem;
+    background: linear-gradient(180deg, var(--cream) 0%, #faf9f4 100%);
+    text-align: center;
+    position: relative;
+  }
+  .intro-hero .eyebrow { margin-bottom: 1.25rem; display: inline-block; }
+  .intro-hero h1 { margin-bottom: 1.5rem; max-width: 900px; margin-left: auto; margin-right: auto; }
+  .intro-hero h1 em { color: var(--sage); font-weight: 400; }
+  .intro-hero .lede {
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .meta-strip {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+  .meta-item .v {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--sage);
+    font-weight: 600;
+  }
+  .meta-item .v em { color: var(--sage); }
+  .meta-item .l {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    margin-top: 0.15rem;
+  }
+
+  /* ===== TOC ===== */
+  .toc {
+    background: white;
+    padding: 3rem 0 3.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .toc-head { text-align: center; margin-bottom: 2rem; }
+  .toc-head h2 { color: var(--sage-deep); font-size: 1.6rem; margin-top: 0.4rem; }
+  .toc-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .toc-col h4 {
+    color: var(--sage-deep);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    border-bottom: 2px solid var(--sage);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .toc-col ol {
+    list-style: none;
+    counter-reset: tocnum;
+    padding: 0;
+  }
+  .toc-col li {
+    counter-increment: tocnum;
+    padding: 0.45rem 0 0.45rem 2rem;
+    position: relative;
+    font-size: 0.92rem;
+    border-bottom: 1px dotted var(--line);
+  }
+  .toc-col li:last-child { border-bottom: none; }
+  .toc-col li::before {
+    content: counter(tocnum, decimal-leading-zero);
+    position: absolute; left: 0; top: 0.5rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--sage);
+  }
+  .toc-col a { color: var(--ink); text-decoration: none; }
+  .toc-col a:hover { color: var(--sage); }
+  .toc-col li small { display: block; color: var(--muted); font-size: 0.78rem; margin-top: 0.15rem; }
+
+  /* ===== Section ===== */
+  section.block { padding: 4.5rem 0; }
+  section.block.alt { background: white; }
+  .section-head { text-align: center; margin-bottom: 3rem; }
+  .section-head .eyebrow { margin-bottom: 0.75rem; display: inline-block; }
+  .section-head p {
+    color: var(--muted);
+    max-width: 640px;
+    margin: 1rem auto 0;
+    font-size: 1rem;
+  }
+
+  /* ===== Day-window cards ===== */
+  .windows {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .window {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    position: relative;
+  }
+  section.block.alt .window { background: var(--cream); }
+  .window .sym {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--sage);
+    line-height: 1;
+  }
+  .window .duration {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+  }
+  .window h3 { color: var(--sage-deep); }
+  .window ol {
+    padding-left: 1.2rem;
+    color: var(--ink);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .window ol li { padding-left: 0.25rem; margin-bottom: 0.35rem; }
+  .window ol li::marker { color: var(--sage); font-weight: 600; }
+
+  /* ===== Cadence tiers ===== */
+  .tiers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .tier {
+    background: white;
+    border-left: 4px solid var(--sage);
+    border-radius: 0 12px 12px 0;
+    padding: 1.5rem 1.75rem;
+  }
+  section.block.alt .tier { background: var(--cream); }
+  .tier h4 { color: var(--sage-deep); font-size: 1.2rem; margin-bottom: 0.6rem; }
+  .tier ul { list-style: none; padding: 0; }
+  .tier li {
+    padding: 0.4rem 0 0.4rem 1.2rem;
+    position: relative;
+    font-size: 0.95rem;
+  }
+  .tier li::before {
+    content: '•';
+    color: var(--sage);
+    position: absolute; left: 0;
+    font-weight: 700;
+  }
+
+  /* ===== Substrate grid ===== */
+  .substrate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .sub-item {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.25rem 1.4rem;
+  }
+  section.block.alt .sub-item { background: var(--cream); }
+  .sub-item h4 { color: var(--sage-deep); font-size: 1rem; margin-bottom: 0.4rem; }
+  .sub-item p { color: var(--muted); font-size: 0.85rem; line-height: 1.55; }
+
+  /* ===== Avoid list ===== */
+  .avoid-list {
+    background: var(--cream);
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .avoid-list ul { list-style: none; padding: 0; }
+  .avoid-list li {
+    padding: 0.55rem 0 0.55rem 2.2rem;
+    position: relative;
+    border-bottom: 1px dotted var(--line);
+    font-size: 0.95rem;
+  }
+  .avoid-list li:last-child { border-bottom: none; }
+  .avoid-list li::before {
+    content: '✕';
+    position: absolute; left: 0.4rem; top: 0.55rem;
+    color: #a14a3e;
+    font-weight: 700;
+  }
+  .avoid-list strong { color: var(--ink); }
+
+  /* ===== Ranked table ===== */
+  .ranked {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .ranked-row {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 1.25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line);
+    align-items: baseline;
+  }
+  .ranked-row:last-child { border-bottom: none; }
+  .ranked-row .rank {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--sage);
+    text-align: right;
+  }
+  .ranked-row h4 { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600; margin-bottom: 0.2rem; }
+  .ranked-row p { color: var(--muted); font-size: 0.88rem; line-height: 1.55; }
+
+  /* ===== Compression callout ===== */
+  .compression {
+    background: var(--sage-deep);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  .compression .eyebrow { color: var(--moss); display: inline-block; margin-bottom: 1rem; }
+  .compression h2 {
+    color: white;
+    max-width: 800px;
+    margin: 0 auto 1.25rem;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    line-height: 1.4;
+  }
+  .compression h2 em { color: var(--olive); font-weight: 600; }
+  .compression p { color: rgba(255,255,255,0.75); max-width: 700px; margin: 0 auto; font-size: 0.95rem; }
+  .compression .signoff {
+    margin-top: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--olive);
+  }
+
+  /* ===== Footer ===== */
+  footer {
+    padding: 3rem 0 2.5rem;
+    background: var(--ink);
+    color: rgba(255,255,255,0.7);
+    font-size: 0.88rem;
+  }
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  footer .brand-foot { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: white; }
+  footer .brand-foot .dot { color: var(--sage); }
+  footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  footer a:hover { color: var(--moss); }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 900px) {
+    .toc-grid, .windows, .substrate-grid { grid-template-columns: repeat(2, 1fr); }
+    .tiers { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .intro-hero { padding: 4rem 0 3rem; }
+    .container { padding: 0 1.25rem; }
+    .toc-grid, .windows, .substrate-grid { grid-template-columns: 1fr; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; }
+    .tab { white-space: nowrap; }
+    h2 { font-size: 1.8rem !important; }
+    h3 { font-size: 1.25rem; }
+    .meta-strip { gap: 1.25rem; }
+    .meta-item .v { font-size: 1.15rem; }
+    .avoid-list { padding: 1.5rem 1.25rem; }
+    section.block { padding: 3rem 0; }
+    .section-head { margin-bottom: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Back bar ===== -->
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All of j.mark</a>
+    <span class="meta-mini">Section · Practice</span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<!-- ===== Top nav ===== -->
+<nav class="topnav">
+  <div class="container">
+    <span class="eyebrow" style="font-size: 0.7rem;">Practice</span>
+    <div class="tabs">
+      <a class="tab" href="#daily">Daily</a>
+      <a class="tab" href="#weekly">Weekly</a>
+      <a class="tab" href="#cycles">Monthly+</a>
+      <a class="tab" href="#substrate">Substrate</a>
+      <a class="tab" href="#avoid">Avoid</a>
+      <a class="tab" href="#ranked">Ranked</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">Daily Protocol</span>
+    <h1>The practice that <em>compounds</em>.</h1>
+    <p class="lede">A layered prescription: daily as the foundation, weekly for calibration, occasional deeper interventions when warranted. Daily is 70% of the result — most people skip it and chase the dramatic.</p>
+    <div class="meta-strip">
+      <div class="meta-item"><div class="v"><em>25–30</em> min</div><div class="l">Morning core</div></div>
+      <div class="meta-item"><div class="v">3 <em>windows</em></div><div class="l">Per day</div></div>
+      <div class="meta-item"><div class="v"><em>4</em> tiers</div><div class="l">Daily · weekly · cycles · substrate</div></div>
+      <div class="meta-item"><div class="v"><em>70 / 20 / 10</em></div><div class="l">Daily · weekly · dramatic</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TOC ===== -->
+<section class="toc">
+  <div class="container">
+    <div class="toc-head">
+      <span class="eyebrow">Index</span>
+      <h2>The whole protocol</h2>
+    </div>
+    <div class="toc-grid">
+      <div class="toc-col">
+        <h4>The daily core</h4>
+        <ol>
+          <li><a href="#daily">Three windows · daily</a><small>Morning · midday · evening</small></li>
+          <li><a href="#morning">Morning protocol</a><small>25–30 min · hypnagogic</small></li>
+          <li><a href="#midday">Midday endorphin window</a><small>Exercise + brief write</small></li>
+          <li><a href="#evening">Evening pre-sleep</a><small>Body scan · re-read · drift</small></li>
+        </ol>
+      </div>
+      <div class="toc-col">
+        <h4>Beyond daily</h4>
+        <ol>
+          <li><a href="#weekly">Weekly cadence</a><small>Long session · challenge · bonded</small></li>
+          <li><a href="#cycles">Monthly &amp; quarterly</a><small>Extended · retreat · deeper</small></li>
+          <li><a href="#substrate">Substrate</a><small>Sleep · sun · food · social</small></li>
+        </ol>
+      </div>
+      <div class="toc-col">
+        <h4>Operating rules</h4>
+        <ol>
+          <li><a href="#avoid">What to avoid</a><small>Captive content, write-maladaptive</small></li>
+          <li><a href="#ranked">Modalities ranked by leverage</a><small>From daily to dramatic</small></li>
+          <li><a href="#compression">The compression</a><small>The protocol in one paragraph</small></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Daily ===== -->
+<section class="block" id="daily">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Tier 1 · Daily</span>
+      <h2>Three windows where <em>sorting</em> happens</h2>
+      <p>Hypnagogic states bracket the day — priors are loosest just after waking and just before sleep. The midday endorphin window is the third high-leverage moment. Stack the deliberate work into these and skip nothing else.</p>
+    </div>
+
+    <div class="windows">
+      <div class="window" id="morning">
+        <div class="sym">☉</div>
+        <div class="duration">Morning · 25–30 min</div>
+        <h3>Concentration → write</h3>
+        <ol>
+          <li><strong>Concentration</strong> (10–15 min) — focused attention on breath, mantra, or body. Builds the open state.</li>
+          <li><strong>Open monitoring</strong> (3–5 min) — sit with what arises; notice which priors are running.</li>
+          <li><strong>Visualization / intention</strong> (5–10 min) — desired self-state in present tense, with emotion if possible.</li>
+          <li><strong>Integration writing</strong> (5 min) — journal the state in <em>past tense</em>. "Today I was…"</li>
+        </ol>
+      </div>
+
+      <div class="window" id="midday">
+        <div class="sym">⚡</div>
+        <div class="duration">Midday · exercise + 15 min after</div>
+        <h3>Endorphin window</h3>
+        <ol>
+          <li>Hold the morning intention during exercise.</li>
+          <li>Within 15 min after, brief visualization or one paragraph of journaling.</li>
+          <li>Long walks &amp; runs work especially well — sustained DMN suppression.</li>
+          <li>Post-exercise window is high-write because endorphins + BDNF + reduced cortisol.</li>
+        </ol>
+      </div>
+
+      <div class="window" id="evening">
+        <div class="sym">☾</div>
+        <div class="duration">Evening · 10–15 min</div>
+        <h3>Body scan → drift</h3>
+        <ol>
+          <li><strong>Body scan</strong> or yoga nidra (5–10 min) — release physical priors stored in tension.</li>
+          <li><strong>Re-read</strong> morning affirmations.</li>
+          <li><strong>Drift off</strong> holding the desired self-state — sleep consolidates whatever's held at the threshold.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Weekly ===== -->
+<section class="block alt" id="weekly">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Tier 2 · Weekly</span>
+      <h2>The <em>calibration</em> tier</h2>
+      <p>Daily alone drifts toward delusion without reality-testing. Weekly cadence introduces the challenge that calibrates the sort, plus the longer practice that reaches what daily can't.</p>
+    </div>
+
+    <div class="tiers">
+      <div class="tier">
+        <h4>One longer session</h4>
+        <ul>
+          <li>60–90 min sustained practice</li>
+          <li>Deeper sit, breathwork (Wim Hof or holotropic), or restorative yoga</li>
+          <li>Long walk-meditation also works</li>
+          <li>Reaches priors that daily can't touch</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <h4>One real-world reality-test</h4>
+        <ul>
+          <li>Deliberately enter a situation that tests the new sort</li>
+          <li>Public speaking, difficult conversation, athletic competition, creative submission</li>
+          <li>Without this, the sort drifts toward fantasy</li>
+          <li>Pick contests you can survive AND that calibrate within range</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <h4>Bonded intimate connection</h4>
+        <ul>
+          <li>With a partner you're sorting toward</li>
+          <li>Post-coital window is high-write for relationship priors</li>
+          <li>Intention before · integration after (presence, talking, eye contact)</li>
+          <li>Partner-specific; not a substitute for personal practice</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <h4>Sleep optimization</h4>
+        <ul>
+          <li>7–9 hours, regular schedule</li>
+          <li>Dark room, no screens 60 min before bed</li>
+          <li>REM is the consolidation organ</li>
+          <li>Non-negotiable — defeats every other tier if neglected</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Cycles ===== -->
+<section class="block" id="cycles">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Tier 3 · Monthly · Quarterly · Annual</span>
+      <h2>The <em>deeper</em> windows</h2>
+      <p>Less frequent, higher amplitude. These reach priors that ordinary open states can't dislodge. Required less often than people assume; useless without the daily infrastructure to consolidate them.</p>
+    </div>
+
+    <div class="tiers">
+      <div class="tier">
+        <h4>Monthly · one extended session</h4>
+        <ul>
+          <li>3+ hours sustained practice</li>
+          <li>Long hike + meditation, half-day at home phone-off, half-day workshop</li>
+          <li>Lets the open state extend long enough to reach what daily can't</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <h4>Quarterly · environment shift</h4>
+        <ul>
+          <li>2–3 day retreat alone or in a structured setting</li>
+          <li>Removes competing observers; lets the sort settle</li>
+          <li>Trip-as-practice — see the Trips section for examples</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <h4>Annual (optional) · deeper intervention</h4>
+        <ul>
+          <li>Psychedelic-assisted work for stuck priors</li>
+          <li>Therapeutic container · set, setting, and integration matter as much as substance</li>
+          <li>NOT recreational — the trip is the opening; integration is where the work happens</li>
+          <li>~1–2× per year max</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <h4>Trip as protocol</h4>
+        <ul>
+          <li>A weekend itinerary and a day's practice share the same shape</li>
+          <li>Open the window · set the intention · execute · integrate</li>
+          <li>See <a href="../trip/" style="color: var(--sage); text-decoration: none;">/trip/</a> — each itinerary is a multi-day practice container</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Substrate ===== -->
+<section class="block alt" id="substrate">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Tier 4 · Substrate</span>
+      <h2>What the practice <em>runs on</em></h2>
+      <p>The nervous-system substrate is affected by ordinary biology. Practice without a clean substrate is practice against a leaky bucket.</p>
+    </div>
+
+    <div class="substrate-grid">
+      <div class="sub-item">
+        <h4>Diet</h4>
+        <p>Anti-inflammatory baseline. Gut microbiome → vagus → brain. Inflammation reduces neuroplasticity.</p>
+      </div>
+      <div class="sub-item">
+        <h4>Cold exposure</h4>
+        <p>Showers or plunges. Controlled hormesis — mild stress builds resilience capacity.</p>
+      </div>
+      <div class="sub-item">
+        <h4>Morning sunlight</h4>
+        <p>10–20 min in the first hour after waking. Regulates circadian, dopamine, vitamin D.</p>
+      </div>
+      <div class="sub-item">
+        <h4>Social environment</h4>
+        <p>The nervous systems near you calibrate yours via co-regulation. Most underestimated lever.</p>
+      </div>
+      <div class="sub-item">
+        <h4>Information diet</h4>
+        <p>Every input is a sort being applied. Algorithmic feeds are captive content; curate ruthlessly.</p>
+      </div>
+      <div class="sub-item">
+        <h4>Movement</h4>
+        <p>Daily exercise. Endorphins, BDNF, DMN suppression. Substrate AND practice window.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Avoid ===== -->
+<section class="block" id="avoid">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Anti-protocol</span>
+      <h2>What to <em>avoid</em></h2>
+      <p>Captive-content states, write-maladaptive substances, environments that overwrite private gains. Avoiding these is half the practice.</p>
+    </div>
+
+    <div class="avoid-list">
+      <ul>
+        <li><strong>Heavy or daily alcohol</strong> — writes habit priors; impairs hippocampal consolidation.</li>
+        <li><strong>Daily THC</strong> — read-without-write; state-dependent encoding; blunts motivation chronically.</li>
+        <li><strong>Recreational opioids, cocaine, amphetamines</strong> — captive content; the substance writes itself as the prior.</li>
+        <li><strong>Doom-scrolling, dopamine apps</strong> — write-maladaptive priors; algorithmic capture.</li>
+        <li><strong>Toxic relationships</strong> — write the prior "I am someone these people treat this way."</li>
+        <li><strong>Skipping sleep</strong> — defeats everything else; REM is the consolidation organ.</li>
+        <li><strong>Reading without testing</strong> — drift toward intellectual ungroundedness; sort needs challenge.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Ranked ===== -->
+<section class="block alt" id="ranked">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Modalities</span>
+      <h2>Ranked by <em>leverage</em></h2>
+      <p>Where to spend the next hour, ranked. The 70-20-10 rule: daily work is 70% of the result; weekly challenge 20%; dramatic intervention 10%. People reverse the proportions and wonder why they don't progress.</p>
+    </div>
+
+    <div class="ranked">
+      <div class="ranked-row"><div class="rank">01</div><div><h4>Daily morning meditation + writing</h4><p>Highest leverage. Skip nothing else and you're 70% there.</p></div></div>
+      <div class="ranked-row"><div class="rank">02</div><div><h4>Exercise + endorphin window</h4><p>Second-highest. Substrate-improving, write-positive, free.</p></div></div>
+      <div class="ranked-row"><div class="rank">03</div><div><h4>Sleep</h4><p>Substrate consolidation. Defeats everything else if neglected.</p></div></div>
+      <div class="ranked-row"><div class="rank">04</div><div><h4>Real-world challenge</h4><p>Calibration. Without this, daily work drifts into delusion.</p></div></div>
+      <div class="ranked-row"><div class="rank">05</div><div><h4>Social environment</h4><p>Passive but powerful. Choose the rooms whose nervous systems calibrate yours where you're going.</p></div></div>
+      <div class="ranked-row"><div class="rank">06</div><div><h4>Bonded sex</h4><p>Partner-work for relationship priors. Oxytocin write window after.</p></div></div>
+      <div class="ranked-row"><div class="rank">07</div><div><h4>Cold exposure / breathwork</h4><p>Accessory tools with real effects. Cheap weekly additions.</p></div></div>
+      <div class="ranked-row"><div class="rank">08</div><div><h4>Psychedelics / plant medicines</h4><p>Occasional deep intervention. Overrated in popular discourse — daily infrastructure is what makes their gains stick.</p></div></div>
+      <div class="ranked-row"><div class="rank">09</div><div><h4>Floats / ice baths / fasting</h4><p>Situational, not foundational.</p></div></div>
+      <div class="ranked-row"><div class="rank">10</div><div><h4>Recreational substances</h4><p>Net negative for sorting. Use sparingly if at all; never as part of the protocol.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Compression ===== -->
+<section class="compression" id="compression">
+  <div class="container">
+    <span class="eyebrow">The Compression</span>
+    <h2>Daily concentration + observation + intention + writing in open states. Weekly <em>challenge</em> + bonded connection + longer session. Quarterly <em>retreat</em>. Annual deeper intervention if warranted. Substrate: sleep, sun, movement, food, social. Avoid captive content.</h2>
+    <p>The 70-20-10 rule: daily work is 70% of the result; weekly challenge is 20%; dramatic intervention is 10%. People reverse the proportions and wonder why they don't progress.</p>
+    <p class="signoff">Sort yourself. Test the sort. Repeat.</p>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="container">
+    <div class="brand-foot">j<span class="dot">.</span>mark</div>
+    <div>
+      <a href="../index.html">All sections</a> · <a href="../article/">Framework essay →</a> · <a href="https://github.com/mshors-pdai/jmark" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

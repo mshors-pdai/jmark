@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reference — Quick lookups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #4d5a6b;
+    --accent-deep: #344050;
+    --soft: #8c98a8;
+    --cream: #f0f2f5;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.65; background: #f8f9fb; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.015em; }
+  h1 { font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: 1.5rem; }
+  em { font-style: italic; color: var(--accent); font-weight: 500; }
+  a { color: inherit; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif; text-transform: uppercase;
+    letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; color: var(--accent);
+  }
+
+  .back-bar { background: var(--ink); color: white; padding: 0.75rem 0; font-size: 0.85rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; }
+  .back-link { color: rgba(255,255,255,0.8); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
+  .back-link:hover { color: var(--soft); }
+  .meta-mini { color: rgba(255,255,255,0.5); font-size: 0.78rem; letter-spacing: 0.06em; }
+  .brand-mini { font-family: 'Playfair Display', serif; font-size: 1rem; color: white; text-decoration: none; }
+  .brand-mini .dot { color: var(--accent); }
+
+  .intro-hero { padding: 5rem 0 3rem; background: linear-gradient(180deg, var(--cream) 0%, #f8f9fb 100%); text-align: center; }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; }
+  .intro-hero h1 em { color: var(--accent); font-weight: 400; }
+  .intro-hero .lede { font-size: 1.05rem; color: var(--muted); max-width: 620px; margin: 1rem auto 0; }
+
+  .reference { padding: 3.5rem 0; }
+  .ref-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .ref-block {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.75rem 2rem;
+  }
+  .ref-block h2 {
+    color: var(--accent-deep);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 1rem;
+  }
+  .ref-list { list-style: none; padding: 0; }
+  .ref-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dotted var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+  .ref-list li:last-child { border-bottom: none; }
+  .ref-list .label { color: var(--ink); font-weight: 500; }
+  .ref-list .value {
+    color: var(--accent);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    text-align: right;
+  }
+  .ref-list .value a { color: var(--accent); text-decoration: none; }
+  .ref-list .value a:hover { text-decoration: underline; }
+
+  .placeholder-note {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-style: italic;
+    padding-top: 0.5rem;
+  }
+
+  footer { padding: 3rem 0 2.5rem; background: var(--ink); color: rgba(255,255,255,0.7); font-size: 0.88rem; margin-top: 3rem; }
+  footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  footer .brand-foot { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: white; }
+  footer .brand-foot .dot { color: var(--accent); }
+  footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  footer a:hover { color: var(--soft); }
+
+  @media (max-width: 900px) { .ref-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) {
+    .container { padding: 0 1.25rem; }
+    .intro-hero { padding: 4rem 0 2.5rem; }
+    .ref-block { padding: 1.4rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All of j.mark</a>
+    <span class="meta-mini">Section · Reference</span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">Reference</span>
+    <h1>Quick <em>lookups</em>.</h1>
+    <p class="lede">Numbers, contacts, gear, and recurring things you don't want to hunt for. The utility drawer.</p>
+  </div>
+</section>
+
+<section class="reference">
+  <div class="container">
+    <div class="ref-grid">
+
+      <div class="ref-block">
+        <h2>R1T quick-reference</h2>
+        <ul class="ref-list">
+          <li><span class="label">Tire PSI · highway</span><span class="value">42 PSI</span></li>
+          <li><span class="label">Tire PSI · graded dirt</span><span class="value">25 PSI</span></li>
+          <li><span class="label">Tire PSI · sand</span><span class="value">18 PSI</span></li>
+          <li><span class="label">Drive mode · trips</span><span class="value">All-Terrain</span></li>
+          <li><span class="label">Width · for trail rating</span><span class="value">87 in</span></li>
+          <li><span class="label">Weight</span><span class="value">~7,000 lb</span></li>
+        </ul>
+      </div>
+
+      <div class="ref-block">
+        <h2>Trip-ready bags</h2>
+        <ul class="ref-list">
+          <li><span class="label">River bag</span><span class="value">Pre-staged</span></li>
+          <li><span class="label">Mountain bag</span><span class="value">Pre-staged</span></li>
+          <li><span class="label">Vehicle kit</span><span class="value">In R1T</span></li>
+          <li><span class="label">Kid bag</span><span class="value">Per-trip</span></li>
+          <li><span class="label">First aid</span><span class="value">In R1T frunk</span></li>
+          <li><span class="label">Packing checklist</span><span class="value"><a href="../trip/jun_20_kern.html#packing">Kern trip →</a></span></li>
+        </ul>
+      </div>
+
+      <div class="ref-block">
+        <h2>Outdoor lookups</h2>
+        <ul class="ref-list">
+          <li><span class="label">USGS · Kern at Kernville</span><span class="value"><a href="https://waterdata.usgs.gov/monitoring-location/11186000/" target="_blank" rel="noopener">gauge ↗</a></span></li>
+          <li><span class="label">NWS · Kernville forecast</span><span class="value"><a href="https://forecast.weather.gov/MapClick.php?lat=35.7547&lon=-118.4255" target="_blank" rel="noopener">point ↗</a></span></li>
+          <li><span class="label">Sequoia NF · Kern River District</span><span class="value">760-376-3781</span></li>
+          <li><span class="label">PlugShare (EV stations)</span><span class="value"><a href="https://www.plugshare.com/" target="_blank" rel="noopener">plugshare.com ↗</a></span></li>
+          <li><span class="label">Gaia GPS · offline maps</span><span class="value"><a href="https://www.gaiagps.com/" target="_blank" rel="noopener">gaiagps.com ↗</a></span></li>
+          <li><span class="label">onX Offroad</span><span class="value"><a href="https://www.onxmaps.com/offroad/app" target="_blank" rel="noopener">onxmaps.com ↗</a></span></li>
+        </ul>
+      </div>
+
+      <div class="ref-block">
+        <h2>Common contacts</h2>
+        <ul class="ref-list">
+          <li><span class="label">Sierra South (Kern outfitter)</span><span class="value"><a href="tel:+17603763745">760-376-3745</a></span></li>
+          <li><span class="label">Whispering Pines Lodge</span><span class="value"><a href="tel:+17603763733">760-376-3733</a></span></li>
+          <li><span class="label">Kern River Outfitters (backup)</span><span class="value"><a href="tel:+17603763370">760-376-3370</a></span></li>
+          <li><span class="label">Kernville Inn (backup)</span><span class="value"><a href="tel:+17603762206">760-376-2206</a></span></li>
+          <li><span class="label">La Villa Madie (Cassis)</span><span class="value">+33 4 96 18 00 00</span></li>
+          <li><span class="label">Domaine Tempier (Bandol)</span><span class="value">+33 4 94 98 70 21</span></li>
+        </ul>
+      </div>
+
+      <div class="ref-block">
+        <h2>Booking patterns</h2>
+        <ul class="ref-list">
+          <li><span class="label">Michelin dinners</span><span class="value">60+ days lead</span></li>
+          <li><span class="label">Wine appointments (France)</span><span class="value">2 weeks · by phone</span></li>
+          <li><span class="label">River outfitters (summer)</span><span class="value">2 weeks ahead</span></li>
+          <li><span class="label">Riverside lodging (summer)</span><span class="value">4 weeks · direct call</span></li>
+          <li><span class="label">Flight lead time</span><span class="value">~3 months</span></li>
+        </ul>
+      </div>
+
+      <div class="ref-block">
+        <h2>Practice quick rules</h2>
+        <ul class="ref-list">
+          <li><span class="label">Morning practice</span><span class="value">25–30 min</span></li>
+          <li><span class="label">Post-exercise write window</span><span class="value">15 min after</span></li>
+          <li><span class="label">Evening pre-sleep</span><span class="value">10–15 min</span></li>
+          <li><span class="label">Sleep target</span><span class="value">7–9 hrs</span></li>
+          <li><span class="label">Sun · within wake</span><span class="value">10–20 min</span></li>
+          <li><span class="label">Daily / weekly / dramatic</span><span class="value">70 / 20 / 10</span></li>
+        </ul>
+      </div>
+
+    </div>
+    <p class="placeholder-note">Reference categories grow as patterns repeat. New blocks slot in here — add categories you find yourself looking up more than twice.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="brand-foot">j<span class="dot">.</span>mark</div>
+    <div>
+      <a href="../index.html">All sections</a> · <a href="../trip/">Trips →</a> · <a href="https://github.com/mshors-pdai/jmark" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

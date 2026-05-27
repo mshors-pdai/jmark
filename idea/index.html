@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ideas — Thinking in progress</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #b08a1e;
+    --accent-deep: #7d6212;
+    --soft: #d4b557;
+    --cream: #f8f3df;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.65; background: #faf9f4; }
+  h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.015em; }
+  h1 { font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.05; }
+  em { font-style: italic; color: var(--accent); font-weight: 500; }
+  a { color: inherit; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif; text-transform: uppercase;
+    letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; color: var(--accent);
+  }
+
+  .back-bar { background: var(--ink); color: white; padding: 0.75rem 0; font-size: 0.85rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; }
+  .back-link { color: rgba(255,255,255,0.8); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
+  .back-link:hover { color: var(--soft); }
+  .meta-mini { color: rgba(255,255,255,0.5); font-size: 0.78rem; letter-spacing: 0.06em; }
+  .brand-mini { font-family: 'Playfair Display', serif; font-size: 1rem; color: white; text-decoration: none; }
+  .brand-mini .dot { color: var(--accent); }
+
+  .intro-hero { padding: 6rem 0 4rem; background: linear-gradient(180deg, var(--cream) 0%, #faf9f4 100%); text-align: center; }
+  .intro-hero .eyebrow { margin-bottom: 1.25rem; display: inline-block; }
+  .intro-hero h1 em { color: var(--accent); font-weight: 400; }
+  .intro-hero .lede { font-size: 1.1rem; color: var(--muted); max-width: 640px; margin: 1.25rem auto 0; }
+
+  .status-key {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    font-size: 0.78rem;
+  }
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--muted);
+  }
+  .status-pill::before {
+    content: '';
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .status-pill.seed::before { background: var(--soft); }
+  .status-pill.drafting::before { background: var(--accent); }
+  .status-pill.published::before { background: #5a6b30; }
+  .status-pill.dropped::before { background: #b85c5c; }
+
+  .ideas { padding: 4rem 0; }
+  .idea-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .idea {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.6rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    position: relative;
+  }
+  .idea .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .idea .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .idea .status::before {
+    content: '';
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .idea[data-status="seed"] .status { color: #8a7028; }
+  .idea[data-status="seed"] .status::before { background: var(--soft); }
+  .idea[data-status="drafting"] .status { color: var(--accent); }
+  .idea[data-status="published"] .status { color: #5a6b30; }
+  .idea[data-status="published"] .status::before { background: #5a6b30; }
+  .idea[data-status="dropped"] .status { color: #b85c5c; }
+  .idea[data-status="dropped"] .status::before { background: #b85c5c; }
+  .idea .date { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; }
+  .idea h3 { font-size: 1.2rem; line-height: 1.25; }
+  .idea p { color: var(--muted); font-size: 0.92rem; }
+
+  footer { padding: 3rem 0 2.5rem; background: var(--ink); color: rgba(255,255,255,0.7); font-size: 0.88rem; margin-top: 4rem; }
+  footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  footer .brand-foot { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: white; }
+  footer .brand-foot .dot { color: var(--accent); }
+  footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  footer a:hover { color: var(--soft); }
+
+  @media (max-width: 900px) { .idea-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) {
+    .container { padding: 0 1.25rem; }
+    .intro-hero { padding: 4rem 0 3rem; }
+    .status-key { gap: 0.85rem; font-size: 0.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All of j.mark</a>
+    <span class="meta-mini">Section · Ideas</span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">Ideas</span>
+    <h1>Thinking in <em>progress</em>.</h1>
+    <p class="lede">Seeds, drafts, half-formed thoughts. Status-tagged so the catalog stays honest about which are alive. When an idea matures past challenge-testing, it gets promoted to <a href="../article/" style="color: var(--accent);">/article/</a>.</p>
+    <div class="status-key">
+      <span class="status-pill seed">seed</span>
+      <span class="status-pill drafting">drafting</span>
+      <span class="status-pill published">published</span>
+      <span class="status-pill dropped">dropped</span>
+    </div>
+  </div>
+</section>
+
+<section class="ideas">
+  <div class="container">
+    <div class="idea-grid">
+
+      <div class="idea" data-status="drafting">
+        <div class="top-row">
+          <span class="status">drafting</span>
+          <span class="date">May 27, 2026</span>
+        </div>
+        <h3>Trip-as-protocol pattern</h3>
+        <p>A weekend itinerary and a day's practice share the same structural shape — open the window, set the intention, execute, integrate. Worth its own article. Reframes every trip as a multi-day practice container.</p>
+      </div>
+
+      <div class="idea" data-status="seed">
+        <div class="top-row">
+          <span class="status">seed</span>
+          <span class="date">May 27, 2026</span>
+        </div>
+        <h3>Quarterly supplement A/B</h3>
+        <p>Version supplement stacks by quarter (Q1, Q2, etc.); keep history visible. Forces honesty about what actually moved the needle vs. what was just enthusiasm carried over from prior quarter.</p>
+      </div>
+
+      <div class="idea" data-status="seed">
+        <div class="top-row">
+          <span class="status">seed</span>
+          <span class="date">May 27, 2026</span>
+        </div>
+        <h3>Co-regulation as substrate</h3>
+        <p>The people whose nervous systems you spend time with calibrate yours. Most underestimated practice lever. Could be its own essay — currently buried in the framework article.</p>
+      </div>
+
+      <div class="idea" data-status="seed">
+        <div class="top-row">
+          <span class="status">seed</span>
+          <span class="date">May 27, 2026</span>
+        </div>
+        <h3>Read vs write nervous-system states</h3>
+        <p>THC reads but doesn't write. Opioids write but with captive content. Meditation does both. Mapping every substance and state to this taxonomy gives a clean practice prescription.</p>
+      </div>
+
+      <div class="idea" data-status="seed">
+        <div class="top-row">
+          <span class="status">seed</span>
+          <span class="date">May 27, 2026</span>
+        </div>
+        <h3>The competition-for-observation principle</h3>
+        <p>Malleability inversely proportional to observer density. Why personal change is fast, body change is slow, world change is collective. Worth tightening into a standalone essay.</p>
+      </div>
+
+      <div class="idea" data-status="seed">
+        <div class="top-row">
+          <span class="status">seed</span>
+          <span class="date">May 27, 2026</span>
+        </div>
+        <h3>Writing as the highest-leverage personal technology</h3>
+        <p>One sort per writer, infinite re-sorts per reader, including by the writer's future self. Built-in stabilization bias. Why "it is written" carries metaphysical weight in every scriptural tradition.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="brand-foot">j<span class="dot">.</span>mark</div>
+    <div>
+      <a href="../index.html">All sections</a> · <a href="../article/">Articles →</a> · <a href="https://github.com/mshors-pdai/jmark" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles — Finished essays &amp; frameworks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #3b4a7e;
+    --accent-deep: #2a3658;
+    --soft: #8a96bd;
+    --cream: #f3f4f8;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.65; background: #faf9f7; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.015em; }
+  h1 { font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+  em { font-style: italic; color: var(--accent); font-weight: 500; }
+  a { color: inherit; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .back-bar { background: var(--ink); color: white; padding: 0.75rem 0; font-size: 0.85rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; }
+  .back-link { color: rgba(255,255,255,0.8); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+  .back-link:hover { color: var(--soft); }
+  .back-link:hover .arrow { transform: translateX(-3px); }
+  .back-link .arrow { transition: transform 0.2s; }
+  .meta-mini { color: rgba(255,255,255,0.5); font-size: 0.78rem; letter-spacing: 0.06em; }
+  .brand-mini { font-family: 'Playfair Display', serif; font-size: 1rem; color: white; text-decoration: none; }
+  .brand-mini .dot { color: var(--accent); }
+
+  .intro-hero {
+    padding: 6rem 0 4rem;
+    background: linear-gradient(180deg, var(--cream) 0%, #faf9f7 100%);
+    text-align: center;
+  }
+  .intro-hero .eyebrow { margin-bottom: 1.25rem; display: inline-block; }
+  .intro-hero h1 { margin-bottom: 1.5rem; }
+  .intro-hero h1 em { color: var(--accent); font-weight: 400; }
+  .intro-hero .lede { font-size: 1.15rem; color: var(--muted); max-width: 640px; margin: 0 auto; }
+
+  .articles { padding: 4rem 0; }
+  .article-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem; }
+  .article-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 2rem 2.25rem;
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .article-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.07);
+    border-color: var(--accent);
+  }
+  .article-card .eyebrow { color: var(--accent); font-size: 0.7rem; }
+  .article-card h2 { font-size: 1.6rem; line-height: 1.2; }
+  .article-card p { color: var(--muted); font-size: 0.95rem; }
+  .article-card .meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+  .article-card.draft { border-style: dashed; }
+  .article-card.draft:hover { transform: none; box-shadow: none; }
+
+  .empty {
+    text-align: center;
+    color: var(--muted);
+    padding: 2rem 0;
+    font-size: 0.9rem;
+  }
+
+  footer { padding: 3rem 0 2.5rem; background: var(--ink); color: rgba(255,255,255,0.7); font-size: 0.88rem; margin-top: 4rem; }
+  footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  footer .brand-foot { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: white; }
+  footer .brand-foot .dot { color: var(--accent); }
+  footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  footer a:hover { color: var(--soft); }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 1.25rem; }
+    .intro-hero { padding: 4rem 0 3rem; }
+    .article-card { padding: 1.5rem 1.4rem; }
+    .article-card h2 { font-size: 1.3rem; }
+    h2 { font-size: 1.6rem !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All of j.mark</a>
+    <span class="meta-mini">Section · Articles</span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">Articles</span>
+    <h1>Writing that <em>landed</em>.</h1>
+    <p class="lede">Finished essays and frameworks. Ideas live in <a href="../idea/" style="color: var(--accent);">/idea/</a> while they're being argued with; they get promoted here when they survive enough reality-testing to publish.</p>
+  </div>
+</section>
+
+<section class="articles">
+  <div class="container">
+    <div class="article-list">
+
+      <a class="article-card" href="#observation-framework">
+        <span class="eyebrow">Framework · v1.1 · May 27, 2026</span>
+        <h2>Observation, sorting, and nervous-system reality</h2>
+        <p>14 principles built from a dialectic across placebo research, predictive processing, financial reflexivity, Stoicism, and indigenous purge medicine. The central operation is sorting — converting possibility into actuality through observation — and the nervous system is the universal sorter. Bottom-up only; behavior is the only channel out.</p>
+        <div class="meta">
+          <span>~12 min read</span>
+          <span>Framework</span>
+          <span>Evidence-tiered</span>
+        </div>
+      </a>
+
+      <div class="article-card draft">
+        <span class="eyebrow">Drafting</span>
+        <h2>Next essay</h2>
+        <p>Ideas in <a href="../idea/" style="color: var(--accent);">/idea/</a> get promoted here when they're done being argued with. Likely first promotions: "Trip-as-protocol," "Co-regulation as substrate," "Read vs write states."</p>
+        <div class="meta">
+          <span>In progress</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="empty">More articles will land here as ideas mature.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="brand-foot">j<span class="dot">.</span>mark</div>
+    <div>
+      <a href="../index.html">All sections</a> · <a href="../practice/">Practice protocol</a> · <a href="../idea/">Ideas in progress</a> · <a href="https://github.com/mshors-pdai/jmark" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

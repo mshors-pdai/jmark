@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>j.mark — Travel Journal</title>
+<title>j.mark — Personal Index</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -536,6 +536,160 @@
   footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
   footer a:hover { color: var(--accent); }
 
+  /* ===== NOW BAND ===== */
+  .now-band {
+    padding: 4rem 0 2rem;
+    background: white;
+    border-bottom: 1px solid var(--line);
+  }
+  .now-header { text-align: center; margin-bottom: 2rem; }
+  .now-header .eyebrow { color: var(--accent); margin-bottom: 0.65rem; display: inline-block; }
+  .now-header h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+  .now-header h2 em { font-style: italic; color: var(--accent); font-weight: 400; }
+  .now-header p { color: var(--muted); margin-top: 0.5rem; font-size: 0.95rem; }
+  .now-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .now-card {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.4rem 1.25rem;
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform 0.25s, box-shadow 0.25s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .now-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+  }
+  .now-card .eyebrow { color: var(--muted); font-size: 0.68rem; }
+  .now-card .now-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    line-height: 1.15;
+    color: var(--ink);
+  }
+  .now-card .now-value em { font-style: italic; color: var(--accent); }
+  .now-card .now-sub { font-size: 0.82rem; color: var(--muted); }
+  .now-card.practice { --tone: #5a6b30; }
+  .now-card.trip     { --tone: #c4622d; }
+  .now-card.article  { --tone: #3b4a7e; }
+  .now-card.stack    { --tone: #a14a3e; }
+  .now-card.practice .now-value em,
+  .now-card.trip .now-value em,
+  .now-card.article .now-value em,
+  .now-card.stack .now-value em { color: var(--tone); }
+
+  /* ===== DOMAIN PREVIEW SECTIONS ===== */
+  .domain {
+    padding: 5rem 0 1.5rem;
+  }
+  .domain.alt { background: white; }
+  .domain-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .domain-header h2 {
+    font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+    line-height: 1.1;
+  }
+  .domain-header h2 em { font-style: italic; font-weight: 400; }
+  .domain-header .eyebrow { display: block; margin-bottom: 0.4rem; }
+  .domain-header p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    max-width: 520px;
+  }
+  .domain-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  .domain-cta .arrow { transition: transform 0.25s; }
+  .domain-cta:hover .arrow { transform: translateX(4px); }
+  .domain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+  .mini-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  }
+  .domain.alt .mini-card { background: var(--cream); }
+  .mini-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.07);
+    border-color: var(--tone, var(--accent));
+  }
+  .mini-card .eyebrow { color: var(--tone, var(--accent)); font-size: 0.68rem; }
+  .mini-card h4 {
+    font-size: 1.15rem;
+    line-height: 1.25;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+  .mini-card p {
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+  .mini-card .meta {
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-top: auto;
+    padding-top: 0.5rem;
+  }
+  .mini-card .status {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    background: var(--cream);
+    color: var(--tone, var(--accent));
+    align-self: flex-start;
+  }
+  .domain.alt .mini-card .status { background: white; }
+  .domain.practice { --tone: #5a6b30; }
+  .domain.article  { --tone: #3b4a7e; }
+  .domain.idea     { --tone: #b08a1e; }
+  .domain.stack    { --tone: #a14a3e; }
+  .domain.reference{ --tone: #4d5a6b; }
+  .domain .eyebrow,
+  .domain h2 em,
+  .domain-cta { color: var(--tone); }
+
   /* ===== Responsive ===== */
   @media (max-width: 900px) {
     .trip-card.large { grid-column: span 1; flex-direction: column; }
@@ -543,13 +697,19 @@
     .trip-card.large .card-body { padding: 2rem; }
     .trip-card.large .card-body h3 { font-size: 2rem; }
     .stats .container { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .now-cards { grid-template-columns: repeat(2, 1fr); }
+    .domain-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 600px) {
     .hero { padding: 4rem 0 3rem; }
     .container { padding: 0 1.25rem; }
-    .nav-links { gap: 0.85rem; }
-    .nav-links li:not(:first-child):not(:last-child) { display: none; }
+    .nav-links { gap: 0.85rem; overflow-x: auto; flex-wrap: nowrap; }
+    .nav-links a { white-space: nowrap; }
     .trip-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    .now-cards { grid-template-columns: 1fr; }
+    .domain-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .domain { padding: 3rem 0 1rem; }
+    .domain-header { flex-direction: column; align-items: flex-start; }
     .topnav { padding: 0.8rem 0; }
     .brand { font-size: 1.25rem; }
     .filters { gap: 0.4rem; }
@@ -576,7 +736,11 @@
     <div class="brand">j<span class="dot">.</span>mark</div>
     <ul class="nav-links">
       <li><a href="#trips">Trips</a></li>
-      <li><a href="STYLE.md" target="_blank" rel="noopener">Style</a></li>
+      <li><a href="./practice/">Practice</a></li>
+      <li><a href="./article/">Articles</a></li>
+      <li><a href="./idea/">Ideas</a></li>
+      <li><a href="./supplement/">Supplements</a></li>
+      <li><a href="./reference/">Reference</a></li>
       <li><a href="https://github.com/mshors-pdai/jmark" target="_blank" rel="noopener">GitHub ↗</a></li>
     </ul>
   </div>
@@ -585,9 +749,9 @@
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="container">
-    <span class="eyebrow">A Travel Journal</span>
-    <h1>Places to <em>go</em>,<br>plans worth <em>keeping</em>.</h1>
-    <p class="subhead">Detailed, opinionated trip plans — researched, costed, and bookable. Each itinerary is a complete brief: where to stay, where to eat, what to do, and which day to do it on.</p>
+    <span class="eyebrow">A Personal Index</span>
+    <h1>Places to <em>go</em>,<br>practices to <em>keep</em>.</h1>
+    <p class="subhead">Detailed, opinionated plans — trips, daily protocols, ideas, articles, supplement stacks, references. One place to keep what's worth keeping.</p>
 
     <div class="search-wrap" id="search-wrap">
       <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -597,7 +761,7 @@
       <input type="search" class="search-input" id="trip-search" placeholder="Search trips — country, month, theme, activity…" aria-label="Search trips" autocomplete="off">
       <button type="button" class="search-clear" id="search-clear" aria-label="Clear search">×</button>
     </div>
-    <div class="search-hint">Press <kbd>/</kbd> to search · try "rafting", "wine", "june", "family"</div>
+    <div class="search-hint">Press <kbd>/</kbd> to search trips · try "rafting", "wine", "june", "family"</div>
   </div>
 </section>
 
@@ -619,6 +783,39 @@
     <div>
       <div class="stat-num"><em>Jun</em></div>
       <div class="stat-label">Next departure</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOW ===== -->
+<section class="now-band" id="now">
+  <div class="container">
+    <div class="now-header">
+      <span class="eyebrow">Now</span>
+      <h2>What's <em>current</em></h2>
+      <p id="now-sub">Wed · May 27, 2026 · This week's intention: <em>"I am calibrating in challenge."</em></p>
+    </div>
+    <div class="now-cards">
+      <a class="now-card practice" href="./practice/">
+        <span class="eyebrow">Today's protocol</span>
+        <div class="now-value">☉ <em>25 min</em> morning</div>
+        <div class="now-sub">Concentration · observation · write</div>
+      </a>
+      <a class="now-card trip" href="./trip/jun_20_kern.html">
+        <span class="eyebrow">Next trip</span>
+        <div class="now-value"><em>Kern</em> · Jun 20</div>
+        <div class="now-sub">24 days · family weekend</div>
+      </a>
+      <a class="now-card article" href="./article/">
+        <span class="eyebrow">Latest article</span>
+        <div class="now-value">Observation &amp; <em>sorting</em></div>
+        <div class="now-sub">Framework v1.1 · May 27</div>
+      </a>
+      <a class="now-card stack" href="./supplement/">
+        <span class="eyebrow">Current stack</span>
+        <div class="now-value">Q2 2026 <em>stack</em></div>
+        <div class="now-sub">Sleep · cognition · recovery</div>
+      </a>
     </div>
   </div>
 </section>
@@ -733,12 +930,182 @@
   </div>
 </section>
 
+<!-- ===== PRACTICE ===== -->
+<section class="domain practice alt" id="practice-preview">
+  <div class="container">
+    <div class="domain-header">
+      <div>
+        <span class="eyebrow">Practice</span>
+        <h2>The daily <em>protocol</em></h2>
+        <p>Morning, midday, and evening windows where sorting actually happens. Daily is 70% of the result; everything else is supplemental.</p>
+      </div>
+      <a href="./practice/" class="domain-cta">Full practice page <span class="arrow">→</span></a>
+    </div>
+    <div class="domain-grid">
+      <a href="./practice/#morning" class="mini-card">
+        <span class="eyebrow">Morning · 25–30 min</span>
+        <h4>Concentration → observation → intention → write</h4>
+        <p>Hypnagogic open state, focused attention, visualization in present tense, integration journaling in past tense.</p>
+        <div class="meta">Hypnagogic window</div>
+      </a>
+      <a href="./practice/#midday" class="mini-card">
+        <span class="eyebrow">Midday · exercise + write</span>
+        <h4>Endorphin window</h4>
+        <p>Exercise holding the morning intention; brief journaling within 15 min after. DMN suppression makes this a high-write state.</p>
+        <div class="meta">Post-exercise · 15 min</div>
+      </a>
+      <a href="./practice/#evening" class="mini-card">
+        <span class="eyebrow">Evening · 10–15 min</span>
+        <h4>Body scan → re-read → sleep</h4>
+        <p>Release physical priors, re-read morning affirmations, drift off holding the desired state. Sleep consolidates.</p>
+        <div class="meta">Pre-sleep window</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ARTICLES ===== -->
+<section class="domain article" id="article-preview">
+  <div class="container">
+    <div class="domain-header">
+      <div>
+        <span class="eyebrow">Articles</span>
+        <h2>Writing that <em>landed</em></h2>
+        <p>Finished essays and frameworks — thinking that's been through enough reality-testing to publish.</p>
+      </div>
+      <a href="./article/" class="domain-cta">All articles <span class="arrow">→</span></a>
+    </div>
+    <div class="domain-grid">
+      <a href="./article/" class="mini-card">
+        <span class="eyebrow">Framework · May 27, 2026</span>
+        <h4>Observation, sorting, and nervous-system reality</h4>
+        <p>14 principles connecting placebo, predictive processing, the nervous system as substrate, and the bottom-up constraint on manifestation.</p>
+        <div class="meta">~12 min read · v1.1</div>
+      </a>
+      <div class="mini-card" style="border-style: dashed; cursor: default;">
+        <span class="eyebrow">Drafting</span>
+        <h4>Next essay</h4>
+        <p>Ideas in `/idea/` get promoted here when they're done being argued with.</p>
+        <div class="meta">In progress</div>
+      </div>
+      <div class="mini-card" style="border-style: dashed; cursor: default;">
+        <span class="eyebrow">Future</span>
+        <h4>Slot 3</h4>
+        <p>Reserved.</p>
+        <div class="meta">Empty</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IDEAS ===== -->
+<section class="domain idea alt" id="idea-preview">
+  <div class="container">
+    <div class="domain-header">
+      <div>
+        <span class="eyebrow">Ideas</span>
+        <h2>Thinking in <em>progress</em></h2>
+        <p>Seeds, drafts, half-formed thoughts. Status-tagged so the catalog stays honest about which are alive.</p>
+      </div>
+      <a href="./idea/" class="domain-cta">All ideas <span class="arrow">→</span></a>
+    </div>
+    <div class="domain-grid">
+      <a href="./idea/" class="mini-card">
+        <span class="eyebrow">Status: drafting</span>
+        <h4>Trip-as-protocol pattern</h4>
+        <p>A weekend itinerary and a day's practice have the same structural shape — open the window, set the intention, execute, integrate.</p>
+        <span class="status">drafting</span>
+      </a>
+      <a href="./idea/" class="mini-card">
+        <span class="eyebrow">Status: seed</span>
+        <h4>Quarterly supplement A/B</h4>
+        <p>Version stacks by quarter; keep history so we know what actually moved the needle vs what was just enthusiasm.</p>
+        <span class="status">seed</span>
+      </a>
+      <a href="./idea/" class="mini-card">
+        <span class="eyebrow">Status: seed</span>
+        <h4>Co-regulation as substrate</h4>
+        <p>The people you spend time with calibrate your nervous system. Most underestimated lever; deserves its own essay.</p>
+        <span class="status">seed</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SUPPLEMENTS ===== -->
+<section class="domain stack" id="supplement-preview">
+  <div class="container">
+    <div class="domain-header">
+      <div>
+        <span class="eyebrow">Supplements</span>
+        <h2>What's <em>in the body</em></h2>
+        <p>Current stack, versioned by quarter. History retained so what worked stays visible after rotation.</p>
+      </div>
+      <a href="./supplement/" class="domain-cta">Current stack <span class="arrow">→</span></a>
+    </div>
+    <div class="domain-grid">
+      <a href="./supplement/" class="mini-card">
+        <span class="eyebrow">Q2 2026 · Sleep</span>
+        <h4>Magnesium glycinate · L-theanine · glycine</h4>
+        <p>Pre-bed stack supporting deep sleep and morning HRV. Dose, timing, and rationale on the supplement page.</p>
+        <div class="meta">7 items · last updated May 20</div>
+      </a>
+      <a href="./supplement/" class="mini-card">
+        <span class="eyebrow">Q2 2026 · Cognition</span>
+        <h4>Creatine · omega-3 · B-complex</h4>
+        <p>Daily baseline. Creatine evidence in 2024–2025 is strongest of the cognitive enhancers; omega-3 for inflammation.</p>
+        <div class="meta">3 items</div>
+      </a>
+      <a href="./supplement/" class="mini-card">
+        <span class="eyebrow">Q2 2026 · Recovery</span>
+        <h4>Vitamin D · K2 · electrolytes</h4>
+        <p>Post-exercise and morning. Sun exposure is primary; D supplement when sun isn't enough.</p>
+        <div class="meta">3 items</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REFERENCE ===== -->
+<section class="domain reference alt" id="reference-preview">
+  <div class="container">
+    <div class="domain-header">
+      <div>
+        <span class="eyebrow">Reference</span>
+        <h2>Quick <em>lookups</em></h2>
+        <p>Numbers, contacts, gear, and recurring things you don't want to hunt for. The utility drawer.</p>
+      </div>
+      <a href="./reference/" class="domain-cta">Open reference <span class="arrow">→</span></a>
+    </div>
+    <div class="domain-grid">
+      <a href="./reference/" class="mini-card">
+        <span class="eyebrow">Gear</span>
+        <h4>R1T setup · packing kits · trip-ready bags</h4>
+        <p>Vehicle modes, tire PSI by surface, pre-staged bags for river / mountain / road trips.</p>
+        <div class="meta">Reference</div>
+      </a>
+      <a href="./reference/" class="mini-card">
+        <span class="eyebrow">Contacts</span>
+        <h4>Repeat numbers · medical · vendors</h4>
+        <p>Phone numbers and URLs that recur — outfitters, ranger stations, hotels, primary care, dentist.</p>
+        <div class="meta">Reference</div>
+      </a>
+      <a href="./reference/" class="mini-card">
+        <span class="eyebrow">Lookups</span>
+        <h4>USGS gauges · NWS · charging maps</h4>
+        <p>Tools that get checked before every trip: river flow, weather, EV charger status.</p>
+        <div class="meta">Reference</div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== FOOTER ===== -->
 <footer>
   <div class="container">
     <div class="brand-foot">j<span class="dot">.</span>mark</div>
     <div>
-      Built with care · <a href="https://github.com/mshors-pdai/jmark" target="_blank" rel="noopener">View source on GitHub ↗</a> · <a href="STYLE.md" target="_blank" rel="noopener">Style guide</a>
+      Built with care · <a href="https://github.com/mshors-pdai/jmark" target="_blank" rel="noopener">View source on GitHub ↗</a> · <a href="STYLE.md" target="_blank" rel="noopener">Style guide</a> · <a href="AGENT.md" target="_blank" rel="noopener">Agent doc</a>
     </div>
   </div>
 </footer>

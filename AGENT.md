@@ -1,11 +1,11 @@
-# AGENT.md — Trip Planning Context
+# AGENT.md — Personal Index Context
 
 > Handoff doc for future Claude sessions. Read this first, then read [STYLE.md](./STYLE.md).
-> Last updated: 2026-05-27
+> Last updated: 2026-05-27 — expanded from trips-only to multi-domain personal index.
 
 ## What this repo is
 
-`jmark` is **Mark Shors' personal travel index**, hosted on GitHub Pages.
+`jmark` is **Mark Shors' personal index** — trips, daily practice, ideas, articles, supplements, and reference — hosted on GitHub Pages.
 
 - **Live site:** https://mshors-pdai.github.io/jmark/
 - **Repo:** https://github.com/mshors-pdai/jmark
@@ -17,15 +17,29 @@
 
 ```
 jmark/
-├── index.html                       # Searchable trip index landing page
-├── STYLE.md                         # Style guide — read this before building a new trip
-├── trip/
+├── index.html                       # HUB: now-band + trips catalog + previews of every domain
+├── STYLE.md                         # Style guide — read before building a new trip page
+├── AGENT.md                         # This file
+├── trip/                            # Travel itineraries (existing — preserved exactly)
 │   ├── aug_11_provence.html         # Itinerary No. 01 — couples', Aug 2026
 │   └── jun_20_kern.html             # Itinerary No. 02 — family, summer 2026
-└── AGENT.md                         # This file
+├── practice/                        # Daily / weekly / monthly protocols
+│   └── index.html                   # The full practice prescription (sage palette)
+├── article/                         # Finished essays & frameworks
+│   └── index.html                   # Article catalog (indigo palette)
+├── idea/                            # Seeds, drafts, half-formed thoughts
+│   └── index.html                   # Status-tagged catalog (amber palette)
+├── supplement/                      # Quarterly stack with retained history
+│   └── index.html                   # Current Q2 2026 stack (clay palette)
+└── reference/                       # Quick lookups: gear, contacts, recurring numbers
+    └── index.html                   # Reference utility drawer (slate palette)
 ```
 
+**Trip URLs are stable.** Existing pages like `/trip/jun_20_kern.html` were preserved exactly when expanding to multi-domain. The root `index.html` was edited additively — the original trip catalog (search + filter + cards) is intact below a new "Now" band.
+
 **Future trips:** add `trip/<mon3>_<dd>_<slug>.html` and a card to `index.html`. STYLE.md has the full pattern.
+
+**Future content in other domains:** each section index is self-contained with its own palette. Add items by editing the appropriate section's `index.html` — promote ideas → articles, version supplements by quarter, add reference blocks as patterns repeat.
 
 ---
 
@@ -211,7 +225,28 @@ curl -s -o /dev/null -w "%{http_code}\n" https://mshors-pdai.github.io/jmark/
 3. Add a `<a class="trip-card large">` to the grid in `index.html` with `data-search` and `data-tags` populated.
 4. Bump `#stat-trip-count` and update other stats (year, countries, next departure) if relevant.
 5. Add a new section to this AGENT.md under "Active trips" with status + decisions + open items.
-6. Commit + push.
+6. Update the "Next trip" card in the Now band on `index.html` if this becomes the next one.
+7. Commit + push.
+
+### To add to a non-trip section
+
+Each section index is self-contained. The pattern is consistent across domains:
+- Back-bar (`../index.html` link)
+- Hero with eyebrow + italic-accent h1
+- Content area (list, grid, or stack depending on domain)
+- Footer with cross-links to related sections
+
+**Practice** (`practice/index.html`) — single comprehensive page. Update in place when the protocol evolves. Hash anchors `#daily`, `#morning`, `#midday`, `#evening`, `#weekly`, `#cycles`, `#substrate`, `#avoid`, `#ranked`, `#compression`.
+
+**Articles** (`article/index.html`) — add `<a class="article-card">` to `.article-list`. Article body pages live as `article/<slug>.html` once an idea is mature enough. Promote from `idea/` when an idea survives reality-testing.
+
+**Ideas** (`idea/index.html`) — add `<div class="idea" data-status="seed|drafting|published|dropped">` to `.idea-grid`. Update the status attribute as the idea progresses. When `published`, also create an article entry and link forward.
+
+**Supplements** (`supplement/index.html`) — current quarter is at the top. When rotating, move current to history list and start a new quarter section. Versioned as `supplement/<yyyy>_q<n>_stack.html` if a quarter deserves its own page; otherwise inline.
+
+**Reference** (`reference/index.html`) — add a `<div class="ref-block">` with `<h2>` category + `<ul class="ref-list">` of label/value rows. Add a category when you find yourself looking up something more than twice.
+
+After any change to a section, update the Now band and the section preview cards on root `index.html` if the displayed item changes.
 
 ### To take the site down
 
