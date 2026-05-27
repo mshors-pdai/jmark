@@ -55,6 +55,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
   }
   .brand {
     font-family: 'Playfair Display', serif;
@@ -123,6 +124,84 @@
     line-height: 1.55;
   }
 
+  /* ===== SEARCH BAR ===== */
+  .search-wrap {
+    max-width: 700px;
+    margin: 2.5rem auto 0;
+    position: relative;
+  }
+  .search-wrap .search-input {
+    width: 100%;
+    padding: 1.1rem 1.4rem 1.1rem 3.2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--ink);
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s, border-color 0.2s;
+    outline: none;
+  }
+  .search-wrap .search-input::placeholder {
+    color: var(--muted);
+    opacity: 0.7;
+  }
+  .search-wrap .search-input:focus {
+    box-shadow: 0 4px 24px rgba(196,98,45,0.18);
+    border-color: var(--accent);
+  }
+  .search-wrap .search-icon {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+    color: var(--muted);
+  }
+  .search-wrap .search-clear {
+    position: absolute;
+    right: 0.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--ink);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: background 0.2s;
+  }
+  .search-wrap .search-clear:hover { background: var(--accent); }
+  .search-wrap.has-value .search-clear { display: flex; }
+  .search-hint {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 0.85rem;
+    letter-spacing: 0.04em;
+  }
+  .search-hint kbd {
+    display: inline-block;
+    padding: 0.1rem 0.45rem;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.72rem;
+    color: var(--ink);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+  }
+
   /* ===== STATS BAND ===== */
   .stats {
     padding: 3rem 0;
@@ -153,12 +232,10 @@
   }
 
   /* ===== TRIPS SECTION ===== */
-  .trips {
-    padding: 6rem 0 4rem;
-  }
+  .trips { padding: 6rem 0 4rem; }
   .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
   .section-header .eyebrow {
     margin-bottom: 1rem;
@@ -178,13 +255,13 @@
 
   .filters {
     display: flex;
-    gap: 0.75rem;
+    gap: 0.65rem;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
   }
   .filter {
-    padding: 0.5rem 1.25rem;
+    padding: 0.45rem 1.15rem;
     border-radius: 999px;
     border: 1px solid var(--line);
     font-size: 0.85rem;
@@ -193,11 +270,35 @@
     background: white;
     cursor: pointer;
     transition: all 0.2s;
+    font-family: inherit;
   }
   .filter.active, .filter:hover {
     background: var(--ink);
     color: white;
     border-color: var(--ink);
+  }
+
+  .result-meta {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+    min-height: 1.2em;
+  }
+  .result-meta strong { color: var(--accent); font-weight: 600; }
+
+  .no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--muted);
+    grid-column: 1 / -1;
+    display: none;
+  }
+  .no-results.show { display: block; }
+  .no-results h4 {
+    font-size: 1.5rem;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
   }
 
   .trip-grid {
@@ -248,13 +349,8 @@
     background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.55) 100%);
     z-index: 1;
   }
-  .trip-card:not(.large) .card-image {
-    height: 280px;
-  }
-  .trip-card.large .card-image {
-    flex: 1.2;
-    min-height: 420px;
-  }
+  .trip-card:not(.large) .card-image { height: 280px; }
+  .trip-card.large .card-image { flex: 1.2; min-height: 420px; }
 
   .card-meta-top {
     position: absolute;
@@ -263,6 +359,8 @@
     z-index: 2;
     display: flex;
     gap: 0.5rem;
+    flex-wrap: wrap;
+    max-width: calc(100% - 2.5rem);
   }
   .pill {
     padding: 0.3rem 0.8rem;
@@ -323,17 +421,28 @@
     padding: 3rem;
     justify-content: center;
   }
-  .card-body h3 {
-    font-size: 2rem;
-    line-height: 1.15;
-  }
-  .trip-card.large .card-body h3 {
-    font-size: 2.5rem;
-  }
+  .card-body h3 { font-size: 2rem; line-height: 1.15; }
+  .trip-card.large .card-body h3 { font-size: 2.5rem; }
   .card-body p {
     color: var(--muted);
     font-size: 0.95rem;
     line-height: 1.6;
+  }
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: -0.5rem;
+  }
+  .card-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.2rem 0.65rem;
+    background: var(--cream);
+    color: var(--accent-dark);
+    border-radius: 999px;
+    font-weight: 600;
   }
   .card-stats {
     display: flex;
@@ -342,9 +451,7 @@
     border-top: 1px solid var(--line);
     margin-top: auto;
   }
-  .card-stat {
-    flex: 1;
-  }
+  .card-stat { flex: 1; }
   .card-stat .v {
     font-family: 'Playfair Display', serif;
     font-size: 1.05rem;
@@ -367,9 +474,7 @@
     font-size: 0.95rem;
     margin-top: 0.5rem;
   }
-  .card-cta .arrow {
-    transition: transform 0.3s;
-  }
+  .card-cta .arrow { transition: transform 0.3s; }
   .trip-card:hover .arrow { transform: translateX(6px); }
 
   /* placeholder card */
@@ -433,19 +538,33 @@
 
   /* ===== Responsive ===== */
   @media (max-width: 900px) {
-    .trip-card.large {
-      grid-column: span 1;
-      flex-direction: column;
-    }
+    .trip-card.large { grid-column: span 1; flex-direction: column; }
     .trip-card.large .card-image { min-height: 280px; }
+    .trip-card.large .card-body { padding: 2rem; }
+    .trip-card.large .card-body h3 { font-size: 2rem; }
     .stats .container { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
   }
   @media (max-width: 600px) {
     .hero { padding: 4rem 0 3rem; }
     .container { padding: 0 1.25rem; }
-    .nav-links { gap: 1rem; }
+    .nav-links { gap: 0.85rem; }
     .nav-links li:not(:first-child):not(:last-child) { display: none; }
-    .trip-grid { grid-template-columns: 1fr; }
+    .trip-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    .topnav { padding: 0.8rem 0; }
+    .brand { font-size: 1.25rem; }
+    .filters { gap: 0.4rem; }
+    .filter { font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    .search-wrap .search-input { font-size: 0.95rem; padding: 0.95rem 1.2rem 0.95rem 2.85rem; }
+    .search-wrap .search-icon { left: 1rem; }
+    .search-wrap .search-clear { width: 28px; height: 28px; }
+    .card-stats { gap: 0.85rem; }
+    .card-stat .v { font-size: 0.95rem; }
+    .card-body { padding: 1.5rem; gap: 0.85rem; }
+    .card-body h3 { font-size: 1.5rem; }
+    .stats { padding: 2rem 0; }
+    .stats .container { gap: 1rem; }
+    .stat-num { font-size: 1.9rem; }
+    .search-hint kbd { display: none; }
   }
 </style>
 </head>
@@ -457,8 +576,7 @@
     <div class="brand">j<span class="dot">.</span>mark</div>
     <ul class="nav-links">
       <li><a href="#trips">Trips</a></li>
-      <li><a href="#upcoming">Upcoming</a></li>
-      <li><a href="#archive">Archive</a></li>
+      <li><a href="STYLE.md" target="_blank" rel="noopener">Style</a></li>
       <li><a href="https://github.com/mshors-pdai/jmark" target="_blank" rel="noopener">GitHub ↗</a></li>
     </ul>
   </div>
@@ -470,6 +588,16 @@
     <span class="eyebrow">A Travel Journal</span>
     <h1>Places to <em>go</em>,<br>plans worth <em>keeping</em>.</h1>
     <p class="subhead">Detailed, opinionated trip plans — researched, costed, and bookable. Each itinerary is a complete brief: where to stay, where to eat, what to do, and which day to do it on.</p>
+
+    <div class="search-wrap" id="search-wrap">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="search" class="search-input" id="trip-search" placeholder="Search trips — country, month, theme, activity…" aria-label="Search trips" autocomplete="off">
+      <button type="button" class="search-clear" id="search-clear" aria-label="Clear search">×</button>
+    </div>
+    <div class="search-hint">Press <kbd>/</kbd> to search · try "rafting", "wine", "june", "family"</div>
   </div>
 </section>
 
@@ -477,19 +605,19 @@
 <section class="stats">
   <div class="container">
     <div>
-      <div class="stat-num">1</div>
-      <div class="stat-label">Trip planned</div>
+      <div class="stat-num" id="stat-trip-count">2</div>
+      <div class="stat-label">Trips planned</div>
     </div>
     <div>
-      <div class="stat-num">5</div>
-      <div class="stat-label">Nights</div>
+      <div class="stat-num">2026</div>
+      <div class="stat-label">Year</div>
     </div>
     <div>
-      <div class="stat-num">1</div>
-      <div class="stat-label">Country</div>
+      <div class="stat-num">2</div>
+      <div class="stat-label">Countries</div>
     </div>
     <div>
-      <div class="stat-num"><em>Aug</em> 2026</div>
+      <div class="stat-num"><em>Jun</em></div>
       <div class="stat-label">Next departure</div>
     </div>
   </div>
@@ -501,21 +629,28 @@
     <div class="section-header">
       <span class="eyebrow">The Itineraries</span>
       <h2>Where we're going</h2>
-      <p>Each plan is a full booking-ready document — hotels, restaurants, wineries, activities, and the day-by-day to make it all fit.</p>
+      <p>Each plan is a full booking-ready document — hotels, restaurants, activities, maps, and a day-by-day to make it all fit.</p>
     </div>
 
-    <div class="filters">
-      <button class="filter active">All</button>
-      <button class="filter">2026</button>
-      <button class="filter">Europe</button>
-      <button class="filter">Coastal</button>
-      <button class="filter">Wine</button>
+    <div class="filters" id="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="2026">2026</button>
+      <button class="filter" data-filter="family">Family</button>
+      <button class="filter" data-filter="europe">Europe</button>
+      <button class="filter" data-filter="california">California</button>
+      <button class="filter" data-filter="coastal">Coastal</button>
+      <button class="filter" data-filter="mountain">Mountain</button>
+      <button class="filter" data-filter="wine">Wine</button>
     </div>
 
-    <div class="trip-grid">
+    <div class="result-meta" id="result-meta">&nbsp;</div>
+
+    <div class="trip-grid" id="trip-grid">
 
       <!-- Featured: Provence -->
-      <a href="./trip/aug_11_provence.html" class="trip-card large">
+      <a href="./trip/aug_11_provence.html" class="trip-card large"
+         data-search="provence cassis calanques france europe august 2026 wine bandol michelin couples romantic coastal mediterranean perseid meteor villa madie roches blanches"
+         data-tags="2026 europe coastal wine">
         <div class="card-image">
           <div class="card-image-bg" style="background-image: linear-gradient(135deg, rgba(196,98,45,0.15), rgba(90,74,122,0.25)), url('https://images.unsplash.com/photo-1568849676085-51415703900f?w=1400&q=80'); background-color: #c4622d;"></div>
           <div class="card-meta-top">
@@ -531,36 +666,67 @@
           <span class="eyebrow" style="color: var(--accent);">Itinerary No. 01</span>
           <h3>Cassis &amp; the Calanques</h3>
           <p>The fishing port at the foot of Europe's tallest sea cliff. Limestone fjords carved into turquoise water, Cassis whites tasted on the cliffs, Bandol Mourvèdre 30 minutes east, and a 3-Michelin dinner above the Mediterranean. A single hotel, no compromises, and the Perseid meteor shower on arrival night.</p>
+          <div class="card-tags">
+            <span class="card-tag">Europe</span><span class="card-tag">Coastal</span><span class="card-tag">Wine</span><span class="card-tag">Couples</span>
+          </div>
           <div class="card-stats">
-            <div class="card-stat">
-              <div class="v">6 hotels</div>
-              <div class="l">to choose from</div>
-            </div>
-            <div class="card-stat">
-              <div class="v">16 activities</div>
-              <div class="l">researched</div>
-            </div>
-            <div class="card-stat">
-              <div class="v">~$5,850</div>
-              <div class="l">per person</div>
-            </div>
+            <div class="card-stat"><div class="v">6 hotels</div><div class="l">to choose from</div></div>
+            <div class="card-stat"><div class="v">16 activities</div><div class="l">researched</div></div>
+            <div class="card-stat"><div class="v">~$9,580</div><div class="l">all-in (2 travelers)</div></div>
+          </div>
+          <div class="card-cta">View the full itinerary <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <!-- Featured: Kern River -->
+      <a href="./trip/jun_20_kern.html" class="trip-card large"
+         data-search="kern river kernville california sherman pass off-road off road rafting family lickity split sequoia national forest rivian r1t summer 2026 june july august mountain whitewater orange county"
+         data-tags="2026 family california mountain">
+        <div class="card-image">
+          <div class="card-image-bg" style="background-image: linear-gradient(135deg, rgba(45,80,22,0.20), rgba(42,108,140,0.30)), url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Sherman_pass1.jpg'); background-color: #2d5016;"></div>
+          <div class="card-meta-top">
+            <span class="pill live">Upcoming</span>
+            <span class="pill">Family</span>
+          </div>
+          <div class="card-image-overlay">
+            <div class="dates">Sat–Sun, Jun 20 → 21, 2026 · 2 days</div>
+            <div class="country">California · Southern Sierra</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="eyebrow" style="color: var(--accent);">Itinerary No. 02</span>
+          <h3>Kern River Weekend</h3>
+          <p>Two adults, three kids — ages 7, 10, and 12 — in the R1T from Orange County, up to Kernville for one mellow whitewater run on the Lickity Split and one scenic dirt drive up Sherman Pass to 9,200 feet. Beginner posture, one night at the lodge, home by Sunday dinner. Three candidate weekends compared — Jun 20 recommended on the heat numbers.</p>
+          <div class="card-tags">
+            <span class="card-tag">Family</span><span class="card-tag">California</span><span class="card-tag">Mountain</span><span class="card-tag">Off-road</span><span class="card-tag">Rafting</span>
+          </div>
+          <div class="card-stats">
+            <div class="card-stat"><div class="v">3 routes</div><div class="l">mapped + shareable</div></div>
+            <div class="card-stat"><div class="v">3 outfitters</div><div class="l">with phone + web</div></div>
+            <div class="card-stat"><div class="v">2 days · 1 night</div><div class="l">from OC and back</div></div>
           </div>
           <div class="card-cta">View the full itinerary <span class="arrow">→</span></div>
         </div>
       </a>
 
       <!-- Placeholder · next trip -->
-      <div class="trip-card placeholder">
+      <div class="trip-card placeholder" data-search="" data-tags="placeholder">
         <div class="plus">+</div>
         <h4>Next trip</h4>
         <p>The next itinerary will live here. Likely candidates: Galicia, Mallorca, Patagonia, or somewhere none of these came close to.</p>
       </div>
 
       <!-- Placeholder · archive -->
-      <div class="trip-card placeholder">
+      <div class="trip-card placeholder" data-search="" data-tags="placeholder">
         <div class="plus">↩</div>
         <h4>Archive</h4>
         <p>Past trips that did or didn't happen — Galicia, Mallorca, and the Mauritius idea — will be filed here eventually.</p>
+      </div>
+
+      <!-- No-results state -->
+      <div class="no-results" id="no-results">
+        <h4>Nothing matches that search</h4>
+        <p>Try a different keyword, or clear the search to see all trips.</p>
       </div>
 
     </div>
@@ -572,10 +738,88 @@
   <div class="container">
     <div class="brand-foot">j<span class="dot">.</span>mark</div>
     <div>
-      Built with care · <a href="https://github.com/mshors-pdai/jmark" target="_blank" rel="noopener">View source on GitHub ↗</a>
+      Built with care · <a href="https://github.com/mshors-pdai/jmark" target="_blank" rel="noopener">View source on GitHub ↗</a> · <a href="STYLE.md" target="_blank" rel="noopener">Style guide</a>
     </div>
   </div>
 </footer>
+
+<script>
+  (function(){
+    var input = document.getElementById('trip-search');
+    var clearBtn = document.getElementById('search-clear');
+    var wrap = document.getElementById('search-wrap');
+    var grid = document.getElementById('trip-grid');
+    var meta = document.getElementById('result-meta');
+    var noResults = document.getElementById('no-results');
+    var filters = document.querySelectorAll('#filters .filter');
+    var cards = grid.querySelectorAll('.trip-card');
+    var activeFilter = 'all';
+
+    function applyFilters(){
+      var q = (input.value || '').toLowerCase().trim();
+      var visible = 0;
+      var totalRealTrips = 0;
+      cards.forEach(function(card){
+        var isPlaceholder = card.classList.contains('placeholder');
+        if (!isPlaceholder) totalRealTrips++;
+        var hay = (card.dataset.search || '').toLowerCase();
+        var tags = (card.dataset.tags || '').toLowerCase();
+        var matchesQuery = !q || hay.indexOf(q) !== -1;
+        var matchesFilter = activeFilter === 'all' || tags.indexOf(activeFilter) !== -1;
+        if (isPlaceholder) {
+          card.style.display = (q || activeFilter !== 'all') ? 'none' : '';
+          return;
+        }
+        if (matchesQuery && matchesFilter) {
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      if (visible === 0 && (q || activeFilter !== 'all')) {
+        noResults.classList.add('show');
+      } else {
+        noResults.classList.remove('show');
+      }
+      if (q || activeFilter !== 'all') {
+        meta.innerHTML = 'Showing <strong>' + visible + '</strong> of ' + totalRealTrips + ' trip' + (totalRealTrips === 1 ? '' : 's');
+      } else {
+        meta.innerHTML = '&nbsp;';
+      }
+      wrap.classList.toggle('has-value', !!q);
+    }
+
+    input.addEventListener('input', applyFilters);
+    clearBtn.addEventListener('click', function(){
+      input.value = '';
+      input.focus();
+      applyFilters();
+    });
+
+    filters.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        filters.forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        activeFilter = btn.dataset.filter;
+        applyFilters();
+      });
+    });
+
+    document.addEventListener('keydown', function(e){
+      if (e.key === '/' && document.activeElement !== input && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        input.focus();
+        input.select();
+      }
+      if (e.key === 'Escape' && document.activeElement === input) {
+        input.value = '';
+        input.blur();
+        applyFilters();
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>

@@ -51,6 +51,51 @@
     opacity: 0.7;
   }
 
+  /* ===== Back-to-index bar (shared component) ===== */
+  .back-bar {
+    background: #1a1a1a;
+    color: rgba(255,255,255,0.88);
+    padding: 0.55rem 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+  }
+  .back-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .back-bar a.back-link {
+    color: rgba(255,255,255,0.88);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s;
+  }
+  .back-bar a.back-link:hover { color: var(--provence-terra); }
+  .back-bar a.back-link .arrow { display: inline-block; transition: transform 0.2s; }
+  .back-bar a.back-link:hover .arrow { transform: translateX(-3px); }
+  .back-bar .brand-mini {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+  .back-bar .brand-mini:hover { color: white; }
+  .back-bar .brand-mini .dot { color: var(--provence-terra); }
+  .back-bar .meta-mini {
+    display: none;
+    font-size: 0.74rem;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
+
   /* ===== Top Nav ===== */
   .topnav {
     position: sticky; top: 0; z-index: 100;
@@ -590,10 +635,46 @@
   @media (max-width: 600px) {
     .hotels-grid, .activities { grid-template-columns: 1fr; }
     .intro-hero .meta { gap: 1.5rem; }
+    .intro-hero { padding: 3.5rem 0 2.5rem; }
+    .intro-hero h1 { font-size: 2.2rem; }
+    .topnav { padding: 0.6rem 0; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .brand { font-size: 1.05rem; }
+    .topnav .tabs { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+    .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.3rem; }
+    .destination { padding: 3rem 0; }
+    .day-number .num { font-size: 2.5rem; }
+    .wine-block { padding: 1.5rem; }
+    .wine-image { height: 220px; }
+    .flight-box { padding: 1.5rem; }
+    .container { padding: 0 1rem; }
+    /* Inline-styled grids — force responsive on phones */
+    [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+    [style*="grid-template-columns: 80px 1fr"] { grid-template-columns: 50px 1fr !important; gap: 0.85rem !important; }
+    /* Tables go horizontally scrollable */
+    table { font-size: 0.85rem; }
+  }
+  @media (max-width: 900px) {
+    /* The day-at-a-glance and budget tables — wrap parents in scroll */
+    .container > div[style*="overflow-x: auto"] { padding-bottom: 0.5rem; }
+    /* Day-at-a-glance container forced scrollable */
+    .container > div[style*="border-radius: 16px"] > table { min-width: 560px; }
   }
 </style>
 </head>
 <body>
+
+<!-- ===== BACK BAR ===== -->
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
+    <span class="meta-mini">Itinerary No. 01 · Cassis &amp; the Calanques</span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
 
 <!-- ===== NAV ===== -->
 <nav class="topnav">

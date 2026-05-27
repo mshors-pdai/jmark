@@ -1,0 +1,2216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Summer 2026 — Kern River Family Weekend (Jun 20 recommended)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --kern-pine: #2d5016;
+    --kern-pine-deep: #1d3a0e;
+    --kern-river: #2a6c8c;
+    --kern-river-deep: #1b4d68;
+    --kern-rust: #b85c2e;
+    --kern-rust-deep: #8b3f15;
+    --kern-sand: #d4a373;
+    --kern-olive: #8a7e3f;
+    --kern-cream: #faf4e8;
+    --kern-warm: #f5ecd9;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    line-height: 1.6;
+    background: #fafaf7;
+  }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
+  h3 { font-size: 1.6rem; line-height: 1.25; }
+  h4 { font-size: 1.15rem; }
+  a { color: inherit; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    opacity: 0.7;
+  }
+
+  /* ===== Index / TOC ===== */
+  .toc {
+    background: white;
+    padding: 3rem 0 3.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .toc-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .toc-col h4 {
+    color: var(--kern-pine-deep);
+    font-size: 1.05rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--kern-pine);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+  }
+  .toc-col ol {
+    list-style: none;
+    counter-reset: tocnum;
+    padding: 0;
+  }
+  .toc-col li {
+    counter-increment: tocnum;
+    padding: 0.4rem 0 0.4rem 2rem;
+    position: relative;
+    font-size: 0.92rem;
+    border-bottom: 1px dotted var(--line);
+  }
+  .toc-col li:last-child { border-bottom: none; }
+  .toc-col li::before {
+    content: counter(tocnum, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0.45rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--kern-rust);
+  }
+  .toc-col a {
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .toc-col a:hover { color: var(--kern-rust); }
+  .toc-col li small {
+    display: block;
+    color: var(--muted);
+    font-size: 0.78rem;
+    margin-top: 0.1rem;
+  }
+
+  /* ===== Per-route mini-map block ===== */
+  .routemap {
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    padding-top: 1.5rem;
+  }
+  .routemap iframe {
+    width: 100%;
+    height: 260px;
+    border: none;
+    border-radius: 12px;
+    display: block;
+  }
+  .routemap .share {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.85rem;
+  }
+  .routemap .share a, .routemap .share button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.74rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    border-radius: 999px;
+    border: 1px solid var(--kern-pine);
+    color: var(--kern-pine);
+    background: white;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+  }
+  .routemap .share a:hover, .routemap .share button:hover {
+    background: var(--kern-pine);
+    color: white;
+  }
+
+  /* Lodge / pcard share-row */
+  .pcard .share-row {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  .pcard .share-row a {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--kern-river-deep);
+    text-decoration: none;
+    padding: 0.25rem 0.65rem;
+    border: 1px solid var(--kern-river);
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: all 0.2s;
+  }
+  .pcard .share-row a:hover {
+    background: var(--kern-river);
+    color: white;
+  }
+
+  /* Research deep-links section */
+  .research {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+  .research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .research-col h4 {
+    color: var(--kern-pine-deep);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid var(--kern-rust);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+  .research-col ul { list-style: none; padding: 0; }
+  .research-col li {
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    border-bottom: 1px dotted var(--line);
+  }
+  .research-col li:last-child { border-bottom: none; }
+  .research-col li a {
+    color: var(--kern-pine-deep);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .research-col li a:hover { border-bottom-color: var(--kern-rust); }
+  .research-col li small {
+    display: block;
+    color: var(--muted);
+    font-size: 0.78rem;
+    margin-top: 0.1rem;
+  }
+
+  /* Copy notification */
+  .copy-toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--kern-pine-deep);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0;
+    transition: all 0.3s;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  .copy-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* ===== Back-to-index bar (shared component) ===== */
+  .back-bar {
+    background: #1a1a1a;
+    color: rgba(255,255,255,0.88);
+    padding: 0.55rem 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+  }
+  .back-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .back-bar a.back-link {
+    color: rgba(255,255,255,0.88);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s;
+  }
+  .back-bar a.back-link:hover { color: var(--kern-sand); }
+  .back-bar a.back-link .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+  }
+  .back-bar a.back-link:hover .arrow { transform: translateX(-3px); }
+  .back-bar .brand-mini {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: -0.02em;
+  }
+  .back-bar .brand-mini .dot { color: var(--kern-rust); }
+  .back-bar .meta-mini {
+    display: none;
+    font-size: 0.74rem;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 700px) {
+    .back-bar .meta-mini { display: inline; }
+  }
+
+  /* ===== Top Nav ===== */
+  .topnav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    padding: 1rem 0;
+  }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; }
+  .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
+  .topnav .brand .dot { color: var(--kern-rust); }
+  .topnav .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .topnav .tab {
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--kern-pine);
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    border: 1px solid var(--kern-pine);
+  }
+  .topnav .tab:hover { background: var(--kern-pine); color: white; }
+
+  /* ===== Intro Hero ===== */
+  .intro-hero {
+    padding: 6rem 0 4rem;
+    text-align: center;
+    background: linear-gradient(180deg, var(--kern-cream) 0%, #fafaf7 100%);
+  }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--kern-rust); }
+  .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
+  .intro-hero h1 em { font-style: italic; color: var(--kern-rust); font-weight: 400; }
+  .intro-hero .lede {
+    max-width: 740px; margin: 1.25rem auto 0;
+    color: var(--muted); font-size: 1.1rem;
+  }
+  .intro-hero .meta {
+    display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap;
+    margin-top: 2rem; padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    max-width: 900px; margin-left: auto; margin-right: auto;
+  }
+  .intro-hero .meta-item .label {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em;
+    color: var(--muted); margin-bottom: 0.3rem;
+  }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.3rem; }
+
+  /* ===== Destination Section ===== */
+  .destination { padding: 5rem 0 4rem; background: var(--kern-cream); }
+
+  .hero-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    margin-bottom: 4rem;
+  }
+  .hero-card .hero-image {
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-image:
+      linear-gradient(135deg, rgba(45,80,22,0.15), rgba(42,108,140,0.30)),
+      url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Sherman_pass1.jpg');
+    background-color: var(--kern-pine);
+  }
+  .hero-card .hero-content {
+    padding: 3.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+  }
+  .hero-card .eyebrow { margin-bottom: 1.25rem; color: var(--kern-rust); }
+  .hero-card h2 { margin-bottom: 1.5rem; color: var(--kern-pine-deep); }
+  .hero-card .tagline { font-size: 1.1rem; color: var(--muted); margin-bottom: 2rem; }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+  .stat .stat-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    line-height: 1.1;
+    margin-bottom: 0.2rem;
+    color: var(--kern-pine-deep);
+  }
+  .stat .stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+
+  /* ===== Section headers ===== */
+  .section-header {
+    text-align: center;
+    margin: 4rem auto 3rem;
+    max-width: 760px;
+  }
+  .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--kern-rust); }
+  .section-header h2 { margin-bottom: 1rem; color: var(--kern-pine-deep); }
+  .section-header p { color: var(--muted); font-size: 1.05rem; }
+
+  /* ===== Drive box (mirrors flight box) ===== */
+  .drive-box {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    max-width: 880px;
+    margin: 2rem auto 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+  .drive-leg {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .drive-leg:last-child { border-bottom: none; }
+  .drive-end .code {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--kern-pine-deep);
+  }
+  .drive-end .city {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.3rem;
+  }
+  .drive-line { text-align: center; color: var(--muted); }
+  .drive-line .dash {
+    height: 1px;
+    background: var(--line);
+    position: relative;
+    margin: 0.5rem 0;
+  }
+  .drive-line .dash::after {
+    content: '⟶';
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 0 0.5rem;
+    color: var(--kern-rust);
+  }
+  .drive-line .info { font-size: 0.8rem; }
+  .drive-meta {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    border-top: 2px solid var(--line);
+  }
+  .drive-meta .item { text-align: center; }
+  .drive-meta .item .label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+  }
+  .drive-meta .item .val {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--kern-pine-deep);
+  }
+
+  /* ===== Special dates block ===== */
+  .special-block {
+    max-width: 1100px;
+    margin: 0 auto 4rem;
+    padding: 3rem;
+    background: linear-gradient(135deg, var(--kern-cream), var(--kern-warm));
+    border-radius: 24px;
+  }
+  .special-block .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .special-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.75rem;
+    border-left: 4px solid var(--kern-rust);
+  }
+  .special-card.river { border-left-color: var(--kern-river); }
+  .special-card.pine { border-left-color: var(--kern-pine); }
+  .special-card.olive { border-left-color: var(--kern-olive); }
+  .special-card .head {
+    display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem;
+  }
+  .special-card .icon { font-size: 2rem; line-height: 1; }
+  .special-card h4 { margin: 0; color: var(--kern-pine-deep); }
+  .special-card .when {
+    font-size: 0.82rem; color: var(--muted); margin-top: 0.2rem;
+  }
+  .special-card p { font-size: 0.95rem; color: #333; margin-bottom: 1rem; line-height: 1.55; }
+  .book-link {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: all 0.2s;
+    color: var(--kern-rust);
+    border: 1.5px solid var(--kern-rust);
+  }
+  .book-link:hover { background: var(--kern-rust); color: white; }
+
+  /* ===== Day-at-a-glance table ===== */
+  .glance {
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+  .glance table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .glance th {
+    background: var(--kern-pine);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+  .glance td { padding: 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .glance tr:last-child td { border-bottom: none; }
+  .glance tr:nth-child(even) td { background: rgba(184,92,46,0.03); }
+  .glance .daynum {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: var(--kern-rust);
+    font-size: 1.1rem;
+  }
+
+  /* ===== Itinerary timeline ===== */
+  .itinerary { max-width: 950px; margin: 0 auto; }
+  .day {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .day:last-child { border-bottom: none; }
+  .day-number .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--kern-rust);
+  }
+  .day-number .date {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .day-content h3 { margin-bottom: 0.75rem; color: var(--kern-pine-deep); }
+  .day-content .location {
+    display: inline-block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    background: var(--kern-pine);
+    color: white;
+  }
+  .day-content ul { list-style: none; }
+  .day-content ul li {
+    padding: 0.45rem 0 0.45rem 1.5rem;
+    position: relative;
+    color: #333;
+  }
+  .day-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.95rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--kern-rust);
+  }
+
+  /* ===== Route cards / hotel cards / activity cards ===== */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .pcard {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  .pcard:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .pcard .pimg {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-color: var(--kern-olive);
+  }
+  .pcard .pimg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.35));
+  }
+  .pcard .tier {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255,255,255,0.95);
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: var(--kern-pine-deep);
+    z-index: 2;
+  }
+  .pcard .tier.primary { background: var(--kern-pine); color: white; }
+  .pcard .tier.warn { background: var(--kern-rust); color: white; }
+  .pcard .pbody { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .pcard .pbody h4 { margin-bottom: 0.25rem; color: var(--kern-pine-deep); }
+  .pcard .pbody .loc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+  .pcard .pbody p { font-size: 0.93rem; color: #333; margin-bottom: 1rem; line-height: 1.55; }
+  .pcard .pmeta {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.85rem;
+    margin-top: auto;
+  }
+  .pcard .pmeta .price { font-weight: 600; color: var(--kern-pine-deep); }
+  .pcard .pbody .book-link { align-self: flex-start; margin-top: 0.5rem; }
+
+  /* ===== Route spec strip ===== */
+  .specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin: 1rem 0 1.25rem;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .specs > div {
+    padding: 0.65rem 0.5rem;
+    border-right: 1px dashed var(--line);
+    font-size: 0.78rem;
+    text-align: center;
+  }
+  .specs > div:last-child { border-right: none; }
+  .specs .k {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--kern-rust);
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+  }
+  .specs .v { color: var(--kern-pine-deep); font-weight: 600; }
+
+  /* ===== Wine-block style for off-road detail ===== */
+  .route-block {
+    background: white;
+    border-radius: 24px;
+    padding: 3rem;
+    margin: 2rem auto;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  }
+  .route-block .rimg {
+    height: 380px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+  }
+  .route-block .rtext h3 { margin-bottom: 1rem; color: var(--kern-pine-deep); }
+  .route-block .rtext .eyebrow { color: var(--kern-rust); }
+  .route-block .specs { margin: 1.25rem 0; }
+  .route-block .notelist {
+    list-style: none;
+    margin-top: 1rem;
+  }
+  .route-block .notelist li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    border-bottom: 1px dashed var(--line);
+  }
+  .route-block .notelist li:last-child { border-bottom: none; }
+  .route-block .notelist li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    color: var(--kern-rust);
+    font-weight: 700;
+  }
+
+  /* ===== Map block ===== */
+  .map-block {
+    max-width: 1100px;
+    margin: 4rem auto;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  }
+  .map-block .legend {
+    padding: 2rem 2.5rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--kern-cream);
+    border-bottom: 1px solid var(--line);
+  }
+  .map-block .legend .item {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.82rem; color: var(--ink);
+  }
+  .map-block .legend .swatch {
+    width: 28px; height: 4px; border-radius: 2px;
+  }
+  .map-block .map-frame iframe {
+    display: block; width: 100%; border: none; height: 480px;
+  }
+  .map-block .sketchwrap {
+    padding: 1.5rem;
+    background: var(--kern-cream);
+  }
+  .map-block svg.sketch { width: 100%; height: auto; max-height: 460px; display: block; }
+  .map-block .maplinks {
+    padding: 1.25rem 2rem;
+    display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
+    background: var(--kern-cream);
+    border-top: 1px solid var(--line);
+  }
+
+  /* ===== Activities grid ===== */
+  .activities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .activity {
+    background: white;
+    border-radius: 12px;
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    transition: transform 0.2s;
+    border: 1px solid var(--line);
+  }
+  .activity:hover { transform: translateY(-2px); }
+  .activity .icon { font-size: 2.2rem; margin-bottom: 0.85rem; display: block; }
+  .activity h4 { margin-bottom: 0.5rem; font-size: 1rem; color: var(--kern-pine-deep); }
+  .activity h4 a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .activity h4 a:hover { border-bottom-color: var(--kern-rust); }
+  .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+  /* ===== Packing grid ===== */
+  .pack-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .pack-col {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  }
+  .pack-col h4 {
+    color: var(--kern-pine-deep);
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid var(--kern-pine);
+  }
+  .pack-col ul { list-style: none; }
+  .pack-col li {
+    padding: 0.35rem 0 0.35rem 1.4rem;
+    font-size: 0.9rem;
+    position: relative;
+    border-bottom: 1px dotted var(--line);
+    color: #333;
+  }
+  .pack-col li:last-child { border-bottom: none; }
+  .pack-col li::before {
+    content: '☐';
+    position: absolute;
+    left: 0;
+    top: 0.35rem;
+    color: var(--kern-rust);
+    font-size: 0.9rem;
+  }
+
+  /* ===== Reference table ===== */
+  .reftable {
+    max-width: 950px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+  .reftable table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+  .reftable th {
+    background: var(--kern-pine);
+    color: white;
+    padding: 0.9rem 1.1rem;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .reftable td { padding: 0.85rem 1.1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .reftable tr:last-child td { border-bottom: none; }
+  .reftable td a { color: var(--kern-rust); text-decoration: none; }
+  .reftable td a:hover { text-decoration: underline; }
+
+  /* ===== Warning callout ===== */
+  .warn {
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    background: rgba(184,92,46,0.07);
+    border-left: 4px solid var(--kern-rust);
+    border-radius: 8px;
+  }
+  .warn h4 { color: var(--kern-rust-deep); margin-bottom: 0.5rem; }
+  .warn p { font-size: 0.95rem; color: #333; margin: 0; }
+
+  /* ===== Booking checklist (dark) ===== */
+  .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
+  .booking .section-header h2 { color: white; }
+  .booking .section-header p { color: rgba(255,255,255,0.65); }
+  .booking .steps { max-width: 880px; margin: 0 auto; }
+  .step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .step:last-child { border-bottom: none; }
+  .step .stepnum {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    line-height: 1;
+    color: var(--kern-rust);
+    font-style: italic;
+  }
+  .step h4 { color: white; margin-bottom: 0.5rem; }
+  .step p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem; line-height: 1.55; }
+  .step p strong { color: white; }
+  .step .meta { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+  .step .meta a { color: var(--kern-sand); text-decoration: none; }
+  .step .meta a:hover { color: white; }
+  .step .when {
+    display: inline-block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.25rem 0.75rem;
+    background: rgba(184,92,46,0.18);
+    color: var(--kern-sand);
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  /* ===== R1T tech section ===== */
+  .tech-block {
+    max-width: 1100px;
+    margin: 3rem auto;
+    background: white;
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .tech-block .timg {
+    height: 360px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+  }
+  .tech-block h3 { color: var(--kern-pine-deep); margin-bottom: 0.75rem; }
+  .tech-block .eyebrow { color: var(--kern-rust); }
+  .tech-block table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin-top: 1rem; }
+  .tech-block table th, .tech-block table td {
+    padding: 0.65rem 0.5rem; text-align: left; border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .tech-block table th {
+    font-family: 'Inter', sans-serif; font-size: 0.7rem; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--kern-rust); font-weight: 700;
+  }
+
+  /* ===== Footer ===== */
+  footer {
+    background: #1a1a1a;
+    color: rgba(255,255,255,0.6);
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  footer a:hover { color: var(--kern-sand); }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 900px) {
+    .hero-card { grid-template-columns: 1fr; }
+    .hero-card .hero-image { min-height: 280px; }
+    .hero-card .hero-content { padding: 2.5rem 2rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .day { grid-template-columns: 1fr; gap: 1rem; }
+    .day-number .num { font-size: 3rem; }
+    .cards-grid { grid-template-columns: 1fr 1fr; }
+    .activities { grid-template-columns: repeat(2, 1fr); }
+    .pack-grid { grid-template-columns: repeat(2, 1fr); }
+    .route-block { grid-template-columns: 1fr; padding: 2rem; gap: 1.5rem; }
+    .route-block .rimg { height: 240px; }
+    .tech-block { grid-template-columns: 1fr; padding: 2rem; gap: 1.5rem; }
+    .tech-block .timg { height: 240px; }
+    .special-block .grid { grid-template-columns: 1fr; }
+    .special-block { padding: 2rem; }
+    .drive-leg { grid-template-columns: 1fr; gap: 0.5rem; }
+    .topnav .tabs { flex-wrap: wrap; }
+    .container { padding: 0 1.25rem; }
+    .specs { grid-template-columns: repeat(2, 1fr); }
+    .specs > div:nth-child(2) { border-right: none; }
+    .step { grid-template-columns: 60px 1fr; gap: 1rem; }
+  }
+  @media (max-width: 600px) {
+    .cards-grid, .activities, .pack-grid { grid-template-columns: 1fr; }
+    .intro-hero .meta { gap: 1.5rem; }
+    .reftable td:first-child { font-size: 0.78rem; }
+    .toc-grid, .research-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    .hero-card .hero-content { padding: 2rem 1.5rem; }
+    .intro-hero { padding: 3.5rem 0 2.5rem; }
+    .intro-hero h1 { font-size: 2.2rem; }
+    .topnav { padding: 0.6rem 0; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .brand { font-size: 1.1rem; }
+    .topnav .tabs { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+    .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    .section-header { margin: 2.5rem auto 2rem; }
+    h2 { font-size: 1.8rem !important; }
+    h3 { font-size: 1.3rem; }
+    .day-number .num { font-size: 2.5rem; }
+    .glance { overflow-x: auto; }
+    .glance table { min-width: 540px; }
+    .reftable { overflow-x: auto; }
+    .reftable table { min-width: 520px; }
+    .tech-block table { font-size: 0.84rem; }
+    .tech-block { padding: 1.5rem; }
+    .step { grid-template-columns: 50px 1fr; gap: 0.85rem; padding: 1.5rem 0; }
+    .step .stepnum { font-size: 2rem; }
+    .booking { padding: 4rem 0; }
+    .route-block { padding: 1.5rem; gap: 1.25rem; }
+    .route-block .specs { grid-template-columns: repeat(2, 1fr); }
+    .route-block .specs > div:nth-child(2) { border-right: none; }
+    .routemap iframe { height: 220px; }
+    .map-block .map-frame iframe { height: 320px; }
+    .map-block .legend { flex-direction: column; align-items: flex-start; gap: 0.5rem; padding: 1.25rem 1.5rem; }
+    .map-block .sketchwrap { padding: 0.75rem; }
+    .container { padding: 0 1rem; }
+    .destination { padding: 3rem 0 2.5rem; }
+    .booking .steps { padding: 0 0.25rem; }
+  }
+  @media (max-width: 900px) and (min-width: 601px) {
+    .toc-grid, .research-grid { grid-template-columns: repeat(2, 1fr); }
+    .topnav .tabs { gap: 0.35rem; }
+    .topnav .tab { font-size: 0.82rem; padding: 0.4rem 0.85rem; }
+  }
+  /* Inline 3-date comparison grid — force responsive */
+  @media (max-width: 900px) {
+    .compare-3 { grid-template-columns: 1fr !important; }
+    .special-block .grid { grid-template-columns: 1fr !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== BACK BAR ===== -->
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
+    <span class="meta-mini">Itinerary No. 02 · Kern River</span>
+    <a href="../index.html" class="brand-mini" style="text-decoration: none;">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<!-- ===== NAV ===== -->
+<nav class="topnav">
+  <div class="container">
+    <div class="brand">Kern River<span class="dot">.</span> <span style="font-family: 'Inter', sans-serif; font-size: 0.78rem; color: var(--muted); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-left: 0.4rem;">Summer 2026</span></div>
+    <div class="tabs">
+      <a href="#trip" class="tab">Overview</a>
+      <a href="#itinerary" class="tab">Itinerary</a>
+      <a href="#routes" class="tab">Off-Road</a>
+      <a href="#rafting" class="tab">Rafting</a>
+      <a href="#lodging" class="tab">Lodging</a>
+      <a href="#book" class="tab">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== INTRO ===== -->
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">California · Southern Sierra · 1 Night</span>
+    <h1>Kern River <em>Weekend.</em></h1>
+    <p class="lede">
+      Two adults, three kids — ages 7, 10, and 12 — in the R1T from Orange County, up to Kernville for one mellow whitewater
+      run and one scenic dirt drive into the high Sierra. Beginner posture. One night at the lodge. Home by Sunday dinner.
+      Three candidate weekends in <a href="#timing" style="color: var(--kern-rust); text-decoration: none; border-bottom: 1px dotted;">summer 2026</a> — Jun 20 recommended.
+    </p>
+    <div class="meta">
+      <div class="meta-item"><div class="label">Best date</div><div class="value">Sat, Jun 20</div></div>
+      <div class="meta-item"><div class="label">Also OK</div><div class="value">Jul 18 · Aug 1</div></div>
+      <div class="meta-item"><div class="label">Party</div><div class="value">2 + 3</div></div>
+      <div class="meta-item"><div class="label">Vehicle</div><div class="value">Rivian R1T</div></div>
+      <div class="meta-item"><div class="label">Origin</div><div class="value">Orange County</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INDEX / TOC ===== -->
+<section class="toc" id="index">
+  <div class="container">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <span class="eyebrow" style="color: var(--kern-rust);">Index</span>
+      <h2 style="font-size: 1.6rem; color: var(--kern-pine-deep); margin-top: 0.5rem;">Everything in one place</h2>
+    </div>
+    <div class="toc-grid">
+
+      <div class="toc-col">
+        <h4>The plan</h4>
+        <ol>
+          <li><a href="#trip">Overview &amp; the drive</a><small>3.5–4.5 hrs each way · 1 charging stop</small></li>
+          <li><a href="#timing">When to go &amp; flow check</a><small>Target Jun 13–14 · USGS gauge link</small></li>
+          <li><a href="#itinerary">Day-by-day itinerary</a><small>Hour-by-hour for both days</small></li>
+        </ol>
+      </div>
+
+      <div class="toc-col">
+        <h4>What you'll do</h4>
+        <ol>
+          <li><a href="#rafting">Rafting · Lickity Split</a><small>3 outfitters with phone + web links</small></li>
+          <li><a href="#routes">Off-road routes</a><small>Sherman Pass · Cherry Hill · Keyesville</small></li>
+          <li><a href="#map">The map &amp; share links</a><small>Embeds for each route</small></li>
+          <li><a href="#activities">Activities &amp; food in town</a><small>12 picks with map links</small></li>
+        </ol>
+      </div>
+
+      <div class="toc-col">
+        <h4>Logistics &amp; booking</h4>
+        <ol>
+          <li><a href="#lodging">Lodging — 3 picks</a><small>Whispering Pines · Kernville Inn · Corral Creek</small></li>
+          <li><a href="#truck">R1T technical &amp; charging</a><small>Drive modes · tire PSI · charging plan</small></li>
+          <li><a href="#packing">Packing list</a><small>4 bags pre-staged</small></li>
+          <li><a href="#reference">Quick reference numbers</a><small>Every phone &amp; URL you'll need</small></li>
+          <li><a href="#research">Research deep links</a><small>Official sources by topic</small></li>
+          <li><a href="#book">Booking checklist</a><small>9 steps in priority order</small></li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== DESTINATION ===== -->
+<section class="destination" id="trip">
+  <div class="container">
+
+    <div class="hero-card">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <span class="eyebrow">The Plan</span>
+        <h2>Kernville &amp;<br>Sherman Pass</h2>
+        <p class="tagline">
+          A fishing-and-rafting town on the south fork of the Kern, ringed by Sequoia National Forest. One half-day of
+          family-grade rapids on the river, one half-day climbing graded dirt to a 9,200-foot pass with Mount Whitney in
+          the distance. Built for nervous first-timers, on roads the R1T was made for.
+        </p>
+        <div class="stats">
+          <div class="stat"><div class="stat-value">85–95°F</div><div class="stat-label">June High</div></div>
+          <div class="stat"><div class="stat-value">II–III</div><div class="stat-label">Rafting Class</div></div>
+          <div class="stat"><div class="stat-value">9,200 ft</div><div class="stat-label">High Point</div></div>
+          <div class="stat"><div class="stat-value">3.5–4.5h</div><div class="stat-label">Drive Each Way</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drive plan -->
+    <div class="section-header">
+      <span class="eyebrow">Getting There</span>
+      <h2>The Drive</h2>
+      <p>I-5 north to CA-99 to CA-178 east into the canyon. One charging stop in Bakersfield each way. Leave by 5:30 AM Saturday and you're on the water by mid-morning.</p>
+    </div>
+    <div class="drive-box">
+      <div class="drive-leg">
+        <div class="drive-end"><div class="code">OC</div><div class="city">Orange County · Sat dep 5:30 AM · 100% charge</div></div>
+        <div class="drive-line"><div class="info">I-5 N → CA-99 N</div><div class="dash"></div><div class="info">~3 hrs · 175 mi</div></div>
+        <div class="drive-end"><div class="code">BFL</div><div class="city">Bakersfield · DCFC stop · ~30 min</div></div>
+      </div>
+      <div class="drive-leg">
+        <div class="drive-end"><div class="code">BFL</div><div class="city">Bakersfield · resume ~9:00 AM</div></div>
+        <div class="drive-line"><div class="info">CA-178 E · Kern Canyon</div><div class="dash"></div><div class="info">~1 hr · 50 mi</div></div>
+        <div class="drive-end"><div class="code">KER</div><div class="city">Kernville · arr ~10:00 AM</div></div>
+      </div>
+      <div class="drive-meta">
+        <div class="item"><div class="label">Round trip miles</div><div class="val">~450 mi</div></div>
+        <div class="item"><div class="label">Charging stops</div><div class="val">1 each way</div></div>
+        <div class="item"><div class="label">On-river by</div><div class="val">11:00 AM</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== WHEN TO GO / SPECIAL ===== -->
+<section style="background: #fafaf7; padding: 4rem 0;" id="timing">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">When to Go</span>
+      <h2>Three candidate dates, side-by-side</h2>
+      <p>Kernville's window is narrow. Earlier than June the water's too cold; later than June the river runs dry while the valley runs hot. Comparison below uses 5-year NOAA historical data (2020–2024, ±3 days around each date) and the USGS Kern-at-Kernville flow record.</p>
+    </div>
+
+    <!-- 3-date comparison cards -->
+    <div class="compare-3" style="max-width: 1100px; margin: 0 auto 3.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+
+      <div style="background: white; border-radius: 16px; padding: 1.75rem; border-top: 4px solid var(--kern-pine); box-shadow: 0 4px 20px rgba(0,0,0,0.06); position: relative;">
+        <span style="position: absolute; top: 1rem; right: 1rem; background: var(--kern-pine); color: white; padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;">Recommended</span>
+        <span class="eyebrow" style="color: var(--kern-pine); font-size: 0.7rem;">Option A</span>
+        <h3 style="color: var(--kern-pine-deep); margin: 0.4rem 0 0.25rem; font-size: 1.5rem;">Sat, Jun 20</h3>
+        <div style="font-size: 0.82rem; color: var(--muted); margin-bottom: 1rem;">Third weekend of June · 24 days out</div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem; padding: 0.85rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 0.85rem;">
+          <div><span style="color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; display: block;">Avg high</span><strong style="color: var(--kern-pine-deep);">91°F</strong></div>
+          <div><span style="color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; display: block;">Avg low</span><strong style="color: var(--kern-pine-deep);">64°F</strong></div>
+          <div><span style="color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; display: block;">Days ≥100°F</span><strong style="color: var(--kern-pine-deep);">23% · 8 of 35</strong></div>
+          <div><span style="color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; display: block;">Flow median</span><strong style="color: var(--kern-pine-deep);">variable*</strong></div>
+        </div>
+
+        <p style="font-size: 0.9rem; color: #333; margin: 0.9rem 0; line-height: 1.55;">The recommended weekend. Heat risk is lowest of the three. River flow is typically still good if the prior winter had average-or-better snowpack. The 7-year-old will be comfortable.</p>
+        <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+          <a class="book-link" href="https://forecast.weather.gov/MapClick.php?lat=35.7547&lon=-118.4253" target="_blank" rel="noopener">10-day NWS ↗</a>
+          <a class="book-link" href="https://waterdata.usgs.gov/monitoring-location/11186000/" target="_blank" rel="noopener">USGS gauge ↗</a>
+        </div>
+      </div>
+
+      <div style="background: white; border-radius: 16px; padding: 1.75rem; border-top: 4px solid var(--kern-rust); box-shadow: 0 4px 20px rgba(0,0,0,0.06); position: relative;">
+        <span style="position: absolute; top: 1rem; right: 1rem; background: var(--kern-rust); color: white; padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;">High heat risk</span>
+        <span class="eyebrow" style="color: var(--kern-rust); font-size: 0.7rem;">Option B</span>
+        <h3 style="color: var(--kern-pine-deep); margin: 0.4rem 0 0.25rem; font-size: 1.5rem;">Sat, Jul 18</h3>
+        <div style="font-size: 0.82rem; color: var(--muted); margin-bottom: 1rem;">Mid-July · 52 days out</div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem; padding: 0.85rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 0.85rem;">
+          <div><span style="color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; display: block;">Avg high</span><strong style="color: var(--kern-rust);">101°F</strong></div>
+          <div><span style="color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; display: block;">Avg low</span><strong style="color: var(--kern-pine-deep);">74°F</strong></div>
+          <div><span style="color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; display: block;">Days ≥100°F</span><strong style="color: var(--kern-rust);">46% · 16 of 35</strong></div>
+          <div><span style="color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; display: block;">Flow</span><strong style="color: var(--kern-rust);">often too low</strong></div>
+        </div>
+
+        <p style="font-size: 0.9rem; color: #333; margin: 0.9rem 0; line-height: 1.55;">Hot. Roughly half of recent mid-July days hit triple digits. The kids will struggle, the truck's range drops, and the river is often below rafting thresholds. Doable in a cool year — risky in a normal one.</p>
+        <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+          <a class="book-link" href="https://forecast.weather.gov/MapClick.php?lat=35.7547&lon=-118.4253" target="_blank" rel="noopener">10-day NWS ↗</a>
+          <a class="book-link" href="https://www.cpc.ncep.noaa.gov/products/predictions/long_range/" target="_blank" rel="noopener">CPC outlook ↗</a>
+        </div>
+      </div>
+
+      <div style="background: white; border-radius: 16px; padding: 1.75rem; border-top: 4px solid var(--kern-rust-deep); box-shadow: 0 4px 20px rgba(0,0,0,0.06); position: relative; opacity: 0.95;">
+        <span style="position: absolute; top: 1rem; right: 1rem; background: var(--kern-rust-deep); color: white; padding: 0.25rem 0.7rem; border-radius: 999px; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;">Likely no rafting</span>
+        <span class="eyebrow" style="color: var(--kern-rust-deep); font-size: 0.7rem;">Option C</span>
+        <h3 style="color: var(--kern-pine-deep); margin: 0.4rem 0 0.25rem; font-size: 1.5rem;">Sat, Aug 1</h3>
+        <div style="font-size: 0.82rem; color: var(--muted); margin-bottom: 1rem;">Early August · 66 days out</div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem; padding: 0.85rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 0.85rem;">
+          <div><span style="color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; display: block;">Avg high</span><strong style="color: var(--kern-rust);">98°F</strong></div>
+          <div><span style="color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; display: block;">Avg low</span><strong style="color: var(--kern-pine-deep);">72°F</strong></div>
+          <div><span style="color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; display: block;">Days ≥100°F</span><strong style="color: var(--kern-rust);">31% · 11 of 35</strong></div>
+          <div><span style="color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; display: block;">Flow</span><strong style="color: var(--kern-rust-deep);">usually too low</strong></div>
+        </div>
+
+        <p style="font-size: 0.9rem; color: #333; margin: 0.9rem 0; line-height: 1.55;">By August, most outfitters have shut down for the season — flows are reliably below rafting thresholds. Heat is still high. If the trip is about rafting (it is), Aug 1 doesn't work most years. Off-roading is fine but is a different trip.</p>
+        <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+          <a class="book-link" href="https://sierrasouth.com/contact/" target="_blank" rel="noopener">Confirm with outfitter ↗</a>
+          <a class="book-link" href="https://waterdata.usgs.gov/monitoring-location/11186000/" target="_blank" rel="noopener">USGS gauge ↗</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Verdict -->
+    <div class="warn" style="max-width: 1000px;">
+      <h4>Verdict — go June 20</h4>
+      <p>Of the three candidates, <strong>Jun 20 has by far the lowest heat risk (23% vs 46% for July, 31% for August)</strong> and the highest probability of running water. Mid-July hits triple digits roughly half the time; early August is usually below rafting flow. <strong>* Flow is highly snowpack-dependent</strong> — call <a href="tel:+17603763745">Sierra South (760-376-3745)</a> in early June to confirm Lickity Split is running on Jun 20, and pull the <a href="https://waterdata.usgs.gov/monitoring-location/11186000/" target="_blank" rel="noopener">USGS gauge</a> one week before to verify.</p>
+    </div>
+
+    <div class="section-header" style="margin-top: 4rem;">
+      <span class="eyebrow">Booking Pre-Checks</span>
+      <h2>Before you put money down</h2>
+      <p>Four things to verify before locking in the date. Skip any of them and you risk a wasted weekend.</p>
+    </div>
+
+    <div class="special-block">
+      <div class="grid">
+
+        <div class="special-card">
+          <div class="head">
+            <span class="icon">🎯</span>
+            <div>
+              <h4>Target weekend: June 13–14</h4>
+              <div class="when">Second weekend · best balance of flow + heat</div>
+            </div>
+          </div>
+          <p>Snowpack still feeding the Lickity Split section reliably; valley temperatures in the mid-80s to low-90s; nights cool. Backup options: Jun 6–7 (slightly colder water) or Jun 20–21 (slightly hotter). After June 21, conditions degrade fast.</p>
+          <a href="https://www.weather.gov/hnx/" target="_blank" rel="noopener" class="book-link">NWS Kernville forecast ↗</a>
+        </div>
+
+        <div class="special-card river">
+          <div class="head">
+            <span class="icon">💧</span>
+            <div>
+              <h4>Check the flow one week before</h4>
+              <div class="when">USGS gauge · "Kern River at Kernville"</div>
+            </div>
+          </div>
+          <p>If flow is &gt; 1,500 cfs, call the outfitter and confirm Lickity Split is still running family trips. If they hesitate, postpone a week. Below 600 cfs is too low. Sweet spot: 700–1,400 cfs.</p>
+          <a href="https://waterdata.usgs.gov/monitoring-location/11186000/" target="_blank" rel="noopener" class="book-link">USGS gauge ↗</a>
+        </div>
+
+        <div class="special-card pine">
+          <div class="head">
+            <span class="icon">🌲</span>
+            <div>
+              <h4>Confirm Sherman Pass is open</h4>
+              <div class="when">Sequoia NF · Kern River Ranger District</div>
+            </div>
+          </div>
+          <p>Sherman Saddle (9,200 ft) holds snow into mid-June in big snow years. Call the ranger district two days before the trip to confirm the road is open to the saddle. If it's not, drive as high as conditions allow and turn around — the lower half is still spectacular.</p>
+          <a href="tel:+17603763781" class="book-link">760-376-3781 ↗</a>
+        </div>
+
+        <div class="special-card olive">
+          <div class="head">
+            <span class="icon">🌡️</span>
+            <div>
+              <h4>Heat-bail rule</h4>
+              <div class="when">If forecast &gt; 100°F · postpone</div>
+            </div>
+          </div>
+          <p>The whole plan falls apart over 100°F — the kids will be miserable, the truck's range plummets, and the lodge's pool turns into a holding pen. If the 10-day forecast shows triple digits, just push the trip a week. The whole window is forgiving.</p>
+          <a href="https://forecast.weather.gov/MapClick.php?lat=35.7547&lon=-118.4253" target="_blank" rel="noopener" class="book-link">Kernville 10-day ↗</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ITINERARY ===== -->
+<section style="background: var(--kern-cream); padding: 5rem 0 4rem;" id="itinerary">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Day by Day</span>
+      <h2>The Itinerary</h2>
+      <p>Front-loaded Day 1 (the thrill — rafting). Slow Day 2 (the views — Sherman Pass). Home by Sunday dinner.</p>
+    </div>
+
+    <!-- Day-at-a-glance -->
+    <div class="glance">
+      <table>
+        <thead>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="daynum">1</td><td>Sat Jun 20</td><td>Down + In · the river</td><td>Lickity Split rafting + Keyesville cruise</td><td>That Place Brewing</td></tr>
+          <tr><td class="daynum">2</td><td>Sun Jun 21</td><td>Up + Out · the mountain</td><td>Sherman Pass to 9,200 ft</td><td>On the road home</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Detailed itinerary -->
+    <div class="itinerary">
+
+      <div class="day">
+        <div class="day-number"><div class="num">01</div><div class="date">Sat Jun 20</div></div>
+        <div class="day-content">
+          <span class="location">OC → Bakersfield → Kernville</span>
+          <h3>Arrival, the River &amp; First Night</h3>
+          <ul>
+            <li><strong>5:30 AM</strong> — Depart Orange County. Truck loaded the night before, charged to 100%.</li>
+            <li><strong>6:30 AM</strong> — Coffee + breakfast in Castaic or Santa Clarita (Carl's Jr at Stevenson Ranch or <a href="https://www.google.com/maps/search/breakfast+santa+clarita" target="_blank" rel="noopener">your pick on the way</a>).</li>
+            <li><strong>8:30 AM</strong> — Bakersfield: <a href="https://www.evgo.com/find-a-station/" target="_blank" rel="noopener">EVgo</a> or <a href="https://account.chargepoint.com/map" target="_blank" rel="noopener">ChargePoint</a> DCFC stop, bathrooms, snacks for the kids.</li>
+            <li><strong>10:00 AM</strong> — Arrive Kernville. Check in at the rafting outfitter; meet the guides.</li>
+            <li><strong>10:30 AM</strong> — Safety briefing on shore. Helmets and PFDs go on.</li>
+            <li><strong>11:00 AM</strong> — <strong>Lickity Split rafting</strong>, ~1 hour on the water. Splashy Class II–III rapids built for families.</li>
+            <li><strong>12:45 PM</strong> — Dry off, change into trail clothes.</li>
+            <li><strong>1:00 PM</strong> — Lunch in Kernville at <a href="https://www.google.com/maps/search/Cheryl's+Diner+Kernville" target="_blank" rel="noopener">Cheryl's Diner</a> or <a href="https://www.thatplacebrewingco.com/" target="_blank" rel="noopener">That Place Brewing Co.</a> Big plates, walkable.</li>
+            <li><strong>2:30 PM</strong> — Easy cruise on the Keyesville flat loop OR swim at <a href="https://www.google.com/maps/search/Riverside+Park+Kernville" target="_blank" rel="noopener">Riverside Park</a> if the kids are tired.</li>
+            <li><strong>4:30 PM</strong> — Check in at the lodge; plug in to a 110V outlet if available.</li>
+            <li><strong>5:00 PM</strong> — Pool / river / porch time.</li>
+            <li><strong>6:30 PM</strong> — Dinner. Earlier is better — everyone is going to crash hard.</li>
+            <li><strong>8:30 PM</strong> — Kids in bed. Adults outside.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">02</div><div class="date">Sun Jun 21</div></div>
+        <div class="day-content">
+          <span class="location">Kernville → Sherman Pass → home</span>
+          <h3>Up the Pass &amp; Home</h3>
+          <ul>
+            <li><strong>7:00 AM</strong> — Breakfast at the lodge or <a href="https://www.google.com/maps/search/Big+Blue+Bear+Cafe+Kernville" target="_blank" rel="noopener">Big Blue Bear Café</a> in town.</li>
+            <li><strong>8:30 AM</strong> — Pack truck. Trail bag, water, snacks, layers, paper map.</li>
+            <li><strong>9:00 AM</strong> — Drive to Sherman Pass Road junction (~10 mi north of Kernville). Air down to ~25 PSI.</li>
+            <li><strong>9:30 AM</strong> — <strong>Sherman Pass climb</strong> begins. All-Terrain drive mode.</li>
+            <li><strong>11:30 AM</strong> — <a href="https://www.google.com/maps/search/Sherman+Pass+Vista" target="_blank" rel="noopener">Sherman Pass Vista</a> — photos, layers on. It's cold up here.</li>
+            <li><strong>12:00 PM</strong> — Picnic lunch at Big Meadow or the saddle. Bring it with you.</li>
+            <li><strong>1:00 PM</strong> — Begin descent. Slower than you think — washboard.</li>
+            <li><strong>2:30 PM</strong> — Back in Kernville. Air up at the <a href="https://www.google.com/maps/search/Mobil+Sierra+Way+Kernville" target="_blank" rel="noopener">Mobil station on Sierra Way</a>. Ice cream at <a href="https://www.google.com/maps/search/Ewings+on+the+Kern" target="_blank" rel="noopener">Ewings on the Kern</a>.</li>
+            <li><strong>3:30 PM</strong> — Depart for home.</li>
+            <li><strong>5:00 PM</strong> — Bakersfield DCFC + dinner pickup.</li>
+            <li><strong>7:00 PM</strong> — Home in Orange County.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="warn">
+      <h4>⚠ If Sherman Pass is snowed in</h4>
+      <p>Swap in the <strong>Cherry Hill / Greenhorn Mountain</strong> loop (Route 2 below) — shorter and lower-elevation, gives you a relaxed morning at the lodge and an earlier start home. Same scenic-dirt-road feel, no snow risk.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OFF-ROAD ROUTES ===== -->
+<section style="background: #fafaf7; padding: 5rem 0 4rem;" id="routes">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The Routes</span>
+      <h2>Three routes you'd actually take. Three you wouldn't.</h2>
+      <p>The R1T is wide (87 in) and heavy (~7,000 lbs). That rules out tight rocky trails — and frees you up for some of the best scenic dirt roads in Southern California. Picked for beginner-friendly + family-friendly.</p>
+    </div>
+
+    <!-- Sherman Pass -->
+    <div class="route-block">
+      <div class="rimg" style="background-image: linear-gradient(135deg, rgba(45,80,22,0.15), rgba(42,108,140,0.20)), url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Sherman_pass1.jpg');"></div>
+      <div class="rtext">
+        <span class="eyebrow">Route 01 · Primary</span>
+        <h3>Sherman Pass Road · 22S05</h3>
+        <p>The route. A wide, well-maintained Forest Service road that climbs from the Kern valley to over 9,000 feet, with views of Mount Whitney from the saddle. Zero technical sections. Confidence-building from start to finish.</p>
+        <div class="specs">
+          <div><span class="k">Surface</span><span class="v">Graded dirt</span></div>
+          <div><span class="k">Distance</span><span class="v">~50 mi RT</span></div>
+          <div><span class="k">Time</span><span class="v">4–6 hrs</span></div>
+          <div><span class="k">Difficulty</span><span class="v">1 / 5</span></div>
+        </div>
+        <ul class="notelist">
+          <li><strong>Highlights:</strong> Sherman Pass Vista (east view to Mt. Whitney), Bald Mountain Lookout spur, Big Meadow picnic stop.</li>
+          <li><strong>Elevation gain:</strong> 2,600 ft → 9,200 ft. Bring layers — easily 40°F at the saddle with wind.</li>
+          <li><strong>R1T:</strong> All-Terrain mode the whole way. Drop to ~30 PSI for washboard comfort; no need to fully air down.</li>
+          <li><strong>Energy:</strong> ~30–40% of pack for the round trip due to climb. Don't start with less than 75%.</li>
+          <li><a href="https://www.fs.usda.gov/recarea/sequoia/recreation/recarea/?recid=80571" target="_blank" rel="noopener">Forest Service info ↗</a> &nbsp;·&nbsp; <a href="https://www.google.com/maps/search/Sherman+Pass+Road+22S05" target="_blank" rel="noopener">Google Maps ↗</a></li>
+        </ul>
+
+        <div class="routemap">
+          <iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-118.55%2C35.74%2C-118.05%2C36.04&layer=mapnik&marker=35.9100%2C-118.3000" title="Sherman Pass Road on OpenStreetMap"></iframe>
+          <div class="share">
+            <a href="https://www.google.com/maps/dir/Kernville,+CA/Sherman+Pass+Vista,+Sequoia+National+Forest" target="_blank" rel="noopener">Google Maps directions ↗</a>
+            <a href="http://maps.apple.com/?daddr=Sherman+Pass+Road,+Sequoia+National+Forest,+CA&dirflg=d" target="_blank" rel="noopener">Apple Maps ↗</a>
+            <a href="https://www.openstreetmap.org/?mlat=35.91&mlon=-118.30&zoom=10" target="_blank" rel="noopener">Open in OSM ↗</a>
+            <button type="button" data-share="https://www.google.com/maps/dir/Kernville,+CA/Sherman+Pass+Vista,+Sequoia+National+Forest">Copy share link</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cherry Hill -->
+    <div class="route-block">
+      <div class="rimg" style="order: 2; background-image: linear-gradient(135deg, rgba(45,80,22,0.20), rgba(138,126,63,0.20)), url('https://upload.wikimedia.org/wikipedia/commons/2/2e/Sequoia_National_Forest_%2848884016181%29.jpg');"></div>
+      <div class="rtext" style="order: 1;">
+        <span class="eyebrow">Route 02 · Secondary</span>
+        <h3>Cherry Hill · Greenhorn Mountain</h3>
+        <p>The backup. If Sherman Pass is closed for snow, or if the family wants something shorter and lower-elevation, this is the alternative. Quiet pine-forest cruise, very low traffic. Less dramatic than Sherman Pass — more pastoral.</p>
+        <div class="specs">
+          <div><span class="k">Surface</span><span class="v">Forest dirt</span></div>
+          <div><span class="k">Distance</span><span class="v">~25 mi loop</span></div>
+          <div><span class="k">Time</span><span class="v">2–3 hrs</span></div>
+          <div><span class="k">Difficulty</span><span class="v">1 / 5</span></div>
+        </div>
+        <ul class="notelist">
+          <li><strong>Highlights:</strong> Greenhorn Summit fire lookout, Tillie Creek campground area, pine forest the whole way.</li>
+          <li><strong>Notes:</strong> Some sections narrow with limited turnouts — yield to uphill traffic. Recirc cabin air through dusty stretches.</li>
+          <li><strong>R1T:</strong> All-Terrain mode; same PSI strategy as Sherman Pass.</li>
+          <li><a href="https://www.google.com/maps/search/Greenhorn+Summit+Sequoia+National+Forest" target="_blank" rel="noopener">Greenhorn Summit on Maps ↗</a></li>
+        </ul>
+
+        <div class="routemap">
+          <iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-118.65%2C35.65%2C-118.35%2C35.85&layer=mapnik&marker=35.7500%2C-118.5500" title="Greenhorn Mountain area on OpenStreetMap"></iframe>
+          <div class="share">
+            <a href="https://www.google.com/maps/dir/Kernville,+CA/Greenhorn+Summit,+Sequoia+National+Forest" target="_blank" rel="noopener">Google Maps directions ↗</a>
+            <a href="http://maps.apple.com/?daddr=Greenhorn+Summit,+Sequoia+National+Forest&dirflg=d" target="_blank" rel="noopener">Apple Maps ↗</a>
+            <a href="https://www.openstreetmap.org/?mlat=35.75&mlon=-118.55&zoom=11" target="_blank" rel="noopener">Open in OSM ↗</a>
+            <button type="button" data-share="https://www.google.com/maps/dir/Kernville,+CA/Greenhorn+Summit,+Sequoia+National+Forest">Copy share link</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Keyesville -->
+    <div class="route-block">
+      <div class="rimg" style="background-image: linear-gradient(135deg, rgba(184,92,46,0.18), rgba(42,108,140,0.18)), url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Isabella_Lake%2C_California_%28cropped%29.jpg');"></div>
+      <div class="rtext">
+        <span class="eyebrow">Route 03 · Short option</span>
+        <h3>Keyesville SMA · Flat Loop</h3>
+        <p>A short taste of dirt within 15 minutes of Kernville. Useful as a Day 1 afternoon filler between rafting and the lodge. Take the flat perimeter loop only — and skip the technical Keyesville Classic trail entirely.</p>
+        <div class="specs">
+          <div><span class="k">Surface</span><span class="v">Flat dirt</span></div>
+          <div><span class="k">Distance</span><span class="v">~5 mi</span></div>
+          <div><span class="k">Time</span><span class="v">~1 hr</span></div>
+          <div><span class="k">Difficulty</span><span class="v">1 / 5</span></div>
+        </div>
+        <ul class="notelist">
+          <li><strong>What to skip:</strong> The Keyesville Classic trail, all rocky climbs, anything signed as rated above easy — they're tight and built for narrow side-by-sides, not 87-inch trucks.</li>
+          <li><strong>R1T:</strong> All-Terrain mode; can stay at street PSI for the short distance.</li>
+          <li><a href="https://www.blm.gov/visit/keyesville" target="_blank" rel="noopener">BLM Keyesville info ↗</a> &nbsp;·&nbsp; <a href="https://www.google.com/maps/search/Keyesville+Special+Management+Area" target="_blank" rel="noopener">Maps ↗</a></li>
+        </ul>
+
+        <div class="routemap">
+          <iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-118.55%2C35.60%2C-118.35%2C35.72&layer=mapnik&marker=35.6500%2C-118.4700" title="Keyesville SMA on OpenStreetMap"></iframe>
+          <div class="share">
+            <a href="https://www.google.com/maps/dir/Kernville,+CA/Keyesville+Special+Management+Area" target="_blank" rel="noopener">Google Maps directions ↗</a>
+            <a href="http://maps.apple.com/?daddr=Keyesville+Special+Management+Area,+CA&dirflg=d" target="_blank" rel="noopener">Apple Maps ↗</a>
+            <a href="https://www.openstreetmap.org/?mlat=35.65&mlon=-118.47&zoom=12" target="_blank" rel="noopener">Open in OSM ↗</a>
+            <button type="button" data-share="https://www.google.com/maps/dir/Kernville,+CA/Keyesville+Special+Management+Area">Copy share link</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DO NOT GO -->
+    <div class="warn">
+      <h4>⚠ Routes to skip on this trip</h4>
+      <p><strong>Jawbone Canyon OHV</strong> — sandy + technical, designed for dirt bikes and narrow OHVs. <strong>Piute Mountains technical trails</strong> — rock crawling, not for a stock R1T or a beginner. <strong>Anything rated 3+ on the OHV scale</strong>, anything described as "rock crawling" or "tight." And <strong>don't trust the in-truck nav</strong> for Forest Service roads — pre-download <a href="https://www.onxmaps.com/offroad/app" target="_blank" rel="noopener">onX Offroad</a> or <a href="https://www.gaiagps.com/" target="_blank" rel="noopener">Gaia GPS</a> for offline use, and pick up a paper Sequoia NF Kern River District map at the ranger station.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== MAP BLOCK ===== -->
+<section style="background: var(--kern-cream); padding: 4rem 0;" id="map">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The Map</span>
+      <h2>Where these roads actually are</h2>
+      <p>Sketch on top — the routes relative to Kernville and Lake Isabella. Live OpenStreetMap below for zoom-and-scroll.</p>
+    </div>
+
+    <div class="map-block">
+
+      <!-- Sketch SVG -->
+      <div class="sketchwrap">
+        <svg class="sketch" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" aria-label="Sketch map of the off-road routes around Kernville">
+          <defs>
+            <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+              <rect width="6" height="6" fill="#faf4e8"/>
+              <line x1="0" y1="0" x2="0" y2="6" stroke="#d4a373" stroke-width="0.8" stroke-opacity="0.45"/>
+            </pattern>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,0 L10,5 L0,10 Z" fill="#b85c2e"/>
+            </marker>
+            <marker id="arrowg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,0 L10,5 L0,10 Z" fill="#2d5016"/>
+            </marker>
+            <marker id="arrowb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0,0 L10,5 L0,10 Z" fill="#2a6c8c"/>
+            </marker>
+          </defs>
+
+          <!-- Background -->
+          <rect width="900" height="460" fill="url(#hatch)"/>
+
+          <!-- Mountain silhouettes far back -->
+          <path d="M0,180 L80,120 L150,170 L230,90 L310,160 L380,110 L460,170 L540,100 L630,160 L720,120 L810,170 L900,130 L900,260 L0,260 Z"
+                fill="#8a7e3f" fill-opacity="0.18"/>
+          <path d="M0,220 L120,160 L210,210 L320,140 L420,200 L520,150 L620,210 L720,170 L820,210 L900,180 L900,300 L0,300 Z"
+                fill="#2d5016" fill-opacity="0.25"/>
+
+          <!-- Kern River -->
+          <path d="M850,40 C780,80 760,150 720,200 C680,260 640,310 600,330 C560,350 510,355 460,360 C400,365 340,360 280,370 C220,380 160,390 100,420"
+                fill="none" stroke="#2a6c8c" stroke-width="6" stroke-opacity="0.85" stroke-linecap="round"/>
+          <path d="M850,40 C780,80 760,150 720,200 C680,260 640,310 600,330 C560,350 510,355 460,360 C400,365 340,360 280,370 C220,380 160,390 100,420"
+                fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.6" stroke-dasharray="2 6"/>
+
+          <!-- Lake Isabella -->
+          <ellipse cx="265" cy="375" rx="60" ry="22" fill="#2a6c8c" fill-opacity="0.55"/>
+          <text x="265" y="378" font-family="Playfair Display, serif" font-size="13" font-style="italic" fill="#1b4d68" text-anchor="middle">Lake Isabella</text>
+
+          <!-- Kernville marker -->
+          <circle cx="600" cy="330" r="9" fill="#b85c2e" stroke="#fff" stroke-width="3"/>
+          <text x="615" y="320" font-family="Playfair Display, serif" font-size="20" font-weight="600" fill="#1a1a1a">Kernville</text>
+          <text x="615" y="338" font-family="Inter, sans-serif" font-size="11" fill="#6b6b6b">Home base · lodging · outfitters</text>
+
+          <!-- Route 1: Sherman Pass NE -->
+          <path d="M600,330 Q650,260 720,200 Q780,150 830,90" fill="none" stroke="#b85c2e" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+          <circle cx="830" cy="90" r="7" fill="#b85c2e"/>
+          <text x="715" y="180" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#8b3f15" letter-spacing="1.5">SHERMAN PASS 22S05</text>
+          <text x="715" y="194" font-family="Inter, sans-serif" font-size="10" fill="#8b3f15" font-style="italic">~50 mi RT · climb to 9,200 ft</text>
+          <text x="820" y="78" font-family="Playfair Display, serif" font-size="13" font-style="italic" fill="#1a1a1a" text-anchor="end">Sherman Saddle ⛰</text>
+
+          <!-- Route 2: Cherry Hill NW -->
+          <path d="M600,330 Q520,290 470,250 Q420,210 380,180" fill="none" stroke="#2d5016" stroke-width="4" stroke-dasharray="8 5" stroke-linecap="round" marker-end="url(#arrowg)"/>
+          <text x="430" y="240" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#2d5016" letter-spacing="1.5">CHERRY HILL · GREENHORN</text>
+          <text x="430" y="254" font-family="Inter, sans-serif" font-size="10" fill="#2d5016" font-style="italic">~25 mi loop · backup if Sherman snowed</text>
+
+          <!-- Route 3: Keyesville SW (short loop near Lake Isabella) -->
+          <ellipse cx="340" cy="375" rx="20" ry="10" fill="none" stroke="#2a6c8c" stroke-width="3" stroke-dasharray="3 3"/>
+          <line x1="600" y1="330" x2="355" y2="372" stroke="#2a6c8c" stroke-width="2" stroke-dasharray="2 4" opacity="0.6"/>
+          <text x="340" y="405" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#1b4d68" text-anchor="middle" letter-spacing="1.5">KEYESVILLE</text>
+          <text x="340" y="418" font-family="Inter, sans-serif" font-size="10" fill="#1b4d68" text-anchor="middle" font-style="italic">~5 mi flat loop</text>
+
+          <!-- South arrow back to OC -->
+          <path d="M100,420 L40,440" fill="none" stroke="#6b6b6b" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrowb)"/>
+          <text x="100" y="442" font-family="Inter, sans-serif" font-size="10" fill="#6b6b6b" font-style="italic">↓ to Bakersfield + OC (~225 mi)</text>
+
+          <!-- Compass -->
+          <g transform="translate(60,60)">
+            <circle r="22" fill="#fff" stroke="#1a1a1a" stroke-width="1"/>
+            <path d="M0,-18 L4,0 L0,18 L-4,0 Z" fill="#1a1a1a"/>
+            <text y="-25" font-family="Playfair Display, serif" font-size="11" text-anchor="middle" fill="#1a1a1a">N</text>
+          </g>
+
+          <!-- Title -->
+          <text x="450" y="34" font-family="Playfair Display, serif" font-size="22" font-style="italic" text-anchor="middle" fill="#1a1a1a">Off-Road Routes from Kernville</text>
+        </svg>
+      </div>
+
+      <!-- OpenStreetMap embed -->
+      <div class="map-frame">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-118.85%2C35.55%2C-117.95%2C36.10&layer=mapnik&marker=35.7547%2C-118.4253"
+          title="Kernville and Sherman Pass on OpenStreetMap"
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="legend">
+        <div class="item"><div class="swatch" style="background: #b85c2e;"></div>Sherman Pass Rd · primary</div>
+        <div class="item"><div class="swatch" style="background: #2d5016;"></div>Cherry Hill / Greenhorn · backup</div>
+        <div class="item"><div class="swatch" style="background: #2a6c8c;"></div>Keyesville flat loop · short option</div>
+      </div>
+
+      <div class="maplinks">
+        <a class="book-link" href="https://www.google.com/maps/dir/Kernville,+CA/Sherman+Pass+Road,+Sequoia+National+Forest,+CA" target="_blank" rel="noopener">Sherman Pass directions ↗</a>
+        <a class="book-link" href="https://www.google.com/maps/search/Greenhorn+Summit,+Sequoia+National+Forest" target="_blank" rel="noopener">Greenhorn / Cherry Hill ↗</a>
+        <a class="book-link" href="https://www.google.com/maps/search/Keyesville+Special+Management+Area" target="_blank" rel="noopener">Keyesville on Maps ↗</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== RAFTING ===== -->
+<section style="background: #fafaf7; padding: 5rem 0 4rem;" id="rafting">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The River</span>
+      <h2>One trip. Don't get talked into more.</h2>
+      <p>The Lickity Split is exactly the trip you want — Class II–III, ~1 hour on the water, minimum age 6, guide in every boat. Three outfitters in Kernville run it; all three are reliable. Don't let anyone upsell you to the Powerhouse Run with a 7-year-old aboard.</p>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="pcard">
+        <div class="pimg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/77/Kern_River_P4240772.jpg');">
+          <span class="tier primary">Top pick</span>
+        </div>
+        <div class="pbody">
+          <h4>Sierra South</h4>
+          <div class="loc">11200 Kernville Rd · in town</div>
+          <p>Decades of family-trip experience. Slightly more polished kids-program feel than the alternatives. Strong safety reputation. Book by phone — tell them the ages and ask for a guide good with nervous first-timers.</p>
+          <div class="pmeta"><span class="price">$50–70 / person</span><span>★★★★★</span></div>
+          <a href="https://sierrasouth.com/" target="_blank" rel="noopener" class="book-link">sierrasouth.com ↗</a>
+          <div style="font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem;">📞 <a href="tel:+17603763745" style="color: var(--kern-rust); text-decoration: none;">760-376-3745</a></div>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pimg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/27/Kern-River.jpg');">
+          <span class="tier">Backup</span>
+        </div>
+        <div class="pbody">
+          <h4>Kern River Outfitters (KRO)</h4>
+          <div class="loc">6602 Wofford Heights Blvd</div>
+          <p>The traditional Kernville outfit. A little more weathered than Sierra South — and equally reliable. Long-standing reputation, decades of family-trip experience, especially good if Sierra South is sold out.</p>
+          <div class="pmeta"><span class="price">$50–70 / person</span><span>★★★★★</span></div>
+          <a href="https://www.kernrafting.com/" target="_blank" rel="noopener" class="book-link">kernrafting.com ↗</a>
+          <div style="font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem;">📞 <a href="tel:+17603763370" style="color: var(--kern-rust); text-decoration: none;">760-376-3370</a></div>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pimg" style="background-image: linear-gradient(135deg, rgba(42,108,140,0.25), rgba(45,80,22,0.20)), url('https://upload.wikimedia.org/wikipedia/commons/7/77/Kern_River_P4240772.jpg');">
+          <span class="tier">Alt.</span>
+        </div>
+        <div class="pbody">
+          <h4>Mountain &amp; River Adventures</h4>
+          <div class="loc">11113 Kernville Rd</div>
+          <p>Smaller, family-run operation. Often available when the bigger two are booked. Solid safety record. Same Lickity Split trip, same outcome.</p>
+          <div class="pmeta"><span class="price">$50–70 / person</span><span>★★★★</span></div>
+          <a href="https://www.mtnriver.com/" target="_blank" rel="noopener" class="book-link">mtnriver.com ↗</a>
+          <div style="font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem;">📞 <a href="tel:+17603766553" style="color: var(--kern-rust); text-decoration: none;">760-376-6553</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="warn" style="background: rgba(42,108,140,0.07); border-color: var(--kern-river);">
+      <h4 style="color: var(--kern-river-deep);">📞 What to say on the booking call</h4>
+      <p>"Five of us — two adults and three kids, ages seven, ten, and twelve. All total beginners. We want the Lickity Split. Please confirm that's the right fit for the seven-year-old, and put us on the same boat with a guide who's used to nervous first-timers." A good outfitter will say yes immediately.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LODGING ===== -->
+<section style="background: var(--kern-cream); padding: 5rem 0 4rem;" id="lodging">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Where to Stay</span>
+      <h2>One night in Kernville</h2>
+      <p>Kernville has limited beds in summer — 4–6 weeks ahead is the booking window. Whispering Pines is the top pick if available; the others are perfectly good backups.</p>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="pcard">
+        <div class="pimg" style="background-image: linear-gradient(135deg, rgba(45,80,22,0.18), rgba(42,108,140,0.20)), url('https://upload.wikimedia.org/wikipedia/commons/7/74/Kernville_at_dusk.jpg');">
+          <span class="tier primary">Top pick</span>
+        </div>
+        <div class="pbody">
+          <h4>Whispering Pines Lodge</h4>
+          <div class="loc">Riverside · 5-min walk to outfitters</div>
+          <p>Family rooms, riverside setting, walkable to every restaurant and outfitter in town. The "vacation feels like vacation" choice. Call directly to confirm parking for a full-size truck and ask about a 110V outlet for the R1T overnight.</p>
+          <div class="pmeta"><span class="price">$200–280 / night</span><span>★★★★</span></div>
+          <a href="https://www.kernvilleinn.com/whispering-pines-lodge" target="_blank" rel="noopener" class="book-link">Book direct ↗</a>
+          <div style="font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem;">📞 <a href="tel:+17603763733" style="color: var(--kern-rust); text-decoration: none;">760-376-3733</a></div>
+          <div class="share-row">
+            <a href="https://www.google.com/maps/search/Whispering+Pines+Lodge+Kernville" target="_blank" rel="noopener">Google Maps ↗</a>
+            <a href="http://maps.apple.com/?q=Whispering+Pines+Lodge+Kernville" target="_blank" rel="noopener">Apple Maps ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pimg" style="background-image: linear-gradient(135deg, rgba(184,92,46,0.20), rgba(212,163,115,0.20)), url('https://upload.wikimedia.org/wikipedia/commons/3/36/Downtown_Kernville.JPG');">
+          <span class="tier">Backup</span>
+        </div>
+        <div class="pbody">
+          <h4>Kernville Inn</h4>
+          <div class="loc">Central · 2 min to outfitters</div>
+          <p>Simpler, central, family-friendly. The fallback if Whispering Pines is sold out, or if budget is the priority. Same walking distance to everything. Ask about connecting rooms for a party of five.</p>
+          <div class="pmeta"><span class="price">$150–200 / night</span><span>★★★</span></div>
+          <a href="https://www.kernvilleinn.com/" target="_blank" rel="noopener" class="book-link">Book direct ↗</a>
+          <div style="font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem;">📞 <a href="tel:+17603762206" style="color: var(--kern-rust); text-decoration: none;">760-376-2206</a></div>
+          <div class="share-row">
+            <a href="https://www.google.com/maps/search/Kernville+Inn+Kernville+CA" target="_blank" rel="noopener">Google Maps ↗</a>
+            <a href="http://maps.apple.com/?q=Kernville+Inn+Kernville+CA" target="_blank" rel="noopener">Apple Maps ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pimg" style="background-image: linear-gradient(135deg, rgba(138,126,63,0.20), rgba(45,80,22,0.18)), url('https://upload.wikimedia.org/wikipedia/commons/2/29/Sequoia_National_Forest_%2848869301258%29.jpg');">
+          <span class="tier">Cabin</span>
+        </div>
+        <div class="pbody">
+          <h4>Corral Creek Resort</h4>
+          <div class="loc">Cabins · 10-min drive to town</div>
+          <p>Cabins with full kitchens, more space for a family of five to spread out. Slightly outside the main strip — the trade-off is a short drive into town for dinner. Quieter overall; good if you want to cook a meal in.</p>
+          <div class="pmeta"><span class="price">$250–350 / night</span><span>★★★★</span></div>
+          <a href="https://www.google.com/search?q=Corral+Creek+Resort+Kernville+booking" target="_blank" rel="noopener" class="book-link">Find listing ↗</a>
+          <div class="share-row">
+            <a href="https://www.google.com/maps/search/Corral+Creek+Resort+Kernville" target="_blank" rel="noopener">Google Maps ↗</a>
+            <a href="http://maps.apple.com/?q=Corral+Creek+Resort+Kernville" target="_blank" rel="noopener">Apple Maps ↗</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== R1T TECHNICAL ===== -->
+<section style="background: #fafaf7; padding: 5rem 0 4rem;" id="truck">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The Truck</span>
+      <h2>R1T technical notes</h2>
+      <p>The truck is more capable than the driver, the driver is more capable than the trail, and that's the right order. Here's the specific drive-mode + tire + charging plan.</p>
+    </div>
+
+    <div class="tech-block">
+      <div class="timg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/78/Rivian-r1t-2021.jpg');"></div>
+      <div>
+        <span class="eyebrow">Drive modes &amp; tire PSI</span>
+        <h3>All-Terrain, 25 PSI, layers in the frunk</h3>
+        <p style="color: #333; line-height: 1.65;">Set the truck to <strong>All-Terrain</strong> when you leave pavement — it raises the suspension and softens throttle response. Leave it there for the whole off-road portion. <strong>Don't use Rally mode</strong> with kids and a nervous spouse in the truck. On dirt, drop tires to <strong>~25 PSI</strong> for comfort and traction. Re-air at the <a href="https://www.google.com/maps/search/Mobil+Sierra+Way+Kernville" target="_blank" rel="noopener" style="color: var(--kern-rust);">Mobil station on Sierra Way</a> before driving home.</p>
+
+        <span class="eyebrow" style="margin-top: 1.5rem; display: block; color: var(--kern-rust);">Charging plan</span>
+        <h3 style="font-size: 1.3rem; margin-top: 0.5rem;">~450 mi round trip + ~80 mi off-road</h3>
+        <table>
+          <tr><th>Stage</th><th>Where</th><th>Plan</th></tr>
+          <tr><td>Depart OC</td><td>Home</td><td>Charge to 100% the night before</td></tr>
+          <tr><td>Outbound DCFC</td><td>Bakersfield</td><td><a href="https://www.evgo.com/find-a-station/" target="_blank" rel="noopener" style="color: var(--kern-rust);">EVgo</a> or <a href="https://account.chargepoint.com/map" target="_blank" rel="noopener" style="color: var(--kern-rust);">ChargePoint</a> · 30–40 min</td></tr>
+          <tr><td>Overnight</td><td>Lodge</td><td>110V outlet if available · ~3 mi/hr · ~40 mi added by morning</td></tr>
+          <tr><td>Off-road</td><td>Sherman Pass</td><td>Start the climb with &gt;75% pack</td></tr>
+          <tr><td>Return DCFC</td><td>Bakersfield</td><td>Charge to 80% — enough to get home with buffer</td></tr>
+        </table>
+        <p style="font-size: 0.9rem; color: var(--muted); margin-top: 1rem;">Pre-load <a href="https://www.plugshare.com/" target="_blank" rel="noopener" style="color: var(--kern-rust);">PlugShare</a>, <a href="https://www.evgo.com/" target="_blank" rel="noopener" style="color: var(--kern-rust);">EVgo</a>, and <a href="https://www.chargepoint.com/" target="_blank" rel="noopener" style="color: var(--kern-rust);">ChargePoint</a> apps; test payment on each one a week before the trip — don't do this for the first time at 6 AM in a parking lot.</p>
+      </div>
+    </div>
+
+    <div class="warn">
+      <h4>⚠ Don't trust the in-truck nav for Forest Service roads</h4>
+      <p>Pre-download <a href="https://www.gaiagps.com/" target="_blank" rel="noopener">Gaia GPS</a> or <a href="https://www.onxmaps.com/offroad/app" target="_blank" rel="noopener">onX Offroad</a> for the Kern River area before leaving home (cell service is dead north of Kernville). Pick up a paper Sequoia NF Kern River District map at the ranger station for a few dollars — it doesn't run out of battery and it's the source of truth for road closures.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACTIVITIES ===== -->
+<section style="background: var(--kern-cream); padding: 5rem 0 4rem;">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Things to Do</span>
+      <h2>Beyond the obvious</h2>
+      <p>The river and Sherman Pass are the anchors. These are the optional stops worth knowing about.</p>
+    </div>
+
+    <div class="activities">
+      <div class="activity">
+        <span class="icon">🚣</span>
+        <h4><a href="https://sierrasouth.com/" target="_blank" rel="noopener">Lickity Split rafting ↗</a></h4>
+        <p>Class II–III, ~1 hour. Min age 6. Built for families. $50–70/person.</p>
+      </div>
+      <div class="activity">
+        <span class="icon">🏔️</span>
+        <h4><a href="https://www.fs.usda.gov/recarea/sequoia/recreation/recarea/?recid=80571" target="_blank" rel="noopener">Sherman Pass Rd ↗</a></h4>
+        <p>Graded dirt to 9,200 ft. 4–6 hrs round trip. The off-road centerpiece.</p>
+      </div>
+      <div class="activity">
+        <span class="icon">🏊</span>
+        <h4><a href="https://www.google.com/maps/search/Riverside+Park+Kernville" target="_blank" rel="noopener">Riverside Park swim ↗</a></h4>
+        <p>Calm swim beach in town. Safe for the kids — unlike the main river.</p>
+      </div>
+      <div class="activity">
+        <span class="icon">🍦</span>
+        <h4><a href="https://www.google.com/maps/search/Ewings+on+the+Kern" target="_blank" rel="noopener">Ewings on the Kern ↗</a></h4>
+        <p>Milkshakes on the river. The traditional post-rafting stop.</p>
+      </div>
+      <div class="activity">
+        <span class="icon">🌲</span>
+        <h4><a href="https://www.blm.gov/visit/keyesville" target="_blank" rel="noopener">Keyesville flat loop ↗</a></h4>
+        <p>5-mi easy dirt cruise near Lake Isabella. ~1 hour. The flat loop only.</p>
+      </div>
+      <div class="activity">
+        <span class="icon">🥾</span>
+        <h4><a href="https://www.fs.usda.gov/sequoia" target="_blank" rel="noopener">Sequoia NF trails ↗</a></h4>
+        <p>Several family-friendly short hikes off the highway. Ask at the ranger station.</p>
+      </div>
+      <div class="activity">
+        <span class="icon">🎣</span>
+        <h4><a href="https://wildlife.ca.gov/Fishing" target="_blank" rel="noopener">Trout fishing ↗</a></h4>
+        <p>Wild trout below the dam. CA license required ($17 day pass).</p>
+      </div>
+      <div class="activity">
+        <span class="icon">🍻</span>
+        <h4><a href="https://www.thatplacebrewingco.com/" target="_blank" rel="noopener">That Place Brewing ↗</a></h4>
+        <p>Local brewery + kid-friendly menu. Walkable from any lodging.</p>
+      </div>
+      <div class="activity">
+        <span class="icon">☕</span>
+        <h4><a href="https://www.google.com/maps/search/Big+Blue+Bear+Cafe+Kernville" target="_blank" rel="noopener">Big Blue Bear Café ↗</a></h4>
+        <p>Best breakfast in town. Open early enough for the Sherman Pass start.</p>
+      </div>
+      <div class="activity">
+        <span class="icon">🏞️</span>
+        <h4><a href="https://www.google.com/maps/search/Isabella+Lake+California" target="_blank" rel="noopener">Lake Isabella ↗</a></h4>
+        <p>Big reservoir 15 min south. Boating, paddleboard rentals, picnic spots.</p>
+      </div>
+      <div class="activity">
+        <span class="icon">🗺️</span>
+        <h4><a href="https://www.fs.usda.gov/sequoia" target="_blank" rel="noopener">Ranger station ↗</a></h4>
+        <p>Pick up the paper Sequoia NF map. $5–8. Worth every cent.</p>
+      </div>
+      <div class="activity">
+        <span class="icon">🎬</span>
+        <h4><a href="https://kernvalleymuseum.org/" target="_blank" rel="noopener">Kern Valley Museum ↗</a></h4>
+        <p>Old West history and mining-era photos. Open weekends. Kid-friendly, ~30 min visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PACKING ===== -->
+<section style="background: #fafaf7; padding: 5rem 0 4rem;" id="packing">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">What to Bring</span>
+      <h2>Pre-staged bags, no morning-of scrambling</h2>
+      <p>Two scenarios — wet (river) and high (mountain) — need different gear. Pack them separately and label.</p>
+    </div>
+
+    <div class="pack-grid">
+
+      <div class="pack-col">
+        <h4>On the river</h4>
+        <ul>
+          <li>Quick-dry shirt + shorts (each)</li>
+          <li>Swimsuit worn underneath</li>
+          <li>Water sandals or old sneakers</li>
+          <li>Reef-safe sunscreen SPF 50+</li>
+          <li>Sunglasses w/ retainer strap</li>
+          <li>Hat w/ chin strap</li>
+          <li>Towel per person</li>
+          <li>Full change of clothes in truck</li>
+          <li>Plastic bag for wet swimwear</li>
+        </ul>
+      </div>
+
+      <div class="pack-col">
+        <h4>On the mountain</h4>
+        <ul>
+          <li>Layers — fleece or light puffy</li>
+          <li>Long pants</li>
+          <li>Closed-toe shoes</li>
+          <li>Picnic lunch + snacks</li>
+          <li>1 gallon water per person</li>
+          <li>Thermos (coffee, cocoa)</li>
+          <li>Paper Sequoia NF map</li>
+          <li>Trash bag (pack it out)</li>
+          <li>Toilet paper + small trowel</li>
+          <li>Basic first aid kit</li>
+        </ul>
+      </div>
+
+      <div class="pack-col">
+        <h4>The truck</h4>
+        <ul>
+          <li>Tire deflator</li>
+          <li>Portable inflator</li>
+          <li>Tire plug kit</li>
+          <li>Jumper pack (12V)</li>
+          <li>Recovery boards (insurance)</li>
+          <li>Full charge cable bag</li>
+          <li>EVgo + ChargePoint apps</li>
+          <li>Offline maps downloaded</li>
+          <li>Printed paper directions</li>
+        </ul>
+      </div>
+
+      <div class="pack-col">
+        <h4>The kids</h4>
+        <ul>
+          <li>Books / audiobooks downloaded</li>
+          <li>Deck of cards, small games</li>
+          <li>Motion sickness chewables</li>
+          <li>Familiar snacks (don't experiment)</li>
+          <li>Comfort item per child</li>
+          <li>Headphones each</li>
+          <li>Refillable water bottle each</li>
+          <li>Pajamas + one full outfit change</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUICK REFERENCE ===== -->
+<section style="background: var(--kern-cream); padding: 5rem 0 4rem;" id="reference">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Quick Reference</span>
+      <h2>Numbers and links to have on the phone</h2>
+      <p>Save these as contacts before you leave. Cell service is dead north of Kernville — you can't fix this on the road.</p>
+    </div>
+
+    <div class="reftable">
+      <table>
+        <thead>
+          <tr><th>Contact</th><th>Number / URL</th><th>Use</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Sierra South</strong></td><td><a href="tel:+17603763745">760-376-3745</a> · <a href="https://sierrasouth.com/" target="_blank" rel="noopener">sierrasouth.com ↗</a></td><td>Rafting — top pick</td></tr>
+          <tr><td><strong>Kern River Outfitters</strong></td><td><a href="tel:+17603763370">760-376-3370</a> · <a href="https://www.kernrafting.com/" target="_blank" rel="noopener">kernrafting.com ↗</a></td><td>Rafting — backup</td></tr>
+          <tr><td><strong>Mountain &amp; River Adv.</strong></td><td><a href="tel:+17603766553">760-376-6553</a> · <a href="https://www.mtnriver.com/" target="_blank" rel="noopener">mtnriver.com ↗</a></td><td>Rafting — alternate</td></tr>
+          <tr><td><strong>Sequoia NF · Kern River Dist.</strong></td><td><a href="tel:+17603763781">760-376-3781</a> · <a href="https://www.fs.usda.gov/sequoia" target="_blank" rel="noopener">fs.usda.gov/sequoia ↗</a></td><td>Road / fire / closures</td></tr>
+          <tr><td><strong>Whispering Pines Lodge</strong></td><td><a href="tel:+17603763733">760-376-3733</a></td><td>Lodging — top pick</td></tr>
+          <tr><td><strong>Kernville Inn</strong></td><td><a href="tel:+17603762206">760-376-2206</a> · <a href="https://www.kernvilleinn.com/" target="_blank" rel="noopener">kernvilleinn.com ↗</a></td><td>Lodging — backup</td></tr>
+          <tr><td><strong>USGS gauge</strong></td><td><a href="https://waterdata.usgs.gov/monitoring-location/11186000/" target="_blank" rel="noopener">Kern River at Kernville ↗</a></td><td>River flow check</td></tr>
+          <tr><td><strong>NWS forecast</strong></td><td><a href="https://forecast.weather.gov/MapClick.php?lat=35.7547&lon=-118.4253" target="_blank" rel="noopener">Kernville 10-day ↗</a></td><td>Weather + temps</td></tr>
+          <tr><td><strong>Rivian roadside</strong></td><td><a href="tel:+18557484265">855-748-4265</a> · <a href="https://rivian.com/support" target="_blank" rel="noopener">rivian.com/support ↗</a></td><td>Truck issue</td></tr>
+          <tr><td><strong>PlugShare</strong></td><td><a href="https://www.plugshare.com/" target="_blank" rel="noopener">plugshare.com ↗</a></td><td>Charging station status</td></tr>
+          <tr><td><strong>onX Offroad / Gaia GPS</strong></td><td><a href="https://www.onxmaps.com/offroad/app" target="_blank" rel="noopener">onX ↗</a> · <a href="https://www.gaiagps.com/" target="_blank" rel="noopener">Gaia ↗</a></td><td>Offline trail maps</td></tr>
+          <tr><td><strong>Emergency</strong></td><td>911</td><td>When you have signal</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESEARCH DEEP LINKS ===== -->
+<section style="background: #fafaf7; padding: 5rem 0 4rem;" id="research">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Research</span>
+      <h2>Every link, organized by topic</h2>
+      <p>If you want to dig deeper before booking — or want to verify a detail on the road — start here. Grouped by topic, all opening in new tabs.</p>
+    </div>
+
+    <div class="research">
+      <div class="research-grid">
+
+        <div class="research-col">
+          <h4>Rafting</h4>
+          <ul>
+            <li><a href="https://sierrasouth.com/" target="_blank" rel="noopener">Sierra South ↗</a><small>Top-pick outfitter · sierrasouth.com</small></li>
+            <li><a href="https://www.kernrafting.com/" target="_blank" rel="noopener">Kern River Outfitters ↗</a><small>kernrafting.com · backup outfitter</small></li>
+            <li><a href="https://www.mtnriver.com/" target="_blank" rel="noopener">Mountain &amp; River Adv. ↗</a><small>mtnriver.com · alternate</small></li>
+            <li><a href="https://waterdata.usgs.gov/monitoring-location/11186000/" target="_blank" rel="noopener">USGS Kern at Kernville ↗</a><small>Live river flow gauge</small></li>
+            <li><a href="https://www.americanwhitewater.org/content/River/view/river-detail/249/main" target="_blank" rel="noopener">American Whitewater · Kern ↗</a><small>Section difficulty + flow ranges</small></li>
+            <li><a href="https://www.kernrivervalley.com/things-to-do/whitewater-rafting" target="_blank" rel="noopener">KRV rafting overview ↗</a><small>Visitor bureau guide</small></li>
+          </ul>
+        </div>
+
+        <div class="research-col">
+          <h4>Off-road &amp; maps</h4>
+          <ul>
+            <li><a href="https://www.fs.usda.gov/recarea/sequoia/recreation/recarea/?recid=80571" target="_blank" rel="noopener">Sherman Pass · FS ↗</a><small>Official Forest Service page</small></li>
+            <li><a href="https://www.fs.usda.gov/sequoia" target="_blank" rel="noopener">Sequoia NF home ↗</a><small>Closures, fire status, conditions</small></li>
+            <li><a href="https://www.blm.gov/visit/keyesville" target="_blank" rel="noopener">BLM Keyesville SMA ↗</a><small>Official Keyesville info</small></li>
+            <li><a href="https://www.onxmaps.com/offroad/app" target="_blank" rel="noopener">onX Offroad ↗</a><small>Download offline trail maps</small></li>
+            <li><a href="https://www.gaiagps.com/" target="_blank" rel="noopener">Gaia GPS ↗</a><small>Alternative offline mapping</small></li>
+            <li><a href="https://caltrans.maps.arcgis.com/apps/webappviewer/index.html?id=b94c6e3d51b34dd8a16ec3a92a18d3c0" target="_blank" rel="noopener">Caltrans QuickMap ↗</a><small>Live road conditions</small></li>
+          </ul>
+        </div>
+
+        <div class="research-col">
+          <h4>Weather &amp; conditions</h4>
+          <ul>
+            <li><a href="https://forecast.weather.gov/MapClick.php?lat=35.7547&lon=-118.4253" target="_blank" rel="noopener">NWS Kernville 10-day ↗</a><small>Hourly + 7-day point forecast</small></li>
+            <li><a href="https://www.cpc.ncep.noaa.gov/products/predictions/long_range/" target="_blank" rel="noopener">NOAA CPC outlook ↗</a><small>6–10 day, 8–14 day, monthly</small></li>
+            <li><a href="https://www.wrh.noaa.gov/hnx/" target="_blank" rel="noopener">NWS Hanford office ↗</a><small>Local discussion + advisories</small></li>
+            <li><a href="https://cdec.water.ca.gov/dynamicapp/wsSensorData?sensor_num=82&dur_code=D&start=2025-10-01" target="_blank" rel="noopener">CA snowpack ↗</a><small>Determines summer river flow</small></li>
+            <li><a href="https://airnow.gov/?city=Kernville&state=CA&country=USA" target="_blank" rel="noopener">AirNow · air quality ↗</a><small>Wildfire smoke check</small></li>
+          </ul>
+        </div>
+
+        <div class="research-col">
+          <h4>Lodging</h4>
+          <ul>
+            <li><a href="https://www.kernvilleinn.com/whispering-pines-lodge" target="_blank" rel="noopener">Whispering Pines Lodge ↗</a><small>Top-pick · book direct</small></li>
+            <li><a href="https://www.kernvilleinn.com/" target="_blank" rel="noopener">Kernville Inn ↗</a><small>Backup option</small></li>
+            <li><a href="https://www.google.com/search?q=Corral+Creek+Resort+Kernville+booking" target="_blank" rel="noopener">Corral Creek Resort ↗</a><small>Cabins outside town</small></li>
+            <li><a href="https://www.kernrivervalley.com/places-to-stay" target="_blank" rel="noopener">KRV lodging directory ↗</a><small>All hotels + campgrounds</small></li>
+            <li><a href="https://www.recreation.gov/search?q=kern+river" target="_blank" rel="noopener">Recreation.gov · NF camping ↗</a><small>Camp 3, Hospital Flat, etc.</small></li>
+          </ul>
+        </div>
+
+        <div class="research-col">
+          <h4>R1T &amp; charging</h4>
+          <ul>
+            <li><a href="https://www.plugshare.com/" target="_blank" rel="noopener">PlugShare ↗</a><small>Crowd-sourced charger status</small></li>
+            <li><a href="https://www.evgo.com/find-a-station/" target="_blank" rel="noopener">EVgo network ↗</a><small>Bakersfield DCFC stops</small></li>
+            <li><a href="https://account.chargepoint.com/map" target="_blank" rel="noopener">ChargePoint map ↗</a><small>Bakersfield alternative</small></li>
+            <li><a href="https://rivian.com/charging" target="_blank" rel="noopener">Rivian Adventure Network ↗</a><small>Coverage maps + planned sites</small></li>
+            <li><a href="https://rivian.com/support" target="_blank" rel="noopener">Rivian support ↗</a><small>Roadside · 855-748-4265</small></li>
+          </ul>
+        </div>
+
+        <div class="research-col">
+          <h4>Town &amp; food</h4>
+          <ul>
+            <li><a href="https://www.kernrivervalley.com/" target="_blank" rel="noopener">Kern River Valley CVB ↗</a><small>Official visitor bureau</small></li>
+            <li><a href="https://www.thatplacebrewingco.com/" target="_blank" rel="noopener">That Place Brewing ↗</a><small>Dinner pick, walkable</small></li>
+            <li><a href="https://www.google.com/maps/search/Big+Blue+Bear+Cafe+Kernville" target="_blank" rel="noopener">Big Blue Bear Café ↗</a><small>Best breakfast in town</small></li>
+            <li><a href="https://www.google.com/maps/search/Ewings+on+the+Kern" target="_blank" rel="noopener">Ewings on the Kern ↗</a><small>Post-rafting milkshakes</small></li>
+            <li><a href="https://kernvalleymuseum.org/" target="_blank" rel="noopener">Kern Valley Museum ↗</a><small>Weekend kid stop</small></li>
+            <li><a href="https://wildlife.ca.gov/Fishing" target="_blank" rel="noopener">CA fishing license ↗</a><small>$17 day pass</small></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BOOKING CHECKLIST (dark) ===== -->
+<section class="booking" id="book">
+  <div class="container">
+    <div class="section-header" style="margin-top: 0;">
+      <span class="eyebrow" style="color: rgba(255,255,255,0.7);">Pre-Trip Punch List</span>
+      <h2>Book These Now</h2>
+      <p>Listed in priority order. Lodging fills first, rafting outfitters second, everything else is forgiving. Today is roughly 17 days from the target weekend — you're inside the window for everything.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="stepnum">1</div>
+        <div>
+          <span class="when">Now · top priority</span>
+          <h4>Reserve lodging in Kernville</h4>
+          <p>Aim for <strong>Whispering Pines Lodge</strong>. Family room, riverside. Call directly rather than booking through a third party — ask about parking for a full-size truck and whether a 110V outlet is available for the R1T overnight. If full, try Kernville Inn next.</p>
+          <div class="meta">→ <a href="tel:+17603763733">760-376-3733</a> · backup: <a href="tel:+17603762206">Kernville Inn 760-376-2206</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">2</div>
+        <div>
+          <span class="when">Within 1 week</span>
+          <h4>Book Lickity Split rafting for the chosen Saturday morning</h4>
+          <p>Call <strong>Sierra South</strong> first. Specify five rafters, ages 7 / 10 / 12, all beginners. Morning slot (10:30 or 11:00 AM). Confirm the 7-year-old meets the minimum age and the Lickity Split is the right trip. <strong>Don't book Powerhouse Run</strong> — the 7-year-old can't go.</p>
+          <div class="meta">→ <a href="tel:+17603763745">Sierra South 760-376-3745</a> · backup <a href="tel:+17603763370">KRO 760-376-3370</a> · <a href="https://sierrasouth.com/" target="_blank" rel="noopener" style="color: var(--kern-sand);">sierrasouth.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">3</div>
+        <div>
+          <span class="when">Within 1 week</span>
+          <h4>Charging reconnaissance</h4>
+          <p>Open the <strong>EVgo</strong> and <strong>ChargePoint</strong> apps and confirm payment is set up. Check <strong>PlugShare</strong> for the Bakersfield stations on your route and for any new chargers in Kernville. Pick a primary and a backup station in Bakersfield.</p>
+          <div class="meta">→ <a href="https://www.plugshare.com/" target="_blank" rel="noopener" style="color: var(--kern-sand);">plugshare.com</a> · <a href="https://www.evgo.com/" target="_blank" rel="noopener" style="color: var(--kern-sand);">evgo.com</a> · <a href="https://www.chargepoint.com/" target="_blank" rel="noopener" style="color: var(--kern-sand);">chargepoint.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">4</div>
+        <div>
+          <span class="when">2 weeks out</span>
+          <h4>Weather + river flow check</h4>
+          <p>Pull the 10-day forecast. If &gt; 100°F, postpone a week. Check the USGS gauge — if flow looks extreme (&gt; 1,500 cfs) or low (&lt; 600 cfs), call the outfitter and confirm Lickity Split is still the right trip. Both numbers move fast in June.</p>
+          <div class="meta">→ <a href="https://forecast.weather.gov/MapClick.php?lat=35.7547&lon=-118.4253" target="_blank" rel="noopener" style="color: var(--kern-sand);">NWS Kernville</a> · <a href="https://waterdata.usgs.gov/monitoring-location/11186000/" target="_blank" rel="noopener" style="color: var(--kern-sand);">USGS gauge</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">5</div>
+        <div>
+          <span class="when">2 days before</span>
+          <h4>Call the ranger district about Sherman Pass</h4>
+          <p>Confirm Sherman Pass Road (22S05) is open to the saddle. In a big snow year it can hold snow into mid-June. If closed, switch to Plan B (Cherry Hill / Greenhorn). Also ask about active fire closures and grab a paper map when you arrive.</p>
+          <div class="meta">→ <a href="tel:+17603763781">Sequoia NF Kern River District 760-376-3781</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">6</div>
+        <div>
+          <span class="when">1 week out</span>
+          <h4>Download offline maps + paper directions</h4>
+          <p>Download the Kern River / Sherman Pass area in <strong>Gaia GPS</strong> or <strong>onX Offroad</strong> for offline use — cell service is dead north of Kernville. Print one paper copy of driving directions and stash in the glove box.</p>
+          <div class="meta">→ <a href="https://www.gaiagps.com/" target="_blank" rel="noopener" style="color: var(--kern-sand);">gaiagps.com</a> · <a href="https://www.onxmaps.com/offroad/app" target="_blank" rel="noopener" style="color: var(--kern-sand);">onxmaps.com/offroad</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">7</div>
+        <div>
+          <span class="when">2 days before</span>
+          <h4>Pre-stage the bags</h4>
+          <p>Separate <strong>river bag</strong> (frunk), <strong>trail bag</strong> (gear tunnel), <strong>overnight bag</strong>, and <strong>kid comfort bag</strong> (accessible in cabin). Use the packing list above. Labels save 20 minutes at 5 AM.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">8</div>
+        <div>
+          <span class="when">Day before</span>
+          <h4>Truck prep</h4>
+          <p>Charge R1T to 100% overnight. Confirm tire deflator and portable inflator are in the truck. Top off washer fluid. Load wet/dry-divided gear into the frunk and the gear tunnel. Set the alarm for 5:00 AM.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">9</div>
+        <div>
+          <span class="when">Morning of</span>
+          <h4>Depart by 5:30 AM</h4>
+          <p>Coffee and breakfast on the road. Aim to clear LA before traffic builds. On the river by 11 AM, lunch at noon, lodge by 4:30 PM — that's the plan.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Built for Mark · Family trip, June 13–14, 2026 · Orange County → Kernville → home · <a href="https://github.com/mshors-pdai/jmark" target="_blank" rel="noopener">View on GitHub ↗</a></p>
+  </div>
+</footer>
+
+<!-- Copy share link toast -->
+<div id="copy-toast" class="copy-toast">Link copied to clipboard</div>
+
+<script>
+  (function(){
+    var toast = document.getElementById('copy-toast');
+    function showToast(msg){
+      toast.textContent = msg || 'Link copied to clipboard';
+      toast.classList.add('show');
+      setTimeout(function(){ toast.classList.remove('show'); }, 1800);
+    }
+    document.querySelectorAll('button[data-share]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var url = btn.getAttribute('data-share');
+        if (navigator.share) {
+          navigator.share({ url: url, title: 'Kern River trip route' }).catch(function(){
+            doCopy(url);
+          });
+        } else {
+          doCopy(url);
+        }
+      });
+    });
+    function doCopy(text){
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function(){
+          showToast('Share link copied');
+        }, function(){
+          fallback(text);
+        });
+      } else {
+        fallback(text);
+      }
+    }
+    function fallback(text){
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.style.position='fixed'; ta.style.left='-9999px';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); showToast('Share link copied'); }
+      catch(e){ showToast('Copy failed — long-press to copy'); }
+      document.body.removeChild(ta);
+    }
+  })();
+</script>
+
+</body>
+</html>
