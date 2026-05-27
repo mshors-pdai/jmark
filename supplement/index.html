@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Supplements — Q2 2026 stack</title>
+<title>Supplements — Daily stack &amp; dosing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,116 +13,350 @@
     --accent-deep: #762d24;
     --soft: #d18674;
     --cream: #f7eee9;
+    --warm: #efe6df;
     --ink: #1a1a1a;
     --muted: #6b6b6b;
     --line: rgba(0,0,0,0.08);
+    --amber: #9a6700;
+    --amber-soft: #fdf6e3;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.65; background: #faf8f5; }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    line-height: 1.65;
+    background: #faf8f5;
+  }
   h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.015em; }
   h1 { font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.05; }
-  h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); }
-  h3 { font-size: 1.3rem; }
+  h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: 1.15; }
+  h3 { font-size: 1.3rem; line-height: 1.25; }
   em { font-style: italic; color: var(--accent); font-weight: 500; }
-  a { color: inherit; }
+  a { color: var(--accent); }
   .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
   .eyebrow {
     font-family: 'Inter', sans-serif; text-transform: uppercase;
     letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; color: var(--accent);
   }
 
+  /* ===== Back bar ===== */
   .back-bar { background: var(--ink); color: white; padding: 0.75rem 0; font-size: 0.85rem; }
   .back-bar .container { display: flex; justify-content: space-between; align-items: center; }
-  .back-link { color: rgba(255,255,255,0.8); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; }
+  .back-link { color: rgba(255,255,255,0.8); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
   .back-link:hover { color: var(--soft); }
+  .back-link .arrow { transition: transform 0.2s; }
+  .back-link:hover .arrow { transform: translateX(-3px); }
   .meta-mini { color: rgba(255,255,255,0.5); font-size: 0.78rem; letter-spacing: 0.06em; }
   .brand-mini { font-family: 'Playfair Display', serif; font-size: 1rem; color: white; text-decoration: none; }
   .brand-mini .dot { color: var(--accent); }
 
-  .intro-hero { padding: 6rem 0 4rem; background: linear-gradient(180deg, var(--cream) 0%, #faf8f5 100%); text-align: center; }
-  .intro-hero .eyebrow { margin-bottom: 1.25rem; display: inline-block; }
-  .intro-hero h1 em { color: var(--accent); font-weight: 400; }
-  .intro-hero .lede { font-size: 1.1rem; color: var(--muted); max-width: 640px; margin: 1.25rem auto 0; }
-  .disclaimer { font-size: 0.78rem; color: var(--muted); margin-top: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto; font-style: italic; }
+  /* ===== Top nav ===== */
+  .topnav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--accent);
+    padding: 0.8rem 0;
+  }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .topnav .tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+  .tab {
+    padding: 0.35rem 0.9rem; border-radius: 999px;
+    font-size: 0.82rem; color: var(--muted); text-decoration: none;
+    transition: all 0.2s;
+  }
+  .tab:hover { background: var(--cream); color: var(--accent-deep); }
 
-  .stack { padding: 4rem 0; }
-  .quarter-head {
+  /* ===== Hero ===== */
+  .intro-hero {
+    padding: 5rem 0 3.5rem;
+    background: linear-gradient(180deg, var(--cream) 0%, #faf8f5 100%);
+    text-align: center;
+  }
+  .intro-hero .eyebrow { margin-bottom: 1.25rem; display: inline-block; }
+  .intro-hero h1 { margin-bottom: 1.25rem; max-width: 900px; margin-left: auto; margin-right: auto; }
+  .intro-hero h1 em { color: var(--accent); font-weight: 400; }
+  .intro-hero .lede { font-size: 1.1rem; color: var(--muted); max-width: 680px; margin: 0 auto; }
+  .person-strip {
+    margin-top: 1.75rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .person-strip strong { color: var(--ink); font-weight: 600; }
+  .meta-strip {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+  .meta-item .v {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .meta-item .v em { color: var(--accent); }
+  .meta-item .l {
+    font-size: 0.72rem; text-transform: uppercase;
+    letter-spacing: 0.15em; color: var(--muted); margin-top: 0.15rem;
+  }
+
+  /* ===== Sections ===== */
+  section.block { padding: 4rem 0; }
+  section.block.alt { background: white; }
+  .section-head { margin-bottom: 2rem; }
+  .section-head.center { text-align: center; }
+  .section-head .eyebrow { margin-bottom: 0.6rem; display: inline-block; }
+  .section-head .goal-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--cream);
+    color: var(--accent);
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+  }
+  .section-head h2 em { color: var(--accent); font-style: italic; font-weight: 400; }
+  .section-head p {
+    color: var(--muted);
+    max-width: 700px;
+    margin-top: 0.75rem;
+    font-size: 0.98rem;
+  }
+
+  /* ===== Supplement table ===== */
+  .stack-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    font-size: 0.95rem;
+  }
+  section.block.alt .stack-table { background: var(--cream); }
+  .stack-table thead th {
+    text-align: left;
+    padding: 0.8rem 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    border-bottom: 2px solid var(--line);
+    background: rgba(0,0,0,0.02);
+  }
+  .stack-table tbody td {
+    padding: 1rem;
+    vertical-align: top;
+    border-bottom: 1px solid var(--line);
+  }
+  .stack-table tbody tr:last-child td { border-bottom: none; }
+  .stack-table .name { font-weight: 600; }
+  .stack-table .have {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 0.2rem;
+    font-style: italic;
+  }
+  .stack-table .dose {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent);
+    font-weight: 600;
+    white-space: nowrap;
+    font-size: 1.02rem;
+  }
+  .stack-table .when { font-size: 0.88rem; color: var(--ink); }
+  .stack-table .why { color: var(--muted); font-size: 0.88rem; line-height: 1.55; }
+
+  .note-after {
+    margin-top: 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+  /* ===== Schedule cards ===== */
+  .schedule {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+  }
+  .slot {
+    background: white;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    padding: 1.5rem 1.75rem;
+  }
+  section.block.alt .slot { background: var(--cream); }
+  .slot h3 { color: var(--accent-deep); font-size: 1.2rem; margin-bottom: 0.3rem; }
+  .slot .when-note {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  .slot ul { list-style: none; }
+  .slot li {
+    padding: 0.55rem 0;
+    border-bottom: 1px dashed var(--line);
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--accent);
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.75rem;
+    font-size: 0.95rem;
   }
-  .quarter-head h2 { color: var(--accent-deep); }
-  .quarter-head .meta { font-size: 0.85rem; color: var(--muted); }
-
-  .category {
-    margin-bottom: 2.5rem;
-  }
-  .category-head {
-    margin-bottom: 1rem;
-    color: var(--accent-deep);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
+  .slot li:last-child { border-bottom: none; }
+  .slot li .pill-dose {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent);
     font-weight: 600;
-    border-left: 3px solid var(--accent);
-    padding-left: 0.75rem;
+    white-space: nowrap;
+    font-size: 0.95rem;
   }
-  .item-list { display: grid; gap: 0.85rem; }
-  .item {
+
+  /* ===== Buy block ===== */
+  .buy-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .buy-row {
     background: white;
     border: 1px solid var(--line);
     border-radius: 10px;
-    padding: 1rem 1.25rem;
+    padding: 1.1rem 1.4rem;
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 0.5rem 1rem;
+    grid-template-columns: 1.2fr 2fr 0.7fr 1.5fr;
+    gap: 1rem;
     align-items: center;
   }
-  .item .name { font-weight: 600; font-size: 1rem; }
-  .item .dose {
+  section.block.alt .buy-row { background: var(--cream); }
+  .buy-row .name { font-weight: 600; font-size: 0.98rem; }
+  .buy-row .pick { color: var(--muted); font-size: 0.88rem; }
+  .buy-row .cost {
     font-family: 'Playfair Display', serif;
+    font-weight: 600;
     color: var(--accent);
     font-size: 1rem;
   }
-  .item .why {
-    grid-column: 1 / -1;
+  .buy-row .links { display: flex; gap: 0.65rem; flex-wrap: wrap; font-size: 0.85rem; }
+  .buy-row .links a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(161,74,62,0.35);
+    font-weight: 500;
+  }
+  .buy-row .links a:hover { border-bottom-color: var(--accent); }
+
+  .total-callout {
+    margin-top: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--cream);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .total-callout .total-pill {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-family: 'Playfair Display', serif;
+    margin: 0 0.15rem;
+  }
+
+  /* ===== Protein ===== */
+  .protein-intro {
+    color: var(--muted);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.65;
+  }
+  .protein-intro strong { color: var(--ink); }
+  .protein-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    overflow: hidden;
+    font-size: 0.95rem;
+  }
+  section.block.alt .protein-table { background: var(--cream); }
+  .protein-table thead th {
+    text-align: left;
+    padding: 0.7rem 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    border-bottom: 2px solid var(--line);
+    background: rgba(0,0,0,0.02);
+  }
+  .protein-table tbody td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .protein-table tbody tr:last-child td { border-bottom: none; }
+  .protein-table .grams {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent);
+    font-weight: 600;
+    white-space: nowrap;
+    text-align: right;
+  }
+  .sample-day {
+    margin-top: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--amber-soft);
+    border: 1px solid #f0e3bf;
+    border-left: 4px solid var(--amber);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #5c4a1a;
+  }
+  .sample-day strong { color: var(--amber); font-weight: 700; }
+
+  /* ===== Disclaimer ===== */
+  .disclaimer-block {
+    padding: 2rem 0 3rem;
+    text-align: center;
+    background: white;
+    border-top: 1px solid var(--line);
+  }
+  .disclaimer-block p {
     color: var(--muted);
     font-size: 0.85rem;
-    margin-top: 0.15rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-style: italic;
   }
-  .item .timing {
-    grid-column: 1 / -1;
-    font-size: 0.72rem;
+  .disclaimer-block .gen-date {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--muted);
+    font-style: normal;
   }
 
-  .history {
-    background: white;
-    padding: 3rem 0;
-    border-top: 1px solid var(--line);
-  }
-  .history h2 { color: var(--accent-deep); margin-bottom: 0.5rem; }
-  .history p { color: var(--muted); margin-bottom: 1.5rem; }
-  .history-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.85rem 0;
-    border-bottom: 1px dotted var(--line);
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  .history-row .q { font-family: 'Playfair Display', serif; font-style: italic; color: var(--accent); }
-  .history-row .desc { color: var(--muted); font-size: 0.9rem; }
-
+  /* ===== Footer ===== */
   footer { padding: 3rem 0 2.5rem; background: var(--ink); color: rgba(255,255,255,0.7); font-size: 0.88rem; }
   footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
   footer .brand-foot { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: white; }
@@ -130,15 +364,36 @@
   footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
   footer a:hover { color: var(--soft); }
 
+  /* ===== Responsive ===== */
+  @media (max-width: 900px) {
+    .schedule { grid-template-columns: 1fr; }
+    .buy-row { grid-template-columns: 1fr; gap: 0.4rem; }
+    .buy-row .cost, .buy-row .links { font-size: 0.88rem; }
+  }
   @media (max-width: 600px) {
     .container { padding: 0 1.25rem; }
     .intro-hero { padding: 4rem 0 3rem; }
-    .item { grid-template-columns: 1fr; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; }
+    .tab { white-space: nowrap; }
+    h2 { font-size: 1.6rem !important; }
+    .meta-strip { gap: 1.25rem; }
+    .meta-item .v { font-size: 1.15rem; }
+    .stack-table thead { display: none; }
+    .stack-table tbody td { display: block; border: none; padding: 0.25rem 1rem; }
+    .stack-table tbody tr {
+      display: block;
+      border-bottom: 1px solid var(--line);
+      padding: 0.8rem 0;
+    }
+    .stack-table tbody tr:last-child { border-bottom: none; }
+    section.block { padding: 3rem 0; }
   }
 </style>
 </head>
 <body>
 
+<!-- ===== Back bar ===== -->
 <div class="back-bar">
   <div class="container">
     <a href="../index.html" class="back-link"><span class="arrow">←</span> All of j.mark</a>
@@ -147,110 +402,265 @@
   </div>
 </div>
 
+<!-- ===== Top nav ===== -->
+<nav class="topnav">
+  <div class="container">
+    <span class="eyebrow" style="font-size: 0.7rem;">Supplements</span>
+    <div class="tabs">
+      <a class="tab" href="#goal-1">Goal 1 · Blood flow</a>
+      <a class="tab" href="#goal-2">Goal 2 · Muscle</a>
+      <a class="tab" href="#schedule">Schedule</a>
+      <a class="tab" href="#buy">Where to buy</a>
+      <a class="tab" href="#protein">Protein</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
 <section class="intro-hero">
   <div class="container">
-    <span class="eyebrow">Supplements</span>
-    <h1>What's <em>in the body</em>.</h1>
-    <p class="lede">Current stack, versioned by quarter. History retained so what worked stays visible after rotation. Substrate matters — the practice runs on the body's chemistry, not on willpower.</p>
-    <p class="disclaimer">Personal log, not medical advice. Dosing and stack composition are individual and should be reviewed with a clinician for anyone reading this who isn't me.</p>
+    <span class="eyebrow">Personal Protocol</span>
+    <h1>Daily stack &amp; <em>dosing</em>.</h1>
+    <p class="lede">Two priorities, two daily slots, four supplements doing real weight. Built around what's evidence-supported and what actually moves the needle — not the kitchen-sink stack.</p>
+    <p class="person-strip"><strong>Fit male, 45 · 6'0" · 180 lb</strong> &nbsp;·&nbsp; Priorities: (1) blood flow &amp; vitality (2) muscle / testosterone, non-overboard</p>
+    <div class="meta-strip">
+      <div class="meta-item"><div class="v"><em>4</em> core</div><div class="l">Supplements pulling weight</div></div>
+      <div class="meta-item"><div class="v"><em>2</em> slots</div><div class="l">Morning + before bed</div></div>
+      <div class="meta-item"><div class="v"><em>$0.40–0.50</em></div><div class="l">Per day, all-in</div></div>
+      <div class="meta-item"><div class="v"><em>150–180g</em></div><div class="l">Daily protein target</div></div>
+    </div>
   </div>
 </section>
 
-<section class="stack">
+<!-- ===== Goal 1 ===== -->
+<section class="block" id="goal-1">
   <div class="container">
-    <div class="quarter-head">
-      <h2>Q2 2026 · Current stack</h2>
-      <div class="meta">Apr · May · Jun 2026 · last updated May 20</div>
+    <div class="section-head">
+      <span class="goal-tag">Goal 1</span>
+      <h2>Blood flow &amp; <em>vitality</em></h2>
+      <p>The endothelial / nitric-oxide baseline plus the supports that don't deserve to be dropped. Daily consistency matters more than acute timing.</p>
     </div>
 
-    <div class="category">
-      <div class="category-head">Sleep · pre-bed</div>
-      <div class="item-list">
-        <div class="item">
-          <div class="name">Magnesium glycinate</div>
-          <div class="dose">400 mg</div>
-          <div class="timing">60 min before sleep</div>
-          <div class="why">Glycine form is gentler on the gut than oxide; supports deep sleep architecture and morning HRV.</div>
-        </div>
-        <div class="item">
-          <div class="name">L-theanine</div>
-          <div class="dose">200 mg</div>
-          <div class="timing">60 min before sleep</div>
-          <div class="why">Promotes alpha-wave activity, calms onset latency without sedation.</div>
-        </div>
-        <div class="item">
-          <div class="name">Glycine</div>
-          <div class="dose">3 g</div>
-          <div class="timing">30 min before sleep</div>
-          <div class="why">Lowers core body temp; improves sleep quality at clinical doses in small RCTs.</div>
-        </div>
-      </div>
-    </div>
+    <table class="stack-table">
+      <thead>
+        <tr><th>Supplement</th><th>Dose</th><th>When</th><th>Why</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="name">L-Citrulline</div><span class="have">plain bulk powder — replaces the 750/250 blend</span></td>
+          <td class="dose">3 g/day</td>
+          <td class="when">Morning, ~20 min before breakfast</td>
+          <td class="why">The real lever. Daily dosing builds the nitric-oxide / endothelial baseline — consistency matters more than acute timing.</td>
+        </tr>
+        <tr>
+          <td><div class="name">Zinc picolinate</div><span class="have">already own</span></td>
+          <td class="dose">25–30 mg</td>
+          <td class="when">Morning, with food</td>
+          <td class="why">Supports testosterone and is easily run down day-to-day. Add 1–2 mg copper if daily long-term.</td>
+        </tr>
+        <tr>
+          <td><div class="name">Pumpkin seed oil</div><span class="have">already own</span></td>
+          <td class="dose">per label</td>
+          <td class="when">Morning, with fat</td>
+          <td class="why">Mild prostate / urinary support, low risk. Keep.</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <div class="category">
-      <div class="category-head">Cognition · daily baseline</div>
-      <div class="item-list">
-        <div class="item">
-          <div class="name">Creatine monohydrate</div>
-          <div class="dose">5 g</div>
-          <div class="timing">Morning, with water</div>
-          <div class="why">2024–2025 evidence is strongest of the cognitive enhancers — improves working memory under sleep deprivation, supports muscle function.</div>
-        </div>
-        <div class="item">
-          <div class="name">Omega-3 (EPA/DHA)</div>
-          <div class="dose">2 g combined</div>
-          <div class="timing">With breakfast</div>
-          <div class="why">Anti-inflammatory baseline; brain DHA support; matters for nervous-system plasticity.</div>
-        </div>
-        <div class="item">
-          <div class="name">B-complex</div>
-          <div class="dose">1 cap</div>
-          <div class="timing">Morning</div>
-          <div class="why">Methylated forms (folate, B12). Energy metabolism + methylation pathways.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="category">
-      <div class="category-head">Recovery &amp; substrate</div>
-      <div class="item-list">
-        <div class="item">
-          <div class="name">Vitamin D3 + K2</div>
-          <div class="dose">5,000 IU + 100 µg</div>
-          <div class="timing">Morning with fat</div>
-          <div class="why">Sun is primary; supplement when sun isn't enough. K2 directs calcium to bone rather than soft tissue.</div>
-        </div>
-        <div class="item">
-          <div class="name">Electrolyte mix</div>
-          <div class="dose">1 packet</div>
-          <div class="timing">Post-exercise / hot days</div>
-          <div class="why">Sodium / potassium / magnesium. Pre-empts the post-workout slump.</div>
-        </div>
-      </div>
-    </div>
+    <p class="note-after">Optional acute bump: an extra 2–3 g citrulline ~1 h before exercise adds vasodilation on top of the daily base. Not required.</p>
   </div>
 </section>
 
-<section class="history">
+<!-- ===== Goal 2 ===== -->
+<section class="block alt" id="goal-2">
   <div class="container">
-    <h2>Stack history</h2>
-    <p>What was running in earlier quarters. Drops without rotation are noted — usually means it didn't move the needle.</p>
-    <div class="history-row">
-      <span class="q">Q1 2026</span>
-      <span class="desc">Stack established — same core, no creatine yet, smaller mag dose</span>
+    <div class="section-head">
+      <span class="goal-tag">Goal 2</span>
+      <h2>Muscle &amp; <em>testosterone</em></h2>
+      <p>Best-evidence picks only. Creatine is the strongest single intervention; D3 is the most common real deficiency suppressing T; omega-3 does double duty for vascular too; magnesium for sleep, which IS the natural T lever.</p>
     </div>
-    <div class="history-row">
-      <span class="q">Q4 2025</span>
-      <span class="desc">Pre-stack period; ad-hoc supplementation</span>
+
+    <table class="stack-table">
+      <thead>
+        <tr><th>Supplement</th><th>Dose</th><th>When</th><th>Why</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="name">Creatine monohydrate</div></td>
+          <td class="dose">5 g/day</td>
+          <td class="when">Morning (timing irrelevant)</td>
+          <td class="why">Best-evidenced, cheapest high-impact supplement. Strength/power, libido-neutral. ~$32/yr.</td>
+        </tr>
+        <tr>
+          <td><div class="name">Vitamin D3 + K2</div></td>
+          <td class="dose">2,000–5,000 IU</td>
+          <td class="when">Morning, with fat</td>
+          <td class="why">Low D suppresses testosterone — most likely real deficiency. Test 25-OH-D to dial in.</td>
+        </tr>
+        <tr>
+          <td><div class="name">Omega-3 (EPA+DHA)</div></td>
+          <td class="dose">1.5–2 g</td>
+          <td class="when">Morning, with food</td>
+          <td class="why">Double duty — vascular (helps Goal 1) + recovery.</td>
+        </tr>
+        <tr>
+          <td><div class="name">Magnesium glycinate</div><span class="have">already own</span></td>
+          <td class="dose">300–400 mg</td>
+          <td class="when">Before bed</td>
+          <td class="why">Sleep + recovery → sleep is a top natural testosterone lever. The lone night pill.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== Schedule ===== -->
+<section class="block" id="schedule">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Daily Schedule</span>
+      <h2>Two <em>slots</em></h2>
+      <p>Everything except magnesium goes in the morning. The single night pill protects sleep, which protects everything else.</p>
+    </div>
+
+    <div class="schedule">
+      <div class="slot">
+        <h3>Morning</h3>
+        <div class="when-note">Citrulline ~20 min before breakfast; rest with food</div>
+        <ul>
+          <li><span>L-Citrulline</span> <span class="pill-dose">3 g</span></li>
+          <li><span>Creatine</span> <span class="pill-dose">5 g</span></li>
+          <li><span>Vitamin D3 + K2</span> <span class="pill-dose">1 dose</span></li>
+          <li><span>Omega-3</span> <span class="pill-dose">1.5–2 g</span></li>
+          <li><span>Zinc picolinate</span> <span class="pill-dose">25–30 mg</span></li>
+          <li><span>Pumpkin seed oil</span> <span class="pill-dose">label</span></li>
+        </ul>
+      </div>
+      <div class="slot">
+        <h3>Before bed</h3>
+        <div class="when-note">The only night pill</div>
+        <ul>
+          <li><span>Magnesium glycinate</span> <span class="pill-dose">300–400 mg</span></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ===== Buy ===== -->
+<section class="block alt" id="buy">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Where to buy</span>
+      <h2>Cheap &amp; <em>verified</em></h2>
+      <p>Bulk powders win on cost per serving. The four products below are the ones pulling real weight toward both goals.</p>
+    </div>
+
+    <div class="buy-grid">
+      <div class="buy-row">
+        <div class="name">L-Citrulline</div>
+        <div class="pick">BulkSupplements powder, 500 g (~165 days)</div>
+        <div class="cost">~$0.17/day</div>
+        <div class="links">
+          <a href="https://www.amazon.com/L-Citrulline-Powder-BulkSupplements-500-Grams/dp/B00NBCVVW0" target="_blank" rel="noopener">Amazon</a>
+          <a href="https://www.bulksupplements.com/products/l-citrulline-pure-powder" target="_blank" rel="noopener">Direct</a>
+          <a href="https://purebulk.com/products/l-citrulline-bulk" target="_blank" rel="noopener">PureBulk</a>
+        </div>
+      </div>
+
+      <div class="buy-row">
+        <div class="name">Creatine monohydrate</div>
+        <div class="pick">BulkSupplements micronized, 1 kg (200 days)</div>
+        <div class="cost">~$0.15/day</div>
+        <div class="links">
+          <a href="https://www.amazon.com/BULKSUPPLEMENTS-COM-Creatine-Monohydrate-Powder-Supplement/dp/B00E9M4XEE" target="_blank" rel="noopener">Amazon</a>
+          <a href="https://www.amazon.com/Nutricost-Creatine-Monohydrate-Micronized-Powder/dp/B01EVVQX9U" target="_blank" rel="noopener">Nutricost</a>
+        </div>
+      </div>
+
+      <div class="buy-row">
+        <div class="name">Vitamin D3 + K2</div>
+        <div class="pick">Nutricost D3 5000 IU + K2 (MK-7) 100 mcg</div>
+        <div class="cost">~$15</div>
+        <div class="links">
+          <a href="https://www.innerbody.com/best-vitamin-d3-and-k2-supplements" target="_blank" rel="noopener">Roundup &amp; options</a>
+        </div>
+      </div>
+
+      <div class="buy-row">
+        <div class="name">Omega-3</div>
+        <div class="pick">Nutricost fish oil (best-value, 240 softgels)</div>
+        <div class="cost">~$20</div>
+        <div class="links">
+          <a href="https://www.healthline.com/nutrition/best-fish-oil-supplement" target="_blank" rel="noopener">Roundup &amp; options</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="total-callout">
+      New core spend: <span class="total-pill">~$0.40–0.50 / day</span> for citrulline + creatine + D3 + omega-3 — the four pulling real weight toward both goals. Buy <strong>unflavored</strong> powder; the bigger size always wins on cost/serving.
+    </div>
+  </div>
+</section>
+
+<!-- ===== Protein ===== -->
+<section class="block" id="protein">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Food, not pills</span>
+      <h2>Protein &mdash; rough daily <em>target</em></h2>
+    </div>
+
+    <p class="protein-intro">At 180 lb, aim <strong>~150–180 g/day</strong> (≈0.8–1 g per lb) — the single biggest lever for muscle and aging. Spread across 3–4 feeds of ~30–50 g; powder only fills the gap real food leaves.</p>
+
+    <table class="protein-table">
+      <thead>
+        <tr><th>Source</th><th>Typical serving</th><th>Protein</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="name">RISE311 powder</div><span class="have">plant-based, complete protein</span></td>
+          <td>1 scoop</td>
+          <td class="grams">~30 g</td>
+        </tr>
+        <tr>
+          <td><div class="name">Hard-boiled eggs</div></td>
+          <td>3 large</td>
+          <td class="grams">~18 g</td>
+        </tr>
+        <tr>
+          <td><div class="name">Steak</div></td>
+          <td>6 oz cooked</td>
+          <td class="grams">~45 g</td>
+        </tr>
+        <tr>
+          <td><div class="name">Chicken</div></td>
+          <td>6 oz cooked</td>
+          <td class="grams">~48 g</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="sample-day">
+      <strong>Sample ~178 g day:</strong> 3 eggs + 1 scoop RISE311 (48) · 6 oz chicken (48) · 6–8 oz steak (~52) · 1 scoop RISE311 snack (30). You're already most of the way there with eggs/steak/chicken — RISE311 is the 1–2 scoop top-up to close the gap, not the foundation.
+    </div>
+  </div>
+</section>
+
+<!-- ===== Disclaimer ===== -->
+<section class="disclaimer-block">
+  <div class="container">
+    <p>Not medical advice. Educational only — confirm with a physician, especially anything hormonal and before acting on bloodwork. Prices approximate; verify at checkout.</p>
+    <div class="gen-date">Plan generated 2026-05-17</div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
 <footer>
   <div class="container">
     <div class="brand-foot">j<span class="dot">.</span>mark</div>
     <div>
-      <a href="../index.html">All sections</a> · <a href="../practice/#substrate">Substrate section</a> · <a href="https://github.com/mshors-pdai/jmark" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="../index.html">All sections</a> · <a href="../practice/#substrate">Substrate section</a> · <a href="../reference/">Reference</a> · <a href="https://github.com/mshors-pdai/jmark" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
   </div>
 </footer>
