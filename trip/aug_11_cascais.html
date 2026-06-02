@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>August 2026 — Cascais &amp; the Guincho Coast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cascais-terra: #c1644a;
+    --cascais-deep: #8e4530;
+    --cascais-sea: #1e5a7a;
+    --cascais-sea-deep: #133e54;
+    --cascais-sand: #d4a373;
+    --cascais-olive: #8a8f5a;
+    --cascais-cream: #faf4e8;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.6; background: #fafaf7; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
+  h3 { font-size: 1.6rem; line-height: 1.25; }
+  h4 { font-size: 1.15rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; }
+  a { color: inherit; }
+
+  /* ===== Back-to-index bar (shared component) ===== */
+  .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+  .back-bar a.back-link:hover { color: var(--cascais-terra); }
+  .back-bar a.back-link .arrow { display: inline-block; transition: transform 0.2s; }
+  .back-bar a.back-link:hover .arrow { transform: translateX(-3px); }
+  .back-bar .brand-mini { font-family: 'Playfair Display', serif; font-size: 0.92rem; color: rgba(255,255,255,0.7); letter-spacing: -0.02em; text-decoration: none; }
+  .back-bar .brand-mini:hover { color: white; }
+  .back-bar .brand-mini .dot { color: var(--cascais-terra); }
+  .back-bar .meta-mini { display: none; font-size: 0.74rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
+  @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
+
+  /* ===== Top Nav ===== */
+  .topnav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 1rem 0; }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; }
+  .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
+  .topnav .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .topnav .tab { padding: 0.5rem 1.25rem; border-radius: 999px; text-decoration: none; color: var(--cascais-deep); font-size: 0.9rem; font-weight: 500; transition: all 0.2s; border: 1px solid var(--cascais-terra); }
+  .topnav .tab:hover { background: var(--cascais-terra); color: white; }
+
+  /* ===== Intro Hero ===== */
+  .intro-hero { padding: 6rem 0 4rem; text-align: center; background: linear-gradient(180deg, var(--cascais-cream) 0%, #fafaf7 100%); }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--cascais-terra); }
+  .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
+  .intro-hero h1 em { font-style: italic; color: var(--cascais-terra); font-weight: 400; }
+  .intro-hero .lede { max-width: 720px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
+  .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+
+  /* ===== Destination ===== */
+  .destination { padding: 6rem 0 4rem; background: var(--cascais-cream); }
+  .hero-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.12); margin-bottom: 4rem; }
+  .hero-card .hero-image { min-height: 500px; background-size: cover; background-position: center; position: relative;
+    background-image: linear-gradient(135deg, rgba(193,100,74,0.30), rgba(30,90,122,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Praia_do_Guincho_Cascais.jpg/1280px-Praia_do_Guincho_Cascais.jpg');
+    background-color: var(--cascais-terra); }
+  .hero-card .hero-content { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; background: white; }
+  .hero-card .eyebrow { margin-bottom: 1.25rem; color: var(--cascais-terra); }
+  .hero-card h2 { margin-bottom: 1.5rem; color: var(--cascais-deep); }
+  .hero-card .tagline { font-size: 1.15rem; color: var(--muted); margin-bottom: 2rem; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .stat .stat-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.1; margin-bottom: 0.2rem; color: var(--cascais-deep); }
+  .stat .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+
+  /* ===== Section header ===== */
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 700px; }
+  .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--cascais-terra); }
+  .section-header h2 { margin-bottom: 1rem; color: var(--cascais-deep); }
+  .section-header p { color: var(--muted); font-size: 1.05rem; }
+
+  /* ===== Flight Box ===== */
+  .flight-box { background: white; border-radius: 16px; padding: 2.5rem; max-width: 920px; margin: 2rem auto 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .flight-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+  .flight-row:last-of-type { border-bottom: none; }
+  .flight-airport .code { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1; font-weight: 700; color: var(--cascais-sea-deep); }
+  .flight-airport .city { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; }
+  .flight-line { text-align: center; color: var(--muted); }
+  .flight-line .dash { height: 1px; background: var(--line); position: relative; margin: 0.5rem 0; }
+  .flight-line .dash::after { content: '⟶'; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: white; padding: 0 0.5rem; color: var(--cascais-terra); }
+  .flight-line .info { font-size: 0.8rem; }
+  .flight-meta { display: flex; gap: 2rem; justify-content: center; padding-top: 1.5rem; margin-top: 1rem; border-top: 2px solid var(--line); }
+  .flight-meta .item { text-align: center; }
+  .flight-meta .item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 0.3rem; }
+  .flight-meta .item .val { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--cascais-deep); }
+
+  /* ===== Only This Week ===== */
+  .only-this-week { max-width: 1100px; margin: 0 auto 4rem; padding: 3rem; background: linear-gradient(135deg, #faf4e8, #f5e8d8); border-radius: 24px; }
+  .only-this-week .head { text-align: center; margin-bottom: 2.5rem; }
+  .only-this-week h3 { color: var(--cascais-deep); font-size: 2rem; margin-top: 0.5rem; }
+  .only-this-week .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .event-card { background: white; border-radius: 16px; padding: 2rem; border-left: 4px solid var(--cascais-terra); }
+  .event-card.sea { border-left-color: var(--cascais-sea); }
+  .event-card.olive { border-left-color: var(--cascais-olive); }
+  .event-card.sand { border-left-color: var(--cascais-sand); }
+  .event-card .head { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .event-card .icon { font-size: 2.2rem; }
+  .event-card h4 { margin: 0; color: var(--cascais-deep); }
+  .event-card h4.sea { color: var(--cascais-sea-deep); }
+  .event-card h4.olive { color: var(--cascais-olive); }
+  .event-card h4.sand { color: var(--cascais-sand); }
+  .event-card .when { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
+  .event-card p { font-size: 0.95rem; color: #333; margin-bottom: 1rem; }
+  .event-card .book-link { display: inline-block; padding: 0.4rem 0.9rem; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--cascais-terra); border: 1.5px solid var(--cascais-terra); }
+  .event-card .book-link:hover { background: var(--cascais-terra); color: white; }
+  .bonus-callout { margin-top: 2rem; padding: 1.5rem 2rem; background: rgba(30,90,122,0.06); border-radius: 12px; border-left: 4px solid var(--cascais-sea); }
+  .bonus-callout h4 { margin-bottom: 0.5rem; color: var(--cascais-sea-deep); }
+  .bonus-callout p { font-size: 0.95rem; color: #333; margin: 0; }
+  .bonus-callout a { color: var(--cascais-sea); font-weight: 600; }
+
+  /* ===== Day at a glance ===== */
+  .glance-table { max-width: 1000px; margin: 0 auto 4rem; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .glance-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .glance-table th { background: var(--cascais-terra); color: white; padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600; }
+  .glance-table td { padding: 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .glance-table tr:last-child td { border-bottom: none; }
+  .glance-table tr:nth-child(even) td { background: rgba(193,100,74,0.03); }
+  .glance-table td.daynum { font-weight: 600; color: var(--cascais-terra); }
+
+  /* ===== Itinerary timeline ===== */
+  .itinerary { max-width: 950px; margin: 0 auto; }
+  .day { display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
+  .day:last-child { border-bottom: none; }
+  .day-number .num { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1; font-weight: 600; font-style: italic; color: var(--cascais-terra); }
+  .day-number .date { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .day-content h3 { margin-bottom: 0.75rem; color: var(--cascais-deep); }
+  .day-content ul { list-style: none; }
+  .day-content ul li { padding: 0.45rem 0 0.45rem 1.5rem; position: relative; color: #333; }
+  .day-content ul li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 6px; height: 6px; border-radius: 50%; background: var(--cascais-terra); }
+  .day-content ul li strong { color: var(--cascais-deep); }
+  .day-content ul li a { color: var(--cascais-terra); text-decoration: none; border-bottom: 1px dotted; }
+
+  /* ===== Hotel / Food cards ===== */
+  .hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .hotel-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+  .hotel-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .hotel-card .hotel-image { height: 200px; background-size: cover; background-position: center; position: relative; background-color: var(--cascais-olive); }
+  .hotel-card .hotel-tier { position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.95); padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: var(--cascais-deep); z-index: 2; }
+  .hotel-card .hotel-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .hotel-card .hotel-body h4 { margin-bottom: 0.25rem; color: var(--cascais-deep); }
+  .hotel-card .hotel-body .loc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+  .hotel-card .hotel-body p { font-size: 0.93rem; color: #333; margin-bottom: 1rem; line-height: 1.55; }
+  .hotel-card .hotel-meta { display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.85rem; margin-top: auto; }
+  .hotel-card .hotel-meta .price { font-weight: 600; color: var(--cascais-deep); }
+  .hotel-card .book-link { display: inline-block; padding: 0.35rem 0.85rem; font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--cascais-terra); border: 1.5px solid var(--cascais-terra); align-self: flex-start; margin-top: 0.5rem; }
+  .hotel-card .book-link:hover { background: var(--cascais-terra); color: white; }
+
+  /* ===== Wine block ===== */
+  .wine-block { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; max-width: 1100px; margin: 0 auto 2rem; background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.06); align-items: center; }
+  .wine-block .wine-image { min-height: 360px; background-size: cover; background-position: center; background-color: var(--cascais-sand); }
+  .wine-block.whites .wine-image { background-image: linear-gradient(135deg, rgba(193,100,74,0.25), rgba(212,163,115,0.35)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80'); }
+  .wine-block.reds .wine-image { background-image: linear-gradient(135deg, rgba(142,69,48,0.30), rgba(193,100,74,0.40)), url('https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80'); }
+  .wine-block .wine-text { padding: 3rem 2.5rem 3rem 0; }
+  .wine-block .eyebrow { color: var(--cascais-terra); }
+  .wine-block h3 { color: var(--cascais-deep); margin-bottom: 1rem; }
+  .wine-block p { color: #333; font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .winery-list .winery { padding: 0.85rem 0; border-bottom: 1px dashed var(--line); }
+  .winery-list .winery:last-child { border-bottom: none; }
+  .winery-list .name { font-weight: 600; color: var(--cascais-deep); margin-bottom: 0.2rem; }
+  .winery-list .name a { color: var(--cascais-terra); text-decoration: none; }
+  .winery-list .desc { font-size: 0.88rem; color: var(--muted); }
+
+  /* ===== Activities ===== */
+  .activities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1100px; margin: 0 auto; }
+  .activity { background: white; border-radius: 12px; padding: 1.75rem 1.25rem; text-align: center; transition: transform 0.2s; border: 1px solid var(--line); }
+  .activity:hover { transform: translateY(-2px); }
+  .activity .icon { font-size: 2.2rem; margin-bottom: 0.85rem; display: block; }
+  .activity h4 { margin-bottom: 0.5rem; font-size: 1rem; color: var(--cascais-deep); }
+  .activity h4 a { color: inherit; text-decoration: none; }
+  .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+  /* ===== Booking + Budget ===== */
+  .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
+  .booking .section-header h2 { color: white; }
+  .booking .section-header p { color: rgba(255,255,255,0.7); }
+  .booking .section-header .eyebrow { color: rgba(255,255,255,0.7); }
+  .steps { max-width: 850px; margin: 0 auto; }
+  .step { display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .step:last-child { border-bottom: none; }
+  .step .stepnum { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--cascais-terra); font-style: italic; }
+  .step h4 { color: white; margin-bottom: 0.5rem; }
+  .step p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem; }
+  .step p strong { color: white; }
+  .step .meta-line { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+  .step .meta-line a { color: var(--cascais-sand); text-decoration: none; }
+
+  .budget-table { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px; }
+  .budget-table .head { text-align: center; margin-bottom: 2.5rem; }
+  .budget-table h3 { color: white; margin-top: 0.5rem; }
+  .budget-table .head p { color: rgba(255,255,255,0.6); margin-top: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 0.95rem; }
+  .budget-table table { width: 100%; border-collapse: collapse; color: white; font-size: 0.95rem; }
+  .budget-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
+  .budget-table th.item { text-align: left; color: rgba(255,255,255,0.6); width: 38%; }
+  .budget-table th.tier { text-align: center; color: rgba(255,255,255,0.85); width: 21%; font-size: 0.92rem; }
+  .budget-table th.standard { color: var(--cascais-terra); font-weight: 700; font-size: 1rem; background: rgba(193,100,74,0.12); }
+  .budget-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .budget-table td.item { color: rgba(255,255,255,0.85); }
+  .budget-table td.tier { text-align: center; }
+  .budget-table td.standard { text-align: center; background: rgba(193,100,74,0.06); }
+  .budget-table td.std-mark { font-weight: 600; }
+  .budget-table td.dim { color: rgba(255,255,255,0.3); }
+  .budget-table tfoot td { padding: 1.5rem 0.75rem 0.5rem; font-family: 'Playfair Display', serif; border-top: 2px solid rgba(255,255,255,0.25); border-bottom: none; }
+  .budget-table tfoot td.total-label { font-size: 1.3rem; color: white; }
+  .budget-table tfoot td.tier { font-size: 1.4rem; color: white; }
+  .budget-table tfoot td.standard { font-size: 1.65rem; color: var(--cascais-terra); font-weight: 700; }
+  .budget-table .footnote { text-align: center; color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-top: 2rem; line-height: 1.6; }
+
+  footer { background: #0d0d0d; color: rgba(255,255,255,0.6); padding: 2.5rem 0; text-align: center; font-size: 0.85rem; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 900px) {
+    .hero-card { grid-template-columns: 1fr; }
+    .hero-card .hero-image { min-height: 280px; }
+    .hero-card .hero-content { padding: 2.5rem 2rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .day { grid-template-columns: 1fr; gap: 1rem; }
+    .day-number .num { font-size: 3rem; }
+    .hotels-grid { grid-template-columns: 1fr 1fr; }
+    .activities { grid-template-columns: repeat(2, 1fr); }
+    .flight-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .topnav .tabs { flex-wrap: wrap; }
+    .only-this-week .grid { grid-template-columns: 1fr; }
+    .wine-block { grid-template-columns: 1fr; }
+    .wine-block .wine-text { padding: 2rem; }
+    .container { padding: 0 1.25rem; }
+    .step { grid-template-columns: 60px 1fr; gap: 1rem; }
+  }
+  @media (max-width: 600px) {
+    .hotels-grid, .activities { grid-template-columns: 1fr; }
+    .intro-hero .meta { gap: 1.5rem; }
+    .topnav { padding: 0.6rem 0; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .brand { font-size: 1rem; }
+    .topnav .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+    .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    .glance-table, .budget-table { overflow-x: auto; }
+    .glance-table table, .budget-table table { min-width: 540px; }
+    h2 { font-size: 1.8rem !important; }
+    .day-number .num { font-size: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
+    <span class="meta-mini">Itinerary No. 03A · Cascais · <a href="./aug_11_europe.html" style="color: var(--cascais-terra); text-decoration: none;">compare 4 options ↗</a></span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<nav class="topnav">
+  <div class="container">
+    <div class="brand">August 11 → 17, 2026</div>
+    <div class="tabs">
+      <a href="#itinerary" class="tab">Itinerary</a>
+      <a href="#hotels" class="tab">Hotels</a>
+      <a href="#wine" class="tab">Wine</a>
+      <a href="#food" class="tab">Food</a>
+      <a href="#activities" class="tab">Activities</a>
+      <a href="#book" class="tab">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">Portugal · Atlantic Coast · 5 Hotel Nights</span>
+    <h1>Cascais &amp;<br>the <em>Guincho Coast.</em></h1>
+    <p class="lede">
+      A former royal seaside retreat 30 minutes from Lisbon, hemmed in by the wild beaches of Sintra-Cascais Natural Park. One of Europe's best wind &amp; kite coasts, multiple Michelin tables on the cliff, and a steady Atlantic breeze that keeps the heatwave inland. A single hotel for all five nights, a TAP nonstop into Lisbon, and zero compromises.
+    </p>
+    <div class="meta">
+      <div class="meta-item"><div class="label">Departure</div><div class="value">Tue, Aug 11</div></div>
+      <div class="meta-item"><div class="label">Return</div><div class="value">Mon, Aug 17</div></div>
+      <div class="meta-item"><div class="label">Travelers</div><div class="value">Two</div></div>
+      <div class="meta-item"><div class="label">Origin</div><div class="value">LAX</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="destination" id="itinerary">
+  <div class="container">
+
+    <div class="hero-card">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Option A · Portugal · Atlantic Coast</span>
+        <h2>Cascais &amp;<br>the Guincho Coast</h2>
+        <p class="tagline">A former royal seaside retreat hemmed in by Sintra-Cascais Natural Park, with one of Europe's elite wind/kite coasts, multiple Michelin tables on the cliff, and a steady Atlantic breeze that keeps the heatwave inland.</p>
+        <div class="stats">
+          <div class="stat"><div class="stat-value">79–82°F</div><div class="stat-label">August High</div></div>
+          <div class="stat"><div class="stat-value">High</div><div class="stat-label">Crowd Level</div></div>
+          <div class="stat"><div class="stat-value">Setúbal</div><div class="stat-label">Signature Wine</div></div>
+          <div class="stat"><div class="stat-value">35 min</div><div class="stat-label">LIS → Cascais</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flight Plan -->
+    <div class="section-header">
+      <span class="eyebrow">Getting There</span>
+      <h2>Flight Plan</h2>
+      <p>TAP runs a nonstop LAX → Lisbon. Take the daytime departure on Aug 11 — lands LIS at <strong>11:55 AM</strong> on Aug 12. Lunch in Cascais by 1:30, swim by 3.</p>
+    </div>
+    <div class="flight-box">
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">LAX</div><div class="city">Los Angeles · Tue Aug 11 · dep 4:50 PM</div></div>
+        <div class="flight-line"><div class="info">TAP TP224</div><div class="dash"></div><div class="info">11h 5m nonstop</div></div>
+        <div class="flight-airport"><div class="code">LIS</div><div class="city">Lisbon · Wed Aug 12 · arr 11:55 AM</div></div>
+      </div>
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">LIS</div><div class="city">Lisbon · pickup by hotel</div></div>
+        <div class="flight-line"><div class="info">Welcome Pickups transfer</div><div class="dash"></div><div class="info">~35 min, $50</div></div>
+        <div class="flight-airport"><div class="code">CSC</div><div class="city">Cascais · arr <strong>1:00 PM</strong> · check in lunch</div></div>
+      </div>
+      <div class="flight-meta">
+        <div class="item"><div class="label">Est. Round-trip</div><div class="val">$1,000–$1,400</div></div>
+        <div class="item"><div class="label">At hotel by</div><div class="val">1:30 PM</div></div>
+        <div class="item"><div class="label">Carrier</div><div class="val">TAP Air Portugal</div></div>
+      </div>
+    </div>
+
+    <!-- Only This Week -->
+    <div class="section-header">
+      <span class="eyebrow">Day by Day</span>
+      <h2>The Itinerary</h2>
+      <p>One base — Cascais — with everything reachable in under 45 minutes by car, train, or boat.</p>
+    </div>
+
+    <div class="only-this-week">
+      <div class="head">
+        <span class="eyebrow" style="color: var(--cascais-terra);">Only This Week</span>
+        <h3>Don't-Miss Events on Your Exact Dates</h3>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 700px; margin-left: auto; margin-right: auto;">Four experiences that only happen during the week you're there. Plan the itinerary around these.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">☄️</span>
+            <div>
+              <h4>Perseid Meteor Shower Peak</h4>
+              <div class="when">Night of <strong>Wed Aug 12 → Thu Aug 13</strong></div>
+            </div>
+          </div>
+          <p><strong>The best Perseid year of the decade.</strong> New moon on Aug 12 = moonless sky, 90+ meteors/hour at peak (1–4 AM local). Drive 30 min to <strong>Cabo da Roca</strong> — westernmost point of mainland Europe, dark-sky bluff over the Atlantic. Bring blankets, a thermos of bica, a bottle of Setúbal Moscatel. Plan to be back at hotel by 4 AM.</p>
+          <a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener" class="book-link">Viewing guide →</a>
+        </div>
+
+        <div class="event-card sea">
+          <div class="head">
+            <span class="icon">🎆</span>
+            <div>
+              <h4 class="sea">Assumption Day in Cascais</h4>
+              <div class="when"><strong>Sat Aug 15</strong> — Portuguese national holiday</div>
+            </div>
+          </div>
+          <p>Religious processions in the morning at Igreja da Assunção, then Cascais lights up for the night. <strong>10 PM fireworks</strong> over the bay from Marina de Cascais; harbor restaurants stay open late. Hotel concierges arrange terrace tables — request one for 8 PM with a view of the marina. Trains to Lisbon run late; don't plan a Lisbon dinner this night.</p>
+          <a href="https://visitcascais.com/en/event/dia-da-assuncao" target="_blank" rel="noopener" class="book-link">Event listing →</a>
+        </div>
+
+        <div class="event-card olive">
+          <div class="head">
+            <span class="icon">🎷</span>
+            <div>
+              <h4 class="olive">Festival de Sintra · summer concerts</h4>
+              <div class="when">Runs through your trip · weekend concerts</div>
+            </div>
+          </div>
+          <p>The chamber-music + jazz festival of the Sintra hills. Concerts in 18th-century palaces (Quinta da Regaleira ballroom, Palácio Nacional) and the Centro Cultural Olga Cadaval. 30 min drive or 35 min train from Cascais. Aim for the Sat Aug 15 evening concert if you want a refined alternative to the Cascais fireworks. Tickets €25–€60.</p>
+          <a href="https://www.festivaldesintra.pt/en/" target="_blank" rel="noopener" class="book-link">Program →</a>
+        </div>
+
+        <div class="event-card sand">
+          <div class="head">
+            <span class="icon">🎨</span>
+            <div>
+              <h4 class="sand">Cascais Marina nightly summer market</h4>
+              <div class="when"><strong>Every evening</strong> in your week, 7 PM–midnight</div>
+            </div>
+          </div>
+          <p>Largo Cidade de Vitória and the marina boardwalk fill with local makers, painters, ceramicists, and street musicians from 7 PM nightly through August. Built into your post-dinner walks — wander down from any hotel, watch the sun fall behind the marina, occasionally something is worth taking home. Free.</p>
+          <a href="https://visitcascais.com/en/whats-on" target="_blank" rel="noopener" class="book-link">What's on →</a>
+        </div>
+
+      </div>
+
+      <div class="bonus-callout">
+        <h4>🍇 Bonus — Setúbal Moscatel harvest (the ambitious add-on)</h4>
+        <p>The Setúbal Moscatel harvest is one of Portugal's oldest fortified-wine traditions, and August 13–16 is when the José Maria da Fonseca and Bacalhôa cellars open their doors for the early-harvest tour with rare Moscatel Roxo tastings. <strong>50 min drive south</strong> across the Tagus bridge. Doable as a long day trip — leave at 9 AM, return for the marina sunset. <a href="https://www.jmf.pt/en/casa-museu" target="_blank" rel="noopener">JMF visits →</a></p>
+      </div>
+    </div>
+
+    <!-- Day at a glance -->
+    <div class="glance-table">
+      <table>
+        <thead>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="daynum">1</td><td>Wed Aug 12</td><td>Arrival + Perseids ☄️</td><td>Pool, sunset apéro, meteor shower at Cabo da Roca</td><td>Mar do Inferno</td></tr>
+          <tr><td class="daynum">2</td><td>Thu Aug 13</td><td>Sintra palaces</td><td>Pena Palace 10 AM slot, Quinta da Regaleira</td><td>Maré · José Avillez</td></tr>
+          <tr><td class="daynum">3</td><td>Fri Aug 14</td><td>Wine day</td><td>Setúbal Moscatel · Bacalhôa reds</td><td><strong>Fortaleza do Guincho ★</strong></td></tr>
+          <tr><td class="daynum">4</td><td>Sat Aug 15</td><td>Assumption Day 🎆</td><td>Surf, pool, marina fireworks at 10 PM</td><td>Mariscos no Cais (early)</td></tr>
+          <tr><td class="daynum">5</td><td>Sun Aug 16</td><td>Lisbon day</td><td>Belém · Alfama · Time Out Market</td><td><strong>Belcanto ★★ (Avillez)</strong></td></tr>
+          <tr><td class="daynum">6</td><td>Mon Aug 17</td><td>Departure</td><td>Beach morning · transfer to LIS</td><td>On the plane</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="itinerary">
+
+      <div class="day">
+        <div class="day-number"><div class="num">01</div><div class="date">Wed Aug 12</div></div>
+        <div class="day-content">
+          <h3>Arrival + the Perseids</h3>
+          <ul>
+            <li><strong>11:55 AM</strong> Land LIS · pre-booked <a href="https://www.welcomepickups.com/lisbon/airport-transfer-to-cascais/" target="_blank" rel="noopener">Welcome Pickups</a> transfer ($50, 30 min)</li>
+            <li><strong>1:00 PM</strong> Check in. Bags up. Quick lunch on hotel terrace</li>
+            <li><strong>3:00 PM</strong> Beach time at Praia da Rainha or Praia da Conceição (Blue Flag, 67°F sea — brisk)</li>
+            <li><strong>7:00 PM</strong> Sundowner at Hotel Albatroz bar over the bay</li>
+            <li><strong>9:00 PM</strong> Light dinner at <a href="https://www.mardoinferno.pt/en" target="_blank" rel="noopener">Mar do Inferno</a> on the cliff next to Boca do Inferno</li>
+            <li><strong>11:30 PM</strong> Drive to <strong>Cabo da Roca</strong> for the Perseid peak · 30 min. Park near the lighthouse, walk to the dark south bluff. Watch 1–3 AM</li>
+            <li><strong>3:30 AM</strong> Back at hotel</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">02</div><div class="date">Thu Aug 13</div></div>
+        <div class="day-content">
+          <h3>Sintra palaces</h3>
+          <ul>
+            <li><strong>9:30 AM</strong> Uber to Sintra (30 min, $40) — beat the heat AND the bus crowds</li>
+            <li><strong>10:00 AM</strong> <strong><a href="https://www.parquesdesintra.pt/en/plan-your-visit/tickets-palace-of-pena/" target="_blank" rel="noopener">Pena Palace</a></strong> (pre-booked 10 AM timed slot, $16/pp) — Romantic-era extravagance</li>
+            <li><strong>12:30 PM</strong> Lunch in Sintra village — Tascantiga or Café Saudade</li>
+            <li><strong>2:00 PM</strong> <strong><a href="https://www.regaleira.pt/en" target="_blank" rel="noopener">Quinta da Regaleira</a></strong> — initiation well, grottoes, gothic gardens</li>
+            <li><strong>5:00 PM</strong> Back to Cascais; pool time</li>
+            <li><strong>8:30 PM</strong> <strong><a href="https://marejoseavillez.pt/en/" target="_blank" rel="noopener">Maré by José Avillez</a></strong> — terrace, raw bar, charcoal seafood (~$170/cpl)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">03</div><div class="date">Fri Aug 14</div></div>
+        <div class="day-content">
+          <h3>Setúbal wine country + Fortaleza ★</h3>
+          <ul>
+            <li><strong>9:30 AM</strong> Pre-arranged driver to Setúbal (50 min)</li>
+            <li><strong>10:30 AM</strong> <strong><a href="https://www.jmf.pt/en/casa-museu" target="_blank" rel="noopener">José Maria da Fonseca</a></strong> — Moscatel tasting in the historic Azeitão cellars (founded 1834)</li>
+            <li><strong>12:30 PM</strong> Lunch in Setúbal — grilled choco (cuttlefish) at Casa Santiago</li>
+            <li><strong>2:30 PM</strong> <strong><a href="https://www.bacalhoa.pt/" target="_blank" rel="noopener">Quinta da Bacalhôa</a></strong> — reds + azulejo museum</li>
+            <li><strong>5:00 PM</strong> Back to Cascais; rest, change for dinner</li>
+            <li><strong>8:30 PM</strong> <strong><a href="https://guide.michelin.com/en/lisboa-region/cascais/restaurant/fortaleza-do-guincho" target="_blank" rel="noopener">Fortaleza do Guincho ★</a></strong> — Memórias tasting menu, ~$540–$760/cpl with wine</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">04</div><div class="date">Sat Aug 15</div></div>
+        <div class="day-content">
+          <h3>Assumption Day · surf + fireworks</h3>
+          <ul>
+            <li><strong>Note:</strong> Aug 15 is Portuguese Assumption Day — banks, post offices, most shops closed. Restaurants and waterfront open. Plan around it; stay in Cascais this evening.</li>
+            <li><strong>10:00 AM</strong> <a href="https://www.surfcascais.com/" target="_blank" rel="noopener">Surf lesson at Carcavelos</a> with Surf Cascais ($35 pp, 2 hrs, beginner-perfect)</li>
+            <li><strong>1:00 PM</strong> Beachside lunch at a Carcavelos café</li>
+            <li><strong>3:00 PM</strong> Praia do Guincho — watch the wind/kite circus shred the Nortada</li>
+            <li><strong>6:30 PM</strong> Early dinner at <strong>Mariscos no Cais</strong> (harbor seafood, walk-in OK)</li>
+            <li><strong>9:00 PM</strong> Walk to Marina de Cascais for the <strong>10 PM fireworks</strong> over the bay. Stay for the band</li>
+            <li><strong>11:30 PM</strong> Drinks at Bar Bardot on the marina</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">05</div><div class="date">Sun Aug 16</div></div>
+        <div class="day-content">
+          <h3>Lisbon day · Belcanto ★★</h3>
+          <ul>
+            <li><strong>10:00 AM</strong> Train Cascais → Cais do Sodré (40 min, $3 RT)</li>
+            <li><strong>11:00 AM</strong> Belém — Jerónimos Monastery, MAAT museum, the original <a href="https://pasteisdebelem.pt/en/" target="_blank" rel="noopener">Pastéis de Belém</a></li>
+            <li><strong>1:30 PM</strong> Lunch at <a href="https://www.timeoutmarket.com/lisboa/en/" target="_blank" rel="noopener">Time Out Market</a> (Mercado da Ribeira)</li>
+            <li><strong>3:00 PM</strong> Alfama walk — Sé Cathedral, Miradouro de Santa Luzia, São Jorge Castle</li>
+            <li><strong>5:30 PM</strong> Drinks at Park Bar (Bairro Alto rooftop)</li>
+            <li><strong>8:00 PM</strong> <strong><a href="https://www.belcanto.pt/en/" target="_blank" rel="noopener">Belcanto ★★ (Avillez)</a></strong> in Chiado — Lisbon Menu or Merry-Go-Round (~$650–$865/cpl)</li>
+            <li><strong>11:30 PM</strong> Uber back to Cascais (~$55, 30 min)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">06</div><div class="date">Mon Aug 17</div></div>
+        <div class="day-content">
+          <h3>Departure</h3>
+          <ul>
+            <li><strong>9:00 AM</strong> Breakfast on the terrace</li>
+            <li><strong>10:30 AM</strong> Beach morning at Praia da Conceição · last swim</li>
+            <li><strong>12:30 PM</strong> Light lunch at the hotel</li>
+            <li><strong>2:00 PM</strong> Transfer to LIS (~$50, 30 min)</li>
+            <li><strong>4:55 PM</strong> Air France or TAP nonstop LIS → LAX</li>
+            <li><strong>9:00 PM same day</strong> Arrive LAX (gain 8 hours on the way back)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Hotels -->
+    <div class="section-header" id="hotels">
+      <span class="eyebrow">Where to Stay</span>
+      <h2>Six Hotels, One Decision</h2>
+      <p>Cascais is small — pick one and stay all five nights. Ranked top-down for romance, location, and fit to the $400–$1,000/night band in mid-August. All prices USD, peak August.</p>
+    </div>
+    <div class="hotels-grid">
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(30,90,122,0.4)), url('https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&q=80');">
+          <span class="hotel-tier">★ Top Pick</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Fortaleza do Guincho</h4>
+          <div class="loc">Relais &amp; Châteaux · Guincho cliff · 5.5 mi NW of town</div>
+          <p>17th-century fortress directly above Guincho beach. 27 rooms, intimate, dramatic Atlantic exposure. <strong>1★ Michelin restaurant on premises</strong> (Chef Gil Fernandes). Best if foodie + ocean drama matters more than walking to town.</p>
+          <div class="hotel-meta">
+            <span class="price">$490–$700 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.fortalezadoguincho.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(74,144,164,0.4)), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80');">
+          <span class="hotel-tier">Best value</span>
+        </div>
+        <div class="hotel-body">
+          <h4>The Albatroz</h4>
+          <div class="loc">Town center · cliff above Conceição beach</div>
+          <p>Pink 19th-century royal villa, 51 rooms, outdoor pool over the bay. Walkable to old town, restaurants, train station. <strong>Best if you want town buzz and ocean view from the same window.</strong></p>
+          <div class="hotel-meta">
+            <span class="price">$380–$560 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://thealbatroz-hotel-cascais.h-rez.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(138,143,90,0.4)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80');">
+          <span class="hotel-tier">Design-forward</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Farol Hotel</h4>
+          <div class="loc">Design Hotels · cliff edge · 10 min walk from town</div>
+          <p>33 rooms each by a different Portuguese designer. Bold, contemporary, infinity pool over the rocks, two restaurants including a strong sushi room. <strong>Best if you want edge over heritage.</strong></p>
+          <div class="hotel-meta">
+            <span class="price">$430–$650 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://farol.com.pt/en/about-us" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(90,74,122,0.3), rgba(193,100,74,0.4)), url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');">
+          <span class="hotel-tier">Adults only</span>
+        </div>
+        <div class="hotel-body">
+          <h4>The Oitavos</h4>
+          <div class="loc">Quinta da Marinha · between town &amp; Guincho · inside Natural Park</div>
+          <p>Modern minimalist by Champalimaud family. 142 rooms (40+ m² minimum), floor-to-ceiling windows over the Oitavos Dunes Golf Course out to the Atlantic. <strong>Two seawater pools, full spa, championship golf.</strong></p>
+          <div class="hotel-meta">
+            <span class="price">$510–$920 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://the-oitavos.cascais-hotels.com/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.25), rgba(74,144,164,0.4)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80');">
+          <span class="hotel-tier">Sea-view B&amp;B</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Villa Cascais Boutique Hotel</h4>
+          <div class="loc">Quiet lane · 5-min walk to port · garden + pool</div>
+          <p>Renovated 19th-century villa with 14 rooms, intimate garden pool, Portuguese breakfast on the terrace. <strong>The hideaway pick</strong> — lower-key but the walk to town is two minutes longer than Albatroz.</p>
+          <div class="hotel-meta">
+            <span class="price">$340–$520 / night</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.i-escape.com/villa-cascais-boutique-hotel" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(138,143,90,0.3), rgba(193,100,74,0.35)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80');">
+          <span class="hotel-tier">Splurge</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Penha Longa Resort</h4>
+          <div class="loc">Sintra-Cascais Natural Park · 20 min inland · Ritz-Carlton</div>
+          <p>Ritz-Carlton-run resort inside a 14th-century monastery estate. <strong>Two Michelin stars on property</strong> (Midori 1★ Japanese, LAB 1★). 27-hole championship golf, Natura Bissé spa, indoor + outdoor infinity pools. <strong>Trade-off:</strong> inland, you lose immediate-ocean.</p>
+          <div class="hotel-meta">
+            <span class="price">$650–$975 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.ritzcarlton.com/en/hotels/lisrz-penha-longa-resort/overview/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Wine -->
+    <div class="section-header" id="wine">
+      <span class="eyebrow">The Glass</span>
+      <h2>Two Regions, 50 Minutes Apart</h2>
+      <p>The fortified Moscatels of Setúbal and the cool-climate whites of Colares — both small, both serious, and both rarely poured outside Portugal. Most visits are by appointment; details below.</p>
+    </div>
+    <div class="wine-block whites">
+      <div class="wine-image"></div>
+      <div class="wine-text">
+        <span class="eyebrow">Setúbal AOC · the Moscatels</span>
+        <h3>Portugal's Oldest Fortified Wine</h3>
+        <p>The Setúbal peninsula has produced fortified Moscatel since at least the 16th century, but the AOC was codified in 1907. The <strong>Moscatel de Setúbal</strong> and the rarer red-skin <strong>Moscatel Roxo</strong> are aged in century-old oak — the 20-year and 40-year bottlings are world-class. 50 min south of Cascais across the Tagus bridge.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://www.jmf.pt/en/casa-museu" target="_blank" rel="noopener">José Maria da Fonseca ↗</a></div>
+            <div class="desc">Founded 1834, Azeitão. Vila Nogueira de Azeitão cellars. Mon–Sat tours 10–12 &amp; 2:30–5. Tasting +$10. +351 21 219 8940.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.bacalhoa.pt/" target="_blank" rel="noopener">Quinta da Bacalhôa ↗</a></div>
+            <div class="desc">15th-century manor + azulejo museum + cellars. Reds and Moscatels. Mon–Sat by appointment. +351 21 219 8060.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.google.com/search?q=Adega+Cooperativa+Palmela" target="_blank" rel="noopener">Adega Cooperativa de Palmela ↗</a></div>
+            <div class="desc">The local co-op — honest value, traditional Castelão reds. Walk-in welcome Sat mornings.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.casaermelinda.pt/" target="_blank" rel="noopener">Casa Ermelinda Freitas ↗</a></div>
+            <div class="desc">Fourth-generation winemaker Leonor Freitas. Modern facility outside Setúbal. By appointment.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wine-block reds" style="margin-top: 2rem;">
+      <div class="wine-image" style="order: 2;"></div>
+      <div class="wine-text" style="order: 1;">
+        <span class="eyebrow">Colares AOC · the survivors</span>
+        <h3>The Wine That Survived Phylloxera</h3>
+        <p>Portugal's smallest AOC — and possibly Europe's most extreme. <strong>Ramisco</strong> vines planted directly in Atlantic dune sand (which phylloxera couldn't penetrate), 15 minutes north of Cascais on the wild Sintra coast. Less than 20 hectares left in production. Reds and whites both age for decades. The bottles are difficult to find outside Portugal.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://www.adegaregionaldecolares.pt/" target="_blank" rel="noopener">Adega Regional de Colares ↗</a></div>
+            <div class="desc">The historic co-op — founded 1931, defended Colares from extinction. Tastings + cellar tour Tue–Sat. +351 21 929 1210.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.viuvagomes.com/" target="_blank" rel="noopener">Viúva Gomes ↗</a></div>
+            <div class="desc">Family producer continuing the dune-grown Ramisco tradition. Library going back to 1934. By appointment.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://casalsantamaria.com/" target="_blank" rel="noopener">Casal Santa Maria ↗</a></div>
+            <div class="desc">Estate on the Penedo cliff with sea-view tasting room. Reds, whites, and Bual aperitif. Daily 11–6.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.parato.com/" target="_blank" rel="noopener">Quinta de Parato ↗</a></div>
+            <div class="desc">Sub-region of Lisbon AOC, 30 min north. Modern bottlings of Castelão and Touriga. By appointment.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Food -->
+    <div class="section-header" id="food">
+      <span class="eyebrow">The Table</span>
+      <h2>Where You'll Eat</h2>
+      <p>Two Cascais Michelin stars, two more in Sintra at Penha Longa, and a 2★ in Lisbon for the gastronomic dinner. <strong>Reserve Belcanto + Kappo now</strong> — they book out 6–8 weeks ahead.</p>
+    </div>
+    <div class="hotels-grid">
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.4), rgba(90,74,122,0.5)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
+          <span class="hotel-tier">★★ Michelin</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Belcanto</h4>
+          <div class="loc">Lisbon Chiado · 35 min by train · Avillez</div>
+          <p>Portugal's most-coveted table — Chef <strong>José Avillez's</strong> two-star room in a converted 1830s building. Two tasting menus: <strong>Lisbon Menu $180</strong> and <strong>Merry-Go-Round Menu $200</strong>. Wine pairings $90/$130. Estimate <strong>$650–$865/cpl</strong>. Closed Sun + Mon.</p>
+          <div class="hotel-meta">
+            <span class="price">$180–$250 / person</span>
+            <span>★★ Michelin</span>
+          </div>
+          <a href="https://www.belcanto.pt/en/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(74,144,164,0.45)), url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80');">
+          <span class="hotel-tier">★ Michelin</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Fortaleza do Guincho</h4>
+          <div class="loc">Inside the fortress hotel · Chef Gil Fernandes</div>
+          <p>1★ since 2001. Modern Portuguese with maritime focus, inside the 17th-century fortress on Guincho cliff. Two tasting menus: <strong>Memórias $155</strong> and <strong>Experiência $205</strong>. Wine pairings additional. Open <strong>Wed–Sat dinner only</strong>, 7–9:30 PM.</p>
+          <div class="hotel-meta">
+            <span class="price">$155–$205 / person</span>
+            <span>★ Michelin</span>
+          </div>
+          <a href="https://guide.michelin.com/en/lisboa-region/cascais/restaurant/fortaleza-do-guincho" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(138,143,90,0.45)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80');">
+          <span class="hotel-tier">★ Michelin (new 2026)</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Kappo</h4>
+          <div class="loc">Cascais · 12-seat omakase · Chef Tiago Penão</div>
+          <p>The 2026 Michelin star — Cascais's first new standalone star in years. <strong>12 seats only</strong>, 9-course omakase $145 pp (~$380–$490/cpl with sake/wine pairings). Penão previously held a star at Midori. <strong>Book 6–8 weeks ahead</strong>; the hardest reservation in town this summer.</p>
+          <div class="hotel-meta">
+            <span class="price">$145 / person</span>
+            <span>★ Michelin</span>
+          </div>
+          <a href="https://kappo.pt/en/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(74,144,164,0.4)), url('https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80');">
+          <span class="hotel-tier">Harbor seafood</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Maré by José Avillez</h4>
+          <div class="loc">Between Cascais and Guincho · terrace over the sea</div>
+          <p>Portugal's most decorated chef does informal seafood on a sea-view terrace. Raw bar (marinated meagre, scarlet shrimp), royal seafood platter, charcoal-grilled sea bass, garlic octopus over embers. Lunch on the terrace is the romantic move.</p>
+          <div class="hotel-meta">
+            <span class="price">$60–$100 / person</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://marejoseavillez.pt/en/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(90,74,122,0.45)), url('https://images.unsplash.com/photo-1481833761820-0509d3217039?w=600&q=80');">
+          <span class="hotel-tier">Cliff classic</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Mar do Inferno</h4>
+          <div class="loc">Cliff next to Boca do Inferno · classic Portuguese seafood</div>
+          <p>Av. Rei Humberto II, beside the famous "Hell's Mouth" cliffs. Generous platters of fresh fish, lobster, prawns, mussels. Panoramic ocean views, professional service, no fuss. Best with a bottle of Colares white.</p>
+          <div class="hotel-meta">
+            <span class="price">$50–$80 / person</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.mardoinferno.pt/en" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(138,143,90,0.3), rgba(193,100,74,0.45)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
+          <span class="hotel-tier">Trailhead lunch</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Furnas do Guincho</h4>
+          <div class="loc">Ocean rocks at Guincho · lobster crêpes</div>
+          <p>Perched on rocks at Guincho beach — ideal outdoor lunch after a beach morning. Signature lobster crêpes and tableside flambé fish. Generous Portuguese seafood done well. Big white-wine list of Cascais Tejo and Setúbal whites.</p>
+          <div class="hotel-meta">
+            <span class="price">$45–$70 / person</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://furnasdoguincho.pt/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Activities -->
+    <div class="section-header" id="activities">
+      <span class="eyebrow">Unique Experiences</span>
+      <h2>Things You Won't Do Anywhere Else</h2>
+      <p>Anyone can rent a beach umbrella. Here are the 16 that turn a good week into the one you'll talk about.</p>
+    </div>
+    <div class="activities">
+      <div class="activity"><span class="icon">🪁</span><h4><a href="https://kitesurfingportugal.com/kitesurfing-cascais-portugal/" target="_blank" rel="noopener">Kitesurf at Guincho ↗</a></h4><p>Peak Nortada 20–40 knots in Aug. Intermediate+ only. Private lesson $100–$140/hr.</p></div>
+      <div class="activity"><span class="icon">🏄</span><h4><a href="https://cascais-windsurf.com/" target="_blank" rel="noopener">Windsurf Center ↗</a></h4><p>Cascais Windsurf Center on Guincho. Hosted World Championships. Lessons $65–$90/hr.</p></div>
+      <div class="activity"><span class="icon">🌊</span><h4><a href="https://www.surfcascais.com/" target="_blank" rel="noopener">Surf Cascais ↗</a></h4><p>Beginner lessons at Carcavelos (protected, consistent). 2hr group lesson with kit. $30–$40 pp.</p></div>
+      <div class="activity"><span class="icon">⛵</span><h4><a href="https://www.samboat.com/boat-rental/cascais-e-estoril-portugal" target="_blank" rel="noopener">Private sunset sail ↗</a></h4><p>3-hr catamaran from Marina de Cascais. Wine on deck to Cabo da Roca. $490–$650/cpl.</p></div>
+      <div class="activity"><span class="icon">🚣</span><h4><a href="https://www.google.com/search?q=SUP+rental+Cascais+Marina" target="_blank" rel="noopener">SUP &amp; kayak ↗</a></h4><p>Cascais Marina rentals. Best mornings before the Nortada builds. $16–$27/hr.</p></div>
+      <div class="activity"><span class="icon">🤿</span><h4><a href="https://www.haliotis.pt/" target="_blank" rel="noopener">Diving Cascais ↗</a></h4><p>Haliotis &amp; Diving Center Cascais — shore + boat dives off the coast. $60–$100/dive.</p></div>
+      <div class="activity"><span class="icon">🏝️</span><h4><a href="https://www.getyourguide.com/lisbon-l42/berlengas-the-atlantic-frontier-full-day-tour-t53016/" target="_blank" rel="noopener">Berlengas day trip ↗</a></h4><p>UNESCO biosphere reserve · departs Peniche (1hr drive). Snorkel + cave tour. $110–$215 pp.</p></div>
+      <div class="activity"><span class="icon">🌅</span><h4><a href="https://www.cascais-portugal.com/Attractions/Cabo-da-Roca.html" target="_blank" rel="noopener">Cabo da Roca ↗</a></h4><p>Westernmost point of mainland Europe. Free. Bring layers — 10–18°F cooler. Sunset spot.</p></div>
+      <div class="activity"><span class="icon">🏰</span><h4><a href="https://www.parquesdesintra.pt/en/plan-your-visit/tickets-palace-of-pena/" target="_blank" rel="noopener">Pena Palace ↗</a></h4><p>Sintra · Romantic-era extravagance. Pre-book 10 AM timed slot. $16/pp.</p></div>
+      <div class="activity"><span class="icon">🌳</span><h4><a href="https://www.regaleira.pt/en" target="_blank" rel="noopener">Quinta da Regaleira ↗</a></h4><p>Sintra · initiation well, grottoes, gothic gardens. Skip-the-queue ticket $14.</p></div>
+      <div class="activity"><span class="icon">🍇</span><h4><a href="https://www.jmf.pt/en/casa-museu" target="_blank" rel="noopener">JMF cellars Azeitão ↗</a></h4><p>Setúbal Moscatel since 1834. Mon–Sat 10–5. Tasting + cellar tour $20.</p></div>
+      <div class="activity"><span class="icon">🍷</span><h4><a href="https://www.adegaregionaldecolares.pt/" target="_blank" rel="noopener">Adega de Colares ↗</a></h4><p>Sand-grown Ramisco · the wine phylloxera couldn't kill. By appointment Tue–Sat.</p></div>
+      <div class="activity"><span class="icon">🐚</span><h4><a href="https://www.thalassovitalis.com/" target="_blank" rel="noopener">Thalasso Vitalis ↗</a></h4><p>Seawater spa at the Cascais marina · 2h thermal circuit $46–$51. Add couples massage.</p></div>
+      <div class="activity"><span class="icon">🚲</span><h4><a href="https://www.google.com/search?q=ebike+rental+Cascais+Cabo+da+Roca" target="_blank" rel="noopener">E-bike Cabo da Roca ↗</a></h4><p>Coastal greenway from Cascais to Cabo da Roca (12 mi each way). Self-guided e-bike day.</p></div>
+      <div class="activity"><span class="icon">🎷</span><h4><a href="https://www.festivaldesintra.pt/en/" target="_blank" rel="noopener">Festival de Sintra ↗</a></h4><p>Chamber music in palace ballrooms. Aug weekend concerts overlap your trip. €25–60.</p></div>
+      <div class="activity"><span class="icon">🥐</span><h4><a href="https://pasteisdebelem.pt/en/" target="_blank" rel="noopener">Pastéis de Belém ↗</a></h4><p>Lisbon · the original since 1837. 6 to-go from the counter, no queue, eat on the lawn.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Booking + Budget -->
+<section class="booking" id="book">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Pre-Trip Punch List</span>
+      <h2>Book These Now</h2>
+      <p>Listed in priority order. Items 1–4 sell out 60+ days ahead in August. Today is your trigger.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="stepnum">1</div>
+        <div>
+          <h4>Flight — TAP TP224, Aug 11 4:50 PM LAX → LIS (nonstop)</h4>
+          <p>Book on flytap.com or via Chase/Amex travel portal. Premium Economy adds ~$700 each but the bigger seat is worth the 11-hour eastbound. Round-trip target: <strong>$1,000–$1,400</strong>.</p>
+          <div class="meta-line">→ <a href="https://www.flytap.com/en_us/flights-from-los-angeles-to-lisbon" target="_blank" rel="noopener">flytap.com</a> · share confirmation # with hotel concierge for transfer</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">2</div>
+        <div>
+          <h4>Hotel — Fortaleza do Guincho (or your alternate from the six)</h4>
+          <p>Aug 12 → Aug 17 (5 nights). Sea-view room. Request airport transfer at booking. <strong>Mid-August is their fully-booked week</strong> — call directly rather than booking through a third party for better room assignment.</p>
+          <div class="meta-line">→ <a href="https://www.fortalezadoguincho.com/" target="_blank" rel="noopener">fortalezadoguincho.com</a> · +351 21 487 0491</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">3</div>
+        <div>
+          <h4>Belcanto ★★ — pick a night, lock it in</h4>
+          <p>Recommend dinner on Day 5 (Sunday Aug 16) — pairs with the Lisbon day. Tasting menu only. <strong>Book directly with the restaurant 60+ days ahead</strong> — third-party platforms have limited inventory.</p>
+          <div class="meta-line">→ <a href="https://www.belcanto.pt/en/" target="_blank" rel="noopener">belcanto.pt</a> · +351 21 342 0607</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">4</div>
+        <div>
+          <h4>Kappo ★ — the hardest table in Cascais</h4>
+          <p>12 seats, new 2026 star. Book any night except Sun/Mon — try Thu Aug 13 to bookend Fortaleza on Friday. <strong>Book 8 weeks ahead.</strong></p>
+          <div class="meta-line">→ <a href="https://kappo.pt/en/" target="_blank" rel="noopener">kappo.pt</a> · @kappo.cascais</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">5</div>
+        <div>
+          <h4>Setúbal wine day — 4 calls to make</h4>
+          <p>
+            <strong>José Maria da Fonseca</strong> (+351 21 219 8940, Mon–Sat 10–5) — request Friday Aug 14 morning.<br>
+            <strong>Quinta da Bacalhôa</strong> (+351 21 219 8060) — same day, afternoon.<br>
+            <strong>Adega de Colares</strong> (+351 21 929 1210) — Sat Aug 15 if not doing Setúbal.<br>
+            <strong>Viúva Gomes</strong> (Colares) — walk-in welcome.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">6</div>
+        <div>
+          <h4>Rental car — pick up LIS, drop LIS</h4>
+          <p>Compact automatic. Sixt or Europcar at Lisbon airport. <strong>~$400 for 5 days</strong>. Note: manuals are $100 cheaper if you can drive stick — most cars in Portugal are manual. You can do this trip without a car (trains + Ubers) but Setúbal and Cabo da Roca are much easier with wheels.</p>
+          <div class="meta-line">→ <a href="https://www.sixt.com/" target="_blank" rel="noopener">sixt.com</a> · <a href="https://www.europcar.com/" target="_blank" rel="noopener">europcar.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">7</div>
+        <div>
+          <h4>Sintra timed-entry tickets</h4>
+          <p>Pena Palace 10 AM slot ($16), Quinta da Regaleira ($14). Both sell out in August by mid-morning. Book 21 days ahead.</p>
+          <div class="meta-line">→ <a href="https://www.parquesdesintra.pt/en/plan-your-visit/tickets-palace-of-pena/" target="_blank" rel="noopener">Pena Palace</a> · <a href="https://www.regaleira.pt/en" target="_blank" rel="noopener">Regaleira</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">8</div>
+        <div>
+          <h4>Other dinner reservations</h4>
+          <p>Reserve <strong>Maré</strong> (Thu Aug 13), <strong>Mar do Inferno</strong> (any night), and <strong>Furnas do Guincho</strong> (lunch). All take direct reservations by phone or through their websites. 30 days ahead is enough for these.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Budget tier -->
+    <div class="budget-table">
+      <div class="head">
+        <span class="eyebrow">Three Ways to Do It</span>
+        <h3>Budget by Tier</h3>
+        <p>Same trip, three spending levels. ✓ = included in that tier. Standard is the recommended plan with Fortaleza do Guincho + Belcanto ★★ + Kappo ★.</p>
+      </div>
+
+      <div style="overflow-x: auto;">
+      <table>
+        <thead>
+          <tr>
+            <th class="item">Item</th>
+            <th class="tier">Budget</th>
+            <th class="tier standard">Standard ★</th>
+            <th class="tier">Splurge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="item">✈️ Flights · Economy</td>
+            <td class="tier">✓ $2,200</td>
+            <td class="standard">✓ $2,200</td>
+            <td class="tier dim">—</td>
+          </tr>
+          <tr>
+            <td class="item">✈️ Flights · Premium Economy</td>
+            <td class="tier dim">—</td>
+            <td class="standard dim">—</td>
+            <td class="tier">✓ $3,600</td>
+          </tr>
+          <tr>
+            <td class="item">🏨 The Albatroz · 5 nights</td>
+            <td class="tier">✓ $2,100</td>
+            <td class="standard dim">—</td>
+            <td class="tier dim">—</td>
+          </tr>
+          <tr>
+            <td class="item">🏨 Fortaleza do Guincho · 5 nights</td>
+            <td class="tier dim">—</td>
+            <td class="standard std-mark">✓ $2,950</td>
+            <td class="tier dim">—</td>
+          </tr>
+          <tr>
+            <td class="item">🏨 Penha Longa Resort · 5 nights</td>
+            <td class="tier dim">—</td>
+            <td class="standard dim">—</td>
+            <td class="tier">✓ $4,200</td>
+          </tr>
+          <tr>
+            <td class="item">🚗 Car rental + fuel · 5 days</td>
+            <td class="tier">✓ $450</td>
+            <td class="standard">✓ $450</td>
+            <td class="tier">✓ $600</td>
+          </tr>
+          <tr>
+            <td class="item">⛵ Public boat to Cascais Bay</td>
+            <td class="tier">✓ $80</td>
+            <td class="standard dim">—</td>
+            <td class="tier dim">—</td>
+          </tr>
+          <tr>
+            <td class="item">⛵ Private sunset catamaran · 3h</td>
+            <td class="tier dim">—</td>
+            <td class="standard">✓ $590</td>
+            <td class="tier">✓ $900</td>
+          </tr>
+          <tr>
+            <td class="item">🪁 Private kite or windsurf lesson</td>
+            <td class="tier dim">—</td>
+            <td class="standard">✓ $260</td>
+            <td class="tier">✓ $400</td>
+          </tr>
+          <tr>
+            <td class="item">⭐ Belcanto ★★ (Lisbon, Avillez)</td>
+            <td class="tier dim">—</td>
+            <td class="standard std-mark">✓ $865</td>
+            <td class="tier">✓ $1,050</td>
+          </tr>
+          <tr>
+            <td class="item">⭐ Fortaleza do Guincho ★</td>
+            <td class="tier dim">—</td>
+            <td class="standard">✓ $620</td>
+            <td class="tier">✓ $760</td>
+          </tr>
+          <tr>
+            <td class="item">⭐ Kappo ★ (omakase, new 2026)</td>
+            <td class="tier dim">—</td>
+            <td class="standard dim">—</td>
+            <td class="tier">✓ $440</td>
+          </tr>
+          <tr>
+            <td class="item">🍽️ Other dinners · 3 nights</td>
+            <td class="tier">✓ $400</td>
+            <td class="standard">✓ $750</td>
+            <td class="tier">✓ $1,200</td>
+          </tr>
+          <tr>
+            <td class="item">🥖 Lunches · 5 days</td>
+            <td class="tier">✓ $250</td>
+            <td class="standard">✓ $500</td>
+            <td class="tier">✓ $800</td>
+          </tr>
+          <tr>
+            <td class="item">🥐 Breakfasts out</td>
+            <td class="tier dim">—</td>
+            <td class="standard">✓ $100</td>
+            <td class="tier">✓ $350</td>
+          </tr>
+          <tr>
+            <td class="item">🍷 Wineries · 4 tastings</td>
+            <td class="item">✓ $200</td>
+            <td class="standard">✓ $250</td>
+            <td class="tier">✓ $400</td>
+          </tr>
+          <tr>
+            <td class="item">🧖 Seawater spa + couples massage</td>
+            <td class="tier dim">—</td>
+            <td class="standard">✓ $220</td>
+            <td class="tier">✓ $450</td>
+          </tr>
+          <tr>
+            <td class="item">🏰 Sintra timed tickets · two palaces</td>
+            <td class="tier">✓ $60</td>
+            <td class="standard">✓ $60</td>
+            <td class="tier">✓ $60</td>
+          </tr>
+          <tr>
+            <td class="item">🚲 E-bike Cabo da Roca</td>
+            <td class="tier dim">—</td>
+            <td class="standard dim">—</td>
+            <td class="tier">✓ $120</td>
+          </tr>
+          <tr>
+            <td class="item" style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">🎆 Free · Aug 15 fireworks · ☄️ Perseids · 🎨 Marina market · 🥾 Coast walks</td>
+            <td class="tier" style="color: rgba(255,255,255,0.5);">included</td>
+            <td class="standard" style="color: rgba(255,255,255,0.5);">included</td>
+            <td class="tier" style="color: rgba(255,255,255,0.5);">included</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="total-label">Total · all in</td>
+            <td class="tier">$5,740</td>
+            <td class="standard">$9,815</td>
+            <td class="tier">$15,330</td>
+          </tr>
+        </tfoot>
+      </table>
+      </div>
+
+      <p class="footnote">
+        All figures USD, for two travelers. Hotel rates assume mid-August peak. Boat / spa / class prices quoted from operators' published rates. Move items between tiers freely — the framework is the design, not the prescription. EUR converted at ~1.08 / USD.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Built for Mark · August 11–17, 2026 · LAX origin · Prices in USD, subject to live booking</p>
+  </div>
+</footer>
+
+</body>
+</html>

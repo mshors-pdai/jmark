@@ -183,6 +183,42 @@ Wrap any table > 4 columns in `overflow-x: auto` and set `min-width: 540px` on t
 
 ---
 
+## Decision hub pattern (multi-option trips)
+
+When a trip has multiple candidate destinations under active deliberation (3–4 options), build a **hub page** that side-by-sides them. Pattern documented in `trip/aug_11_europe.html`.
+
+### File layout
+- Hub lives at `trip/<mon3>_<dd>_<region>.html` (e.g. `aug_11_europe.html`)
+- Each individual option lives at `trip/<mon3>_<dd>_<destination>.html` (e.g. `aug_11_cascais.html`)
+- Each individual option's back-bar `meta-mini` shows `Itinerary No. NNX · Destination · compare N options ↗` linking back to the hub
+
+### Required sections (in order)
+1. **Back-bar** with `← All trips` and brand-mini (as on any trip page)
+2. **Sticky topnav** with tabs: `Options · Compare · Pros & Cons · Budgets · Verdict`
+3. **Intro hero** with 4 meta items: Departure / Return / Travelers / Origin
+4. **`.opts-grid` (2×2)** — one `.opt-card` per option, each linked to its full page. Cards show: image with destination palette overlay + tier badge + h3 + location + paragraph + 3-stat row (Aug high, Michelin, Standard tier $) + CTA arrow.
+5. **`.compare-table`** — side-by-side comparison with destination-colored column headers. Rows: climate (high, sea, heatwave risk), flight (route, RT cost), Michelin, water sports, hotel band, single-base?, dated events, crowd level, Standard tier total.
+6. **`.pros-cons-grid` (2×2)** — `.pc-card` per option with top border in destination color, Pros (✓ green) + Cons (− brown) lists, "Full plan →" footer link.
+7. **`.budget-block`** (dark) — 3-row table (Budget / Standard ★ / Splurge) × 4 destination columns. Δ-vs-baseline row in the tfoot.
+8. **`.framework`** — 4-card "If/Then" grid (one per option) + `.verdict-block` with the recommendation paragraph.
+9. **Footer** standard signature.
+
+### Palette in a hub
+Hub uses **all four destinations' accent colors** simultaneously. Pull each destination's `--<dest>-deep` and `--<dest>-accent` into `:root` and use them as:
+- topnav tab border + hover background per destination
+- option card image gradient overlay
+- pros-cons card top border + h3
+- comparison-table column header background
+- budget-block column header background tint
+- if-then card left border + h4 + pick line
+
+The hub itself doesn't have a single dominant accent — it's a neutral comparison surface. By convention, `--cascais-terra` is used for the hub's own h1 `<em>` accent and back-bar hover.
+
+### Voice in a hub
+**Brutally honest pros and cons.** No marketing. Every Pro has a verifiable basis (a real number, a real distance, a real Michelin star, a real flight time). Every Con names a real trade-off (cost delta, packing burden, weather risk, restaurant lock-in). End with a single-paragraph verdict that picks a default + names the conditions under which to deviate.
+
+---
+
 ## Index page conventions
 
 Maintained at `/index.html`. Pattern:

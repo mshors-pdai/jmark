@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>August 2026 — San Sebastián &amp; the Basque Coast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --basque-olive: #7d8b5c;
+    --basque-deep: #5a6740;
+    --basque-sea: #1e5a7a;
+    --basque-sea-deep: #133e54;
+    --basque-terra: #c1644a;
+    --basque-sand: #d4a373;
+    --basque-cream: #faf4e8;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.6; background: #fafaf7; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
+  h3 { font-size: 1.6rem; line-height: 1.25; }
+  h4 { font-size: 1.15rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; }
+  a { color: inherit; }
+
+  /* ===== Back-to-index bar (shared component) ===== */
+  .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+  .back-bar a.back-link:hover { color: var(--basque-olive); }
+  .back-bar a.back-link .arrow { display: inline-block; transition: transform 0.2s; }
+  .back-bar a.back-link:hover .arrow { transform: translateX(-3px); }
+  .back-bar .brand-mini { font-family: 'Playfair Display', serif; font-size: 0.92rem; color: rgba(255,255,255,0.7); letter-spacing: -0.02em; text-decoration: none; }
+  .back-bar .brand-mini:hover { color: white; }
+  .back-bar .brand-mini .dot { color: var(--basque-olive); }
+  .back-bar .meta-mini { display: none; font-size: 0.74rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
+  @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
+
+  .topnav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 1rem 0; }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; }
+  .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
+  .topnav .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .topnav .tab { padding: 0.5rem 1.25rem; border-radius: 999px; text-decoration: none; color: var(--basque-deep); font-size: 0.9rem; font-weight: 500; transition: all 0.2s; border: 1px solid var(--basque-olive); }
+  .topnav .tab:hover { background: var(--basque-olive); color: white; }
+
+  .intro-hero { padding: 6rem 0 4rem; text-align: center; background: linear-gradient(180deg, var(--basque-cream) 0%, #fafaf7 100%); }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--basque-terra); }
+  .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
+  .intro-hero h1 em { font-style: italic; color: var(--basque-olive); font-weight: 400; }
+  .intro-hero .lede { max-width: 720px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
+  .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+
+  .destination { padding: 6rem 0 4rem; background: var(--basque-cream); }
+  .hero-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.12); margin-bottom: 4rem; }
+  .hero-card .hero-image { min-height: 500px; background-size: cover; background-position: center; position: relative;
+    background-image: linear-gradient(135deg, rgba(125,139,92,0.30), rgba(30,90,122,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Donostia_-_San_Sebastian_-_panoramio_%2810%29.jpg/1280px-Donostia_-_San_Sebastian_-_panoramio_%2810%29.jpg');
+    background-color: var(--basque-olive); }
+  .hero-card .hero-content { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; background: white; }
+  .hero-card .eyebrow { margin-bottom: 1.25rem; color: var(--basque-terra); }
+  .hero-card h2 { margin-bottom: 1.5rem; color: var(--basque-deep); }
+  .hero-card .tagline { font-size: 1.15rem; color: var(--muted); margin-bottom: 2rem; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .stat .stat-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.1; margin-bottom: 0.2rem; color: var(--basque-deep); }
+  .stat .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 700px; }
+  .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--basque-terra); }
+  .section-header h2 { margin-bottom: 1rem; color: var(--basque-deep); }
+  .section-header p { color: var(--muted); font-size: 1.05rem; }
+
+  .flight-box { background: white; border-radius: 16px; padding: 2.5rem; max-width: 920px; margin: 2rem auto 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .flight-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+  .flight-row:last-of-type { border-bottom: none; }
+  .flight-airport .code { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1; font-weight: 700; color: var(--basque-sea-deep); }
+  .flight-airport .city { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; }
+  .flight-line { text-align: center; color: var(--muted); }
+  .flight-line .dash { height: 1px; background: var(--line); position: relative; margin: 0.5rem 0; }
+  .flight-line .dash::after { content: '⟶'; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: white; padding: 0 0.5rem; color: var(--basque-terra); }
+  .flight-line .info { font-size: 0.8rem; }
+  .flight-meta { display: flex; gap: 2rem; justify-content: center; padding-top: 1.5rem; margin-top: 1rem; border-top: 2px solid var(--line); }
+  .flight-meta .item { text-align: center; }
+  .flight-meta .item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 0.3rem; }
+  .flight-meta .item .val { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--basque-deep); }
+
+  .only-this-week { max-width: 1100px; margin: 0 auto 4rem; padding: 3rem; background: linear-gradient(135deg, #faf4e8, #f1eddf); border-radius: 24px; }
+  .only-this-week .head { text-align: center; margin-bottom: 2.5rem; }
+  .only-this-week h3 { color: var(--basque-deep); font-size: 2rem; margin-top: 0.5rem; }
+  .only-this-week .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .event-card { background: white; border-radius: 16px; padding: 2rem; border-left: 4px solid var(--basque-olive); }
+  .event-card.terra { border-left-color: var(--basque-terra); }
+  .event-card.sea { border-left-color: var(--basque-sea); }
+  .event-card.sand { border-left-color: var(--basque-sand); }
+  .event-card .head { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .event-card .icon { font-size: 2.2rem; }
+  .event-card h4 { margin: 0; color: var(--basque-deep); }
+  .event-card h4.terra { color: var(--basque-terra); }
+  .event-card h4.sea { color: var(--basque-sea-deep); }
+  .event-card h4.sand { color: var(--basque-sand); }
+  .event-card .when { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
+  .event-card p { font-size: 0.95rem; color: #333; margin-bottom: 1rem; }
+  .event-card .book-link { display: inline-block; padding: 0.4rem 0.9rem; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--basque-terra); border: 1.5px solid var(--basque-terra); }
+  .event-card .book-link:hover { background: var(--basque-terra); color: white; }
+  .bonus-callout { margin-top: 2rem; padding: 1.5rem 2rem; background: rgba(125,139,92,0.08); border-radius: 12px; border-left: 4px solid var(--basque-olive); }
+  .bonus-callout h4 { margin-bottom: 0.5rem; color: var(--basque-deep); }
+  .bonus-callout p { font-size: 0.95rem; color: #333; margin: 0; }
+  .bonus-callout a { color: var(--basque-olive); font-weight: 600; }
+
+  .glance-table { max-width: 1000px; margin: 0 auto 4rem; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .glance-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .glance-table th { background: var(--basque-deep); color: white; padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600; }
+  .glance-table td { padding: 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .glance-table tr:last-child td { border-bottom: none; }
+  .glance-table tr:nth-child(even) td { background: rgba(125,139,92,0.05); }
+  .glance-table td.daynum { font-weight: 600; color: var(--basque-terra); }
+
+  .itinerary { max-width: 950px; margin: 0 auto; }
+  .day { display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
+  .day:last-child { border-bottom: none; }
+  .day-number .num { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1; font-weight: 600; font-style: italic; color: var(--basque-terra); }
+  .day-number .date { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .day-content h3 { margin-bottom: 0.75rem; color: var(--basque-deep); }
+  .day-content ul { list-style: none; }
+  .day-content ul li { padding: 0.45rem 0 0.45rem 1.5rem; position: relative; color: #333; }
+  .day-content ul li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 6px; height: 6px; border-radius: 50%; background: var(--basque-terra); }
+  .day-content ul li strong { color: var(--basque-deep); }
+  .day-content ul li a { color: var(--basque-terra); text-decoration: none; border-bottom: 1px dotted; }
+
+  .hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .hotel-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+  .hotel-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .hotel-card .hotel-image { height: 200px; background-size: cover; background-position: center; position: relative; background-color: var(--basque-olive); }
+  .hotel-card .hotel-tier { position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.95); padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: var(--basque-deep); z-index: 2; }
+  .hotel-card .hotel-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .hotel-card .hotel-body h4 { margin-bottom: 0.25rem; color: var(--basque-deep); }
+  .hotel-card .hotel-body .loc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+  .hotel-card .hotel-body p { font-size: 0.93rem; color: #333; margin-bottom: 1rem; line-height: 1.55; }
+  .hotel-card .hotel-meta { display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.85rem; margin-top: auto; }
+  .hotel-card .hotel-meta .price { font-weight: 600; color: var(--basque-deep); }
+  .hotel-card .book-link { display: inline-block; padding: 0.35rem 0.85rem; font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--basque-terra); border: 1.5px solid var(--basque-terra); align-self: flex-start; margin-top: 0.5rem; }
+  .hotel-card .book-link:hover { background: var(--basque-terra); color: white; }
+
+  .wine-block { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; max-width: 1100px; margin: 0 auto 2rem; background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.06); align-items: center; }
+  .wine-block .wine-image { min-height: 360px; background-size: cover; background-position: center; background-color: var(--basque-sand); }
+  .wine-block.txakoli .wine-image { background-image: linear-gradient(135deg, rgba(125,139,92,0.3), rgba(30,90,122,0.40)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80'); }
+  .wine-block.rioja .wine-image { background-image: linear-gradient(135deg, rgba(193,100,74,0.25), rgba(142,69,48,0.40)), url('https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80'); }
+  .wine-block .wine-text { padding: 3rem 2.5rem 3rem 0; }
+  .wine-block .eyebrow { color: var(--basque-terra); }
+  .wine-block h3 { color: var(--basque-deep); margin-bottom: 1rem; }
+  .wine-block p { color: #333; font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .winery-list .winery { padding: 0.85rem 0; border-bottom: 1px dashed var(--line); }
+  .winery-list .winery:last-child { border-bottom: none; }
+  .winery-list .name { font-weight: 600; color: var(--basque-deep); margin-bottom: 0.2rem; }
+  .winery-list .name a { color: var(--basque-terra); text-decoration: none; }
+  .winery-list .desc { font-size: 0.88rem; color: var(--muted); }
+
+  .activities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1100px; margin: 0 auto; }
+  .activity { background: white; border-radius: 12px; padding: 1.75rem 1.25rem; text-align: center; transition: transform 0.2s; border: 1px solid var(--line); }
+  .activity:hover { transform: translateY(-2px); }
+  .activity .icon { font-size: 2.2rem; margin-bottom: 0.85rem; display: block; }
+  .activity h4 { margin-bottom: 0.5rem; font-size: 1rem; color: var(--basque-deep); }
+  .activity h4 a { color: inherit; text-decoration: none; }
+  .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+  .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
+  .booking .section-header h2 { color: white; }
+  .booking .section-header p { color: rgba(255,255,255,0.7); }
+  .booking .section-header .eyebrow { color: rgba(255,255,255,0.7); }
+  .steps { max-width: 850px; margin: 0 auto; }
+  .step { display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .step:last-child { border-bottom: none; }
+  .step .stepnum { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--basque-terra); font-style: italic; }
+  .step h4 { color: white; margin-bottom: 0.5rem; }
+  .step p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem; }
+  .step p strong { color: white; }
+  .step .meta-line { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+  .step .meta-line a { color: var(--basque-sand); text-decoration: none; }
+
+  .budget-table { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px; }
+  .budget-table .head { text-align: center; margin-bottom: 2.5rem; }
+  .budget-table h3 { color: white; margin-top: 0.5rem; }
+  .budget-table .head p { color: rgba(255,255,255,0.6); margin-top: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 0.95rem; }
+  .budget-table table { width: 100%; border-collapse: collapse; color: white; font-size: 0.95rem; }
+  .budget-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
+  .budget-table th.item { text-align: left; color: rgba(255,255,255,0.6); width: 38%; }
+  .budget-table th.tier { text-align: center; color: rgba(255,255,255,0.85); width: 21%; font-size: 0.92rem; }
+  .budget-table th.standard { color: var(--basque-terra); font-weight: 700; font-size: 1rem; background: rgba(193,100,74,0.12); }
+  .budget-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .budget-table td.item { color: rgba(255,255,255,0.85); }
+  .budget-table td.tier { text-align: center; }
+  .budget-table td.standard { text-align: center; background: rgba(193,100,74,0.06); }
+  .budget-table td.std-mark { font-weight: 600; }
+  .budget-table td.dim { color: rgba(255,255,255,0.3); }
+  .budget-table tfoot td { padding: 1.5rem 0.75rem 0.5rem; font-family: 'Playfair Display', serif; border-top: 2px solid rgba(255,255,255,0.25); border-bottom: none; }
+  .budget-table tfoot td.total-label { font-size: 1.3rem; color: white; }
+  .budget-table tfoot td.tier { font-size: 1.4rem; color: white; }
+  .budget-table tfoot td.standard { font-size: 1.65rem; color: var(--basque-terra); font-weight: 700; }
+  .budget-table .footnote { text-align: center; color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-top: 2rem; line-height: 1.6; }
+
+  footer { background: #0d0d0d; color: rgba(255,255,255,0.6); padding: 2.5rem 0; text-align: center; font-size: 0.85rem; }
+
+  @media (max-width: 900px) {
+    .hero-card { grid-template-columns: 1fr; }
+    .hero-card .hero-image { min-height: 280px; }
+    .hero-card .hero-content { padding: 2.5rem 2rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .day { grid-template-columns: 1fr; gap: 1rem; }
+    .day-number .num { font-size: 3rem; }
+    .hotels-grid { grid-template-columns: 1fr 1fr; }
+    .activities { grid-template-columns: repeat(2, 1fr); }
+    .flight-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .only-this-week .grid { grid-template-columns: 1fr; }
+    .wine-block { grid-template-columns: 1fr; }
+    .wine-block .wine-text { padding: 2rem; }
+    .topnav .tabs { flex-wrap: wrap; }
+    .container { padding: 0 1.25rem; }
+    .step { grid-template-columns: 60px 1fr; gap: 1rem; }
+  }
+  @media (max-width: 600px) {
+    .hotels-grid, .activities { grid-template-columns: 1fr; }
+    .intro-hero .meta { gap: 1.5rem; }
+    .topnav { padding: 0.6rem 0; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .brand { font-size: 1rem; }
+    .topnav .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+    .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    .glance-table, .budget-table { overflow-x: auto; }
+    .glance-table table, .budget-table table { min-width: 540px; }
+    h2 { font-size: 1.8rem !important; }
+    .day-number .num { font-size: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
+    <span class="meta-mini">Itinerary No. 03B · San Sebastián · <a href="./aug_11_europe.html" style="color: var(--basque-olive); text-decoration: none;">compare 4 options ↗</a></span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<nav class="topnav">
+  <div class="container">
+    <div class="brand">August 11 → 17, 2026</div>
+    <div class="tabs">
+      <a href="#itinerary" class="tab">Itinerary</a>
+      <a href="#hotels" class="tab">Hotels</a>
+      <a href="#wine" class="tab">Wine</a>
+      <a href="#food" class="tab">Food</a>
+      <a href="#activities" class="tab">Activities</a>
+      <a href="#book" class="tab">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">Spain · Basque Country · 5 Hotel Nights</span>
+    <h1>San Sebastián &amp;<br>the <em>Basque Coast.</em></h1>
+    <p class="lede">
+      The world capital of food, on a Bay-of-Biscay crescent so famously beautiful it has its own dictionary entry. Three Michelin three-stars within 12 miles, legendary pintxos in the Parte Vieja, and a 77°F coast that stays cool while the rest of Spain melts. <strong>You land inside Aste Nagusia week</strong> — international fireworks competition over La Concha every night you're there.
+    </p>
+    <div class="meta">
+      <div class="meta-item"><div class="label">Departure</div><div class="value">Tue, Aug 11</div></div>
+      <div class="meta-item"><div class="label">Return</div><div class="value">Mon, Aug 17</div></div>
+      <div class="meta-item"><div class="label">Travelers</div><div class="value">Two</div></div>
+      <div class="meta-item"><div class="label">Origin</div><div class="value">LAX</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="destination" id="itinerary">
+  <div class="container">
+
+    <div class="hero-card">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Option B · Spain · Basque Country</span>
+        <h2>San Sebastián &amp;<br>the Basque Coast</h2>
+        <p class="tagline">Three Michelin three-stars within 12 miles, the world's best pintxos crawl in Parte Vieja, and an Atlantic-cool 77°F coast. Land inside the city's biggest week of the year.</p>
+        <div class="stats">
+          <div class="stat"><div class="stat-value">73–77°F</div><div class="stat-label">August High</div></div>
+          <div class="stat"><div class="stat-value">Very High</div><div class="stat-label">Crowd Level</div></div>
+          <div class="stat"><div class="stat-value">Txakoli</div><div class="stat-label">Signature Wine</div></div>
+          <div class="stat"><div class="stat-value">75 min</div><div class="stat-label">BIO → SS</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="eyebrow">Getting There</span>
+      <h2>Flight Plan</h2>
+      <p>No transatlantic non-stops to Bilbao. Best routing: Iberia via Madrid — overnight LAX-MAD, quick 90-min layover, lands BIO mid-afternoon. <strong>Pintxos at 8 PM the same day.</strong></p>
+    </div>
+    <div class="flight-box">
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">LAX</div><div class="city">Los Angeles · Tue Aug 11 · dep 3:25 PM</div></div>
+        <div class="flight-line"><div class="info">Iberia IB6172</div><div class="dash"></div><div class="info">11h 0m nonstop</div></div>
+        <div class="flight-airport"><div class="code">MAD</div><div class="city">Madrid · Wed Aug 12 · arr 11:25 AM</div></div>
+      </div>
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">MAD</div><div class="city">Madrid · 1h 30m layover</div></div>
+        <div class="flight-line"><div class="info">Iberia IB438</div><div class="dash"></div><div class="info">1h 10m</div></div>
+        <div class="flight-airport"><div class="code">BIO</div><div class="city">Bilbao · arr <strong>2:05 PM</strong> · 75 min car to San Seb</div></div>
+      </div>
+      <div class="flight-meta">
+        <div class="item"><div class="label">Est. Round-trip</div><div class="val">$1,000–$1,400</div></div>
+        <div class="item"><div class="label">At hotel by</div><div class="val">4:00 PM</div></div>
+        <div class="item"><div class="label">Carrier</div><div class="val">Iberia</div></div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="eyebrow">Day by Day</span>
+      <h2>The Itinerary</h2>
+      <p>One city — Donostia — with day-trips to Bilbao (Guggenheim + Azurmendi 3★), Getaria (Elkano, Txakoli), Rioja Alavesa (Marqués de Riscal), and Hondarribia.</p>
+    </div>
+
+    <div class="only-this-week">
+      <div class="head">
+        <span class="eyebrow" style="color: var(--basque-terra);">Only This Week</span>
+        <h3>Don't-Miss Events on Your Exact Dates</h3>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 700px; margin-left: auto; margin-right: auto;">Four experiences that only happen during the week you're there. The fireworks alone justify these dates.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="event-card terra">
+          <div class="head">
+            <span class="icon">🎆</span>
+            <div>
+              <h4 class="terra">Aste Nagusia · International Fireworks Competition</h4>
+              <div class="when"><strong>Aug 8–15</strong> — your trip catches nights #5 → #8 (the finale)</div>
+            </div>
+          </div>
+          <p><strong>The 60th International Fireworks Competition over La Concha Bay</strong> — nine nights, nine countries, one 22-minute pyrotechnic showcase each night at <strong>10:45 PM</strong>. Free; you watch from Paseo de la Concha or your hotel-room balcony if you booked the bay-facing side. Sat Aug 15 is the finale + winners announcement — the loudest, longest, most-anticipated night. Stake a Paseo Nuevo spot from 9:30 PM with cava and pintxos to-go.</p>
+          <a href="https://sansebastianturismoa.eus/en/agenda/" target="_blank" rel="noopener" class="book-link">Aste Nagusia 2026 →</a>
+        </div>
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">☄️</span>
+            <div>
+              <h4>Perseid Meteor Shower Peak</h4>
+              <div class="when">Night of <strong>Wed Aug 12 → Thu Aug 13</strong></div>
+            </div>
+          </div>
+          <p><strong>The best Perseid year of the decade.</strong> New moon on Aug 12 = moonless sky, 90+ meteors/hour at peak (1–4 AM local). Drive 10 min up to <strong>Monte Igueldo</strong> — old amusement park closed by midnight but the parking lot has clear sky over the Atlantic. Bring a thermos of patxaran and a blanket. Or: skip the meteors for the Aste Nagusia fireworks earlier in the evening; you can't catch both at peak.</p>
+          <a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener" class="book-link">Viewing guide →</a>
+        </div>
+
+        <div class="event-card sea">
+          <div class="head">
+            <span class="icon">⛪</span>
+            <div>
+              <h4 class="sea">Asunción de la Virgen</h4>
+              <div class="when"><strong>Sat Aug 15</strong> — Spanish national holiday</div>
+            </div>
+          </div>
+          <p>Spain's biggest summer holiday — banks, post offices, government closed; restaurants packed; the city completely full. Falls inside Aste Nagusia by design. Morning procession from Iglesia de Santa María del Coro through the old town. <strong>Book Saturday lunch and dinner 2+ months ahead.</strong> Aim for an early-evening pintxos crawl (6:30 PM) before the 10:45 PM fireworks finale.</p>
+          <a href="https://sansebastianturismoa.eus/en/agenda/" target="_blank" rel="noopener" class="book-link">SS Tourism agenda →</a>
+        </div>
+
+        <div class="event-card sand">
+          <div class="head">
+            <span class="icon">🚣</span>
+            <div>
+              <h4 class="sand">Bandera de la Concha · trainera heats</h4>
+              <div class="when">Mid-month rowing tests around La Concha</div>
+            </div>
+          </div>
+          <p>The traditional Basque rowing championship (final is early September) holds practice and heats in La Concha through August. Six-man wooden boats called <em>traineras</em>. Watch from Paseo de la Concha mid-morning. Free, unticketed. Pairs with a swim — water is 72°F, glassy, and ideal at 11 AM before the boats race.</p>
+          <a href="https://sansebastianturismoa.eus/en/" target="_blank" rel="noopener" class="book-link">SS Tourism →</a>
+        </div>
+
+      </div>
+
+      <div class="bonus-callout">
+        <h4>🍇 Bonus — Rioja Alavesa day (the ambitious add-on)</h4>
+        <p>90-min drive south of San Sebastián. Walk the medieval walled town of <strong>Laguardia</strong>, tour <a href="https://www.bodegasysios.com/en/" target="_blank" rel="noopener">Bodegas Ysios</a> (Calatrava's undulating roof), lunch at <a href="https://www.hotel-marquesderiscal.com/" target="_blank" rel="noopener">Marqués de Riscal</a> (Gehry's titanium hotel). Hire a driver ($650–$975 for the day for two — required because you'll be tasting). Best on Day 5 (Sunday) when the city is recovering from the Aste Nagusia finale.</p>
+      </div>
+    </div>
+
+    <div class="glance-table">
+      <table>
+        <thead>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="daynum">1</td><td>Wed Aug 12</td><td>Arrival + fireworks 🎆 + Perseids ☄️</td><td>Land BIO 2 PM · pintxos walk · fireworks night #5</td><td>Pintxos: Sport → Borda Berri → La Viña</td></tr>
+          <tr><td class="daynum">2</td><td>Thu Aug 13</td><td>Orient + surf</td><td>Monte Igueldo · Pukas surf · fireworks night #6</td><td><strong>Kokotxa ★</strong></td></tr>
+          <tr><td class="daynum">3</td><td>Fri Aug 14</td><td>Bay day + Arzak ★★★</td><td>Kayak Santa Clara · La Perla spa · fireworks night #7</td><td><strong>Arzak ★★★</strong></td></tr>
+          <tr><td class="daynum">4</td><td>Sat Aug 15</td><td>Move to Akelarre + Asunción ⛪ + finale 🎆</td><td>Hondarribia day · move hotels · fireworks <em>finale</em></td><td><strong>Akelarre ★★★</strong></td></tr>
+          <tr><td class="daynum">5</td><td>Sun Aug 16</td><td>Rioja day OR slow</td><td>Laguardia · Ysios · Marqués de Riscal</td><td><strong>Mirador de Ulia ★</strong></td></tr>
+          <tr><td class="daynum">6</td><td>Mon Aug 17</td><td>Departure</td><td>Beach morning · transfer to BIO</td><td>On the plane</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="itinerary">
+
+      <div class="day">
+        <div class="day-number"><div class="num">01</div><div class="date">Wed Aug 12</div></div>
+        <div class="day-content">
+          <h3>Arrival + fireworks night #5</h3>
+          <ul>
+            <li><strong>2:05 PM</strong> Land BIO · Iberia IB438</li>
+            <li><strong>2:45 PM</strong> Private transfer to San Sebastián ($170, 75 min) or <a href="https://gipuzkoa.avanzagrupo.com/en/" target="_blank" rel="noopener">Pesa bus</a> ($16, 1h 20m)</li>
+            <li><strong>4:00 PM</strong> Check in <a href="https://www.marriott.com/en-us/hotels/easlc-hotel-maria-cristina/" target="_blank" rel="noopener">Hotel Maria Cristina</a> · request bay-facing room (fireworks balcony)</li>
+            <li><strong>6:00 PM</strong> Short walk Paseo de la Concha · dip in the bay (72°F, perfect)</li>
+            <li><strong>8:00 PM</strong> Light pintxos crawl: <strong>Bar Sport → Borda Berri → La Viña</strong> (cheesecake finisher)</li>
+            <li><strong>10:30 PM</strong> Find a spot on Paseo Nuevo for the <strong>10:45 PM fireworks</strong> (night #5 of Aste Nagusia)</li>
+            <li><strong>11:30 PM</strong> Drinks at Hotel de Londres bar over the beach</li>
+            <li><strong>12:30 AM (optional)</strong> Drive 10 min up Monte Igueldo for the Perseids if you have a second wind</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">02</div><div class="date">Thu Aug 13</div></div>
+        <div class="day-content">
+          <h3>Orient + surf + fireworks #6</h3>
+          <ul>
+            <li><strong>10:30 AM</strong> <a href="https://www.monteigueldo.es/monte-igueldo-funicular" target="_blank" rel="noopener">Funicular up Monte Igueldo</a> — 1912 vintage cable car, panoramic photos</li>
+            <li><strong>1:00 PM</strong> Pintxos lunch: <strong>Ganbara</strong> (mushroom plate w/ egg yolk) + <strong>Bar Néstor</strong> (sign up at noon for the 1 PM tortilla slice)</li>
+            <li><strong>3:30 PM</strong> Siesta — you'll need it for the late nights</li>
+            <li><strong>5:00 PM</strong> <a href="https://eskola.pukassurf.com/" target="_blank" rel="noopener">Pukas Surf Eskola</a> 1.5h beginner lesson at Zurriola ($42 ea)</li>
+            <li><strong>8:30 PM</strong> <strong><a href="https://restaurantekokotxa.com/en/" target="_blank" rel="noopener">Kokotxa ★</a></strong> — value 1-star, easy reservation, romantic old town tucked-away room</li>
+            <li><strong>10:30 PM</strong> Walk to the Paseo Nuevo for <strong>fireworks night #6</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">03</div><div class="date">Fri Aug 14</div></div>
+        <div class="day-content">
+          <h3>Bay day + Arzak ★★★ + fireworks #7</h3>
+          <ul>
+            <li><strong>9:00 AM</strong> La Concha morning swim before the boats come out</li>
+            <li><strong>10:30 AM</strong> <strong><a href="https://www.alokayak.com/en/" target="_blank" rel="noopener">ALOKAYAK guided paddle to Santa Clara island</a></strong> (0.5 mi) — beach landing in hidden cove, picnic, swim back</li>
+            <li><strong>1:30 PM</strong> Light lunch at <strong>Atari Gastroteka</strong> (Plaza Mayor)</li>
+            <li><strong>3:00 PM</strong> <a href="https://la-perla.net/" target="_blank" rel="noopener">La Perla Thalasso spa</a> — 2h thermal circuit + 1h couples massage ($46+$110 ea)</li>
+            <li><strong>8:30 PM</strong> <strong><a href="https://www.arzak.es/en/reservation/" target="_blank" rel="noopener">Arzak ★★★</a></strong> — taxi 8 min east. $275 Aratz menu + $120 wine pairing. Allow 3 hours.</li>
+            <li><strong>Note:</strong> You'll miss <strong>fireworks night #7</strong> live (during dinner) but Arzak's terrace catches the finale glow. Worth it.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">04</div><div class="date">Sat Aug 15</div></div>
+        <div class="day-content">
+          <h3>Hondarribia · Akelarre ★★★ · fireworks finale</h3>
+          <ul>
+            <li><strong>Note:</strong> Asunción national holiday — most shops closed, restaurants packed. Falls on the Aste Nagusia finale day. Buzz is incredible.</li>
+            <li><strong>10:00 AM</strong> Check out Maria Cristina; store bags</li>
+            <li><strong>10:30 AM</strong> <strong><a href="https://www.hondarribiaturismo.com/en/" target="_blank" rel="noopener">Hondarribia day trip</a></strong> — bus E21, 35 min. Cobbled Casco Histórico, lunch at <strong>Sebastian ★</strong> or casual at Gran Sol</li>
+            <li><strong>2:00 PM</strong> Optional 5-min ferry to Hendaye, France for a coffee — two countries in one afternoon</li>
+            <li><strong>4:00 PM</strong> Transfer to <a href="https://akelarre.net/en/" target="_blank" rel="noopener">Hotel Akelarre</a> on Monte Igueldo (taxi 15 min)</li>
+            <li><strong>5:30 PM</strong> Pool / spa / plunge tub by floor-to-ceiling window. Dressing for dinner</li>
+            <li><strong>8:30 PM</strong> <strong><a href="https://akelarre.net/en/restaurant/" target="_blank" rel="noopener">Akelarre ★★★</a></strong> — elevator down to the restaurant. $295 Aranori menu, sunset over Atlantic from the dining room</li>
+            <li><strong>10:45 PM</strong> <strong>Aste Nagusia finale fireworks</strong> — visible from Akelarre's cliff terrace looking back at La Concha. Best fireworks vantage in the city.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">05</div><div class="date">Sun Aug 16</div></div>
+        <div class="day-content">
+          <h3>Rioja day OR slow recovery</h3>
+          <ul>
+            <li><strong>Option A — Rioja day:</strong> 8:30 AM pre-arranged driver → <strong>Laguardia</strong> walk (medieval walled town with cellars under every house) → <strong><a href="https://www.bodegasysios.com/en/" target="_blank" rel="noopener">Bodegas Ysios</a></strong> tour (Calatrava-designed) → lunch at <strong><a href="https://www.hotel-marquesderiscal.com/" target="_blank" rel="noopener">Marqués de Riscal</a></strong> restaurant (Gehry hotel) → return 7 PM · light pintxos dinner</li>
+            <li><strong>Option B — Slow day:</strong> Sleep in. Beach morning. Late lunch at <strong><a href="https://restauranteelkano.com/en/" target="_blank" rel="noopener">Elkano ★</a></strong> in Getaria (grilled turbot, world-famous) — drive 30 min west. Pair with Txomin Etxaniz Txakoli tasting at the source</li>
+            <li><strong>8:30 PM</strong> Farewell dinner at <strong><a href="https://miradordeulia.es/en/" target="_blank" rel="noopener">Mirador de Ulia ★</a></strong> — easy taxi up, $155 menu, sunset panoramic over La Concha</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">06</div><div class="date">Mon Aug 17</div></div>
+        <div class="day-content">
+          <h3>Departure</h3>
+          <ul>
+            <li><strong>9:00 AM</strong> Slow breakfast on the Akelarre terrace</li>
+            <li><strong>11:00 AM</strong> Transfer to Bilbao airport (~$165, 75 min)</li>
+            <li><strong>1:35 PM</strong> Iberia IB439 BIO → MAD (1h 5m)</li>
+            <li><strong>4:30 PM</strong> Iberia IB6171 MAD → LAX (12h)</li>
+            <li><strong>7:30 PM same day</strong> Arrive LAX (gain 9 hours on the way back)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="hotels">
+      <span class="eyebrow">Where to Stay</span>
+      <h2>Six Hotels, Two-Night Split</h2>
+      <p>The play: start central in town nights 1–3 for pintxos and Arzak, then move to the cliff at Akelarre nights 4–5 for the 3★ dinner without a taxi back at midnight. All prices USD, peak August. Aste Nagusia week books out 3+ months ahead — call direct.</p>
+    </div>
+    <div class="hotels-grid">
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(125,139,92,0.3), rgba(193,100,74,0.4)), url('https://images.unsplash.com/photo-1549221987-25a490f65d34?w=600&q=80');">
+          <span class="hotel-tier">★ Top Pick (nights 1–3)</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hotel Maria Cristina</h4>
+          <div class="loc">Luxury Collection · 1912 Belle Époque · 5-min walk to old town &amp; Zurriola</div>
+          <p>Designed by Charles Mèwes (Ritz Paris architect). Marble lobby, film-festival glamour. Now home to <strong>Amelia by Paulo Airaudo (2★)</strong>. The classic San Sebastián stay. <strong>Request a bay-facing room</strong> for the Aste Nagusia fireworks balcony.</p>
+          <div class="hotel-meta">
+            <span class="price">$595–$975 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.marriott.com/en-us/hotels/easlc-hotel-maria-cristina/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(125,139,92,0.3), rgba(30,90,122,0.4)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80');">
+          <span class="hotel-tier">★ Cliff (nights 4–5)</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hotel Akelarre</h4>
+          <div class="loc">Relais &amp; Châteaux · Monte Igueldo clifftop · 15 min from town</div>
+          <p>22 rooms only, sweeping Atlantic views, infinity pool, plunge tubs by floor-to-ceiling windows. Attached to <strong>Akelarre 3★ (Pedro Subijana)</strong> — elevator down to dinner. Cliff terrace sees the La Concha fireworks finale.</p>
+          <div class="hotel-meta">
+            <span class="price">$595–$810 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://akelarre.net/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(125,139,92,0.3), rgba(212,163,115,0.4)), url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80');">
+          <span class="hotel-tier">Adults only</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Lasala Plaza Hotel</h4>
+          <div class="loc">Plaza Lasala · edge of La Concha &amp; Parte Vieja</div>
+          <p>Adults-only contemporary boutique with rooftop infinity plunge pool overlooking the bay. <strong>Best location in the city for pintxos</strong> — you're <em>inside</em> the old town. Rooftop catches the fireworks. Use as a single-base alternative to the Maria Cristina + Akelarre split.</p>
+          <div class="hotel-meta">
+            <span class="price">$380–$540 / night</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.lasalaplazahotel.com/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(125,139,92,0.3), rgba(193,100,74,0.35)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80');">
+          <span class="hotel-tier">Beach view</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hotel de Londres y de Inglaterra</h4>
+          <div class="loc">Directly on Paseo de la Concha · 1865</div>
+          <p>The 1865 sea-view grande dame. <strong>The beach is in your window</strong> — book the front rooms or skip it. Picture-window bay view, the Paseo right outside the door. Bar terrace is one of the iconic Donostia spots; book a 9 PM table for the fireworks.</p>
+          <div class="hotel-meta">
+            <span class="price">$430–$700 / night</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.hlondres.com/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(125,139,92,0.25), rgba(193,100,74,0.4)), url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');">
+          <span class="hotel-tier">Garden retreat</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Villa Soro</h4>
+          <div class="loc">Residential east · 1898 mansion · 25 rooms</div>
+          <p>Restored 5★ mansion in the quiet residential east, 12 min from the old town. 25 rooms, intimate garden + outdoor pool. <strong>The hideaway pick</strong> for Aste Nagusia recovery — quieter than the bay-side hotels, easier sleep after the fireworks.</p>
+          <div class="hotel-meta">
+            <span class="price">$490–$700 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.villasoro.com/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(125,139,92,0.3), rgba(30,90,122,0.4)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80');">
+          <span class="hotel-tier">Splurge</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hotel Arima</h4>
+          <div class="loc">Anoeta · 5 min from center · adults-only</div>
+          <p>Adults-only 5★ designed by Iñaki Eskubi, Passivhaus-certified for sustainability. Spa, indoor pool, modern minimalist, the rare Donostia hotel with a real wellness focus. Outside the immediate fireworks zone — quieter sleep, easier walk to the venue.</p>
+          <div class="hotel-meta">
+            <span class="price">$500–$750 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.hotelarima.com/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="wine">
+      <span class="eyebrow">The Glass</span>
+      <h2>Two Regions, 90 Minutes Apart</h2>
+      <p>The salty Atlantic Txakoli of Getaria — poured high from the bottle to release the spritz — and the structured reds of Rioja Alavesa across the mountains. Both small, both serious.</p>
+    </div>
+    <div class="wine-block txakoli">
+      <div class="wine-image"></div>
+      <div class="wine-text">
+        <span class="eyebrow">Getariako Txakolina · the spritz whites</span>
+        <h3>Spain's Smallest DO</h3>
+        <p>Coastal Basque white made from <strong>Hondarribi Zuri</strong>, grown on terraces facing the Atlantic. Sharp, lemony, naturally spritzy. The pour is theater — the camarero holds the bottle two feet above the glass. 30 min west of San Sebastián by Euskotren. Best paired with grilled turbot at <a href="https://restauranteelkano.com/en/" target="_blank" rel="noopener">Elkano</a> in Getaria.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://txominetxaniz.com/en/" target="_blank" rel="noopener">Txomin Etxaniz ↗</a></div>
+            <div class="desc">The benchmark — fourth-generation Getaria producer since 1870. Tastings Mon–Sat 10–6. €15. +34 943 14 07 02.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.ameztoi.com/en/home/" target="_blank" rel="noopener">Ameztoi ↗</a></div>
+            <div class="desc">Iconic <em>Rubentis</em> rosé Txakoli — the pink pour. Sea-cliff vineyards in Getaria. By appointment.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.gaintza.com/en/" target="_blank" rel="noopener">Gaintza ↗</a></div>
+            <div class="desc">Small family producer just outside Getaria. Excellent tastings paired with anchovy bites. Mon–Sat by appointment.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.hiruzta.com/en/" target="_blank" rel="noopener">Hiruzta ↗</a></div>
+            <div class="desc">Hondarribia border town producer with on-site restaurant. Lunch + tasting €45. Pairs with the Hondarribia day-trip.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wine-block rioja" style="margin-top: 2rem;">
+      <div class="wine-image" style="order: 2;"></div>
+      <div class="wine-text" style="order: 1;">
+        <span class="eyebrow">Rioja Alavesa · the reds</span>
+        <h3>Tempranillo Country — 90 min South</h3>
+        <p>The Basque-administered side of Rioja, where the limestone-rich vineyards climb the southern slopes of the Cantabrian range. Medieval walled towns (Laguardia, Elciego) sit above caves stacked with barrels going back centuries. <strong>Hire a driver</strong> ($650–$975) — you'll be tasting, and the rural roads are not for the slightly-over-the-limit.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://www.hotel-marquesderiscal.com/" target="_blank" rel="noopener">Marqués de Riscal ↗</a></div>
+            <div class="desc">Gehry's titanium-clad hotel + cellar built into the vineyards. Tour + lunch in the 1★ restaurant. Book online.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.bodegasysios.com/en/" target="_blank" rel="noopener">Bodegas Ysios ↗</a></div>
+            <div class="desc">Santiago Calatrava's undulating roof against the mountains. Daily tours 11 AM &amp; 4 PM. €30.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.bodegasartadi.com/en/" target="_blank" rel="noopener">Artadi ↗</a></div>
+            <div class="desc">Single-vineyard Tempranillos that command three-figure secondary-market prices. Visits by appointment only.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.remirezdeganuza.com/en/" target="_blank" rel="noopener">Remírez de Ganuza ↗</a></div>
+            <div class="desc">Boutique producer in Samaniego. Hand-selection at every stage. Tour + tasting by appointment.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" id="food">
+      <span class="eyebrow">The Table</span>
+      <h2>Three 3★, Plus Pintxos</h2>
+      <p>Three of Spain's 16 three-star restaurants live within 12 miles of central San Sebastián. Etxebarri (1★ but world #1) is in Atxondo, 80 min drive. <strong>Book 2–3 months ahead minimum.</strong></p>
+    </div>
+    <div class="hotels-grid">
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.4), rgba(125,139,92,0.5)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
+          <span class="hotel-tier">★★★ Michelin</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Arzak</h4>
+          <div class="loc">East of center · 1897 family home · Elena &amp; Juan Mari Arzak</div>
+          <p>Avant-garde Basque cuisine in the family home since 1897. Three stars since 1989. <strong>$275 Aratz menu</strong>, wine pairing +$120. Reservation form responds within 3 days. <strong>Book 2–3 months ahead.</strong></p>
+          <div class="hotel-meta">
+            <span class="price">$275 / person</span>
+            <span>★★★ Michelin</span>
+          </div>
+          <a href="https://www.arzak.es/en/reservation/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(30,90,122,0.45)), url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80');">
+          <span class="hotel-tier">★★★ Michelin</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Akelarre</h4>
+          <div class="loc">Monte Igueldo clifftop · Pedro Subijana</div>
+          <p>Sea-cliff Basque, technical. Tasting menus <strong>$295–$320</strong>. Sunset seating is coveted — the dining room faces straight west. Book through the hotel if you're staying there (preferred). Elevator down from your room means no taxi at midnight.</p>
+          <div class="hotel-meta">
+            <span class="price">$295–$320 / person</span>
+            <span>★★★ Michelin</span>
+          </div>
+          <a href="https://akelarre.net" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(138,143,90,0.45)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80');">
+          <span class="hotel-tier">★★★ Michelin</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Martín Berasategui</h4>
+          <div class="loc">Lasarte-Oria · 15 min drive · modern Basque</div>
+          <p>The name on the front of Spain's most-decorated chef. <strong>$335 Gran Menú</strong>. Signature foie/eel/apple millefeuille has been on the menu 40+ years. Reservations open 60 days ahead online; lunch slots easier than dinner.</p>
+          <div class="hotel-meta">
+            <span class="price">$335 / person</span>
+            <span>★★★ Michelin</span>
+          </div>
+          <a href="https://www.martinberasategui.com/en/inicio" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(74,144,164,0.4)), url('https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80');">
+          <span class="hotel-tier">★ Michelin</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Mirador de Ulia</h4>
+          <div class="loc">Top of Monte Ulia · Rubén Trincado · panoramic</div>
+          <p>The most romantic dining room in San Sebastián — panoramic sunset views over the bay. Two menus: <em>Vínculo</em> (vegetarian) and <em>Arraigo</em>, both ~$155. Taxi 12 min from center. Book for the 8:30 PM seating to catch the light.</p>
+          <div class="hotel-meta">
+            <span class="price">$145–$170 / person</span>
+            <span>★ Michelin</span>
+          </div>
+          <a href="https://miradordeulia.es/en/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(90,74,122,0.45)), url('https://images.unsplash.com/photo-1481833761820-0509d3217039?w=600&q=80');">
+          <span class="hotel-tier">Pintxos crawl</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Parte Vieja Txikiteo</h4>
+          <div class="loc">Old town · 8 essential bars · stand-up bar style</div>
+          <p>One bar, one pintxo, one zurito, 15 min, move on. <strong>Bar Néstor</strong> (tortilla + txuleta), <strong>Ganbara</strong> (mushrooms + egg), <strong>La Cuchara de San Telmo</strong> (carrillera), <strong>Bar Txepetxa</strong> (anchovies), <strong>Borda Berri</strong> (made-to-order), <strong>Atari</strong> (basilica view), <strong>La Viña</strong> (cheesecake finisher). No reservations.</p>
+          <div class="hotel-meta">
+            <span class="price">$60–$100 / person</span>
+            <span>★★★★★ value</span>
+          </div>
+          <a href="https://sansebastianpintxobars.com/" target="_blank" rel="noopener" class="book-link">Pintxo guide →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(138,143,90,0.3), rgba(193,100,74,0.45)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
+          <span class="hotel-tier">★ Michelin · day trip</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Elkano</h4>
+          <div class="loc">Getaria · 30 min west · grilled turbot legend</div>
+          <p>The pilgrimage. Pedro Arregui's family kitchen since 1964 — whole turbot grilled over wood charcoal on the harbor in Getaria. The bone-in turbot serves two and is the entire reason to go. Pair with Txomin Etxaniz Txakoli at the source. <strong>$130/pp</strong>. Book online 3–4 weeks ahead.</p>
+          <div class="hotel-meta">
+            <span class="price">$120–$140 / person</span>
+            <span>★ Michelin</span>
+          </div>
+          <a href="https://restauranteelkano.com/en/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="activities">
+      <span class="eyebrow">Unique Experiences</span>
+      <h2>Things You Won't Do Anywhere Else</h2>
+      <p>Anyone can eat pintxos. Here are the 16 that turn a good week into the one you'll talk about.</p>
+    </div>
+    <div class="activities">
+      <div class="activity"><span class="icon">🎆</span><h4><a href="https://sansebastianturismoa.eus/en/agenda/" target="_blank" rel="noopener">Fireworks competition ↗</a></h4><p>International Fireworks Competition over La Concha · nightly 10:45 PM · Free.</p></div>
+      <div class="activity"><span class="icon">🌊</span><h4><a href="https://eskola.pukassurf.com/" target="_blank" rel="noopener">Pukas Surf Eskola ↗</a></h4><p>Operating Zurriola since 1982. Biggest board quiver. $42 / 1.5h group lesson.</p></div>
+      <div class="activity"><span class="icon">🛶</span><h4><a href="https://www.alokayak.com/en/" target="_blank" rel="noopener">ALOKAYAK ↗</a></h4><p>Guided La Concha tour to Santa Clara island (0.5 mi). $27 pp · beach landing.</p></div>
+      <div class="activity"><span class="icon">⛵</span><h4>Sunset La Concha cruise</h4><p>Ur Maitea / Ciudad SS catamarans · 1.5–2h with cava. From the harbor. $38–55 pp.</p></div>
+      <div class="activity"><span class="icon">🏄</span><h4><a href="https://goodpeoplesurf.com/" target="_blank" rel="noopener">Zarautz Surf ↗</a></h4><p>30 min west by Euskotren. Spain's longest beach (1.5 mi). $45 group · $85 private.</p></div>
+      <div class="activity"><span class="icon">🧖</span><h4><a href="https://la-perla.net/" target="_blank" rel="noopener">La Perla Thalasso ↗</a></h4><p>1912 belle-époque seawater spa on Paseo de la Concha. $46–$51 / 2h circuit.</p></div>
+      <div class="activity"><span class="icon">🚴</span><h4><a href="https://bicirentdonostia.com/en/" target="_blank" rel="noopener">Bike the Camino del Norte ↗</a></h4><p>Cruiser or e-bike. East through Pasaia to Hondarribia (25 mi RT). $16–$27/day.</p></div>
+      <div class="activity"><span class="icon">🌅</span><h4><a href="https://www.monteigueldo.es/monte-igueldo-funicular" target="_blank" rel="noopener">Monte Igueldo ↗</a></h4><p>1912 funicular · 15 min RT · sunset terrace bar with the iconic crescent-bay view. $4.</p></div>
+      <div class="activity"><span class="icon">🎨</span><h4><a href="https://www.guggenheim-bilbao.eus/en/plan-your-visit" target="_blank" rel="noopener">Guggenheim Bilbao ↗</a></h4><p>1 hour by bus or 1h drive. Gehry titanium curves, Serra permanent room. $20.</p></div>
+      <div class="activity"><span class="icon">🍇</span><h4><a href="https://txominetxaniz.com/en/" target="_blank" rel="noopener">Txomin Etxaniz Txakoli ↗</a></h4><p>The benchmark Getaria producer since 1870. Tastings Mon–Sat. $17.</p></div>
+      <div class="activity"><span class="icon">🍷</span><h4><a href="https://www.bodegasysios.com/en/" target="_blank" rel="noopener">Bodegas Ysios Rioja ↗</a></h4><p>Calatrava-designed roof in Laguardia. Daily tours 11 AM &amp; 4 PM. $33.</p></div>
+      <div class="activity"><span class="icon">🏰</span><h4><a href="https://www.hondarribiaturismo.com/en/" target="_blank" rel="noopener">Hondarribia day trip ↗</a></h4><p>Medieval border town. Bus E21 35 min. Lunch at Sebastian ★ or Gran Sol pintxos.</p></div>
+      <div class="activity"><span class="icon">⚓</span><h4>Pasaia old whaling port</h4><p>15-min Euskotren. Cobbled fishing village; ferry crosses harbor for $1.</p></div>
+      <div class="activity"><span class="icon">🍎</span><h4><a href="https://www.petritegi.com/en" target="_blank" rel="noopener">Sidrería Petritegi ↗</a></h4><p>Astigarraga cider house since 1526. Set menu w/ cider $40. 15-min taxi.</p></div>
+      <div class="activity"><span class="icon">🥖</span><h4>Bretxa Market</h4><p>Old town market. Idiazabal cheese, anchovies, bonito belly. Open 9–2.</p></div>
+      <div class="activity"><span class="icon">🥃</span><h4>Pacharán tasting</h4><p>Sloe-berry Basque digestif. Bartender's-choice flight at Bar Alameda. $15.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="booking" id="book">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Pre-Trip Punch List</span>
+      <h2>Book These Now</h2>
+      <p>Three-star reservations drive the trip. Submit them <em>before</em> flights. Aste Nagusia is the busiest week of the year — every hotel and table is gated.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="stepnum">1</div>
+        <div>
+          <h4>Flight — Iberia IB6172 / IB438, Aug 11 3:25 PM LAX → MAD → BIO</h4>
+          <p>Book on iberia.com or via Chase/Amex travel portal. Premium Economy adds ~$700 each for the LAX-MAD leg. Round-trip target: <strong>$1,000–$1,400</strong>.</p>
+          <div class="meta-line">→ <a href="https://www.iberia.com/us/" target="_blank" rel="noopener">iberia.com</a> · share confirmation # with hotel concierge for transfer</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">2</div>
+        <div>
+          <h4>Hotel split — Maria Cristina (nights 1–3) + Akelarre (nights 4–5)</h4>
+          <p>Maria Cristina: <strong>request bay-facing room</strong> for Aste Nagusia fireworks balcony. Aug 12–15 (3 nights). Akelarre: Aug 15–17 (2 nights) — coordinate the move so check-in is after Hondarribia day. <strong>Both call directly</strong> — peak August + Aste Nagusia week is fully-booked territory.</p>
+          <div class="meta-line">→ <a href="https://www.marriott.com/en-us/hotels/easlc-hotel-maria-cristina/" target="_blank" rel="noopener">Maria Cristina</a> · +34 943 437 600 · <a href="https://akelarre.net/en/" target="_blank" rel="noopener">Akelarre</a> · +34 943 311 209</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">3</div>
+        <div>
+          <h4>Submit 3★ reservation requests — same day</h4>
+          <p>File simultaneously to <a href="https://www.arzak.es/en/reservation/" target="_blank" rel="noopener">Arzak</a> (Fri Aug 14), <a href="https://akelarre.net" target="_blank" rel="noopener">Akelarre</a> (Sat Aug 15 — via the hotel), and <a href="https://www.martinberasategui.com/en/inicio" target="_blank" rel="noopener">Martín Berasategui</a> (lunch backup). They reply within 3–7 days. Don't email one and wait — they fill from different audiences. <strong>Book 90 days out.</strong></p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">4</div>
+        <div>
+          <h4>Enter the Etxebarri queue (optional but recommended)</h4>
+          <p><a href="https://www.asadoretxebarri.com/en/home" target="_blank" rel="noopener">Asador Etxebarri</a> uses an online queue — submit immediately and flex your dates. Lunch only Tue–Sat. World #1 in 2023. Treat it as a date-driver if you get a Wed/Thu slot.</p>
+          <div class="meta-line">→ <a href="https://www.asadoretxebarri.com/en/home" target="_blank" rel="noopener">asadoretxebarri.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">5</div>
+        <div>
+          <h4>Rioja day driver</h4>
+          <p>Private driver Sunday Aug 16 — 9-hour day, Laguardia + 2 cellars + lunch. <strong>$650–$975</strong> for two. Required (you'll be tasting). Discover Sansebastian, North Coast Tours, or your hotel concierge can arrange.</p>
+          <div class="meta-line">→ Discover Sansebastian / hotel concierge</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">6</div>
+        <div>
+          <h4>Book 2★ + headline 1★ tables</h4>
+          <p><a href="https://www.mugaritz.com/en/" target="_blank" rel="noopener">Mugaritz</a> (avant-garde Aduriz), <a href="https://restauranteelkano.com/en/" target="_blank" rel="noopener">Elkano</a> in Getaria (Day 5 lunch backup), <a href="https://miradordeulia.es/en/" target="_blank" rel="noopener">Mirador de Ulia</a> (panoramic farewell), <a href="https://restaurantekokotxa.com/en/" target="_blank" rel="noopener">Kokotxa</a> (easy-book Thursday).</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">7</div>
+        <div>
+          <h4>Pukas surf + La Perla spa</h4>
+          <p>Pukas group surf lesson Thursday Aug 13, 5 PM. La Perla Thalasso 2-hour circuit + couples massage Friday Aug 14, 3 PM. Both book online.</p>
+          <div class="meta-line">→ <a href="https://eskola.pukassurf.com/" target="_blank" rel="noopener">Pukas Surf</a> · <a href="https://la-perla.net/" target="_blank" rel="noopener">La Perla</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">8</div>
+        <div>
+          <h4>BIO ↔ SS transfer + pintxos walking tour</h4>
+          <p>Pre-book Welcome Pickups for Wed Aug 12 arrival ($170 sedan for 75-min ride). Optional: pintxos guided walking tour for Day 1 evening — <a href="https://devourtours.com/" target="_blank" rel="noopener">Devour Tours</a> or <a href="https://sansebastianfoodtours.com/" target="_blank" rel="noopener">San Sebastian Food</a> run small-group nights, $90–$140 pp.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="budget-table">
+      <div class="head">
+        <span class="eyebrow">Three Ways to Do It</span>
+        <h3>Budget by Tier</h3>
+        <p>Same trip, three spending levels. ✓ = included in that tier. Standard is the recommended plan with Maria Cristina + Akelarre + all three 3-stars.</p>
+      </div>
+
+      <div style="overflow-x: auto;">
+      <table>
+        <thead>
+          <tr>
+            <th class="item">Item</th>
+            <th class="tier">Budget</th>
+            <th class="tier standard">Standard ★</th>
+            <th class="tier">Splurge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="item">✈️ Flights · Economy (Iberia via MAD)</td><td class="tier">✓ $2,200</td><td class="standard">✓ $2,200</td><td class="tier dim">—</td></tr>
+          <tr><td class="item">✈️ Flights · Premium Economy</td><td class="tier dim">—</td><td class="standard dim">—</td><td class="tier">✓ $3,800</td></tr>
+          <tr><td class="item">🏨 Lasala Plaza · 5 nights (single base)</td><td class="tier">✓ $2,150</td><td class="standard dim">—</td><td class="tier dim">—</td></tr>
+          <tr><td class="item">🏨 Maria Cristina + Akelarre split</td><td class="tier dim">—</td><td class="standard std-mark">✓ $3,500</td><td class="tier dim">—</td></tr>
+          <tr><td class="item">🏨 Maria Cristina Junior Suite + Akelarre</td><td class="tier dim">—</td><td class="standard dim">—</td><td class="tier">✓ $5,400</td></tr>
+          <tr><td class="item">🚗 BIO ↔ SS private transfer · RT</td><td class="tier">✓ $40</td><td class="standard">✓ $340</td><td class="tier">✓ $340</td></tr>
+          <tr><td class="item">🚗 Rental car · 3 days (Getaria + Hondarribia)</td><td class="tier dim">—</td><td class="standard">✓ $250</td><td class="tier">✓ $400</td></tr>
+          <tr><td class="item">🍇 Rioja private driver day</td><td class="tier dim">—</td><td class="standard">✓ $750</td><td class="tier">✓ $975</td></tr>
+          <tr><td class="item">🛶 ALOKAYAK Santa Clara tour</td><td class="tier">✓ $54</td><td class="standard">✓ $54</td><td class="tier">✓ $54</td></tr>
+          <tr><td class="item">⛵ Private sunset La Concha cruise</td><td class="tier dim">—</td><td class="standard">✓ $300</td><td class="tier">✓ $600</td></tr>
+          <tr><td class="item">⭐ Arzak ★★★</td><td class="tier dim">—</td><td class="standard std-mark">✓ $790</td><td class="tier">✓ $790</td></tr>
+          <tr><td class="item">⭐ Akelarre ★★★</td><td class="tier dim">—</td><td class="standard std-mark">✓ $830</td><td class="tier">✓ $830</td></tr>
+          <tr><td class="item">⭐ Martín Berasategui ★★★</td><td class="tier dim">—</td><td class="standard dim">—</td><td class="tier">✓ $880</td></tr>
+          <tr><td class="item">⭐ Etxebarri or Mugaritz (one)</td><td class="tier dim">—</td><td class="standard">✓ $720</td><td class="tier">✓ $720</td></tr>
+          <tr><td class="item">⭐ Mirador de Ulia ★ farewell</td><td class="tier dim">—</td><td class="standard">✓ $340</td><td class="tier">✓ $340</td></tr>
+          <tr><td class="item">🍢 Pintxos · 5 evenings (the txikiteo)</td><td class="tier">✓ $400</td><td class="standard">✓ $600</td><td class="tier">✓ $900</td></tr>
+          <tr><td class="item">🥖 Lunches · 5 days</td><td class="tier">✓ $300</td><td class="standard">✓ $700</td><td class="tier">✓ $1,200</td></tr>
+          <tr><td class="item">🥐 Breakfasts out</td><td class="tier dim">—</td><td class="standard">✓ $100</td><td class="tier">✓ $400</td></tr>
+          <tr><td class="item">🍷 Txakoli wineries · 2 tastings</td><td class="tier">✓ $80</td><td class="standard">✓ $100</td><td class="tier">✓ $200</td></tr>
+          <tr><td class="item">🌊 Pukas surf lesson (group)</td><td class="tier">✓ $90</td><td class="standard">✓ $90</td><td class="tier">✓ $180</td></tr>
+          <tr><td class="item">🧖 La Perla 2h + couples massage</td><td class="tier dim">—</td><td class="standard">✓ $310</td><td class="tier">✓ $500</td></tr>
+          <tr><td class="item">🍎 Sidrería Petritegi cider house</td><td class="tier dim">—</td><td class="standard">✓ $80</td><td class="tier">✓ $80</td></tr>
+          <tr><td class="item" style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">🎆 Free · Fireworks competition · ☄️ Perseids · 🏊 La Concha</td><td class="tier" style="color: rgba(255,255,255,0.5);">included</td><td class="standard" style="color: rgba(255,255,255,0.5);">included</td><td class="tier" style="color: rgba(255,255,255,0.5);">included</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="total-label">Total · all in</td>
+            <td class="tier">$5,314</td>
+            <td class="standard">$11,254</td>
+            <td class="tier">$18,587</td>
+          </tr>
+        </tfoot>
+      </table>
+      </div>
+
+      <p class="footnote">
+        All figures USD, for two travelers. Hotel rates assume Aste Nagusia peak. Restaurant menus quoted from latest 2026 prices. Standard tier is double 3★ + 1× 2★ + 1× 1★ farewell; Splurge adds Martín Berasategui. EUR converted at ~1.08 / USD.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Built for Mark · August 11–17, 2026 · LAX origin · Prices in USD, subject to live booking</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>August 2026 — Madeira &amp; the Funchal Cliffs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --madeira-sea: #1e5a7a;
+    --madeira-sea-deep: #133e54;
+    --madeira-olive: #7d8b5c;
+    --madeira-olive-deep: #5a6740;
+    --madeira-terra: #c1644a;
+    --madeira-sand: #d4a373;
+    --madeira-cream: #faf4e8;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.6; background: #fafaf7; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
+  h3 { font-size: 1.6rem; line-height: 1.25; }
+  h4 { font-size: 1.15rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; }
+  a { color: inherit; }
+
+  /* ===== Back-to-index bar (shared component) ===== */
+  .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+  .back-bar a.back-link:hover { color: var(--madeira-terra); }
+  .back-bar a.back-link .arrow { display: inline-block; transition: transform 0.2s; }
+  .back-bar a.back-link:hover .arrow { transform: translateX(-3px); }
+  .back-bar .brand-mini { font-family: 'Playfair Display', serif; font-size: 0.92rem; color: rgba(255,255,255,0.7); letter-spacing: -0.02em; text-decoration: none; }
+  .back-bar .brand-mini:hover { color: white; }
+  .back-bar .brand-mini .dot { color: var(--madeira-terra); }
+  .back-bar .meta-mini { display: none; font-size: 0.74rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
+  @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
+
+  .topnav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 1rem 0; }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; }
+  .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
+  .topnav .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .topnav .tab { padding: 0.5rem 1.25rem; border-radius: 999px; text-decoration: none; color: var(--madeira-sea); font-size: 0.9rem; font-weight: 500; transition: all 0.2s; border: 1px solid var(--madeira-sea); }
+  .topnav .tab:hover { background: var(--madeira-sea); color: white; }
+
+  .intro-hero { padding: 6rem 0 4rem; text-align: center; background: linear-gradient(180deg, var(--madeira-cream) 0%, #fafaf7 100%); }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--madeira-terra); }
+  .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
+  .intro-hero h1 em { font-style: italic; color: var(--madeira-sea); font-weight: 400; }
+  .intro-hero .lede { max-width: 720px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
+  .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+
+  .destination { padding: 6rem 0 4rem; background: var(--madeira-cream); }
+  .hero-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.12); margin-bottom: 4rem; }
+  .hero-card .hero-image { min-height: 500px; background-size: cover; background-position: center; position: relative;
+    background-image: linear-gradient(135deg, rgba(19,62,84,0.30), rgba(125,139,92,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Funchal_panoramic_view.jpg/1280px-Funchal_panoramic_view.jpg');
+    background-color: var(--madeira-sea-deep); }
+  .hero-card .hero-content { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; background: white; }
+  .hero-card .eyebrow { margin-bottom: 1.25rem; color: var(--madeira-terra); }
+  .hero-card h2 { margin-bottom: 1.5rem; color: var(--madeira-sea-deep); }
+  .hero-card .tagline { font-size: 1.15rem; color: var(--muted); margin-bottom: 2rem; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .stat .stat-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.1; margin-bottom: 0.2rem; color: var(--madeira-sea-deep); }
+  .stat .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 700px; }
+  .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--madeira-terra); }
+  .section-header h2 { margin-bottom: 1rem; color: var(--madeira-sea-deep); }
+  .section-header p { color: var(--muted); font-size: 1.05rem; }
+
+  .flight-box { background: white; border-radius: 16px; padding: 2.5rem; max-width: 920px; margin: 2rem auto 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .flight-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+  .flight-row:last-of-type { border-bottom: none; }
+  .flight-airport .code { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1; font-weight: 700; color: var(--madeira-sea-deep); }
+  .flight-airport .city { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; }
+  .flight-line { text-align: center; color: var(--muted); }
+  .flight-line .dash { height: 1px; background: var(--line); position: relative; margin: 0.5rem 0; }
+  .flight-line .dash::after { content: '⟶'; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: white; padding: 0 0.5rem; color: var(--madeira-terra); }
+  .flight-line .info { font-size: 0.8rem; }
+  .flight-meta { display: flex; gap: 2rem; justify-content: center; padding-top: 1.5rem; margin-top: 1rem; border-top: 2px solid var(--line); }
+  .flight-meta .item { text-align: center; }
+  .flight-meta .item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 0.3rem; }
+  .flight-meta .item .val { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--madeira-sea-deep); }
+
+  .only-this-week { max-width: 1100px; margin: 0 auto 4rem; padding: 3rem; background: linear-gradient(135deg, #faf4e8, #ecf2ee); border-radius: 24px; }
+  .only-this-week .head { text-align: center; margin-bottom: 2.5rem; }
+  .only-this-week h3 { color: var(--madeira-sea-deep); font-size: 2rem; margin-top: 0.5rem; }
+  .only-this-week .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .event-card { background: white; border-radius: 16px; padding: 2rem; border-left: 4px solid var(--madeira-sea); }
+  .event-card.terra { border-left-color: var(--madeira-terra); }
+  .event-card.olive { border-left-color: var(--madeira-olive); }
+  .event-card.sand { border-left-color: var(--madeira-sand); }
+  .event-card .head { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .event-card .icon { font-size: 2.2rem; }
+  .event-card h4 { margin: 0; color: var(--madeira-sea-deep); }
+  .event-card h4.terra { color: var(--madeira-terra); }
+  .event-card h4.olive { color: var(--madeira-olive-deep); }
+  .event-card h4.sand { color: var(--madeira-sand); }
+  .event-card .when { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
+  .event-card p { font-size: 0.95rem; color: #333; margin-bottom: 1rem; }
+  .event-card .book-link { display: inline-block; padding: 0.4rem 0.9rem; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--madeira-terra); border: 1.5px solid var(--madeira-terra); }
+  .event-card .book-link:hover { background: var(--madeira-terra); color: white; }
+  .bonus-callout { margin-top: 2rem; padding: 1.5rem 2rem; background: rgba(125,139,92,0.08); border-radius: 12px; border-left: 4px solid var(--madeira-olive); }
+  .bonus-callout h4 { margin-bottom: 0.5rem; color: var(--madeira-olive-deep); }
+  .bonus-callout p { font-size: 0.95rem; color: #333; margin: 0; }
+  .bonus-callout a { color: var(--madeira-olive-deep); font-weight: 600; }
+
+  .glance-table { max-width: 1000px; margin: 0 auto 4rem; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .glance-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .glance-table th { background: var(--madeira-sea-deep); color: white; padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600; }
+  .glance-table td { padding: 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .glance-table tr:last-child td { border-bottom: none; }
+  .glance-table tr:nth-child(even) td { background: rgba(30,90,122,0.04); }
+  .glance-table td.daynum { font-weight: 600; color: var(--madeira-terra); }
+
+  .itinerary { max-width: 950px; margin: 0 auto; }
+  .day { display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
+  .day:last-child { border-bottom: none; }
+  .day-number .num { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1; font-weight: 600; font-style: italic; color: var(--madeira-terra); }
+  .day-number .date { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .day-content h3 { margin-bottom: 0.75rem; color: var(--madeira-sea-deep); }
+  .day-content ul { list-style: none; }
+  .day-content ul li { padding: 0.45rem 0 0.45rem 1.5rem; position: relative; color: #333; }
+  .day-content ul li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 6px; height: 6px; border-radius: 50%; background: var(--madeira-terra); }
+  .day-content ul li strong { color: var(--madeira-sea-deep); }
+  .day-content ul li a { color: var(--madeira-sea); text-decoration: none; border-bottom: 1px dotted; }
+
+  .hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .hotel-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+  .hotel-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .hotel-card .hotel-image { height: 200px; background-size: cover; background-position: center; position: relative; background-color: var(--madeira-olive); }
+  .hotel-card .hotel-tier { position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.95); padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: var(--madeira-sea-deep); z-index: 2; }
+  .hotel-card .hotel-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .hotel-card .hotel-body h4 { margin-bottom: 0.25rem; color: var(--madeira-sea-deep); }
+  .hotel-card .hotel-body .loc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+  .hotel-card .hotel-body p { font-size: 0.93rem; color: #333; margin-bottom: 1rem; line-height: 1.55; }
+  .hotel-card .hotel-meta { display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.85rem; margin-top: auto; }
+  .hotel-card .hotel-meta .price { font-weight: 600; color: var(--madeira-sea-deep); }
+  .hotel-card .book-link { display: inline-block; padding: 0.35rem 0.85rem; font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--madeira-terra); border: 1.5px solid var(--madeira-terra); align-self: flex-start; margin-top: 0.5rem; }
+  .hotel-card .book-link:hover { background: var(--madeira-terra); color: white; }
+
+  .wine-block { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; max-width: 1100px; margin: 0 auto 2rem; background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.06); align-items: center; }
+  .wine-block .wine-image { min-height: 360px; background-size: cover; background-position: center; background-color: var(--madeira-sand); }
+  .wine-block.fortified .wine-image { background-image: linear-gradient(135deg, rgba(193,100,74,0.30), rgba(142,69,48,0.40)), url('https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80'); }
+  .wine-block.harvest .wine-image { background-image: linear-gradient(135deg, rgba(125,139,92,0.30), rgba(30,90,122,0.40)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80'); }
+  .wine-block .wine-text { padding: 3rem 2.5rem 3rem 0; }
+  .wine-block .eyebrow { color: var(--madeira-terra); }
+  .wine-block h3 { color: var(--madeira-sea-deep); margin-bottom: 1rem; }
+  .wine-block p { color: #333; font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .winery-list .winery { padding: 0.85rem 0; border-bottom: 1px dashed var(--line); }
+  .winery-list .winery:last-child { border-bottom: none; }
+  .winery-list .name { font-weight: 600; color: var(--madeira-sea-deep); margin-bottom: 0.2rem; }
+  .winery-list .name a { color: var(--madeira-terra); text-decoration: none; }
+  .winery-list .desc { font-size: 0.88rem; color: var(--muted); }
+
+  .activities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1100px; margin: 0 auto; }
+  .activity { background: white; border-radius: 12px; padding: 1.75rem 1.25rem; text-align: center; transition: transform 0.2s; border: 1px solid var(--line); }
+  .activity:hover { transform: translateY(-2px); }
+  .activity .icon { font-size: 2.2rem; margin-bottom: 0.85rem; display: block; }
+  .activity h4 { margin-bottom: 0.5rem; font-size: 1rem; color: var(--madeira-sea-deep); }
+  .activity h4 a { color: inherit; text-decoration: none; }
+  .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+  .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
+  .booking .section-header h2 { color: white; }
+  .booking .section-header p { color: rgba(255,255,255,0.7); }
+  .booking .section-header .eyebrow { color: rgba(255,255,255,0.7); }
+  .steps { max-width: 850px; margin: 0 auto; }
+  .step { display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .step:last-child { border-bottom: none; }
+  .step .stepnum { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--madeira-terra); font-style: italic; }
+  .step h4 { color: white; margin-bottom: 0.5rem; }
+  .step p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem; }
+  .step p strong { color: white; }
+  .step .meta-line { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+  .step .meta-line a { color: var(--madeira-sand); text-decoration: none; }
+
+  .budget-table { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px; }
+  .budget-table .head { text-align: center; margin-bottom: 2.5rem; }
+  .budget-table h3 { color: white; margin-top: 0.5rem; }
+  .budget-table .head p { color: rgba(255,255,255,0.6); margin-top: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 0.95rem; }
+  .budget-table table { width: 100%; border-collapse: collapse; color: white; font-size: 0.95rem; }
+  .budget-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
+  .budget-table th.item { text-align: left; color: rgba(255,255,255,0.6); width: 38%; }
+  .budget-table th.tier { text-align: center; color: rgba(255,255,255,0.85); width: 21%; font-size: 0.92rem; }
+  .budget-table th.standard { color: var(--madeira-terra); font-weight: 700; font-size: 1rem; background: rgba(193,100,74,0.12); }
+  .budget-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .budget-table td.item { color: rgba(255,255,255,0.85); }
+  .budget-table td.tier { text-align: center; }
+  .budget-table td.standard { text-align: center; background: rgba(193,100,74,0.06); }
+  .budget-table td.std-mark { font-weight: 600; }
+  .budget-table td.dim { color: rgba(255,255,255,0.3); }
+  .budget-table tfoot td { padding: 1.5rem 0.75rem 0.5rem; font-family: 'Playfair Display', serif; border-top: 2px solid rgba(255,255,255,0.25); border-bottom: none; }
+  .budget-table tfoot td.total-label { font-size: 1.3rem; color: white; }
+  .budget-table tfoot td.tier { font-size: 1.4rem; color: white; }
+  .budget-table tfoot td.standard { font-size: 1.65rem; color: var(--madeira-terra); font-weight: 700; }
+  .budget-table .footnote { text-align: center; color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-top: 2rem; line-height: 1.6; }
+
+  footer { background: #0d0d0d; color: rgba(255,255,255,0.6); padding: 2.5rem 0; text-align: center; font-size: 0.85rem; }
+
+  @media (max-width: 900px) {
+    .hero-card { grid-template-columns: 1fr; }
+    .hero-card .hero-image { min-height: 280px; }
+    .hero-card .hero-content { padding: 2.5rem 2rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .day { grid-template-columns: 1fr; gap: 1rem; }
+    .day-number .num { font-size: 3rem; }
+    .hotels-grid { grid-template-columns: 1fr 1fr; }
+    .activities { grid-template-columns: repeat(2, 1fr); }
+    .flight-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .only-this-week .grid { grid-template-columns: 1fr; }
+    .wine-block { grid-template-columns: 1fr; }
+    .wine-block .wine-text { padding: 2rem; }
+    .topnav .tabs { flex-wrap: wrap; }
+    .container { padding: 0 1.25rem; }
+    .step { grid-template-columns: 60px 1fr; gap: 1rem; }
+  }
+  @media (max-width: 600px) {
+    .hotels-grid, .activities { grid-template-columns: 1fr; }
+    .intro-hero .meta { gap: 1.5rem; }
+    .topnav { padding: 0.6rem 0; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .brand { font-size: 1rem; }
+    .topnav .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+    .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    .glance-table, .budget-table { overflow-x: auto; }
+    .glance-table table, .budget-table table { min-width: 540px; }
+    h2 { font-size: 1.8rem !important; }
+    .day-number .num { font-size: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
+    <span class="meta-mini">Itinerary No. 03C · Madeira · <a href="./aug_11_europe.html" style="color: var(--madeira-terra); text-decoration: none;">compare 4 options ↗</a></span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<nav class="topnav">
+  <div class="container">
+    <div class="brand">August 11 → 17, 2026</div>
+    <div class="tabs">
+      <a href="#itinerary" class="tab">Itinerary</a>
+      <a href="#hotels" class="tab">Hotels</a>
+      <a href="#wine" class="tab">Wine</a>
+      <a href="#food" class="tab">Food</a>
+      <a href="#activities" class="tab">Activities</a>
+      <a href="#book" class="tab">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">Portugal · Atlantic Island · 5 Hotel Nights</span>
+    <h1>Madeira &amp;<br>the <em>Funchal Cliffs.</em></h1>
+    <p class="lede">
+      A subtropical Atlantic island 600 miles west of mainland Portugal. 79°F air, 73°F sea every August day, no heatwave risk thanks to the NE trade winds. World-class whale watching, dive reserves, sunrise summits above the cloud sea — and the 1891 grand-dame Belmond Reid's Palace. <strong>The Perseids viewed from 5,965 feet above the cloud sea</strong> is what you came for.
+    </p>
+    <div class="meta">
+      <div class="meta-item"><div class="label">Departure</div><div class="value">Tue, Aug 11</div></div>
+      <div class="meta-item"><div class="label">Return</div><div class="value">Mon, Aug 17</div></div>
+      <div class="meta-item"><div class="label">Travelers</div><div class="value">Two</div></div>
+      <div class="meta-item"><div class="label">Origin</div><div class="value">LAX</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="destination" id="itinerary">
+  <div class="container">
+
+    <div class="hero-card">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Option C · Portugal · Atlantic Island</span>
+        <h2>Madeira &amp;<br>the Funchal Cliffs</h2>
+        <p class="tagline">Subtropical Atlantic island 600 mi from mainland Portugal. Trade-wind cooled, heatwave-proof. Whales, scuba reserves, sunrise summits above the clouds — and the 1891 grand-dame Belmond Reid's Palace anchoring the trip.</p>
+        <div class="stats">
+          <div class="stat"><div class="stat-value">75–80°F</div><div class="stat-label">August High</div></div>
+          <div class="stat"><div class="stat-value">High</div><div class="stat-label">Crowd Level</div></div>
+          <div class="stat"><div class="stat-value">Madeira</div><div class="stat-label">Signature Wine</div></div>
+          <div class="stat"><div class="stat-value">25 min</div><div class="stat-label">FNC → Funchal</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="eyebrow">Getting There</span>
+      <h2>Flight Plan</h2>
+      <p>One-stop routing via Lisbon — TAP nonstop LAX → LIS overnight Aug 11, 90-min connection, TAP LIS → FNC on Aug 12 mid-afternoon. The famous curved approach over Câmara de Lobos lands you at <strong>4:50 PM</strong>; on the cliff at Reid's for sunset.</p>
+    </div>
+    <div class="flight-box">
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">LAX</div><div class="city">Los Angeles · Tue Aug 11 · dep 4:50 PM</div></div>
+        <div class="flight-line"><div class="info">TAP TP224 nonstop</div><div class="dash"></div><div class="info">11h 5m</div></div>
+        <div class="flight-airport"><div class="code">LIS</div><div class="city">Lisbon · Wed Aug 12 · arr 11:55 AM</div></div>
+      </div>
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">LIS</div><div class="city">Lisbon · 1h 30m layover</div></div>
+        <div class="flight-line"><div class="info">TAP TP1685</div><div class="dash"></div><div class="info">1h 45m</div></div>
+        <div class="flight-airport"><div class="code">FNC</div><div class="city">Madeira · arr <strong>4:50 PM</strong> · cliff-runway · 25 min car to Funchal</div></div>
+      </div>
+      <div class="flight-meta">
+        <div class="item"><div class="label">Est. Round-trip</div><div class="val">$1,150–$1,600</div></div>
+        <div class="item"><div class="label">At hotel by</div><div class="val">6:00 PM</div></div>
+        <div class="item"><div class="label">Carrier</div><div class="val">TAP Air Portugal</div></div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="eyebrow">Day by Day</span>
+      <h2>The Itinerary</h2>
+      <p>One base — Funchal — with the whole island reachable in 75 minutes by car. Pico do Arieiro sunrise · Garajau dive · Desertas catamaran · Caldeirão Verde levada · the Wine Lodge tasting room two blocks from the hotel.</p>
+    </div>
+
+    <div class="only-this-week">
+      <div class="head">
+        <span class="eyebrow" style="color: var(--madeira-terra);">Only This Week</span>
+        <h3>Don't-Miss Events on Your Exact Dates</h3>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 700px; margin-left: auto; margin-right: auto;">Four experiences that only happen during the week you're there. The Perseids above the cloud sea is the headline.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">☄️</span>
+            <div>
+              <h4>Perseid Peak from Pico do Arieiro</h4>
+              <div class="when">Night of <strong>Thu Aug 13 → Fri Aug 14</strong></div>
+            </div>
+          </div>
+          <p><strong>The single most spectacular Perseid vantage in the Atlantic.</strong> Drive 35 min up to Pico do Arieiro (5,965 ft), park at the summit, and watch the meteors from <em>above</em> the cloud sea. New moon Aug 12 = moonless sky, 90+ meteors/hour at peak (1–4 AM local). Bring layers — it's 18°F cooler than Funchal at the summit. Pair with the dawn PR1 ridge hike to Pico Ruivo if you can stay awake.</p>
+          <a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener" class="book-link">Viewing guide →</a>
+        </div>
+
+        <div class="event-card terra">
+          <div class="head">
+            <span class="icon">⛪</span>
+            <div>
+              <h4 class="terra">Assunção de Nossa Senhora</h4>
+              <div class="when"><strong>Sat Aug 15</strong> — Portuguese national holiday</div>
+            </div>
+          </div>
+          <p>The Sé cathedral procession at 10 AM, then Funchal's most-celebrated fireworks of the summer at 10 PM over the bay (separate from the famous New Year's display). Câmara de Lobos and Monte both hold smaller religious processions in the afternoon. <strong>Most shops closed, restaurants packed</strong>; hotel concierges fight for terrace tables. Book the Belmond Reid's afternoon tea Sat at 4 PM if it falls on this trip — they do a special Assumption Day spread.</p>
+          <a href="https://visitmadeira.com/en/whats-on/" target="_blank" rel="noopener" class="book-link">Visit Madeira agenda →</a>
+        </div>
+
+        <div class="event-card olive">
+          <div class="head">
+            <span class="icon">🐬</span>
+            <div>
+              <h4 class="olive">Peak whale and dolphin season</h4>
+              <div class="when">All week · ~95% sighting rate in August</div>
+            </div>
+          </div>
+          <p>Madeira sits in the path of 25+ cetacean species — short-finned pilot whales, sperm whales, common dolphins, occasional Bryde's whales. <strong>Bonita da Madeira's traditional sailing schooner</strong> is the romantic move — 3-hour tour from Funchal Marina ($45 pp). Most operators offer a free re-sail if you don't see anything; in August you won't need it. <strong>Book the sunset slot</strong> Day 3 or 4.</p>
+          <a href="https://bonitadamadeira.com/tours/whales-dolphins/" target="_blank" rel="noopener" class="book-link">Bonita da Madeira →</a>
+        </div>
+
+        <div class="event-card sand">
+          <div class="head">
+            <span class="icon">🐠</span>
+            <div>
+              <h4 class="sand">Garajau Marine Reserve · peak conditions</h4>
+              <div class="when">All week · 73°F sea, 50+ ft visibility</div>
+            </div>
+          </div>
+          <p>The Garajau Partial Nature Reserve (protected since 1986) is famous for its resident, hand-feedable <strong>dusky groupers</strong>, plus barracuda, eagle rays, occasional mantas. August has the warmest water and clearest visibility of the year. <strong>Manta Diving Madeira</strong> at Galo Resort runs morning two-tank dives — perfect Day 4 (Sat Aug 15) before the evening fireworks. Beginners can do a Discover Scuba session in the same waters.</p>
+          <a href="https://mantadiving.com/en/service/" target="_blank" rel="noopener" class="book-link">Manta Diving →</a>
+        </div>
+
+      </div>
+
+      <div class="bonus-callout">
+        <h4>🍇 Bonus — Madeira Wine Festival preview tastings (the ambitious add-on)</h4>
+        <p>The official <strong>Festa do Vinho Madeira opens Aug 27</strong> — 10 days <em>after</em> you leave. But Blandy's, Henriques &amp; Henriques, and the producers in Estreito de Câmara de Lobos are setting up for the festival the week of your trip, which means <strong>library-stock tastings and lock-in lots</strong> are offered to walk-ins as warm-up runs. Ask Blandy's about the <em>Vintage Premium</em> tour (4 wines including a Frasqueira) — they often slot in extra rare bottles in the week before opening. <a href="https://blandyswinelodge.com/en/wine-tasting/" target="_blank" rel="noopener">Blandy's →</a></p>
+      </div>
+    </div>
+
+    <div class="glance-table">
+      <table>
+        <thead>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="daynum">1</td><td>Wed Aug 12</td><td>Arrival · cliff sunset</td><td>Land FNC 4:50 PM · check in Reid's · terrace cocktails</td><td>Hotel terrace · Madeira wine flight</td></tr>
+          <tr><td class="daynum">2</td><td>Thu Aug 13</td><td>Funchal · William ★</td><td>Mercado · Blandy's Premium tasting</td><td><strong>William ★</strong> at Reid's</td></tr>
+          <tr><td class="daynum">3</td><td>Fri Aug 14</td><td>Whales 🐬 + Perseids ☄️</td><td>Bonita schooner · Câmara de Lobos · Cabo Girão · Perseids at Pico Arieiro</td><td>Vila do Peixe (early)</td></tr>
+          <tr><td class="daynum">4</td><td>Sat Aug 15</td><td>Garajau dive 🐠 + Asunção ⛪</td><td>2-tank dive · spa · fireworks at 10 PM</td><td><strong>Desarma ★</strong></td></tr>
+          <tr><td class="daynum">5</td><td>Sun Aug 16</td><td>North coast levada</td><td>Caldeirão Verde · Porto Moniz lava pools · Fanal forest</td><td><strong>Il Gallo d'Oro ★★ farewell</strong></td></tr>
+          <tr><td class="daynum">6</td><td>Mon Aug 17</td><td>Departure</td><td>Lido swim · transfer to FNC</td><td>On the plane</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="itinerary">
+
+      <div class="day">
+        <div class="day-number"><div class="num">01</div><div class="date">Wed Aug 12</div></div>
+        <div class="day-content">
+          <h3>Arrival · cliff sunset</h3>
+          <ul>
+            <li><strong>4:50 PM</strong> Land FNC · <a href="https://en.wikipedia.org/wiki/Madeira_Airport" target="_blank" rel="noopener">curved-approach landing</a> over Câmara de Lobos cliffs (the runway is on 180 concrete pillars 230 ft tall)</li>
+            <li><strong>5:30 PM</strong> Pre-booked transfer to Belmond Reid's Palace ($32, 25 min)</li>
+            <li><strong>6:00 PM</strong> Check in · bags up · drink in the bar overlooking the saltwater pool</li>
+            <li><strong>7:30 PM</strong> Sunset on the terrace · Madeira wine flight (Sercial dry → Verdelho → Bual → Malmsey sweet)</li>
+            <li><strong>9:00 PM</strong> Hotel terrace dinner · early sleep (you've been awake 24 hours)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">02</div><div class="date">Thu Aug 13</div></div>
+        <div class="day-content">
+          <h3>Funchal · Blandy's · William ★</h3>
+          <ul>
+            <li><strong>10:00 AM</strong> Walk down to Funchal old town (20 min downhill, taxi back uphill)</li>
+            <li><strong>10:30 AM</strong> <strong><a href="https://www.mercadodoslavradores.com/" target="_blank" rel="noopener">Mercado dos Lavradores</a></strong> — fruit, scabbardfish, embroidery (go before the cruise ship crowds)</li>
+            <li><strong>12:00 PM</strong> Rua de Santa Maria (painted-door street), Sé cathedral</li>
+            <li><strong>1:00 PM</strong> Lunch at <a href="https://www.tripadvisor.com/Restaurant_Review-g189167-d15634964-Reviews-KAMPO_by_Chef_Julio_Pereira" target="_blank" rel="noopener">Kampo</a> · farm-to-table tasca · open kitchen</li>
+            <li><strong>3:00 PM</strong> <strong><a href="https://blandyswinelodge.com/en/wine-tasting/" target="_blank" rel="noopener">Blandy's Wine Lodge Premium Tour</a></strong> · 75 min, 3 wines, $22 pp · ask about Vintage Premium add-on</li>
+            <li><strong>5:00 PM</strong> Stroll Avenida Arriaga · gelato at Fábrica Santo António</li>
+            <li><strong>8:00 PM</strong> <strong><a href="https://www.belmond.com/hotels/europe/portugal/madeira/belmond-reids-palace/william-restaurant" target="_blank" rel="noopener">William ★</a></strong> at Reid's Palace · tasting + wine pairings (~$490–$650/cpl) · smart-elegant dress</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">03</div><div class="date">Fri Aug 14</div></div>
+        <div class="day-content">
+          <h3>Whales 🐬 · Câmara de Lobos · Perseids ☄️</h3>
+          <ul>
+            <li><strong>10:00 AM</strong> <strong><a href="https://bonitadamadeira.com/tours/whales-dolphins/" target="_blank" rel="noopener">Bonita da Madeira</a></strong> sailing-schooner whale &amp; dolphin tour · Funchal Marina · $45 pp · 3 hours</li>
+            <li><strong>1:30 PM</strong> Drive 15 min west to <strong>Câmara de Lobos</strong> · lunch at <a href="https://www.tripadvisor.com/Restaurant_Review-g1190957-d1529778-Reviews-Restaurant_Vila_do_Peixe" target="_blank" rel="noopener">Vila do Peixe</a> · pick-your-fish grilled on embers, harbor view</li>
+            <li><strong>3:30 PM</strong> Walk the harbor, find Churchill's painting plaque, poncha at a tasca</li>
+            <li><strong>4:30 PM</strong> 10 min drive to <strong>Cabo Girão Skywalk</strong> · glass floor 1,902 ft above the sea, free</li>
+            <li><strong>6:00 PM</strong> Back to hotel · nap. You'll need it.</li>
+            <li><strong>10:30 PM</strong> Drive 35 min up to <strong>Pico do Arieiro (5,965 ft)</strong> for the <strong>Perseid meteor shower peak</strong>. Bring fleece, blanket, thermos, headlamp</li>
+            <li><strong>1–4 AM</strong> Watch the sky from above the clouds. The most singular night of the trip.</li>
+            <li><strong>5:00 AM</strong> Back at hotel</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">04</div><div class="date">Sat Aug 15</div></div>
+        <div class="day-content">
+          <h3>Garajau dive 🐠 · Assumption · fireworks</h3>
+          <ul>
+            <li><strong>Note:</strong> Sleep in until 11 AM. You're recovering from the Perseids and Asunção is a national holiday — most shops closed, restaurants packed. Religious procession at the Sé at 10 AM.</li>
+            <li><strong>11:30 AM</strong> Late breakfast on the hotel terrace</li>
+            <li><strong>1:00 PM</strong> Drive 15 min east to Caniço · <strong><a href="https://mantadiving.com/en/service/" target="_blank" rel="noopener">Manta Diving Madeira</a></strong> at Galo Resort</li>
+            <li><strong>1:30–5:30 PM</strong> <strong>Two-tank Garajau Reserve dive</strong> (~$115 pp incl. kit, boat) · hand-feedable groupers, barracuda, eagle rays</li>
+            <li><strong>6:00 PM</strong> Back at hotel · cliff-pool sunset · Madeira poncha at the bar</li>
+            <li><strong>8:00 PM</strong> <strong><a href="https://desarma.pt/en/" target="_blank" rel="noopener">Desarma ★ (Octávio Freitas)</a></strong> · The Views Baía · tasting + pairings (~$380–$490/cpl)</li>
+            <li><strong>10:00 PM</strong> <strong>Funchal Bay fireworks</strong> for Assumption Day · visible from the restaurant terrace or back at the Reid's pool deck</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">05</div><div class="date">Sun Aug 16</div></div>
+        <div class="day-content">
+          <h3>North coast · levada · Il Gallo d'Oro ★★</h3>
+          <ul>
+            <li><strong>9:30 AM</strong> Drive north (~75 min via VE1 + VR1 tunnels) — or pre-book driver-guide</li>
+            <li><strong>10:30 AM</strong> <strong>Levada do Caldeirão Verde (PR9)</strong> · start at Queimadas Forest Park · 7.1 mi loop · 4 tunnels (headlamps!) · ends at a 330 ft waterfall plunging into a circular emerald pool</li>
+            <li><strong>3:30 PM</strong> Late lunch at Santana or drive to <strong>Porto Moniz</strong></li>
+            <li><strong>4:30 PM</strong> Swim in <strong><a href="https://www.tripadvisor.com/Attraction_Review-g644297-d1928951-Reviews-Porto_Moniz_Natural_Swimming_Pools" target="_blank" rel="noopener">Porto Moniz natural lava pools</a></strong> ($3) — Atlantic refreshes through volcanic rock</li>
+            <li><strong>6:00 PM</strong> Drive home via <strong>Fanal forest</strong> at golden hour — twisted til (Ocotea foetens) trees in mist · UNESCO Laurissilva</li>
+            <li><strong>8:30 PM</strong> <strong><a href="https://guide.michelin.com/en/ilha-da-madeira/funchal/restaurant/il-gallo-d-oro" target="_blank" rel="noopener">Il Gallo d'Oro ★★</a></strong> farewell dinner · Chef Benoît Sinthon · Top Experience tasting with wine pairings (~$700–$820/cpl) · book 6 weeks ahead</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">06</div><div class="date">Mon Aug 17</div></div>
+        <div class="day-content">
+          <h3>Departure</h3>
+          <ul>
+            <li><strong>9:00 AM</strong> Slow breakfast on the Reid's terrace</li>
+            <li><strong>10:30 AM</strong> Lido saltwater complex swim or Doca do Cavacas natural pools · last sea immersion</li>
+            <li><strong>1:00 PM</strong> Pick up Madeira embroidery + vintage Bual at Blandy's shop on Av. Arriaga</li>
+            <li><strong>3:00 PM</strong> Taxi to FNC (~$30, 25 min)</li>
+            <li><strong>5:25 PM</strong> TAP TP1686 FNC → LIS (1h 45m)</li>
+            <li><strong>9:00 PM</strong> 2h LIS connection</li>
+            <li><strong>11:05 PM</strong> TAP TP223 LIS → LAX nonstop (12h)</li>
+            <li><strong>3:30 AM same day arrival</strong> Touch down LAX (gain 8 hours)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="hotels">
+      <span class="eyebrow">Where to Stay</span>
+      <h2>Six Hotels, One Decision</h2>
+      <p>Madeira's coast is volcanic — no sandy beaches in Funchal. Hotels offer cliff pools, lidos, or sea elevators. <strong>Belmond Reid's is the heritage choice</strong>, Cliff Bay holds the only 2★, Savoy is the modern stunner. All prices USD, peak August.</p>
+    </div>
+    <div class="hotels-grid">
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(19,62,84,0.3), rgba(193,100,74,0.4)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80');">
+          <span class="hotel-tier">★ Top Pick</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Belmond Reid's Palace</h4>
+          <div class="loc">Estrada Monumental · 1891 cliffside garden · 10-acre estate</div>
+          <p>The legendary 1891 grande dame. <strong>Three pools</strong> (one heated saltwater on the rocks), tennis, private sea access, the famous afternoon tea ritual since 1937. <strong>William 1★</strong> on premises. Half-board packages available. Churchill stayed here.</p>
+          <div class="hotel-meta">
+            <span class="price">$700–$1,200 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.belmond.com/hotels/europe/portugal/madeira/belmond-reids-palace/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(19,62,84,0.3), rgba(125,139,92,0.4)), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80');">
+          <span class="hotel-tier">2★ on site</span>
+        </div>
+        <div class="hotel-body">
+          <h4>The Cliff Bay (PortoBay)</h4>
+          <div class="loc">Estrada Monumental cliff · sea elevator · 5★</div>
+          <p>Cliff promontory with direct ocean access via the sea elevator. 204 rooms, three pools, spa. <strong>Il Gallo d'Oro ★★</strong> on premises — Madeira's only 2-star, Chef Benoît Sinthon since 2004. <strong>The food-first pick.</strong></p>
+          <div class="hotel-meta">
+            <span class="price">$410–$625 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.portobay.com/en/hotels/madeira-hotels/the-cliff-bay" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(125,139,92,0.3), rgba(193,100,74,0.4)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80');">
+          <span class="hotel-tier">Modern luxury</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Savoy Palace</h4>
+          <div class="loc">Avenida do Infante · central Funchal · opened 2019</div>
+          <p>Newest 5★ in Funchal. Six pools incl. <strong>two rooftop adults-only infinity pools</strong> (Galáxia Skybar) with 360° views. 33,000 sq ft Laurea Spa — one of Europe's largest. Rooftop Galáxia Skyfood + Mediterranean Avista.</p>
+          <div class="hotel-meta">
+            <span class="price">$490–$760 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.savoysignature.com/savoypalacehotel/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(125,139,92,0.3), rgba(19,62,84,0.35)), url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');">
+          <span class="hotel-tier">Garden quinta</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Quinta da Casa Branca</h4>
+          <div class="loc">Residential Funchal · 28,000 m² estate · 41 rooms</div>
+          <p>Boutique 5★ on a banana-and-frangipani estate. Manor-house suites available. <strong>Two pools, Frangipani spa, Mediterranean restaurant.</strong> Small Luxury Hotels member. The intimate garden retreat alternative to the Estrada Monumental cliff hotels.</p>
+          <div class="hotel-meta">
+            <span class="price">$325–$490 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.quintacasabranca.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(125,139,92,0.4)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80');">
+          <span class="hotel-tier">All-suite</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Les Suites at The Cliff Bay</h4>
+          <div class="loc">Within The Cliff Bay complex · 23 suites only</div>
+          <p>23 suites in a restored century-old villa + new wing. Private infinity pool, sea-view gardens. <strong>Full access to The Cliff Bay's spa + Il Gallo d'Oro</strong> next door. Michelin Guide hotel listing.</p>
+          <div class="hotel-meta">
+            <span class="price">$700–$1,025 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.portobay.com/en/hotels/madeira-hotels/les-suites-at-the-cliff-bay" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(125,139,92,0.3), rgba(19,62,84,0.4)), url('https://images.unsplash.com/photo-1551516114-c39ed83b3946?w=600&q=80');">
+          <span class="hotel-tier">North coast splurge</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Quinta do Furão</h4>
+          <div class="loc">Santana · north-coast cliff edge · 75 min from Funchal</div>
+          <p>Cliffside hotel with an infinity pool over the wild north coast. Vineyards on the property; restaurant has 5★ TripAdvisor stickiness. Pair as a 2-night split-stay if you want to do the levada from the trailhead and skip the Funchal drive.</p>
+          <div class="hotel-meta">
+            <span class="price">$220–$360 / night</span>
+            <span>★★★★</span>
+          </div>
+          <a href="http://quinta-do-furao.santana.hotel-madeira.net/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="wine">
+      <span class="eyebrow">The Glass</span>
+      <h2>Two Stops, 15 Minutes Apart</h2>
+      <p>The four styles of fortified Madeira in central Funchal, and the harvest vineyards 15 min west in Estreito de Câmara de Lobos. Both are wine pilgrimages with 500-year histories.</p>
+    </div>
+    <div class="wine-block fortified">
+      <div class="wine-image"></div>
+      <div class="wine-text">
+        <span class="eyebrow">Funchal · the four styles</span>
+        <h3>500 Years of Fortified Wine</h3>
+        <p>Madeira wine is shipped, baked, and oxidized — and that's <em>by design</em>. The accidental discovery in the 17th century that wine improved after being carried across the tropics created the four canonical styles: <strong>Sercial (dry), Verdelho (medium-dry), Bual (medium-sweet), Malmsey (sweet)</strong>. The best Frasqueira bottlings (single-vintage, 20+ years cask-aged) outlive most other wines on earth.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://blandyswinelodge.com/en/wine-tasting/" target="_blank" rel="noopener">Blandy's Wine Lodge ↗</a></div>
+            <div class="desc">Av. Arriaga 28 · the historic lodge. Premium Tour $22 (3 wines), Vintage Premium $58 (Frasqueira flight), Private $150 pp. Mon–Sat 10–6:30. +351 291 228 978.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.henriquesehenriques.pt/en/" target="_blank" rel="noopener">Henriques &amp; Henriques ↗</a></div>
+            <div class="desc">The other historic house — Câmara de Lobos. Founded 1850. By appointment Mon–Fri. +351 291 941 551.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.barbeito.pt/en/" target="_blank" rel="noopener">Barbeito ↗</a></div>
+            <div class="desc">Modern producer respected for single-cask bottlings. Estreito de Câmara de Lobos. Tour + tasting Mon–Fri by appointment.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.justinosmadeira.com/en/" target="_blank" rel="noopener">Justino's Madeira ↗</a></div>
+            <div class="desc">The largest Madeira producer, Cancela. Modern facility tour, all four styles, value-priced bottlings. Mon–Fri tours.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wine-block harvest" style="margin-top: 2rem;">
+      <div class="wine-image" style="order: 2;"></div>
+      <div class="wine-text" style="order: 1;">
+        <span class="eyebrow">Estreito de Câmara de Lobos · the vineyards</span>
+        <h3>Where the Grapes Grow</h3>
+        <p>The terraced volcanic slopes above Câmara de Lobos are the heart of Madeira viticulture — vines trained on <em>latadas</em> (low wooden trellises) for 500 years. The Aug 27 Wine Festival is built around the grape harvest here, with traditional cart-pulling festivals through the villages. The week before, growers welcome visits and pre-festival tastings.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://www.tukatuka.pt/en/" target="_blank" rel="noopener">Tuka Tuka Quinta ↗</a></div>
+            <div class="desc">Small-batch terrace vineyard above Estreito. Walking tour of the latadas + tasting €40 pp. By appointment.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.adegadesaovicente.com/" target="_blank" rel="noopener">Adega de São Vicente ↗</a></div>
+            <div class="desc">North-coast small producer making table wine from local grapes. Pair with the Caldeirão Verde drive day.</div>
+          </div>
+          <div class="winery">
+            <div class="name">Quinta do Furão wine room</div>
+            <div class="desc">North-coast hotel with on-site vineyard tasting room. Pair with the levada hike day if doing the split-stay.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.visitmadeira.com/en/whats-on/events/wine-festival/" target="_blank" rel="noopener">Festa do Vinho info ↗</a></div>
+            <div class="desc">The Aug 27 – Sep 13 festival opens 10 days after your trip. Cart-pulling and grape-stomping in Estreito.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" id="food">
+      <span class="eyebrow">The Table</span>
+      <h2>Where You'll Eat</h2>
+      <p>Madeira's Michelin scene is small but real. Il Gallo d'Oro (2★), William (1★), Desarma (1★) hold the three stars. Local tasca culture is heavy and good — espetada, bolo do caco, lapas grelhadas. <strong>Reserve Il Gallo d'Oro 6 weeks ahead.</strong></p>
+    </div>
+    <div class="hotels-grid">
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.4), rgba(19,62,84,0.5)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
+          <span class="hotel-tier">★★ Michelin</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Il Gallo d'Oro</h4>
+          <div class="loc">The Cliff Bay · Chef Benoît Sinthon · Madeira's only 2★</div>
+          <p>2★ since 2017. Green Star 2022. Two tasting menus: <strong>Terroir Experience</strong> (island-product focused) and <strong>Top Experience</strong> (9 or 12 courses). <strong>$190–$245 pp food</strong>; with pairings $300–$410 pp ($605–$820 / cpl). Closed Sun/Mon. <strong>Book 6 weeks ahead.</strong></p>
+          <div class="hotel-meta">
+            <span class="price">$190–$245 / person</span>
+            <span>★★ Michelin</span>
+          </div>
+          <a href="https://guide.michelin.com/en/ilha-da-madeira/funchal/restaurant/il-gallo-d-oro" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(125,139,92,0.45)), url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80');">
+          <span class="hotel-tier">★ Michelin</span>
+        </div>
+        <div class="hotel-body">
+          <h4>William</h4>
+          <div class="loc">Belmond Reid's Palace · Chef Luís Pestana</div>
+          <p>The first Madeira-born Michelin chef. Atlantic-island haute cuisine — mirlitons (chayote), island organic meat, passion fruit. <strong>Tasting menu ~$180–$210 pp</strong>, pairings +$95–$130. Smart-elegant dress code. Reid's HB credit applies here.</p>
+          <div class="hotel-meta">
+            <span class="price">$180–$210 / person</span>
+            <span>★ Michelin</span>
+          </div>
+          <a href="https://www.belmond.com/hotels/europe/portugal/madeira/belmond-reids-palace/william-restaurant" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(19,62,84,0.45)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80');">
+          <span class="hotel-tier">★ Michelin (2024)</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Desarma</h4>
+          <div class="loc">The Views Baía hotel · Chef Octávio Freitas</div>
+          <p>The first locally-owned Michelin restaurant in Madeira — star awarded Feb 2024. Hyper-local product, salazones (cured fish) a specialty. <strong>Tasting ~$130–$175 pp</strong>, with pairings ~$220–$265. <strong>Book 2–3 weeks ahead.</strong></p>
+          <div class="hotel-meta">
+            <span class="price">$130–$175 / person</span>
+            <span>★ Michelin</span>
+          </div>
+          <a href="https://desarma.pt/en/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(74,144,164,0.4)), url('https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80');">
+          <span class="hotel-tier">Farm-to-table tasca</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Kampo by Júlio Pereira</h4>
+          <div class="loc">Funchal old town · Rua do Sabão 6 · open kitchen</div>
+          <p>Farm-to-table tasca with open kitchen. Sustainable Madeiran cooking. Signature: <strong>oxtail ravioli</strong>, T-bone, tuna tartare. Chef's table at the counter is the seat. $60–$90/cpl with wine. Book 1–2 weeks ahead.</p>
+          <div class="hotel-meta">
+            <span class="price">$30–$45 / person</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g189167-d15634964-Reviews-KAMPO_by_Chef_Julio_Pereira-Funchal_Madeira_Madeira_Islands.html" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(90,103,64,0.45)), url('https://images.unsplash.com/photo-1481833761820-0509d3217039?w=600&q=80');">
+          <span class="hotel-tier">Harbor fish</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Vila do Peixe</h4>
+          <div class="loc">Câmara de Lobos harbor · pick-your-fish grill</div>
+          <p>Pick your fish from the ice display, grilled simply on wood embers with rock salt and olive oil. Harbor view onto Churchill's fishing village. <strong>$45–$65/cpl</strong> with wine. Walk-in OK at off-peak; reserve at lunch.</p>
+          <div class="hotel-meta">
+            <span class="price">$22–$32 / person</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g1190957-d1529778-Reviews-Restaurant_Vila_do_Peixe-Camara_De_Lobos_Madeira_Madeira_Islands.html" target="_blank" rel="noopener" class="book-link">Find →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(138,143,90,0.3), rgba(193,100,74,0.45)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
+          <span class="hotel-tier">Rooftop sunset</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Galáxia Skyfood</h4>
+          <div class="loc">Savoy Palace rooftop · 360° Pan-Asian + sushi</div>
+          <p>Pan-Asian + sushi + cocktails with sunset views over Funchal Bay from the 17th floor. Adults-only rooftop pool deck doubles as a bar. <strong>$85–$130/cpl.</strong> Book 1–2 weeks ahead. Best for the cocktail-hour view; food is solid not extraordinary.</p>
+          <div class="hotel-meta">
+            <span class="price">$40–$65 / person</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.savoysignature.com/savoypalacehotel/en/restaurants-bars/galaxia-skyfood/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="activities">
+      <span class="eyebrow">Unique Experiences</span>
+      <h2>Things You Won't Do Anywhere Else</h2>
+      <p>Sunrise above the cloud sea. Hand-feeding groupers. Dropping into a 100-foot waterfall pool. Here are the 16 that turn a good week into the one you'll talk about.</p>
+    </div>
+    <div class="activities">
+      <div class="activity"><span class="icon">☁️</span><h4>Pico do Arieiro sunrise</h4><p>Drive-up summit 5,965 ft. Stand above the cloud sea. Free, driver ~$195/half-day.</p></div>
+      <div class="activity"><span class="icon">🥾</span><h4><a href="https://www.tripadvisor.com/Attraction_Review-g1056572-d10024571-Reviews-PR1_Pico_do_Arieiro_to_Pico_Ruivo" target="_blank" rel="noopener">PR1 Arieiro → Ruivo ↗</a></h4><p>5.8 mi signature ridge hike. One-way; arrange pickup. $3 tax. 3–5h hard.</p></div>
+      <div class="activity"><span class="icon">🐬</span><h4><a href="https://bonitadamadeira.com/tours/whales-dolphins/" target="_blank" rel="noopener">Bonita schooner ↗</a></h4><p>Traditional sailing schooner whale tour from Funchal Marina. $43–$50 pp / 3h.</p></div>
+      <div class="activity"><span class="icon">🐠</span><h4><a href="https://mantadiving.com/en/service/" target="_blank" rel="noopener">Scuba Garajau ↗</a></h4><p>Manta Diving · friendly resident groupers in the marine reserve. $105–$125 / 2 tanks.</p></div>
+      <div class="activity"><span class="icon">⛵</span><h4><a href="https://www.getyourguide.com/madeira-l67/catamaran-trip-to-desertas-islands-from-funchal-t57246/" target="_blank" rel="noopener">Desertas Islands ↗</a></h4><p>Full-day catamaran to uninhabited UNESCO reserve. Lunch + snorkel. $90–$110 / 9h.</p></div>
+      <div class="activity"><span class="icon">🧗</span><h4><a href="https://epicmadeira.com/" target="_blank" rel="noopener">Canyoning ↗</a></h4><p>Madeira's top-5 in the world for it. Curral das Freiras or Ribeiro Frio routes. $70–$105.</p></div>
+      <div class="activity"><span class="icon">🌊</span><h4><a href="https://www.madeira-adventure-kingdom.com/" target="_blank" rel="noopener">Coasteering ↗</a></h4><p>Baía d'Abra or Ponta do Pargo. 3–4h with wetsuit/helmet. $55–$70 pp.</p></div>
+      <div class="activity"><span class="icon">🏊</span><h4><a href="https://www.tripadvisor.com/Attraction_Review-g644297-d1928951-Reviews-Porto_Moniz_Natural_Swimming_Pools" target="_blank" rel="noopener">Porto Moniz lava pools ↗</a></h4><p>Natural volcanic pools refreshed by Atlantic surge. North coast. $3 entry.</p></div>
+      <div class="activity"><span class="icon">🌳</span><h4>Levada do Caldeirão Verde</h4><p>7.1 mi PR9 · 4 tunnels (headlamps!) · 330 ft waterfall to emerald pool. $3 tax.</p></div>
+      <div class="activity"><span class="icon">🌫️</span><h4>Fanal forest</h4><p>UNESCO Laurissilva · twisted til trees in mist. Best at golden hour. $3 tax.</p></div>
+      <div class="activity"><span class="icon">🗻</span><h4>Cabo Girão Skywalk</h4><p>1,902 ft sea cliff with glass floor — one of Europe's highest. Free.</p></div>
+      <div class="activity"><span class="icon">🎨</span><h4>Câmara de Lobos</h4><p>Churchill painted here in 1950 (plaque). Working fishing harbor. Lunch + poncha.</p></div>
+      <div class="activity"><span class="icon">🚡</span><h4><a href="https://madeiracablecar.com/en/" target="_blank" rel="noopener">Monte Cable Car ↗</a></h4><p>Funchal → Monte tropical garden, 20-min ride. $14 one-way / $20 RT.</p></div>
+      <div class="activity"><span class="icon">🪵</span><h4>Carros de Cesto</h4><p>Wicker toboggan ride down from Monte. Two carreiros push you ~1.2 mi. $32/cpl.</p></div>
+      <div class="activity"><span class="icon">🍷</span><h4><a href="https://blandyswinelodge.com/en/wine-tasting/" target="_blank" rel="noopener">Blandy's Premium ↗</a></h4><p>400 years of Madeira fortified wine. Premium $22, Vintage $58, Private $150 pp.</p></div>
+      <div class="activity"><span class="icon">🍹</span><h4>Poncha at a tasca</h4><p>Sugarcane spirit + honey + lemon (or passion fruit), muddled with a caralhinho. $4.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="booking" id="book">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Pre-Trip Punch List</span>
+      <h2>Book These Now</h2>
+      <p>Hotels are the tight gate in Madeira — Belmond and Savoy sell out 3–4 months ahead in peak August.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="stepnum">1</div>
+        <div>
+          <h4>Flight — TAP TP224 / TP1685, Aug 11 4:50 PM LAX → LIS → FNC</h4>
+          <p>Book on flytap.com or via Chase/Amex travel portal. The LIS connection is 90 min — comfortable. Premium Economy adds ~$700 each for the LAX-LIS leg. Round-trip target: <strong>$1,150–$1,600</strong>.</p>
+          <div class="meta-line">→ <a href="https://www.flytap.com/en_us/flights-to-funchal" target="_blank" rel="noopener">flytap.com</a> · share confirmation # with hotel concierge for transfer</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">2</div>
+        <div>
+          <h4>Hotel — Belmond Reid's Palace</h4>
+          <p>Aug 12 → Aug 17 (5 nights). Sea-view room. Half-board package available — credit applies at William ★ on premises. <strong>Madeira's busiest month</strong> — call direct.</p>
+          <div class="meta-line">→ <a href="https://www.belmond.com/hotels/europe/portugal/madeira/belmond-reids-palace/" target="_blank" rel="noopener">belmond.com</a> · +351 291 717 171</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">3</div>
+        <div>
+          <h4>Il Gallo d'Oro ★★ — pick a night, lock it in</h4>
+          <p>Madeira's only 2-star. Recommend dinner on Day 5 (Sunday Aug 16) — pairs with the levada day. <strong>Book 6 weeks ahead.</strong> Closed Sun/Mon — Day 5 is the only Sun option (verify open Aug 16); fall back to Day 3 (Fri Aug 14) if closed.</p>
+          <div class="meta-line">→ <a href="https://guide.michelin.com/en/ilha-da-madeira/funchal/restaurant/il-gallo-d-oro" target="_blank" rel="noopener">Michelin Guide reservation</a> · +351 291 707 700</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">4</div>
+        <div>
+          <h4>Bonita da Madeira whale schooner — Day 3 morning</h4>
+          <p>Traditional sailing schooner, 10 AM departure from Cais nº8 at Funchal Marina. 3 hours. $45 pp. Book online — fills 2–3 weeks ahead in August. Note: Day 3 is also Perseids night; don't double-book yourself.</p>
+          <div class="meta-line">→ <a href="https://bonitadamadeira.com/" target="_blank" rel="noopener">bonitadamadeira.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">5</div>
+        <div>
+          <h4>Manta Diving Garajau — Day 4 afternoon</h4>
+          <p>Two-tank dive Saturday Aug 15, 1:30 PM. $115 pp incl. gear, boat, briefings. Book direct — they have just two boats. Half-day, leaves you fresh for Desarma at 8 PM.</p>
+          <div class="meta-line">→ <a href="https://mantadiving.com/en/service/" target="_blank" rel="noopener">mantadiving.com</a> · Galo Resort, Caniço</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">6</div>
+        <div>
+          <h4>Pre-arrange Pico do Arieiro driver — Friday Aug 14 night</h4>
+          <p>For the Perseids · 10:30 PM pickup, return ~5 AM. Half-day driver $195–$270 for two. Critical because the road up is unlit and the parking lot fills with Madeirans looking up. Driver waits, makes coffee, gets you home asleep.</p>
+          <div class="meta-line">→ Hotel concierge or Madeira Auto Tours</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">7</div>
+        <div>
+          <h4>Rental car · 5 days</h4>
+          <p>Compact automatic. Hertz, Avis, Europcar at FNC airport. <strong>$60–$80/day automatic, $32–$50 manual</strong> if you can drive stick. Roundabouts everywhere; the VE/VR expressway tunnels make the south coast fast. Most hotels have parking $15–25/day. Levada/Porto Moniz day needs a car.</p>
+          <div class="meta-line">→ <a href="https://www.hertz.com/" target="_blank" rel="noopener">hertz.com</a> · <a href="https://www.europcar.com/" target="_blank" rel="noopener">europcar.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">8</div>
+        <div>
+          <h4>Other dinner reservations</h4>
+          <p>Reserve <strong>William ★</strong> (Thu Aug 13), <strong>Desarma ★</strong> (Sat Aug 15), <strong>Kampo</strong> (Thu lunch), <strong>Vila do Peixe</strong> (Fri lunch). Plus the Blandy's Wine Lodge Premium Tour Thursday 3 PM. All take direct reservations by phone or website. 30 days ahead.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="budget-table">
+      <div class="head">
+        <span class="eyebrow">Three Ways to Do It</span>
+        <h3>Budget by Tier</h3>
+        <p>Same trip, three spending levels. ✓ = included in that tier. Standard is the recommended plan with Belmond Reid's + Il Gallo d'Oro ★★ + William ★ + Desarma ★.</p>
+      </div>
+
+      <div style="overflow-x: auto;">
+      <table>
+        <thead>
+          <tr>
+            <th class="item">Item</th>
+            <th class="tier">Budget</th>
+            <th class="tier standard">Standard ★</th>
+            <th class="tier">Splurge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="item">✈️ Flights · Economy (TAP via LIS)</td><td class="tier">✓ $2,500</td><td class="standard">✓ $2,500</td><td class="tier dim">—</td></tr>
+          <tr><td class="item">✈️ Flights · Premium Economy</td><td class="tier dim">—</td><td class="standard dim">—</td><td class="tier">✓ $3,900</td></tr>
+          <tr><td class="item">🏨 Quinta da Casa Branca · 5 nights</td><td class="tier">✓ $2,100</td><td class="standard dim">—</td><td class="tier dim">—</td></tr>
+          <tr><td class="item">🏨 Belmond Reid's Palace · 5 nights</td><td class="tier dim">—</td><td class="standard std-mark">✓ $4,000</td><td class="tier dim">—</td></tr>
+          <tr><td class="item">🏨 Les Suites at The Cliff Bay · 5 nights</td><td class="tier dim">—</td><td class="standard dim">—</td><td class="tier">✓ $4,800</td></tr>
+          <tr><td class="item">🚗 Rental car (auto) + fuel · 5 days</td><td class="tier">✓ $360</td><td class="standard">✓ $360</td><td class="tier">✓ $400</td></tr>
+          <tr><td class="item">🐬 Bonita whale schooner</td><td class="tier">✓ $90</td><td class="standard">✓ $90</td><td class="tier">✓ $90</td></tr>
+          <tr><td class="item">🐠 Manta Diving 2-tank Garajau</td><td class="tier">✓ $230</td><td class="standard">✓ $230</td><td class="tier">✓ $230</td></tr>
+          <tr><td class="item">⛵ Desertas Islands catamaran</td><td class="tier dim">—</td><td class="standard">✓ $200</td><td class="tier">✓ $220</td></tr>
+          <tr><td class="item">🧗 Canyoning OR coasteering</td><td class="tier dim">—</td><td class="standard dim">—</td><td class="tier">✓ $180</td></tr>
+          <tr><td class="item">☁️ Pico Arieiro driver (Perseids night)</td><td class="tier dim">—</td><td class="standard std-mark">✓ $235</td><td class="tier">✓ $270</td></tr>
+          <tr><td class="item">⭐ Il Gallo d'Oro ★★ (farewell)</td><td class="tier dim">—</td><td class="standard std-mark">✓ $760</td><td class="tier">✓ $820</td></tr>
+          <tr><td class="item">⭐ William ★ at Reid's</td><td class="tier dim">—</td><td class="standard">✓ $570</td><td class="tier">✓ $650</td></tr>
+          <tr><td class="item">⭐ Desarma ★ (Octávio Freitas)</td><td class="tier dim">—</td><td class="standard">✓ $435</td><td class="tier">✓ $490</td></tr>
+          <tr><td class="item">🍽️ Other dinners · 2 nights</td><td class="tier">✓ $250</td><td class="standard">✓ $400</td><td class="tier">✓ $700</td></tr>
+          <tr><td class="item">🥖 Lunches · 5 days</td><td class="tier">✓ $250</td><td class="standard">✓ $550</td><td class="tier">✓ $900</td></tr>
+          <tr><td class="item">🥐 Breakfasts (Reid's HB credit)</td><td class="tier dim">—</td><td class="standard">included</td><td class="tier">included</td></tr>
+          <tr><td class="item">🍷 Blandy's Wine Lodge Premium</td><td class="tier">✓ $44</td><td class="standard">✓ $44</td><td class="tier">✓ $300</td></tr>
+          <tr><td class="item">🧖 Hotel spa + couples massage</td><td class="tier dim">—</td><td class="standard">✓ $290</td><td class="tier">✓ $500</td></tr>
+          <tr><td class="item">🚡 Monte cable car + Carros de Cesto</td><td class="tier">✓ $60</td><td class="standard">✓ $60</td><td class="tier">✓ $60</td></tr>
+          <tr><td class="item">🥾 Trail taxes · 4 trails</td><td class="tier">✓ $24</td><td class="standard">✓ $24</td><td class="tier">✓ $24</td></tr>
+          <tr><td class="item" style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">⛪ Free · Assumption fireworks · ☄️ Perseids · 🌫️ Fanal · 🗻 Cabo Girão</td><td class="tier" style="color: rgba(255,255,255,0.5);">included</td><td class="standard" style="color: rgba(255,255,255,0.5);">included</td><td class="tier" style="color: rgba(255,255,255,0.5);">included</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="total-label">Total · all in</td>
+            <td class="tier">$5,908</td>
+            <td class="standard">$10,748</td>
+            <td class="tier">$16,234</td>
+          </tr>
+        </tfoot>
+      </table>
+      </div>
+
+      <p class="footnote">
+        All figures USD, for two travelers. Hotel rates assume mid-August peak. Reid's Palace half-board credit ($120/day for two) included in Standard and Splurge. EUR converted at ~1.08 / USD.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Built for Mark · August 11–17, 2026 · LAX origin · Prices in USD, subject to live booking</p>
+  </div>
+</footer>
+
+</body>
+</html>

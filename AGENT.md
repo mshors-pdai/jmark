@@ -20,8 +20,12 @@ jmark/
 ├── index.html                       # HUB: now-band + trips catalog + previews of every domain
 ├── STYLE.md                         # Style guide — read before building a new trip page
 ├── AGENT.md                         # This file
-├── trip/                            # Travel itineraries (existing — preserved exactly)
-│   ├── aug_11_provence.html         # Itinerary No. 01 — couples', Aug 2026
+├── trip/                            # Travel itineraries
+│   ├── aug_11_europe.html           # Trip No. 03 HUB — 4-option Aug 11-17 decision (Provence / Cascais / SS / Madeira)
+│   ├── aug_11_provence.html         # Itinerary No. 01 — couples', Aug 2026 (also Trip 03 · Option A · booked baseline)
+│   ├── aug_11_cascais.html          # Trip 03 · Option B — Portugal Atlantic (NEW · added 2026-06-02)
+│   ├── aug_11_san_sebastian.html    # Trip 03 · Option C — Basque food capital (NEW · added 2026-06-02)
+│   ├── aug_11_madeira.html          # Trip 03 · Option D — Atlantic island (NEW · added 2026-06-02)
 │   └── jun_20_kern.html             # Itinerary No. 02 — family, summer 2026
 ├── practice/                        # Daily / weekly / monthly protocols
 │   └── index.html                   # The full practice prescription (sage palette)
@@ -38,6 +42,8 @@ jmark/
 **Trip URLs are stable.** Existing pages like `/trip/jun_20_kern.html` were preserved exactly when expanding to multi-domain. The root `index.html` was edited additively — the original trip catalog (search + filter + cards) is intact below a new "Now" band.
 
 **Future trips:** add `trip/<mon3>_<dd>_<slug>.html` and a card to `index.html`. STYLE.md has the full pattern.
+
+**Decision hubs:** when a trip has multiple candidate destinations under active deliberation, build a hub page at `trip/<mon3>_<dd>_<region>.html` that side-by-sides 4-or-fewer options. Pattern: hero + 4-card option grid + comparison table + pros/cons grid + budget side-by-side + verdict. See `trip/aug_11_europe.html` for the canonical example. Each option file gets a back-bar `meta-mini` that links back to the hub via `compare 4 options ↗`.
 
 **Future content in other domains:** each section index is self-contained with its own palette. Add items by editing the appropriate section's `index.html` — promote ideas → articles, version supplements by quarter, add reference blocks as patterns repeat.
 
@@ -81,6 +87,42 @@ jmark/
   - Domaine du Bagnol (+33 4 42 01 32 16) — walk-in OK
 - [ ] **Verify Atelier Cézanne reopening status** before counting on Aix day trip — closed Nov 2025 for renovation, reopen TBD.
 - [ ] **Optional bookings:** bouillabaisse cooking class with Chef Gilles (provence-plaisirs.com), helicopter Calanques tour (sport-decouverte.com), Cosquer Méditerranée tickets.
+
+> **Note (added 2026-06-02):** Cassis is now also the **Option A · booked baseline** under the Trip No. 03 Europe deliberation (see below). If the operator decides to swap, the Provence file stays as a fallback. Don't delete or renumber it.
+
+---
+
+### Trip No. 03 · Europe Decision Hub · Aug 11–17, 2026
+
+**Status:** active deliberation · 4 plans on the table, Provence is the booked baseline
+**Dates:** Tue Aug 11 → Mon Aug 17, 2026 (6 days, **5 hotel nights**) — same dates as Trip No. 01
+**Origin:** LAX · **Travelers:** 2 · **Decision deadline:** by July 1, 2026 (to keep Belcanto + Kappo + 3★ tables on the table)
+
+**The 4 options (linked from `trip/aug_11_europe.html`):**
+
+| Option | Where | Slug | Standard tier | Differentiator |
+|--------|-------|------|---------------|----------------|
+| **A** | Cassis / Provence (France) | `aug_11_provence.html` | **$9,580** | Booked baseline · La Villa Madie ★★★ · single hotel · classic Med summer |
+| **B** | Cascais / Guincho (Portugal) | `aug_11_cascais.html` | **$9,815** | Only US nonstop (TAP) · world-class wind/kite at Guincho · Belcanto ★★ in Lisbon · Sintra palaces |
+| **C** | San Sebastián / Basque (Spain) | `aug_11_san_sebastian.html` | **$11,254** | 3× ★★★ within 12 mi · lands inside Aste Nagusia (fireworks ×4 incl. finale Aug 15) · coolest climate (77°F) |
+| **D** | Madeira / Funchal (Portugal) | `aug_11_madeira.html` | **$10,748** | Cannot heatwave (trade winds) · Perseids from 5,965 ft above the cloud sea · Garajau dive reserve · Belmond Reid's Palace |
+
+**Time-locked events shared across all 4 options:**
+
+- **☄️ Perseid meteor shower peak** — night of Aug 12→13. Best vantage per option: Cap Canaille (Provence), Cabo da Roca (Cascais), Monte Igueldo (Basque), Pico do Arieiro (Madeira — the singular one, above the cloud sea).
+- **🎆 Aug 15 Assumption** — Catholic national holiday in all four countries. Each town has its own fireworks tradition; the Basque one (Aste Nagusia finale, La Concha) is the most spectacular.
+- **🎵 Music festival** — Provence has Festival de La Roque d'Anthéron (through Aug 16); Basque has Aste Nagusia; Cascais has Festival de Sintra; Madeira has the Wine Festival opening Aug 27 (just misses).
+
+**Hub page recommendation:** Cascais (Option B) for an active romantic week with broadest variety (only +$235 over Provence). Hold Provence as the booked fallback. San Sebastián if food-first; Madeira if weather certainty + landscape > everything else.
+
+**Open booking items (decision phase):**
+
+- [ ] **Pick the destination by July 1, 2026.** Belcanto, Kappo, and the 3-star Basque tables all need 60–90 day lead time.
+- [ ] **If swapping from Provence:** notify all booked vendors (hotel cancellation, La Villa Madie release, L'Eden Boat cancellation, winery calls). Most have 48-hour-out cancellation windows.
+- [ ] **If staying with Provence:** complete the Trip No. 01 booking checklist above.
+- [ ] **If picking Cascais (B):** book TAP TP224 (LAX→LIS nonstop), Fortaleza do Guincho hotel, Belcanto ★★ + Kappo ★ + Fortaleza ★.
+- [ ] **If picking San Sebastián (C):** submit 3★ requests same day (Arzak + Akelarre + Berasategui + Azurmendi), book Maria Cristina (nights 1–3) + Akelarre (4–5).
+- [ ] **If picking Madeira (D):** book Belmond Reid's Palace HB, Il Gallo d'Oro ★★, TAP LAX-LIS-FNC routing.
 
 ---
 

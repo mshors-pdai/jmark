@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>August 11 → 17, 2026 — Europe · 4-Option Decision</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --provence-lavender: #5a4a7a;
+    --provence-terra: #c4622d;
+    --cascais-terra: #c1644a;
+    --cascais-deep: #8e4530;
+    --basque-olive: #7d8b5c;
+    --basque-deep: #5a6740;
+    --madeira-sea: #1e5a7a;
+    --madeira-deep: #133e54;
+    --cream: #faf4e8;
+    --warm: #f5ecd9;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.6; background: #fafaf7; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
+  h3 { font-size: 1.6rem; line-height: 1.25; }
+  h4 { font-size: 1.15rem; }
+  a { color: inherit; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; }
+
+  /* ===== Back-to-index bar (shared component) ===== */
+  .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+  .back-bar a.back-link:hover { color: var(--cascais-terra); }
+  .back-bar a.back-link .arrow { display: inline-block; transition: transform 0.2s; }
+  .back-bar a.back-link:hover .arrow { transform: translateX(-3px); }
+  .back-bar .brand-mini { font-family: 'Playfair Display', serif; font-size: 0.92rem; color: rgba(255,255,255,0.7); letter-spacing: -0.02em; text-decoration: none; }
+  .back-bar .brand-mini:hover { color: white; }
+  .back-bar .brand-mini .dot { color: var(--cascais-terra); }
+  .back-bar .meta-mini { display: none; font-size: 0.74rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
+  @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
+
+  /* ===== Top Nav ===== */
+  .topnav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 1rem 0; }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; }
+  .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
+  .topnav .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .topnav .tab { padding: 0.5rem 1.1rem; border-radius: 999px; text-decoration: none; color: var(--ink); font-size: 0.88rem; font-weight: 500; transition: all 0.2s; border: 1px solid transparent; }
+  .topnav .tab:hover { background: rgba(0,0,0,0.04); }
+  .topnav .tab.provence { color: var(--provence-lavender); border-color: var(--provence-lavender); }
+  .topnav .tab.provence:hover { background: var(--provence-lavender); color: white; }
+  .topnav .tab.cascais { color: var(--cascais-terra); border-color: var(--cascais-terra); }
+  .topnav .tab.cascais:hover { background: var(--cascais-terra); color: white; }
+  .topnav .tab.basque { color: var(--basque-deep); border-color: var(--basque-olive); }
+  .topnav .tab.basque:hover { background: var(--basque-olive); color: white; }
+  .topnav .tab.madeira { color: var(--madeira-sea); border-color: var(--madeira-sea); }
+  .topnav .tab.madeira:hover { background: var(--madeira-sea); color: white; }
+
+  /* ===== Intro Hero ===== */
+  .intro-hero { padding: 6rem 0 4rem; text-align: center; background: linear-gradient(180deg, var(--cream) 0%, #fafaf7 100%); }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--cascais-terra); }
+  .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
+  .intro-hero h1 em { font-style: italic; color: var(--cascais-terra); font-weight: 400; }
+  .intro-hero .lede { max-width: 760px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
+  .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+
+  /* ===== Section header ===== */
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 720px; }
+  .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--cascais-terra); }
+  .section-header h2 { margin-bottom: 1rem; color: var(--ink); }
+  .section-header p { color: var(--muted); font-size: 1.05rem; }
+
+  /* ===== 4-Card overview grid ===== */
+  .opt-section { padding: 4rem 0; }
+  .opt-section.alt { background: var(--cream); }
+  .opts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .opt-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+  .opt-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.12); }
+  .opt-card .opt-image { height: 240px; background-size: cover; background-position: center; position: relative; }
+  .opt-card.provence .opt-image { background-image: linear-gradient(135deg, rgba(196,98,45,0.2), rgba(90,74,122,0.45)), url('https://images.unsplash.com/photo-1568849676085-51415703900f?w=1200&q=80'); background-color: var(--provence-terra); }
+  .opt-card.cascais .opt-image { background-image: linear-gradient(135deg, rgba(30,90,122,0.2), rgba(193,100,74,0.45)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Praia_do_Guincho_Cascais.jpg/1280px-Praia_do_Guincho_Cascais.jpg'); background-color: var(--cascais-terra); }
+  .opt-card.basque .opt-image { background-image: linear-gradient(135deg, rgba(125,139,92,0.2), rgba(30,90,122,0.45)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Donostia_-_San_Sebastian_-_panoramio_%2810%29.jpg/1280px-Donostia_-_San_Sebastian_-_panoramio_%2810%29.jpg'); background-color: var(--basque-olive); }
+  .opt-card.madeira .opt-image { background-image: linear-gradient(135deg, rgba(19,62,84,0.25), rgba(193,100,74,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Funchal_panoramic_view.jpg/1280px-Funchal_panoramic_view.jpg'); background-color: var(--madeira-deep); }
+  .opt-card .opt-tier { position: absolute; top: 1rem; left: 1rem; background: rgba(255,255,255,0.95); padding: 0.35rem 0.9rem; border-radius: 999px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; }
+  .opt-card.provence .opt-tier { color: var(--provence-lavender); }
+  .opt-card.cascais .opt-tier { color: var(--cascais-deep); }
+  .opt-card.basque .opt-tier { color: var(--basque-deep); }
+  .opt-card.madeira .opt-tier { color: var(--madeira-deep); }
+  .opt-card .opt-body { padding: 1.75rem; flex: 1; display: flex; flex-direction: column; }
+  .opt-card .opt-body h3 { margin-bottom: 0.25rem; }
+  .opt-card.provence .opt-body h3 { color: var(--provence-lavender); }
+  .opt-card.cascais .opt-body h3 { color: var(--cascais-deep); }
+  .opt-card.basque .opt-body h3 { color: var(--basque-deep); }
+  .opt-card.madeira .opt-body h3 { color: var(--madeira-deep); }
+  .opt-card .opt-body .loc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+  .opt-card .opt-body p { font-size: 0.92rem; color: #333; margin-bottom: 1rem; flex: 1; line-height: 1.55; }
+  .opt-card .opt-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 1rem; }
+  .opt-card .opt-stats .stat-val { font-family: 'Playfair Display', serif; font-size: 1.05rem; margin-bottom: 0.1rem; }
+  .opt-card .opt-stats .stat-lbl { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+  .opt-card .opt-cta { margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; font-weight: 600; }
+  .opt-card.provence .opt-cta { color: var(--provence-terra); }
+  .opt-card.cascais .opt-cta { color: var(--cascais-terra); }
+  .opt-card.basque .opt-cta { color: var(--basque-deep); }
+  .opt-card.madeira .opt-cta { color: var(--madeira-sea); }
+  .opt-card .opt-cta .arrow { transition: transform 0.2s; }
+  .opt-card:hover .opt-cta .arrow { transform: translateX(4px); }
+  .opt-card.provence .opt-stats .stat-val { color: var(--provence-lavender); }
+  .opt-card.cascais .opt-stats .stat-val { color: var(--cascais-deep); }
+  .opt-card.basque .opt-stats .stat-val { color: var(--basque-deep); }
+  .opt-card.madeira .opt-stats .stat-val { color: var(--madeira-deep); }
+
+  /* ===== Comparison table ===== */
+  .compare-table { max-width: 1100px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .compare-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .compare-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-align: left; background: #1a1a1a; color: white; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .compare-table th.dim { color: var(--muted); background: #f0eee5; font-size: 0.78rem; }
+  .compare-table th.provence-h { background: var(--provence-lavender); }
+  .compare-table th.cascais-h { background: var(--cascais-deep); }
+  .compare-table th.basque-h { background: var(--basque-deep); }
+  .compare-table th.madeira-h { background: var(--madeira-deep); }
+  .compare-table td { padding: 0.9rem 0.75rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table tr:nth-child(even) td { background: rgba(0,0,0,0.015); }
+  .compare-table td.metric { font-weight: 600; color: var(--ink); font-size: 0.86rem; width: 18%; }
+  .compare-table td.cell { text-align: center; width: 20.5%; font-size: 0.86rem; }
+  .compare-table td.cell strong { display: block; }
+  .compare-table td.cell .sub { display: block; color: var(--muted); font-size: 0.78rem; margin-top: 0.15rem; }
+
+  /* ===== Pros and Cons ===== */
+  .pros-cons-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 1100px; margin: 0 auto 1.5rem; }
+  .pc-card { background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-top: 4px solid var(--cascais-terra); }
+  .pc-card.provence { border-top-color: var(--provence-lavender); }
+  .pc-card.cascais { border-top-color: var(--cascais-terra); }
+  .pc-card.basque { border-top-color: var(--basque-olive); }
+  .pc-card.madeira { border-top-color: var(--madeira-sea); }
+  .pc-card h3 { margin-bottom: 0.25rem; }
+  .pc-card.provence h3 { color: var(--provence-lavender); }
+  .pc-card.cascais h3 { color: var(--cascais-deep); }
+  .pc-card.basque h3 { color: var(--basque-deep); }
+  .pc-card.madeira h3 { color: var(--madeira-deep); }
+  .pc-card .sub { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.25rem; }
+  .pc-card h4 { font-family: 'Inter', sans-serif; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; margin: 1.25rem 0 0.5rem; font-weight: 700; }
+  .pc-card h4.pros { color: #1e7a4d; }
+  .pc-card h4.cons { color: #a3461c; }
+  .pc-card ul { list-style: none; padding: 0; }
+  .pc-card ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.91rem; color: #333; line-height: 1.5; }
+  .pc-card ul.pros li::before { content: '✓'; position: absolute; left: 0; top: 0.35rem; color: #1e7a4d; font-weight: 700; }
+  .pc-card ul.cons li::before { content: '−'; position: absolute; left: 0; top: 0.35rem; color: #a3461c; font-weight: 700; }
+  .pc-card .footer-link { display: inline-block; margin-top: 1.25rem; padding: 0.5rem 1.1rem; border-radius: 999px; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; transition: all 0.2s; border: 1.5px solid currentColor; }
+  .pc-card.provence .footer-link { color: var(--provence-terra); }
+  .pc-card.cascais .footer-link { color: var(--cascais-terra); }
+  .pc-card.basque .footer-link { color: var(--basque-olive); }
+  .pc-card.madeira .footer-link { color: var(--madeira-sea); }
+
+  /* ===== Budget comparison ===== */
+  .budget-block { max-width: 1100px; margin: 0 auto; background: #1a1a1a; color: white; border-radius: 24px; padding: 3rem; }
+  .budget-block .head { text-align: center; margin-bottom: 2rem; }
+  .budget-block h3 { color: white; margin-top: 0.5rem; }
+  .budget-block .head .eyebrow { color: rgba(255,255,255,0.7); }
+  .budget-block .head p { color: rgba(255,255,255,0.65); margin-top: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 0.95rem; }
+  .budget-block table { width: 100%; border-collapse: collapse; color: white; font-size: 0.95rem; }
+  .budget-block th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.78rem; }
+  .budget-block th.dim { text-align: left; color: rgba(255,255,255,0.6); width: 22%; }
+  .budget-block th.col { text-align: center; width: 19.5%; }
+  .budget-block th.provence-h { color: #c4a3e0; background: rgba(90,74,122,0.18); }
+  .budget-block th.cascais-h { color: var(--cascais-terra); background: rgba(193,100,74,0.14); }
+  .budget-block th.basque-h { color: #b5c290; background: rgba(125,139,92,0.18); }
+  .budget-block th.madeira-h { color: #79b3d5; background: rgba(30,90,122,0.20); }
+  .budget-block td { padding: 0.85rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .budget-block td.tier-label { color: rgba(255,255,255,0.8); font-weight: 600; }
+  .budget-block td.amt { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.05rem; }
+  .budget-block td.amt.std { font-weight: 700; font-size: 1.2rem; }
+  .budget-block tfoot td { padding: 1.5rem 0.75rem 0.5rem; border-top: 2px solid rgba(255,255,255,0.25); border-bottom: none; }
+  .budget-block tfoot td.totals { font-family: 'Playfair Display', serif; }
+  .budget-block .footnote { text-align: center; color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-top: 1.5rem; line-height: 1.6; }
+
+  /* ===== Verdict / framework ===== */
+  .framework { max-width: 1100px; margin: 0 auto; background: white; border-radius: 24px; padding: 3rem; box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
+  .framework h3 { color: var(--ink); margin-bottom: 1rem; }
+  .framework .if-then { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+  .ift-card { padding: 1.5rem; border-radius: 12px; background: rgba(0,0,0,0.02); border-left: 4px solid var(--cascais-terra); }
+  .ift-card.provence { border-left-color: var(--provence-lavender); background: rgba(90,74,122,0.04); }
+  .ift-card.cascais { border-left-color: var(--cascais-terra); background: rgba(193,100,74,0.04); }
+  .ift-card.basque { border-left-color: var(--basque-olive); background: rgba(125,139,92,0.05); }
+  .ift-card.madeira { border-left-color: var(--madeira-sea); background: rgba(30,90,122,0.04); }
+  .ift-card h4 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+  .ift-card.provence h4 { color: var(--provence-lavender); }
+  .ift-card.cascais h4 { color: var(--cascais-deep); }
+  .ift-card.basque h4 { color: var(--basque-deep); }
+  .ift-card.madeira h4 { color: var(--madeira-deep); }
+  .ift-card p { color: #333; font-size: 0.92rem; margin-bottom: 0.75rem; }
+  .ift-card .pick { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; }
+  .ift-card.provence .pick { color: var(--provence-lavender); }
+  .ift-card.cascais .pick { color: var(--cascais-terra); }
+  .ift-card.basque .pick { color: var(--basque-olive); }
+  .ift-card.madeira .pick { color: var(--madeira-sea); }
+
+  .verdict-block { max-width: 900px; margin: 2.5rem auto 0; padding: 2.5rem; background: linear-gradient(135deg, var(--warm), var(--cream)); border-radius: 20px; }
+  .verdict-block .eyebrow { color: var(--cascais-terra); }
+  .verdict-block h3 { color: var(--ink); margin: 0.5rem 0 1rem; font-size: 1.8rem; }
+  .verdict-block p { color: #333; font-size: 1rem; line-height: 1.7; margin-bottom: 1rem; }
+  .verdict-block p strong { color: var(--ink); }
+
+  footer { background: #0d0d0d; color: rgba(255,255,255,0.6); padding: 2.5rem 0; text-align: center; font-size: 0.85rem; }
+  footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  footer a:hover { color: var(--cascais-terra); }
+
+  @media (max-width: 900px) {
+    .opts-grid { grid-template-columns: 1fr; }
+    .pros-cons-grid { grid-template-columns: 1fr; }
+    .framework .if-then { grid-template-columns: 1fr; }
+    .topnav .tabs { flex-wrap: wrap; }
+    .container { padding: 0 1.25rem; }
+  }
+  @media (max-width: 600px) {
+    .intro-hero h1 { font-size: 2.2rem; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+    .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    h2 { font-size: 1.8rem !important; }
+    h3 { font-size: 1.3rem; }
+    .compare-table, .budget-block table { display: block; overflow-x: auto; }
+    .compare-table table, .budget-block table { min-width: 720px; }
+    .container { padding: 0 1rem; }
+    .opt-section { padding: 2.5rem 0; }
+    .opt-card .opt-stats { grid-template-columns: repeat(3, 1fr); }
+    .budget-block, .framework { padding: 2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
+    <span class="meta-mini">Itinerary No. 03 · Europe Decision · Aug 11–17, 2026</span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<nav class="topnav">
+  <div class="container">
+    <div class="brand">August 11 → 17, 2026</div>
+    <div class="tabs">
+      <a href="#options" class="tab">Options</a>
+      <a href="#compare" class="tab">Compare</a>
+      <a href="#proscons" class="tab">Pros &amp; Cons</a>
+      <a href="#budgets" class="tab">Budgets</a>
+      <a href="#verdict" class="tab">Verdict</a>
+    </div>
+  </div>
+</nav>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">Trip No. 03 · Europe · 4 Options · 5 Hotel Nights</span>
+    <h1>Europe, <em>August.</em></h1>
+    <p class="lede">
+      One week, two travelers, LAX origin. Four full plans on the table — Provence is the booked target; Cascais, San Sebastián, and Madeira are the alternatives under consideration. This page compares them honestly, names the trade-offs, and recommends a winner. Each option's full itinerary is one click away.
+    </p>
+    <div class="meta">
+      <div class="meta-item"><div class="label">Departure</div><div class="value">Tue, Aug 11</div></div>
+      <div class="meta-item"><div class="label">Return</div><div class="value">Mon, Aug 17</div></div>
+      <div class="meta-item"><div class="label">Travelers</div><div class="value">Two</div></div>
+      <div class="meta-item"><div class="label">Origin</div><div class="value">LAX</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="opt-section alt" id="options">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The Four</span>
+      <h2>Options on the Table</h2>
+      <p>Each card links to the full plan — itinerary, hotels, restaurants, wineries, activities, budget tiers. Hover for the headline trade-off.</p>
+    </div>
+
+    <div class="opts-grid">
+
+      <a href="./aug_11_provence.html" class="opt-card provence">
+        <div class="opt-image"><span class="opt-tier">Option A · The Booked Plan</span></div>
+        <div class="opt-body">
+          <h3>Cassis &amp; the Calanques</h3>
+          <div class="loc">France · Provence · Mediterranean</div>
+          <p>Working fishing port at the foot of Europe's tallest sea cliff. Limestone fjords, Cassis whites + Bandol reds within walking distance, La Villa Madie ★★★ on the clifftop terrace, Aug 15 fireworks at the port, Perseids at Cap Canaille.</p>
+          <div class="opt-stats">
+            <div><div class="stat-val">78–82°F</div><div class="stat-lbl">Aug high</div></div>
+            <div><div class="stat-val">★★★ ×1</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$9,580</div><div class="stat-lbl">Standard</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="./aug_11_cascais.html" class="opt-card cascais">
+        <div class="opt-image"><span class="opt-tier">Option B · Active Atlantic</span></div>
+        <div class="opt-body">
+          <h3>Cascais &amp; the Guincho Coast</h3>
+          <div class="loc">Portugal · Atlantic · Sintra-Cascais Natural Park</div>
+          <p>Former royal seaside retreat 30 min from Lisbon. Guincho is one of Europe's elite wind/kite spots. Multiple Michelin in Cascais + 2★ Belcanto in Lisbon. Sintra palaces, Cabo da Roca, Setúbal Moscatel. The activity-rich pick.</p>
+          <div class="opt-stats">
+            <div><div class="stat-val">79–82°F</div><div class="stat-lbl">Aug high</div></div>
+            <div><div class="stat-val">★★ + ★×3</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$9,815</div><div class="stat-lbl">Standard</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="./aug_11_san_sebastian.html" class="opt-card basque">
+        <div class="opt-image"><span class="opt-tier">Option C · Food Capital</span></div>
+        <div class="opt-body">
+          <h3>San Sebastián &amp; the Basque Coast</h3>
+          <div class="loc">Spain · Basque Country · Bay of Biscay</div>
+          <p>World capital of food: 3× three-star Michelin within 12 mi. Lands inside Aste Nagusia — international fireworks competition every night. Coolest sea (72°F). Etxebarri 1★ (#1 world) day trip. Pintxos crawl in Parte Vieja.</p>
+          <div class="opt-stats">
+            <div><div class="stat-val">73–77°F</div><div class="stat-lbl">Aug high</div></div>
+            <div><div class="stat-val">★★★ ×3</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$11,254</div><div class="stat-lbl">Standard</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="./aug_11_madeira.html" class="opt-card madeira">
+        <div class="opt-image"><span class="opt-tier">Option D · Atlantic Island</span></div>
+        <div class="opt-body">
+          <h3>Madeira &amp; the Funchal Cliffs</h3>
+          <div class="loc">Portugal · Atlantic island · 600 mi from mainland</div>
+          <p>Subtropical island that cannot heatwave (trade winds + Canary Current). <strong>Perseids viewed from 5,965 ft above the cloud sea.</strong> Garajau Marine Reserve dives, whale schooners, levadas, Belmond Reid's Palace. The singular landscape pick.</p>
+          <div class="opt-stats">
+            <div><div class="stat-val">75–80°F</div><div class="stat-lbl">Aug high</div></div>
+            <div><div class="stat-val">★★ + ★×2</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$10,748</div><div class="stat-lbl">Standard</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="opt-section" id="compare">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">By the Numbers</span>
+      <h2>Side-by-Side Comparison</h2>
+      <p>Every variable that should drive the decision. Climate from WMO 1991–2020 normals plus 2025 actuals. Michelin counts from the 2026 guide. Hotel rates peak mid-August.</p>
+    </div>
+
+    <div class="compare-table">
+      <table>
+        <thead>
+          <tr>
+            <th class="dim">Variable</th>
+            <th class="provence-h">Provence</th>
+            <th class="cascais-h">Cascais</th>
+            <th class="basque-h">Basque</th>
+            <th class="madeira-h">Madeira</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="metric">Climate · Aug high</td><td class="cell"><strong>78–82°F</strong><span class="sub">heat-spike risk</span></td><td class="cell"><strong>79–82°F</strong><span class="sub">Atlantic-cooled</span></td><td class="cell"><strong>73–77°F</strong><span class="sub">coolest</span></td><td class="cell"><strong>75–80°F</strong><span class="sub">zero heatwave</span></td></tr>
+          <tr><td class="metric">Sea temp</td><td class="cell"><strong>76°F</strong><span class="sub">swim-friendly</span></td><td class="cell"><strong>67°F</strong><span class="sub">brisk Atlantic</span></td><td class="cell"><strong>72°F</strong><span class="sub">glassy bay</span></td><td class="cell"><strong>73°F</strong><span class="sub">warmest</span></td></tr>
+          <tr><td class="metric">Heatwave risk</td><td class="cell"><strong>Real</strong><span class="sub">interior Provence bakes</span></td><td class="cell"><strong>Moderate</strong><span class="sub">sea breeze refuge</span></td><td class="cell"><strong>Low</strong><span class="sub">Bay of Biscay</span></td><td class="cell"><strong>None</strong><span class="sub">trade winds</span></td></tr>
+          <tr><td class="metric">Flight from LAX</td><td class="cell"><strong>~11h + 1h</strong><span class="sub">AF65 + AF6004</span></td><td class="cell"><strong>~11h nonstop</strong><span class="sub">TAP TP224</span></td><td class="cell"><strong>~11h + 1h</strong><span class="sub">Iberia via MAD</span></td><td class="cell"><strong>~11h + 2h</strong><span class="sub">TAP via LIS</span></td></tr>
+          <tr><td class="metric">Flight RT cost</td><td class="cell"><strong>$700–$950</strong></td><td class="cell"><strong>$1,000–$1,400</strong></td><td class="cell"><strong>$1,000–$1,400</strong></td><td class="cell"><strong>$1,150–$1,600</strong></td></tr>
+          <tr><td class="metric">Michelin nearby</td><td class="cell"><strong>★★★ ×1</strong><span class="sub">La Villa Madie</span></td><td class="cell"><strong>★★ ×1, ★ ×3</strong><span class="sub">+ LIS day-trip</span></td><td class="cell"><strong>★★★ ×3, ★★ ×2</strong><span class="sub">+ world #1 Etxebarri</span></td><td class="cell"><strong>★★ ×1, ★ ×2</strong><span class="sub">island scene</span></td></tr>
+          <tr><td class="metric">Water sports</td><td class="cell"><strong>Boat-focused</strong><span class="sub">RIB Calanques · light swim</span></td><td class="cell"><strong>World-class</strong><span class="sub">wind/kite/surf/sail</span></td><td class="cell"><strong>Bay-focused</strong><span class="sub">surf Zurriola · SUP Concha</span></td><td class="cell"><strong>Ocean-focused</strong><span class="sub">dive Garajau · whale schooner</span></td></tr>
+          <tr><td class="metric">Hotel band</td><td class="cell">$350–$1,100</td><td class="cell">$380–$1,000</td><td class="cell">$380–$975</td><td class="cell">$410–$1,200</td></tr>
+          <tr><td class="metric">Single-base?</td><td class="cell"><strong>Yes (Cassis)</strong></td><td class="cell"><strong>Yes (Cascais)</strong></td><td class="cell"><strong>Split</strong><span class="sub">Maria Cristina + Akelarre</span></td><td class="cell"><strong>Yes (Funchal)</strong></td></tr>
+          <tr><td class="metric">Dated event #1</td><td class="cell">☄️ Perseids Cap Canaille</td><td class="cell">☄️ Perseids Cabo da Roca</td><td class="cell">🎆 Aste Nagusia fireworks ×4</td><td class="cell">☄️ Perseids above cloud sea</td></tr>
+          <tr><td class="metric">Dated event #2</td><td class="cell">🎆 Aug 15 Cassis fireworks</td><td class="cell">🎆 Aug 15 Marina fireworks</td><td class="cell">🎆 Aug 15 Aste Nagusia FINALE</td><td class="cell">⛪ Aug 15 Sé procession + fireworks</td></tr>
+          <tr><td class="metric">Crowd level</td><td class="cell">High</td><td class="cell">High</td><td class="cell"><strong>Very high</strong><span class="sub">Aste Nagusia week</span></td><td class="cell">High</td></tr>
+          <tr><td class="metric">Standard tier total</td><td class="cell"><strong>$9,580</strong></td><td class="cell"><strong>$9,815</strong></td><td class="cell"><strong>$11,254</strong></td><td class="cell"><strong>$10,748</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="opt-section alt" id="proscons">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Honest Trade-offs</span>
+      <h2>Pros &amp; Cons, Per Option</h2>
+      <p>What's genuinely great about each, and what's the real cost. No marketing copy.</p>
+    </div>
+
+    <div class="pros-cons-grid">
+
+      <div class="pc-card provence">
+        <h3>Cassis &amp; the Calanques</h3>
+        <div class="sub">Option A · Provence · the booked plan</div>
+        <h4 class="pros">Pros</h4>
+        <ul class="pros">
+          <li>Most-complete plan — booked, vetted, vendors lined up</li>
+          <li>One hotel for all 5 nights (no mid-week packing)</li>
+          <li>La Villa Madie ★★★ is the marquee dining experience</li>
+          <li>Cassis whites + Bandol reds within 30 min — walkable wineries</li>
+          <li>Daytime AF65 LAX→CDG lands you at lunch in Cassis, not midnight</li>
+          <li>Perseids at Cap Canaille = France's tallest sea cliff, 1,300 ft</li>
+          <li>Aug 15 = the village's biggest party of the year (fireworks + ball)</li>
+          <li>Closest to "classic European summer" fantasy</li>
+        </ul>
+        <h4 class="cons">Cons</h4>
+        <ul class="cons">
+          <li>Heatwave-exposed (Provence interior hit 104°F+ in 2025)</li>
+          <li>Cassis is small — 8,000 people, every restaurant booked in August</li>
+          <li>No real water sports (boat tours yes, but no surf/kite/dive scene)</li>
+          <li>Only 1× Michelin in town (other tables are atmospheric, not starred)</li>
+          <li>Crowds peak in August — narrow harbor streets, full beaches</li>
+          <li>Highway 559 / Route des Crêtes can be a parking lot weekends</li>
+        </ul>
+        <a href="./aug_11_provence.html" class="footer-link">Full plan →</a>
+      </div>
+
+      <div class="pc-card cascais">
+        <h3>Cascais &amp; the Guincho Coast</h3>
+        <div class="sub">Option B · Portugal · activity-rich Atlantic</div>
+        <h4 class="pros">Pros</h4>
+        <ul class="pros">
+          <li>Only US nonstop in the comparison (TAP TP224 LAX→LIS)</li>
+          <li>Highest activity variety: wind/kite/surf/sail + Sintra palaces + Lisbon culture</li>
+          <li>Atlantic upwelling keeps coast 15–22°F cooler than inland Lisbon</li>
+          <li>Lisbon 30 min away for Belcanto ★★ — capital city night</li>
+          <li>Sintra-Cascais Natural Park hiking on the doorstep</li>
+          <li>Setúbal Moscatel + Colares dune-vine wines = unique tastings</li>
+          <li>Cabo da Roca — westernmost point of mainland Europe — perfect dark sky for Perseids</li>
+          <li>Lower hotel cost than Basque/Madeira at top tier</li>
+        </ul>
+        <h4 class="cons">Cons</h4>
+        <ul class="cons">
+          <li>Coldest sea (67°F) — brisk swimming even in August</li>
+          <li>No 3-Michelin star in town (Belcanto 2★ is the apex in Lisbon)</li>
+          <li>Heatwave risk if 2025-style summer repeats (Lisbon hit 113°F)</li>
+          <li>Guincho beach is too dangerous to swim casually (currents + wind)</li>
+          <li>More driving/Uber than San Seb (less concentrated)</li>
+          <li>Peak August crowds across Lisbon + Sintra (Pena Palace especially)</li>
+        </ul>
+        <a href="./aug_11_cascais.html" class="footer-link">Full plan →</a>
+      </div>
+
+      <div class="pc-card basque">
+        <h3>San Sebastián &amp; Basque Coast</h3>
+        <div class="sub">Option C · Spain · food capital + fireworks</div>
+        <h4 class="pros">Pros</h4>
+        <ul class="pros">
+          <li>World's highest Michelin density (3× ★★★ within 12 mi)</li>
+          <li><strong>Lands inside Aste Nagusia</strong> — international fireworks every night ×4, including the finale</li>
+          <li>Coolest reliable climate (77°F high) — no heatwave risk</li>
+          <li>Best sea for swimming + kayak (72°F, La Concha is glassy)</li>
+          <li>World-best pintxos scene in Parte Vieja — singular experience</li>
+          <li>Day-trip range to Bilbao Guggenheim + Azurmendi ★★★</li>
+          <li>Rioja Alavesa wineries 90 min south — Calatrava + Gehry architecture</li>
+          <li>Etxebarri ★ in Atxondo (#1 World's 50 Best 2023) within day-trip reach</li>
+        </ul>
+        <h4 class="cons">Cons</h4>
+        <ul class="cons">
+          <li><strong>Most expensive Standard tier ($11,254)</strong> — 3-stars stack up</li>
+          <li>No US nonstop — 1-stop via MAD/FRA/LHR</li>
+          <li>Aste Nagusia = peak crowds, peak prices, all hotels gated 90+ days</li>
+          <li>Hotel split (Maria Cristina + Akelarre) = packing mid-week</li>
+          <li>Aug 15 Assumption + fireworks finale = restaurant insanity</li>
+          <li>Less swimmable beaches than Cascais/Madeira</li>
+          <li>Rioja day requires $750+ private driver</li>
+        </ul>
+        <a href="./aug_11_san_sebastian.html" class="footer-link">Full plan →</a>
+      </div>
+
+      <div class="pc-card madeira">
+        <h3>Madeira &amp; the Funchal Cliffs</h3>
+        <div class="sub">Option D · Portugal · Atlantic island</div>
+        <h4 class="pros">Pros</h4>
+        <ul class="pros">
+          <li><strong>Zero heatwave risk</strong> — trade winds + Canary Current lock 75–80°F</li>
+          <li>Most singular Perseids vantage on the planet (5,965 ft above the cloud sea)</li>
+          <li>Warmest swim sea (73°F) at the most stable temperature</li>
+          <li>~95% whale + dolphin sighting rate · sailing schooner tour available</li>
+          <li>Garajau Marine Reserve = world-class dive (hand-feedable groupers)</li>
+          <li>Belmond Reid's Palace = 1891 grand-dame heritage stay (Churchill's spot)</li>
+          <li>Most dramatic landscape (volcanic peaks, levadas, UNESCO laurel forest, lava pools)</li>
+          <li>Reid's half-board credit reduces effective restaurant cost ~$120/day</li>
+        </ul>
+        <h4 class="cons">Cons</h4>
+        <ul class="cons">
+          <li>1-stop required (LAX→LIS→FNC) — longest door-to-door (~15h)</li>
+          <li>No sandy beaches in Funchal — cliff pools/lidos only</li>
+          <li>Only 1× ★★ (Il Gallo d'Oro) + 2× ★ — lower food density than Basque</li>
+          <li>Pico Arieiro pre-dawn requires fitness + commitment</li>
+          <li>Madeira Wine Festival (Aug 27) opens 10 days <em>after</em> you leave</li>
+          <li>Surf is small in August (winter Dec–Feb is the big-wave season)</li>
+          <li>Most expensive flight band ($1,150–$1,600 RT)</li>
+        </ul>
+        <a href="./aug_11_madeira.html" class="footer-link">Full plan →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="opt-section" id="budgets">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Total Cost</span>
+      <h2>Budget Comparison · Three Tiers</h2>
+      <p>All-in for two travelers, USD. Each option's full plan has the line-item breakdown — flights, hotel, restaurants, activities, wine, lunches. Standard is the recommended tier on each.</p>
+    </div>
+
+    <div class="budget-block">
+      <div class="head">
+        <span class="eyebrow">Side-by-Side</span>
+        <h3>Tier Totals · All-In</h3>
+        <p>What the trip actually costs at three spending levels. Standard column is the recommended plan on each.</p>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th class="dim">Tier</th>
+            <th class="col provence-h">Provence</th>
+            <th class="col cascais-h">Cascais</th>
+            <th class="col basque-h">Basque</th>
+            <th class="col madeira-h">Madeira</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tier-label">Budget</td>
+            <td class="amt">$5,430</td>
+            <td class="amt">$5,740</td>
+            <td class="amt">$5,314</td>
+            <td class="amt">$5,908</td>
+          </tr>
+          <tr>
+            <td class="tier-label">Standard ★</td>
+            <td class="amt std">$9,580</td>
+            <td class="amt std">$9,815</td>
+            <td class="amt std">$11,254</td>
+            <td class="amt std">$10,748</td>
+          </tr>
+          <tr>
+            <td class="tier-label">Splurge</td>
+            <td class="amt">$15,290</td>
+            <td class="amt">$15,330</td>
+            <td class="amt">$18,587</td>
+            <td class="amt">$16,234</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="tier-label totals">Δ vs Provence Standard</td>
+            <td class="amt">—</td>
+            <td class="amt">+$235</td>
+            <td class="amt">+$1,674</td>
+            <td class="amt">+$1,168</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <p class="footnote">Provence (booked plan) is the price floor at Standard. Cascais costs $235 more — same level. Basque costs $1,674 more (three 3-stars + premium hotel split). Madeira costs $1,168 more (longer flight + Reid's Palace premium, partially offset by HB credit). Move items between tiers freely.</p>
+    </div>
+  </div>
+</section>
+
+<section class="opt-section alt" id="verdict">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Decision Framework</span>
+      <h2>If/Then · Pick By What You Value</h2>
+      <p>Four "if/then" lenses that should drive the call. The verdict is below.</p>
+    </div>
+
+    <div class="framework">
+
+      <div class="if-then">
+
+        <div class="ift-card provence">
+          <h4>If you value the booked-in baseline</h4>
+          <p>The vendors are lined up, the AF65 lands at lunch, La Villa Madie ★★★ is reserved. Lowest activation energy. The trip you'll actually take if you don't decide.</p>
+          <div class="pick">→ Pick Provence</div>
+        </div>
+
+        <div class="ift-card cascais">
+          <h4>If you value water sports + activity variety</h4>
+          <p>Guincho is one of the world's best wind/kite spots; Sintra-Cascais Natural Park is at your doorstep; Lisbon is 30 min away. Plus the only US nonstop in the comparison.</p>
+          <div class="pick">→ Pick Cascais</div>
+        </div>
+
+        <div class="ift-card basque">
+          <h4>If you value food + fireworks</h4>
+          <p>Three 3-stars within 12 miles, the best pintxos scene in the world, and Aste Nagusia fireworks every night — including the finale on Aug 15. The unmatched gastronomic week.</p>
+          <div class="pick">→ Pick San Sebastián</div>
+        </div>
+
+        <div class="ift-card madeira">
+          <h4>If you value weather certainty + landscape</h4>
+          <p>Cannot heatwave. Perseids viewed from above the cloud sea. Whales 95%. Garajau dive. Belmond Reid's. The singular landscape week with the safest climate bet.</p>
+          <div class="pick">→ Pick Madeira</div>
+        </div>
+
+      </div>
+
+      <div class="verdict-block">
+        <span class="eyebrow">The Verdict</span>
+        <h3>The Recommendation</h3>
+        <p>
+          Provence is the <strong>safe baseline</strong> — booked, complete, lowest delta. If decision fatigue wins, take it.
+        </p>
+        <p>
+          For an active romantic week with the broadest experience, <strong>Cascais is the strongest swap</strong>: +$235 over Provence for the only LAX nonstop in the field, world-class wind sports at Guincho, Sintra palaces, Lisbon's ★★ Belcanto on the train, and Atlantic upwelling that hedges against another 2025-style heatwave.
+        </p>
+        <p>
+          For a food-first trip where dinners are the main events, <strong>San Sebastián is unmatched</strong> — but at +$1,674 and with a hotel split mid-week. Worth it if Arzak + Akelarre + Berasategui is the reason you're going.
+        </p>
+        <p>
+          For weather certainty and the most singular landscape, <strong>Madeira at Belmond Reid's Palace</strong> with the Perseid summit night is a once-a-decade combination — the night above the cloud sea is irreplaceable.
+        </p>
+        <p>
+          <strong>Default: Cascais</strong> if you want to swap. Hold Provence as backup. Decide by July 1 to keep Belcanto and Kappo on the table.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Built for Mark · August 11–17, 2026 · LAX origin · Prices in USD, subject to live booking · <a href="../index.html">all trips</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
