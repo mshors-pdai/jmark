@@ -21,11 +21,12 @@ jmark/
 ├── STYLE.md                         # Style guide — read before building a new trip page
 ├── AGENT.md                         # This file
 ├── trip/                            # Travel itineraries
-│   ├── aug_11_europe.html           # Trip No. 03 HUB — 4-option Aug 11-17 decision (Provence / Cascais / SS / Madeira)
+│   ├── aug_11_europe.html           # Trip No. 03 HUB — 5-option Aug 11-17 decision (now incl. Annecy)
 │   ├── aug_11_provence.html         # Itinerary No. 01 — couples', Aug 2026 (also Trip 03 · Option A · booked baseline)
 │   ├── aug_11_cascais.html          # Trip 03 · Option B — Portugal Atlantic (NEW · added 2026-06-02)
 │   ├── aug_11_san_sebastian.html    # Trip 03 · Option C — Basque food capital (NEW · added 2026-06-02)
 │   ├── aug_11_madeira.html          # Trip 03 · Option D — Atlantic island (NEW · added 2026-06-02)
+│   ├── aug_11_annecy.html           # Trip 03 · Option E — French Alps, the savory non-seafood pick (NEW · added 2026-06-02)
 │   └── jun_20_kern.html             # Itinerary No. 02 — family, summer 2026
 ├── practice/                        # Daily / weekly / monthly protocols
 │   └── index.html                   # The full practice prescription (sage palette)
@@ -106,6 +107,7 @@ jmark/
 | **B** | Cascais / Guincho (Portugal) | `aug_11_cascais.html` | **$9,815** | Only US nonstop (TAP) · world-class wind/kite at Guincho · Belcanto ★★ in Lisbon · Sintra palaces |
 | **C** | San Sebastián / Basque (Spain) | `aug_11_san_sebastian.html` | **$11,254** | 3× ★★★ within 12 mi · lands inside Aste Nagusia (fireworks ×4 incl. finale Aug 15) · coolest climate (77°F) |
 | **D** | Madeira / Funchal (Portugal) | `aug_11_madeira.html` | **$10,748** | Cannot heatwave (trade winds) · Perseids from 5,965 ft above the cloud sea · Garajau dive reserve · Belmond Reid's Palace |
+| **E** | Annecy / French Alps (France) | `aug_11_annecy.html` | **$11,160** | **The savory non-seafood pick** · Reblochon + Beaufort + tartiflette + charcuterie · ★★★ Clos des Sens + ★★ Conte + ★★ Père Bise · 75°F clear lake · paragliding Col de la Forclaz · Aiguille du Midi day trip |
 
 **Time-locked events shared across all 4 options:**
 
@@ -123,6 +125,7 @@ jmark/
 - [ ] **If picking Cascais (B):** book TAP TP224 (LAX→LIS nonstop), Fortaleza do Guincho hotel, Belcanto ★★ + Kappo ★ + Fortaleza ★.
 - [ ] **If picking San Sebastián (C):** submit 3★ requests same day (Arzak + Akelarre + Berasategui + Azurmendi), book Maria Cristina (nights 1–3) + Akelarre (4–5).
 - [ ] **If picking Madeira (D):** book Belmond Reid's Palace HB, Il Gallo d'Oro ★★, TAP LAX-LIS-FNC routing.
+- [ ] **If picking Annecy (E):** book Swiss LX41 LAX→ZRH→GVA routing, La Maison Bleue (R&amp;C, 11 rooms, books fast), Le Clos des Sens ★★★ + Yoann Conte ★★ + Père Bise ★★, paragliding (Fly Annecy), Aiguille du Midi 9 AM slot. Note: Fête du Lac (Aug 1) is missed.
 
 ---
 

@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>August 2026 — Annecy &amp; the Lake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --annecy-lake: #2a7a8c;
+    --annecy-deep: #0d3b4f;
+    --annecy-sage: #7ba696;
+    --annecy-sage-deep: #4e7a68;
+    --annecy-stone: #b8895b;
+    --annecy-terra: #c8553d;
+    --annecy-cream: #faf4e8;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.6; background: #fafaf7; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
+  h3 { font-size: 1.6rem; line-height: 1.25; }
+  h4 { font-size: 1.15rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; }
+  a { color: inherit; }
+
+  /* ===== Back-to-index bar ===== */
+  .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+  .back-bar a.back-link:hover { color: var(--annecy-lake); }
+  .back-bar a.back-link .arrow { display: inline-block; transition: transform 0.2s; }
+  .back-bar a.back-link:hover .arrow { transform: translateX(-3px); }
+  .back-bar .brand-mini { font-family: 'Playfair Display', serif; font-size: 0.92rem; color: rgba(255,255,255,0.7); letter-spacing: -0.02em; text-decoration: none; }
+  .back-bar .brand-mini:hover { color: white; }
+  .back-bar .brand-mini .dot { color: var(--annecy-lake); }
+  .back-bar .meta-mini { display: none; font-size: 0.74rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
+  @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
+
+  .topnav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 1rem 0; }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; }
+  .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
+  .topnav .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .topnav .tab { padding: 0.5rem 1.25rem; border-radius: 999px; text-decoration: none; color: var(--annecy-deep); font-size: 0.9rem; font-weight: 500; transition: all 0.2s; border: 1px solid var(--annecy-lake); }
+  .topnav .tab:hover { background: var(--annecy-lake); color: white; }
+
+  .intro-hero { padding: 6rem 0 4rem; text-align: center; background: linear-gradient(180deg, var(--annecy-cream) 0%, #fafaf7 100%); }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--annecy-terra); }
+  .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
+  .intro-hero h1 em { font-style: italic; color: var(--annecy-lake); font-weight: 400; }
+  .intro-hero .lede { max-width: 720px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
+  .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+
+  .destination { padding: 6rem 0 4rem; background: var(--annecy-cream); }
+  .hero-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.12); margin-bottom: 4rem; }
+  .hero-card .hero-image { min-height: 500px; background-size: cover; background-position: center; position: relative;
+    background-image: linear-gradient(135deg, rgba(42,122,140,0.30), rgba(123,166,150,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Lake_Annecy_%282%29.jpg/1280px-Lake_Annecy_%282%29.jpg');
+    background-color: var(--annecy-lake); }
+  .hero-card .hero-content { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; background: white; }
+  .hero-card .eyebrow { margin-bottom: 1.25rem; color: var(--annecy-terra); }
+  .hero-card h2 { margin-bottom: 1.5rem; color: var(--annecy-deep); }
+  .hero-card .tagline { font-size: 1.15rem; color: var(--muted); margin-bottom: 2rem; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .stat .stat-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.1; margin-bottom: 0.2rem; color: var(--annecy-deep); }
+  .stat .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 700px; }
+  .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--annecy-terra); }
+  .section-header h2 { margin-bottom: 1rem; color: var(--annecy-deep); }
+  .section-header p { color: var(--muted); font-size: 1.05rem; }
+
+  .flight-box { background: white; border-radius: 16px; padding: 2.5rem; max-width: 920px; margin: 2rem auto 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .flight-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+  .flight-row:last-of-type { border-bottom: none; }
+  .flight-airport .code { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1; font-weight: 700; color: var(--annecy-deep); }
+  .flight-airport .city { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; }
+  .flight-line { text-align: center; color: var(--muted); }
+  .flight-line .dash { height: 1px; background: var(--line); position: relative; margin: 0.5rem 0; }
+  .flight-line .dash::after { content: '⟶'; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: white; padding: 0 0.5rem; color: var(--annecy-terra); }
+  .flight-line .info { font-size: 0.8rem; }
+  .flight-meta { display: flex; gap: 2rem; justify-content: center; padding-top: 1.5rem; margin-top: 1rem; border-top: 2px solid var(--line); }
+  .flight-meta .item { text-align: center; }
+  .flight-meta .item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 0.3rem; }
+  .flight-meta .item .val { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--annecy-deep); }
+
+  .only-this-week { max-width: 1100px; margin: 0 auto 4rem; padding: 3rem; background: linear-gradient(135deg, #faf4e8, #ecf2ee); border-radius: 24px; }
+  .only-this-week .head { text-align: center; margin-bottom: 2.5rem; }
+  .only-this-week h3 { color: var(--annecy-deep); font-size: 2rem; margin-top: 0.5rem; }
+  .only-this-week .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .event-card { background: white; border-radius: 16px; padding: 2rem; border-left: 4px solid var(--annecy-lake); }
+  .event-card.terra { border-left-color: var(--annecy-terra); }
+  .event-card.sage { border-left-color: var(--annecy-sage); }
+  .event-card.stone { border-left-color: var(--annecy-stone); }
+  .event-card .head { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .event-card .icon { font-size: 2.2rem; }
+  .event-card h4 { margin: 0; color: var(--annecy-deep); }
+  .event-card h4.terra { color: var(--annecy-terra); }
+  .event-card h4.sage { color: var(--annecy-sage-deep); }
+  .event-card h4.stone { color: var(--annecy-stone); }
+  .event-card .when { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
+  .event-card p { font-size: 0.95rem; color: #333; margin-bottom: 1rem; }
+  .event-card .book-link { display: inline-block; padding: 0.4rem 0.9rem; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--annecy-terra); border: 1.5px solid var(--annecy-terra); }
+  .event-card .book-link:hover { background: var(--annecy-terra); color: white; }
+  .bonus-callout { margin-top: 2rem; padding: 1.5rem 2rem; background: rgba(42,122,140,0.06); border-radius: 12px; border-left: 4px solid var(--annecy-lake); }
+  .bonus-callout h4 { margin-bottom: 0.5rem; color: var(--annecy-deep); }
+  .bonus-callout p { font-size: 0.95rem; color: #333; margin: 0; }
+  .bonus-callout a { color: var(--annecy-lake); font-weight: 600; }
+
+  .glance-table { max-width: 1000px; margin: 0 auto 4rem; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .glance-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .glance-table th { background: var(--annecy-deep); color: white; padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600; }
+  .glance-table td { padding: 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .glance-table tr:last-child td { border-bottom: none; }
+  .glance-table tr:nth-child(even) td { background: rgba(42,122,140,0.04); }
+  .glance-table td.daynum { font-weight: 600; color: var(--annecy-terra); }
+
+  .itinerary { max-width: 950px; margin: 0 auto; }
+  .day { display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
+  .day:last-child { border-bottom: none; }
+  .day-number .num { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1; font-weight: 600; font-style: italic; color: var(--annecy-terra); }
+  .day-number .date { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .day-content h3 { margin-bottom: 0.75rem; color: var(--annecy-deep); }
+  .day-content ul { list-style: none; }
+  .day-content ul li { padding: 0.45rem 0 0.45rem 1.5rem; position: relative; color: #333; }
+  .day-content ul li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 6px; height: 6px; border-radius: 50%; background: var(--annecy-terra); }
+  .day-content ul li strong { color: var(--annecy-deep); }
+  .day-content ul li a { color: var(--annecy-lake); text-decoration: none; border-bottom: 1px dotted; }
+
+  .hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .hotel-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+  .hotel-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .hotel-card .hotel-image { height: 200px; background-size: cover; background-position: center; position: relative; background-color: var(--annecy-sage); }
+  .hotel-card .hotel-tier { position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.95); padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: var(--annecy-deep); z-index: 2; }
+  .hotel-card .hotel-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .hotel-card .hotel-body h4 { margin-bottom: 0.25rem; color: var(--annecy-deep); }
+  .hotel-card .hotel-body .loc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+  .hotel-card .hotel-body p { font-size: 0.93rem; color: #333; margin-bottom: 1rem; line-height: 1.55; }
+  .hotel-card .hotel-meta { display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.85rem; margin-top: auto; }
+  .hotel-card .hotel-meta .price { font-weight: 600; color: var(--annecy-deep); }
+  .hotel-card .book-link { display: inline-block; padding: 0.35rem 0.85rem; font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--annecy-terra); border: 1.5px solid var(--annecy-terra); align-self: flex-start; margin-top: 0.5rem; }
+  .hotel-card .book-link:hover { background: var(--annecy-terra); color: white; }
+
+  .wine-block { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; max-width: 1100px; margin: 0 auto 2rem; background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.06); align-items: center; }
+  .wine-block .wine-image { min-height: 360px; background-size: cover; background-position: center; background-color: var(--annecy-stone); }
+  .wine-block.cheese .wine-image { background-image: linear-gradient(135deg, rgba(184,137,91,0.30), rgba(123,166,150,0.40)), url('https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=800&q=80'); }
+  .wine-block.wine .wine-image { background-image: linear-gradient(135deg, rgba(42,122,140,0.25), rgba(13,59,79,0.40)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80'); }
+  .wine-block .wine-text { padding: 3rem 2.5rem 3rem 0; }
+  .wine-block .eyebrow { color: var(--annecy-terra); }
+  .wine-block h3 { color: var(--annecy-deep); margin-bottom: 1rem; }
+  .wine-block p { color: #333; font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .winery-list .winery { padding: 0.85rem 0; border-bottom: 1px dashed var(--line); }
+  .winery-list .winery:last-child { border-bottom: none; }
+  .winery-list .name { font-weight: 600; color: var(--annecy-deep); margin-bottom: 0.2rem; }
+  .winery-list .name a { color: var(--annecy-terra); text-decoration: none; }
+  .winery-list .desc { font-size: 0.88rem; color: var(--muted); }
+
+  .activities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1100px; margin: 0 auto; }
+  .activity { background: white; border-radius: 12px; padding: 1.75rem 1.25rem; text-align: center; transition: transform 0.2s; border: 1px solid var(--line); }
+  .activity:hover { transform: translateY(-2px); }
+  .activity .icon { font-size: 2.2rem; margin-bottom: 0.85rem; display: block; }
+  .activity h4 { margin-bottom: 0.5rem; font-size: 1rem; color: var(--annecy-deep); }
+  .activity h4 a { color: inherit; text-decoration: none; }
+  .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+  .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
+  .booking .section-header h2 { color: white; }
+  .booking .section-header p { color: rgba(255,255,255,0.7); }
+  .booking .section-header .eyebrow { color: rgba(255,255,255,0.7); }
+  .steps { max-width: 850px; margin: 0 auto; }
+  .step { display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .step:last-child { border-bottom: none; }
+  .step .stepnum { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--annecy-terra); font-style: italic; }
+  .step h4 { color: white; margin-bottom: 0.5rem; }
+  .step p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem; }
+  .step p strong { color: white; }
+  .step .meta-line { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+  .step .meta-line a { color: var(--annecy-stone); text-decoration: none; }
+
+  .budget-table { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px; }
+  .budget-table .head { text-align: center; margin-bottom: 2.5rem; }
+  .budget-table h3 { color: white; margin-top: 0.5rem; }
+  .budget-table .head p { color: rgba(255,255,255,0.6); margin-top: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 0.95rem; }
+  .budget-table table { width: 100%; border-collapse: collapse; color: white; font-size: 0.95rem; }
+  .budget-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
+  .budget-table th.item { text-align: left; color: rgba(255,255,255,0.6); width: 38%; }
+  .budget-table th.tier { text-align: center; color: rgba(255,255,255,0.85); width: 21%; font-size: 0.92rem; }
+  .budget-table th.standard { color: var(--annecy-terra); font-weight: 700; font-size: 1rem; background: rgba(200,85,61,0.14); }
+  .budget-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .budget-table td.item { color: rgba(255,255,255,0.85); }
+  .budget-table td.tier { text-align: center; }
+  .budget-table td.standard { text-align: center; background: rgba(200,85,61,0.06); }
+  .budget-table td.std-mark { font-weight: 600; }
+  .budget-table td.dim { color: rgba(255,255,255,0.3); }
+  .budget-table tfoot td { padding: 1.5rem 0.75rem 0.5rem; font-family: 'Playfair Display', serif; border-top: 2px solid rgba(255,255,255,0.25); border-bottom: none; }
+  .budget-table tfoot td.total-label { font-size: 1.3rem; color: white; }
+  .budget-table tfoot td.tier { font-size: 1.4rem; color: white; }
+  .budget-table tfoot td.standard { font-size: 1.65rem; color: var(--annecy-terra); font-weight: 700; }
+  .budget-table .footnote { text-align: center; color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-top: 2rem; line-height: 1.6; }
+
+  footer { background: #0d0d0d; color: rgba(255,255,255,0.6); padding: 2.5rem 0; text-align: center; font-size: 0.85rem; }
+
+  @media (max-width: 900px) {
+    .hero-card { grid-template-columns: 1fr; }
+    .hero-card .hero-image { min-height: 280px; }
+    .hero-card .hero-content { padding: 2.5rem 2rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .day { grid-template-columns: 1fr; gap: 1rem; }
+    .day-number .num { font-size: 3rem; }
+    .hotels-grid { grid-template-columns: 1fr 1fr; }
+    .activities { grid-template-columns: repeat(2, 1fr); }
+    .flight-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .only-this-week .grid { grid-template-columns: 1fr; }
+    .wine-block { grid-template-columns: 1fr; }
+    .wine-block .wine-text { padding: 2rem; }
+    .topnav .tabs { flex-wrap: wrap; }
+    .container { padding: 0 1.25rem; }
+    .step { grid-template-columns: 60px 1fr; gap: 1rem; }
+  }
+  @media (max-width: 600px) {
+    .hotels-grid, .activities { grid-template-columns: 1fr; }
+    .intro-hero .meta { gap: 1.5rem; }
+    .topnav { padding: 0.6rem 0; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .brand { font-size: 1rem; }
+    .topnav .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+    .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    .glance-table, .budget-table { overflow-x: auto; }
+    .glance-table table, .budget-table table { min-width: 540px; }
+    h2 { font-size: 1.8rem !important; }
+    .day-number .num { font-size: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
+    <span class="meta-mini">Itinerary No. 03E · Annecy · <a href="./aug_11_europe.html" style="color: var(--annecy-lake); text-decoration: none;">compare 5 options ↗</a></span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<nav class="topnav">
+  <div class="container">
+    <div class="brand">August 11 → 17, 2026</div>
+    <div class="tabs">
+      <a href="#itinerary" class="tab">Itinerary</a>
+      <a href="#hotels" class="tab">Hotels</a>
+      <a href="#wine" class="tab">Cheese &amp; Wine</a>
+      <a href="#food" class="tab">Food</a>
+      <a href="#activities" class="tab">Activities</a>
+      <a href="#book" class="tab">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">France · French Alps · 5 Hotel Nights</span>
+    <h1>Annecy &amp;<br>the <em>Lake.</em></h1>
+    <p class="lede">
+      The "Venice of the Alps" on the cleanest lake in Europe, between Geneva and Mont Blanc. World-class lake water sports (sailing, SUP, swim, paragliding off Col de la Forclaz), <strong>Le Clos des Sens ★★★</strong> doing lake-fish-and-foraged-greens cuisine, <strong>Yoann Conte ★★</strong> on the eastern shore at La Maison Bleue, and a food culture built on Reblochon, Beaufort, charcuterie, and crusty bread — not seafood.
+    </p>
+    <div class="meta">
+      <div class="meta-item"><div class="label">Departure</div><div class="value">Tue, Aug 11</div></div>
+      <div class="meta-item"><div class="label">Return</div><div class="value">Mon, Aug 17</div></div>
+      <div class="meta-item"><div class="label">Travelers</div><div class="value">Two</div></div>
+      <div class="meta-item"><div class="label">Origin</div><div class="value">LAX</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="destination" id="itinerary">
+  <div class="container">
+
+    <div class="hero-card">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Option E · France · French Alps</span>
+        <h2>Annecy &amp;<br>the Lake</h2>
+        <p class="tagline">"Venice of the Alps" — Europe's cleanest lake, swimmable at 75°F, with sailing, paragliding off Col de la Forclaz, the Reblochon-Beaufort-charcuterie food culture, two Michelin powerhouses (Le Clos des Sens ★★★, Yoann Conte ★★), and Mont Blanc on the horizon.</p>
+        <div class="stats">
+          <div class="stat"><div class="stat-value">76–82°F</div><div class="stat-label">August High</div></div>
+          <div class="stat"><div class="stat-value">Moderate</div><div class="stat-label">Crowd Level</div></div>
+          <div class="stat"><div class="stat-value">Apremont</div><div class="stat-label">Signature Wine</div></div>
+          <div class="stat"><div class="stat-value">40 min</div><div class="stat-label">GVA → Annecy</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="eyebrow">Getting There</span>
+      <h2>Flight Plan</h2>
+      <p>No US nonstops to Geneva. Best routing: Swiss via Zurich, Lufthansa via Munich/Frankfurt, or Air France via Paris. Land GVA, 40-min car to Annecy. <strong>At the hotel by mid-afternoon Day 1.</strong></p>
+    </div>
+    <div class="flight-box">
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">LAX</div><div class="city">Los Angeles · Tue Aug 11 · dep 4:25 PM</div></div>
+        <div class="flight-line"><div class="info">Swiss LX41</div><div class="dash"></div><div class="info">11h 10m nonstop</div></div>
+        <div class="flight-airport"><div class="code">ZRH</div><div class="city">Zurich · Wed Aug 12 · arr 11:35 AM</div></div>
+      </div>
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">ZRH</div><div class="city">Zurich · 1h 25m layover</div></div>
+        <div class="flight-line"><div class="info">Swiss LX2810</div><div class="dash"></div><div class="info">55 min</div></div>
+        <div class="flight-airport"><div class="code">GVA</div><div class="city">Geneva · arr <strong>1:55 PM</strong> · 40-min car to Annecy</div></div>
+      </div>
+      <div class="flight-meta">
+        <div class="item"><div class="label">Est. Round-trip</div><div class="val">$900–$1,400</div></div>
+        <div class="item"><div class="label">At hotel by</div><div class="val">3:30 PM</div></div>
+        <div class="item"><div class="label">Carrier</div><div class="val">Swiss / Star Alliance</div></div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="eyebrow">Day by Day</span>
+      <h2>The Itinerary</h2>
+      <p>One base on the lake, six days. Lake water sports + Michelin + Alpine cheese tour + Chamonix Mont Blanc day + Geneva day or Yvoire medieval village.</p>
+    </div>
+
+    <div class="only-this-week">
+      <div class="head">
+        <span class="eyebrow" style="color: var(--annecy-terra);">Only This Week</span>
+        <h3>Don't-Miss Events on Your Exact Dates</h3>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 700px; margin-left: auto; margin-right: auto;">Four experiences that only happen during the week you're there. The Perseids over Col de la Forclaz is the headline.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">☄️</span>
+            <div>
+              <h4>Perseids from Col de la Forclaz</h4>
+              <div class="when">Night of <strong>Wed Aug 12 → Thu Aug 13</strong></div>
+            </div>
+          </div>
+          <p><strong>The best Perseid year of the decade.</strong> New moon Aug 12 = moonless sky, 90+ meteors/hour at peak (1–4 AM). Drive 30 min up to <strong>Col de la Forclaz</strong> — the paragliding launch site at 4,500 ft above Lake Annecy, looking south down the full length of the lake to the Tournette and Bauges mountains. Dark sky, restaurant terrace open late. Bring a fleece and a thermos of génépi.</p>
+          <a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener" class="book-link">Viewing guide →</a>
+        </div>
+
+        <div class="event-card terra">
+          <div class="head">
+            <span class="icon">⛪</span>
+            <div>
+              <h4 class="terra">Assomption · Fêtes Mariales</h4>
+              <div class="when"><strong>Sat Aug 15</strong> — French national holiday</div>
+            </div>
+          </div>
+          <p>Major French Catholic holiday. Religious processions through the old town to the <strong>Basilique de la Visitation</strong> on the hill. Most shops closed. Restaurants packed (book Yoann Conte for this night well ahead). The town is alive — Place Saint-François fills with markets and street musicians. Evening boat lights on the lake; smaller hotels run special Assumption Day menus.</p>
+          <a href="https://en.lac-annecy.com/" target="_blank" rel="noopener" class="book-link">Lake Annecy tourism →</a>
+        </div>
+
+        <div class="event-card sage">
+          <div class="head">
+            <span class="icon">🎵</span>
+            <div>
+              <h4 class="sage">Annecy Classic Festival</h4>
+              <div class="when">Mid-August in the Imperial Palace gardens</div>
+            </div>
+          </div>
+          <p>Chamber music + opera + recitals through mid-August in lakeside venues — the gardens of Impérial Palace, the Cathédrale Saint-Pierre, château courtyards. Sunset concerts on the lake at 8 PM. Tickets €25–€80. Pairs naturally with a Day 4 or Day 5 dinner before/after. The most refined evening Annecy offers.</p>
+          <a href="https://www.annecyclassicfestival.com/" target="_blank" rel="noopener" class="book-link">Program →</a>
+        </div>
+
+        <div class="event-card stone">
+          <div class="head">
+            <span class="icon">🧀</span>
+            <div>
+              <h4 class="stone">Alpine cheese harvest season</h4>
+              <div class="when">Aug = peak alpage season</div>
+            </div>
+          </div>
+          <p>August is when the <em>alpage</em> (high-pasture) cheeses are at their peak — cows have been grazing wildflowers since June. The summer-milk Reblochon, Beaufort d'été, Tomme des Bauges are at their best right now. Visit an alpage producer (<strong>Coopérative laitière du Val d'Aulps</strong>, <strong>Fromagerie Pingon</strong>) — they run morning tastings July–August only. Pair with an Alpine drive.</p>
+          <a href="https://www.fromages-aop.com/fromages-aop/" target="_blank" rel="noopener" class="book-link">AOP cheese guide →</a>
+        </div>
+
+      </div>
+
+      <div class="bonus-callout">
+        <h4>⚠ Fête du Lac just missed — Aug 1, 2026</h4>
+        <p>The big lake festival (35-min pyrotechnic show with 100,000+ attendees on the water) falls on the <strong>first Saturday of August</strong> — Aug 1, 2026, ten days before your arrival. You'll miss it. Trade-off: smaller summer crowds the week you're there. If the festival is a must, shift dates to overlap. <a href="https://en.lac-annecy.com/agenda/" target="_blank" rel="noopener">Lake Annecy events →</a></p>
+      </div>
+    </div>
+
+    <div class="glance-table">
+      <table>
+        <thead>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="daynum">1</td><td>Wed Aug 12</td><td>Arrival + Perseids ☄️</td><td>Land GVA 2 PM · check Maison Bleue · evening Perseids at Col de la Forclaz</td><td>Hotel terrace (light)</td></tr>
+          <tr><td class="daynum">2</td><td>Thu Aug 13</td><td>Old town + paragliding 🪂</td><td>Cobbled old town · Palais de l'Île · sunset tandem paraglide</td><td><strong>Yoann Conte ★★</strong></td></tr>
+          <tr><td class="daynum">3</td><td>Fri Aug 14</td><td>Cheese tour + boat day 🧀⛵</td><td>Alpage cheese morning · catamaran on the lake · swim at Plage d'Albigny</td><td>Le Belvédère (Talloires)</td></tr>
+          <tr><td class="daynum">4</td><td>Sat Aug 15</td><td>Assomption ⛪ + ★★★</td><td>Basilique procession · lake cycle · spa afternoon</td><td><strong>Le Clos des Sens ★★★</strong></td></tr>
+          <tr><td class="daynum">5</td><td>Sun Aug 16</td><td>Chamonix Mont Blanc 🏔️</td><td>Aiguille du Midi cable car to 12,605 ft · lunch in Chamonix · return for sunset apéro</td><td>Auberge du Père Bise · Jean Sulpice ★★</td></tr>
+          <tr><td class="daynum">6</td><td>Mon Aug 17</td><td>Departure</td><td>Lake swim · drive GVA</td><td>On the plane</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="itinerary">
+
+      <div class="day">
+        <div class="day-number"><div class="num">01</div><div class="date">Wed Aug 12</div></div>
+        <div class="day-content">
+          <h3>Arrival + the Perseids</h3>
+          <ul>
+            <li><strong>1:55 PM</strong> Land GVA · pre-booked transfer to Annecy (~$90, 40 min)</li>
+            <li><strong>3:30 PM</strong> Check in at <a href="https://yoann-conte.com/en/la-maison-bleue/hotel-la-maison-bleue/" target="_blank" rel="noopener">La Maison Bleue</a> (Veyrier-du-Lac) — sea-view room overlooking the lake</li>
+            <li><strong>4:30 PM</strong> Walk down to the lakeshore · cold dip in the lake (75°F, perfect)</li>
+            <li><strong>6:30 PM</strong> Apéro on the hotel terrace — Vin de Savoie blanc + Beaufort cheese</li>
+            <li><strong>8:00 PM</strong> Light dinner: terrace at <a href="https://yoann-conte.com/en/la-maison-bleue/le-roc/" target="_blank" rel="noopener">Le Roc</a> (Yoann Conte's casual second restaurant) — saucisson, tartines, lake fish</li>
+            <li><strong>11:00 PM</strong> Drive 30 min up to <strong>Col de la Forclaz (4,500 ft)</strong> — paragliding launch site, dark sky over the lake. Bring a fleece + thermos.</li>
+            <li><strong>1–4 AM</strong> Perseid peak. The lake glints below you. New-moon sky.</li>
+            <li><strong>4:30 AM</strong> Back at hotel</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">02</div><div class="date">Thu Aug 13</div></div>
+        <div class="day-content">
+          <h3>Old town · paragliding · Yoann Conte ★★</h3>
+          <ul>
+            <li><strong>11:00 AM</strong> Sleep in · breakfast on the terrace</li>
+            <li><strong>12:30 PM</strong> Drive 10 min to Annecy old town · lunch at <a href="https://www.la-cuisine-des-amis.com/" target="_blank" rel="noopener">La Cuisine des Amis</a> on the canal (tartiflette, charcuterie)</li>
+            <li><strong>2:30 PM</strong> Walk old town — <strong>Palais de l'Île</strong> (12th-c island prison), Pont des Amours, Quartier Sainte-Claire, Château d'Annecy</li>
+            <li><strong>4:30 PM</strong> Take the funicular (15 min) up to the <strong>Basilique de la Visitation</strong> for lake panorama</li>
+            <li><strong>6:00 PM</strong> <strong>Tandem paragliding from Col de la Forclaz</strong> with <a href="https://www.flyannecy.com/" target="_blank" rel="noopener">Fly Annecy</a> ($150 pp, 30 min in the air, lands on the lakeshore at Doussard). Sunset light is the move.</li>
+            <li><strong>8:30 PM</strong> <strong><a href="https://yoann-conte.com/" target="_blank" rel="noopener">La Table de Yoann Conte ★★</a></strong> at La Maison Bleue — Alpine produce, lake fish + Savoyard meats. Estimate $480–$620/cpl with wine.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">03</div><div class="date">Fri Aug 14</div></div>
+        <div class="day-content">
+          <h3>Cheese tour + lake day</h3>
+          <ul>
+            <li><strong>8:30 AM</strong> Pre-arranged driver-guide (or self-drive) for the morning cheese loop</li>
+            <li><strong>9:30 AM</strong> <strong><a href="https://www.fromagerie-pingon.fr/" target="_blank" rel="noopener">Fromagerie Pingon</a></strong> (Manigod, ~45 min) — alpage Reblochon producer · tour the cave · taste 6-month vs 3-month Reblochon</li>
+            <li><strong>11:30 AM</strong> Drive to <strong>Beaufortain valley</strong> (45 min) — <a href="https://www.fromages-aop.com/fromages-aop/beaufort/" target="_blank" rel="noopener">Coopérative laitière du Beaufortain</a> for Beaufort d'été tasting + cave visit</li>
+            <li><strong>1:30 PM</strong> Lunch at <a href="https://www.aubergedebeaufort.fr/" target="_blank" rel="noopener">Auberge du Beaufortain</a> — diots saucisses + crozets au Beaufort + Vin de Savoie</li>
+            <li><strong>4:00 PM</strong> Back to lake · book a 2-hr <a href="https://www.compagniedesbateaux.com/" target="_blank" rel="noopener">Compagnie des Bateaux du Lac</a> catamaran sail · cool down with a swim from the boat</li>
+            <li><strong>7:00 PM</strong> Drive 20 min around the lake to <strong>Talloires</strong> — sunset apéro on the quay</li>
+            <li><strong>8:30 PM</strong> Dinner at <a href="https://www.lebelvedere-talloires.com/" target="_blank" rel="noopener">Le Belvédère Talloires</a> — terrace over the lake, regional menu (~$120/cpl)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">04</div><div class="date">Sat Aug 15</div></div>
+        <div class="day-content">
+          <h3>Assomption · lake cycle · Le Clos des Sens ★★★</h3>
+          <ul>
+            <li><strong>Note:</strong> French national holiday. Shops closed, Basilique procession at 10 AM. Lake activities run normally.</li>
+            <li><strong>9:30 AM</strong> Rent e-bikes at <a href="https://velonecy.com/" target="_blank" rel="noopener">Vélonecy</a> · ride the <strong>Voie Verte du Lac d'Annecy</strong> — the 26-mi paved lake-loop greenway. Do half (13 mi to Doussard at the south end) and back via the east shore for variety</li>
+            <li><strong>1:00 PM</strong> Lunch in Saint-Jorioz at a lakeside guinguette — Tomme cheese plate + lake féra + jambon de Savoie</li>
+            <li><strong>3:30 PM</strong> Spa afternoon at <a href="https://www.hotel-imperial-palace.com/en/spa-deep-nature" target="_blank" rel="noopener">Spa Deep Nature</a> at Impérial Palace — couples massage + thermal pool, ~$300/cpl</li>
+            <li><strong>7:00 PM</strong> Stroll the Quais d'Annecy at sunset · Assomption Day boat lights on the water</li>
+            <li><strong>8:30 PM</strong> <strong><a href="https://closdessens.com/" target="_blank" rel="noopener">Le Clos des Sens ★★★</a></strong> (Annecy-le-Vieux, 5 min) — <em>Plein d'Envies</em> 7-course tasting ($280 pp) with the cellar wine pairing. Vegetable + lake fish focus from the permaculture garden. <strong>Estimate $720–$880/cpl with pairings.</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">05</div><div class="date">Sun Aug 16</div></div>
+        <div class="day-content">
+          <h3>Chamonix Mont Blanc + Jean Sulpice ★★</h3>
+          <ul>
+            <li><strong>7:30 AM</strong> Drive to Chamonix (~1h)</li>
+            <li><strong>9:00 AM</strong> <strong><a href="https://www.compagniedumontblanc.fr/en/equipement/aiguille-du-midi" target="_blank" rel="noopener">Aiguille du Midi cable car</a></strong> to 12,605 ft — pre-booked 9 AM slot (sells out 1+ wk ahead in August). 20-min ride past the Glacier des Bossons. Step Into the Void glass box · panoramic terrace.</li>
+            <li><strong>12:00 PM</strong> Lunch back in Chamonix at <a href="https://www.albert1er.com/le-jardin-restaurant-bistronomique-chamonix-mont-blanc/" target="_blank" rel="noopener">Le Jardin (Albert 1er hotel)</a> — bistronomique, terrace with Mont Blanc view</li>
+            <li><strong>2:30 PM</strong> Optional: short walk on the Bossons or Mer de Glace train</li>
+            <li><strong>4:30 PM</strong> Drive back to Annecy via the autoroute (1h)</li>
+            <li><strong>6:00 PM</strong> Sunset apéro on La Maison Bleue terrace</li>
+            <li><strong>8:30 PM</strong> Dinner at <strong><a href="https://www.aubergedupere-bise.com/" target="_blank" rel="noopener">Auberge du Père Bise · Jean Sulpice ★★</a></strong> in Talloires — historic R&amp;C lakeside, terrace dining at sunset (~$540–$700/cpl)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">06</div><div class="date">Mon Aug 17</div></div>
+        <div class="day-content">
+          <h3>Departure</h3>
+          <ul>
+            <li><strong>9:00 AM</strong> Slow breakfast on the terrace · last lake view</li>
+            <li><strong>10:30 AM</strong> Walk down for one final lake swim at Plage de Veyrier</li>
+            <li><strong>12:30 PM</strong> Light lunch at the hotel</li>
+            <li><strong>2:00 PM</strong> Driver to GVA (40 min, $90)</li>
+            <li><strong>4:55 PM</strong> Swiss LX2811 GVA → ZRH (55 min)</li>
+            <li><strong>7:15 PM</strong> Swiss LX40 ZRH → LAX (12h 5m)</li>
+            <li><strong>10:20 PM same day</strong> Arrive LAX (gain 9 hours on the way back)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="hotels">
+      <span class="eyebrow">Where to Stay</span>
+      <h2>Six Hotels, One Lake</h2>
+      <p>The lake has two faces — the town shore (Annecy itself, busier, walkable to old town) and the east shore (Veyrier · Menthon · Talloires, quieter, all the Michelin). Pick a side and stay all five nights. All prices USD, peak August.</p>
+    </div>
+    <div class="hotels-grid">
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(42,122,140,0.3), rgba(13,59,79,0.4)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80');">
+          <span class="hotel-tier">★ Top Pick</span>
+        </div>
+        <div class="hotel-body">
+          <h4>La Maison Bleue (Yoann Conte)</h4>
+          <div class="loc">Veyrier-du-Lac · east shore · 5-star R&amp;C · 11 rooms</div>
+          <p>The eastern shore Relais &amp; Châteaux — 11 rooms, all lake view. <strong>Yoann Conte ★★</strong> on premises + Le Roc as the casual second table. Private dock. Most intimate of the six.</p>
+          <div class="hotel-meta">
+            <span class="price">$760–$1,200 / night</span>
+            <span>★★★★★ R&amp;C</span>
+          </div>
+          <a href="https://yoann-conte.com/en/la-maison-bleue/hotel-la-maison-bleue/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(184,137,91,0.3), rgba(200,85,61,0.4)), url('https://images.unsplash.com/photo-1551516114-c39ed83b3946?w=600&q=80');">
+          <span class="hotel-tier">★★★ on site</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Le Clos des Sens (hotel + restaurant)</h4>
+          <div class="loc">Annecy-le-Vieux · hills above town · 5-star · 11 suites</div>
+          <p>5-star hotel attached to the <strong>3-Michelin-star Le Clos des Sens</strong>. 11 suites, permaculture garden, panoramic terrace over Annecy. The food-first pick — elevator from your room to the dining room.</p>
+          <div class="hotel-meta">
+            <span class="price">$650–$1,100 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://closdessens.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(42,122,140,0.3), rgba(123,166,150,0.4)), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80');">
+          <span class="hotel-tier">Historic R&amp;C</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Auberge du Père Bise</h4>
+          <div class="loc">Talloires · east shore · 5-star R&amp;C · 1903</div>
+          <p>The oldest Michelin presence on the lake — Père Bise has held stars since 1928. Restored by Jean Sulpice (★★ today). Lakeside terrace dining, swimming pool, 33 rooms in original lakeshore villa + modern wing.</p>
+          <div class="hotel-meta">
+            <span class="price">$590–$980 / night</span>
+            <span>★★★★★ R&amp;C</span>
+          </div>
+          <a href="https://www.aubergedupere-bise.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(42,122,140,0.3), rgba(184,137,91,0.4)), url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');">
+          <span class="hotel-tier">Town center</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Impérial Palace</h4>
+          <div class="loc">Annecy town · directly on the lake · Belle Époque</div>
+          <p>1913 Belle Époque grande dame, directly on the lakeshore at the edge of the old town. <strong>Spa Deep Nature</strong> (thermal pool, hammam, couples treatments), lakeside restaurant, casino. Walk to everything.</p>
+          <div class="hotel-meta">
+            <span class="price">$430–$760 / night</span>
+            <span>★★★★ (large palace style)</span>
+          </div>
+          <a href="https://www.hotel-imperial-palace.com/en" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(42,122,140,0.3), rgba(13,59,79,0.4)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80');">
+          <span class="hotel-tier">Design boutique</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Black Bass</h4>
+          <div class="loc">Sevrier · west shore · 5-star design hotel</div>
+          <p>Newest 5-star on the lake (opened 2021). Bold blue-and-curves design, every room with a lake view, restaurant + bar terrace, infinity pool over the water. The contemporary pick.</p>
+          <div class="hotel-meta">
+            <span class="price">$540–$870 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://blackbasshotel-annecy.com/en/accueil/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(123,166,150,0.3), rgba(200,85,61,0.35)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80');">
+          <span class="hotel-tier">Lake spa</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Rivage Hôtel &amp; Spa</h4>
+          <div class="loc">Saint-Jorioz · west shore · 4-star</div>
+          <p>The best spa quality-to-price ratio on the lake. Sea-view rooms, large spa with thermal pools, lake-shore restaurant. Quieter, less-luxury-glossy than the 5-stars — value pick.</p>
+          <div class="hotel-meta">
+            <span class="price">$280–$460 / night</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.lerivagehotel.com/en" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="wine">
+      <span class="eyebrow">The Glass &amp; Plate</span>
+      <h2>Cheese, Bread, Wine — Not Seafood</h2>
+      <p>The Savoyard food culture is built on Alpine cheese (Reblochon, Beaufort, Tomme), cured meats (saucisson, jambon, diots), crusty bread, and crisp Vin de Savoie whites. Lake fish (omble chevalier, féra) plays a supporting role — fresher and lighter than sea fish.</p>
+    </div>
+    <div class="wine-block cheese">
+      <div class="wine-image"></div>
+      <div class="wine-text">
+        <span class="eyebrow">The cheese trail · 4 AOP cheeses</span>
+        <h3>Reblochon · Beaufort · Tomme · Abondance</h3>
+        <p>Four Savoie AOP cheeses, all made within 90 minutes of the lake. August is peak <em>alpage</em> season — the cows have been grazing wildflowers since June, the summer cheese is at its best. Producers run morning tastings July–August only.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://www.fromagerie-pingon.fr/" target="_blank" rel="noopener">Fromagerie Pingon (Manigod) ↗</a></div>
+            <div class="desc">Alpage Reblochon producer 45 min east of Annecy. Cave tour + tasting 3-month vs 6-month, $15 pp. Tue–Sat 10 AM–noon.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.beaufort-cooperative.com/" target="_blank" rel="noopener">Coopérative Beaufortain ↗</a></div>
+            <div class="desc">Beaufortain valley, 45 min SE. Beaufort d'été (summer Beaufort), 12/18/24-month bottlings. Daily tour 10:30 AM. €8.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.tommesavoie.com/" target="_blank" rel="noopener">Tomme producers Bauges ↗</a></div>
+            <div class="desc">Tomme de Savoie + Tome des Bauges — the everyday cheese. Many small producers; Marchello at Bauges (drop-in OK Tue–Sat 9–1).</div>
+          </div>
+          <div class="winery">
+            <div class="name">Mercato des Halles, Annecy</div>
+            <div class="desc">Tue/Fri/Sun mornings, central Annecy. All four AOP cheeses + Savoyard charcuterie under one roof. Best one-stop tasting if not doing the alpage drive.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wine-block wine" style="margin-top: 2rem;">
+      <div class="wine-image" style="order: 2;"></div>
+      <div class="wine-text" style="order: 1;">
+        <span class="eyebrow">Vin de Savoie · the Alpine whites</span>
+        <h3>Apremont · Chignin-Bergeron · Roussette</h3>
+        <p>The Alpine wines are crisp, mineral, lightly fizzy — built to drink with fondue, raclette, and lake fish. <strong>Apremont</strong> (from Jacquère grape) is the classic; <strong>Chignin-Bergeron</strong> (Roussanne) is the structured one; <strong>Roussette de Savoie</strong> (Altesse) is the most age-worthy. All within 1h drive of Annecy in the Combe de Savoie.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://www.domaine-belluard.com/" target="_blank" rel="noopener">Domaine Belluard ↗</a></div>
+            <div class="desc">Cult Ayze producer — late Dominique Belluard's natural-wine estate, sparkling Gringet a benchmark. By appointment only.</div>
+          </div>
+          <div class="winery">
+            <div class="name">Domaine des 13 Lunes (Apremont)</div>
+            <div class="desc">Biodynamic Jacquère + Mondeuse, 45 min south. Sat tastings + lunch on the terrace. By appointment.</div>
+          </div>
+          <div class="winery">
+            <div class="name">Domaine Gilles Berlioz (Chignin-Bergeron)</div>
+            <div class="desc">Benchmark Chignin-Bergeron producer in Chignin (40 min). Tastings by appointment Tue–Sat.</div>
+          </div>
+          <div class="winery">
+            <div class="name">Génépi des Pères Chartreux (Voiron, 1h 30m)</div>
+            <div class="desc">The Alpine herb liqueur. Distillery tour at Grande Chartreuse — the only place that knows the recipe of green and yellow Chartreuse. Optional Day 5 detour.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" id="food">
+      <span class="eyebrow">The Table</span>
+      <h2>Where You'll Eat</h2>
+      <p>Two Michelin two-stars on the lake (Yoann Conte at Maison Bleue, Jean Sulpice at Père Bise), one 3-star (Le Clos des Sens), plus the great Savoyard auberges. <strong>Book Le Clos des Sens + Yoann Conte 60+ days ahead.</strong></p>
+    </div>
+    <div class="hotels-grid">
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(200,85,61,0.4), rgba(13,59,79,0.5)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
+          <span class="hotel-tier">★★★ Michelin</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Le Clos des Sens</h4>
+          <div class="loc">Annecy-le-Vieux · Chef Franck Derouet · "lacustre &amp; vegetable"</div>
+          <p>3 stars since 2019. After Laurent Petit stepped away end of 2022, Franck Derouet (long-time chef de cuisine) holds the kitchen. The concept stays: lake fish (féra, omble, perch) + 1,500 m² permaculture garden + foraging + in-house garum. <strong>Plein d'Envies $280 pp dinner.</strong></p>
+          <div class="hotel-meta">
+            <span class="price">$185–$280 / person</span>
+            <span>★★★ Michelin</span>
+          </div>
+          <a href="https://closdessens.com/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(42,122,140,0.3), rgba(13,59,79,0.45)), url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80');">
+          <span class="hotel-tier">★★ Michelin</span>
+        </div>
+        <div class="hotel-body">
+          <h4>La Table de Yoann Conte</h4>
+          <div class="loc">Veyrier-du-Lac · at La Maison Bleue · east shore</div>
+          <p>Conte's 2-star inside the iconic blue villa on the lake. Refined Savoyard with lake fish + Alpine meats + foraged greens. Terrace seating with direct lake view. <strong>Menu Découverte $220 pp.</strong></p>
+          <div class="hotel-meta">
+            <span class="price">$220–$320 / person</span>
+            <span>★★ Michelin</span>
+          </div>
+          <a href="https://yoann-conte.com/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(184,137,91,0.3), rgba(200,85,61,0.45)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80');">
+          <span class="hotel-tier">★★ Michelin</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Auberge du Père Bise · Jean Sulpice</h4>
+          <div class="loc">Talloires · east shore · lakeside R&amp;C · 1903</div>
+          <p>The lake's historic 2-star, held continuously since 1928. Jean Sulpice's contemporary Alpine cuisine on the legendary lakeshore terrace. Lake féra carpaccio, Tarine beef. <strong>Tasting $260 pp.</strong></p>
+          <div class="hotel-meta">
+            <span class="price">$210–$300 / person</span>
+            <span>★★ Michelin</span>
+          </div>
+          <a href="https://www.aubergedupere-bise.com/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(42,122,140,0.3), rgba(184,137,91,0.4)), url('https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80');">
+          <span class="hotel-tier">Casual second</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Le Roc</h4>
+          <div class="loc">At La Maison Bleue · Yoann Conte's casual table</div>
+          <p>Yoann Conte's second restaurant in the same building — relaxed lakeside terrace, charcuterie + tartines + house pasta + saucisses. Where you eat on the night you didn't book the 2-star upstairs.</p>
+          <div class="hotel-meta">
+            <span class="price">$50–$80 / person</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://yoann-conte.com/en/la-maison-bleue/le-roc/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(123,166,150,0.3), rgba(200,85,61,0.45)), url('https://images.unsplash.com/photo-1481833761820-0509d3217039?w=600&q=80');">
+          <span class="hotel-tier">Tartiflette canon</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Le Freti</h4>
+          <div class="loc">Annecy old town · 12 rue Sainte-Claire · since 1968</div>
+          <p>The institution for Savoyard mountain food in the old town. Tartiflette, raclette, fondue Savoyarde, croûte aux morilles — done right with cheese from the family fromagerie next door. Slate boards of regional charcuterie.</p>
+          <div class="hotel-meta">
+            <span class="price">$45–$75 / person</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.lefreti.com/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(184,137,91,0.3), rgba(13,59,79,0.4)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
+          <span class="hotel-tier">Lake terrace</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Le Belvédère Talloires</h4>
+          <div class="loc">Talloires · east shore terrace · regional menu</div>
+          <p>Quiet terrace over the lake in Talloires village. Classic Savoyard menu — féra fillet, Tomme tart, Tarine entrecôte. Wide Vin de Savoie list by the glass. The reliable mid-trip dinner without the Michelin lift.</p>
+          <div class="hotel-meta">
+            <span class="price">$50–$85 / person</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.lebelvedere-talloires.com/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="activities">
+      <span class="eyebrow">Unique Experiences</span>
+      <h2>Things You Won't Do Anywhere Else</h2>
+      <p>Paragliding over Europe's cleanest lake. Aiguille du Midi at 12,605 ft. Cheese caves at peak alpage. Here are the 16 that turn a good week into the one you'll talk about.</p>
+    </div>
+    <div class="activities">
+      <div class="activity"><span class="icon">🪂</span><h4><a href="https://www.flyannecy.com/" target="_blank" rel="noopener">Tandem paraglide ↗</a></h4><p>Fly Annecy from Col de la Forclaz · 30 min in the air · lands on the lake shore. $150 pp.</p></div>
+      <div class="activity"><span class="icon">⛵</span><h4><a href="https://www.compagniedesbateaux.com/" target="_blank" rel="noopener">Catamaran sail ↗</a></h4><p>Compagnie des Bateaux du Lac · 2-hr private sail with skipper. $280/cpl.</p></div>
+      <div class="activity"><span class="icon">🚣</span><h4>SUP &amp; kayak</h4><p>Rental from any beach (Plage d'Albigny, Doussard). $20/hr SUP, $25/hr double kayak.</p></div>
+      <div class="activity"><span class="icon">🏊</span><h4>Lake swim</h4><p>Plage d'Albigny (Annecy), Plage de Menthon, Plage Impérial. 75°F clear water. Free.</p></div>
+      <div class="activity"><span class="icon">🌊</span><h4>Wakeboard cable park</h4><p>Wam Park Sevrier — cable-tow wakeboard/wakesurf. $35/hr, no boat needed.</p></div>
+      <div class="activity"><span class="icon">🚴</span><h4><a href="https://velonecy.com/" target="_blank" rel="noopener">Voie Verte e-bike ↗</a></h4><p>26-mi paved lake-loop greenway. Half-loop 13 mi to Doussard. $30/day e-bike rental.</p></div>
+      <div class="activity"><span class="icon">🏰</span><h4>Yvoire medieval village</h4><p>40-min drive to Lac Léman — 14th-century walled flower-village. Lunch + jardin des cinq sens.</p></div>
+      <div class="activity"><span class="icon">🏔️</span><h4><a href="https://www.compagniedumontblanc.fr/en/equipement/aiguille-du-midi" target="_blank" rel="noopener">Aiguille du Midi ↗</a></h4><p>Cable car to 12,605 ft. Step Into the Void glass box. Pre-book the 9 AM slot. $90 pp.</p></div>
+      <div class="activity"><span class="icon">🧀</span><h4>Reblochon at Pingon</h4><p>Cave tour + alpage tasting in Manigod. 45 min east. $15 pp.</p></div>
+      <div class="activity"><span class="icon">🟡</span><h4>Beaufort cellar visit</h4><p>Coopérative du Beaufortain · Beaufort d'été tasting 10:30 AM daily. €8.</p></div>
+      <div class="activity"><span class="icon">🍷</span><h4>Vin de Savoie tasting</h4><p>Domaine des 13 Lunes (biodynamic Apremont) — Sat tastings + lunch. By appointment.</p></div>
+      <div class="activity"><span class="icon">🧘</span><h4><a href="https://www.hotel-imperial-palace.com/en/spa-deep-nature" target="_blank" rel="noopener">Spa Deep Nature ↗</a></h4><p>Impérial Palace — thermal pool, hammam, couples massage. $300/cpl 2 hr.</p></div>
+      <div class="activity"><span class="icon">🎵</span><h4><a href="https://www.annecyclassicfestival.com/" target="_blank" rel="noopener">Annecy Classic Festival ↗</a></h4><p>Mid-August chamber + opera. Sunset concerts on the lake. €25–€80.</p></div>
+      <div class="activity"><span class="icon">🛍️</span><h4>Mercato des Halles</h4><p>Tue/Fri/Sun mornings, central Annecy. AOP cheeses + charcuterie + Vin de Savoie under one roof.</p></div>
+      <div class="activity"><span class="icon">🏛️</span><h4>Palais de l'Île</h4><p>12th-century island prison on the canal — the most-photographed building in Annecy. €4.</p></div>
+      <div class="activity"><span class="icon">🥾</span><h4>Mont Veyrier hike</h4><p>3-hr round trip to 4,300 ft. Full panorama over the lake. Free.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="booking" id="book">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Pre-Trip Punch List</span>
+      <h2>Book These Now</h2>
+      <p>3-star + 2-star tables drive the trip. Hotels gate everything. Mid-August is peak lake season; everything books 60–90 days ahead.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="stepnum">1</div>
+        <div>
+          <h4>Flight — Swiss LX41 / LX2810, Aug 11 4:25 PM LAX → ZRH → GVA</h4>
+          <p>Book on swiss.com or via Chase/Amex travel portal. Premium Economy adds ~$700. <strong>Round-trip target: $900–$1,400</strong>. Alternative: Lufthansa via MUC, Air France via CDG.</p>
+          <div class="meta-line">→ <a href="https://www.swiss.com/" target="_blank" rel="noopener">swiss.com</a> · share confirmation # with hotel for transfer</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">2</div>
+        <div>
+          <h4>Hotel — La Maison Bleue (Yoann Conte) · 5 nights Aug 12–17</h4>
+          <p>Request lake-view room. The 11-room R&amp;C books fast. <strong>Alternative anchors</strong>: Le Clos des Sens hotel (★★★ on-site), Père Bise (historic Talloires), or Impérial Palace (town center).</p>
+          <div class="meta-line">→ <a href="https://yoann-conte.com/en/la-maison-bleue/hotel-la-maison-bleue/" target="_blank" rel="noopener">yoann-conte.com</a> · +33 4 50 09 97 49</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">3</div>
+        <div>
+          <h4>Le Clos des Sens ★★★ — pick a night, lock it in</h4>
+          <p>Recommend Day 4 (Sat Aug 15) — pairs with the relaxed lake-cycle day. <strong>Plein d'Envies tasting $280 pp.</strong> Book 60+ days ahead via the website.</p>
+          <div class="meta-line">→ <a href="https://closdessens.com/" target="_blank" rel="noopener">closdessens.com</a> · +33 4 50 23 07 90</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">4</div>
+        <div>
+          <h4>Yoann Conte ★★ + Père Bise ★★</h4>
+          <p>Day 2 (Thu Aug 13) for Yoann Conte at the hotel — elevator down to the dining room. Day 5 (Sun Aug 16) for Père Bise after the Chamonix day. Both book 4–6 weeks ahead.</p>
+          <div class="meta-line">→ <a href="https://yoann-conte.com/" target="_blank" rel="noopener">yoann-conte.com</a> · <a href="https://www.aubergedupere-bise.com/" target="_blank" rel="noopener">aubergedupere-bise.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">5</div>
+        <div>
+          <h4>Tandem paraglide from Col de la Forclaz</h4>
+          <p>Fly Annecy, Day 2 (Thu Aug 13) at 6 PM for sunset light. $150 pp each. 30 min in the air, lands at Doussard on the south end of the lake. Book 2 weeks ahead.</p>
+          <div class="meta-line">→ <a href="https://www.flyannecy.com/" target="_blank" rel="noopener">flyannecy.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">6</div>
+        <div>
+          <h4>Aiguille du Midi cable car · pre-booked 9 AM slot</h4>
+          <p>Day 5 (Sun Aug 16). 9 AM slot sells out 1+ wk ahead in August. $90 pp. Pair with lunch at Albert 1er in Chamonix.</p>
+          <div class="meta-line">→ <a href="https://www.compagniedumontblanc.fr/en/equipement/aiguille-du-midi" target="_blank" rel="noopener">compagniedumontblanc.fr</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">7</div>
+        <div>
+          <h4>Cheese morning + Vin de Savoie tasting</h4>
+          <p>Day 3 (Fri Aug 14) — call Fromagerie Pingon (+33 4 50 44 90 89) for a 9:30 AM cave tour. Combine with Coopérative Beaufortain (+33 4 79 38 33 62) for the late-morning Beaufort visit. Optional Domaine des 13 Lunes call ahead for Sat tasting.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">8</div>
+        <div>
+          <h4>GVA transfer, rental car decision, casual dinners</h4>
+          <p>Pre-book Welcome Pickups for arrival (~$90). Rent a small auto at GVA for the 5 days (Chamonix + cheese day + lake loop) — ~$320 for 5 days. Reserve <strong>Le Freti</strong> (Day 6 farewell tartiflette), <strong>Le Belvédère Talloires</strong>, <strong>Le Roc</strong>. All take phone reservations 30 days ahead.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="budget-table">
+      <div class="head">
+        <span class="eyebrow">Three Ways to Do It</span>
+        <h3>Budget by Tier</h3>
+        <p>Same trip, three spending levels. ✓ = included in that tier. Standard is the recommended plan with La Maison Bleue + Le Clos des Sens ★★★ + Yoann Conte ★★ + Père Bise ★★.</p>
+      </div>
+
+      <div style="overflow-x: auto;">
+      <table>
+        <thead>
+          <tr>
+            <th class="item">Item</th>
+            <th class="tier">Budget</th>
+            <th class="tier standard">Standard ★</th>
+            <th class="tier">Splurge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="item">✈️ Flights · Economy (Swiss via ZRH)</td><td class="tier">✓ $2,000</td><td class="standard">✓ $2,000</td><td class="tier dim">—</td></tr>
+          <tr><td class="item">✈️ Flights · Premium Economy</td><td class="tier dim">—</td><td class="standard dim">—</td><td class="tier">✓ $3,400</td></tr>
+          <tr><td class="item">🏨 Rivage Hôtel &amp; Spa · 5 nights</td><td class="tier">✓ $1,800</td><td class="standard dim">—</td><td class="tier dim">—</td></tr>
+          <tr><td class="item">🏨 La Maison Bleue (R&amp;C) · 5 nights</td><td class="tier dim">—</td><td class="standard std-mark">✓ $4,400</td><td class="tier dim">—</td></tr>
+          <tr><td class="item">🏨 Le Clos des Sens hotel · 5 nights</td><td class="tier dim">—</td><td class="standard dim">—</td><td class="tier">✓ $4,800</td></tr>
+          <tr><td class="item">🚗 Rental car (auto) + fuel · 5 days</td><td class="tier">✓ $320</td><td class="standard">✓ $320</td><td class="tier">✓ $400</td></tr>
+          <tr><td class="item">🚗 GVA ↔ Annecy private transfer (RT)</td><td class="tier">✓ $50</td><td class="standard">✓ $180</td><td class="tier">✓ $180</td></tr>
+          <tr><td class="item">🪂 Tandem paragliding for 2</td><td class="tier dim">—</td><td class="standard">✓ $300</td><td class="tier">✓ $300</td></tr>
+          <tr><td class="item">⛵ Catamaran sail (private 2 hr)</td><td class="tier">✓ $80 (public)</td><td class="standard">✓ $280</td><td class="tier">✓ $450 (4 hr)</td></tr>
+          <tr><td class="item">🚣 SUP / kayak rentals</td><td class="tier">✓ $60</td><td class="standard">✓ $60</td><td class="tier">✓ $100</td></tr>
+          <tr><td class="item">🏔️ Aiguille du Midi cable car</td><td class="tier dim">—</td><td class="standard">✓ $180</td><td class="tier">✓ $180</td></tr>
+          <tr><td class="item">⭐ Le Clos des Sens ★★★</td><td class="tier dim">—</td><td class="standard std-mark">✓ $800</td><td class="tier">✓ $880</td></tr>
+          <tr><td class="item">⭐ Yoann Conte ★★</td><td class="tier dim">—</td><td class="standard std-mark">✓ $560</td><td class="tier">✓ $640</td></tr>
+          <tr><td class="item">⭐ Père Bise (Jean Sulpice) ★★</td><td class="tier dim">—</td><td class="standard">✓ $620</td><td class="tier">✓ $700</td></tr>
+          <tr><td class="item">🍽️ Other dinners · 2 nights (Belvédère, Le Roc, Le Freti)</td><td class="tier">✓ $200</td><td class="standard">✓ $300</td><td class="tier">✓ $500</td></tr>
+          <tr><td class="item">🥖 Lunches · 5 days (auberges + lake-side)</td><td class="tier">✓ $250</td><td class="standard">✓ $500</td><td class="tier">✓ $850</td></tr>
+          <tr><td class="item">🥐 Breakfasts out</td><td class="tier dim">—</td><td class="standard">included in hotel</td><td class="tier">included</td></tr>
+          <tr><td class="item">🧀 Cheese cellar visits + tastings (3)</td><td class="tier">✓ $40</td><td class="standard">✓ $80</td><td class="tier">✓ $150</td></tr>
+          <tr><td class="item">🍷 Vin de Savoie tastings (2)</td><td class="tier">✓ $40</td><td class="standard">✓ $80</td><td class="tier">✓ $150</td></tr>
+          <tr><td class="item">🧖 Spa Deep Nature + couples massage</td><td class="tier dim">—</td><td class="standard">✓ $320</td><td class="tier">✓ $500</td></tr>
+          <tr><td class="item">🚴 E-bike rental Voie Verte (2 bikes/day)</td><td class="tier">✓ $50</td><td class="standard">✓ $60</td><td class="tier">✓ $100</td></tr>
+          <tr><td class="item">🎵 Annecy Classic Festival tickets (2)</td><td class="tier dim">—</td><td class="standard">✓ $120</td><td class="tier">✓ $160</td></tr>
+          <tr><td class="item" style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">☄️ Free · Perseids at Col de la Forclaz · ⛪ Assomption procession · 🏊 Lake swim · 🥾 Hikes</td><td class="tier" style="color: rgba(255,255,255,0.5);">included</td><td class="standard" style="color: rgba(255,255,255,0.5);">included</td><td class="tier" style="color: rgba(255,255,255,0.5);">included</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="total-label">Total · all in</td>
+            <td class="tier">$4,890</td>
+            <td class="standard">$11,160</td>
+            <td class="tier">$14,440</td>
+          </tr>
+        </tfoot>
+      </table>
+      </div>
+
+      <p class="footnote">All figures USD, for two travelers. Hotel rates assume mid-August peak. Standard includes all three Michelin meals (Clos des Sens 3★, Yoann Conte 2★, Père Bise 2★) — the marquee gastronomic week. EUR converted at ~1.08 / USD.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Built for Mark · August 11–17, 2026 · LAX origin · Prices in USD, subject to live booking</p>
+  </div>
+</footer>
+
+</body>
+</html>
