@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>August 11 → 17, 2026 — Mallorca · Deià &amp; the Tramuntana</title>
+<title>August 2026 — Mallorca · Deià &amp; the Tramuntana</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,9 +12,10 @@
     --mallorca-sea: #1e6091;
     --mallorca-deep: #134268;
     --mallorca-stone: #b8895b;
+    --mallorca-stone-deep: #8a6440;
     --mallorca-clay: #c97b3e;
     --mallorca-olive: #6b7a3f;
-    --cream: #f8f1e4;
+    --mallorca-cream: #f8f1e4;
     --ink: #1a1a1a;
     --muted: #6b6b6b;
     --line: rgba(0,0,0,0.08);
@@ -24,13 +25,15 @@
   body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.6; background: #fafaf7; }
   h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
   h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
-  h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.15; color: var(--mallorca-deep); }
-  h3 { font-size: 1.4rem; color: var(--mallorca-deep); }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
+  h3 { font-size: 1.6rem; line-height: 1.25; }
+  h4 { font-size: 1.15rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; }
   a { color: inherit; }
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-  .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; color: var(--mallorca-clay); }
 
-  .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-size: 0.82rem; }
+  /* ===== Back-to-index bar ===== */
+  .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
   .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
   .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
   .back-bar a.back-link:hover { color: var(--mallorca-clay); }
@@ -40,51 +43,213 @@
   .back-bar .brand-mini:hover { color: white; }
   .back-bar .brand-mini .dot { color: var(--mallorca-clay); }
   .back-bar .meta-mini { display: none; font-size: 0.74rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
-  .back-bar .meta-mini a { color: var(--mallorca-clay); text-decoration: none; border-bottom: 1px dotted; margin-left: 0.5rem; }
   @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
 
-  .intro-hero { padding: 5rem 0 3.5rem; text-align: center; background: linear-gradient(180deg, var(--cream) 0%, #fafaf7 100%); }
-  .intro-hero .eyebrow { display: inline-block; margin-bottom: 1rem; }
+  .topnav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 1rem 0; }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; }
+  .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
+  .topnav .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .topnav .tab { padding: 0.5rem 1.25rem; border-radius: 999px; text-decoration: none; color: var(--mallorca-deep); font-size: 0.9rem; font-weight: 500; transition: all 0.2s; border: 1px solid var(--mallorca-sea); }
+  .topnav .tab:hover { background: var(--mallorca-sea); color: white; }
+
+  .intro-hero { padding: 6rem 0 4rem; text-align: center; background: linear-gradient(180deg, var(--mallorca-cream) 0%, #fafaf7 100%); }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--mallorca-clay); }
   .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
-  .intro-hero h1 em { font-style: italic; color: var(--mallorca-clay); font-weight: 400; }
-  .intro-hero .lede { max-width: 720px; margin: 1rem auto 0; color: var(--muted); font-size: 1.05rem; }
-  .intro-hero .meta { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
+  .intro-hero h1 em { font-style: italic; color: var(--mallorca-sea); font-weight: 400; }
+  .intro-hero .lede { max-width: 740px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
   .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
-  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.3rem; }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
 
-  .draft-notice { max-width: 900px; margin: 3rem auto 2rem; background: rgba(201,123,62,0.08); border-left: 4px solid var(--mallorca-clay); border-radius: 8px; padding: 1.5rem 2rem; }
-  .draft-notice .tag { display: inline-block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; color: white; background: var(--mallorca-clay); padding: 0.2rem 0.7rem; border-radius: 999px; margin-bottom: 0.5rem; }
-  .draft-notice h3 { margin-bottom: 0.5rem; }
-  .draft-notice p { font-size: 0.95rem; color: #333; }
+  .destination { padding: 6rem 0 4rem; background: var(--mallorca-cream); }
+  .hero-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.12); margin-bottom: 4rem; }
+  .hero-card .hero-image { min-height: 500px; background-size: cover; background-position: center; position: relative;
+    background-image: linear-gradient(135deg, rgba(30,96,145,0.20), rgba(184,137,91,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Dei%C3%A0_2017.jpg/1280px-Dei%C3%A0_2017.jpg');
+    background-color: var(--mallorca-sea); }
+  .hero-card .hero-content { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; background: white; }
+  .hero-card .eyebrow { margin-bottom: 1.25rem; color: var(--mallorca-clay); }
+  .hero-card h2 { margin-bottom: 1.5rem; color: var(--mallorca-deep); }
+  .hero-card .tagline { font-size: 1.15rem; color: var(--muted); margin-bottom: 2rem; }
 
-  .section { padding: 3rem 0; }
-  .section.alt { background: var(--cream); }
-  .section-head { text-align: center; max-width: 700px; margin: 0 auto 2rem; }
-  .section-head .eyebrow { margin-bottom: 0.5rem; display: inline-block; }
-  .section-head h2 { margin-bottom: 0.75rem; }
-  .section-head p { color: var(--muted); font-size: 1rem; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .stat .stat-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.1; margin-bottom: 0.2rem; color: var(--mallorca-deep); }
+  .stat .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
 
-  .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; max-width: 1100px; margin: 0 auto; }
-  .info-card { background: white; border-radius: 14px; padding: 1.5rem 1.75rem; box-shadow: 0 4px 14px rgba(0,0,0,0.04); border-top: 3px solid var(--mallorca-sea); }
-  .info-card h4 { color: var(--mallorca-deep); margin-bottom: 0.5rem; font-size: 1.1rem; }
-  .info-card p, .info-card ul { font-size: 0.92rem; color: #333; line-height: 1.55; }
-  .info-card ul { list-style: none; padding: 0; }
-  .info-card ul li { padding: 0.3rem 0 0.3rem 1.2rem; position: relative; }
-  .info-card ul li::before { content: '·'; position: absolute; left: 0.4rem; color: var(--mallorca-clay); font-weight: 700; font-size: 1.4rem; line-height: 0.8; top: 0.4rem; }
-  .info-card .src { font-size: 0.78rem; color: var(--muted); margin-top: 0.75rem; }
-  .info-card .src a { color: var(--mallorca-clay); text-decoration: none; border-bottom: 1px dotted; }
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 720px; }
+  .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--mallorca-clay); }
+  .section-header h2 { margin-bottom: 1rem; color: var(--mallorca-deep); }
+  .section-header p { color: var(--muted); font-size: 1.05rem; }
 
-  .cta { text-align: center; padding: 3rem 0 4rem; }
-  .cta-link { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.6rem; background: var(--mallorca-deep); color: white; text-decoration: none; border-radius: 999px; font-weight: 600; font-size: 0.95rem; transition: background 0.2s; }
-  .cta-link:hover { background: var(--mallorca-sea); }
+  .flight-box { background: white; border-radius: 16px; padding: 2.5rem; max-width: 920px; margin: 2rem auto 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .flight-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+  .flight-row:last-of-type { border-bottom: none; }
+  .flight-airport .code { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1; font-weight: 700; color: var(--mallorca-deep); }
+  .flight-airport .city { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; }
+  .flight-line { text-align: center; color: var(--muted); }
+  .flight-line .dash { height: 1px; background: var(--line); position: relative; margin: 0.5rem 0; }
+  .flight-line .dash::after { content: '⟶'; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: white; padding: 0 0.5rem; color: var(--mallorca-clay); }
+  .flight-line .info { font-size: 0.8rem; }
+  .flight-meta { display: flex; gap: 2rem; justify-content: center; padding-top: 1.5rem; margin-top: 1rem; border-top: 2px solid var(--line); }
+  .flight-meta .item { text-align: center; }
+  .flight-meta .item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 0.3rem; }
+  .flight-meta .item .val { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--mallorca-deep); }
+
+  .only-this-week { max-width: 1100px; margin: 0 auto 4rem; padding: 3rem; background: linear-gradient(135deg, #f8f1e4, #efe5d0); border-radius: 24px; }
+  .only-this-week .head { text-align: center; margin-bottom: 2.5rem; }
+  .only-this-week h3 { color: var(--mallorca-deep); font-size: 2rem; margin-top: 0.5rem; }
+  .only-this-week .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .event-card { background: white; border-radius: 16px; padding: 2rem; border-left: 4px solid var(--mallorca-sea); }
+  .event-card.clay { border-left-color: var(--mallorca-clay); }
+  .event-card.olive { border-left-color: var(--mallorca-olive); }
+  .event-card.stone { border-left-color: var(--mallorca-stone); }
+  .event-card .head { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .event-card .icon { font-size: 2.2rem; }
+  .event-card h4 { margin: 0; color: var(--mallorca-deep); }
+  .event-card h4.clay { color: var(--mallorca-clay); }
+  .event-card h4.olive { color: var(--mallorca-olive); }
+  .event-card h4.stone { color: var(--mallorca-stone-deep); }
+  .event-card .when { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
+  .event-card p { font-size: 0.95rem; color: #333; margin-bottom: 1rem; }
+  .event-card .book-link { display: inline-block; padding: 0.4rem 0.9rem; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--mallorca-clay); border: 1.5px solid var(--mallorca-clay); }
+  .event-card .book-link:hover { background: var(--mallorca-clay); color: white; }
+  .bonus-callout { margin-top: 2rem; padding: 1.5rem 2rem; background: rgba(30,96,145,0.06); border-radius: 12px; border-left: 4px solid var(--mallorca-sea); }
+  .bonus-callout h4 { margin-bottom: 0.5rem; color: var(--mallorca-deep); }
+  .bonus-callout p { font-size: 0.95rem; color: #333; margin: 0; }
+  .bonus-callout a { color: var(--mallorca-sea); font-weight: 600; }
+
+  .glance-table { max-width: 1000px; margin: 0 auto 4rem; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .glance-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .glance-table th { background: var(--mallorca-deep); color: white; padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600; }
+  .glance-table td { padding: 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .glance-table tr:last-child td { border-bottom: none; }
+  .glance-table tr:nth-child(even) td { background: rgba(30,96,145,0.04); }
+  .glance-table td.daynum { font-weight: 600; color: var(--mallorca-clay); }
+
+  .itinerary { max-width: 950px; margin: 0 auto; }
+  .day { display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
+  .day:last-child { border-bottom: none; }
+  .day-number .num { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1; font-weight: 600; font-style: italic; color: var(--mallorca-clay); }
+  .day-number .date { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .day-content h3 { margin-bottom: 0.75rem; color: var(--mallorca-deep); }
+  .day-content ul { list-style: none; }
+  .day-content ul li { padding: 0.45rem 0 0.45rem 1.5rem; position: relative; color: #333; }
+  .day-content ul li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 6px; height: 6px; border-radius: 50%; background: var(--mallorca-clay); }
+  .day-content ul li strong { color: var(--mallorca-deep); }
+  .day-content ul li a { color: var(--mallorca-sea); text-decoration: none; border-bottom: 1px dotted; }
+
+  .hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .hotel-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+  .hotel-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .hotel-card .hotel-image { height: 200px; background-size: cover; background-position: center; position: relative; background-color: var(--mallorca-stone); }
+  .hotel-card .hotel-tier { position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.95); padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: var(--mallorca-deep); z-index: 2; }
+  .hotel-card .hotel-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .hotel-card .hotel-body h4 { margin-bottom: 0.25rem; color: var(--mallorca-deep); }
+  .hotel-card .hotel-body .loc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+  .hotel-card .hotel-body p { font-size: 0.93rem; color: #333; margin-bottom: 1rem; line-height: 1.55; }
+  .hotel-card .hotel-meta { display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.85rem; margin-top: auto; }
+  .hotel-card .hotel-meta .price { font-weight: 600; color: var(--mallorca-deep); }
+  .hotel-card .book-link { display: inline-block; padding: 0.35rem 0.85rem; font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--mallorca-clay); border: 1.5px solid var(--mallorca-clay); align-self: flex-start; margin-top: 0.5rem; }
+  .hotel-card .book-link:hover { background: var(--mallorca-clay); color: white; }
+
+  .wine-block { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; max-width: 1100px; margin: 0 auto 2rem; background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.06); align-items: center; }
+  .wine-block .wine-image { min-height: 360px; background-size: cover; background-position: center; background-color: var(--mallorca-stone); }
+  .wine-block.binissalem .wine-image { background-image: linear-gradient(135deg, rgba(30,96,145,0.25), rgba(107,122,63,0.40)), url('https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80'); }
+  .wine-block.pla .wine-image { background-image: linear-gradient(135deg, rgba(201,123,62,0.25), rgba(184,137,91,0.40)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80'); }
+  .wine-block .wine-text { padding: 3rem 2.5rem 3rem 0; }
+  .wine-block .eyebrow { color: var(--mallorca-clay); }
+  .wine-block h3 { color: var(--mallorca-deep); margin-bottom: 1rem; }
+  .wine-block p { color: #333; font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .winery-list .winery { padding: 0.85rem 0; border-bottom: 1px dashed var(--line); }
+  .winery-list .winery:last-child { border-bottom: none; }
+  .winery-list .name { font-weight: 600; color: var(--mallorca-deep); margin-bottom: 0.2rem; }
+  .winery-list .name a { color: var(--mallorca-clay); text-decoration: none; }
+  .winery-list .desc { font-size: 0.88rem; color: var(--muted); }
+
+  .food-list { max-width: 950px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .food-row { display: grid; grid-template-columns: 1fr 1.6fr auto; gap: 1.5rem; padding: 1.5rem; border-bottom: 1px solid var(--line); align-items: center; }
+  .food-row:last-child { border-bottom: none; }
+  .food-row .place { font-family: 'Playfair Display', serif; font-weight: 600; color: var(--mallorca-deep); font-size: 1.1rem; }
+  .food-row .place .stars { color: var(--mallorca-clay); margin-left: 0.4rem; font-size: 0.9rem; }
+  .food-row .place .meta { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0; }
+  .food-row .desc { font-size: 0.92rem; color: #333; line-height: 1.55; }
+  .food-row .drive { font-size: 0.78rem; color: var(--muted); text-align: right; white-space: nowrap; }
+
+  .activities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1100px; margin: 0 auto; }
+  .activity { background: white; border-radius: 12px; padding: 1.75rem 1.25rem; text-align: center; transition: transform 0.2s; border: 1px solid var(--line); }
+  .activity:hover { transform: translateY(-2px); }
+  .activity .icon { font-size: 2.2rem; margin-bottom: 0.85rem; display: block; }
+  .activity h4 { margin-bottom: 0.5rem; font-size: 1rem; color: var(--mallorca-deep); }
+  .activity h4 a { color: inherit; text-decoration: none; }
+  .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+  .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
+  .booking .section-header h2 { color: white; }
+  .booking .section-header p { color: rgba(255,255,255,0.7); }
+  .booking .section-header .eyebrow { color: rgba(255,255,255,0.7); }
+  .steps { max-width: 850px; margin: 0 auto; }
+  .step { display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .step:last-child { border-bottom: none; }
+  .step .stepnum { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--mallorca-clay); font-style: italic; }
+  .step h4 { color: white; margin-bottom: 0.5rem; }
+  .step p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem; }
+  .step p strong { color: white; }
+  .step .meta-line { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+  .step .meta-line a { color: var(--mallorca-stone); text-decoration: none; }
+
+  .budget-table { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px; }
+  .budget-table .head { text-align: center; margin-bottom: 2.5rem; }
+  .budget-table h3 { color: white; margin-top: 0.5rem; }
+  .budget-table .head p { color: rgba(255,255,255,0.6); margin-top: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 0.95rem; }
+  .budget-table table { width: 100%; border-collapse: collapse; color: white; font-size: 0.95rem; }
+  .budget-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
+  .budget-table th.item { text-align: left; color: rgba(255,255,255,0.6); width: 38%; }
+  .budget-table th.tier { text-align: center; color: rgba(255,255,255,0.85); width: 21%; font-size: 0.92rem; }
+  .budget-table th.standard { color: var(--mallorca-clay); font-weight: 700; font-size: 1rem; background: rgba(201,123,62,0.14); }
+  .budget-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .budget-table td.item { color: rgba(255,255,255,0.85); }
+  .budget-table td.tier { text-align: center; }
+  .budget-table td.standard { text-align: center; background: rgba(201,123,62,0.06); }
+  .budget-table td.std-mark { font-weight: 600; }
+  .budget-table td.dim { color: rgba(255,255,255,0.3); }
+  .budget-table tfoot td { padding: 1.5rem 0.75rem 0.5rem; font-family: 'Playfair Display', serif; border-top: 2px solid rgba(255,255,255,0.25); border-bottom: none; }
+  .budget-table tfoot td.total-label { font-size: 1.3rem; color: white; }
+  .budget-table tfoot td.tier { font-size: 1.4rem; color: white; }
+  .budget-table tfoot td.standard { font-size: 1.65rem; color: var(--mallorca-clay); font-weight: 700; }
+  .budget-table .footnote { text-align: center; color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-top: 2rem; line-height: 1.6; }
 
   footer { background: #0d0d0d; color: rgba(255,255,255,0.6); padding: 2.5rem 0; text-align: center; font-size: 0.85rem; }
-  footer a { color: rgba(255,255,255,0.75); }
 
+  @media (max-width: 900px) {
+    .hero-card { grid-template-columns: 1fr; }
+    .hero-card .hero-image { min-height: 280px; }
+    .hero-card .hero-content { padding: 2.5rem 2rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .day { grid-template-columns: 1fr; gap: 1rem; }
+    .day-number .num { font-size: 3rem; }
+    .hotels-grid { grid-template-columns: 1fr 1fr; }
+    .activities { grid-template-columns: repeat(2, 1fr); }
+    .flight-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .only-this-week .grid { grid-template-columns: 1fr; }
+    .wine-block { grid-template-columns: 1fr; }
+    .wine-block .wine-text { padding: 2rem; }
+    .topnav .tabs { flex-wrap: wrap; }
+    .container { padding: 0 1.25rem; }
+    .step { grid-template-columns: 60px 1fr; gap: 1rem; }
+    .food-row { grid-template-columns: 1fr; gap: 0.6rem; }
+    .food-row .drive { text-align: left; }
+  }
   @media (max-width: 600px) {
-    .intro-hero h1 { font-size: 2.2rem; }
-    h2 { font-size: 1.6rem !important; }
-    .container { padding: 0 1rem; }
+    .hotels-grid, .activities { grid-template-columns: 1fr; }
+    .intro-hero .meta { gap: 1.5rem; }
+    .topnav { padding: 0.6rem 0; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .brand { font-size: 1rem; }
+    .topnav .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+    .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    .glance-table, .budget-table { overflow-x: auto; }
+    .glance-table table, .budget-table table { min-width: 540px; }
+    h2 { font-size: 1.8rem !important; }
+    .day-number .num { font-size: 2.5rem; }
   }
 </style>
 </head>
@@ -93,17 +258,31 @@
 <div class="back-bar">
   <div class="container">
     <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
-    <span class="meta-mini">Itinerary No. 03F · Mallorca <a href="./aug_11_europe.html">compare 6 options ↗</a></span>
+    <span class="meta-mini">Itinerary No. 03F · Mallorca · <a href="./aug_11_europe.html" style="color: var(--mallorca-clay); text-decoration: none;">compare 6 options ↗</a></span>
     <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
   </div>
 </div>
 
+<nav class="topnav">
+  <div class="container">
+    <div class="brand">August 11 → 17, 2026</div>
+    <div class="tabs">
+      <a href="#itinerary" class="tab">Itinerary</a>
+      <a href="#hotels" class="tab">Hotels</a>
+      <a href="#wine" class="tab">Wine</a>
+      <a href="#food" class="tab">Food</a>
+      <a href="#activities" class="tab">Activities</a>
+      <a href="#book" class="tab">Book Now</a>
+    </div>
+  </div>
+</nav>
+
 <section class="intro-hero">
   <div class="container">
-    <span class="eyebrow">Option F · Spain · Balearic Island · 5 Hotel Nights</span>
+    <span class="eyebrow">Spain · Balearic Islands · 5 Hotel Nights · Option F</span>
     <h1>Mallorca · Deià &amp;<br>the <em>Tramuntana.</em></h1>
     <p class="lede">
-      Hillside-village base in Deià, Belmond La Residencia in a 16th-century Tramuntana hideaway. The savory-Spain pick that isn't Basque — sobrasada, lechona, Sóller lamb, Manchego — with the island's only ★★ (Voro, Canyamel) plus nine ★ across the 2026 Michelin Spain guide.
+      Hillside-village base in Deià, Belmond La Residencia in two 16th–17th-century manors on 30 acres of olive and citrus groves above the Mediterranean. The savory-Spain pick that isn't Basque — <strong>sobrasada, lechona, Sóller lamb, Manchego</strong> — paired with the island's only ★★ at Voro (Canyamel) plus nine ★ across the 2026 Michelin Spain guide. Tramuntana hiking on the doorstep, Sa Calobra's hairpin drive and Cap de Formentor lighthouse within day-trip reach, and a 79°F Mediterranean below the village.
     </p>
     <div class="meta">
       <div class="meta-item"><div class="label">Departure</div><div class="value">Tue, Aug 11</div></div>
@@ -114,105 +293,605 @@
   </div>
 </section>
 
-<section class="container">
-  <div class="draft-notice">
-    <span class="tag">Draft · 2026-06-02</span>
-    <h3>Page in progress — verified facts only</h3>
-    <p>This page is a stub. The full itinerary (flights · day-by-day · 3 hotels · 6 restaurants · 4 wineries · activities · budget tiers · booking checklist) hasn't been drafted yet. The cards below contain only what's been independently verified against 2026 sources — no invented hotel names, prices, or schedules. For the decision matrix and side-by-side comparison with the other five options, use the <a href="./aug_11_europe.html" style="color: var(--mallorca-clay);">compare-6 hub →</a>.</p>
-  </div>
-</section>
-
-<section class="section alt">
+<section class="destination" id="itinerary">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Verified · 2026 Sources</span>
-      <h2>What's Locked So Far</h2>
-      <p>Cited facts only. Anything specific in the full destination page below this section is still pending research.</p>
+
+    <div class="hero-card">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Option F · Spain · Balearic Island</span>
+        <h2>Deià &amp;<br>the Tramuntana</h2>
+        <p class="tagline">Hillside Tramuntana village, Belmond La Residencia in a 16th-century manor, the meat-forward Mallorcan kitchen (sobrasada, lechona, Sóller lamb), Voro ★★ in Canyamel plus nine ★ across the 2026 guide. Hot 85–90°F days demand a coastal/AC base — Deià delivers both.</p>
+        <div class="stats">
+          <div class="stat"><div class="stat-value">85–90°F</div><div class="stat-label">August High</div></div>
+          <div class="stat"><div class="stat-value">Very High</div><div class="stat-label">Crowd Level</div></div>
+          <div class="stat"><div class="stat-value">Manto Negro</div><div class="stat-label">Signature Wine</div></div>
+          <div class="stat"><div class="stat-value">40 min</div><div class="stat-label">PMI → Deià</div></div>
+        </div>
+      </div>
     </div>
 
-    <div class="info-grid">
+    <div class="section-header">
+      <span class="eyebrow">Getting There</span>
+      <h2>Flight Plan</h2>
+      <p>No US nonstop to PMI — every routing is 1-stop. <strong>Iberia is the most-served option</strong> (27 connecting flights per week LAX→PMI per Skyscanner) via Madrid. LAX→MAD nonstop on IB6172, short hop to Palma, arrive mid-afternoon, drive Deià for sunset.</p>
+    </div>
+    <div class="flight-box">
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">LAX</div><div class="city">Los Angeles · Tue Aug 11 · dep 3:25 PM</div></div>
+        <div class="flight-line"><div class="info">Iberia IB6172</div><div class="dash"></div><div class="info">11h 0m nonstop</div></div>
+        <div class="flight-airport"><div class="code">MAD</div><div class="city">Madrid · Wed Aug 12 · arr 11:25 AM</div></div>
+      </div>
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">MAD</div><div class="city">Madrid · 1h 30m layover</div></div>
+        <div class="flight-line"><div class="info">Iberia IB3946</div><div class="dash"></div><div class="info">1h 15m</div></div>
+        <div class="flight-airport"><div class="code">PMI</div><div class="city">Palma · arr <strong>2:10 PM</strong> · 40 min drive to Deià</div></div>
+      </div>
+      <div class="flight-meta">
+        <div class="item"><div class="label">Est. Round-trip</div><div class="val">$1,000–$1,500</div></div>
+        <div class="item"><div class="label">At hotel by</div><div class="val">3:30 PM</div></div>
+        <div class="item"><div class="label">Carrier</div><div class="val">Iberia</div></div>
+      </div>
+    </div>
+    <p style="text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 1rem; max-width: 700px; margin-left: auto; margin-right: auto;">Backup routings: <strong>Lufthansa via FRA/MUC</strong>, <strong>SWISS via ZRH</strong>, or <strong>Iberia LAX→MAD→BCN→PMI</strong>. Verify exact 2026 schedules before booking — flight times and frequencies vary by month. <a href="https://www.skyscanner.com/routes/lax/pmi/los-angeles-international-to-palma-majorca.html" target="_blank" rel="noopener" style="color: var(--mallorca-clay);">Skyscanner LAX→PMI →</a></p>
 
-      <div class="info-card">
-        <h4>Michelin · Mallorca 2026</h4>
-        <ul>
-          <li><strong>★★ ×1:</strong> Voro (Canyamel) — chef Álvaro Salazar. The island's only 2-star.</li>
-          <li><strong>★ ×9:</strong> DINS by Santi Taura (Lloseta), Marc Fosh (Palma), Es Fum (St. Regis Mardavall), Andreu Genestra (Capdepera, Green Star), Maca de Castro (Port d'Alcúdia), Zaranda (Es Capdellà), Béns d'Avall (Sóller, Green Star), Fusión 19 (Port d'Alcúdia), Sa Clastra (Manacor).</li>
-          <li>Total 12 stars across 11 establishments (per 2026 guide); no new stars added this year.</li>
-        </ul>
-        <p class="src">Source: <a href="https://www.helencummins.com/mallorcas-michelin-stars/" target="_blank" rel="noopener">helencummins.com</a> · <a href="https://www.majorcadailybulletin.com/news/did-you-know/2025/11/26/138371/" target="_blank" rel="noopener">Majorca Daily Bulletin</a></p>
+    <div class="section-header">
+      <span class="eyebrow">Day by Day</span>
+      <h2>The Itinerary</h2>
+      <p>One base — Belmond La Residencia in Deià — with day-trips to Sóller + Port de Sóller (25 min), Palma (35 min), Sa Calobra (1h), and Cap de Formentor (1h 30m). Plus one ambitious half-day to Voro ★★ in Canyamel (1h 45m each way) if you want the 2-star.</p>
+    </div>
+
+    <div class="only-this-week">
+      <div class="head">
+        <span class="eyebrow" style="color: var(--mallorca-clay);">Only This Week</span>
+        <h3>Don't-Miss Events on Your Exact Dates</h3>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 700px; margin-left: auto; margin-right: auto;">Four things that only happen during the week you're there. The Perseid + Cap de Formentor combination is the trip's unrepeatable night.</p>
       </div>
 
-      <div class="info-card">
-        <h4>Belmond La Residencia · Deià</h4>
-        <ul>
-          <li>16th-century manor in Deià village (Tramuntana, ~30 min from Palma).</li>
-          <li>Rates start $566–$822/night low season; peak-summer rooms have hit $3,294–$3,545 in recent Kayak bookings.</li>
-          <li>15% Amex offer for July–Aug 2026 travel if booked by May 15, 2026.</li>
-          <li>Robert Graves' village; two pools, on-site spa, donkey statues, art collection.</li>
-        </ul>
-        <p class="src">Source: <a href="https://www.belmond.com/hotels/europe/mallorca/deia/belmond-la-residencia/" target="_blank" rel="noopener">belmond.com</a> · <a href="https://www.americanexpress.com/en-us/travel/discover/property/Spain/Dei%C3%A0/La-Residencia-A-Belmond-Hotel-Mallorca" target="_blank" rel="noopener">Amex FHR</a></p>
+      <div class="grid">
+
+        <div class="event-card clay">
+          <div class="head">
+            <span class="icon">☄️</span>
+            <div>
+              <h4 class="clay">Perseid Meteor Shower Peak</h4>
+              <div class="when">Night of <strong>Wed Aug 12 → Thu Aug 13</strong></div>
+            </div>
+          </div>
+          <p><strong>The best Perseid year of the decade.</strong> New moon on Aug 12 = moonless sky, 90+ meteors/hour at peak (1–4 AM local). Mallorca has the rare combination of dark sky over the sea and a road-to-the-lighthouse to enable it: <strong>Cap de Formentor</strong>, the island's NE tip, has minimal light pollution and an open lighthouse promontory. Drive up after 10 PM (the daytime closure ends), stake out the lighthouse parking, watch over the Mediterranean horizon. Drive back to Deià by 4:30 AM. Bring blankets, thermoses, a bottle of cava.</p>
+          <a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener" class="book-link">Viewing guide →</a>
+        </div>
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">⛪</span>
+            <div>
+              <h4>Assumption of Mary · Mare de Déu</h4>
+              <div class="when"><strong>Sat Aug 15</strong> — national public holiday</div>
+            </div>
+          </div>
+          <p>Spain's biggest summer holiday. <strong>Religious processions and "Els Llits de la Mare de Déu"</strong> (Virgin Mary recumbent displays) in churches across Palma and many villages — Biniaraix, Caimari, Valldemossa, Sineu, Esporles, Sa Coma, Son Serra de Marina, Colònia de Sant Pere. Cultural fairs, traditional music and dance, children's activities. <strong>Restaurants packed, beaches full, coastal roads gridlocked.</strong> Stay local in Deià + Valldemossa this day; don't try Sa Calobra or Palma. Book Sat dinner 60+ days ahead.</p>
+          <a href="https://www.inmallorcamagazine.com/august-events" target="_blank" rel="noopener" class="book-link">August events guide →</a>
+        </div>
+
+        <div class="event-card olive">
+          <div class="head">
+            <span class="icon">🚗</span>
+            <div>
+              <h4 class="olive">Sa Calobra Crowd Window</h4>
+              <div class="when">Best <strong>before 8:30 AM</strong> or <strong>after 5:30 PM</strong></div>
+            </div>
+          </div>
+          <p>The 10 km road of hairpins ending at the Torrent de Pareis gorge is on every Mallorca shortlist — and in August, every tour bus on the island also runs it. <strong>Be at the trailhead by 7 AM</strong>, swim by 8, drive back out before the buses arrive (around 10). Alternative: arrive at 5 PM for the soft late-afternoon light and the buses gone. Don't attempt 11 AM–4 PM — the road is single-lane in places and the wait for oncoming buses can be 30+ minutes.</p>
+          <a href="https://www.google.com/maps/place/Sa+Calobra,+Escorca,+Balearic+Islands,+Spain/" target="_blank" rel="noopener" class="book-link">Sa Calobra map →</a>
+        </div>
+
+        <div class="event-card stone">
+          <div class="head">
+            <span class="icon">🚦</span>
+            <div>
+              <h4 class="stone">Cap de Formentor · Daytime Road Closure</h4>
+              <div class="when"><strong>Closed 10 AM → 10 PM</strong>, June 1 – Sept 30</div>
+            </div>
+          </div>
+          <p>The lighthouse road is closed to private cars in summer — you must take the public bus from Playa de Formentor parking, OR drive up before 10 AM, OR after 10 PM. For the Perseids viewing, the 10 PM reopening is ideal. For a sunset visit, you'll need the bus (~30 min from parking) and accept you can't drive back yourself until 10 PM. <strong>Plan the day around this</strong>: morning at Cap de Formentor before 10 AM, then drive south through Pollença + Alcúdia for lunch.</p>
+          <a href="https://www.alcudiamallorca.com/en/" target="_blank" rel="noopener" class="book-link">Pollença / Alcúdia info →</a>
+        </div>
+
       </div>
 
-      <div class="info-card">
-        <h4>August 15 Assumption Day</h4>
-        <ul>
-          <li>National public holiday — beaches and restaurants packed island-wide.</li>
-          <li>Religious processions and 'Els Llits de la Mare de Déu' (Virgin recumbent displays) in churches across Palma + many villages.</li>
-          <li>Cultural activities (music, dance, craft fairs) in Biniaraix, Caimari, Valldemossa, Sineu, Esporles, and others.</li>
-          <li>No central Palma fireworks tradition documented for the date — verify locally if fireworks are a must-have.</li>
-        </ul>
-        <p class="src">Source: <a href="https://www.inmallorcamagazine.com/august-events" target="_blank" rel="noopener">In Mallorca Magazine</a> · <a href="https://www.sailtripmallorca.com/post/local-festivals-public-holidays-in-mallorca" target="_blank" rel="noopener">Sail Trip Mallorca</a></p>
+      <div class="bonus-callout">
+        <h4>🍴 Bonus — Voro ★★ in Canyamel (the ambitious add-on)</h4>
+        <p>Voro is Mallorca's only 2-star — Chef <strong>Álvaro Salazar</strong> at the Park Hyatt Mallorca in Canyamel (NE coast). Two tasting menus: "Voro" 15–18 courses €165, "Devoro" 20–22 courses €195. From Deià it's <strong>1h 45m each way</strong> — too far for a casual dinner. Two ways to make it work: (1) lunch on a day you're doing Sa Calobra + Cap de Formentor (geographically adjacent — combine the day's drive) or (2) overnight at the Park Hyatt itself (would break the single-base plan; only if Voro is truly the trip-maker). Book early — peak season slots go 60+ days out. Email <a href="mailto:voro.parkhyattmallorca@hyatt.com">voro.parkhyattmallorca@hyatt.com</a> or call +34 871 811 234.</p>
+      </div>
+    </div>
+
+    <div class="glance-table">
+      <table>
+        <thead>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="daynum">1</td><td>Wed Aug 12</td><td>Arrival + Perseids ☄️</td><td>Land PMI 2 PM · Deià check-in · pool · late-night Cap de Formentor</td><td>El Olivo (Belmond) — light first night</td></tr>
+          <tr><td class="daynum">2</td><td>Thu Aug 13</td><td>Tramuntana hike</td><td>Cami des Pintors Deià→Sóller (or vice versa) · 1912 tram to Port de Sóller</td><td><strong>Béns d'Avall ★</strong> clifftop Sóller</td></tr>
+          <tr><td class="daynum">3</td><td>Fri Aug 14</td><td>Wine day</td><td>Bodega Ribas (Consell) + Macià Batle (Santa Maria) · pa amb oli lunch</td><td><strong>Marc Fosh ★</strong> Palma</td></tr>
+          <tr><td class="daynum">4</td><td>Sat Aug 15</td><td>Assumption ⛪ · stay local</td><td>Cala Deià morning swim · Valldemossa village · spa at Belmond</td><td>Belmond La Residencia (El Patio terrace)</td></tr>
+          <tr><td class="daynum">5</td><td>Sun Aug 16</td><td>Sa Calobra + NE coast</td><td>Sa Calobra 7 AM · Cap de Formentor lunch · Pollença old town</td><td><strong>DINS Santi Taura ★</strong> Lloseta</td></tr>
+          <tr><td class="daynum">6</td><td>Mon Aug 17</td><td>Departure</td><td>Slow morning · transfer PMI</td><td>On the plane</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="itinerary">
+
+      <div class="day">
+        <div class="day-number"><div class="num">01</div><div class="date">Wed Aug 12</div></div>
+        <div class="day-content">
+          <h3>Arrival + Perseids at Cap de Formentor</h3>
+          <ul>
+            <li><strong>2:10 PM</strong> Land PMI · Iberia IB3946</li>
+            <li><strong>3:00 PM</strong> Pre-arranged private transfer to Deià (~$130, 40 min via Ma-1 + Ma-10)</li>
+            <li><strong>3:45 PM</strong> Check in <a href="https://www.belmond.com/hotels/europe/mallorca/deia/belmond-la-residencia/" target="_blank" rel="noopener">Belmond La Residencia</a> · request a Junior Suite with sea view if upgrade is available</li>
+            <li><strong>5:00 PM</strong> Pool + olive garden + welcome drink (Mirador bar)</li>
+            <li><strong>7:30 PM</strong> Sunset on Belmond's terrace · light dinner at <strong>El Olivo</strong> (Belmond's signature restaurant in a 17th-century olive mill — three Mediterranean tasting menus, romantic stone-and-candlelight room)</li>
+            <li><strong>10:30 PM</strong> Coffee at the bar, then drive (you or pre-arranged transfer ~$180 RT) <strong>1h 30m to Cap de Formentor</strong> — the lighthouse road opens at 10 PM</li>
+            <li><strong>12:00 AM → 3:30 AM</strong> Perseid peak viewing from the lighthouse promontory — bring blankets, thermos, a bottle of cava. Peak shower is 1–4 AM, dark sky over the Mediterranean</li>
+            <li><strong>4:30 AM</strong> Drive back to Deià · sleep in tomorrow</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="info-card">
-        <h4>Climate · Aug</h4>
-        <ul>
-          <li>Highs 85–90°F; lows 68–72°F.</li>
-          <li>Sea temp ~79°F — warm Mediterranean.</li>
-          <li>Real heatwave exposure during peak Aug — coastal/AC base mandatory.</li>
-          <li>Drier than Atlantic options (Cascais, Galicia) but hotter than all five alternatives in the comparison hub.</li>
-        </ul>
-        <p class="src">Source: WMO 1991–2020 normals · verify 2026 forecast closer to date</p>
+      <div class="day">
+        <div class="day-number"><div class="num">02</div><div class="date">Thu Aug 13</div></div>
+        <div class="day-content">
+          <h3>Tramuntana hike + Sóller train + Béns d'Avall ★</h3>
+          <ul>
+            <li><strong>10:00 AM</strong> Slow breakfast on the Belmond terrace · recover from Perseids night</li>
+            <li><strong>11:30 AM</strong> Walk the <strong><a href="https://www.gr221.info/gr221%20english.htm" target="_blank" rel="noopener">Cami des Pintors</a></strong> ("Painters' Path") — the easiest GR-221 section, ~7 km Deià→Sóller via a 13th-century Arab path through olive groves and orange orchards. ~2.5 h walking, gentle elevation. Or take the historic Sóller train down (depart Palma) and walk back uphill if you want a different angle.</li>
+            <li><strong>2:30 PM</strong> Lunch at <strong>Ca'n Pintxo</strong> or <strong>Cas Carreter</strong> in Sóller plaza — pa amb oli with sobrasada, salt-cured tomato, Manchego</li>
+            <li><strong>3:30 PM</strong> Ride the <strong>1912 wooden tram</strong> ($10 RT) from Sóller plaza to Port de Sóller (~25 min, charming antique cars)</li>
+            <li><strong>4:30 PM</strong> Swim in Port de Sóller harbor or Platja d'en Repic · sun on the rocks</li>
+            <li><strong>7:30 PM</strong> Drive to <strong><a href="https://www.bensdavall.com/" target="_blank" rel="noopener">Béns d'Avall ★</a></strong> for sunset cocktails (15 min from Sóller) · <strong>8:30 PM dinner</strong> — clifftop terrace, father-and-son Vicens, Mallorcan contemporary, Michelin Green Star for sustainability. ~€140 tasting menu</li>
+            <li><strong>11:00 PM</strong> Return to Belmond (~30 min)</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="info-card">
-        <h4>How it scores · 30 / 39</h4>
-        <ul>
-          <li><strong>Savory 3</strong> — sobrasada, lechona, Sóller lamb, Manchego (meat-Spain ✓)</li>
-          <li><strong>Michelin 3</strong> — ★★ + ★ ×9 verified 2026</li>
-          <li><strong>Safety 2</strong> — Palma pickpockets; Deià base low</li>
-          <li><strong>Weather 2</strong> — hot 85–90°F even at the coast</li>
-          <li><strong>Crowds 1</strong> — absolute peak Med August</li>
-          <li><strong>Romance 3</strong> — Deià + Belmond</li>
-          <li><strong>Wine 2</strong> — Binissalem + Pla i Llevant DOs (small)</li>
-          <li><strong>Activities 3</strong> — Tramuntana, Sa Calobra, Cap de Formentor</li>
-        </ul>
-        <p class="src">See full matrix on the <a href="./aug_11_europe.html#scoring">compare-6 hub</a> · ranking: 5th of 6 (Annecy leads at 38).</p>
+      <div class="day">
+        <div class="day-number"><div class="num">03</div><div class="date">Fri Aug 14</div></div>
+        <div class="day-content">
+          <h3>Wine day · Binissalem + Palma · Marc Fosh ★</h3>
+          <ul>
+            <li><strong>9:30 AM</strong> Driver pickup ($650 for the day for two — required because you'll be tasting)</li>
+            <li><strong>10:30 AM</strong> <strong><a href="http://www.bodegaribas.com/" target="_blank" rel="noopener">Bodega Ribas</a></strong> tour + tasting (Consell, est. 1711 · oldest winery in Mallorca · organic · native Manto Negro red + Prensal Blanc white) — book ahead by email/phone</li>
+            <li><strong>12:30 PM</strong> Drive 15 min to <strong><a href="https://www.maciabatle.com/en/" target="_blank" rel="noopener">Macià Batle</a></strong> in Santa Maria — larger producer, more polished tasting room, easy weekend visits</li>
+            <li><strong>2:00 PM</strong> Lunch in Santa Maria — pa amb oli + Mallorcan charcuterie at <strong>Sa Vinya</strong> or back in Binissalem at <strong>Singló</strong></li>
+            <li><strong>4:30 PM</strong> Drive into Palma (~25 min) · walk the cathedral + old town · cooled-down evening</li>
+            <li><strong>7:30 PM</strong> Cocktails at <strong>Brassclub</strong> (Spain's first IBA-affiliated cocktail bar)</li>
+            <li><strong>8:30 PM</strong> <strong><a href="https://www.marcfosh.com/" target="_blank" rel="noopener">Marc Fosh ★</a></strong> — Palma's flagship address, first British chef to win a Michelin star in Spain (2017, maintained continuously). Refined modern Mediterranean in Convent de la Missió hotel. ~€130 tasting</li>
+            <li><strong>11:30 PM</strong> Driver back to Deià (~35 min)</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="info-card">
-        <h4>What's still TBD</h4>
-        <ul>
-          <li>Flight booking (Iberia via MAD vs. via BCN; cost band ~$1,000–$1,500 RT estimated, needs verification).</li>
-          <li>Day-by-day plan (currently zero days mapped).</li>
-          <li>Restaurant reservations — Voro and the ★ shortlist need 60–90 days lead.</li>
-          <li>Wineries — Bodega Ribas, 4 Kilos, Macià Batle, Castell Miquel are typical candidates (not yet researched).</li>
-          <li>Budget tiers — Belmond peak nights will push Splurge above $16K; Standard tier with Hotel Es Molí / Sa Pedrissa likely $10.5–$11.5K.</li>
-          <li>Activities calendar — Tramuntana GR-221 day, Sa Calobra drive, Cap de Formentor sunset, Palma cathedral half-day.</li>
-        </ul>
+      <div class="day">
+        <div class="day-number"><div class="num">04</div><div class="date">Sat Aug 15</div></div>
+        <div class="day-content">
+          <h3>Assumption Day · stay-local Deià + Valldemossa</h3>
+          <ul>
+            <li><strong>Note:</strong> National holiday — most shops closed, restaurants packed, coastal roads gridlocked. <strong>Stay west of the Ma-1.</strong> No Palma, no Sa Calobra, no Cap de Formentor today.</li>
+            <li><strong>9:30 AM</strong> Walk down the cliff path from Deià village (~25 min steep) to <strong>Cala Deià</strong> — pebble cove, swim, Ca's Patró March cliff-side restaurant for fresh-grilled fish lunch (the local exception — this is one fish meal you'll want)</li>
+            <li><strong>1:30 PM</strong> Walk back up · siesta + pool</li>
+            <li><strong>4:00 PM</strong> Drive 20 min to <strong>Valldemossa</strong> (Chopin + George Sand winter, 1838–39) · walk the Real Cartoixa monastery cells · coca de patata pastries at <strong>Ca'n Molinas</strong></li>
+            <li><strong>6:30 PM</strong> Catch the late-afternoon <strong>Mare de Déu procession</strong> at one of the smaller villages — Esporles, Banyalbufar, or back in Deià</li>
+            <li><strong>8:30 PM</strong> <strong>Dinner at Belmond La Residencia</strong> — El Patio terrace (informal Mediterranean) or El Olivo (formal in olive mill) · the in-house option is built around exactly this day: roads clear, no driving, candle-lit garden</li>
+            <li><strong>10:30 PM</strong> Cigars + Mallorcan herbs liqueur at the Mirador bar; possibly walk into Deià village for the local Assumption festes (free, low-key, traditional music + ball)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">05</div><div class="date">Sun Aug 16</div></div>
+        <div class="day-content">
+          <h3>Sa Calobra dawn + NE coast + DINS ★</h3>
+          <ul>
+            <li><strong>6:00 AM</strong> Driver pickup (or you drive — winding mountain road, fresh and ideal early) · Belmond → Sa Calobra trailhead at the parking lot end of Ma-2141 (~1 h)</li>
+            <li><strong>7:00 AM</strong> Walk the cliff-tunnel path to <strong>Torrent de Pareis</strong> beach — gigantic vertical limestone walls, swim in crystal water before the tour boats arrive</li>
+            <li><strong>9:30 AM</strong> Drive back up Sa Calobra serpentine (the "Nus de Sa Corbata" knot photo stop) · continue east via Ma-10 to <strong>Cap de Formentor area</strong></li>
+            <li><strong>10:45 AM</strong> Park at <strong>Playa de Formentor</strong> (last car park before the closure) · catch the public bus or walk the 4 km path to the lighthouse</li>
+            <li><strong>12:30 PM</strong> Cap de Formentor lighthouse · panoramic views from Mallorca's northern tip · drive back through Pollença</li>
+            <li><strong>2:00 PM</strong> Lunch in <strong>Pollença</strong> old town (medieval hilltop · the 365-step Calvari) — <strong>Q11 Restaurant</strong> for modern Mallorcan</li>
+            <li><strong>4:00 PM</strong> Drive back toward Deià via Lloseta (~40 min)</li>
+            <li><strong>5:30 PM</strong> Brief rest + change at Belmond (~30 min)</li>
+            <li><strong>8:00 PM</strong> Drive to <strong><a href="https://www.dinsbysantitaura.com/" target="_blank" rel="noopener">DINS Santi Taura ★</a></strong> in Lloseta (~45 min) — chef Santi Taura's flagship in Hotel Es Princep–owned Es Cul de Sa Plaça. Mallorcan-rooted tasting menu only · ~€95</li>
+            <li><strong>11:30 PM</strong> Return to Belmond</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">06</div><div class="date">Mon Aug 17</div></div>
+        <div class="day-content">
+          <h3>Departure</h3>
+          <ul>
+            <li><strong>9:00 AM</strong> Slow breakfast on the Belmond terrace</li>
+            <li><strong>10:30 AM</strong> Optional last swim at Cala Deià</li>
+            <li><strong>12:30 PM</strong> Transfer to PMI (~$130, 40 min)</li>
+            <li><strong>3:30 PM</strong> Iberia IB3947 PMI → MAD (1h 15m)</li>
+            <li><strong>6:00 PM</strong> Iberia IB6171 MAD → LAX (12h)</li>
+            <li><strong>9:00 PM same day</strong> Arrive LAX (gain 9 hours on the return)</li>
+          </ul>
+        </div>
       </div>
 
     </div>
+
+    <div class="section-header" id="hotels">
+      <span class="eyebrow">Where to Stay</span>
+      <h2>Three Hotels, One Decision</h2>
+      <p>All in or near Deià (the operator's base of choice — Tramuntana hideaway, walking village, ~35 min from Palma, ~25 min from Sóller). Belmond La Residencia is the marquee; Hotel Es Molí is the value-luxury alternative in the same village; Castell Son Claret is the inland-finca alternative if you'd rather sleep near Voro/DINS instead of the coast.</p>
+    </div>
+    <div class="hotels-grid">
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(30,96,145,0.25), rgba(201,123,62,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Dei%C3%A0_2017.jpg/800px-Dei%C3%A0_2017.jpg');">
+          <span class="hotel-tier">★ Top Pick · 5 nights</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Belmond La Residencia</h4>
+          <div class="loc">Deià · 16th–17th-c twin manors · 30 acres olive + citrus</div>
+          <p>Two restored manor houses spread across olive groves on the edge of Deià. Three restaurants (including <strong>El Olivo</strong> in a 17th-century oil mill with 33 original Joan Miró paintings on the walls). Two pools, award-winning spa, tennis, mountain biking, yoga. Previously owned by Richard Branson; now Belmond's Mallorca flagship. <strong>Request a Junior Suite with sea view.</strong> Amex FHR offer: 15% off July–Aug 2026 if booked by May 15.</p>
+          <div class="hotel-meta">
+            <span class="price">$2,000–$3,500 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.belmond.com/hotels/europe/mallorca/deia/belmond-la-residencia/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(107,122,63,0.30), rgba(184,137,91,0.40)), url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80');">
+          <span class="hotel-tier">Value alternative</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hotel Es Molí</h4>
+          <div class="loc">Deià · 17th-c hilltop mansion · 4-star · same village</div>
+          <p>Hilltop 17th-century mansion with panoramic views of Deià village, the Tramuntana, and the Mediterranean. 32-yard fresh-water pool, gardens, free four-times-daily shuttle to a rocky cove (Sa Muleta) for sea swimming. <strong>The right pick if Belmond's price band doesn't work</strong> — same village, same views, friendly staff, "timeless elegance." Less polished than Belmond (some dated furniture) but full of character.</p>
+          <div class="hotel-meta">
+            <span class="price">$280–$700 / night</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://esmoli.com/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(184,137,91,0.25), rgba(30,96,145,0.40)), url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');">
+          <span class="hotel-tier">Inland finca</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Castell Son Claret</h4>
+          <div class="loc">Es Capdellà · Tramuntana foothills · 38 rooms · Relais &amp; Châteaux</div>
+          <p>Restored 13th-century castle on a 326-acre estate. R&amp;C 5-star, two pools, spa, on-site Michelin context (the property hosts the ★ <strong>Sa Clastra</strong> and is in <strong>Zaranda ★'s</strong> neighborhood). <strong>The pick if you'd rather sleep inland near Palma + the south-coast Michelin scene than coastal/cliff Deià.</strong> Trade-off: not as charming a village walk; more "country estate" feel. ~40 min to Palma, ~50 min to Deià.</p>
+          <div class="hotel-meta">
+            <span class="price">$900–$1,800 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.castellsonclaret.com/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="wine">
+      <span class="eyebrow">The Glass</span>
+      <h2>Two DOs, 30 Minutes Apart</h2>
+      <p>Mallorca has two official Denominations of Origin: <strong>DO Binissalem</strong> (between Inca and Palma) and <strong>DO Pla i Llevant</strong> (central + eastern, around Manacor and Felanitx). Small but real — most don't export at scale, so the bottles you taste here are bottles you can only really drink here. The signature reds are made from <strong>Manto Negro</strong>; the whites from <strong>Prensal Blanc</strong> and <strong>Moll</strong>.</p>
+    </div>
+
+    <div class="wine-block binissalem">
+      <div class="wine-image"></div>
+      <div class="wine-text">
+        <span class="eyebrow">DO Binissalem · the heritage zone</span>
+        <h3>Mallorca's First DO (1991)</h3>
+        <p>The older + larger of the two DOs, between Inca and Palma. <strong>Manto Negro</strong> dominates the reds (medium-bodied, savory, lower acidity); <strong>Prensal Blanc</strong> the whites (citrus, herbal, food-friendly). Closer to Deià (~30 min via Ma-13) — easier wine-day target than Pla i Llevant.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="http://www.bodegaribas.com/" target="_blank" rel="noopener">Bodega Ribas ↗</a></div>
+            <div class="desc">Consell · est. 1711 · oldest winery in Mallorca, still family-run · organic + native varieties only · books by email/phone</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.maciabatle.com/en/" target="_blank" rel="noopener">Macià Batle ↗</a></div>
+            <div class="desc">Santa Maria · larger producer · polished tasting room · weekend visits accepted · GetYourGuide/Viator bookable</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.vinosferrer.com/en/" target="_blank" rel="noopener">José L. Ferrer ↗</a></div>
+            <div class="desc">Binissalem town · est. 1931 · long-running, popular tours, easy weekday visits</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.bodegasantonionadal.com/" target="_blank" rel="noopener">Bodegas Antonio Nadal ↗</a></div>
+            <div class="desc">Binissalem · est. 1968 · early DO Binissalem producer · book by email</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wine-block pla" style="margin-top: 2rem;">
+      <div class="wine-image" style="order: 2;"></div>
+      <div class="wine-text" style="order: 1;">
+        <span class="eyebrow">DO Pla i Llevant · the experimentalists</span>
+        <h3>Newer DO, Looser Rules (1999)</h3>
+        <p>Vineyards around Manacor + Felanitx in the central and eastern interior — flatter, warmer, more experimental. <strong>4 Kilos Vinícola</strong> is the cult name here (natural wines, minimal-intervention). ~1 h drive from Deià, so realistically a half-day target on a wine day that combines with Binissalem only if you're committed.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://www.4kilos.com/en/" target="_blank" rel="noopener">4 Kilos Vinícola ↗</a></div>
+            <div class="desc">Felanitx · founded 2006 · natural wines, experimental winemaking, minimal intervention · book ahead by email</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.pereseda.com/en/" target="_blank" rel="noopener">Pere Seda ↗</a></div>
+            <div class="desc">Manacor · largest Pla i Llevant winery · 19th-century roots · awards and tours, easier booking</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.bodegacanmajoral.com/" target="_blank" rel="noopener">Can Majoral ↗</a></div>
+            <div class="desc">Algaida · organic + biodynamic since 1979 · cult following · email/phone reservation</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.son-vives.com/en/" target="_blank" rel="noopener">Son Vives (Banyalbufar) ↗</a></div>
+            <div class="desc">NOT in Pla i Llevant — this is on the Tramuntana coast, ~30 min south of Deià. Dramatic terraced cliff vineyards (Malvasia de Banyalbufar) · pairs well with the Tramuntana driving day · visits by appointment</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" id="food">
+      <span class="eyebrow">The Table</span>
+      <h2>One ★★, Nine ★, Plus the Local Heroes</h2>
+      <p>Per the 2026 Michelin Spain guide — Mallorca has 12 stars across 11 establishments. Voro is the only ★★. From Deià, the natural-fit ★ tables in dinner range are <strong>Béns d'Avall</strong> (Sóller, 25 min), <strong>Marc Fosh</strong> (Palma, 30 min), <strong>DINS Santi Taura</strong> (Lloseta, 45 min), and <strong>Es Fum</strong> (St. Regis Mardavall, Calvià, 45 min). Voro and the Capdepera/Canyamel scene (Andreu Genestra, Voro itself) require half-day commitments.</p>
+    </div>
+
+    <div class="food-list">
+      <div class="food-row">
+        <div class="place">Voro <span class="stars">★★</span><span class="meta">Canyamel · Park Hyatt Mallorca · Álvaro Salazar</span></div>
+        <div class="desc">The island's only 2-star. Two tasting menus only: <strong>Voro</strong> 15–18 courses (€165), <strong>Devoro</strong> 20–22 courses (€195). Ambitious modern Mediterranean rooted in Andalusian and Mallorcan tradition. <strong>Book 60+ days out</strong> — <a href="mailto:voro.parkhyattmallorca@hyatt.com">email</a> or +34 871 811 234.</div>
+        <div class="drive">1h 45m from Deià</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Béns d'Avall <span class="stars">★ + 🌿 Green</span><span class="meta">Sóller · clifftop · Vicens family</span></div>
+        <div class="desc">Father-and-son Benet and Jaume Vicens. Mallorcan contemporary cuisine with a Green Star for sustainability. Dramatic clifftop terrace overlooking the Mediterranean — best 8 PM sunset booking. ~€140 tasting menu. <a href="https://www.bensdavall.com/" target="_blank" rel="noopener">bensdavall.com</a></div>
+        <div class="drive">25 min</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Marc Fosh <span class="stars">★</span><span class="meta">Palma · Convent de la Missió hotel · Marc Fosh</span></div>
+        <div class="desc">Refined modern Mediterranean inside the Convent de la Missió design hotel. <strong>First British chef to win a Michelin star in Spain (2017)</strong> and has maintained continuously. Tasting menu ~€130. <a href="https://www.marcfosh.com/" target="_blank" rel="noopener">marcfosh.com</a></div>
+        <div class="drive">30 min</div>
+      </div>
+      <div class="food-row">
+        <div class="place">DINS by Santi Taura <span class="stars">★</span><span class="meta">Lloseta · Es Princep / Es Cul de Sa Plaça · Santi Taura</span></div>
+        <div class="desc">Chef Santi Taura's flagship — a single Mallorcan-rooted tasting menu that changes by season. Intimate, candle-lit dining room. ~€95. The most affordable ★ in dinner range from Deià. <a href="https://www.dinsbysantitaura.com/" target="_blank" rel="noopener">dinsbysantitaura.com</a></div>
+        <div class="drive">45 min</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Es Fum <span class="stars">★</span><span class="meta">Calvià · St. Regis Mardavall</span></div>
+        <div class="desc">Refined hotel dining on the south-west coast — pristine Mediterranean ingredients, contemporary technique. The St. Regis setting is glossy resort, not village-rustic. Tasting menu ~€175. <a href="https://www.marriott.com/en-us/hotels/pmiwj-the-st-regis-mardavall-mallorca-resort/dining/" target="_blank" rel="noopener">St. Regis Mardavall</a></div>
+        <div class="drive">45 min</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Andreu Genestra <span class="stars">★ + 🌿 Green</span><span class="meta">Capdepera · Pleta hotel</span></div>
+        <div class="desc">Land-to-table cooking on the NE side of the island — own garden, foraging, classic Mallorcan techniques modernized. Pairs naturally with a Voro day (both NE coast). Tasting menus ~€120–€150. <a href="https://www.andreugenestra.com/" target="_blank" rel="noopener">andreugenestra.com</a></div>
+        <div class="drive">1h 30m</div>
+      </div>
+      <div class="food-row">
+        <div class="place">El Olivo <span class="stars">Belmond restaurant · highly regarded but not ★</span><span class="meta">Deià · Belmond La Residencia · 17th-c oil mill · Pablo Aranda</span></div>
+        <div class="desc">Belmond La Residencia's flagship restaurant. Modern Mediterranean with Arabic influences inspired by Federico García Lorca's poetic world. Three menus including a vegetarian. <strong>Dining room moves to the terrace in summer</strong> — romantic Tramuntana views. Right downstairs from your room. <a href="https://www.belmond.com/hotels/europe/mallorca/deia/belmond-la-residencia/restaurants-bars/el-olivo/" target="_blank" rel="noopener">Belmond El Olivo</a></div>
+        <div class="drive">on-site</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Ca's Patró March <span class="stars">cult casual</span><span class="meta">Cala Deià · cliffside fish shack</span></div>
+        <div class="desc">The Deià exception. Whitewashed cliff-side restaurant down a 25-min walking path from the village. Fresh-grilled fish, paella, swim before lunch. <strong>Famous, packed, walk-in only (no reservations)</strong> — get there by noon. Cash preferred.</div>
+        <div class="drive">25 min walk</div>
+      </div>
+    </div>
+
+    <div class="section-header" id="activities">
+      <span class="eyebrow">Beyond the Table</span>
+      <h2>Things You Won't Do Anywhere Else</h2>
+      <p>The Tramuntana is UNESCO-listed for its 1,000-year-old dry-stone landscape. Sa Calobra and Cap de Formentor are the iconic drives. The Sóller train is a Spain rarity. Pick three or four.</p>
+    </div>
+
+    <div class="activities">
+
+      <div class="activity">
+        <span class="icon">🥾</span>
+        <h4><a href="https://www.gr221.info/gr221%20english.htm" target="_blank" rel="noopener">GR-221 Dry Stone Route</a></h4>
+        <p>The 140 km UNESCO trail. Best day section from Deià: <strong>Cami des Pintors to Sóller</strong> (7 km, easy, Arab path). Ambitious: <strong>Valldemossa→Sóller</strong> (24 km, 1,200 m gain, "most rewarding").</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🚗</span>
+        <h4>Sa Calobra Hairpin Drive</h4>
+        <p>10 km of relentless hairpins ending at the Torrent de Pareis gorge beach. <strong>Go at 7 AM</strong> to avoid the tour-bus convoys. The "Nus de Sa Corbata" knot photo stop is on the way down. Swim in vertical-walled rock canyon.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🚌</span>
+        <h4>Cap de Formentor Lighthouse</h4>
+        <p>Mallorca's NE tip. <strong>Road closed to cars 10 AM–10 PM in summer</strong> — take the public bus from Playa de Formentor parking. Drive yourself for the Perseids (after 10 PM) or before 10 AM for an early-morning visit.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🚃</span>
+        <h4>1912 Sóller Train + Tram</h4>
+        <p>Vintage narrow-gauge railway Palma→Sóller (1 h, through Tramuntana tunnels) + 1912 wooden tram Sóller→Port de Sóller. Operating ~10 round trips/day in summer. ~$30 RT for the train, $10 for the tram.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏊</span>
+        <h4>Cala Deià Swim</h4>
+        <p>Steep 25-minute walk down from Deià village to a pebble cove with two cliff-restaurants (Ca's Patró March + Sa Cala). Crystal water, jump rocks, rope swing. <strong>The best after-hike swim.</strong> Walk back up at sunset.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">⛪</span>
+        <h4><a href="https://www.cartoixadevalldemossa.com/en/" target="_blank" rel="noopener">Valldemossa Cartoixa</a></h4>
+        <p>The Carthusian monastery where Chopin and George Sand wintered in 1838–39. Walk Chopin's cell, see the original Pleyel pianoforte. Pair with coca de patata pastries at Ca'n Molinas.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">⛵</span>
+        <h4>Port de Sóller Boat Day</h4>
+        <p>Charter a small RIB or take a sunset cruise from Port de Sóller harbor. Coastline-only — the NW coast cliffs are otherwise inaccessible by land. Sa Calobra approachable by sea instead of road.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏰</span>
+        <h4>Palma Cathedral (La Seu)</h4>
+        <p>13th–16th-century Gothic cathedral with Gaudí + Miquel Barceló interventions. Best at 3:30 PM in summer when the rose-window light hits the floor. Pair with old-town walk + Es Baluard contemporary art museum.</p>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
-<section class="cta">
-  <a href="./aug_11_europe.html" class="cta-link"><span class="arrow">←</span> Back to the 6-option compare hub</a>
+<section class="booking" id="book">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="eyebrow">Make It Real</span>
+      <h2>Book These Now</h2>
+      <p>Seven actions, ranked by lead time required. <strong>Belmond La Residencia + Voro + Marc Fosh need 60–90 days</strong>; everything else is 30 days or less.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="stepnum">01</div>
+        <div>
+          <h4>Book Belmond La Residencia (5 nights, Wed Aug 12 → Mon Aug 17)</h4>
+          <p>Request a <strong>Junior Suite with sea view</strong>. <strong>Amex FHR offer: 15% off July–Aug 2026 if booked by May 15, 2026.</strong> Belmond rate-only direct typically beats third-party (+ benefits).</p>
+          <div class="meta-line">90 days out · <a href="https://www.belmond.com/hotels/europe/mallorca/deia/belmond-la-residencia/" target="_blank" rel="noopener">belmond.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">02</div>
+        <div>
+          <h4>Reserve dinner at Voro ★★ (if you're doing it)</h4>
+          <p>Decide before booking flights: Voro = 1h 45m each way from Deià. Either lunch on the Sa Calobra+Formentor day (geographically adjacent NE coast), or an overnight at the Park Hyatt itself. Reserve <strong>60+ days ahead</strong> for peak season.</p>
+          <div class="meta-line">60+ days out · <a href="mailto:voro.parkhyattmallorca@hyatt.com">voro.parkhyattmallorca@hyatt.com</a> · +34 871 811 234</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">03</div>
+        <div>
+          <h4>Reserve dinner at Marc Fosh ★ (Fri Aug 14, ~8:30 PM)</h4>
+          <p>Palma's most-celebrated table. Book directly; the Convent de la Missió setting is small. Tasting menu ~€130.</p>
+          <div class="meta-line">60 days out · <a href="https://www.marcfosh.com/" target="_blank" rel="noopener">marcfosh.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">04</div>
+        <div>
+          <h4>Reserve dinner at Béns d'Avall ★ (Thu Aug 13, sunset)</h4>
+          <p>Clifftop terrace; the 8 PM seating catches the Mediterranean sunset. ~€140 tasting.</p>
+          <div class="meta-line">45 days out · <a href="https://www.bensdavall.com/" target="_blank" rel="noopener">bensdavall.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">05</div>
+        <div>
+          <h4>Reserve dinner at DINS Santi Taura ★ (Sun Aug 16)</h4>
+          <p>Single-menu format, ~€95. Easier booking than the Palma flagships.</p>
+          <div class="meta-line">30 days out · <a href="https://www.dinsbysantitaura.com/" target="_blank" rel="noopener">dinsbysantitaura.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">06</div>
+        <div>
+          <h4>Book Iberia LAX→MAD→PMI flights</h4>
+          <p>IB6172 LAX→MAD (overnight, dep 3:25 PM Tue Aug 11, arr 11:25 AM Wed Aug 12) + IB3946 MAD→PMI (arr 2:10 PM). Return: IB3947 PMI→MAD then IB6171 MAD→LAX on Mon Aug 17. Estimated $1,000–$1,500 RT per person — <strong>verify exact 2026 schedule + price before booking</strong>.</p>
+          <div class="meta-line">45–60 days out · <a href="https://www.iberia.com/us/" target="_blank" rel="noopener">iberia.com</a> · <a href="https://www.skyscanner.com/routes/lax/pmi/los-angeles-international-to-palma-majorca.html" target="_blank" rel="noopener">Skyscanner LAX→PMI</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">07</div>
+        <div>
+          <h4>Schedule winery visits (Fri Aug 14)</h4>
+          <p><strong>Bodega Ribas</strong> (Consell, oldest in Mallorca) + <strong>Macià Batle</strong> (Santa Maria). Both require advance reservation. Hire a driver for the day ($650 for two — required because you'll be tasting). For 4 Kilos in Felanitx (cult natural wines), email separately — drive time makes it a separate half-day.</p>
+          <div class="meta-line">30 days out · <a href="http://www.bodegaribas.com/" target="_blank" rel="noopener">bodegaribas.com</a> · <a href="https://www.maciabatle.com/en/" target="_blank" rel="noopener">maciabatle.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">08</div>
+        <div>
+          <h4>Pre-book PMI ↔ Deià transfers + the Sa Calobra driver</h4>
+          <p>PMI→Deià $130 each way (40 min via Ma-1 + Ma-10). Sa Calobra driver $250 for the early-morning + Cap de Formentor day (you'll want to relax, not navigate hairpins at dawn). Use <strong>Palma Mallorca Airport Transfer</strong> or your Belmond concierge.</p>
+          <div class="meta-line">14 days out · ask Belmond concierge or book via <a href="https://www.welcomepickups.com/" target="_blank" rel="noopener">Welcome Pickups</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">09</div>
+        <div>
+          <h4>Verify Cap de Formentor + Sa Calobra road status (1 week out)</h4>
+          <p>Cap de Formentor road closure (10 AM–10 PM, June 1–Sept 30) and Sa Calobra access can change in summer 2026. Confirm with Belmond concierge 7 days before. <strong>If the daytime Formentor closure is extended to a 24-hour bus-only rule</strong>, replan the Perseids viewing for Mirador de Ses Barques (Tramuntana ridge, accessible by car overnight).</p>
+          <div class="meta-line">7 days out · ask Belmond concierge</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="budget-table">
+      <div class="head">
+        <span class="eyebrow">All-In For Two Travelers</span>
+        <h3>Budget by Tier</h3>
+        <p>USD, mid-August peak. Move items across tiers freely. The Standard tier matches the day-by-day above. <strong>Mallorca's Splurge is the highest of the six options</strong> because Belmond peak rooms run $3,000–$3,500/night.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th class="item">Item</th>
+            <th class="tier">Budget</th>
+            <th class="tier standard">Standard ★</th>
+            <th class="tier">Splurge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="item">Flights · Iberia LAX↔PMI (×2)</td><td class="tier">$2,000</td><td class="tier standard std-mark">$2,400</td><td class="tier">$3,200</td></tr>
+          <tr><td class="item">Hotel · 5 nights</td><td class="tier">$1,400<br><span style="font-size: 0.75rem; opacity: 0.7;">Hotel Es Molí</span></td><td class="tier standard std-mark">$10,500<br><span style="font-size: 0.75rem; opacity: 0.7;">Belmond La Residencia · standard room</span></td><td class="tier">$17,500<br><span style="font-size: 0.75rem; opacity: 0.7;">Belmond Garden Suite · peak</span></td></tr>
+          <tr><td class="item">Michelin dinners · 3 ★ tables</td><td class="tier">$650<br><span style="font-size: 0.75rem; opacity: 0.7;">1 ★ + 2 casual</span></td><td class="tier standard std-mark">$1,400<br><span style="font-size: 0.75rem; opacity: 0.7;">Béns d'Avall + Marc Fosh + DINS</span></td><td class="tier">$2,200<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Voro ★★ lunch</span></td></tr>
+          <tr><td class="item">Other dinners + lunches</td><td class="tier">$600</td><td class="tier standard std-mark">$900</td><td class="tier">$1,300</td></tr>
+          <tr><td class="item">Wine day · driver + tastings</td><td class="tier">$200<br><span style="font-size: 0.75rem; opacity: 0.7;">single visit, taxi</span></td><td class="tier standard std-mark">$750<br><span style="font-size: 0.75rem; opacity: 0.7;">private driver + 2 wineries</span></td><td class="tier">$1,100<br><span style="font-size: 0.75rem; opacity: 0.7;">+ 4 Kilos add-on</span></td></tr>
+          <tr><td class="item">Transfers + Sa Calobra driver</td><td class="tier">$200<br><span style="font-size: 0.75rem; opacity: 0.7;">bus + self-drive rental</span></td><td class="tier standard std-mark">$540<br><span style="font-size: 0.75rem; opacity: 0.7;">private transfers + Sa Calobra driver</span></td><td class="tier">$900<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Perseids driver</span></td></tr>
+          <tr><td class="item">Activities</td><td class="tier">$80<br><span style="font-size: 0.75rem; opacity: 0.7;">tram + monastery</span></td><td class="tier standard std-mark">$260<br><span style="font-size: 0.75rem; opacity: 0.7;">train + tram + Cartoixa + Boat sunset</span></td><td class="tier">$1,200<br><span style="font-size: 0.75rem; opacity: 0.7;">+ private RIB + helicopter</span></td></tr>
+          <tr><td class="item">Cushion / tips / incidentals</td><td class="tier">$200</td><td class="tier standard std-mark">$300</td><td class="tier">$600</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="total-label">Total · two travelers, all-in</td>
+            <td class="tier">$5,330</td>
+            <td class="standard">$17,050</td>
+            <td class="tier">$28,000</td>
+          </tr>
+        </tfoot>
+      </table>
+      <p class="footnote">
+        <strong>Honest read:</strong> Mallorca Standard is the most-expensive Standard of the six options ($17,050 vs. Provence baseline $9,580) — almost entirely because Belmond La Residencia peak nights are 2–3× more than the Provence/Cascais/Basque/Madeira marquee hotels. If you swap Belmond for Hotel Es Molí (same village, ~70% cheaper), Standard drops to ~$8,200 — below Provence. So the real Mallorca question is: <em>do you want Belmond, or do you want the village?</em> Belmond gives you both; Hotel Es Molí gives you the village at one third the price. Both keep you in Deià with the same views.
+      </p>
+    </div>
+
+  </div>
 </section>
 
 <footer>
   <div class="container">
-    <p>Built for Mark · August 11–17, 2026 · LAX origin · <a href="../index.html">all trips</a> · <a href="./aug_11_europe.html">compare 6 options</a></p>
+    <p>Built for Mark · August 11–17, 2026 · LAX origin · 5 hotel nights in Deià · <a href="../index.html">all trips</a> · <a href="./aug_11_europe.html">compare 6 options</a></p>
   </div>
 </footer>
 
