@@ -1,0 +1,4 @@
+# Local-only workspace dirs — never deployed to mshors-pdai/jmark
+.archive-pre-merge-2026-06-02/
+europe-aug-2026/
+.DS_Store

@@ -1,7 +1,7 @@
 # AGENT.md — Personal Index Context
 
 > Handoff doc for future Claude sessions. Read this first, then read [STYLE.md](./STYLE.md).
-> Last updated: 2026-05-27 — expanded from trips-only to multi-domain personal index.
+> Last updated: 2026-06-02 — repo moved out of `/tmp/jmark-deploy/` to `~/embeddedLayers/jmark/`; legacy local edit copies archived to `.archive-pre-merge-2026-06-02/`.
 
 ## What this repo is
 
@@ -10,8 +10,9 @@
 - **Live site:** https://mshors-pdai.github.io/jmark/
 - **Repo:** https://github.com/mshors-pdai/jmark
 - **Deploy:** GitHub Pages from `main` branch, root `/`. Push to update (~30–60s to go live; new files can take up to 2 min).
-- **Local working copy:** `/tmp/jmark-deploy/` on the operator's MacBook.
-  Note: `/tmp` survives only until reboot — if missing, `gh repo clone mshors-pdai/jmark /tmp/jmark-deploy` to restore.
+- **Local working copy:** `/Users/markshors/embeddedLayers/jmark/` on the operator's MacBook.
+  (Moved out of `/tmp/jmark-deploy/` on 2026-06-02 — `/tmp` doesn't survive reboot.)
+  If missing, restore with: `gh repo clone mshors-pdai/jmark /Users/markshors/embeddedLayers/jmark`
 
 ### Structure
 
@@ -249,7 +250,7 @@ These were extracted from the iterative back-and-forth across both trip planning
 
 ```bash
 # 1. Edit locally
-cd /tmp/jmark-deploy
+cd /Users/markshors/embeddedLayers/jmark
 # ...edit trip/<slug>.html, index.html, or STYLE.md...
 
 # 2. Commit and push
@@ -303,12 +304,12 @@ gh repo delete mshors-pdai/jmark --yes
 
 ## Source files
 
-- **Canonical local edit copies (per trip):**
-  - Provence: `/Users/markshors/embeddedLayers/trip-aug-2026.html`
-  - Kern: `/Users/markshors/embeddedLayers/jmark/kern-trip.html`
-- **Deploy copy:** `/tmp/jmark-deploy/` — what GitHub sees.
+The deploy *is* the source of truth as of 2026-06-02. Edit `/Users/markshors/embeddedLayers/jmark/trip/*.html` directly — there are no other canonical copies.
 
-The two-file workflow exists because the local files were written before the deploy structure was set up. For new trips, simpler to edit the deploy copy directly under `/tmp/jmark-deploy/trip/`.
+Pre-merge legacy copies are preserved (but no longer maintained) at:
+- `/Users/markshors/embeddedLayers/jmark/.archive-pre-merge-2026-06-02/` — `basque-romance-aug.html`, `cascais-romance-aug.html`, `madeira-romance-aug.html`, `kern-trip.html` (predecessors to the `trip/aug_11_*` and `trip/jun_20_kern.html` files).
+- `/Users/markshors/embeddedLayers/trip-aug-2026.html` — the previous Provence-only file at the repo root.
+- `/Users/markshors/embeddedLayers/jmark/europe-aug-2026/` — scratchpad from the same merge session: a criteria-driven scoring matrix index across 6 candidate destinations. Not deployed; kept for reference if the hub page later wants a scoring-matrix enhancement.
 
 ---
 
