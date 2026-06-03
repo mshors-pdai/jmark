@@ -1,7 +1,7 @@
 # AGENT.md — Personal Index Context
 
 > Handoff doc for future Claude sessions. Read this first, then read [STYLE.md](./STYLE.md).
-> Last updated: 2026-06-02 — repo moved out of `/tmp/jmark-deploy/` to `~/embeddedLayers/jmark/`; legacy local edit copies archived to `.archive-pre-merge-2026-06-02/`.
+> Last updated: 2026-06-02 — Mallorca added as Trip 03 Option F; criteria + scoring-matrix section added to the hub (Annecy currently leads at 38/39); repo moved out of `/tmp/jmark-deploy/` to `~/embeddedLayers/jmark/`; legacy local edit copies archived to `.archive-pre-merge-2026-06-02/`.
 
 ## What this repo is
 
@@ -22,12 +22,13 @@ jmark/
 ├── STYLE.md                         # Style guide — read before building a new trip page
 ├── AGENT.md                         # This file
 ├── trip/                            # Travel itineraries
-│   ├── aug_11_europe.html           # Trip No. 03 HUB — 5-option Aug 11-17 decision (now incl. Annecy)
+│   ├── aug_11_europe.html           # Trip No. 03 HUB — 6-option Aug 11-17 decision · criteria + scoring matrix · Annecy currently leads 38/39
 │   ├── aug_11_provence.html         # Itinerary No. 01 — couples', Aug 2026 (also Trip 03 · Option A · booked baseline)
 │   ├── aug_11_cascais.html          # Trip 03 · Option B — Portugal Atlantic (NEW · added 2026-06-02)
 │   ├── aug_11_san_sebastian.html    # Trip 03 · Option C — Basque food capital (NEW · added 2026-06-02)
 │   ├── aug_11_madeira.html          # Trip 03 · Option D — Atlantic island (NEW · added 2026-06-02)
 │   ├── aug_11_annecy.html           # Trip 03 · Option E — French Alps, the savory non-seafood pick (NEW · added 2026-06-02)
+│   ├── aug_11_mallorca.html         # Trip 03 · Option F — Balearic island, meat-Spain at Deià (NEW · added 2026-06-02)
 │   └── jun_20_kern.html             # Itinerary No. 02 — family, summer 2026
 ├── practice/                        # Daily / weekly / monthly protocols
 │   └── index.html                   # The full practice prescription (sage palette)
@@ -45,7 +46,7 @@ jmark/
 
 **Future trips:** add `trip/<mon3>_<dd>_<slug>.html` and a card to `index.html`. STYLE.md has the full pattern.
 
-**Decision hubs:** when a trip has multiple candidate destinations under active deliberation, build a hub page at `trip/<mon3>_<dd>_<region>.html` that side-by-sides 4-or-fewer options. Pattern: hero + 4-card option grid + comparison table + pros/cons grid + budget side-by-side + verdict. See `trip/aug_11_europe.html` for the canonical example. Each option file gets a back-bar `meta-mini` that links back to the hub via `compare 4 options ↗`.
+**Decision hubs:** when a trip has multiple candidate destinations under active deliberation, build a hub page at `trip/<mon3>_<dd>_<region>.html` that side-by-sides them. Pattern: hero + N-card option grid + criteria-card section + scoring matrix + comparison table + pros/cons grid + budget side-by-side + verdict. Hub grid + pros-cons-grid use 2-col layout (rows of 2); odd-numbered options get a `style="grid-column: span 2;"` to fill. See `trip/aug_11_europe.html` for the canonical example — now 6 options A–F with an 8-criterion scoring matrix (5 hard / 3 soft, scored /39). Each option file gets a back-bar `meta-mini` that links back to the hub via `compare N options ↗`.
 
 **Future content in other domains:** each section index is self-contained with its own palette. Add items by editing the appropriate section's `index.html` — promote ideas → articles, version supplements by quarter, add reference blocks as patterns repeat.
 
@@ -96,37 +97,41 @@ jmark/
 
 ### Trip No. 03 · Europe Decision Hub · Aug 11–17, 2026
 
-**Status:** active deliberation · 4 plans on the table, Provence is the booked baseline
+**Status:** active deliberation · 6 plans on the table, Provence is the booked baseline, Annecy currently leads the criteria matrix at 38/39
 **Dates:** Tue Aug 11 → Mon Aug 17, 2026 (6 days, **5 hotel nights**) — same dates as Trip No. 01
-**Origin:** LAX · **Travelers:** 2 · **Decision deadline:** by July 1, 2026 (to keep Belcanto + Kappo + 3★ tables on the table)
+**Origin:** LAX · **Travelers:** 2 · **Decision deadline:** by July 1, 2026 (to keep Belcanto + Kappo + 3★ + Voro ★★ tables on the table)
 
-**The 4 options (linked from `trip/aug_11_europe.html`):**
+**The 6 options (linked from `trip/aug_11_europe.html`):**
 
-| Option | Where | Slug | Standard tier | Differentiator |
-|--------|-------|------|---------------|----------------|
-| **A** | Cassis / Provence (France) | `aug_11_provence.html` | **$9,580** | Booked baseline · La Villa Madie ★★★ · single hotel · classic Med summer |
-| **B** | Cascais / Guincho (Portugal) | `aug_11_cascais.html` | **$9,815** | Only US nonstop (TAP) · world-class wind/kite at Guincho · Belcanto ★★ in Lisbon · Sintra palaces |
-| **C** | San Sebastián / Basque (Spain) | `aug_11_san_sebastian.html` | **$11,254** | 3× ★★★ within 12 mi · lands inside Aste Nagusia (fireworks ×4 incl. finale Aug 15) · coolest climate (77°F) |
-| **D** | Madeira / Funchal (Portugal) | `aug_11_madeira.html` | **$10,748** | Cannot heatwave (trade winds) · Perseids from 5,965 ft above the cloud sea · Garajau dive reserve · Belmond Reid's Palace |
-| **E** | Annecy / French Alps (France) | `aug_11_annecy.html` | **$11,160** | **The savory non-seafood pick** · Reblochon + Beaufort + tartiflette + charcuterie · ★★★ Clos des Sens + ★★ Conte + ★★ Père Bise · 75°F clear lake · paragliding Col de la Forclaz · Aiguille du Midi day trip |
+| Option | Where | Slug | Standard tier | Score /39 | Differentiator |
+|--------|-------|------|---------------|-----------|----------------|
+| **A** | Cassis / Provence (France) | `aug_11_provence.html` | **$9,580** | 31 | Booked baseline · La Villa Madie ★★★ · single hotel · classic Med summer |
+| **B** | Cascais / Guincho (Portugal) | `aug_11_cascais.html` | **$9,815** | 27 | Only US nonstop (TAP) · world-class wind/kite at Guincho · Belcanto ★★ in Lisbon · Sintra palaces |
+| **C** | San Sebastián / Basque (Spain) | `aug_11_san_sebastian.html` | **$11,254** | 32 | 3× ★★★ within 12 mi · lands inside Aste Nagusia (fireworks ×4 incl. finale Aug 15) · coolest climate (77°F) |
+| **D** | Madeira / Funchal (Portugal) | `aug_11_madeira.html` | **$10,748** | 34 | Cannot heatwave (trade winds) · Perseids from 5,965 ft above the cloud sea · Garajau dive reserve · Belmond Reid's Palace |
+| **E** | Annecy / French Alps (France) | `aug_11_annecy.html` | **$11,160** | **38** ⭐ | **The savory non-seafood pick** · Reblochon + Beaufort + tartiflette + charcuterie · ★★★ Clos des Sens + ★★ Conte + ★★ Père Bise · 75°F clear lake · paragliding Col de la Forclaz · Aiguille du Midi day trip · matrix leader |
+| **F** | Mallorca / Deià (Spain) | `aug_11_mallorca.html` | **$17,050** | 30 | Belmond La Residencia in Tramuntana village · sobrasada / lechona / Sóller lamb (meat-Spain ≠ Basque) · Voro ★★ Canyamel + ★ ×9 (2026 guide) · Sa Calobra hairpin drive · Cap de Formentor lighthouse · hottest of the 6 at 85–90°F · Belmond peak drives Standard up |
 
-**Time-locked events shared across all 4 options:**
+**Locked decision criteria (added 2026-06-02):** 5 hard filters (less seafood / Michelin / safety / weather / low crowds) + 3 soft (romance / wine / activities). Scored on the hub at `#scoring`. Hard criteria count 2×, soft 1×. Max 39.
 
-- **☄️ Perseid meteor shower peak** — night of Aug 12→13. Best vantage per option: Cap Canaille (Provence), Cabo da Roca (Cascais), Monte Igueldo (Basque), Pico do Arieiro (Madeira — the singular one, above the cloud sea).
-- **🎆 Aug 15 Assumption** — Catholic national holiday in all four countries. Each town has its own fireworks tradition; the Basque one (Aste Nagusia finale, La Concha) is the most spectacular.
-- **🎵 Music festival** — Provence has Festival de La Roque d'Anthéron (through Aug 16); Basque has Aste Nagusia; Cascais has Festival de Sintra; Madeira has the Wine Festival opening Aug 27 (just misses).
+**Time-locked events shared across all 6 options:**
 
-**Hub page recommendation:** Cascais (Option B) for an active romantic week with broadest variety (only +$235 over Provence). Hold Provence as the booked fallback. San Sebastián if food-first; Madeira if weather certainty + landscape > everything else.
+- **☄️ Perseid meteor shower peak** — night of Aug 12→13. Best vantage per option: Cap Canaille (Provence), Cabo da Roca (Cascais), Monte Igueldo (Basque), Pico do Arieiro (Madeira — the singular one, above the cloud sea), Col de la Forclaz (Annecy), Cap de Formentor lighthouse (Mallorca — road opens 10 PM, ideal for the 1–4 AM peak).
+- **🎆/⛪ Aug 15 Assumption** — Catholic national holiday in France, Spain, Portugal. Each town has its own tradition; the Basque one (Aste Nagusia finale at La Concha) is the most spectacular fireworks; Mallorca = island-wide religious processions and "Els Llits de la Mare de Déu" displays, restaurants packed, coastal roads gridlocked.
+- **🎵 Music festival** — Provence has Festival de La Roque d'Anthéron (through Aug 16); Basque has Aste Nagusia; Cascais has Festival de Sintra; Madeira's Wine Festival opens Aug 27 (just misses).
+
+**Hub page recommendation:** Per the locked criteria, **Annecy (E) is the matrix winner at 38/39** — the only option that clears every hard filter at a 3. Cascais (B) was the prior recommendation for activity variety and the +$235 delta but loses on the seafood + Michelin criteria. Provence (A) remains the booked fallback if decision fatigue wins. Mallorca (F) is the meat-Spain alternative to Basque, but at the highest Standard cost and with peak-Med crowds + heat — only solid if those are acceptable trades.
 
 **Open booking items (decision phase):**
 
-- [ ] **Pick the destination by July 1, 2026.** Belcanto, Kappo, and the 3-star Basque tables all need 60–90 day lead time.
+- [ ] **Pick the destination by July 1, 2026.** Belcanto, Kappo, the 3-star Basque tables, and Voro ★★ all need 60–90 day lead time.
 - [ ] **If swapping from Provence:** notify all booked vendors (hotel cancellation, La Villa Madie release, L'Eden Boat cancellation, winery calls). Most have 48-hour-out cancellation windows.
 - [ ] **If staying with Provence:** complete the Trip No. 01 booking checklist above.
 - [ ] **If picking Cascais (B):** book TAP TP224 (LAX→LIS nonstop), Fortaleza do Guincho hotel, Belcanto ★★ + Kappo ★ + Fortaleza ★.
 - [ ] **If picking San Sebastián (C):** submit 3★ requests same day (Arzak + Akelarre + Berasategui + Azurmendi), book Maria Cristina (nights 1–3) + Akelarre (4–5).
 - [ ] **If picking Madeira (D):** book Belmond Reid's Palace HB, Il Gallo d'Oro ★★, TAP LAX-LIS-FNC routing.
 - [ ] **If picking Annecy (E):** book Swiss LX41 LAX→ZRH→GVA routing, La Maison Bleue (R&amp;C, 11 rooms, books fast), Le Clos des Sens ★★★ + Yoann Conte ★★ + Père Bise ★★, paragliding (Fly Annecy), Aiguille du Midi 9 AM slot. Note: Fête du Lac (Aug 1) is missed.
+- [ ] **If picking Mallorca (F):** book Iberia IB6172 LAX→MAD + IB3946 MAD→PMI, Belmond La Residencia 5 nights in Deià (use Amex FHR 15% off July–Aug 2026 if booked by May 15), Voro ★★ in Canyamel (60+ day lead), Marc Fosh ★ Palma + Béns d'Avall ★ Sóller + DINS Santi Taura ★ Lloseta, Bodega Ribas + Macià Batle wine day with driver, Sa Calobra/Cap de Formentor driver day. Verify Cap de Formentor daytime road closure (10 AM–10 PM, Jun–Sept) one week out — affects Perseids routing.
 
 ---
 
