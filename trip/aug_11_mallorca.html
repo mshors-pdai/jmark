@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>August 11 → 17, 2026 — Mallorca · Deià &amp; the Tramuntana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --mallorca-sea: #1e6091;
+    --mallorca-deep: #134268;
+    --mallorca-stone: #b8895b;
+    --mallorca-clay: #c97b3e;
+    --mallorca-olive: #6b7a3f;
+    --cream: #f8f1e4;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.6; background: #fafaf7; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.15; color: var(--mallorca-deep); }
+  h3 { font-size: 1.4rem; color: var(--mallorca-deep); }
+  a { color: inherit; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; color: var(--mallorca-clay); }
+
+  .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-size: 0.82rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+  .back-bar a.back-link:hover { color: var(--mallorca-clay); }
+  .back-bar a.back-link .arrow { display: inline-block; transition: transform 0.2s; }
+  .back-bar a.back-link:hover .arrow { transform: translateX(-3px); }
+  .back-bar .brand-mini { font-family: 'Playfair Display', serif; font-size: 0.92rem; color: rgba(255,255,255,0.7); letter-spacing: -0.02em; text-decoration: none; }
+  .back-bar .brand-mini:hover { color: white; }
+  .back-bar .brand-mini .dot { color: var(--mallorca-clay); }
+  .back-bar .meta-mini { display: none; font-size: 0.74rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
+  .back-bar .meta-mini a { color: var(--mallorca-clay); text-decoration: none; border-bottom: 1px dotted; margin-left: 0.5rem; }
+  @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
+
+  .intro-hero { padding: 5rem 0 3.5rem; text-align: center; background: linear-gradient(180deg, var(--cream) 0%, #fafaf7 100%); }
+  .intro-hero .eyebrow { display: inline-block; margin-bottom: 1rem; }
+  .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
+  .intro-hero h1 em { font-style: italic; color: var(--mallorca-clay); font-weight: 400; }
+  .intro-hero .lede { max-width: 720px; margin: 1rem auto 0; color: var(--muted); font-size: 1.05rem; }
+  .intro-hero .meta { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
+  .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.3rem; }
+
+  .draft-notice { max-width: 900px; margin: 3rem auto 2rem; background: rgba(201,123,62,0.08); border-left: 4px solid var(--mallorca-clay); border-radius: 8px; padding: 1.5rem 2rem; }
+  .draft-notice .tag { display: inline-block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; color: white; background: var(--mallorca-clay); padding: 0.2rem 0.7rem; border-radius: 999px; margin-bottom: 0.5rem; }
+  .draft-notice h3 { margin-bottom: 0.5rem; }
+  .draft-notice p { font-size: 0.95rem; color: #333; }
+
+  .section { padding: 3rem 0; }
+  .section.alt { background: var(--cream); }
+  .section-head { text-align: center; max-width: 700px; margin: 0 auto 2rem; }
+  .section-head .eyebrow { margin-bottom: 0.5rem; display: inline-block; }
+  .section-head h2 { margin-bottom: 0.75rem; }
+  .section-head p { color: var(--muted); font-size: 1rem; }
+
+  .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; max-width: 1100px; margin: 0 auto; }
+  .info-card { background: white; border-radius: 14px; padding: 1.5rem 1.75rem; box-shadow: 0 4px 14px rgba(0,0,0,0.04); border-top: 3px solid var(--mallorca-sea); }
+  .info-card h4 { color: var(--mallorca-deep); margin-bottom: 0.5rem; font-size: 1.1rem; }
+  .info-card p, .info-card ul { font-size: 0.92rem; color: #333; line-height: 1.55; }
+  .info-card ul { list-style: none; padding: 0; }
+  .info-card ul li { padding: 0.3rem 0 0.3rem 1.2rem; position: relative; }
+  .info-card ul li::before { content: '·'; position: absolute; left: 0.4rem; color: var(--mallorca-clay); font-weight: 700; font-size: 1.4rem; line-height: 0.8; top: 0.4rem; }
+  .info-card .src { font-size: 0.78rem; color: var(--muted); margin-top: 0.75rem; }
+  .info-card .src a { color: var(--mallorca-clay); text-decoration: none; border-bottom: 1px dotted; }
+
+  .cta { text-align: center; padding: 3rem 0 4rem; }
+  .cta-link { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.6rem; background: var(--mallorca-deep); color: white; text-decoration: none; border-radius: 999px; font-weight: 600; font-size: 0.95rem; transition: background 0.2s; }
+  .cta-link:hover { background: var(--mallorca-sea); }
+
+  footer { background: #0d0d0d; color: rgba(255,255,255,0.6); padding: 2.5rem 0; text-align: center; font-size: 0.85rem; }
+  footer a { color: rgba(255,255,255,0.75); }
+
+  @media (max-width: 600px) {
+    .intro-hero h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.6rem !important; }
+    .container { padding: 0 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
+    <span class="meta-mini">Itinerary No. 03F · Mallorca <a href="./aug_11_europe.html">compare 6 options ↗</a></span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">Option F · Spain · Balearic Island · 5 Hotel Nights</span>
+    <h1>Mallorca · Deià &amp;<br>the <em>Tramuntana.</em></h1>
+    <p class="lede">
+      Hillside-village base in Deià, Belmond La Residencia in a 16th-century Tramuntana hideaway. The savory-Spain pick that isn't Basque — sobrasada, lechona, Sóller lamb, Manchego — with the island's only ★★ (Voro, Canyamel) plus nine ★ across the 2026 Michelin Spain guide.
+    </p>
+    <div class="meta">
+      <div class="meta-item"><div class="label">Departure</div><div class="value">Tue, Aug 11</div></div>
+      <div class="meta-item"><div class="label">Return</div><div class="value">Mon, Aug 17</div></div>
+      <div class="meta-item"><div class="label">Travelers</div><div class="value">Two</div></div>
+      <div class="meta-item"><div class="label">Origin</div><div class="value">LAX</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="draft-notice">
+    <span class="tag">Draft · 2026-06-02</span>
+    <h3>Page in progress — verified facts only</h3>
+    <p>This page is a stub. The full itinerary (flights · day-by-day · 3 hotels · 6 restaurants · 4 wineries · activities · budget tiers · booking checklist) hasn't been drafted yet. The cards below contain only what's been independently verified against 2026 sources — no invented hotel names, prices, or schedules. For the decision matrix and side-by-side comparison with the other five options, use the <a href="./aug_11_europe.html" style="color: var(--mallorca-clay);">compare-6 hub →</a>.</p>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Verified · 2026 Sources</span>
+      <h2>What's Locked So Far</h2>
+      <p>Cited facts only. Anything specific in the full destination page below this section is still pending research.</p>
+    </div>
+
+    <div class="info-grid">
+
+      <div class="info-card">
+        <h4>Michelin · Mallorca 2026</h4>
+        <ul>
+          <li><strong>★★ ×1:</strong> Voro (Canyamel) — chef Álvaro Salazar. The island's only 2-star.</li>
+          <li><strong>★ ×9:</strong> DINS by Santi Taura (Lloseta), Marc Fosh (Palma), Es Fum (St. Regis Mardavall), Andreu Genestra (Capdepera, Green Star), Maca de Castro (Port d'Alcúdia), Zaranda (Es Capdellà), Béns d'Avall (Sóller, Green Star), Fusión 19 (Port d'Alcúdia), Sa Clastra (Manacor).</li>
+          <li>Total 12 stars across 11 establishments (per 2026 guide); no new stars added this year.</li>
+        </ul>
+        <p class="src">Source: <a href="https://www.helencummins.com/mallorcas-michelin-stars/" target="_blank" rel="noopener">helencummins.com</a> · <a href="https://www.majorcadailybulletin.com/news/did-you-know/2025/11/26/138371/" target="_blank" rel="noopener">Majorca Daily Bulletin</a></p>
+      </div>
+
+      <div class="info-card">
+        <h4>Belmond La Residencia · Deià</h4>
+        <ul>
+          <li>16th-century manor in Deià village (Tramuntana, ~30 min from Palma).</li>
+          <li>Rates start $566–$822/night low season; peak-summer rooms have hit $3,294–$3,545 in recent Kayak bookings.</li>
+          <li>15% Amex offer for July–Aug 2026 travel if booked by May 15, 2026.</li>
+          <li>Robert Graves' village; two pools, on-site spa, donkey statues, art collection.</li>
+        </ul>
+        <p class="src">Source: <a href="https://www.belmond.com/hotels/europe/mallorca/deia/belmond-la-residencia/" target="_blank" rel="noopener">belmond.com</a> · <a href="https://www.americanexpress.com/en-us/travel/discover/property/Spain/Dei%C3%A0/La-Residencia-A-Belmond-Hotel-Mallorca" target="_blank" rel="noopener">Amex FHR</a></p>
+      </div>
+
+      <div class="info-card">
+        <h4>August 15 Assumption Day</h4>
+        <ul>
+          <li>National public holiday — beaches and restaurants packed island-wide.</li>
+          <li>Religious processions and 'Els Llits de la Mare de Déu' (Virgin recumbent displays) in churches across Palma + many villages.</li>
+          <li>Cultural activities (music, dance, craft fairs) in Biniaraix, Caimari, Valldemossa, Sineu, Esporles, and others.</li>
+          <li>No central Palma fireworks tradition documented for the date — verify locally if fireworks are a must-have.</li>
+        </ul>
+        <p class="src">Source: <a href="https://www.inmallorcamagazine.com/august-events" target="_blank" rel="noopener">In Mallorca Magazine</a> · <a href="https://www.sailtripmallorca.com/post/local-festivals-public-holidays-in-mallorca" target="_blank" rel="noopener">Sail Trip Mallorca</a></p>
+      </div>
+
+      <div class="info-card">
+        <h4>Climate · Aug</h4>
+        <ul>
+          <li>Highs 85–90°F; lows 68–72°F.</li>
+          <li>Sea temp ~79°F — warm Mediterranean.</li>
+          <li>Real heatwave exposure during peak Aug — coastal/AC base mandatory.</li>
+          <li>Drier than Atlantic options (Cascais, Galicia) but hotter than all five alternatives in the comparison hub.</li>
+        </ul>
+        <p class="src">Source: WMO 1991–2020 normals · verify 2026 forecast closer to date</p>
+      </div>
+
+      <div class="info-card">
+        <h4>How it scores · 30 / 39</h4>
+        <ul>
+          <li><strong>Savory 3</strong> — sobrasada, lechona, Sóller lamb, Manchego (meat-Spain ✓)</li>
+          <li><strong>Michelin 3</strong> — ★★ + ★ ×9 verified 2026</li>
+          <li><strong>Safety 2</strong> — Palma pickpockets; Deià base low</li>
+          <li><strong>Weather 2</strong> — hot 85–90°F even at the coast</li>
+          <li><strong>Crowds 1</strong> — absolute peak Med August</li>
+          <li><strong>Romance 3</strong> — Deià + Belmond</li>
+          <li><strong>Wine 2</strong> — Binissalem + Pla i Llevant DOs (small)</li>
+          <li><strong>Activities 3</strong> — Tramuntana, Sa Calobra, Cap de Formentor</li>
+        </ul>
+        <p class="src">See full matrix on the <a href="./aug_11_europe.html#scoring">compare-6 hub</a> · ranking: 5th of 6 (Annecy leads at 38).</p>
+      </div>
+
+      <div class="info-card">
+        <h4>What's still TBD</h4>
+        <ul>
+          <li>Flight booking (Iberia via MAD vs. via BCN; cost band ~$1,000–$1,500 RT estimated, needs verification).</li>
+          <li>Day-by-day plan (currently zero days mapped).</li>
+          <li>Restaurant reservations — Voro and the ★ shortlist need 60–90 days lead.</li>
+          <li>Wineries — Bodega Ribas, 4 Kilos, Macià Batle, Castell Miquel are typical candidates (not yet researched).</li>
+          <li>Budget tiers — Belmond peak nights will push Splurge above $16K; Standard tier with Hotel Es Molí / Sa Pedrissa likely $10.5–$11.5K.</li>
+          <li>Activities calendar — Tramuntana GR-221 day, Sa Calobra drive, Cap de Formentor sunset, Palma cathedral half-day.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <a href="./aug_11_europe.html" class="cta-link"><span class="arrow">←</span> Back to the 6-option compare hub</a>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Built for Mark · August 11–17, 2026 · LAX origin · <a href="../index.html">all trips</a> · <a href="./aug_11_europe.html">compare 6 options</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
