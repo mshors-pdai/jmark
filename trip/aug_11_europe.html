@@ -189,7 +189,7 @@
   /* ===== Comparison table ===== */
   .compare-table { max-width: 1100px; margin: 0 auto; background: white; border-radius: 16px; overflow-x: auto; overflow-y: visible; box-shadow: 0 4px 20px rgba(0,0,0,0.06); -webkit-overflow-scrolling: touch; position: relative; }
   .compare-table table { width: 100%; min-width: 880px; border-collapse: separate; border-spacing: 0; font-size: 0.92rem; }
-  .compare-table th { position: sticky; top: 65px; z-index: 5; padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-align: left; background: #1a1a1a; color: white; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .compare-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-align: left; background: #1a1a1a; color: white; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; }
   .compare-table th.dim { position: sticky; left: 0; z-index: 6; color: var(--muted); background: #f0eee5; font-size: 0.78rem; box-shadow: 2px 0 4px rgba(0,0,0,0.06); }
   .compare-table th.provence-h { background: var(--provence-lavender); }
   .compare-table th.cascais-h { background: var(--cascais-deep); }
@@ -312,7 +312,7 @@
   /* ===== Scoring matrix ===== */
   .scoring-wrap { max-width: 1180px; margin: 0 auto; background: white; border-radius: 16px; overflow-x: auto; overflow-y: visible; box-shadow: 0 4px 20px rgba(0,0,0,0.06); -webkit-overflow-scrolling: touch; position: relative; }
   .scoring-table { width: 100%; min-width: 880px; border-collapse: separate; border-spacing: 0; font-size: 0.92rem; }
-  .scoring-table thead th { position: sticky; top: 65px; z-index: 5; background: #1a1a1a; color: white; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.02em; padding: 1rem 0.45rem; text-align: center; border-bottom: 1px solid #2a2a2a; }
+  .scoring-table thead th { background: #1a1a1a; color: white; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.02em; padding: 1rem 0.45rem; text-align: center; border-bottom: 1px solid #2a2a2a; }
   .scoring-table thead th.label-col { position: sticky; left: 0; z-index: 6; text-align: left; padding-left: 1.25rem; min-width: 180px; box-shadow: 2px 0 4px rgba(0,0,0,0.12); }
   .scoring-table tbody td { padding: 0.8rem 0.5rem; text-align: center; border-bottom: 1px solid var(--line); vertical-align: middle; background: white; }
   .scoring-table tbody td.label { position: sticky; left: 0; z-index: 4; text-align: left; padding-left: 1.25rem; font-weight: 600; color: var(--ink); background: white; box-shadow: 2px 0 4px rgba(0,0,0,0.04); }
@@ -359,20 +359,24 @@
     .opt-section { padding: 2.5rem 0; }
     .opt-card .opt-stats { grid-template-columns: repeat(3, 1fr); }
     .budget-block, .framework { padding: 2rem 1.5rem; }
-    /* Topnav is taller on mobile (stacks brand + tabs) — push sticky table headers further down */
-    .scoring-table thead th { top: 110px; padding: 0.65rem 0.3rem; font-size: 0.72rem; }
+    /* Topnav offset for sticky headers is handled dynamically by JS — no top override needed */
+    .scoring-table thead th { padding: 0.65rem 0.3rem; font-size: 0.72rem; }
     .scoring-table thead th.label-col { min-width: 140px; padding-left: 0.85rem; }
     .scoring-table { font-size: 0.82rem; }
     .scoring-table tbody td { padding: 0.6rem 0.3rem; }
     .scoring-table tbody td.label { padding-left: 0.85rem; min-width: 140px; }
     .scoring-table tbody td.label .sub { font-size: 0.7rem; }
-    .compare-table th { top: 110px; padding: 0.65rem 0.4rem; font-size: 0.72rem; }
+    .compare-table th { padding: 0.65rem 0.4rem; font-size: 0.72rem; }
     .compare-table th.dim { min-width: 130px; padding-left: 0.85rem; }
     .compare-table td { padding: 0.6rem 0.4rem; font-size: 0.78rem; }
     .compare-table td.metric { min-width: 130px; padding-left: 0.85rem; font-size: 0.78rem; }
     .compare-table td.cell .sub { font-size: 0.7rem; }
     .budget-block table { display: block; overflow-x: auto; min-width: unset; }
   }
+  /* Floating sticky header clones (created by JS at end of body) */
+  .floating-thead { position: fixed; left: 0; overflow: hidden; z-index: 50; pointer-events: none; display: none; will-change: transform; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+  .floating-thead table { margin: 0; border-collapse: separate; border-spacing: 0; transform-origin: left top; }
+  .floating-thead .scoring-table, .floating-thead .compare-table-inner { background: #1a1a1a; }
 </style>
 </head>
 <body>
@@ -1180,6 +1184,121 @@
     <p>Built for Mark · August 11–17, 2026 · LAX origin · Prices in USD, subject to live booking · <a href="../index.html">all trips</a></p>
   </div>
 </footer>
+
+<script>
+/* Floating sticky table headers — vertical sticky on page scroll for wide tables that need horizontal scroll. */
+(function() {
+  'use strict';
+
+  function topnavBottom() {
+    var tn = document.querySelector('.topnav');
+    if (!tn) return 0;
+    var r = tn.getBoundingClientRect();
+    return Math.max(0, r.bottom);
+  }
+
+  function setupSticky(table) {
+    var wrap = table.closest('.scoring-wrap, .compare-table');
+    var thead = table.querySelector('thead');
+    if (!wrap || !thead) return;
+
+    // Outer fixed clip container
+    var stick = document.createElement('div');
+    stick.className = 'floating-thead';
+
+    // Inner table clone — only the thead
+    var tbl = document.createElement('table');
+    tbl.className = table.className;
+    tbl.style.cssText = 'margin:0;border-collapse:separate;border-spacing:0;table-layout:fixed';
+
+    var cloneThead = thead.cloneNode(true);
+    tbl.appendChild(cloneThead);
+    stick.appendChild(tbl);
+    document.body.appendChild(stick);
+
+    // First-column header in clone — counter-translated to act sticky-left
+    var stickyLeftHeader = cloneThead.querySelector('.label-col, .dim');
+    if (stickyLeftHeader) {
+      stickyLeftHeader.style.position = 'relative';
+      stickyLeftHeader.style.zIndex = '2';
+    }
+
+    function syncWidths() {
+      var origs = thead.querySelectorAll('th');
+      var clones = cloneThead.querySelectorAll('th');
+      var totalWidth = 0;
+      origs.forEach(function(th, i) {
+        var w = th.offsetWidth;
+        totalWidth += w;
+        if (clones[i]) {
+          clones[i].style.width = w + 'px';
+          clones[i].style.minWidth = w + 'px';
+          clones[i].style.maxWidth = w + 'px';
+          clones[i].style.boxSizing = 'border-box';
+        }
+      });
+      tbl.style.width = Math.max(totalWidth, table.offsetWidth) + 'px';
+      tbl.style.minWidth = tbl.style.width;
+    }
+
+    function positionClone() {
+      var wr = wrap.getBoundingClientRect();
+      stick.style.left = Math.max(0, wr.left) + 'px';
+      stick.style.width = wr.width + 'px';
+      // Translate the whole inner table to match wrap's horizontal scroll
+      tbl.style.transform = 'translateX(' + (-wrap.scrollLeft) + 'px)';
+      // Counter-translate first column so it appears sticky-left
+      if (stickyLeftHeader) {
+        stickyLeftHeader.style.transform = 'translateX(' + wrap.scrollLeft + 'px)';
+      }
+    }
+
+    function update() {
+      var offsetTop = topnavBottom();
+      var r = table.getBoundingClientRect();
+      var show = r.top < offsetTop && r.bottom > offsetTop + 30;
+
+      if (show) {
+        if (stick.style.display === 'none' || !stick.style.display) {
+          stick.style.display = 'block';
+        }
+        stick.style.top = offsetTop + 'px';
+        syncWidths();
+        positionClone();
+      } else {
+        stick.style.display = 'none';
+      }
+    }
+
+    var raf = null;
+    function schedule() {
+      if (raf !== null) return;
+      raf = requestAnimationFrame(function() { update(); raf = null; });
+    }
+
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', function() { syncWidths(); schedule(); });
+    wrap.addEventListener('scroll', function() {
+      // Just retranslate — no need to recheck visibility
+      if (stick.style.display === 'block') positionClone();
+    }, { passive: true });
+
+    // Initial run after layout settles
+    setTimeout(function() { syncWidths(); update(); }, 50);
+  }
+
+  function init() {
+    var tables = document.querySelectorAll('.scoring-table, .compare-table > table');
+    tables.forEach(setupSticky);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
 
 </body>
 </html>
