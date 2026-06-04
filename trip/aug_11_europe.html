@@ -26,6 +26,15 @@
     --mallorca-stone: #b8895b;
     --mallorca-clay: #c97b3e;
     --mallorca-olive: #6b7a3f;
+    --mykonos-blue: #1d6fb8;
+    --mykonos-deep: #0e3d6f;
+    --mykonos-white: #f1f4f9;
+    --hvar-adriatic: #2a7a8c;
+    --hvar-deep: #14495a;
+    --hvar-stone: #b89978;
+    --coteazur-azure: #2466a8;
+    --coteazur-deep: #102e58;
+    --coteazur-gold: #c2a04a;
     --cream: #faf4e8;
     --warm: #f5ecd9;
     --ink: #1a1a1a;
@@ -141,6 +150,41 @@
   .opt-card.madeira .opt-stats .stat-val { color: var(--madeira-deep); }
   .opt-card.annecy .opt-stats .stat-val { color: var(--annecy-deep); }
   .opt-card.mallorca .opt-stats .stat-val { color: var(--mallorca-deep); }
+  /* Mykonos */
+  .opt-card.mykonos .opt-image { background-image: linear-gradient(135deg, rgba(29,111,184,0.20), rgba(241,244,249,0.30)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Mykonos_Chora.jpg/1280px-Mykonos_Chora.jpg'); background-color: var(--mykonos-blue); }
+  .opt-card.mykonos .opt-tier { color: var(--mykonos-deep); }
+  .opt-card.mykonos .opt-body h3 { color: var(--mykonos-deep); }
+  .opt-card.mykonos .opt-cta { color: var(--mykonos-blue); }
+  .opt-card.mykonos .opt-stats .stat-val { color: var(--mykonos-deep); }
+  /* Hvar + Split */
+  .opt-card.hvar .opt-image { background-image: linear-gradient(135deg, rgba(42,122,140,0.20), rgba(184,153,120,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Hvar_Old_Town_view_from_above.jpg/1280px-Hvar_Old_Town_view_from_above.jpg'); background-color: var(--hvar-adriatic); }
+  .opt-card.hvar .opt-tier { color: var(--hvar-deep); }
+  .opt-card.hvar .opt-body h3 { color: var(--hvar-deep); }
+  .opt-card.hvar .opt-cta { color: var(--hvar-adriatic); }
+  .opt-card.hvar .opt-stats .stat-val { color: var(--hvar-deep); }
+  /* Côte d'Azur */
+  .opt-card.coteazur .opt-image { background-image: linear-gradient(135deg, rgba(36,102,168,0.20), rgba(194,160,74,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Vue_du_Mont_Boron_Nice.jpg/1280px-Vue_du_Mont_Boron_Nice.jpg'); background-color: var(--coteazur-azure); }
+  .opt-card.coteazur .opt-tier { color: var(--coteazur-deep); }
+  .opt-card.coteazur .opt-body h3 { color: var(--coteazur-deep); }
+  .opt-card.coteazur .opt-cta { color: var(--coteazur-azure); }
+  .opt-card.coteazur .opt-stats .stat-val { color: var(--coteazur-deep); }
+  /* Pros-cons borders */
+  .pc-card.mykonos { border-top-color: var(--mykonos-blue); }
+  .pc-card.mykonos h3 { color: var(--mykonos-deep); }
+  .pc-card.mykonos .footer-link { color: var(--mykonos-blue); }
+  .pc-card.hvar { border-top-color: var(--hvar-adriatic); }
+  .pc-card.hvar h3 { color: var(--hvar-deep); }
+  .pc-card.hvar .footer-link { color: var(--hvar-adriatic); }
+  .pc-card.coteazur { border-top-color: var(--coteazur-azure); }
+  .pc-card.coteazur h3 { color: var(--coteazur-deep); }
+  .pc-card.coteazur .footer-link { color: var(--coteazur-azure); }
+  /* If-then verdict cards */
+  .ift-card.mykonos h4 { color: var(--mykonos-deep); }
+  .ift-card.mykonos .pick { color: var(--mykonos-blue); }
+  .ift-card.hvar h4 { color: var(--hvar-deep); }
+  .ift-card.hvar .pick { color: var(--hvar-adriatic); }
+  .ift-card.coteazur h4 { color: var(--coteazur-deep); }
+  .ift-card.coteazur .pick { color: var(--coteazur-azure); }
 
   /* ===== Comparison table ===== */
   .compare-table { max-width: 1100px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
@@ -354,9 +398,9 @@
 <section class="opt-section alt" id="options">
   <div class="container">
     <div class="section-header">
-      <span class="eyebrow">The Four</span>
+      <span class="eyebrow">The Nine</span>
       <h2>Options on the Table</h2>
-      <p>Each card links to the full plan — itinerary, hotels, restaurants, wineries, activities, budget tiers. Hover for the headline trade-off.</p>
+      <p>Each card links to the full plan — itinerary, hotels, restaurants, wineries, activities, budget tiers. Cards show food character + Michelin tally + Standard tier cost. Sorted by new-criteria score.</p>
     </div>
 
     <div class="opts-grid">
@@ -441,11 +485,56 @@
         <div class="opt-body">
           <h3>Mallorca · Deià &amp; the Tramuntana</h3>
           <div class="loc">Spain · Balearic Islands · Tramuntana Mountains</div>
-          <p>Hillside-village base in Deià, <strong>Belmond La Residencia</strong> in a 16th-century hideaway above the sea. <strong>Food character: meat-forward</strong> — sobrasada, lechona, Sóller lamb, Manchego; the savory-Spain pick that's not Basque. <strong>Voro ★★</strong> in Canyamel (Álvaro Salazar) + nine ★ across the island (DINS Santi Taura, Marc Fosh, Es Fum, Andreu Genestra, Maca de Castro, Zaranda, Béns d'Avall, Fusión 19, Sa Clastra) per the 2026 guide. Tramuntana hikes, Sa Calobra sea-cave drive, Cap de Formentor lighthouse, Palma cathedral.</p>
+          <p>Hillside-village base in Deià, <strong>Belmond La Residencia</strong> in a 16th-century hideaway above the sea. <strong>Food character: meat-forward</strong> — sobrasada, lechona, Sóller lamb, Manchego; the savory-Spain pick that's not Basque. <strong>Voro ★★</strong> in Canyamel (Álvaro Salazar) + nine ★ across the island. Palma nightlife (Abaco, Santa Catalina, Tito's at BCM) + beach clubs (Purobeach, Nikki Beach, Mhares). Sa Calobra hairpin drive, Cap de Formentor lighthouse, Palma cathedral.</p>
           <div class="opt-stats">
             <div><div class="stat-val">85–90°F</div><div class="stat-lbl">Aug high</div></div>
             <div><div class="stat-val">★★ + ★ ×9</div><div class="stat-lbl">Michelin (2026)</div></div>
             <div><div class="stat-val">$17,050</div><div class="stat-lbl">Standard</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="./aug_11_mykonos.html" class="opt-card mykonos">
+        <div class="opt-image"><span class="opt-tier">Option G · Cycladic Nightlife</span></div>
+        <div class="opt-body">
+          <h3>Mykonos &amp; the Cyclades</h3>
+          <div class="loc">Greece · Cyclades · Aegean</div>
+          <p>Best beach-club nightlife in the Mediterranean in August. <strong>Scorpios + SantAnna + Nammos + Cavo Paradiso</strong> with confirmed Solomun residency at Alemagou + Diplo at Cavo Paradiso Sun Aug 16. Delos UNESCO archaeology day, Korfos kitesurfing (Meltemi world-class), Profitis Ilias hike for Perseids viewing. <strong>Food character: meat-forward Greek</strong> — souvlaki, paidakia lamb chops, kleftiko, gyros at Sakis, Beefbar at Bill &amp; Coo, charcoal-grilled meat at Kiki's. No Michelin stars on island (2026 expansion adds Santorini + Thessaloniki, not Mykonos).</p>
+          <div class="opt-stats">
+            <div><div class="stat-val">82–88°F</div><div class="stat-lbl">Aug high · Meltemi</div></div>
+            <div><div class="stat-val">No ★</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$15,000+</div><div class="stat-lbl">est · club bills brutal</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="./aug_11_hvar.html" class="opt-card hvar">
+        <div class="opt-image"><span class="opt-tier">Option H · Dalmatian Sailing</span></div>
+        <div class="opt-body">
+          <h3>Hvar + Split · Dalmatia</h3>
+          <div class="loc">Croatia · Dalmatian Coast · Adriatic</div>
+          <p>Adriatic sailing capital. <strong>Pakleni Islands day sail</strong>, Vis Blue Cave, Brač Zlatni Rat + Vidova Gora (highest Adriatic island peak). Hvar Town world-class summer nightlife: <strong>Hula Hula sundowner + Carpe Diem Beach club until 5 AM</strong>. Diocletian's Palace UNESCO old town in Split. <strong>Krug ★ in Split</strong> (city's first Michelin star, 2025). Food character: Mediterranean-Dalmatian — peka under-the-bell lamb/veal, pršut, sip on Plavac Mali reds; fish-leaning but with strong meat tradition. <strong>43% cheaper than Mallorca.</strong></p>
+          <div class="opt-stats">
+            <div><div class="stat-val">82–88°F</div><div class="stat-lbl">Aug high</div></div>
+            <div><div class="stat-val">★ ×1 (Split)</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$9,650</div><div class="stat-lbl">Standard</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="./aug_11_cote_dazur.html" class="opt-card coteazur">
+        <div class="opt-image"><span class="opt-tier">Option I · Riviera Grand</span></div>
+        <div class="opt-body">
+          <h3>Côte d'Azur · Nice → Monaco → Saint-Tropez</h3>
+          <div class="loc">France · French Riviera · Maritime Alps</div>
+          <p>The densest Michelin ★★★ in the candidate set — <strong>Le Louis XV (Ducasse) Monte-Carlo + La Vague d'Or (Donckele) Saint-Tropez + Mirazur (Colagreco) Menton</strong>, plus La Chèvre d'Or ★★ and Louroc ★★ within reach. <strong>Cannes International Fireworks Festival Aug 15</strong> at 22:00 (Finland team) front-row from Z Plage / Plage 55. Caves du Roy (Saint-Tropez) + Jimmy'z (Monte-Carlo) + Bâoli (Cannes) for late nights. Sentier du Littoral Cap d'Antibes, Sainte-Marguerite Lérins sail, Saint-Paul-de-Vence + Fondation Maeght. <strong>Most expensive of the 9: $25–40K realistic.</strong></p>
+          <div class="opt-stats">
+            <div><div class="stat-val">80–88°F</div><div class="stat-lbl">Aug high</div></div>
+            <div><div class="stat-val">★★★ ×3 + ★★ ×2</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$25,000+</div><div class="stat-lbl">Realistic</div></div>
           </div>
           <div class="opt-cta">See full plan <span class="arrow">→</span></div>
         </div>
