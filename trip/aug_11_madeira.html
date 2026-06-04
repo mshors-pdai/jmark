@@ -56,7 +56,7 @@
   .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--madeira-terra); }
   .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
   .intro-hero h1 em { font-style: italic; color: var(--madeira-sea); font-weight: 400; }
-  .intro-hero .lede { max-width: 720px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .lede { max-width: 740px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
   .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
   .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
   .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
@@ -75,7 +75,7 @@
   .stat .stat-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.1; margin-bottom: 0.2rem; color: var(--madeira-sea-deep); }
   .stat .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
 
-  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 700px; }
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 720px; }
   .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--madeira-terra); }
   .section-header h2 { margin-bottom: 1rem; color: var(--madeira-sea-deep); }
   .section-header p { color: var(--muted); font-size: 1.05rem; }
@@ -136,6 +136,8 @@
   .day-content ul li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 6px; height: 6px; border-radius: 50%; background: var(--madeira-terra); }
   .day-content ul li strong { color: var(--madeira-sea-deep); }
   .day-content ul li a { color: var(--madeira-sea); text-decoration: none; border-bottom: 1px dotted; }
+  .alts { background: rgba(193,100,74,0.06); border-left: 3px solid var(--madeira-terra); padding: 0.85rem 1rem; margin: 0.75rem 0 0.25rem 1.5rem; border-radius: 0 6px 6px 0; font-size: 0.88rem; color: #444; }
+  .alts strong { color: var(--madeira-terra); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.25rem; }
 
   .hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
   .hotel-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
@@ -165,6 +167,15 @@
   .winery-list .name a { color: var(--madeira-terra); text-decoration: none; }
   .winery-list .desc { font-size: 0.88rem; color: var(--muted); }
 
+  .food-list { max-width: 950px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .food-row { display: grid; grid-template-columns: 1fr 1.6fr auto; gap: 1.5rem; padding: 1.5rem; border-bottom: 1px solid var(--line); align-items: center; }
+  .food-row:last-child { border-bottom: none; }
+  .food-row .place { font-family: 'Playfair Display', serif; font-weight: 600; color: var(--madeira-sea-deep); font-size: 1.1rem; }
+  .food-row .place .stars { color: var(--madeira-terra); margin-left: 0.4rem; font-size: 0.9rem; }
+  .food-row .place .meta { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0; }
+  .food-row .desc { font-size: 0.92rem; color: #333; line-height: 1.55; }
+  .food-row .drive { font-size: 0.78rem; color: var(--muted); text-align: right; white-space: nowrap; }
+
   .activities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1100px; margin: 0 auto; }
   .activity { background: white; border-radius: 12px; padding: 1.75rem 1.25rem; text-align: center; transition: transform 0.2s; border: 1px solid var(--line); }
   .activity:hover { transform: translateY(-2px); }
@@ -172,6 +183,25 @@
   .activity h4 { margin-bottom: 0.5rem; font-size: 1rem; color: var(--madeira-sea-deep); }
   .activity h4 a { color: inherit; text-decoration: none; }
   .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+  .nightlife { max-width: 1100px; margin: 0 auto 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .nightlife-col { background: #15161a; color: white; padding: 2rem; border-radius: 16px; }
+  .nightlife-col h3 { color: var(--madeira-terra); margin-bottom: 1.25rem; font-style: italic; }
+  .nightlife-col .venue { padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nightlife-col .venue:last-child { border-bottom: none; }
+  .nightlife-col .venue .vname { font-family: 'Playfair Display', serif; font-weight: 600; color: white; font-size: 1.05rem; }
+  .nightlife-col .venue .vmeta { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
+  .nightlife-col .venue .vdesc { font-size: 0.88rem; color: rgba(255,255,255,0.75); margin-top: 0.5rem; line-height: 1.5; }
+
+  .score-grid { max-width: 1000px; margin: 0 auto 3rem; }
+  .score-row { display: grid; grid-template-columns: 1fr auto 70px; gap: 1rem; padding: 1.1rem 1.5rem; background: white; border-radius: 8px; margin-bottom: 0.6rem; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .score-row .axis { font-weight: 600; color: var(--madeira-sea-deep); }
+  .score-row .axis .tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-left: 0.5rem; font-weight: 500; }
+  .score-row .reason { font-size: 0.88rem; color: #444; max-width: 480px; text-align: right; }
+  .score-row .num { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--madeira-terra); font-weight: 600; }
+  .score-row.total { background: var(--madeira-sea-deep); color: white; }
+  .score-row.total .axis { color: white; }
+  .score-row.total .num { color: white; font-size: 1.9rem; }
 
   .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
   .booking .section-header h2 { color: white; }
@@ -186,6 +216,11 @@
   .step p strong { color: white; }
   .step .meta-line { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
   .step .meta-line a { color: var(--madeira-sand); text-decoration: none; }
+
+  .adversarial { max-width: 950px; margin: 4rem auto 0; padding: 2.5rem; background: rgba(255,255,255,0.04); border-radius: 16px; border-left: 4px solid var(--madeira-terra); }
+  .adversarial h3 { color: white; margin-bottom: 1rem; }
+  .adversarial p { color: rgba(255,255,255,0.78); font-size: 0.95rem; margin-bottom: 1rem; }
+  .adversarial p strong { color: var(--madeira-terra); }
 
   .budget-table { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px; }
   .budget-table .head { text-align: center; margin-bottom: 2.5rem; }
@@ -223,9 +258,15 @@
     .only-this-week .grid { grid-template-columns: 1fr; }
     .wine-block { grid-template-columns: 1fr; }
     .wine-block .wine-text { padding: 2rem; }
+    .nightlife { grid-template-columns: 1fr; }
     .topnav .tabs { flex-wrap: wrap; }
     .container { padding: 0 1.25rem; }
     .step { grid-template-columns: 60px 1fr; gap: 1rem; }
+    .food-row { grid-template-columns: 1fr; gap: 0.6rem; }
+    .food-row .drive { text-align: left; }
+    .score-row { grid-template-columns: 1fr; }
+    .score-row .reason { text-align: left; }
+    .score-row .num { text-align: left; }
   }
   @media (max-width: 600px) {
     .hotels-grid, .activities { grid-template-columns: 1fr; }
@@ -247,7 +288,7 @@
 <div class="back-bar">
   <div class="container">
     <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
-    <span class="meta-mini">Itinerary No. 03C · Madeira · <a href="./aug_11_europe.html" style="color: var(--madeira-terra); text-decoration: none;">compare 4 options ↗</a></span>
+    <span class="meta-mini">Itinerary No. 03C · Madeira · <a href="./aug_11_europe.html" style="color: var(--madeira-terra); text-decoration: none;">compare options ↗</a></span>
     <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
   </div>
 </div>
@@ -261,6 +302,8 @@
       <a href="#wine" class="tab">Wine</a>
       <a href="#food" class="tab">Food</a>
       <a href="#activities" class="tab">Activities</a>
+      <a href="#nightlife" class="tab">Nightlife</a>
+      <a href="#score" class="tab">Score</a>
       <a href="#book" class="tab">Book Now</a>
     </div>
   </div>
@@ -268,10 +311,10 @@
 
 <section class="intro-hero">
   <div class="container">
-    <span class="eyebrow">Portugal · Atlantic Island · 5 Hotel Nights</span>
+    <span class="eyebrow">Portugal · Atlantic Island · 5 Hotel Nights · Option C</span>
     <h1>Madeira &amp;<br>the <em>Funchal Cliffs.</em></h1>
     <p class="lede">
-      A subtropical Atlantic island 600 miles west of mainland Portugal. 79°F air, 73°F sea every August day, no heatwave risk thanks to the NE trade winds. World-class whale watching, dive reserves, sunrise summits above the cloud sea — and the 1891 grand-dame Belmond Reid's Palace. <strong>The Perseids viewed from 5,965 feet above the cloud sea</strong> is what you came for.
+      The over-packed Atlantic-island pick. Five nights at <strong>Belmond Reid's Palace</strong> (1891 clifftop grande-dame), with the entire island reachable in 90 minutes by car. <strong>Perseids peak from Pico do Arieiro at 1,818 m above the cloud sea</strong> on the night you land — 2026 is the new-moon year of the decade, ~90 meteors/hour, fully dark skies. <strong>Velika Senhora da Assunção</strong> falls Sat Aug 15 (Madeira's biggest summer holiday): cathedral procession, candle-lit Old Town, fireworks at 22:00. Garajau Marine Reserve diving with hand-feedable groupers, sunrise PR1 ridge-walk, Câmara de Lobos Plavac-quality Madeira tasting at Henriques &amp; Henriques + Barbeito, the only <strong>★★ in Atlantic Portugal — Il Gallo d'Oro</strong> at Cliff Bay — plus <strong>William ★</strong> at Reid's and <strong>Desarma ★</strong> retained 2026. The Wine Festival starts Aug 27 (you miss by 10 days, mitigated with cellar visits).
     </p>
     <div class="meta">
       <div class="meta-item"><div class="label">Departure</div><div class="value">Tue, Aug 11</div></div>
@@ -290,10 +333,10 @@
       <div class="hero-content">
         <span class="eyebrow">Option C · Portugal · Atlantic Island</span>
         <h2>Madeira &amp;<br>the Funchal Cliffs</h2>
-        <p class="tagline">Subtropical Atlantic island 600 mi from mainland Portugal. Trade-wind cooled, heatwave-proof. Whales, scuba reserves, sunrise summits above the clouds — and the 1891 grand-dame Belmond Reid's Palace anchoring the trip.</p>
+        <p class="tagline">Subtropical Atlantic island 600 mi from mainland Portugal. NE trade-wind cooled, locked at 23–27°C, ZERO heatwave risk in a European summer increasingly punishing. World-class whale watching (95% sighting rate, 25+ cetacean species), Garajau dive reserve with hand-feedable groupers, sunrise PR1 ridge from Pico do Arieiro above the cloud sea, fortified Madeira at Blandy's + Pereira d'Oliveira + Barbeito — and the 1891 grand-dame Belmond Reid's Palace anchoring the trip with William ★ in-house and Il Gallo d'Oro ★★ a 5-min drive down the cliff at Cliff Bay.</p>
         <div class="stats">
-          <div class="stat"><div class="stat-value">75–80°F</div><div class="stat-label">August High</div></div>
-          <div class="stat"><div class="stat-value">High</div><div class="stat-label">Crowd Level</div></div>
+          <div class="stat"><div class="stat-value">23–27°C</div><div class="stat-label">August High</div></div>
+          <div class="stat"><div class="stat-value">Real, small</div><div class="stat-label">Nightlife Energy</div></div>
           <div class="stat"><div class="stat-value">Madeira</div><div class="stat-label">Signature Wine</div></div>
           <div class="stat"><div class="stat-value">25 min</div><div class="stat-label">FNC → Funchal</div></div>
         </div>
@@ -303,7 +346,7 @@
     <div class="section-header">
       <span class="eyebrow">Getting There</span>
       <h2>Flight Plan</h2>
-      <p>One-stop routing via Lisbon — TAP nonstop LAX → LIS overnight Aug 11, 90-min connection, TAP LIS → FNC on Aug 12 mid-afternoon. The famous curved approach over Câmara de Lobos lands you at <strong>4:50 PM</strong>; on the cliff at Reid's for sunset.</p>
+      <p>One-stop routing via Lisbon — TAP nonstop LAX→LIS overnight Aug 11, 90-min connection at LIS, TAP LIS→FNC mid-afternoon Wed Aug 12. The famous curved approach over Câmara de Lobos lands you on Madeira at <strong>~13:00 local</strong>; at Reid's by 14:00, in time for the Perseid peak that same night.</p>
     </div>
     <div class="flight-box">
       <div class="flight-row">
@@ -314,64 +357,65 @@
       <div class="flight-row">
         <div class="flight-airport"><div class="code">LIS</div><div class="city">Lisbon · 1h 30m layover</div></div>
         <div class="flight-line"><div class="info">TAP TP1685</div><div class="dash"></div><div class="info">1h 45m</div></div>
-        <div class="flight-airport"><div class="code">FNC</div><div class="city">Madeira · arr <strong>4:50 PM</strong> · cliff-runway · 25 min car to Funchal</div></div>
+        <div class="flight-airport"><div class="code">FNC</div><div class="city">Madeira · arr <strong>~1:00 PM</strong> · cliff-runway · 25 min car to Funchal</div></div>
       </div>
       <div class="flight-meta">
         <div class="item"><div class="label">Est. Round-trip</div><div class="val">$1,150–$1,600</div></div>
-        <div class="item"><div class="label">At hotel by</div><div class="val">6:00 PM</div></div>
+        <div class="item"><div class="label">At hotel by</div><div class="val">2:00 PM</div></div>
         <div class="item"><div class="label">Carrier</div><div class="val">TAP Air Portugal</div></div>
       </div>
     </div>
+    <p style="text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;">Backup routings: <strong>United/Lufthansa LAX→FRA→FNC</strong>, <strong>British Airways LAX→LHR→FNC</strong>, or <strong>SATA Azores LAX→PDL→FNC</strong> (the island-hop, summer only). TAP is by far the cleanest single-carrier path. <a href="https://www.flytap.com/en_us/flights-to-funchal" target="_blank" rel="noopener" style="color: var(--madeira-terra);">flytap.com →</a></p>
 
     <div class="section-header">
       <span class="eyebrow">Day by Day</span>
       <h2>The Itinerary</h2>
-      <p>One base — Funchal — with the whole island reachable in 75 minutes by car. Pico do Arieiro sunrise · Garajau dive · Desertas catamaran · Caldeirão Verde levada · the Wine Lodge tasting room two blocks from the hotel.</p>
+      <p>One base — <strong>Belmond Reid's Palace, 5 nights</strong> — with the whole island reachable in 90 minutes by car. Pico do Arieiro Perseid night on arrival (Day 1), Garajau dive Day 2, PR1 ridge sunrise + Câmara de Lobos wine + William ★ + Vespas Day 3, Mercado + Assumption procession + Desarma ★ + casino Day 4, whale-watch + Cliff Bay spa + traditional espetada Day 5. Days are stacked deliberately — each one has a low-energy swap, a rainy-day swap (negligible probability), and a doubling-down swap.</p>
     </div>
 
     <div class="only-this-week">
       <div class="head">
         <span class="eyebrow" style="color: var(--madeira-terra);">Only This Week</span>
         <h3>Don't-Miss Events on Your Exact Dates</h3>
-        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 700px; margin-left: auto; margin-right: auto;">Four experiences that only happen during the week you're there. The Perseids above the cloud sea is the headline.</p>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 720px; margin-left: auto; margin-right: auto;">Four things happening only during your week — the Perseids peak from Pico do Arieiro above the cloud sea, Festa da Assunção (Madeira's biggest summer holiday + fireworks), the Garajau dive reserve at its August best (water 24°C, vis 30 m), and peak whale-and-dolphin season (95% sighting rate). The Wine Festival starts Aug 27 — 10 days after you leave — and is the calendar's biggest miss, mitigated below.</p>
       </div>
 
       <div class="grid">
 
-        <div class="event-card">
+        <div class="event-card terra">
           <div class="head">
             <span class="icon">☄️</span>
             <div>
-              <h4>Perseid Peak from Pico do Arieiro</h4>
-              <div class="when">Night of <strong>Thu Aug 13 → Fri Aug 14</strong></div>
+              <h4 class="terra">Perseids Peak from Pico do Arieiro</h4>
+              <div class="when">Nights of <strong>Tue Aug 11 → pre-dawn Wed Aug 12</strong> AND <strong>Wed Aug 12 → pre-dawn Thu Aug 13</strong></div>
             </div>
           </div>
-          <p><strong>The single most spectacular Perseid vantage in the Atlantic.</strong> Drive 35 min up to Pico do Arieiro (5,965 ft), park at the summit, and watch the meteors from <em>above</em> the cloud sea. New moon Aug 12 = moonless sky, 90+ meteors/hour at peak (1–4 AM local). Bring layers — it's 18°F cooler than Funchal at the summit. Pair with the dawn PR1 ridge hike to Pico Ruivo if you can stay awake.</p>
+          <p><strong>2026 is the Perseids year of the decade.</strong> Peak maximum 14:53 UTC Aug 13, but the two prior nights are the show — and <strong>new moon Aug 12 = fully dark skies, 90+ meteors/hour</strong>. Pico do Arieiro (1,818 m / 5,965 ft) is Madeira's premier stargazing site and world-class: above the cloud sea most clear August nights, summit road drivable, free parking that fills by 05:00 in summer. Casa Aeerio observatory + private "Juan" Viator tour available. <strong>The trip is built so you land Wed early-afternoon and have time to pre-position by 22:30 for the Aug 12→13 peak.</strong></p>
           <a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener" class="book-link">Viewing guide →</a>
         </div>
 
-        <div class="event-card terra">
+        <div class="event-card">
           <div class="head">
             <span class="icon">⛪</span>
             <div>
-              <h4 class="terra">Assunção de Nossa Senhora</h4>
-              <div class="when"><strong>Sat Aug 15</strong> — Portuguese national holiday</div>
+              <h4>Festa da Nossa Senhora da Assunção</h4>
+              <div class="when"><strong>Sat Aug 15</strong> — Madeira public holiday, biggest summer feast</div>
             </div>
           </div>
-          <p>The Sé cathedral procession at 10 AM, then Funchal's most-celebrated fireworks of the summer at 10 PM over the bay (separate from the famous New Year's display). Câmara de Lobos and Monte both hold smaller religious processions in the afternoon. <strong>Most shops closed, restaurants packed</strong>; hotel concierges fight for terrace tables. Book the Belmond Reid's afternoon tea Sat at 4 PM if it falls on this trip — they do a special Assumption Day spread.</p>
-          <a href="https://visitmadeira.com/en/whats-on/" target="_blank" rel="noopener" class="book-link">Visit Madeira agenda →</a>
+          <p>Madeira's most important summer holiday. <strong>Sé Cathedral procession</strong> in Funchal's Zona Velha (next to Rua de Santa Maria) — candle-lit, floral, with the statue of the Virgin Mary carried by clergy + dignitaries through the Old Town. Masses through the day. Traditional food festivals across the island. <strong>Fireworks ~22:00</strong> over Funchal Bay. Most non-tourist shops closed mid-day; tourist restaurants packed. <strong>Book Sat dinner 30+ days ahead</strong>. Aug 15 falls on a Saturday in 2026 — Mercado dos Lavradores standard Sat hours (07:00–14:00) may apply but verify holiday-reduced hours; pair market morning + procession afternoon + fireworks + dinner + casino for the stacked Saturday.</p>
+          <a href="https://www.visitmadeira.com/en/whats-on/" target="_blank" rel="noopener" class="book-link">Visit Madeira agenda →</a>
         </div>
 
         <div class="event-card olive">
           <div class="head">
             <span class="icon">🐬</span>
             <div>
-              <h4 class="olive">Peak whale and dolphin season</h4>
-              <div class="when">All week · ~95% sighting rate in August</div>
+              <h4 class="olive">Peak whale &amp; dolphin season</h4>
+              <div class="when">All week · ~95% sighting rate · 25+ cetacean species</div>
             </div>
           </div>
-          <p>Madeira sits in the path of 25+ cetacean species — short-finned pilot whales, sperm whales, common dolphins, occasional Bryde's whales. <strong>Bonita da Madeira's traditional sailing schooner</strong> is the romantic move — 3-hour tour from Funchal Marina ($45 pp). Most operators offer a free re-sail if you don't see anything; in August you won't need it. <strong>Book the sunset slot</strong> Day 3 or 4.</p>
-          <a href="https://bonitadamadeira.com/tours/whales-dolphins/" target="_blank" rel="noopener" class="book-link">Bonita da Madeira →</a>
+          <p>Madeira sits in the path of <strong>sperm whales, short-finned pilot whales, common/spotted/bottlenose dolphins, occasional Bryde's, fin, and blue whales</strong>. <strong>Lobosonda</strong> (Calheta, operating since 2003) is the most-respected operator — small-group <em>Stenella</em> catamaran trips, no engines near sightings. <strong>VMT Madeira</strong> runs eco-catamarans from Funchal Marina. <strong>Bonita da Madeira</strong> is the 23 m traditional tall ship from Funchal Marina — up to 50 pax, dolphin + Cabo Girão approach + swim stop. Half-day catamaran €30–€55/pp; private speedboat ~€60–€80/pp. Lead time 24–48 h, free re-sail if no sighting (not needed in August).</p>
+          <a href="https://www.lobosonda.com/" target="_blank" rel="noopener" class="book-link">Lobosonda →</a>
         </div>
 
         <div class="event-card sand">
@@ -379,33 +423,33 @@
             <span class="icon">🐠</span>
             <div>
               <h4 class="sand">Garajau Marine Reserve · peak conditions</h4>
-              <div class="when">All week · 73°F sea, 50+ ft visibility</div>
+              <div class="when">All week · 24°C water · 6–30 m visibility</div>
             </div>
           </div>
-          <p>The Garajau Partial Nature Reserve (protected since 1986) is famous for its resident, hand-feedable <strong>dusky groupers</strong>, plus barracuda, eagle rays, occasional mantas. August has the warmest water and clearest visibility of the year. <strong>Manta Diving Madeira</strong> at Galo Resort runs morning two-tank dives — perfect Day 4 (Sat Aug 15) before the evening fireworks. Beginners can do a Discover Scuba session in the same waters.</p>
+          <p>The <strong>Garajau Partial Nature Reserve</strong> (10–15 min boat from Funchal Marina) — Madeira's #1 dive site, protected since 1986, famous for <strong>dusky groupers that swim right up to divers</strong>. Plus barracuda, moray eels, eagle rays, occasional mantas. August has the warmest water and clearest visibility of the year. <strong>Manta Diving Madeira</strong> at Caniço de Baixo (ISO 24803 cert, 8–10 min boat to Cap Garajau, from €50) is the operator. <strong>Mero Diving Center</strong> runs grouper-interaction dives. <strong>Azul Diving</strong> at Penha França Mar Hotel offers custom dive + snorkel. Snorkel + lunch ~$107 (4h). Book 24–48 h ahead; free cancellation 24 h.</p>
           <a href="https://mantadiving.com/en/service/" target="_blank" rel="noopener" class="book-link">Manta Diving →</a>
         </div>
 
       </div>
 
       <div class="bonus-callout">
-        <h4>🍇 Bonus — Madeira Wine Festival preview tastings (the ambitious add-on)</h4>
-        <p>The official <strong>Festa do Vinho Madeira opens Aug 27</strong> — 10 days <em>after</em> you leave. But Blandy's, Henriques &amp; Henriques, and the producers in Estreito de Câmara de Lobos are setting up for the festival the week of your trip, which means <strong>library-stock tastings and lock-in lots</strong> are offered to walk-ins as warm-up runs. Ask Blandy's about the <em>Vintage Premium</em> tour (4 wines including a Frasqueira) — they often slot in extra rare bottles in the week before opening. <a href="https://blandyswinelodge.com/en/wine-tasting/" target="_blank" rel="noopener">Blandy's →</a></p>
+        <h4>⚠️ What you'll <em>just</em> miss — the Madeira Wine Festival (Aug 27 → Sep 13, 2026)</h4>
+        <p>Madeira's biggest wine event opens 10 days after you leave: <strong>Live Harvest at Estreito Câmara de Lobos Sep 5</strong>, the <strong>Funchal Wine Lounge at Praça do Povo Aug 31 – Sep 13</strong>, and <strong>Concerts in the Vineyards Sep 5/6/12/13</strong>. Plus European Folklore Week (Funchal Municipal Gardens Aug 27–31), Festival Our Lady of Help (Aug 29–31), and Funchal City Day (Aug 21) — all missed. <strong>Mitigation</strong>: the cellar visits below (Blandy's + Pereira d'Oliveira + Barbeito + Henriques &amp; Henriques) cover the full Madeira wine catalog year-round, and the grape-stomping festivities aren't actually the wine — the cellar tastings are. <a href="https://www.visitmadeira.com/en/whats-on/events/wine-festival/" target="_blank" rel="noopener">Festival info ↗</a></p>
       </div>
     </div>
 
     <div class="glance-table">
       <table>
         <thead>
-          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner</th></tr>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner + Late</th></tr>
         </thead>
         <tbody>
-          <tr><td class="daynum">1</td><td>Wed Aug 12</td><td>Arrival · cliff sunset</td><td>Land FNC 4:50 PM · check in Reid's · terrace cocktails</td><td>Hotel terrace · Madeira wine flight</td></tr>
-          <tr><td class="daynum">2</td><td>Thu Aug 13</td><td>Funchal · William ★</td><td>Mercado · Blandy's Premium tasting</td><td><strong>William ★</strong> at Reid's</td></tr>
-          <tr><td class="daynum">3</td><td>Fri Aug 14</td><td>Whales 🐬 + Perseids ☄️</td><td>Bonita schooner · Câmara de Lobos · Cabo Girão · Perseids at Pico Arieiro</td><td>Vila do Peixe (early)</td></tr>
-          <tr><td class="daynum">4</td><td>Sat Aug 15</td><td>Garajau dive 🐠 + Asunção ⛪</td><td>2-tank dive · spa · fireworks at 10 PM</td><td><strong>Desarma ★</strong></td></tr>
-          <tr><td class="daynum">5</td><td>Sun Aug 16</td><td>North coast levada</td><td>Caldeirão Verde · Porto Moniz lava pools · Fanal forest</td><td><strong>Il Gallo d'Oro ★★ farewell</strong></td></tr>
-          <tr><td class="daynum">6</td><td>Mon Aug 17</td><td>Departure</td><td>Lido swim · transfer to FNC</td><td>On the plane</td></tr>
+          <tr><td class="daynum">1</td><td>Wed Aug 12</td><td>Land + Perseids ☄️</td><td>FNC ~13:00 · Reid's · afternoon tea + cable car Monte · fado at Arsénio's · drive Pico do Arieiro 22:30 → Perseids peak above cloud sea 23:30–02:30</td><td><strong>Arsénio's</strong> fado · Pico do Arieiro Perseid night</td></tr>
+          <tr><td class="daynum">2</td><td>Thu Aug 13</td><td>Garajau dive 🐠 + Old Town crawl</td><td>Manta Diving 2-tank Cap Garajau · Blandy's + Pereira d'Oliveira tasting room double-header · Sé rooftop sunset</td><td><strong>Il Gallo d'Oro ★★</strong> · Rua de Santa Maria bar crawl</td></tr>
+          <tr><td class="daynum">3</td><td>Fri Aug 14</td><td>PR1 sunrise 🏔️ + wine + Vespas</td><td>04:30 Pico do Arieiro · PR1 Arieiro→Ruivo 7 km one-way · Câmara de Lobos · Henriques &amp; Henriques + Barbeito · Cabo Girão skywalk</td><td><strong>William ★</strong> at Reid's · <strong>Vespas Discoteca</strong> till 6 AM</td></tr>
+          <tr><td class="daynum">4</td><td>Sat Aug 15 ⛪</td><td>Mercado + Assumption + Casino</td><td>Mercado dos Lavradores · Curral das Freiras lunch · Sé Cathedral procession · Galáxia Skybar aperitivo · Aug 15 fireworks 22:00</td><td><strong>Desarma ★</strong> · <strong>Casino da Madeira</strong> + Copacabana</td></tr>
+          <tr><td class="daynum">5</td><td>Sun Aug 16</td><td>Whale-watch 🐋 + spa + espetada</td><td>Lobosonda Stenella catamaran Calheta · Cliff Bay couples spa 2 h · sunset Vila do Peixe Câmara de Lobos</td><td><strong>O Lagar</strong> espetada · last Old Town crawl</td></tr>
+          <tr><td class="daynum">6</td><td>Mon Aug 17</td><td>Departure</td><td>Slow Reid's breakfast · final Mercado or Forte de São Tiago · transfer FNC</td><td>On the plane</td></tr>
         </tbody>
       </table>
     </div>
@@ -415,94 +459,132 @@
       <div class="day">
         <div class="day-number"><div class="num">01</div><div class="date">Wed Aug 12</div></div>
         <div class="day-content">
-          <h3>Arrival · cliff sunset</h3>
+          <h3>Land + Perseids overhead · cable car to Monte · fado at Arsénio's · midnight summit</h3>
           <ul>
-            <li><strong>4:50 PM</strong> Land FNC · <a href="https://en.wikipedia.org/wiki/Madeira_Airport" target="_blank" rel="noopener">curved-approach landing</a> over Câmara de Lobos cliffs (the runway is on 180 concrete pillars 230 ft tall)</li>
-            <li><strong>5:30 PM</strong> Pre-booked transfer to Belmond Reid's Palace ($32, 25 min)</li>
-            <li><strong>6:00 PM</strong> Check in · bags up · drink in the bar overlooking the saltwater pool</li>
-            <li><strong>7:30 PM</strong> Sunset on the terrace · Madeira wine flight (Sercial dry → Verdelho → Bual → Malmsey sweet)</li>
-            <li><strong>9:00 PM</strong> Hotel terrace dinner · early sleep (you've been awake 24 hours)</li>
+            <li><strong>1:00 PM</strong> Land FNC · the curved-approach landing on the cliff-runway over Câmara de Lobos (the runway sits on 180 concrete pillars 230 ft tall) is the trip's first thrill</li>
+            <li><strong>1:30 PM</strong> Pre-booked transfer to <a href="https://www.belmond.com/hotels/europe/portugal/madeira/belmond-reids-palace/" target="_blank" rel="noopener">Belmond Reid's Palace</a> · 25 min · ~€60. Check in to a sea-view cliffside room</li>
+            <li><strong>2:30 PM</strong> Light lunch + dip in the Reid's saltwater rock-pool or the gardens</li>
+            <li><strong>4:30 PM</strong> <strong>Belmond Reid's afternoon tea</strong> on the Tea Terrace · €65/pp · smart-casual · the trip's first ritual, served daily since 1937 above the Atlantic</li>
+            <li><strong>6:30 PM</strong> Drive (or hotel shuttle) to <strong><a href="https://madeiracablecar.com/en/" target="_blank" rel="noopener">Funchal Cable Car</a></strong> base at Almirante Reis · RT €18 · 15-min glass-cabin ascent to <strong>Monte</strong> (550 m above the bay) for golden-hour aerial view. Monte Palace Tropical Gardens closes 18:00 — skip on this day, save for Day 4 or 5 morning. Cable car back down 19:30.</li>
+            <li><strong>8:30 PM</strong> Walk Rua de Santa Maria (the painted-doors street, Madeira's bar street — 50+ bars + restaurants in the narrow cobblestones)</li>
+            <li><strong>9:00 PM</strong> Light dinner at <strong><a href="https://arseniosfado.com/" target="_blank" rel="noopener">Arsénio's Casa de Fados</a></strong>, Rua de Santa Maria 169, open since 1981 — <strong>live fado Tue–Sat evenings</strong>. Espetada em pau de loureiro (bay-laurel skewered beef) + bolo do caco + poncha. The most authentic Madeiran fado-and-meat night.</li>
+            <li><strong>10:30 PM</strong> Pre-arranged taxi to <strong>Pico do Arieiro</strong> (~45 min, ~€90 each way — driver waits, makes coffee in the parking lot, gets you home asleep)</li>
+            <li><strong>11:30 PM–2:30 AM</strong> <strong>Perseid peak above the cloud sea at 1,818 m</strong> · new moon Aug 12 · 90+ meteors/hour. Layers — it's 50s°F at the summit even in August. Red headlamp, blanket, thermos. The most singular night of the trip.</li>
+            <li><strong>3:00 AM</strong> Back at Reid's</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the cable car. Tea Terrace at 16:30, poolside at Reid's, William ★ at 19:30 (Tue–Sat last order 21:30, so an early sitting is the move), Perseids from Reid's beach terrace (you lose the above-cloud altitude but gain proximity to bed). 90% of the show is still visible from sea level on a new-moon island night.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap (Aug avg ~1 day rain):</strong> Indoor Funchal day — Madeira Story Center + CR7 Museum + Blandy's upgrade Vineyard Heritage Quinta de Santa Luzia tour €45. Spa night at Reid's. Late dinner at Villa Cipriani Belmond (open 18:30–midnight, last order 22:30). Perseids cancelled by cloud cover the only loss; back-stop is Casa Aeerio observatory which runs covered-deck sessions in marginal conditions.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Add a Funchal Marina <strong>Bonita da Madeira sunset sail</strong> at 17:30 before fado (2.5 h tall-ship cruise + dolphin spotting + sunset over the bay, ~€55/pp). Or book the private Casa Aeerio + Juan Viator <strong>Pico do Arieiro stargazing tour</strong> with telescopes and astronomer narration (€80/pp, 5-h tour, includes transfer — way more meteor + planet context than going DIY).</div>
         </div>
       </div>
 
       <div class="day">
         <div class="day-number"><div class="num">02</div><div class="date">Thu Aug 13</div></div>
         <div class="day-content">
-          <h3>Funchal · Blandy's · William ★</h3>
+          <h3>Garajau dive 🐠 · Old Town wine crawl · Il Gallo d'Oro ★★</h3>
           <ul>
-            <li><strong>10:00 AM</strong> Walk down to Funchal old town (20 min downhill, taxi back uphill)</li>
-            <li><strong>10:30 AM</strong> <strong><a href="https://www.mercadodoslavradores.com/" target="_blank" rel="noopener">Mercado dos Lavradores</a></strong> — fruit, scabbardfish, embroidery (go before the cruise ship crowds)</li>
-            <li><strong>12:00 PM</strong> Rua de Santa Maria (painted-door street), Sé cathedral</li>
-            <li><strong>1:00 PM</strong> Lunch at <a href="https://www.tripadvisor.com/Restaurant_Review-g189167-d15634964-Reviews-KAMPO_by_Chef_Julio_Pereira" target="_blank" rel="noopener">Kampo</a> · farm-to-table tasca · open kitchen</li>
-            <li><strong>3:00 PM</strong> <strong><a href="https://blandyswinelodge.com/en/wine-tasting/" target="_blank" rel="noopener">Blandy's Wine Lodge Premium Tour</a></strong> · 75 min, 3 wines, $22 pp · ask about Vintage Premium add-on</li>
-            <li><strong>5:00 PM</strong> Stroll Avenida Arriaga · gelato at Fábrica Santo António</li>
-            <li><strong>8:00 PM</strong> <strong><a href="https://www.belmond.com/hotels/europe/portugal/madeira/belmond-reids-palace/william-restaurant" target="_blank" rel="noopener">William ★</a></strong> at Reid's Palace · tasting + wine pairings (~$490–$650/cpl) · smart-elegant dress</li>
+            <li><strong>10:00 AM</strong> Slow brunch at Reid's after the Perseids night — slow pace required</li>
+            <li><strong>11:30 AM</strong> Drive 15 min east to <strong>Caniço de Baixo</strong> · <a href="https://mantadiving.com/en/service/" target="_blank" rel="noopener">Manta Diving Madeira</a> at Galo Resort (ISO 24803 cert)</li>
+            <li><strong>12:00–3:00 PM</strong> <strong>Two-tank Cap Garajau dive</strong> (~€95/pp incl. gear, boat, briefings) — the famous hand-feedable dusky groupers, plus moray eels, barracuda, eagle rays, occasional mantas. Vis 6–30 m in August, water 24°C. <strong>Discover Scuba option</strong> in the same waters for either of you if you don't dive.</li>
+            <li><strong>3:30 PM</strong> Back to Funchal · espresso + pastel de nata at Fábrica Santo António in the Old Town</li>
+            <li><strong>4:30 PM</strong> <strong><a href="https://blandyswinelodge.com/en/wine-tasting/" target="_blank" rel="noopener">Blandy's Wine Lodge</a></strong>, Av. Arriaga 28 (Sat hours Mon–Fri 10–18:30, Sat 10–18) · brand-ambassador-led tour ~45 min in EN/PT/DE/FR/ES + 5-wine flight Premium Tour €15–€45/pp · ask about the Sercial / Verdelho / Bual / Malmsey progression and a Frasqueira (single-vintage 20+ year cask-aged) tasting add-on</li>
+            <li><strong>6:00 PM</strong> Walk 8 min to <strong><a href="https://tastingbook.com/winery/pereira-d-oliveira-vinhos-lda" target="_blank" rel="noopener">Pereira d'Oliveira (D'Oliveiras)</a></strong>, Rua dos Ferreiros 107 · the serious tasting room — 17th-c building, 1.5 million liters of old-vintage stock, verdelhos back to 1850. <strong>Try a back-vintage Bual</strong> · ~€15–€30 for the full sit-down session. The connoisseur's complement to Blandy's tourist polish.</li>
+            <li><strong>7:30 PM</strong> Sunset cocktail at <strong>Terrace Bar at Sé Boutique Hotel</strong> — 360° rooftop, eye-level with the Sé Cathedral, the Old Town's best high view</li>
+            <li><strong>8:30 PM</strong> Drive 5 min to <a href="https://www.portobay.com/en/hotels/madeira-hotels/the-cliff-bay/restaurants/" target="_blank" rel="noopener">The Cliff Bay</a> for the trip's Michelin centerpiece</li>
+            <li><strong>9:00 PM</strong> Dinner at <strong><a href="https://guide.michelin.com/en/ilha-da-madeira/funchal/restaurant/il-gallo-d-oro" target="_blank" rel="noopener">Il Gallo d'Oro ★★</a></strong> · Chef Benoît Sinthon (José Diogo Costa exec) · <strong>Terroir Experience €245</strong> (the land-leaning menu) or <strong>Top Experience 9- or 12-course €295</strong> or <strong>11 Moments €295</strong>, plus wine pairing ~€150/pp. <strong>Call ahead to customize land-only (Joann)</strong> — Terroir leans Iberian pork, lamb, beef and they'll lean further on request. Book 4–6 weeks ahead for August.</li>
+            <li><strong>11:30 PM</strong> Walk back toward Old Town (15 min) for <strong>Rua de Santa Maria bar crawl</strong>: start at <strong>23 Vintage Bar</strong> (vintage decor, 70s/80s/90s soundtrack, small terrace) → <strong>Venda Velha</strong> (modern tasca, 1920s radios + lanterns, DJs) → <strong>Barreirinha Bar Café</strong> (open-air hillside terrace with the best ocean-breeze nightcap on the strip)</li>
+            <li><strong>1:30 AM</strong> Done. Taxi or Uber back to Reid's · ~€10</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the second wine lodge (Pereira d'Oliveira). Reid's spa massage 17:30. Cliff Bay pre-dinner spa is included if you book the half-day package — walk to Il Gallo d'Oro within the same hotel complex, no driving needed. Drop the Old Town bar crawl, take a Villa Cipriani Belmond rooftop nightcap on the way home (last order 22:30).</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Diving cancelled in moderate-or-higher swell. Plan B: <strong>Madeira Story Center</strong> + <strong>Story Bay</strong> indoor walk-through, upgraded <strong>Blandy's Vineyard Heritage tour to Quinta de Santa Luzia</strong> (€45, the full estate-and-cellar experience, 3 h covered). Late lunch at <a href="https://www.tripadvisor.com/Restaurant_Review-g189167-d15634964-Reviews-KAMPO_by_Chef_Julio_Pereira" target="_blank" rel="noopener">Kampo</a> (open kitchen tasca, oxtail ravioli signature). Il Gallo d'Oro dinner unchanged — it's indoors at Cliff Bay.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Add a <strong>15:30 jet ski hour in Funchal Bay</strong> (Madeira WaterSports Marina Nova, ~€100/h, no license required, 4-stroke Yamaha 1100s) between the dive and the wine lodges. Or replace the morning dive with a <strong>half-day whale-watch out of Funchal Marina</strong> on VMT's eco-catamaran (€55/pp, 2.5 h, hits the same Day 5 wildlife window earlier so you can keep Day 5 free).</div>
         </div>
       </div>
 
       <div class="day">
         <div class="day-number"><div class="num">03</div><div class="date">Fri Aug 14</div></div>
         <div class="day-content">
-          <h3>Whales 🐬 · Câmara de Lobos · Perseids ☄️</h3>
+          <h3>Sunrise PR1 ridge · Câmara de Lobos wine · William ★ · <em>Vespas till 6 AM</em></h3>
           <ul>
-            <li><strong>10:00 AM</strong> <strong><a href="https://bonitadamadeira.com/tours/whales-dolphins/" target="_blank" rel="noopener">Bonita da Madeira</a></strong> sailing-schooner whale &amp; dolphin tour · Funchal Marina · $45 pp · 3 hours</li>
-            <li><strong>1:30 PM</strong> Drive 15 min west to <strong>Câmara de Lobos</strong> · lunch at <a href="https://www.tripadvisor.com/Restaurant_Review-g1190957-d1529778-Reviews-Restaurant_Vila_do_Peixe" target="_blank" rel="noopener">Vila do Peixe</a> · pick-your-fish grilled on embers, harbor view</li>
-            <li><strong>3:30 PM</strong> Walk the harbor, find Churchill's painting plaque, poncha at a tasca</li>
-            <li><strong>4:30 PM</strong> 10 min drive to <strong>Cabo Girão Skywalk</strong> · glass floor 1,902 ft above the sea, free</li>
-            <li><strong>6:00 PM</strong> Back to hotel · nap. You'll need it.</li>
-            <li><strong>10:30 PM</strong> Drive 35 min up to <strong>Pico do Arieiro (5,965 ft)</strong> for the <strong>Perseid meteor shower peak</strong>. Bring fleece, blanket, thermos, headlamp</li>
-            <li><strong>1–4 AM</strong> Watch the sky from above the clouds. The most singular night of the trip.</li>
-            <li><strong>5:00 AM</strong> Back at hotel</li>
+            <li><strong>4:30 AM</strong> Pre-arranged taxi from Reid's → <strong>Pico do Arieiro</strong> (45 min). Free parking fills by 05:00 in summer — be there early. Layers (50s°F at the summit at dawn).</li>
+            <li><strong>5:30 AM</strong> Sunrise above the cloud sea from the summit observation deck. The most-photographed sunrise in the Atlantic.</li>
+            <li><strong>6:30 AM</strong> Begin <strong>PR1 Arieiro → Ruivo</strong> · <strong>7 km one-way</strong>, ~4–5 h with stops, <strong>hard</strong> · steep stairs, exposed drops, dark tunnels (headlamps required), no shade, no water. <strong>NEW 2026 RULES: one-way only (Arieiro → Ruivo), mandatory <a href="https://simplifica.madeira.gov.pt/" target="_blank" rel="noopener">SIMplifica</a> booking €10.50 general public ≥24 h ahead, exposed-ridge cancellation in weather.</strong> Pre-arrange taxi pickup at <strong>Achada do Teixeira</strong> trailhead.</li>
+            <li><strong>11:30 AM</strong> Back at Reid's · hot shower · 2-h nap · brunch on the terrace</li>
+            <li><strong>2:30 PM</strong> Drive 15 min west to <strong>Câmara de Lobos</strong> (the Churchill fishing village, where he painted in Jan 1950 — the Espírito Santo viewpoint plaque marks the easel spot)</li>
+            <li><strong>3:00 PM</strong> <strong><a href="https://www.henriquesehenriques.pt/en/" target="_blank" rel="noopener">Henriques &amp; Henriques</a></strong>, Av. Autonomia · walk-in friendly · free 3-year tasting · mini-museum format, excellent intro to the Madeira styles</li>
+            <li><strong>4:00 PM</strong> <strong><a href="https://www.barbeito.pt/en/" target="_blank" rel="noopener">Barbeito</a></strong>, also Câmara de Lobos · <strong>by appointment only — book ≥1 week ahead</strong> · Jancis Robinson calls them "the Lafite of Madeira" · single-cask Platinum tour, the connoisseur's pour. The trip's serious wine moment.</li>
+            <li><strong>5:30 PM</strong> Drive 10 min to <strong><a href="https://visitmadeira.com/en/explore/discover/cabo-girao-skywalk/" target="_blank" rel="noopener">Cabo Girão Skywalk</a></strong> — <strong>580 m / 1,900 ft glass-floor cantilever</strong> over the Atlantic. Summer hours 8–21. €2 entry. Beat the tour-bus crowds (9–10 AM is also good but 17:30 sunset light is the call). One of Europe's highest sea cliffs.</li>
+            <li><strong>7:30 PM</strong> Drive back to Reid's · quick rest + change</li>
+            <li><strong>9:00 PM</strong> Dinner at <strong><a href="https://www.belmond.com/hotels/europe/portugal/madeira/belmond-reids-palace/restaurants-and-bars/william" target="_blank" rel="noopener">William ★</a></strong> on the Reid's property · Chef José Diogo Costa · <strong>William menu €190</strong> or <strong>Discovery €160</strong> · last seating 21:30 (Tue–Sat only, you're inside the window). <strong>Strongest land-menu star on the island</strong> — Mirandesa beef (Portuguese heritage breed), Bisaro pork, lamb. Smart-elegant dress. Reid's HB credit applies. Reservation 3–4 weeks ahead.</li>
+            <li><strong>11:30 PM</strong> Taxi to <strong><a href="https://www.vespasmadeira.com/" target="_blank" rel="noopener">Vespas Discoteca</a></strong> · Av. Sá Carneiro 7, São Martinho (the Estrada Monumental hotel zone, 5 min west of Reid's). <strong>3 rooms, 7 bars</strong> — Vespas main + Jam + Marginal. The biggest dance floor on Madeira. Friday night open until ~6 AM (sources disagree 23:00–08:00 vs midnight–06:00 — call <strong>+351 291 234 800</strong> day-of to confirm). Cover €15. The night Joann came for.</li>
+            <li><strong>2:30 AM</strong> Done — back to Reid's, ~€10 Uber</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the PR1 ridge. Drive to Pico do Arieiro for sunrise only (no hike — 45-min drive each way, summit observation deck, photos). Or — even softer — replace PR1 entirely with the <strong>PR1.2 Achada do Teixeira → Pico Ruivo</strong> path: <strong>5.6 km round trip, easy paved trail, €4.50 SIMplifica fee</strong>, same Pico Ruivo summit photo without the exposed-ridge stairs. Afternoon wine same. William ★ dinner same. Skip Vespas → Galáxia Skybar Savoy Palace nightcap instead (closer, lower-intensity, indoor jazz + DJ rooftop, €10 min consumption).</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> PR1 is closed by SIMplifica for moderate-or-worse forecast (exposed ridge in cloud is genuinely dangerous). Reroute to <strong>PR9 Caldeirão Verde</strong> instead — 11.5 km RT, easy-moderate, lower altitude, sheltered Laurissilva levada path, 4 tunnels (headlamps needed), ends at a 100 m waterfall plunging into a circular emerald pool. €4.50 SIMplifica. Afternoon Câmara de Lobos wine unchanged (it's indoor cellars). William ★ unchanged. Vespas unchanged (indoor club).</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Replace the afternoon nap with <strong>tandem paragliding from Arco da Calheta</strong> — <strong>Madeira Paragliding</strong> with <strong>Hartmut Peters</strong> (+351 96 413 3907 WhatsApp), €120–€150/pp, €20–€30 deposit + balance day-of, 15–20 min flight off the cliffs of southwest Madeira. <strong>Weather-dependent — call after 11 AM same day</strong>. Pre-Vespas swap: add <strong>Casino da Madeira</strong> (Pestana Casino Park, designed by Oscar Niemeyer + Viana de Lima, opened 1976) for an hour of roulette before the club — both are inside a 10-min walk of each other.</div>
         </div>
       </div>
 
       <div class="day">
-        <div class="day-number"><div class="num">04</div><div class="date">Sat Aug 15</div></div>
+        <div class="day-number"><div class="num">04</div><div class="date">Sat Aug 15 ⛪</div></div>
         <div class="day-content">
-          <h3>Garajau dive 🐠 · Assumption · fireworks</h3>
+          <h3>Mercado + Curral das Freiras + Assumption procession + Desarma ★ + Casino</h3>
           <ul>
-            <li><strong>Note:</strong> Sleep in until 11 AM. You're recovering from the Perseids and Asunção is a national holiday — most shops closed, restaurants packed. Religious procession at the Sé at 10 AM.</li>
-            <li><strong>11:30 AM</strong> Late breakfast on the hotel terrace</li>
-            <li><strong>1:00 PM</strong> Drive 15 min east to Caniço · <strong><a href="https://mantadiving.com/en/service/" target="_blank" rel="noopener">Manta Diving Madeira</a></strong> at Galo Resort</li>
-            <li><strong>1:30–5:30 PM</strong> <strong>Two-tank Garajau Reserve dive</strong> (~$115 pp incl. kit, boat) · hand-feedable groupers, barracuda, eagle rays</li>
-            <li><strong>6:00 PM</strong> Back at hotel · cliff-pool sunset · Madeira poncha at the bar</li>
-            <li><strong>8:00 PM</strong> <strong><a href="https://desarma.pt/en/" target="_blank" rel="noopener">Desarma ★ (Octávio Freitas)</a></strong> · The Views Baía · tasting + pairings (~$380–$490/cpl)</li>
-            <li><strong>10:00 PM</strong> <strong>Funchal Bay fireworks</strong> for Assumption Day · visible from the restaurant terrace or back at the Reid's pool deck</li>
+            <li><strong>9:00 AM</strong> <strong><a href="https://www.mercadodoslavradores.com/" target="_blank" rel="noopener">Mercado dos Lavradores</a></strong> Saturday morning · fish basement (espada / scabbardfish + tuna), tropical fruit floor (custard apple, monstera deliciosa, pineapples), poncha tasting at the side stalls. Standard hours 07:00–14:00 (Aug 15 holiday — verify reduced hours; the Saturday + holiday stack is the trip's most authentic local moment but expect 50% capacity by 10 AM).</li>
+            <li><strong>11:00 AM</strong> Coffee + Madeira honey cake (<em>bolo de mel</em>) at the Mercado's upstairs café</li>
+            <li><strong>12:00 PM</strong> Drive 30 min to <strong>Curral das Freiras (Nuns' Valley)</strong> via the <strong>Eira do Serrado viewpoint</strong> at 1,095 m for the photo stop (the valley is a cauldron-shaped extinct volcano, 800 m below the rim, with the village at the floor)</li>
+            <li><strong>1:00 PM</strong> Lunch at <strong>Sabores do Curral</strong> · chestnut-specialty restaurant (chestnut soup + chestnut bread + chestnut liqueur for dessert — the village is the chestnut capital of Madeira). Joann-friendly: order the meat plate, vary with bolo do caco bread.</li>
+            <li><strong>3:30 PM</strong> Back to Reid's · pool / spa hour</li>
+            <li><strong>5:00 PM</strong> Walk to <strong>Sé Cathedral</strong> in central Funchal (or quick taxi, 8 min) — <strong>late-afternoon Assumption Mass</strong> typically scheduled (verify exact 2026 schedule with the cathedral; usually 17:00 or 18:00)</li>
+            <li><strong>6:00 PM</strong> <strong>The Assumption procession through Old Town</strong> · statue of the Virgin Mary carried by clergy + dignitaries · candle-lit, floral, streets packed, the most authentic Madeiran summer holiday moment. Non-Catholics welcome to observe — the choral chant inside the cathedral and the candle-lined Rua de Santa Maria afterward are the experiences.</li>
+            <li><strong>7:30 PM</strong> Pre-dinner aperitivo at <strong><a href="https://www.savoysignature.com/savoypalacehotel/en/restaurants-bars/galaxia-skybar/" target="_blank" rel="noopener">Galáxia Skybar Savoy Palace</a></strong> — rooftop futuristic indoor + terrace, live jazz + DJ, €10 min consumption non-guests, panoramic festival-lit Funchal below</li>
+            <li><strong>9:00 PM</strong> Dinner at <strong><a href="https://desarma.pt/en/" target="_blank" rel="noopener">Desarma ★</a></strong> · Chef Octávio Freitas · The Views Baía hotel · <strong>star retained 2026</strong>. <strong>6 Moments €195</strong> (easiest land-only for Joann) / <strong>9 Moments €225</strong> / <strong>12 Moments €275</strong>. Hyper-local product, salazones (cured fish) a specialty so call ahead to lean land. Reservation ≥3 weeks.</li>
+            <li><strong>10:30 PM</strong> Walk down to Funchal harbor · <strong>Assumption Day fireworks</strong> over Funchal Bay ~22:30 (separate from the famous New Year's display). Visible from the Desarma terrace or the harbor waterfront.</li>
+            <li><strong>11:30 PM</strong> <strong><a href="https://www.casinodamadeira.com/" target="_blank" rel="noopener">Casino da Madeira</a></strong> · Pestana Casino Park complex · roulette + tables + 2 restaurants + 3 bars · <strong>Copacabana nightclub</strong> in the basement, themed Wed–Sat + pre-holiday eves 23:00–04:00. Saturday Aug 15 = peak night.</li>
+            <li><strong>2:30 AM</strong> Taxi back to Reid's</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Curral das Freiras — too much driving on a Perseid-recovery + procession-heavy day. Sleep in, brunch at Reid's, spa morning, Mercado at noon (lighter crowd by then), procession 17:00–19:30, Desarma 21:00, fireworks at 22:30 from the harbor, skip the casino. Done by midnight.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Skip Curral das Freiras (rural mountain valley, miserable in rain). Indoor Funchal — <strong>Madeira Story Center</strong> + <strong>CR7 Museum</strong> (Cristiano Ronaldo's hometown museum, kitsch but real, near the Marina) + lunch at <strong>A Confeitaria</strong> for the famous Madeira honey cake. Procession rain-or-shine (procession-goers carry the statue under canopy if needed). Fireworks may be delayed but typically happen — verify same day.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Replace the morning with a <strong>Porto Santo ferry day</strong> · Lobo Marinho daily 08:00 out / return 19:00, RT ~€52, ~2 h 15 min each way · the only proper sandy 9 km beach in the archipelago. <strong>Burns most of the day — you'd miss the procession.</strong> Not recommended for this date; better as a Day 5 swap. Or stack the casino + 2 AM walk down to <strong>Marginal Bar</strong> downtown/harbor club (open Wed–Sun + holiday eves, 24:00–06:00) — true sunrise return.</div>
         </div>
       </div>
 
       <div class="day">
         <div class="day-number"><div class="num">05</div><div class="date">Sun Aug 16</div></div>
         <div class="day-content">
-          <h3>North coast · levada · Il Gallo d'Oro ★★</h3>
+          <h3>Lobosonda whale-watch 🐋 · Cliff Bay couples spa · O Lagar espetada · final crawl</h3>
           <ul>
-            <li><strong>9:30 AM</strong> Drive north (~75 min via VE1 + VR1 tunnels) — or pre-book driver-guide</li>
-            <li><strong>10:30 AM</strong> <strong>Levada do Caldeirão Verde (PR9)</strong> · start at Queimadas Forest Park · 7.1 mi loop · 4 tunnels (headlamps!) · ends at a 330 ft waterfall plunging into a circular emerald pool</li>
-            <li><strong>3:30 PM</strong> Late lunch at Santana or drive to <strong>Porto Moniz</strong></li>
-            <li><strong>4:30 PM</strong> Swim in <strong><a href="https://www.tripadvisor.com/Attraction_Review-g644297-d1928951-Reviews-Porto_Moniz_Natural_Swimming_Pools" target="_blank" rel="noopener">Porto Moniz natural lava pools</a></strong> ($3) — Atlantic refreshes through volcanic rock</li>
-            <li><strong>6:00 PM</strong> Drive home via <strong>Fanal forest</strong> at golden hour — twisted til (Ocotea foetens) trees in mist · UNESCO Laurissilva</li>
-            <li><strong>8:30 PM</strong> <strong><a href="https://guide.michelin.com/en/ilha-da-madeira/funchal/restaurant/il-gallo-d-oro" target="_blank" rel="noopener">Il Gallo d'Oro ★★</a></strong> farewell dinner · Chef Benoît Sinthon · Top Experience tasting with wine pairings (~$700–$820/cpl) · book 6 weeks ahead</li>
+            <li><strong>9:00 AM</strong> Brunch at Reid's terrace</li>
+            <li><strong>10:00 AM</strong> Drive ~55 min west to <strong>Calheta marina</strong></li>
+            <li><strong>11:00 AM–2:00 PM</strong> <strong><a href="https://www.lobosonda.com/en/" target="_blank" rel="noopener">Lobosonda</a></strong> <em>Stenella</em> small-group catamaran whale &amp; dolphin trip · <strong>operating since 2003</strong> · the most-respected operator on the island · ~€55/pp · 3 h. 95% August sighting rate — sperm whales, pilot whales, common + bottlenose dolphins, occasional Bryde's. Free re-sail if no sighting (won't be needed).</li>
+            <li><strong>2:30 PM</strong> Drive 25 min east back to <strong>Câmara de Lobos</strong> · waterfront lunch at <a href="https://www.tripadvisor.com/Restaurant_Review-g1190957-d1529778-Reviews-Restaurant_Vila_do_Peixe" target="_blank" rel="noopener">Vila do Peixe</a> — pick-your-fish grilled on wood embers (or light snacks if you're saving room)</li>
+            <li><strong>4:00 PM</strong> Drive 15 min back to <strong>The Cliff Bay</strong> for the <strong>spa couples treatment</strong> (~2 h, ~€280, book advance) — sea-view spa, ocean-edge cliffside setting</li>
+            <li><strong>7:00 PM</strong> Back to Reid's · change for dinner</li>
+            <li><strong>8:30 PM</strong> Dinner at <strong><a href="https://www.tripadvisor.com/Restaurant_Review-g1190957-d1530028-Reviews-O_Lagar" target="_blank" rel="noopener">O Lagar</a></strong>, Câmara de Lobos (15 min drive from Reid's) — espetada specialist · €13/pp espetada de carne (hanging laurel skewer) + fried corn + chips + salad sides · stone building shaped like an old wine press · loud, authentic, no Michelin pretense · <strong>Friday 9 PM folk-dancing nights</strong> (Sunday unlikely, but the food is the headline). Book 1 week ahead.</li>
+            <li><strong>10:30 PM</strong> Drive back to Funchal Old Town for the trip's last Rua de Santa Maria crawl</li>
+            <li><strong>11:00 PM</strong> Start at <strong>Barreirinha Bar Café</strong> open-air hillside terrace (ocean breeze finish) · walk down Rua de Santa Maria · finish at <strong>23 Vintage Bar</strong> cocktails · last call ~02:00 Sunday</li>
+            <li><strong>1:30 AM</strong> Taxi back to Reid's — last night</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the Calheta drive. Half-day whale-watch from <strong>Funchal Marina with VMT Madeira</strong> instead (2 h, ~€35/pp, same wildlife window for less of the day). Expanded Cliff Bay spa — full 4-h <strong>Hydrotherapy + couples massage + facial</strong> circuit (~€450 for two). Dinner at <a href="https://www.audaxrestaurante.com/" target="_blank" rel="noopener">Audax</a> in Funchal instead of driving to O Lagar — Chef César Vieira's <strong>Aged Beef with Espetada Drippings and Laurel Smoke</strong> is the espetada-in-fine-dining-form home run. €85–€105 dinner. Walk back to Old Town for the crawl, no taxi.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Whale-watch covered on VMT's eco-catamaran (works in rain; Lobosonda's open Stenella is less ideal). Or replace whale-watch entirely with the <strong>Fanal Forest drive</strong> via ER209 from Funchal (~1 h each way) — the UNESCO Laurissilva twisted-laurel forest is at its most photogenic in fog, which the rainy day delivers. Combine with Porto Moniz lava pools (1 h 15 min from Funchal — natural volcanic pools refreshed by the Atlantic surge, €3 entry) and Seixal volcanic black-sand beach. Lunch at Quinta do Furão Santana clifftop. Long but worth it on a marginal-weather day. Back by 18:00 for the spa.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Add a <strong>09:00 Garajau snorkel + lunch trip</strong> ($107, 4 h, from Funchal Marina) before the whale-watch — back-to-back marine days. Or swap O Lagar for <strong>Quinta do Furão</strong> Santana (~1 h drive north, clifftop terrace ocean view, Portuguese mountain cooking, picanha, homemade poncha, big portions — the most spectacular traditional dinner setting on the island, +351 291 570 100). Or add a <strong>big-game fishing half-day</strong> out of Funchal harbor (Aug peak season: blue + white marlin + bigeye tuna, sometimes 1,000+ lb blues, 5 min outside the harbor to 1,000 m depth · <a href="https://www.madeira-biggamefishing.com/" target="_blank" rel="noopener">madeira-biggamefishing.com</a> Flipper II, $1,200–$2,500 full day or ~$700 half day).</div>
         </div>
       </div>
 
       <div class="day">
         <div class="day-number"><div class="num">06</div><div class="date">Mon Aug 17</div></div>
         <div class="day-content">
-          <h3>Departure</h3>
+          <h3>Late breakfast · final spin · Departure</h3>
           <ul>
-            <li><strong>9:00 AM</strong> Slow breakfast on the Reid's terrace</li>
-            <li><strong>10:30 AM</strong> Lido saltwater complex swim or Doca do Cavacas natural pools · last sea immersion</li>
-            <li><strong>1:00 PM</strong> Pick up Madeira embroidery + vintage Bual at Blandy's shop on Av. Arriaga</li>
-            <li><strong>3:00 PM</strong> Taxi to FNC (~$30, 25 min)</li>
-            <li><strong>5:25 PM</strong> TAP TP1686 FNC → LIS (1h 45m)</li>
-            <li><strong>9:00 PM</strong> 2h LIS connection</li>
-            <li><strong>11:05 PM</strong> TAP TP223 LIS → LAX nonstop (12h)</li>
-            <li><strong>3:30 AM same day arrival</strong> Touch down LAX (gain 8 hours)</li>
+            <li><strong>9:30 AM</strong> Late breakfast on the Reid's Tea Terrace</li>
+            <li><strong>11:00 AM</strong> Reid's afternoon-checkout often available at €100 fee · request via concierge night before</li>
+            <li><strong>12:00 PM</strong> Quick spin — <strong>Forte de São Tiago</strong> (the yellow 17th-c fort at the east end of the Old Town, free entry, Old Town panorama from the ramparts) or a final <strong>Mercado dos Lavradores</strong> visit if you skipped Saturday</li>
+            <li><strong>1:30 PM</strong> Pick up <strong>Madeira embroidery</strong> + a <strong>vintage Bual</strong> at Blandy's shop on Av. Arriaga (the souvenir lockdown)</li>
+            <li><strong>3:00 PM</strong> Taxi to FNC (~25 min, ~€30)</li>
+            <li><strong>5:25 PM</strong> TAP TP1686 FNC → LIS (1 h 45 m)</li>
+            <li><strong>9:00 PM</strong> 2 h LIS connection</li>
+            <li><strong>11:05 PM</strong> TAP TP223 LIS → LAX nonstop (12 h)</li>
+            <li><strong>3:30 AM same day</strong> Touch down LAX (gain 8 hours)</li>
           </ul>
         </div>
       </div>
@@ -511,21 +593,21 @@
 
     <div class="section-header" id="hotels">
       <span class="eyebrow">Where to Stay</span>
-      <h2>Six Hotels, One Decision</h2>
-      <p>Madeira's coast is volcanic — no sandy beaches in Funchal. Hotels offer cliff pools, lidos, or sea elevators. <strong>Belmond Reid's is the heritage choice</strong>, Cliff Bay holds the only 2★, Savoy is the modern stunner. All prices USD, peak August.</p>
+      <h2>One Base · Belmond Reid's · Plus Five Backups</h2>
+      <p>Madeira's coast is volcanic — no sandy beaches in Funchal. Hotels offer cliff pools, lidos, or sea elevators. <strong>The recommendation is single-base 5 nights at Belmond Reid's Palace</strong> — historic anchor, William ★ in-house, Atlantic-edge tea terrace, drive 5 min down for Il Gallo d'Oro ★★, walk 15 min to Old Town nightlife. Alternative splits below if you prefer a Cliff Bay food-anchor or Savoy nightlife-base. All prices USD, peak August.</p>
     </div>
     <div class="hotels-grid">
 
       <div class="hotel-card">
         <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(19,62,84,0.3), rgba(193,100,74,0.4)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80');">
-          <span class="hotel-tier">★ Top Pick</span>
+          <span class="hotel-tier">★ Top Pick · 5 nights</span>
         </div>
         <div class="hotel-body">
           <h4>Belmond Reid's Palace</h4>
-          <div class="loc">Estrada Monumental · 1891 cliffside garden · 10-acre estate</div>
-          <p>The legendary 1891 grande dame. <strong>Three pools</strong> (one heated saltwater on the rocks), tennis, private sea access, the famous afternoon tea ritual since 1937. <strong>William 1★</strong> on premises. Half-board packages available. Churchill stayed here.</p>
+          <div class="loc">Estrada Monumental · 1891 cliffside · 10-acre subtropical gardens · ~1.5 km west of Old Town</div>
+          <p>The legendary 1891 grande dame — Atlantic-edge tea terrace since 1937 (Churchill, GBS, Sissi all stayed), <strong>three pools incl. heated saltwater on the rocks</strong>, sea elevator, private cove access. <strong>William ★ on premises</strong> (Tue–Sat). Half-board credit applies at William. <strong>The historic, romantic, dinner-on-site pick.</strong> Quietest of the three Estrada Monumental 5-stars. Walk to Old Town nightlife 15 min or €8 Uber.</p>
           <div class="hotel-meta">
-            <span class="price">$700–$1,200 / night</span>
+            <span class="price">$690–$1,080 / night</span>
             <span>★★★★★</span>
           </div>
           <a href="https://www.belmond.com/hotels/europe/portugal/madeira/belmond-reids-palace/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
@@ -534,14 +616,14 @@
 
       <div class="hotel-card">
         <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(19,62,84,0.3), rgba(125,139,92,0.4)), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80');">
-          <span class="hotel-tier">2★ on site</span>
+          <span class="hotel-tier">★★ on site · alt</span>
         </div>
         <div class="hotel-body">
           <h4>The Cliff Bay (PortoBay)</h4>
-          <div class="loc">Estrada Monumental cliff · sea elevator · 5★</div>
-          <p>Cliff promontory with direct ocean access via the sea elevator. 204 rooms, three pools, spa. <strong>Il Gallo d'Oro ★★</strong> on premises — Madeira's only 2-star, Chef Benoît Sinthon since 2004. <strong>The food-first pick.</strong></p>
+          <div class="loc">Estrada Monumental cliff · 5★ flagship · private sea pontoon (rare in Funchal)</div>
+          <p>Cliff promontory with direct ocean access via the sea pontoon. 204 rooms, <strong>two heated pools</strong>, spa. <strong>Il Gallo d'Oro ★★</strong> on premises — Madeira's only 2-star, Chef Benoît Sinthon since 2004, Green Star 2022. <strong>The food-first pick.</strong> Modern luxury feel vs. Reid's heritage. <strong>Alternative B (3 Reid's + 2 Cliff Bay) double-Michelin on-property.</strong></p>
           <div class="hotel-meta">
-            <span class="price">$410–$625 / night</span>
+            <span class="price">$300–$700 / night</span>
             <span>★★★★★</span>
           </div>
           <a href="https://www.portobay.com/en/hotels/madeira-hotels/the-cliff-bay" target="_blank" rel="noopener" class="book-link">Book direct →</a>
@@ -550,14 +632,14 @@
 
       <div class="hotel-card">
         <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(125,139,92,0.3), rgba(193,100,74,0.4)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80');">
-          <span class="hotel-tier">Modern luxury</span>
+          <span class="hotel-tier">Nightlife base · alt</span>
         </div>
         <div class="hotel-body">
           <h4>Savoy Palace</h4>
-          <div class="loc">Avenida do Infante · central Funchal · opened 2019</div>
-          <p>Newest 5★ in Funchal. Six pools incl. <strong>two rooftop adults-only infinity pools</strong> (Galáxia Skybar) with 360° views. 33,000 sq ft Laurea Spa — one of Europe's largest. Rooftop Galáxia Skyfood + Mediterranean Avista.</p>
+          <div class="loc">Estrada Monumental · opened 2019 · Leading Hotels of the World</div>
+          <p>Newest 5★ in Funchal. <strong>Galáxia Skybar rooftop</strong> futuristic indoor + terrace (live jazz + DJ, €10 min consumption non-guests), <strong>adults-only Skypool infinity</strong>, 33,000 sq ft Laurea Spa. Closest of the cliff hotels to Vespas + nightlife zone. <strong>Alternative C (3 Cliff Bay + 2 Savoy)</strong> — Cliff Bay 3 nights diving + sea pontoon + Il Gallo d'Oro, Savoy 2 nights for the Aug 15 fireworks + Galáxia + Vespas-walkable Friday/Saturday.</p>
           <div class="hotel-meta">
-            <span class="price">$490–$760 / night</span>
+            <span class="price">$400–$800 / night</span>
             <span>★★★★★</span>
           </div>
           <a href="https://www.savoysignature.com/savoypalacehotel/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
@@ -566,14 +648,14 @@
 
       <div class="hotel-card">
         <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(125,139,92,0.3), rgba(19,62,84,0.35)), url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');">
-          <span class="hotel-tier">Garden quinta</span>
+          <span class="hotel-tier">Boutique garden · alt</span>
         </div>
         <div class="hotel-body">
           <h4>Quinta da Casa Branca</h4>
-          <div class="loc">Residential Funchal · 28,000 m² estate · 41 rooms</div>
-          <p>Boutique 5★ on a banana-and-frangipani estate. Manor-house suites available. <strong>Two pools, Frangipani spa, Mediterranean restaurant.</strong> Small Luxury Hotels member. The intimate garden retreat alternative to the Estrada Monumental cliff hotels.</p>
+          <div class="loc">Residential Funchal · 41 rooms + 5 manor suites · 15-min walk to port</div>
+          <p>Small Luxury Hotels of the World · 41 rooms + 5 manor suites · banana-and-frangipani estate. <strong>Two pools, Frangipani spa, Mediterranean restaurant.</strong> Peaceful sub-tropical gardens, 15-min walk to the marina. Intimate but dated by Belmond/Cliff Bay standards. The budget-tier hotel pick — frees up $1,500+ for activities.</p>
           <div class="hotel-meta">
-            <span class="price">$325–$490 / night</span>
+            <span class="price">$350–$650 / night</span>
             <span>★★★★★</span>
           </div>
           <a href="https://www.quintacasabranca.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
@@ -582,33 +664,33 @@
 
       <div class="hotel-card">
         <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(125,139,92,0.4)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80');">
-          <span class="hotel-tier">All-suite</span>
+          <span class="hotel-tier">Relais &amp; Châteaux · hills</span>
         </div>
         <div class="hotel-body">
-          <h4>Les Suites at The Cliff Bay</h4>
-          <div class="loc">Within The Cliff Bay complex · 23 suites only</div>
-          <p>23 suites in a restored century-old villa + new wing. Private infinity pool, sea-view gardens. <strong>Full access to The Cliff Bay's spa + Il Gallo d'Oro</strong> next door. Michelin Guide hotel listing.</p>
+          <h4>Casa Velha do Palheiro</h4>
+          <div class="loc">Hills 6 km NE of Funchal · 38-room country house · R&amp;C · golf-resort grounds</div>
+          <p>The Relais &amp; Châteaux of Madeira. 38-room country house on a 200-acre estate with an 18-hole golf course, <strong>Oxalis</strong> (Michelin-listed, Chef Gonçalo Bita Bota — modern Portuguese game + Madeiran ingredients, <strong>least seafood-pressured Michelin-listed pick</strong>). Trade: 25 min drive to Funchal Old Town nightlife — too far for the Vespas-night base. <strong>Pick if golf + game + R&amp;C-quiet matters more than walking to Casino + Vespas.</strong></p>
           <div class="hotel-meta">
-            <span class="price">$700–$1,025 / night</span>
-            <span>★★★★★</span>
+            <span class="price">$400–$700 / night</span>
+            <span>★★★★★ R&amp;C</span>
           </div>
-          <a href="https://www.portobay.com/en/hotels/madeira-hotels/les-suites-at-the-cliff-bay" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+          <a href="https://www.casa-velha.com/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
         </div>
       </div>
 
       <div class="hotel-card">
         <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(125,139,92,0.3), rgba(19,62,84,0.4)), url('https://images.unsplash.com/photo-1551516114-c39ed83b3946?w=600&q=80');">
-          <span class="hotel-tier">North coast splurge</span>
+          <span class="hotel-tier">North coast · day-add</span>
         </div>
         <div class="hotel-body">
           <h4>Quinta do Furão</h4>
-          <div class="loc">Santana · north-coast cliff edge · 75 min from Funchal</div>
-          <p>Cliffside hotel with an infinity pool over the wild north coast. Vineyards on the property; restaurant has 5★ TripAdvisor stickiness. Pair as a 2-night split-stay if you want to do the levada from the trailhead and skip the Funchal drive.</p>
+          <div class="loc">Santana · north-coast cliff edge · 1 h drive from Funchal</div>
+          <p>Cliffside country hotel with infinity pool over the wild north coast. <strong>Vineyards on the property</strong>, big-portion Portuguese mountain cooking, homemade poncha. 5★ TripAdvisor stickiness. <strong>Too remote for the trip base</strong> — 1 h drive each way to Funchal nightlife and Michelin restaurants. Pair as a Day 5 lunch + drive (instead of overnight) or as a 2-night split-stay swap with one Reid's night if the levada + Santana A-frames is the priority.</p>
           <div class="hotel-meta">
-            <span class="price">$220–$360 / night</span>
+            <span class="price">$200–$400 / night</span>
             <span>★★★★</span>
           </div>
-          <a href="http://quinta-do-furao.santana.hotel-madeira.net/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+          <a href="https://www.quintadofurao.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
         </div>
       </div>
 
@@ -616,31 +698,36 @@
 
     <div class="section-header" id="wine">
       <span class="eyebrow">The Glass</span>
-      <h2>Two Stops, 15 Minutes Apart</h2>
-      <p>The four styles of fortified Madeira in central Funchal, and the harvest vineyards 15 min west in Estreito de Câmara de Lobos. Both are wine pilgrimages with 500-year histories.</p>
+      <h2>Fortified Madeira · Four Styles · 500 Years</h2>
+      <p>Madeira's wine catalog is <strong>fortified-only</strong> — no significant dry table wine. That's the trip's wine flaw and its strength. The four canonical styles — <strong>Sercial (dry), Verdelho (medium-dry), Bual (medium-sweet), Malmsey (sweet)</strong> — plus <strong>Terrantez</strong> (the rare survivor) and the long-aged <strong>Frasqueira</strong> single-vintage cask bottlings (20+ years) are the most age-worthy wines on earth. Two natural zones: <strong>central Funchal</strong> (Blandy's + Pereira d'Oliveira within a 10-min walk) and <strong>Câmara de Lobos / Estreito</strong> (Henriques &amp; Henriques + Barbeito + the terraced latada vineyards). <strong>The Wine Festival is Aug 27 → Sep 13, 2026</strong> — you miss it by 10 days. Mitigation: cellar tastings deliver the wine, the cart-pulling + grape-stomping festivities don't.</p>
     </div>
+
     <div class="wine-block fortified">
       <div class="wine-image"></div>
       <div class="wine-text">
         <span class="eyebrow">Funchal · the four styles</span>
         <h3>500 Years of Fortified Wine</h3>
-        <p>Madeira wine is shipped, baked, and oxidized — and that's <em>by design</em>. The accidental discovery in the 17th century that wine improved after being carried across the tropics created the four canonical styles: <strong>Sercial (dry), Verdelho (medium-dry), Bual (medium-sweet), Malmsey (sweet)</strong>. The best Frasqueira bottlings (single-vintage, 20+ years cask-aged) outlive most other wines on earth.</p>
+        <p>Madeira wine is shipped, baked, and oxidized — <em>by design</em>. The 17th-c accidental discovery that wine improved after being carried across the tropics created the four canonical styles. The best Frasqueira bottlings outlive most other wines on earth — verdelhos to 1850 still drinking at Pereira d'Oliveira. Blandy's is the polished walk-in default; Pereira d'Oliveira is the connoisseur's serious tasting room.</p>
         <div class="winery-list">
           <div class="winery">
             <div class="name"><a href="https://blandyswinelodge.com/en/wine-tasting/" target="_blank" rel="noopener">Blandy's Wine Lodge ↗</a></div>
-            <div class="desc">Av. Arriaga 28 · the historic lodge. Premium Tour $22 (3 wines), Vintage Premium $58 (Frasqueira flight), Private $150 pp. Mon–Sat 10–6:30. +351 291 228 978.</div>
+            <div class="desc">Av. Arriaga 28 central Funchal · Mon–Fri 10–18:30, Sat 10–18, Sun 10–13 / 14–18 · Premium Tour ~€15–€45 (brand-ambassador-led EN/PT/DE/FR/ES) · <strong>Vineyard Heritage Quinta de Santa Luzia €45</strong> (the full estate-and-cellar experience) · +351 291 228 978. The default.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://tastingbook.com/winery/pereira-d-oliveira-vinhos-lda" target="_blank" rel="noopener">Pereira d'Oliveira (D'Oliveiras) ↗</a></div>
+            <div class="desc">Rua dos Ferreiros 107, Funchal · 9–13 / 15–18 · ~€15–€30 · 17th-c building, <strong>1.5 million liters of old-vintage stock, verdelhos back to 1850</strong> · the serious tasting room · the connoisseur's complement to Blandy's polish.</div>
           </div>
           <div class="winery">
             <div class="name"><a href="https://www.henriquesehenriques.pt/en/" target="_blank" rel="noopener">Henriques &amp; Henriques ↗</a></div>
-            <div class="desc">The other historic house — Câmara de Lobos. Founded 1850. By appointment Mon–Fri. +351 291 941 551.</div>
+            <div class="desc">Av. Autonomia, Câmara de Lobos · walk-in friendly · <strong>free 3-year Madeira tasting</strong> · mini-museum format, excellent intro to the four styles · 1850 founding · +351 291 941 551.</div>
           </div>
           <div class="winery">
             <div class="name"><a href="https://www.barbeito.pt/en/" target="_blank" rel="noopener">Barbeito ↗</a></div>
-            <div class="desc">Modern producer respected for single-cask bottlings. Estreito de Câmara de Lobos. Tour + tasting Mon–Fri by appointment.</div>
+            <div class="desc">Câmara de Lobos · <strong>by appointment only — book ≥1 week ahead</strong> · single-cask Platinum tour · Jancis Robinson: <em>"the Lafite of Madeira."</em> Premium pour, the connoisseur's must.</div>
           </div>
           <div class="winery">
             <div class="name"><a href="https://www.justinosmadeira.com/en/" target="_blank" rel="noopener">Justino's Madeira ↗</a></div>
-            <div class="desc">The largest Madeira producer, Cancela. Modern facility tour, all four styles, value-priced bottlings. Mon–Fri tours.</div>
+            <div class="desc">Cancela industrial zone · <strong>the largest Madeira producer</strong> · cellar tour ~€20 · modern facility, value-priced bottlings · Mon–Fri. The volume producer's view.</div>
           </div>
         </div>
       </div>
@@ -651,23 +738,23 @@
       <div class="wine-text" style="order: 1;">
         <span class="eyebrow">Estreito de Câmara de Lobos · the vineyards</span>
         <h3>Where the Grapes Grow</h3>
-        <p>The terraced volcanic slopes above Câmara de Lobos are the heart of Madeira viticulture — vines trained on <em>latadas</em> (low wooden trellises) for 500 years. The Aug 27 Wine Festival is built around the grape harvest here, with traditional cart-pulling festivals through the villages. The week before, growers welcome visits and pre-festival tastings.</p>
+        <p>The terraced volcanic slopes above Câmara de Lobos are the heart of Madeira viticulture — vines trained on <em>latadas</em> (low wooden trellises) for 500 years. The Aug 27 Wine Festival is built around the grape harvest here, with traditional cart-pulling festivals through the villages. The week before your trip the growers welcome visits and pre-festival tastings — by Aug 11–17 the harvest is still 2 weeks away, but the cellars + latada walks are at their visual best with the fruit hanging.</p>
         <div class="winery-list">
           <div class="winery">
-            <div class="name"><a href="https://www.tukatuka.pt/en/" target="_blank" rel="noopener">Tuka Tuka Quinta ↗</a></div>
-            <div class="desc">Small-batch terrace vineyard above Estreito. Walking tour of the latadas + tasting €40 pp. By appointment.</div>
+            <div class="name"><a href="https://www.thegrapepursuit.com/" target="_blank" rel="noopener">Tuka Tuka Quinta ↗</a></div>
+            <div class="desc">Small-batch terrace vineyard above Estreito · walking tour of the latadas + tasting €40/pp · by appointment · the boutique latada walk.</div>
           </div>
           <div class="winery">
             <div class="name"><a href="https://www.adegadesaovicente.com/" target="_blank" rel="noopener">Adega de São Vicente ↗</a></div>
-            <div class="desc">North-coast small producer making table wine from local grapes. Pair with the Caldeirão Verde drive day.</div>
+            <div class="desc">North-coast small producer making table wine from local grapes · pair with the Day 5 rainy-day swap Fanal + Porto Moniz drive · one of the few dry-table Madeira projects.</div>
           </div>
           <div class="winery">
             <div class="name">Quinta do Furão wine room</div>
-            <div class="desc">North-coast hotel with on-site vineyard tasting room. Pair with the levada hike day if doing the split-stay.</div>
+            <div class="desc">North-coast hotel with on-site vineyard tasting room · pair with the Day 5 doubling-down Santana dinner swap.</div>
           </div>
           <div class="winery">
             <div class="name"><a href="https://www.visitmadeira.com/en/whats-on/events/wine-festival/" target="_blank" rel="noopener">Festa do Vinho info ↗</a></div>
-            <div class="desc">The Aug 27 – Sep 13 festival opens 10 days after your trip. Cart-pulling and grape-stomping in Estreito.</div>
+            <div class="desc">The Aug 27 → Sep 13 festival opens 10 days after your trip · cart-pulling, grape-stomping, Live Harvest Estreito Sep 5, Funchal Wine Lounge Praça do Povo Aug 31–Sep 13, Concerts in the Vineyards Sep 5/6/12/13. <strong>The trip's biggest single calendar miss</strong> — mitigated by year-round cellar tastings.</div>
           </div>
         </div>
       </div>
@@ -675,131 +762,275 @@
 
     <div class="section-header" id="food">
       <span class="eyebrow">The Table</span>
-      <h2>Where You'll Eat</h2>
-      <p>Madeira's Michelin scene is small but real. Il Gallo d'Oro (2★), William (1★), Desarma (1★) hold the three stars. Local tasca culture is heavy and good — espetada, bolo do caco, lapas grelhadas. <strong>Reserve Il Gallo d'Oro 6 weeks ahead.</strong></p>
+      <h2>2 ★ + 2 ★ + Audax + Oxalis + the Espetada Specialists</h2>
+      <p>The 2026 Michelin Guide gala was hosted on Madeira (Mar 10 2026, the first time) — the island has <strong>1 × ★★ (Il Gallo d'Oro), 2 × ★ (William, Desarma)</strong>, plus Michelin-listed elite (Audax, Akua, Oxalis at Casa Velha, Avista). The traditional <strong>espetada em pau de loureiro</strong> (beef skewered on bay-laurel, garlic + sea salt, grilled over wood) is the Madeiran signature meat — O Lagar, Santo António, Arsénio's, Quinta do Furão are the canonical specialists, and Audax does the fine-dining version. <strong>Joann seafood notes</strong>: Akua is seafood-forward (skip); Il Gallo d'Oro Terroir leans land-heavier with call-ahead customization; William is the strongest land-menu star (Mirandesa beef, Bisaro pork, lamb); Oxalis is the least seafood-pressured listed restaurant.</p>
     </div>
-    <div class="hotels-grid">
 
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.4), rgba(19,62,84,0.5)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
-          <span class="hotel-tier">★★ Michelin</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Il Gallo d'Oro</h4>
-          <div class="loc">The Cliff Bay · Chef Benoît Sinthon · Madeira's only 2★</div>
-          <p>2★ since 2017. Green Star 2022. Two tasting menus: <strong>Terroir Experience</strong> (island-product focused) and <strong>Top Experience</strong> (9 or 12 courses). <strong>$190–$245 pp food</strong>; with pairings $300–$410 pp ($605–$820 / cpl). Closed Sun/Mon. <strong>Book 6 weeks ahead.</strong></p>
-          <div class="hotel-meta">
-            <span class="price">$190–$245 / person</span>
-            <span>★★ Michelin</span>
-          </div>
-          <a href="https://guide.michelin.com/en/ilha-da-madeira/funchal/restaurant/il-gallo-d-oro" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
+    <div class="food-list">
+      <div class="food-row">
+        <div class="place">Il Gallo d'Oro <span class="stars">★★ + Green ★</span><span class="meta">The Cliff Bay · Chef Benoît Sinthon (José Diogo Costa exec) · Madeira's only ★★ · closed Sun/Mon</span></div>
+        <div class="desc"><strong>★★ since 2017. Green Star 2022.</strong> Three tasting menus: <strong>Terroir Experience ~€245</strong> (the land-leaning one — Iberian pork, lamb, beef), <strong>Top Experience 9- or 12-course €295</strong>, <strong>11 Moments €295</strong>. With wine pairing ~€150/pp extra. <strong>Joann strategy: call ahead and lean further on land via Terroir or 11 Moments.</strong> Book 4–6 weeks ahead for August. <a href="https://www.portobay.com/en/hotels/madeira-hotels/the-cliff-bay/restaurants/il-gallo-d-oro/" target="_blank" rel="noopener">portobay.com</a> / <a href="https://guide.michelin.com/en/ilha-da-madeira/funchal/restaurant/il-gallo-d-oro" target="_blank" rel="noopener">Michelin Guide</a></div>
+        <div class="drive">Cliff Bay</div>
       </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(125,139,92,0.45)), url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80');">
-          <span class="hotel-tier">★ Michelin</span>
-        </div>
-        <div class="hotel-body">
-          <h4>William</h4>
-          <div class="loc">Belmond Reid's Palace · Chef Luís Pestana</div>
-          <p>The first Madeira-born Michelin chef. Atlantic-island haute cuisine — mirlitons (chayote), island organic meat, passion fruit. <strong>Tasting menu ~$180–$210 pp</strong>, pairings +$95–$130. Smart-elegant dress code. Reid's HB credit applies here.</p>
-          <div class="hotel-meta">
-            <span class="price">$180–$210 / person</span>
-            <span>★ Michelin</span>
-          </div>
-          <a href="https://www.belmond.com/hotels/europe/portugal/madeira/belmond-reids-palace/william-restaurant" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
+      <div class="food-row">
+        <div class="place">William <span class="stars">★</span><span class="meta">Belmond Reid's Palace · Chef José Diogo Costa · Tue–Sat 7–11 PM (last order 9:30)</span></div>
+        <div class="desc">In-house at Reid's · <strong>William menu €190</strong> or <strong>Discovery €160</strong>. <strong>Strongest land-menu star on the island</strong> — Mirandesa beef (Portuguese heritage breed), Bisaro pork (heritage breed), lamb, Atlantic-island haute cuisine with mirlitons (chayote), island organic meat, passion fruit. Smart-elegant dress. Reid's HB credit applies. Book 3–4 weeks ahead. <a href="https://www.belmond.com/hotels/europe/portugal/madeira/belmond-reids-palace/restaurants-and-bars/william" target="_blank" rel="noopener">belmond.com</a></div>
+        <div class="drive">on property</div>
       </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(19,62,84,0.45)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80');">
-          <span class="hotel-tier">★ Michelin (2024)</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Desarma</h4>
-          <div class="loc">The Views Baía hotel · Chef Octávio Freitas</div>
-          <p>The first locally-owned Michelin restaurant in Madeira — star awarded Feb 2024. Hyper-local product, salazones (cured fish) a specialty. <strong>Tasting ~$130–$175 pp</strong>, with pairings ~$220–$265. <strong>Book 2–3 weeks ahead.</strong></p>
-          <div class="hotel-meta">
-            <span class="price">$130–$175 / person</span>
-            <span>★ Michelin</span>
-          </div>
-          <a href="https://desarma.pt/en/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
+      <div class="food-row">
+        <div class="place">Desarma <span class="stars">★ (retained 2026)</span><span class="meta">The Views Baía hotel · Chef Octávio Freitas · closed Sun/Mon</span></div>
+        <div class="desc">Madeira's first locally-owned Michelin restaurant (star awarded 2024, <strong>retained 2026</strong>). Hyper-local product. <strong>6 Moments €195</strong> (easiest land-only for Joann) / <strong>9 Moments €225</strong> / <strong>12 Moments €275</strong>. Salazones (cured fish) a specialty — call ahead to lean land. Book ≥3 weeks. <a href="https://guide.michelin.com/en/ilha-da-madeira/funchal/restaurant/desarma" target="_blank" rel="noopener">Michelin Guide</a> / <a href="https://desarma.pt/en/" target="_blank" rel="noopener">desarma.pt</a></div>
+        <div class="drive">Funchal</div>
       </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(74,144,164,0.4)), url('https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80');">
-          <span class="hotel-tier">Farm-to-table tasca</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Kampo by Júlio Pereira</h4>
-          <div class="loc">Funchal old town · Rua do Sabão 6 · open kitchen</div>
-          <p>Farm-to-table tasca with open kitchen. Sustainable Madeiran cooking. Signature: <strong>oxtail ravioli</strong>, T-bone, tuna tartare. Chef's table at the counter is the seat. $60–$90/cpl with wine. Book 1–2 weeks ahead.</p>
-          <div class="hotel-meta">
-            <span class="price">$30–$45 / person</span>
-            <span>★★★★</span>
-          </div>
-          <a href="https://www.tripadvisor.com/Restaurant_Review-g189167-d15634964-Reviews-KAMPO_by_Chef_Julio_Pereira-Funchal_Madeira_Madeira_Islands.html" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
+      <div class="food-row">
+        <div class="place">Audax <span class="stars">Michelin-listed</span><span class="meta">Funchal · Chef César Vieira · progressive Madeiran cuisine</span></div>
+        <div class="desc">€85–€105 dinner. Signature: <strong>Aged Beef with Espetada Drippings and Laurel Smoke</strong> — the explicit espetada-in-fine-dining-form home run for an espetada-loving couple. Joann-friendly meat-forward menu. <a href="https://www.audaxrestaurante.com/" target="_blank" rel="noopener">audaxrestaurante.com</a></div>
+        <div class="drive">Funchal</div>
       </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(90,103,64,0.45)), url('https://images.unsplash.com/photo-1481833761820-0509d3217039?w=600&q=80');">
-          <span class="hotel-tier">Harbor fish</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Vila do Peixe</h4>
-          <div class="loc">Câmara de Lobos harbor · pick-your-fish grill</div>
-          <p>Pick your fish from the ice display, grilled simply on wood embers with rock salt and olive oil. Harbor view onto Churchill's fishing village. <strong>$45–$65/cpl</strong> with wine. Walk-in OK at off-peak; reserve at lunch.</p>
-          <div class="hotel-meta">
-            <span class="price">$22–$32 / person</span>
-            <span>★★★★</span>
-          </div>
-          <a href="https://www.tripadvisor.com/Restaurant_Review-g1190957-d1529778-Reviews-Restaurant_Vila_do_Peixe-Camara_De_Lobos_Madeira_Madeira_Islands.html" target="_blank" rel="noopener" class="book-link">Find →</a>
-        </div>
+      <div class="food-row">
+        <div class="place">Oxalis <span class="stars">Michelin-listed</span><span class="meta">Casa Velha do Palheiro · Chef Gonçalo Bita Bota · hilltop R&amp;C</span></div>
+        <div class="desc">Modern Portuguese game + Madeiran ingredients. <strong>The least seafood-pressured Michelin-listed restaurant on Madeira</strong> — game + country cooking. Pair with the R&amp;C hotel + golf alternative. <a href="https://www.casa-velha.com/en/oxalis/" target="_blank" rel="noopener">casa-velha.com/oxalis</a></div>
+        <div class="drive">15 min NE Funchal</div>
       </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(138,143,90,0.3), rgba(193,100,74,0.45)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
-          <span class="hotel-tier">Rooftop sunset</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Galáxia Skyfood</h4>
-          <div class="loc">Savoy Palace rooftop · 360° Pan-Asian + sushi</div>
-          <p>Pan-Asian + sushi + cocktails with sunset views over Funchal Bay from the 17th floor. Adults-only rooftop pool deck doubles as a bar. <strong>$85–$130/cpl.</strong> Book 1–2 weeks ahead. Best for the cocktail-hour view; food is solid not extraordinary.</p>
-          <div class="hotel-meta">
-            <span class="price">$40–$65 / person</span>
-            <span>★★★★</span>
-          </div>
-          <a href="https://www.savoysignature.com/savoypalacehotel/en/restaurants-bars/galaxia-skyfood/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
+      <div class="food-row">
+        <div class="place">Akua <span class="stars">Michelin-listed · ⚠️ seafood</span><span class="meta">Funchal · Chef Júlio Pereira · Rua dos Murças 6</span></div>
+        <div class="desc">Seafood-forward (fish sausage, cod tacos, braised tuna with razor-clam rice) — <strong>Joann flag, skip on this trip</strong>. Listed here for completeness; replace with Audax or Oxalis on the Michelin list. <a href="https://akuafunchal.pt/" target="_blank" rel="noopener">akuafunchal.pt</a></div>
+        <div class="drive">Funchal</div>
       </div>
-
+      <div class="food-row">
+        <div class="place">O Lagar <span class="stars">espetada specialist</span><span class="meta">Câmara de Lobos · stone wine-press building · Friday 9 PM folk-dancing</span></div>
+        <div class="desc">The trip's authentic espetada night. €13/pp <strong>espetada de carne</strong> (hanging laurel skewer) + fried corn + chips + salad sides. Stone building shaped like an old wine press. Loud, communal, no Michelin pretense. <strong>Friday 9 PM folk-dancing</strong>. Book 1 week ahead for weekends.</div>
+        <div class="drive">15 min Câmara</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Restaurante Santo António <span class="stars">classic espetada</span><span class="meta">Funchal · bay-laurel skewer + bolo do caco · cash + card</span></div>
+        <div class="desc">Funchal's classic espetada house — also bolo do caco (the flat sweet-potato bread with garlic butter, order it at every meal). Lower-key alternative to O Lagar; walkable from Reid's, no Câmara drive.</div>
+        <div class="drive">Funchal</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Quinta do Furão <span class="stars">Santana clifftop</span><span class="meta">north coast · 1 h drive · clifftop ocean view · Portuguese mountain cooking</span></div>
+        <div class="desc">The Day 5 doubling-down swap. Big portions, homemade poncha, vineyards on the property, picanha (Brazilian-style sirloin cap) + carne de vinho e alhos (pork in wine-garlic marinade). +351 291 570 100. <strong>The most spectacular traditional dinner setting on the island</strong>; trade is the 1 h drive each way.</div>
+        <div class="drive">1 h N</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Arsénio's Casa de Fados <span class="stars">live fado Tue–Sat</span><span class="meta">Rua de Santa Maria 169 · since 1981 · Old Town</span></div>
+        <div class="desc">The canonical fado-with-dinner Madeiran night. Espetada + fish skewers + grilled meats + bolo do caco + poncha. <strong>Live fado Tue–Sat evenings.</strong> Day 1 dinner pick — kicks the trip off with the most Madeiran-of-Madeiran moments.</div>
+        <div class="drive">Old Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Tasca Literária Dona Joana <span class="stars">Old Town casual</span><span class="meta">Funchal Old Town · candlelit · books · cash + card</span></div>
+        <div class="desc">Casual Madeiran tasca tucked in the Old Town with bookshelf decor. Bolo do caco, picadinho, octopus + poncha. The "let's go simple tonight" walk-in option on any night you don't want the big restaurant book-ahead.</div>
+        <div class="drive">Old Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Vila do Peixe <span class="stars">harbor fish</span><span class="meta">Câmara de Lobos harbor · pick-your-fish grill</span></div>
+        <div class="desc">Pick your fish from the ice display, grilled simply on wood embers with rock salt and olive oil. Harbor view onto Churchill's fishing village. The Day 5 light lunch between whale-watch and spa. €45–€65/cpl with wine.</div>
+        <div class="drive">15 min Câmara</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Kampo by Júlio Pereira <span class="stars">farm-to-table tasca</span><span class="meta">Funchal Old Town · Rua do Sabão 6 · open kitchen</span></div>
+        <div class="desc">Farm-to-table tasca with open kitchen, sustainable Madeiran cooking. Signature: <strong>oxtail ravioli</strong>, T-bone, tuna tartare. Chef's table at the counter. The Day 2 rainy-day-swap lunch pick. €60–€90/cpl with wine.</div>
+        <div class="drive">Old Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Sabores do Curral <span class="stars">chestnut-specialty</span><span class="meta">Curral das Freiras · Nuns' Valley</span></div>
+        <div class="desc">Chestnut soup + chestnut bread + chestnut liqueur. The village is the chestnut capital of Madeira. Joann-friendly: meat plate + bolo do caco. The Day 4 Curral lunch.</div>
+        <div class="drive">30 min N</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Galáxia Skyfood <span class="stars">rooftop sunset</span><span class="meta">Savoy Palace rooftop · Pan-Asian + sushi · 17th floor</span></div>
+        <div class="desc">Pan-Asian + sushi + cocktails with sunset views over Funchal Bay. Adults-only rooftop pool deck doubles as a bar. €85–€130/cpl. <strong>Best for the cocktail-hour view + Aug 15 fireworks night aperitivo</strong>; food is solid not extraordinary. The natural Galáxia Skybar dinner pairing on Saturday.</div>
+        <div class="drive">Funchal</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Villa Cipriani <span class="stars">Belmond rooftop</span><span class="meta">Belmond Reid's Palace · cliffside Italian · 18:30–midnight (last order 22:30)</span></div>
+        <div class="desc">Reid's Italian dinner-bar hybrid · cliffside ocean-edge terrace. <strong>Best late-kitchen on the property</strong> — the Day 1 rainy-day-swap dinner or any night you want to stay in-hotel without the William ★ ceremony. Last order 22:30.</div>
+        <div class="drive">on property</div>
+      </div>
     </div>
 
     <div class="section-header" id="activities">
-      <span class="eyebrow">Unique Experiences</span>
-      <h2>Things You Won't Do Anywhere Else</h2>
-      <p>Sunrise above the cloud sea. Hand-feeding groupers. Dropping into a 100-foot waterfall pool. Here are the 16 that turn a good week into the one you'll talk about.</p>
+      <span class="eyebrow">Beyond the Table</span>
+      <h2>The Over-Packed Activity Catalog</h2>
+      <p>The trip's real differentiator — <strong>diving + 95% whale + Atlantic-edge hiking + canyoning + paragliding + sailing + big-game fishing + Porto Santo ferry + cable car + toboggan + Cabo Girão within 1.5 h of one base</strong>. Pick aggressively; you literally cannot do everything below. <strong>Top picks for this couple:</strong> Pico do Arieiro sunrise + PR1 ridge, Garajau dive, Lobosonda whale-watch, Câmara de Lobos wine + Cabo Girão, cable car + toboggan, Mercado + Curral das Freiras. The catalog:</p>
     </div>
+
     <div class="activities">
-      <div class="activity"><span class="icon">☁️</span><h4>Pico do Arieiro sunrise</h4><p>Drive-up summit 5,965 ft. Stand above the cloud sea. Free, driver ~$195/half-day.</p></div>
-      <div class="activity"><span class="icon">🥾</span><h4><a href="https://www.tripadvisor.com/Attraction_Review-g1056572-d10024571-Reviews-PR1_Pico_do_Arieiro_to_Pico_Ruivo" target="_blank" rel="noopener">PR1 Arieiro → Ruivo ↗</a></h4><p>5.8 mi signature ridge hike. One-way; arrange pickup. $3 tax. 3–5h hard.</p></div>
-      <div class="activity"><span class="icon">🐬</span><h4><a href="https://bonitadamadeira.com/tours/whales-dolphins/" target="_blank" rel="noopener">Bonita schooner ↗</a></h4><p>Traditional sailing schooner whale tour from Funchal Marina. $43–$50 pp / 3h.</p></div>
-      <div class="activity"><span class="icon">🐠</span><h4><a href="https://mantadiving.com/en/service/" target="_blank" rel="noopener">Scuba Garajau ↗</a></h4><p>Manta Diving · friendly resident groupers in the marine reserve. $105–$125 / 2 tanks.</p></div>
-      <div class="activity"><span class="icon">⛵</span><h4><a href="https://www.getyourguide.com/madeira-l67/catamaran-trip-to-desertas-islands-from-funchal-t57246/" target="_blank" rel="noopener">Desertas Islands ↗</a></h4><p>Full-day catamaran to uninhabited UNESCO reserve. Lunch + snorkel. $90–$110 / 9h.</p></div>
-      <div class="activity"><span class="icon">🧗</span><h4><a href="https://epicmadeira.com/" target="_blank" rel="noopener">Canyoning ↗</a></h4><p>Madeira's top-5 in the world for it. Curral das Freiras or Ribeiro Frio routes. $70–$105.</p></div>
-      <div class="activity"><span class="icon">🌊</span><h4><a href="https://www.madeira-adventure-kingdom.com/" target="_blank" rel="noopener">Coasteering ↗</a></h4><p>Baía d'Abra or Ponta do Pargo. 3–4h with wetsuit/helmet. $55–$70 pp.</p></div>
-      <div class="activity"><span class="icon">🏊</span><h4><a href="https://www.tripadvisor.com/Attraction_Review-g644297-d1928951-Reviews-Porto_Moniz_Natural_Swimming_Pools" target="_blank" rel="noopener">Porto Moniz lava pools ↗</a></h4><p>Natural volcanic pools refreshed by Atlantic surge. North coast. $3 entry.</p></div>
-      <div class="activity"><span class="icon">🌳</span><h4>Levada do Caldeirão Verde</h4><p>7.1 mi PR9 · 4 tunnels (headlamps!) · 330 ft waterfall to emerald pool. $3 tax.</p></div>
-      <div class="activity"><span class="icon">🌫️</span><h4>Fanal forest</h4><p>UNESCO Laurissilva · twisted til trees in mist. Best at golden hour. $3 tax.</p></div>
-      <div class="activity"><span class="icon">🗻</span><h4>Cabo Girão Skywalk</h4><p>1,902 ft sea cliff with glass floor — one of Europe's highest. Free.</p></div>
-      <div class="activity"><span class="icon">🎨</span><h4>Câmara de Lobos</h4><p>Churchill painted here in 1950 (plaque). Working fishing harbor. Lunch + poncha.</p></div>
-      <div class="activity"><span class="icon">🚡</span><h4><a href="https://madeiracablecar.com/en/" target="_blank" rel="noopener">Monte Cable Car ↗</a></h4><p>Funchal → Monte tropical garden, 20-min ride. $14 one-way / $20 RT.</p></div>
-      <div class="activity"><span class="icon">🪵</span><h4>Carros de Cesto</h4><p>Wicker toboggan ride down from Monte. Two carreiros push you ~1.2 mi. $32/cpl.</p></div>
-      <div class="activity"><span class="icon">🍷</span><h4><a href="https://blandyswinelodge.com/en/wine-tasting/" target="_blank" rel="noopener">Blandy's Premium ↗</a></h4><p>400 years of Madeira fortified wine. Premium $22, Vintage $58, Private $150 pp.</p></div>
-      <div class="activity"><span class="icon">🍹</span><h4>Poncha at a tasca</h4><p>Sugarcane spirit + honey + lemon (or passion fruit), muddled with a caralhinho. $4.</p></div>
+      <div class="activity"><span class="icon">☁️</span><h4>Pico do Arieiro sunrise</h4><p>Drive-up summit 1,818 m. Above the cloud sea. Free; pre-arranged taxi €70–€100 each way. Parking fills by 05:00 in summer.</p></div>
+      <div class="activity"><span class="icon">🥾</span><h4><a href="https://simplifica.madeira.gov.pt/" target="_blank" rel="noopener">PR1 Arieiro → Ruivo ↗</a></h4><p>7 km <strong>one-way only post-2026</strong>. SIMplifica €10.50/pp ≥24 h ahead. Hard. Stairway to Heaven tunnels exposed ridges.</p></div>
+      <div class="activity"><span class="icon">🏔️</span><h4>PR1.2 Achada Teixeira → Ruivo</h4><p><strong>5.6 km RT easy paved</strong>. SIMplifica €4.50. The soft alternative to PR1 — same summit, no exposure.</p></div>
+      <div class="activity"><span class="icon">🐬</span><h4><a href="https://www.lobosonda.com/en/" target="_blank" rel="noopener">Lobosonda whale ↗</a></h4><p>Calheta · since 2003 · <em>Stenella</em> small-group catamaran · 95% August sighting · €55/pp / 3 h.</p></div>
+      <div class="activity"><span class="icon">⛵</span><h4><a href="https://www.madeira-boat-trips.info/bonita-da-madeira/" target="_blank" rel="noopener">Bonita da Madeira ↗</a></h4><p>23 m tall ship · Funchal Marina · dolphin + Cabo Girão approach + swim stop · up to 50 pax · €45/pp / 2.5 h.</p></div>
+      <div class="activity"><span class="icon">🐠</span><h4><a href="https://mantadiving.com/en/service/" target="_blank" rel="noopener">Scuba Garajau ↗</a></h4><p>Manta Diving Caniço · ISO 24803 cert · 8–10 min boat to Cap Garajau · 2-tank €95/pp · hand-feedable groupers.</p></div>
+      <div class="activity"><span class="icon">🛶</span><h4><a href="https://www.madeiraseaemotions.com/" target="_blank" rel="noopener">Kayak São Lourenço sea caves ↗</a></h4><p>Pigeon Cave + Cais do Sardinha · Madeira Sea Emotions 2 h €42.50 · pickup Funchal +€10.</p></div>
+      <div class="activity"><span class="icon">🎣</span><h4><a href="https://www.madeira-biggamefishing.com/" target="_blank" rel="noopener">Big-game fishing ↗</a></h4><p>Aug peak: blue + white marlin + bigeye tuna · 1,000+ m depth 5 min outside Funchal · $1,200–$2,500 full day.</p></div>
+      <div class="activity"><span class="icon">🪂</span><h4><a href="https://www.madeira-paragliding.com/" target="_blank" rel="noopener">Tandem paragliding ↗</a></h4><p>Arco da Calheta · Hartmut Peters +351 96 413 3907 WhatsApp · €120–€150/pp · 15–20 min · call after 11 AM same day.</p></div>
+      <div class="activity"><span class="icon">🧗</span><h4><a href="https://www.lokolokomadeira.com/" target="_blank" rel="noopener">Canyoning Lokoloko ↗</a></h4><p>V1/V2 beginner €65–€90/pp private · wetsuit + helmet + IRATA guide + photos + hotel transfer · swim 25 m, jump 3–4 m.</p></div>
+      <div class="activity"><span class="icon">🌊</span><h4><a href="https://www.madeira-adventure-kingdom.com/" target="_blank" rel="noopener">Coasteering São Lourenço ↗</a></h4><p>NE coast · 1–10 m optional jumps · Viator / GetYourGuide · €60–€80/pp / 3–4 h.</p></div>
+      <div class="activity"><span class="icon">🚙</span><h4>4x4 jeep safari west</h4><p>Fanal → Porto Moniz → Seixal → Cabo Girão · open-top Land Rover Defender · Just Go Tours · €70–€100/pp full day.</p></div>
+      <div class="activity"><span class="icon">🏊</span><h4><a href="https://www.tripadvisor.com/Attraction_Review-g644297-d1928951-Reviews-Porto_Moniz_Natural_Swimming_Pools" target="_blank" rel="noopener">Porto Moniz lava pools ↗</a></h4><p>Natural volcanic pools refreshed by Atlantic surge. North coast 1 h 15 min from Funchal. €3 entry.</p></div>
+      <div class="activity"><span class="icon">🌳</span><h4>PR9 Caldeirão Verde</h4><p>11.5–13.7 km RT · easy-moderate · mostly flat levada + 100 m waterfall + 4 tunnels (headlamps) · SIMplifica €4.50.</p></div>
+      <div class="activity"><span class="icon">🌫️</span><h4>Fanal forest (PR13)</h4><p>UNESCO Laurissilva · twisted laurels in fog · best ~10 AM · 1 h Funchal via ER209 · SIMplifica €4.50.</p></div>
+      <div class="activity"><span class="icon">💧</span><h4>PR6 Levada 25 Fontes</h4><p>Rabaçal · 8.6–11 km RT moderate · 25 springs + Risco waterfall option · SIMplifica €4.50.</p></div>
+      <div class="activity"><span class="icon">🌵</span><h4>PR8 São Lourenço</h4><p>7.5 km RT · 533 m · moderate · dry moonscape east end · SIMplifica €4.50.</p></div>
+      <div class="activity"><span class="icon">🗻</span><h4>Cabo Girão Skywalk</h4><p>580 m / 1,900 ft sea cliff with glass floor — one of Europe's highest. Summer 8–21 · €2 entry · beat tour buses 09–10.</p></div>
+      <div class="activity"><span class="icon">🎨</span><h4>Câmara de Lobos</h4><p>Churchill painted here Jan 1950 (plaque + Espírito Santo viewpoint). Working fishing harbor. Lunch + poncha.</p></div>
+      <div class="activity"><span class="icon">🚡</span><h4><a href="https://madeiracablecar.com/en/" target="_blank" rel="noopener">Funchal Cable Car ↗</a></h4><p>Funchal → Monte tropical garden · 15-min glass cabin · €18 RT.</p></div>
+      <div class="activity"><span class="icon">🪵</span><h4><a href="https://www.tourismattractions.net/madeira/carros-de-cesto.html" target="_blank" rel="noopener">Carros de cesto toboggan ↗</a></h4><p>2 km Monte → Livramento · 2 carreiros in straw hats braking with boot soles · €27.50 solo / €35 pair / €52.50 trio · cash only.</p></div>
+      <div class="activity"><span class="icon">🏛️</span><h4>Monte Palace Tropical Gardens</h4><p>Asian + indigenous gardens, koi ponds, tile museum · pair with cable car · 9:30–18:00 daily · €15.</p></div>
+      <div class="activity"><span class="icon">⛵</span><h4>Porto Santo ferry</h4><p>Lobo Marinho daily 08:00 / 19:00 return · ~2 h 15 min each way · RT €52 / overnight €42 · the only 9 km sandy beach.</p></div>
+      <div class="activity"><span class="icon">🍷</span><h4><a href="https://blandyswinelodge.com/en/wine-tasting/" target="_blank" rel="noopener">Blandy's Premium ↗</a></h4><p>500 years of fortified Madeira. Premium ~€15–€45; Vineyard Heritage Quinta de Santa Luzia €45.</p></div>
+      <div class="activity"><span class="icon">🍹</span><h4>Poncha at a tasca</h4><p>Sugarcane spirit + lemon + honey (or passion fruit), muddled with a caralhinho. €4 at any Rua Santa Maria tasca.</p></div>
+    </div>
+
+    <div class="section-header" id="nightlife">
+      <span class="eyebrow">After Dark</span>
+      <h2>Honest: Real, Small, Concentrated</h2>
+      <p>Madeira's nightlife isn't San Sebastián's Aste Nagusia and it isn't Mallorca's Pacha clones — but it's real, walkable, and concentrated in two zones: <strong>Old Town Rua de Santa Maria</strong> (the painted-door bar street, 50+ venues, late tascas till 2–3 AM weekends) and <strong>Estrada Monumental / Lido</strong> (the modern hotel zone, where Vespas Discoteca runs 3 rooms / 7 bars Friday + Saturday till ~6 AM, plus rooftop sunset bars). Aug 14 Fri + Aug 15 Sat = the strong nights; Tue Aug 11 / Wed Aug 12 / Thu Aug 13 are quieter. Aug 15 Casino + Copacabana club night is the doubling-down. <strong>Hours summer 2026; verify on arrival.</strong></p>
+    </div>
+
+    <div class="nightlife">
+      <div class="nightlife-col">
+        <h3>Old Town · Rua de Santa Maria + the cathedral side</h3>
+        <div class="venue">
+          <div class="vname">Rua de Santa Maria (the bar street)</div>
+          <div class="vmeta">~50+ bars + restaurants · painted-door buildings · cobblestone · tables outside · 2–3 AM weekends</div>
+          <div class="vdesc">The trip's central nightlife corridor. Narrow medieval-cobblestone alley behind the Sé Cathedral, painted-door buildings, indoor + outdoor seating, crowd from 18:00 sundowner all the way through 2–3 AM weekend nights. Every Madeiran with a side project has a bar here.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">23 Vintage Bar</div>
+          <div class="vmeta">Vintage decor · 70s/80s/90s soundtrack · cocktails · small terrace · late</div>
+          <div class="vdesc">The Rua de Santa Maria cocktail anchor. Vintage everything (LPs, lamps, mirrors), pop/rock/dance from the soundtrack era, small outdoor terrace, gets a 25–45 demographic later. The bar-crawl start point.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Venda Velha</div>
+          <div class="vmeta">Modern tasca · 1920s radios + lanterns · cocktails · DJs · later</div>
+          <div class="vdesc">Tasca-modern with 1920s radio + lantern atmosphere, DJs spinning Lisbon-house + electronic later. The next stop after 23 Vintage on the crawl.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Barreirinha Bar Café</div>
+          <div class="vmeta">Open-air terrace · hillside ocean view · sandwiches + burgers + burritos · sea breeze</div>
+          <div class="vdesc">The best ocean-breeze terrace on the strip — open-air, hillside above the Old Town with a view of the bay. Late food (sandwiches, burgers, burritos), cocktails, the "let's slow down" finish on any crawl night.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Arsénio's Casa de Fados</div>
+          <div class="vmeta">Rua de Santa Maria 169 · since 1981 · live fado Tue–Sat evenings</div>
+          <div class="vdesc">The canonical Madeiran fado-with-dinner night. Live fado Tue–Sat, espetada + bolo do caco + poncha, dim-lit candlelit interior. The trip's Day 1 dinner anchor. Cash + card.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">The poncha bars along Rua Santa Maria</div>
+          <div class="vmeta">Cane spirit + lemon + honey · muddled with a caralhinho · €4 a glass</div>
+          <div class="vdesc">A dozen tiny standing-room poncha bars along the Old Town — try the traditional (cane spirit, lemon, honey) and the passion-fruit version. The pre-dinner Madeiran ritual; loud and friendly.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Marginal Bar</div>
+          <div class="vmeta">Downtown/harbor club · Wed–Sun + holiday eves · 24:00–06:00</div>
+          <div class="vdesc">The harbor-side late-night club. Opens midnight, runs to 6 AM Wed–Sun + holiday eves. The post-Casino Saturday-night extension — true sunrise return.</div>
+        </div>
+      </div>
+
+      <div class="nightlife-col">
+        <h3>Estrada Monumental · Lido · the modern zone</h3>
+        <div class="venue">
+          <div class="vname">Vespas Discoteca / Vespas Club</div>
+          <div class="vmeta">Av. Sá Carneiro 7, São Martinho · 3 rooms (Vespas + Jam + Marginal), 7 bars · Fri + Sat + holiday eves</div>
+          <div class="vdesc">THE main Madeira nightclub. The Friday-night Vespas room is the big dance floor — sources disagree 23:00–08:00 vs midnight–06:00, <strong>call +351 291 234 800 day-of to confirm hours</strong>. The Day 3 Vespas-night base; 10-min taxi from Reid's.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Trap + Dubai</div>
+          <div class="vmeta">Funchal hotel zone · all-week late · open till late nightly</div>
+          <div class="vdesc">The weeknight clubs when Vespas is closed (Sun–Thu). Smaller rooms, more local crowd, lower cover. The Tue Aug 11 / Wed Aug 12 / Thu Aug 13 quiet-night clubbing option if you want it.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Copacabana</div>
+          <div class="vmeta">Pestana Casino Park basement · Wed–Sat + pre-holiday · 23:00–04:00</div>
+          <div class="vdesc">The casino's basement nightclub — themed nights, ~50/50 locals + tourists, 23:00–04:00 Wed–Sat. The Day 4 Saturday Aug 15 doubling-down anchor — walk down from roulette tables upstairs.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Chameleon</div>
+          <div class="vmeta">Funchal · 19:00–04:00 daily · open all week</div>
+          <div class="vdesc">The all-week 7-nights-open option. Smaller room, mixed Latin / pop / electronic depending on the night. The weeknight fallback when Vespas is dark.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Galáxia Skybar at Savoy Palace</div>
+          <div class="vmeta">Rooftop · futuristic indoor + terrace · live jazz + DJ · €10 min consumption non-guests · noon → late</div>
+          <div class="vdesc">The Estrada Monumental rooftop sunset bar. Adults-only Skypool infinity on the same deck. Live jazz + DJ, panoramic city/sea view. The Day 4 pre-Desarma aperitivo + the Day 3 low-energy alternative to Vespas.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Villa Cipriani at Belmond Reid's Palace</div>
+          <div class="vmeta">Cliffside ocean-edge Italian · last orders 22:30 · dinner-bar hybrid</div>
+          <div class="vdesc">The Reid's ocean-edge Italian dinner-and-bar. Cliffside terrace, the most romantic in-hotel cocktail spot on the trip. Useful as the Day 1 / Day 5 low-energy nightcap.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Cloud Bar at NEXT</div>
+          <div class="vmeta">Rooftop pool · panoramic city/sea</div>
+          <div class="vdesc">The Lido-zone rooftop pool + bar at NEXT hotel. Panoramic Funchal Bay, sundowner DJ slots. The afternoon pool option pre-Vespas.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Terrace Bar at Sé Boutique Hotel</div>
+          <div class="vmeta">360° rooftop · eye-level with the Sé Cathedral · Old Town</div>
+          <div class="vdesc">The Old Town's best high view — 360° rooftop with the cathedral spires at eye level. The Day 2 sunset cocktail between Pereira d'Oliveira and Il Gallo d'Oro.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Suite Bar at Pestana Casino Park</div>
+          <div class="vmeta">Niemeyer-designed casino complex · 1976 opened</div>
+          <div class="vdesc">Inside the Oscar Niemeyer + Viana de Lima casino complex (Madeira's modernist landmark). Cocktail bar with the architectural-pilgrimage payoff. Pre-Copacabana stop on Day 4.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" id="score">
+      <span class="eyebrow">Adversarial Scoring</span>
+      <h2>Re-scored on the 8 New Criteria</h2>
+      <p>Scored 0–3 per axis. Hard criteria ×2, soft ×1. Total /39. Honest read after the V4 calibration drop: <strong>weather + activity density + safety max out</strong>; food caliber holds with 3 Michelin + Audax + Oxalis; <strong>nightlife is the deliberate hit (−1.5 from prior round) — real but small, and the Aste Nagusia / Pacha gap is genuine</strong>; wine drops with the Wine Festival miss; romance/hotel anchored by Belmond Reid's Palace; Joann seafood navigable via espetada + William + Audax + Oxalis.</p>
+    </div>
+
+    <div class="score-grid">
+      <div class="score-row">
+        <div class="axis">Food caliber <span class="tag">Hard ×2</span></div>
+        <div class="reason">3 stars on the island: Il Gallo d'Oro ★★ (Madeira's only ★★, Cliff Bay), William ★ (Belmond Reid's, retained 2026), Desarma ★ (retained 2026). Plus Audax + Oxalis Michelin-listed elite. Deep but not San Sebastián-deep — the ★★ is destination-level but a single one. <strong>2.5/3</strong>.</div>
+        <div class="num">2.5 × 2 = 5</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Nightlife &amp; late energy <span class="tag">Hard ×2</span></div>
+        <div class="reason">Real, small, concentrated. Old Town Rua de Santa Maria + Estrada Monumental Vespas Discoteca + casino Copacabana. Strong Fri/Sat, quiet Tue/Wed/Thu. <strong>Aste Nagusia in San Sebastián runs nightly Aug 14–22 with fireworks every night — that's the canonical gap.</strong> Mallorca's Ushuaïa / Pacha class is also absent. <strong>1.5/3</strong> — the deliberate −1.5 drop from prior framing.</div>
+        <div class="num">1.5 × 2 = 3</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Activity density <span class="tag">Hard ×2</span></div>
+        <div class="reason">Diving + 95% whale watching + Atlantic-edge hiking (PR1 / PR9 / São Lourenço) + canyoning + paragliding + sailing + big-game fishing + Porto Santo ferry + cable car + toboggan + Cabo Girão skywalk — all within 1.5 h of one base. <strong>Best-in-class for an island its size.</strong> <strong>3/3</strong>.</div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Weather <span class="tag">Hard ×2</span></div>
+        <div class="reason">Locked 23–27°C / 75°F-ish high, ~3 mm rain across the month, gentle NE trade winds, ZERO heatwave risk during European summer increasingly punishing. San Sebastián can hit 90s southerly; Mallorca regularly 35°C+ in Aug. <strong>Madeira is heatwave-proof.</strong> <strong>3/3</strong>.</div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Safety &amp; late walkability <span class="tag">Hard ×2</span></div>
+        <div class="reason">Safety index 80.19 · #7 safest Portuguese city for solo female · Old Town walkable any hour · light street crime only. Better than Mallorca's Magaluf / Palma's Lonja after-hours, better than Split's ferry-terminal area. <strong>3/3</strong>.</div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Wine <span class="tag">Soft ×1</span></div>
+        <div class="reason">Madeira Wine Festival Aug 27 → Sep 13, 2026 — <strong>missed by 10 days</strong>. Madeira is monoculture fortified (no significant dry table wine) — Blandy's + Pereira d'Oliveira + Henriques &amp; Henriques + Barbeito + Justino's deep on fortified but the catalog is one-dimensional vs. Mallorca's 70+ producers across 2 DOs or Rioja's table-wine breadth. <strong>1.5/3</strong>.</div>
+        <div class="num">1.5</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Romance / hotel quality <span class="tag">Soft ×1</span></div>
+        <div class="reason"><strong>Belmond Reid's Palace is an all-time hotel</strong> — 1891 clifftop, 10-acre subtropical gardens, Atlantic-edge tea terrace, William ★ in-house. Cliff Bay + Savoy Palace + Casa Velha do Palheiro R&amp;C all genuine 5★. Cliffside gardens + tea terrace + the curved approach landing all stack the romance. <strong>3/3</strong>.</div>
+        <div class="num">3</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Joann seafood tolerance <span class="tag">Soft ×1 · lower seafood = higher</span></div>
+        <div class="reason"><strong>Espetada culture is real</strong> — laurel-skewer beef + bolo do caco at O Lagar / Santo António / Arsénio's / Quinta do Furão, fine-dining espetada at Audax (Aged Beef with Espetada Drippings + Laurel Smoke signature), Mirandesa beef + Bisaro pork at William ★. Some Akua-style seafood-forward listings to avoid; black scabbard is local but not forced. Solid not San Sebastián-deep pintxo breadth. <strong>2/3</strong>.</div>
+        <div class="num">2</div>
+      </div>
+      <div class="score-row total">
+        <div class="axis">Weighted total</div>
+        <div class="reason">Hard 26/30 + Soft 6.5/9. Weather + activity + safety max; food + nightlife well-calibrated; wine + Joann the soft spots, both mitigable. <strong>The heatwave-proof + Perseids-decade pick.</strong></div>
+        <div class="num">32.5 / 39</div>
+      </div>
     </div>
 
   </div>
@@ -807,94 +1038,140 @@
 
 <section class="booking" id="book">
   <div class="container">
+
     <div class="section-header">
-      <span class="eyebrow">Pre-Trip Punch List</span>
+      <span class="eyebrow">Make It Real</span>
       <h2>Book These Now</h2>
-      <p>Hotels are the tight gate in Madeira — Belmond and Savoy sell out 3–4 months ahead in peak August.</p>
+      <p>Twelve actions, ranked by lead time required. <strong>Belmond Reid's Palace + Il Gallo d'Oro ★★ + William ★ + Desarma ★ + the PR1 SIMplifica slot + the Perseids taxi all need advance booking</strong>. The Garajau dive and Lobosonda whale-watch are the most reasonably bookable close-in.</p>
     </div>
 
     <div class="steps">
 
       <div class="step">
-        <div class="stepnum">1</div>
+        <div class="stepnum">01</div>
         <div>
-          <h4>Flight — TAP TP224 / TP1685, Aug 11 4:50 PM LAX → LIS → FNC</h4>
-          <p>Book on flytap.com or via Chase/Amex travel portal. The LIS connection is 90 min — comfortable. Premium Economy adds ~$700 each for the LAX-LIS leg. Round-trip target: <strong>$1,150–$1,600</strong>.</p>
-          <div class="meta-line">→ <a href="https://www.flytap.com/en_us/flights-to-funchal" target="_blank" rel="noopener">flytap.com</a> · share confirmation # with hotel concierge for transfer</div>
+          <h4>Book Belmond Reid's Palace (5 nights · Wed Aug 12 → Mon Aug 17)</h4>
+          <p>Request a <strong>sea-view cliffside room</strong>. Half-board package recommended — credit applies at William ★ on premises. <strong>Aug 2026 is Madeira's busiest month</strong> — call direct or book via Amex FHR / Virtuoso for upgrade + breakfast benefits. Kayak avg $774–$817/night; Hotels.com avg $1,078/night. Cancellation typically 48 h refundable.</p>
+          <div class="meta-line">120+ days out · <a href="https://www.belmond.com/hotels/europe/portugal/madeira/belmond-reids-palace/" target="_blank" rel="noopener">belmond.com</a> · +351 291 717 171</div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">2</div>
+        <div class="stepnum">02</div>
         <div>
-          <h4>Hotel — Belmond Reid's Palace</h4>
-          <p>Aug 12 → Aug 17 (5 nights). Sea-view room. Half-board package available — credit applies at William ★ on premises. <strong>Madeira's busiest month</strong> — call direct.</p>
-          <div class="meta-line">→ <a href="https://www.belmond.com/hotels/europe/portugal/madeira/belmond-reids-palace/" target="_blank" rel="noopener">belmond.com</a> · +351 291 717 171</div>
+          <h4>Book TAP flights · LAX → LIS → FNC + return</h4>
+          <p>TAP TP224 nonstop LAX→LIS (dep 4:50 PM Tue Aug 11, arr 11:55 AM Wed Aug 12) + TP1685 LIS→FNC (arr ~13:00). Return: TP1686 FNC→LIS (dep 5:25 PM Mon Aug 17) + TP223 LIS→LAX (dep 11:05 PM, arr 3:30 AM same day). Estimated $1,150–$1,600 RT/pp economy; Premium Economy adds ~$700/pp on the LAX-LIS leg. <strong>The Anthropic SDK cap activating 2026-06-15 makes summer travel budgets tighter — book early.</strong></p>
+          <div class="meta-line">60–90 days out · <a href="https://www.flytap.com/en_us/flights-to-funchal" target="_blank" rel="noopener">flytap.com</a></div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">3</div>
+        <div class="stepnum">03</div>
         <div>
-          <h4>Il Gallo d'Oro ★★ — pick a night, lock it in</h4>
-          <p>Madeira's only 2-star. Recommend dinner on Day 5 (Sunday Aug 16) — pairs with the levada day. <strong>Book 6 weeks ahead.</strong> Closed Sun/Mon — Day 5 is the only Sun option (verify open Aug 16); fall back to Day 3 (Fri Aug 14) if closed.</p>
-          <div class="meta-line">→ <a href="https://guide.michelin.com/en/ilha-da-madeira/funchal/restaurant/il-gallo-d-oro" target="_blank" rel="noopener">Michelin Guide reservation</a> · +351 291 707 700</div>
+          <h4>Reserve Il Gallo d'Oro ★★ (Thu Aug 13, 21:00 — closed Sun/Mon)</h4>
+          <p>Madeira's only ★★ and the trip's Michelin centerpiece. <strong>Terroir Experience €245</strong> (land-leaning, the Joann pick) or <strong>Top Experience €295</strong> or <strong>11 Moments €295</strong>, plus wine pairing ~€150/pp. <strong>Call ahead to confirm land-only customization</strong>. CC required. <strong>Closed Sun/Mon — Thu Aug 13 is the call</strong>; fallback Day 3 Fri Aug 14 if Thu unavailable (but William ★ has the Fri slot in the standard plan).</p>
+          <div class="meta-line">4–6 weeks out · <a href="https://guide.michelin.com/en/ilha-da-madeira/funchal/restaurant/il-gallo-d-oro" target="_blank" rel="noopener">Michelin Guide</a> · +351 291 707 700</div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">4</div>
+        <div class="stepnum">04</div>
         <div>
-          <h4>Bonita da Madeira whale schooner — Day 3 morning</h4>
-          <p>Traditional sailing schooner, 10 AM departure from Cais nº8 at Funchal Marina. 3 hours. $45 pp. Book online — fills 2–3 weeks ahead in August. Note: Day 3 is also Perseids night; don't double-book yourself.</p>
-          <div class="meta-line">→ <a href="https://bonitadamadeira.com/" target="_blank" rel="noopener">bonitadamadeira.com</a></div>
+          <h4>Reserve William ★ at Belmond Reid's (Fri Aug 14, 21:00 — Tue–Sat 7–11 PM, last order 9:30)</h4>
+          <p>In-house at Reid's · <strong>William menu €190 or Discovery €160</strong>. Strongest land-menu star — Mirandesa beef + Bisaro pork + lamb. Smart-elegant dress. Reid's half-board credit applies. <strong>The Vespas-night dinner anchor — book a 19:30 sitting if you want the Vespas run after, 21:00 if you want a full Tasting menu evening.</strong></p>
+          <div class="meta-line">3–4 weeks out · <a href="https://www.belmond.com/hotels/europe/portugal/madeira/belmond-reids-palace/restaurants-and-bars/william" target="_blank" rel="noopener">belmond.com William</a> · +351 291 717 171</div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">5</div>
+        <div class="stepnum">05</div>
         <div>
-          <h4>Manta Diving Garajau — Day 4 afternoon</h4>
-          <p>Two-tank dive Saturday Aug 15, 1:30 PM. $115 pp incl. gear, boat, briefings. Book direct — they have just two boats. Half-day, leaves you fresh for Desarma at 8 PM.</p>
-          <div class="meta-line">→ <a href="https://mantadiving.com/en/service/" target="_blank" rel="noopener">mantadiving.com</a> · Galo Resort, Caniço</div>
+          <h4>Reserve Desarma ★ (Sat Aug 15, 21:00 — Velika Senhora da Assunção night)</h4>
+          <p>Chef Octávio Freitas · The Views Baía · <strong>6 Moments €195</strong> (Joann land-pick) / 9 Moments €225 / 12 Moments €275. Salazones a specialty — <strong>call ahead to lean land</strong>. Assumption Day is Madeira's biggest summer feast — Sat Aug 15 at Desarma will be tight. Book ≥3 weeks out.</p>
+          <div class="meta-line">3 weeks out · <a href="https://desarma.pt/en/" target="_blank" rel="noopener">desarma.pt</a> · The Views Baía concierge</div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">6</div>
+        <div class="stepnum">06</div>
         <div>
-          <h4>Pre-arrange Pico do Arieiro driver — Friday Aug 14 night</h4>
-          <p>For the Perseids · 10:30 PM pickup, return ~5 AM. Half-day driver $195–$270 for two. Critical because the road up is unlit and the parking lot fills with Madeirans looking up. Driver waits, makes coffee, gets you home asleep.</p>
-          <div class="meta-line">→ Hotel concierge or Madeira Auto Tours</div>
+          <h4>Book PR1 SIMplifica slot (Fri Aug 14 ≥24 h ahead)</h4>
+          <p><strong>HARD 2026 RULE: PR1 Arieiro → Ruivo is one-way only and requires SIMplifica booking ≥24 h ahead.</strong> €10.50/pp general public, €7/pp protocol operators. <strong>Sunrise window: book the earliest slot</strong>. SIMplifica also handles PR1.2 (€4.50, soft alternative) + PR9 Caldeirão Verde (€4.50, rainy-day swap) + PR8 São Lourenço (€4.50) + PR6 25 Fontes (€4.50). Free cancellation in adverse weather.</p>
+          <div class="meta-line">24+ h ahead · <a href="https://simplifica.madeira.gov.pt/" target="_blank" rel="noopener">simplifica.madeira.gov.pt</a></div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">7</div>
+        <div class="stepnum">07</div>
         <div>
-          <h4>Rental car · 5 days</h4>
-          <p>Compact automatic. Hertz, Avis, Europcar at FNC airport. <strong>$60–$80/day automatic, $32–$50 manual</strong> if you can drive stick. Roundabouts everywhere; the VE/VR expressway tunnels make the south coast fast. Most hotels have parking $15–25/day. Levada/Porto Moniz day needs a car.</p>
-          <div class="meta-line">→ <a href="https://www.hertz.com/" target="_blank" rel="noopener">hertz.com</a> · <a href="https://www.europcar.com/" target="_blank" rel="noopener">europcar.com</a></div>
+          <h4>Pre-arrange Pico do Arieiro driver — Wed Aug 12 (Perseids night)</h4>
+          <p>For the Aug 12 → 13 Perseid peak · 22:30 pickup from Reid's, return ~03:00. Half-day driver ~€90 each way for two. <strong>Critical because the road up is unlit, the parking lot fills by 05:00 in summer, and Madeirans drive up to look at the sky too.</strong> Driver waits, makes coffee, gets you home asleep. <strong>Also pre-arrange the Day 3 Fri Aug 14 sunrise + PR1 pickup at Achada do Teixeira trailhead</strong> — same driver can do both.</p>
+          <div class="meta-line">2 weeks out · Reid's concierge or <a href="https://www.madeiraautoaluguer.com/" target="_blank" rel="noopener">Madeira Auto Tours</a></div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">8</div>
+        <div class="stepnum">08</div>
         <div>
-          <h4>Other dinner reservations</h4>
-          <p>Reserve <strong>William ★</strong> (Thu Aug 13), <strong>Desarma ★</strong> (Sat Aug 15), <strong>Kampo</strong> (Thu lunch), <strong>Vila do Peixe</strong> (Fri lunch). Plus the Blandy's Wine Lodge Premium Tour Thursday 3 PM. All take direct reservations by phone or website. 30 days ahead.</p>
+          <h4>Reserve Manta Diving Garajau — Day 2 (Thu Aug 13) afternoon</h4>
+          <p>Two-tank Cap Garajau dive · €95/pp incl. gear, boat, briefings · 12:00 departure from Caniço de Baixo · 8–10 min boat. <strong>Discover Scuba option in the same reserve for non-divers (Joann)</strong>. Book direct — two boats only. Half-day, leaves you fresh for Il Gallo d'Oro ★★ at 21:00. Free cancellation 24 h.</p>
+          <div class="meta-line">24–48 h out · <a href="https://mantadiving.com/en/service/" target="_blank" rel="noopener">mantadiving.com</a> · Galo Resort Caniço</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">09</div>
+        <div>
+          <h4>Reserve Lobosonda whale-watch — Day 5 (Sun Aug 16) morning</h4>
+          <p>11:00 departure from Calheta marina, 3-h <em>Stenella</em> small-group catamaran (~€55/pp) · sperm whales, pilot whales, common + bottlenose dolphins, occasional Bryde's. <strong>The most-respected operator on the island since 2003</strong>. Weather refund. Free re-sail if no sighting (won't be needed in August). Pair with Cliff Bay spa 16:00.</p>
+          <div class="meta-line">48 h out · <a href="https://www.lobosonda.com/en/" target="_blank" rel="noopener">lobosonda.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">10</div>
+        <div>
+          <h4>Reserve Barbeito tasting + Henriques &amp; Henriques walk-in (Fri Aug 14 afternoon)</h4>
+          <p><strong>Barbeito by appointment only — book ≥1 week ahead</strong> · single-cask Platinum tour, Jancis Robinson's "Lafite of Madeira." Henriques &amp; Henriques walk-in, free 3-yr tasting, mini-museum format. Also confirm Blandy's Premium time Thu afternoon (walk-in OK; Vineyard Heritage Quinta de Santa Luzia €45 needs 48 h ahead).</p>
+          <div class="meta-line">7+ days out · <a href="https://www.barbeito.pt/en/" target="_blank" rel="noopener">barbeito.pt</a> · +351 291 940 060</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">11</div>
+        <div>
+          <h4>Reserve traditional dinners — Arsénio's, O Lagar, Audax</h4>
+          <p>Arsénio's: Day 1 fado night Tue Aug 11 — book 1 week ahead for weekend-edge seating. O Lagar Câmara de Lobos: Day 5 espetada Sun Aug 16 — 1 week ahead. Audax: backup espetada-fine-dining option, 1–2 weeks. Oxalis at Casa Velha: backup if you want the R&amp;C hilltop game-cooking experience, 1–2 weeks. <strong>Reid's afternoon tea: 1–2 weeks for Day 1 ritual</strong>.</p>
+          <div class="meta-line">1–2 weeks out · multiple links above</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">12</div>
+        <div>
+          <h4>Rental car · 5 days + Cliff Bay spa + paragliding standby</h4>
+          <p>Compact automatic · Hertz, Avis, Europcar at FNC. <strong>$60–$80/day automatic, $32–$50 manual</strong>. Roundabouts everywhere; the VE/VR expressway tunnels make the south coast fast. Most hotels charge €15–€25/day parking. <strong>Cliff Bay couples spa</strong>: Day 5 16:00 ~€280, book 1 week ahead. <strong>Madeira Paragliding standby</strong>: Hartmut Peters +351 96 413 3907 WhatsApp — call after 11 AM same day for tandem flight, €120–€150/pp; weather-dependent.</p>
+          <div class="meta-line">7+ days out · <a href="https://www.hertz.com/" target="_blank" rel="noopener">hertz.com</a> · <a href="https://www.europcar.com/" target="_blank" rel="noopener">europcar.com</a></div>
         </div>
       </div>
 
     </div>
 
+    <div class="adversarial">
+      <h3>Adversarial honesty — where Madeira loses</h3>
+      <p><strong>vs. San Sebastián:</strong> <strong>Aste Nagusia runs Aug 14–22 with nightly fireworks + Parte Vieja pintxos to 4 AM every night</strong> — Madeira has no comparable concentrated festival on Aug 11–17. SS's 3 ★★★ + multiple ★★ tier above Madeira's 1 ★★ + 2 ★. La Concha + the pintxos breadth crush Madeira for casual-eating density. Madeira wins back on heatwave-proof weather (SS can hit 90s southerly) and on the Perseids above the cloud sea.</p>
+      <p><strong>vs. Mallorca:</strong> Mallorca's <strong>Pacha + Ushuaïa + Cala Comtesa + Puro Beach</strong> are objectively higher nightlife than Vespas Discoteca. Belmond La Residencia + Voro ★★ give Mallorca higher hotel + food ceiling. Mallorca's 70+ wine producers across 2 DOs crush Madeira's fortified-monoculture wine catalog. Mallorca has Es Trenc / Caló des Moro / Formentor sand beaches 30 min from Palma — Madeira's only proper beach is Porto Santo 2 h 15 m by ferry. <strong>Madeira wins on activity density (diving + whale + hiking + canyoning + paragliding on a single island), heatwave-proof weather, and Pico do Arieiro Perseids.</strong></p>
+      <p><strong>vs. Hvar &amp; Split (Option G):</strong> Hvar+Split's Carpe Diem Beach + Bačvice sand clubs + Hula Hula are world-tier nightlife — Madeira's Vespas + Old Town crawl is the second-tier equivalent. <strong>Madeira wins on weather predictability (Hvar Aug heat 35°C+ days), on the Belmond Reid's anchor (no Belmond-tier hotel on Hvar), and on Perseid altitude (Sv. Nikola is 628 m vs. Pico do Arieiro 1,818 m above the cloud sea)</strong>. Food caliber is roughly even (Krug ★ Split vs. Il Gallo d'Oro ★★ Madeira — Madeira wins).</p>
+      <p><strong>Other weaknesses:</strong> (1) <strong>The Madeira Wine Festival is Aug 27 → Sep 13, 2026 — missed by 10 days</strong>, plus European Folklore Week (Aug 27–31), Festival Our Lady of Help (Aug 29–31), Funchal City Day (Aug 21). (2) "Retirement / quiet" reputation half-deserved — Tue/Wed/Thu nightlife thin; Fri/Sat rescues. (3) No native table wine — fortified Madeira only. (4) Beach scarcity: cliffs not beaches, Porto Santo 2 h 15 m ferry. (5) The 2026-04-27 PR1 reopening introduced one-way-only + mandatory SIMplifica booking — adds friction to the signature hike. (6) Sinjska Alka is in Croatia, not Madeira; no equivalent local festival on the exact dates.</p>
+      <p><strong>Net for Joann's brief</strong> ("more active, late dinners, nightlife, food, water sports, hiking"): Madeira hits ~75%. The 25% gap is nightlife intensity (closer to Lisbon Cais do Sodré than San Sebastián Old Town) + missed Wine Festival. Perseids weekend + heatwave-proof + activity stacking are the real differentiators. <strong>Defensible at 32.5/39, not invincible.</strong></p>
+    </div>
+
     <div class="budget-table">
       <div class="head">
-        <span class="eyebrow">Three Ways to Do It</span>
+        <span class="eyebrow">All-In For Two Travelers</span>
         <h3>Budget by Tier</h3>
-        <p>Same trip, three spending levels. ✓ = included in that tier. Standard is the recommended plan with Belmond Reid's + Il Gallo d'Oro ★★ + William ★ + Desarma ★.</p>
+        <p>USD, mid-August peak. Move items across tiers freely. <strong>Standard tier matches the day-by-day above</strong> — Belmond Reid's 5 + Il Gallo d'Oro ★★ + William ★ + Desarma ★ + Manta Diving Garajau + Lobosonda whale-watch + PR1 sunrise + Cliff Bay couples spa. Reid's HB credit ($120/day for two) included in Standard and Splurge.</p>
       </div>
-
       <div style="overflow-x: auto;">
       <table>
         <thead>
@@ -906,42 +1183,41 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td class="item">✈️ Flights · Economy (TAP via LIS)</td><td class="tier">✓ $2,500</td><td class="standard">✓ $2,500</td><td class="tier dim">—</td></tr>
-          <tr><td class="item">✈️ Flights · Premium Economy</td><td class="tier dim">—</td><td class="standard dim">—</td><td class="tier">✓ $3,900</td></tr>
-          <tr><td class="item">🏨 Quinta da Casa Branca · 5 nights</td><td class="tier">✓ $2,100</td><td class="standard dim">—</td><td class="tier dim">—</td></tr>
-          <tr><td class="item">🏨 Belmond Reid's Palace · 5 nights</td><td class="tier dim">—</td><td class="standard std-mark">✓ $4,000</td><td class="tier dim">—</td></tr>
-          <tr><td class="item">🏨 Les Suites at The Cliff Bay · 5 nights</td><td class="tier dim">—</td><td class="standard dim">—</td><td class="tier">✓ $4,800</td></tr>
-          <tr><td class="item">🚗 Rental car (auto) + fuel · 5 days</td><td class="tier">✓ $360</td><td class="standard">✓ $360</td><td class="tier">✓ $400</td></tr>
-          <tr><td class="item">🐬 Bonita whale schooner</td><td class="tier">✓ $90</td><td class="standard">✓ $90</td><td class="tier">✓ $90</td></tr>
-          <tr><td class="item">🐠 Manta Diving 2-tank Garajau</td><td class="tier">✓ $230</td><td class="standard">✓ $230</td><td class="tier">✓ $230</td></tr>
-          <tr><td class="item">⛵ Desertas Islands catamaran</td><td class="tier dim">—</td><td class="standard">✓ $200</td><td class="tier">✓ $220</td></tr>
-          <tr><td class="item">🧗 Canyoning OR coasteering</td><td class="tier dim">—</td><td class="standard dim">—</td><td class="tier">✓ $180</td></tr>
-          <tr><td class="item">☁️ Pico Arieiro driver (Perseids night)</td><td class="tier dim">—</td><td class="standard std-mark">✓ $235</td><td class="tier">✓ $270</td></tr>
-          <tr><td class="item">⭐ Il Gallo d'Oro ★★ (farewell)</td><td class="tier dim">—</td><td class="standard std-mark">✓ $760</td><td class="tier">✓ $820</td></tr>
-          <tr><td class="item">⭐ William ★ at Reid's</td><td class="tier dim">—</td><td class="standard">✓ $570</td><td class="tier">✓ $650</td></tr>
-          <tr><td class="item">⭐ Desarma ★ (Octávio Freitas)</td><td class="tier dim">—</td><td class="standard">✓ $435</td><td class="tier">✓ $490</td></tr>
-          <tr><td class="item">🍽️ Other dinners · 2 nights</td><td class="tier">✓ $250</td><td class="standard">✓ $400</td><td class="tier">✓ $700</td></tr>
-          <tr><td class="item">🥖 Lunches · 5 days</td><td class="tier">✓ $250</td><td class="standard">✓ $550</td><td class="tier">✓ $900</td></tr>
-          <tr><td class="item">🥐 Breakfasts (Reid's HB credit)</td><td class="tier dim">—</td><td class="standard">included</td><td class="tier">included</td></tr>
-          <tr><td class="item">🍷 Blandy's Wine Lodge Premium</td><td class="tier">✓ $44</td><td class="standard">✓ $44</td><td class="tier">✓ $300</td></tr>
-          <tr><td class="item">🧖 Hotel spa + couples massage</td><td class="tier dim">—</td><td class="standard">✓ $290</td><td class="tier">✓ $500</td></tr>
-          <tr><td class="item">🚡 Monte cable car + Carros de Cesto</td><td class="tier">✓ $60</td><td class="standard">✓ $60</td><td class="tier">✓ $60</td></tr>
-          <tr><td class="item">🥾 Trail taxes · 4 trails</td><td class="tier">✓ $24</td><td class="standard">✓ $24</td><td class="tier">✓ $24</td></tr>
-          <tr><td class="item" style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">⛪ Free · Assumption fireworks · ☄️ Perseids · 🌫️ Fanal · 🗻 Cabo Girão</td><td class="tier" style="color: rgba(255,255,255,0.5);">included</td><td class="standard" style="color: rgba(255,255,255,0.5);">included</td><td class="tier" style="color: rgba(255,255,255,0.5);">included</td></tr>
+          <tr><td class="item">✈️ Flights · TAP via LIS (×2)</td><td class="tier">$2,500<br><span style="font-size: 0.75rem; opacity: 0.7;">economy</span></td><td class="tier standard std-mark">$2,500<br><span style="font-size: 0.75rem; opacity: 0.7;">economy</span></td><td class="tier">$3,900<br><span style="font-size: 0.75rem; opacity: 0.7;">premium economy</span></td></tr>
+          <tr><td class="item">🏨 Hotels · 5 nights</td><td class="tier">$2,100<br><span style="font-size: 0.75rem; opacity: 0.7;">Quinta da Casa Branca 5n</span></td><td class="tier standard std-mark">$4,000<br><span style="font-size: 0.75rem; opacity: 0.7;">Belmond Reid's 5n sea-view</span></td><td class="tier">$5,400<br><span style="font-size: 0.75rem; opacity: 0.7;">Reid's suite or 3 Reid's + 2 Cliff Bay</span></td></tr>
+          <tr><td class="item">🚗 Rental car (auto) + fuel + parking · 5 days</td><td class="tier">$360</td><td class="tier standard std-mark">$420</td><td class="tier">$500<br><span style="font-size: 0.75rem; opacity: 0.7;">private driver days</span></td></tr>
+          <tr><td class="item">⭐ Il Gallo d'Oro ★★ (Day 2)</td><td class="tier dim">—</td><td class="tier standard std-mark">$760<br><span style="font-size: 0.75rem; opacity: 0.7;">Terroir + pairing</span></td><td class="tier">$820</td></tr>
+          <tr><td class="item">⭐ William ★ at Reid's (Day 3)</td><td class="tier dim">—</td><td class="tier standard std-mark">$570</td><td class="tier">$650</td></tr>
+          <tr><td class="item">⭐ Desarma ★ (Day 4 Assumption)</td><td class="tier dim">—</td><td class="tier standard std-mark">$435</td><td class="tier">$490</td></tr>
+          <tr><td class="item">🍽️ Other dinners — Arsénio's fado + O Lagar espetada + Audax or Oxalis + 1 walk-in</td><td class="tier">$250</td><td class="tier standard std-mark">$450</td><td class="tier">$800</td></tr>
+          <tr><td class="item">🥖 Lunches · 5 days (Vila do Peixe + Toto-like + Sabores Curral + Kampo + market)</td><td class="tier">$250</td><td class="tier standard std-mark">$500</td><td class="tier">$900</td></tr>
+          <tr><td class="item">🥐 Breakfasts (Reid's HB credit)</td><td class="tier dim">—</td><td class="tier standard std-mark">included</td><td class="tier">included</td></tr>
+          <tr><td class="item">🐠 Manta Diving 2-tank Garajau</td><td class="tier">$230</td><td class="tier standard std-mark">$230</td><td class="tier">$280<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Discover Scuba Joann</span></td></tr>
+          <tr><td class="item">🐬 Lobosonda whale-watch</td><td class="tier">$120</td><td class="tier standard std-mark">$120</td><td class="tier">$160<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Bonita tall ship Day 1</span></td></tr>
+          <tr><td class="item">☁️ Pico do Arieiro Perseid taxi + Day 3 sunrise + PR1 pickup</td><td class="tier dim">—</td><td class="tier standard std-mark">$280</td><td class="tier">$380<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Casa Aeerio stargazing tour</span></td></tr>
+          <tr><td class="item">🥾 PR1 + PR8 + PR9 + cable SIMplifica</td><td class="tier">$30</td><td class="tier standard std-mark">$45</td><td class="tier">$60</td></tr>
+          <tr><td class="item">🍷 Blandy's + Pereira d'Oliveira + Henriques + Barbeito</td><td class="tier">$60</td><td class="tier standard std-mark">$180<br><span style="font-size: 0.75rem; opacity: 0.7;">3 tastings + Barbeito Platinum</span></td><td class="tier">$320<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Blandy's Vineyard Heritage €45</span></td></tr>
+          <tr><td class="item">🧖 Cliff Bay couples spa (Day 5)</td><td class="tier dim">—</td><td class="tier standard std-mark">$290</td><td class="tier">$500<br><span style="font-size: 0.75rem; opacity: 0.7;">4-h hydrotherapy + facial</span></td></tr>
+          <tr><td class="item">🚡 Cable car + carros de cesto + Monte Palace</td><td class="tier">$60</td><td class="tier standard std-mark">$80</td><td class="tier">$80</td></tr>
+          <tr><td class="item">🪂 Paragliding standby OR canyoning OR jet ski</td><td class="tier dim">—</td><td class="tier standard std-mark">$170<br><span style="font-size: 0.75rem; opacity: 0.7;">paragliding tandem</span></td><td class="tier">$340<br><span style="font-size: 0.75rem; opacity: 0.7;">+ canyoning + jet ski</span></td></tr>
+          <tr><td class="item">🎰 Casino entry + Vespas + Copacabana covers</td><td class="tier">$40</td><td class="tier standard std-mark">$80</td><td class="tier">$200<br><span style="font-size: 0.75rem; opacity: 0.7;">+ VIP / bottle service</span></td></tr>
+          <tr><td class="item">🎣 Big-game fishing (Splurge only)</td><td class="tier dim">—</td><td class="tier standard dim">—</td><td class="tier">$1,400<br><span style="font-size: 0.75rem; opacity: 0.7;">private blue marlin charter</span></td></tr>
+          <tr><td class="item">Cushion / tips / incidentals</td><td class="tier">$200</td><td class="tier standard std-mark">$350</td><td class="tier">$700</td></tr>
+          <tr><td class="item" style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">⛪ Free · Assumption procession + fireworks · ☄️ Perseids · 🗻 Cabo Girão skywalk €2 · Sé Cathedral</td><td class="tier" style="color: rgba(255,255,255,0.5);">included</td><td class="standard" style="color: rgba(255,255,255,0.5);">included</td><td class="tier" style="color: rgba(255,255,255,0.5);">included</td></tr>
         </tbody>
         <tfoot>
           <tr>
-            <td class="total-label">Total · all in</td>
-            <td class="tier">$5,908</td>
+            <td class="total-label">Total · two travelers, all-in</td>
+            <td class="tier">$6,500</td>
             <td class="standard">$10,748</td>
-            <td class="tier">$16,234</td>
+            <td class="tier">$18,090</td>
           </tr>
         </tfoot>
       </table>
       </div>
 
       <p class="footnote">
-        All figures USD, for two travelers. Hotel rates assume mid-August peak. Reid's Palace half-board credit ($120/day for two) included in Standard and Splurge. EUR converted at ~1.08 / USD.
+        <strong>Honest read:</strong> Madeira Standard ($10,748) lands close to Mallorca Standard but ~10% over Hvar+Split Standard ($9,650). The trade vs. Hvar+Split is a quieter nightlife scene + a missed Wine Festival in exchange for a higher Michelin ceiling (Il Gallo d'Oro ★★ vs. Krug ★), the Belmond Reid's heritage anchor, heatwave-proof weather, and Pico do Arieiro Perseids above the cloud sea. <strong>If hotels + ★★ + Perseids + weather are your top axes, Madeira is the answer. If sailing + nightlife density at a lower budget is the brief, Hvar+Split is.</strong>
       </p>
     </div>
 
@@ -950,7 +1226,7 @@
 
 <footer>
   <div class="container">
-    <p>Built for Mark · August 11–17, 2026 · LAX origin · Prices in USD, subject to live booking</p>
+    <p>Built for Mark · August 11–17, 2026 · LAX origin · 5 hotel nights · Belmond Reid's Palace · <a href="../index.html">all trips</a> · <a href="./aug_11_europe.html">compare options</a></p>
   </div>
 </footer>
 
