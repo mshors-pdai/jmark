@@ -187,23 +187,27 @@
   .ift-card.coteazur .pick { color: var(--coteazur-azure); }
 
   /* ===== Comparison table ===== */
-  .compare-table { max-width: 1100px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
-  .compare-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
-  .compare-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-align: left; background: #1a1a1a; color: white; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; }
-  .compare-table th.dim { color: var(--muted); background: #f0eee5; font-size: 0.78rem; }
+  .compare-table { max-width: 1100px; margin: 0 auto; background: white; border-radius: 16px; overflow-x: auto; overflow-y: visible; box-shadow: 0 4px 20px rgba(0,0,0,0.06); -webkit-overflow-scrolling: touch; position: relative; }
+  .compare-table table { width: 100%; min-width: 880px; border-collapse: separate; border-spacing: 0; font-size: 0.92rem; }
+  .compare-table th { position: sticky; top: 65px; z-index: 5; padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-align: left; background: #1a1a1a; color: white; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .compare-table th.dim { position: sticky; left: 0; z-index: 6; color: var(--muted); background: #f0eee5; font-size: 0.78rem; box-shadow: 2px 0 4px rgba(0,0,0,0.06); }
   .compare-table th.provence-h { background: var(--provence-lavender); }
   .compare-table th.cascais-h { background: var(--cascais-deep); }
   .compare-table th.basque-h { background: var(--basque-deep); }
   .compare-table th.madeira-h { background: var(--madeira-deep); }
   .compare-table th.annecy-h { background: var(--annecy-deep); }
   .compare-table th.mallorca-h { background: var(--mallorca-deep); }
-  .compare-table td { padding: 0.9rem 0.75rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .compare-table td { padding: 0.9rem 0.75rem; border-bottom: 1px solid var(--line); vertical-align: top; background: white; }
   .compare-table tr:last-child td { border-bottom: none; }
-  .compare-table tr:nth-child(even) td { background: rgba(0,0,0,0.015); }
-  .compare-table td.metric { font-weight: 600; color: var(--ink); font-size: 0.86rem; width: 17%; }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .compare-table td.metric { position: sticky; left: 0; z-index: 4; font-weight: 600; color: var(--ink); font-size: 0.86rem; width: 17%; background: white; box-shadow: 2px 0 4px rgba(0,0,0,0.04); }
+  .compare-table tr:nth-child(even) td.metric { background: #fafafa; }
   .compare-table td.cell { text-align: center; width: 16.6%; font-size: 0.84rem; }
   .compare-table td.cell strong { display: block; }
   .compare-table td.cell .sub { display: block; color: var(--muted); font-size: 0.78rem; margin-top: 0.15rem; }
+  /* Mobile scroll hint */
+  .compare-table::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 24px; background: linear-gradient(90deg, transparent, rgba(0,0,0,0.06)); pointer-events: none; opacity: 0; transition: opacity 0.2s; }
+  @media (max-width: 900px) { .compare-table::after { opacity: 1; } }
 
   /* ===== Pros and Cons ===== */
   .pros-cons-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 1100px; margin: 0 auto 1.5rem; }
@@ -306,20 +310,26 @@
   .criterion-card p { font-size: 0.88rem; color: #333; line-height: 1.5; margin: 0; }
 
   /* ===== Scoring matrix ===== */
-  .scoring-wrap { max-width: 1180px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
-  .scoring-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
-  .scoring-table thead th { background: #1a1a1a; color: white; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.02em; padding: 1rem 0.45rem; text-align: center; }
-  .scoring-table thead th.label-col { text-align: left; padding-left: 1.25rem; min-width: 180px; }
-  .scoring-table tbody td { padding: 0.8rem 0.5rem; text-align: center; border-bottom: 1px solid var(--line); vertical-align: middle; }
-  .scoring-table tbody td.label { text-align: left; padding-left: 1.25rem; font-weight: 600; color: var(--ink); }
+  .scoring-wrap { max-width: 1180px; margin: 0 auto; background: white; border-radius: 16px; overflow-x: auto; overflow-y: visible; box-shadow: 0 4px 20px rgba(0,0,0,0.06); -webkit-overflow-scrolling: touch; position: relative; }
+  .scoring-table { width: 100%; min-width: 880px; border-collapse: separate; border-spacing: 0; font-size: 0.92rem; }
+  .scoring-table thead th { position: sticky; top: 65px; z-index: 5; background: #1a1a1a; color: white; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.02em; padding: 1rem 0.45rem; text-align: center; border-bottom: 1px solid #2a2a2a; }
+  .scoring-table thead th.label-col { position: sticky; left: 0; z-index: 6; text-align: left; padding-left: 1.25rem; min-width: 180px; box-shadow: 2px 0 4px rgba(0,0,0,0.12); }
+  .scoring-table tbody td { padding: 0.8rem 0.5rem; text-align: center; border-bottom: 1px solid var(--line); vertical-align: middle; background: white; }
+  .scoring-table tbody td.label { position: sticky; left: 0; z-index: 4; text-align: left; padding-left: 1.25rem; font-weight: 600; color: var(--ink); background: white; box-shadow: 2px 0 4px rgba(0,0,0,0.04); }
   .scoring-table tbody td.label .sub { display: block; font-weight: 400; font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
   .scoring-table tbody td.label a { text-decoration: none; color: inherit; border-bottom: 1px dotted var(--muted); }
   .scoring-table tbody td.label a:hover { color: var(--cascais-terra); border-bottom-color: var(--cascais-terra); }
-  .scoring-table tbody tr:nth-child(even) td { background: rgba(0,0,0,0.018); }
+  .scoring-table tbody tr:nth-child(even) td { background: #f8f8f6; }
+  .scoring-table tbody tr:nth-child(even) td.label { background: #f8f8f6; }
   .scoring-table tbody tr:hover td { background: rgba(193,100,74,0.05); }
+  .scoring-table tbody tr:hover td.label { background: rgba(193,100,74,0.08); }
   .scoring-table tbody td.total { font-weight: 700; color: var(--ink); font-family: 'Playfair Display', serif; font-size: 1.05rem; }
-  .scoring-table tbody tr.winner td { background: rgba(46,133,64,0.07); }
+  .scoring-table tbody tr.winner td { background: #ebf4ec; }
+  .scoring-table tbody tr.winner td.label { background: #ebf4ec; }
   .scoring-table tbody tr.winner td.total { color: #1e7a4d; font-size: 1.2rem; }
+  /* Scroll hint on mobile */
+  .scoring-wrap::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 24px; background: linear-gradient(90deg, transparent, rgba(0,0,0,0.06)); pointer-events: none; opacity: 0; transition: opacity 0.2s; }
+  @media (max-width: 900px) { .scoring-wrap::after { opacity: 1; } }
   .score-pill { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; font-size: 0.7rem; font-weight: 700; color: white; line-height: 1; }
   .score-pill.s3 { background: #2e8540; }
   .score-pill.s2 { background: #d4a72c; color: #2a2200; }
@@ -345,12 +355,23 @@
     .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
     h2 { font-size: 1.8rem !important; }
     h3 { font-size: 1.3rem; }
-    .compare-table, .budget-block table { display: block; overflow-x: auto; }
-    .compare-table table, .budget-block table { min-width: 880px; }
     .container { padding: 0 1rem; }
     .opt-section { padding: 2.5rem 0; }
     .opt-card .opt-stats { grid-template-columns: repeat(3, 1fr); }
     .budget-block, .framework { padding: 2rem 1.5rem; }
+    /* Topnav is taller on mobile (stacks brand + tabs) — push sticky table headers further down */
+    .scoring-table thead th { top: 110px; padding: 0.65rem 0.3rem; font-size: 0.72rem; }
+    .scoring-table thead th.label-col { min-width: 140px; padding-left: 0.85rem; }
+    .scoring-table { font-size: 0.82rem; }
+    .scoring-table tbody td { padding: 0.6rem 0.3rem; }
+    .scoring-table tbody td.label { padding-left: 0.85rem; min-width: 140px; }
+    .scoring-table tbody td.label .sub { font-size: 0.7rem; }
+    .compare-table th { top: 110px; padding: 0.65rem 0.4rem; font-size: 0.72rem; }
+    .compare-table th.dim { min-width: 130px; padding-left: 0.85rem; }
+    .compare-table td { padding: 0.6rem 0.4rem; font-size: 0.78rem; }
+    .compare-table td.metric { min-width: 130px; padding-left: 0.85rem; font-size: 0.78rem; }
+    .compare-table td.cell .sub { font-size: 0.7rem; }
+    .budget-block table { display: block; overflow-x: auto; min-width: unset; }
   }
 </style>
 </head>
