@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>August 2026 — Hvar &amp; Split · Dalmatia Overdrive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --hvar-sea: #0c6e9c;
+    --hvar-deep: #073d59;
+    --hvar-stone: #c1a875;
+    --hvar-stone-deep: #8a7448;
+    --hvar-clay: #d65a3c;
+    --hvar-olive: #6b7a3f;
+    --hvar-cream: #f6efe0;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.6; background: #fafaf7; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
+  h3 { font-size: 1.6rem; line-height: 1.25; }
+  h4 { font-size: 1.15rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; }
+  a { color: inherit; }
+
+  .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+  .back-bar a.back-link:hover { color: var(--hvar-clay); }
+  .back-bar a.back-link .arrow { display: inline-block; transition: transform 0.2s; }
+  .back-bar a.back-link:hover .arrow { transform: translateX(-3px); }
+  .back-bar .brand-mini { font-family: 'Playfair Display', serif; font-size: 0.92rem; color: rgba(255,255,255,0.7); letter-spacing: -0.02em; text-decoration: none; }
+  .back-bar .brand-mini:hover { color: white; }
+  .back-bar .brand-mini .dot { color: var(--hvar-clay); }
+  .back-bar .meta-mini { display: none; font-size: 0.74rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
+  @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
+
+  .topnav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 1rem 0; }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; }
+  .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
+  .topnav .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .topnav .tab { padding: 0.5rem 1.25rem; border-radius: 999px; text-decoration: none; color: var(--hvar-deep); font-size: 0.9rem; font-weight: 500; transition: all 0.2s; border: 1px solid var(--hvar-sea); }
+  .topnav .tab:hover { background: var(--hvar-sea); color: white; }
+
+  .intro-hero { padding: 6rem 0 4rem; text-align: center; background: linear-gradient(180deg, var(--hvar-cream) 0%, #fafaf7 100%); }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--hvar-clay); }
+  .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
+  .intro-hero h1 em { font-style: italic; color: var(--hvar-sea); font-weight: 400; }
+  .intro-hero .lede { max-width: 740px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
+  .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+
+  .destination { padding: 6rem 0 4rem; background: var(--hvar-cream); }
+  .hero-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.12); margin-bottom: 4rem; }
+  .hero-card .hero-image { min-height: 500px; background-size: cover; background-position: center; position: relative;
+    background-image: linear-gradient(135deg, rgba(12,110,156,0.20), rgba(193,168,117,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Hvar_-_panoramio_%2811%29.jpg/1280px-Hvar_-_panoramio_%2811%29.jpg');
+    background-color: var(--hvar-sea); }
+  .hero-card .hero-content { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; background: white; }
+  .hero-card .eyebrow { margin-bottom: 1.25rem; color: var(--hvar-clay); }
+  .hero-card h2 { margin-bottom: 1.5rem; color: var(--hvar-deep); }
+  .hero-card .tagline { font-size: 1.15rem; color: var(--muted); margin-bottom: 2rem; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .stat .stat-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.1; margin-bottom: 0.2rem; color: var(--hvar-deep); }
+  .stat .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 720px; }
+  .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--hvar-clay); }
+  .section-header h2 { margin-bottom: 1rem; color: var(--hvar-deep); }
+  .section-header p { color: var(--muted); font-size: 1.05rem; }
+
+  .flight-box { background: white; border-radius: 16px; padding: 2.5rem; max-width: 920px; margin: 2rem auto 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .flight-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+  .flight-row:last-of-type { border-bottom: none; }
+  .flight-airport .code { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1; font-weight: 700; color: var(--hvar-deep); }
+  .flight-airport .city { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; }
+  .flight-line { text-align: center; color: var(--muted); }
+  .flight-line .dash { height: 1px; background: var(--line); position: relative; margin: 0.5rem 0; }
+  .flight-line .dash::after { content: '⟶'; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: white; padding: 0 0.5rem; color: var(--hvar-clay); }
+  .flight-line .info { font-size: 0.8rem; }
+  .flight-meta { display: flex; gap: 2rem; justify-content: center; padding-top: 1.5rem; margin-top: 1rem; border-top: 2px solid var(--line); }
+  .flight-meta .item { text-align: center; }
+  .flight-meta .item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 0.3rem; }
+  .flight-meta .item .val { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--hvar-deep); }
+
+  .only-this-week { max-width: 1100px; margin: 0 auto 4rem; padding: 3rem; background: linear-gradient(135deg, #f6efe0, #ece1c8); border-radius: 24px; }
+  .only-this-week .head { text-align: center; margin-bottom: 2.5rem; }
+  .only-this-week h3 { color: var(--hvar-deep); font-size: 2rem; margin-top: 0.5rem; }
+  .only-this-week .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .event-card { background: white; border-radius: 16px; padding: 2rem; border-left: 4px solid var(--hvar-sea); }
+  .event-card.clay { border-left-color: var(--hvar-clay); }
+  .event-card.olive { border-left-color: var(--hvar-olive); }
+  .event-card.stone { border-left-color: var(--hvar-stone); }
+  .event-card .head { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .event-card .icon { font-size: 2.2rem; }
+  .event-card h4 { margin: 0; color: var(--hvar-deep); }
+  .event-card h4.clay { color: var(--hvar-clay); }
+  .event-card h4.olive { color: var(--hvar-olive); }
+  .event-card h4.stone { color: var(--hvar-stone-deep); }
+  .event-card .when { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
+  .event-card p { font-size: 0.95rem; color: #333; margin-bottom: 1rem; }
+  .event-card .book-link { display: inline-block; padding: 0.4rem 0.9rem; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--hvar-clay); border: 1.5px solid var(--hvar-clay); }
+  .event-card .book-link:hover { background: var(--hvar-clay); color: white; }
+  .bonus-callout { margin-top: 2rem; padding: 1.5rem 2rem; background: rgba(12,110,156,0.06); border-radius: 12px; border-left: 4px solid var(--hvar-sea); }
+  .bonus-callout h4 { margin-bottom: 0.5rem; color: var(--hvar-deep); }
+  .bonus-callout p { font-size: 0.95rem; color: #333; margin: 0; }
+  .bonus-callout a { color: var(--hvar-sea); font-weight: 600; }
+
+  .glance-table { max-width: 1000px; margin: 0 auto 4rem; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .glance-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .glance-table th { background: var(--hvar-deep); color: white; padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600; }
+  .glance-table td { padding: 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .glance-table tr:last-child td { border-bottom: none; }
+  .glance-table tr:nth-child(even) td { background: rgba(12,110,156,0.04); }
+  .glance-table td.daynum { font-weight: 600; color: var(--hvar-clay); }
+
+  .itinerary { max-width: 950px; margin: 0 auto; }
+  .day { display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
+  .day:last-child { border-bottom: none; }
+  .day-number .num { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1; font-weight: 600; font-style: italic; color: var(--hvar-clay); }
+  .day-number .date { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .day-content h3 { margin-bottom: 0.75rem; color: var(--hvar-deep); }
+  .day-content ul { list-style: none; }
+  .day-content ul li { padding: 0.45rem 0 0.45rem 1.5rem; position: relative; color: #333; }
+  .day-content ul li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 6px; height: 6px; border-radius: 50%; background: var(--hvar-clay); }
+  .day-content ul li strong { color: var(--hvar-deep); }
+  .day-content ul li a { color: var(--hvar-sea); text-decoration: none; border-bottom: 1px dotted; }
+  .alts { background: rgba(214,90,60,0.06); border-left: 3px solid var(--hvar-clay); padding: 0.85rem 1rem; margin: 0.75rem 0 0.25rem 1.5rem; border-radius: 0 6px 6px 0; font-size: 0.88rem; color: #444; }
+  .alts strong { color: var(--hvar-clay); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.25rem; }
+
+  .hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .hotel-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+  .hotel-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .hotel-card .hotel-image { height: 200px; background-size: cover; background-position: center; position: relative; background-color: var(--hvar-stone); }
+  .hotel-card .hotel-tier { position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.95); padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: var(--hvar-deep); z-index: 2; }
+  .hotel-card .hotel-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .hotel-card .hotel-body h4 { margin-bottom: 0.25rem; color: var(--hvar-deep); }
+  .hotel-card .hotel-body .loc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+  .hotel-card .hotel-body p { font-size: 0.93rem; color: #333; margin-bottom: 1rem; line-height: 1.55; }
+  .hotel-card .hotel-meta { display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.85rem; margin-top: auto; }
+  .hotel-card .hotel-meta .price { font-weight: 600; color: var(--hvar-deep); }
+  .hotel-card .book-link { display: inline-block; padding: 0.35rem 0.85rem; font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--hvar-clay); border: 1.5px solid var(--hvar-clay); align-self: flex-start; margin-top: 0.5rem; }
+  .hotel-card .book-link:hover { background: var(--hvar-clay); color: white; }
+
+  .wine-block { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; max-width: 1100px; margin: 0 auto 2rem; background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.06); align-items: center; }
+  .wine-block .wine-image { min-height: 360px; background-size: cover; background-position: center; background-color: var(--hvar-stone); }
+  .wine-block.hvar-wine .wine-image { background-image: linear-gradient(135deg, rgba(12,110,156,0.25), rgba(107,122,63,0.40)), url('https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80'); }
+  .wine-block.mainland .wine-image { background-image: linear-gradient(135deg, rgba(214,90,60,0.25), rgba(193,168,117,0.40)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80'); }
+  .wine-block .wine-text { padding: 3rem 2.5rem 3rem 0; }
+  .wine-block .eyebrow { color: var(--hvar-clay); }
+  .wine-block h3 { color: var(--hvar-deep); margin-bottom: 1rem; }
+  .wine-block p { color: #333; font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .winery-list .winery { padding: 0.85rem 0; border-bottom: 1px dashed var(--line); }
+  .winery-list .winery:last-child { border-bottom: none; }
+  .winery-list .name { font-weight: 600; color: var(--hvar-deep); margin-bottom: 0.2rem; }
+  .winery-list .name a { color: var(--hvar-clay); text-decoration: none; }
+  .winery-list .desc { font-size: 0.88rem; color: var(--muted); }
+
+  .food-list { max-width: 950px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .food-row { display: grid; grid-template-columns: 1fr 1.6fr auto; gap: 1.5rem; padding: 1.5rem; border-bottom: 1px solid var(--line); align-items: center; }
+  .food-row:last-child { border-bottom: none; }
+  .food-row .place { font-family: 'Playfair Display', serif; font-weight: 600; color: var(--hvar-deep); font-size: 1.1rem; }
+  .food-row .place .stars { color: var(--hvar-clay); margin-left: 0.4rem; font-size: 0.9rem; }
+  .food-row .place .meta { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0; }
+  .food-row .desc { font-size: 0.92rem; color: #333; line-height: 1.55; }
+  .food-row .drive { font-size: 0.78rem; color: var(--muted); text-align: right; white-space: nowrap; }
+
+  .activities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1100px; margin: 0 auto; }
+  .activity { background: white; border-radius: 12px; padding: 1.75rem 1.25rem; text-align: center; transition: transform 0.2s; border: 1px solid var(--line); }
+  .activity:hover { transform: translateY(-2px); }
+  .activity .icon { font-size: 2.2rem; margin-bottom: 0.85rem; display: block; }
+  .activity h4 { margin-bottom: 0.5rem; font-size: 1rem; color: var(--hvar-deep); }
+  .activity h4 a { color: inherit; text-decoration: none; }
+  .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+  .nightlife { max-width: 1100px; margin: 0 auto 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .nightlife-col { background: #15161a; color: white; padding: 2rem; border-radius: 16px; }
+  .nightlife-col h3 { color: var(--hvar-clay); margin-bottom: 1.25rem; font-style: italic; }
+  .nightlife-col .venue { padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nightlife-col .venue:last-child { border-bottom: none; }
+  .nightlife-col .venue .vname { font-family: 'Playfair Display', serif; font-weight: 600; color: white; font-size: 1.05rem; }
+  .nightlife-col .venue .vmeta { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
+  .nightlife-col .venue .vdesc { font-size: 0.88rem; color: rgba(255,255,255,0.75); margin-top: 0.5rem; line-height: 1.5; }
+
+  .score-grid { max-width: 1000px; margin: 0 auto 3rem; }
+  .score-row { display: grid; grid-template-columns: 1fr auto 70px; gap: 1rem; padding: 1.1rem 1.5rem; background: white; border-radius: 8px; margin-bottom: 0.6rem; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .score-row .axis { font-weight: 600; color: var(--hvar-deep); }
+  .score-row .axis .tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-left: 0.5rem; font-weight: 500; }
+  .score-row .reason { font-size: 0.88rem; color: #444; max-width: 480px; text-align: right; }
+  .score-row .num { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--hvar-clay); font-weight: 600; }
+  .score-row.total { background: var(--hvar-deep); color: white; }
+  .score-row.total .axis { color: white; }
+  .score-row.total .num { color: white; font-size: 1.9rem; }
+
+  .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
+  .booking .section-header h2 { color: white; }
+  .booking .section-header p { color: rgba(255,255,255,0.7); }
+  .booking .section-header .eyebrow { color: rgba(255,255,255,0.7); }
+  .steps { max-width: 850px; margin: 0 auto; }
+  .step { display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .step:last-child { border-bottom: none; }
+  .step .stepnum { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--hvar-clay); font-style: italic; }
+  .step h4 { color: white; margin-bottom: 0.5rem; }
+  .step p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem; }
+  .step p strong { color: white; }
+  .step .meta-line { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+  .step .meta-line a { color: var(--hvar-stone); text-decoration: none; }
+
+  .adversarial { max-width: 950px; margin: 4rem auto 0; padding: 2.5rem; background: rgba(255,255,255,0.04); border-radius: 16px; border-left: 4px solid var(--hvar-clay); }
+  .adversarial h3 { color: white; margin-bottom: 1rem; }
+  .adversarial p { color: rgba(255,255,255,0.78); font-size: 0.95rem; margin-bottom: 1rem; }
+  .adversarial p strong { color: var(--hvar-clay); }
+
+  .budget-table { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px; }
+  .budget-table .head { text-align: center; margin-bottom: 2.5rem; }
+  .budget-table h3 { color: white; margin-top: 0.5rem; }
+  .budget-table .head p { color: rgba(255,255,255,0.6); margin-top: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 0.95rem; }
+  .budget-table table { width: 100%; border-collapse: collapse; color: white; font-size: 0.95rem; }
+  .budget-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
+  .budget-table th.item { text-align: left; color: rgba(255,255,255,0.6); width: 38%; }
+  .budget-table th.tier { text-align: center; color: rgba(255,255,255,0.85); width: 21%; font-size: 0.92rem; }
+  .budget-table th.standard { color: var(--hvar-clay); font-weight: 700; font-size: 1rem; background: rgba(214,90,60,0.14); }
+  .budget-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .budget-table td.item { color: rgba(255,255,255,0.85); }
+  .budget-table td.tier { text-align: center; }
+  .budget-table td.standard { text-align: center; background: rgba(214,90,60,0.06); }
+  .budget-table td.std-mark { font-weight: 600; }
+  .budget-table td.dim { color: rgba(255,255,255,0.3); }
+  .budget-table tfoot td { padding: 1.5rem 0.75rem 0.5rem; font-family: 'Playfair Display', serif; border-top: 2px solid rgba(255,255,255,0.25); border-bottom: none; }
+  .budget-table tfoot td.total-label { font-size: 1.3rem; color: white; }
+  .budget-table tfoot td.tier { font-size: 1.4rem; color: white; }
+  .budget-table tfoot td.standard { font-size: 1.65rem; color: var(--hvar-clay); font-weight: 700; }
+  .budget-table .footnote { text-align: center; color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-top: 2rem; line-height: 1.6; }
+
+  footer { background: #0d0d0d; color: rgba(255,255,255,0.6); padding: 2.5rem 0; text-align: center; font-size: 0.85rem; }
+
+  @media (max-width: 900px) {
+    .hero-card { grid-template-columns: 1fr; }
+    .hero-card .hero-image { min-height: 280px; }
+    .hero-card .hero-content { padding: 2.5rem 2rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .day { grid-template-columns: 1fr; gap: 1rem; }
+    .day-number .num { font-size: 3rem; }
+    .hotels-grid { grid-template-columns: 1fr 1fr; }
+    .activities { grid-template-columns: repeat(2, 1fr); }
+    .flight-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .only-this-week .grid { grid-template-columns: 1fr; }
+    .wine-block { grid-template-columns: 1fr; }
+    .wine-block .wine-text { padding: 2rem; }
+    .nightlife { grid-template-columns: 1fr; }
+    .topnav .tabs { flex-wrap: wrap; }
+    .container { padding: 0 1.25rem; }
+    .step { grid-template-columns: 60px 1fr; gap: 1rem; }
+    .food-row { grid-template-columns: 1fr; gap: 0.6rem; }
+    .food-row .drive { text-align: left; }
+    .score-row { grid-template-columns: 1fr; }
+    .score-row .reason { text-align: left; }
+    .score-row .num { text-align: left; }
+  }
+  @media (max-width: 600px) {
+    .hotels-grid, .activities { grid-template-columns: 1fr; }
+    .intro-hero .meta { gap: 1.5rem; }
+    .topnav { padding: 0.6rem 0; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .brand { font-size: 1rem; }
+    .topnav .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+    .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    .glance-table, .budget-table { overflow-x: auto; }
+    .glance-table table, .budget-table table { min-width: 540px; }
+    h2 { font-size: 1.8rem !important; }
+    .day-number .num { font-size: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
+    <span class="meta-mini">Itinerary No. 03G · Hvar &amp; Split · <a href="./aug_11_europe.html" style="color: var(--hvar-clay); text-decoration: none;">compare options ↗</a></span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<nav class="topnav">
+  <div class="container">
+    <div class="brand">August 11 → 17, 2026</div>
+    <div class="tabs">
+      <a href="#itinerary" class="tab">Itinerary</a>
+      <a href="#hotels" class="tab">Hotels</a>
+      <a href="#wine" class="tab">Wine</a>
+      <a href="#food" class="tab">Food</a>
+      <a href="#activities" class="tab">Activities</a>
+      <a href="#nightlife" class="tab">Nightlife</a>
+      <a href="#score" class="tab">Score</a>
+      <a href="#book" class="tab">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">Croatia · Dalmatian Coast &amp; Islands · 5 Hotel Nights · Option G</span>
+    <h1>Hvar &amp;<br>Split — <em>Dalmatia Overdrive.</em></h1>
+    <p class="lede">
+      The overpacked pick. Three nights in <strong>Hvar Town</strong> — Riva-front Adriana, sailing the Pakleni Islands, Vis &amp; the Blue Cave, sunset at Hula Hula, the legendary <strong>Carpe Diem boat-to-Stipanska</strong> 5 AM beach club party. Two nights in <strong>Split</strong> at the new Briig Boutique above Bačvice — <strong>Krug ★</strong> (Split's first &amp; only Michelin star, awarded 2025), Diocletian's Palace at night, the Bačvice sand-beach club trio (Tropic, Vanilla, Inbox) until 5 AM. <strong>Velika Gospa</strong> falls on Saturday Aug 15 (Croatia's biggest summer holiday) and the Perseids peak the night of Aug 12→13 from <strong>Sv. Nikola</strong> (Hvar's 628 m peak) — both happen on your week.
+    </p>
+    <div class="meta">
+      <div class="meta-item"><div class="label">Departure</div><div class="value">Tue, Aug 11</div></div>
+      <div class="meta-item"><div class="label">Return</div><div class="value">Mon, Aug 17</div></div>
+      <div class="meta-item"><div class="label">Travelers</div><div class="value">Two</div></div>
+      <div class="meta-item"><div class="label">Origin</div><div class="value">LAX</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="destination" id="itinerary">
+  <div class="container">
+
+    <div class="hero-card">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Option G · Croatia · Dalmatian Islands</span>
+        <h2>Hvar Town +<br>Split</h2>
+        <p class="tagline">The activity-density + nightlife pick. 3 nights island-side at Adriana on Hvar's Riva (rooftop pool, walking to Carpe Diem), 2 nights at Briig Boutique above Bačvice beach in Split. Sailing the Pakleni Islands, a Vis Blue Cave day, Vidova Gora summit on Brač, peka under the bell at Konoba Vrisnik, Tomić Estate's Roman-toga Hektorović dinner, and the only Croatian Michelin star within ferry range: Krug ★ in Split. 82–88°F, low rain, 78°F Adriatic.</p>
+        <div class="stats">
+          <div class="stat"><div class="stat-value">82–88°F</div><div class="stat-label">August High</div></div>
+          <div class="stat"><div class="stat-value">Off Charts</div><div class="stat-label">Nightlife Energy</div></div>
+          <div class="stat"><div class="stat-value">Plavac Mali</div><div class="stat-label">Signature Wine</div></div>
+          <div class="stat"><div class="stat-value">60 min</div><div class="stat-label">Split ↔ Hvar Ferry</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="eyebrow">Getting There</span>
+      <h2>Flight Plan</h2>
+      <p>No US nonstop to SPU. <strong>Lufthansa via FRA or MUC is the workhorse</strong> (19 connecting flights/week LAX→SPU). Vienna (VIE) on Austrian and Istanbul (IST) on Turkish are credible alternatives. Land Split mid-afternoon Wed, Krilo Jet to Hvar by 6 PM.</p>
+    </div>
+    <div class="flight-box">
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">LAX</div><div class="city">Los Angeles · Tue Aug 11 · dep 4:15 PM</div></div>
+        <div class="flight-line"><div class="info">Lufthansa LH453</div><div class="dash"></div><div class="info">11h 25m nonstop</div></div>
+        <div class="flight-airport"><div class="code">MUC</div><div class="city">Munich · Wed Aug 12 · arr 12:40 PM</div></div>
+      </div>
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">MUC</div><div class="city">Munich · 1h 30m layover</div></div>
+        <div class="flight-line"><div class="info">Lufthansa LH1722</div><div class="dash"></div><div class="info">1h 15m</div></div>
+        <div class="flight-airport"><div class="code">SPU</div><div class="city">Split · arr <strong>3:25 PM</strong> · 35 min to ferry port</div></div>
+      </div>
+      <div class="flight-meta">
+        <div class="item"><div class="label">Est. Round-trip</div><div class="val">$900–$1,400</div></div>
+        <div class="item"><div class="label">In Hvar by</div><div class="val">6:30 PM</div></div>
+        <div class="item"><div class="label">Carrier</div><div class="val">Lufthansa</div></div>
+      </div>
+    </div>
+    <p style="text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;">Backup routings: <strong>Lufthansa LAX→FRA→SPU</strong>, <strong>Austrian LAX→VIE→SPU</strong> (1h 30m layover at VIE typical), <strong>Turkish LAX→IST→SPU</strong>, or <strong>Delta/Air France LAX→CDG→SPU</strong>. Cheapest dates flex to Thursday Aug 20 returns. Verify exact 2026 schedules before booking. <a href="https://www.skyscanner.com/routes/lax/spu/los-angeles-international-to-split.html" target="_blank" rel="noopener" style="color: var(--hvar-clay);">Skyscanner LAX→SPU →</a></p>
+
+    <div class="section-header">
+      <span class="eyebrow">Day by Day</span>
+      <h2>The Itinerary</h2>
+      <p>Two bases — <strong>3 nights Hvar Town (Wed–Sat) → 2 nights Split (Sat–Mon)</strong>. Move on Sat morning so Sat night's Bačvice club crawl + Velika Gospa processions in Diocletian's Palace are within walking distance. Krilo Jet Split↔Hvar: 60 min, €25, runs ~20 daily crossings in Aug — book ahead. Days are stacked deliberately to under-promise on logistics and overdeliver on hours.</p>
+    </div>
+
+    <div class="only-this-week">
+      <div class="head">
+        <span class="eyebrow" style="color: var(--hvar-clay);">Only This Week</span>
+        <h3>Don't-Miss Events on Your Exact Dates</h3>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 720px; margin-left: auto; margin-right: auto;">Five things happening only during your week — the Perseids + Sv. Nikola summit night, Velika Gospa, the Hvar Summer Festival (65th edition), the Split Summer Festival's closing weekend, and the Bol Cultural Summer's mid-August program. <strong>Sinjska Alka 2026 is Aug 7–9</strong> (the inland UNESCO knight-tournament) — that's the weekend before you arrive, just miss.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="event-card clay">
+          <div class="head">
+            <span class="icon">☄️</span>
+            <div>
+              <h4 class="clay">Perseid Meteor Shower Peak</h4>
+              <div class="when">Night of <strong>Wed Aug 12 → Thu Aug 13</strong> · arrival night</div>
+            </div>
+          </div>
+          <p><strong>The decade's best Perseid year — new moon, dark sky, ~90 meteors/hr.</strong> Peak rates 02:00–04:00 UTC on Aug 13. Your viewing options: (1) <strong>Sv. Nikola</strong>, Hvar's highest peak at 628 m, 360° panoramic vista from Brač to Vis to the mainland — 3 h hike up from Sveta Nedjelja or a 7 km gravel drive from Stari Grad almost to the summit; (2) <strong>Marjan hill</strong> in Split (178 m, easy 314 stone-step climb from Varoš, sunset closures lift after dark); (3) book a private night sail from Hvar Port to a Pakleni anchor and watch from the deck. <strong>The Pakleni anchor is the play</strong> if you arrive too tired to summit on Day 1.</p>
+          <a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener" class="book-link">Viewing guide →</a>
+        </div>
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">⛪</span>
+            <div>
+              <h4>Velika Gospa · Assumption of Mary</h4>
+              <div class="when"><strong>Sat Aug 15</strong> — national public holiday · also Croatia's biggest summer feast</div>
+            </div>
+          </div>
+          <p>Croatia's most important Catholic + summer holiday. <strong>Processions and high masses in every Dalmatian town</strong> — in Hvar Town at Cathedral of St. Stephen on the Pjaca, in Split at Cathedral of St. Domnius inside Diocletian's Palace (the same square the Romans walked in 300 AD). Stari Grad on Hvar has the most authentic small-town procession. Most shops + non-tourist restaurants close midday; <strong>tourist restaurants are packed</strong> — book Sat dinner 60+ days ahead. Fireworks in Split harbor are likely (verify with the tourist board); Hvar Town's Riva fills with locals + visitors for the procession.</p>
+          <a href="https://www.expatincroatia.com/velika-gospa-assumption-of-mary/" target="_blank" rel="noopener" class="book-link">Velika Gospa guide →</a>
+        </div>
+
+        <div class="event-card olive">
+          <div class="head">
+            <span class="icon">🎭</span>
+            <div>
+              <h4 class="olive">65th Hvar Summer Festival</h4>
+              <div class="when">Runs <strong>Jun 21 → Sept 9, 2026</strong> — overlaps your full Hvar stay</div>
+            </div>
+          </div>
+          <p>The festival is in its 65th year — classical concerts, klapa singing (the polyphonic Dalmatian a cappella tradition), open-air theatre, dance, and visual arts staged at historical sites including <strong>St. Stephen's Square (the Pjaca), the Franciscan Monastery courtyard, and the Cathedral</strong>. Programs land late spring; expect 2–3 evening events per week throughout August. Tickets €15–€40; some monastery concerts are sold out 30 days ahead. <strong>Aim for a Franciscan Monastery klapa or chamber concert</strong> — the acoustic in that 15th-century courtyard is the trip-defining sound experience.</p>
+          <a href="https://hvarsummerfestival.hr/en/programme/" target="_blank" rel="noopener" class="book-link">Festival program →</a>
+        </div>
+
+        <div class="event-card stone">
+          <div class="head">
+            <span class="icon">🎼</span>
+            <div>
+              <h4 class="stone">72nd Split Summer Festival closing weekend</h4>
+              <div class="when">Runs <strong>mid-Jul → mid-Aug 2026</strong> — final week falls on your Split stay</div>
+            </div>
+          </div>
+          <p>The festival is the Croatian counterpart to Verona's open-air operas — opera, ballet, drama, and concerts staged at the <strong>Peristyle</strong> (Diocletian's central square, columns + dome of the Vestibule looming overhead), Meštrović Gallery (the Adriatic's most-collected sculptor), and Bačvice. The 2026 program includes a Verdi <strong>Don Carlo</strong> premiere at the Peristyle. Performances run 21:30 — you eat at 19:30, watch at 21:30, post-show at the Riva. Tickets €30–€90, sold out 30–60 days in advance for the marquee dates. <strong>If you score a Peristyle night in your two-day Split window, build the evening around it.</strong></p>
+          <a href="https://www.splitsko-ljeto.hr/en/" target="_blank" rel="noopener" class="book-link">Festival site →</a>
+        </div>
+
+        <div class="event-card clay">
+          <div class="head">
+            <span class="icon">⛵</span>
+            <div>
+              <h4 class="clay">Carpe Diem Beach · Stipanska boat-party nights</h4>
+              <div class="when">Nightly through August · boats from Hvar Port from <strong>midnight, party till 5 AM</strong></div>
+            </div>
+          </div>
+          <p>The reason Hvar is on every European 20-something's summer list. Carpe Diem Bar on the Riva (open from late afternoon, sunset cocktails) is the launching point. After 23:00 the crowd queues for the speedboat shuttle to <strong>Stipanska</strong> — a Pakleni island bay that becomes Carpe Diem Beach Club, with house/electronic DJs from across Europe spinning under floodlit pines until 5 AM. The return shuttle runs continuously through the night. <strong>Friday Aug 14</strong> is the night to do it — Velika Gospa Saturday means the crowd skews late + international, and you have all of Saturday in Split to recover. Cover €30–€50 + drinks. Bookable via WhatsApp +385 99 446 8468.</p>
+          <a href="https://beach.cdhvar.com/" target="_blank" rel="noopener" class="book-link">Carpe Diem Beach →</a>
+        </div>
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">🏛️</span>
+            <div>
+              <h4>Bol Cultural Summer · Brač</h4>
+              <div class="when">Runs <strong>through August 2026</strong> — programmed evening events in Bol</div>
+            </div>
+          </div>
+          <p>Smaller-scale than Hvar or Split's festivals but real — concerts and exhibitions at the <strong>Bol Riva</strong> and the Dominican Monastery. Slot into a Brač day trip (Zlatni Rat beach + Vidova Gora summit at 780 m, the highest peak on any Adriatic island) — book ferry Hvar→Bol via Jelsa, ~32 min, €10–€15 each way, ~29 weekly crossings in summer. Stina Winery's tasting room is on the Bol Riva — 4 PM–midnight in summer — make the day a Vidova Gora morning, Zlatni Rat afternoon, Stina sundown.</p>
+          <a href="https://www.bolcroatia.com/" target="_blank" rel="noopener" class="book-link">Bol guide →</a>
+        </div>
+
+      </div>
+
+      <div class="bonus-callout">
+        <h4>⚠️ What you'll <em>just</em> miss — Sinjska Alka 2026 (Aug 7–9)</h4>
+        <p>The UNESCO-listed knights' equestrian tournament in Sinj (1 h inland from Split) — knights ride at full gallop trying to lance an iron ring on horseback. Runs Aug 7–9, 2026 (the festival, with the main tournament on the first Sunday of August). You arrive Wed Aug 12 — missed by 3 days. <strong>If you flex departure 4 days earlier, you could include the main Sunday tournament + still run the full Hvar week</strong>. Skip otherwise; the calendar simply doesn't align on the booked dates. Tickets €10–€30 for the main grandstand.</p>
+      </div>
+    </div>
+
+    <div class="glance-table">
+      <table>
+        <thead>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner + Late</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="daynum">1</td><td>Wed Aug 12</td><td>Arrive · Perseids ☄️</td><td>SPU 3:25 PM · Krilo Jet to Hvar · check Adriana · sunset at Hula Hula · midnight Pakleni boat for Perseids</td><td><strong>Gariful</strong> on the Riva · Carpe Diem post-dinner</td></tr>
+          <tr><td class="daynum">2</td><td>Thu Aug 13</td><td>Pakleni sail day</td><td>Full-day private skipper Hvar Town → Palmižana → Jerolim → Stipanska swim/snorkel/cliff-jump · Toto's lunch on Palmižana</td><td><strong>Macondo</strong> lobster · Kiva Bar crawl</td></tr>
+          <tr><td class="daynum">3</td><td>Fri Aug 14</td><td>Vis Blue Cave + Wine</td><td>Speedboat to Biševo Blue Cave + Stiniva + Green Cave + Vis Lipanović underground winery · sunset back</td><td><strong>Konoba Vrisnik</strong> peka (24h ahead) · <strong>Carpe Diem boat to Stipanska 1 AM → 5 AM</strong></td></tr>
+          <tr><td class="daynum">4</td><td>Sat Aug 15 ⛪</td><td>Hvar → Split · Velika Gospa</td><td>Sleep in · Krilo Jet noon to Split · check Briig · Velika Gospa procession at Cathedral of St. Domnius · Marjan sunset</td><td><strong>Krug ★</strong> 9-course · Bačvice crawl Tropic→Vanilla</td></tr>
+          <tr><td class="daynum">5</td><td>Sun Aug 16</td><td>Brač day + Split Summer Festival</td><td>Krilo Jet to Bol · Vidova Gora 780 m summit (Roman trail, 5 h round trip) · Zlatni Rat beach · Stina Winery sundown · ferry back</td><td><strong>Zoi</strong> on the Riva · Peristyle festival concert · Marvlvs Library jazz</td></tr>
+          <tr><td class="daynum">6</td><td>Mon Aug 17</td><td>Departure</td><td>Slow morning · Diocletian's Palace cellars + Cathedral bell tower · transfer SPU</td><td>On the plane</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="itinerary">
+
+      <div class="day">
+        <div class="day-number"><div class="num">01</div><div class="date">Wed Aug 12</div></div>
+        <div class="day-content">
+          <h3>Arrive Split → Krilo Jet to Hvar → Perseids at sea</h3>
+          <ul>
+            <li><strong>3:25 PM</strong> Land SPU · Lufthansa LH1722 from Munich · prearranged taxi or shuttle to Split ferry port (~25 min, €25)</li>
+            <li><strong>5:00 PM</strong> Krilo Jet (Kapetan Luka) catamaran Split → Hvar Town · 60 min · €25/pp · <a href="https://krilo.hr/en/schedule" target="_blank" rel="noopener">krilo.hr</a> — book 30+ days ahead, August crossings sell out</li>
+            <li><strong>6:15 PM</strong> Arrive Hvar Town Riva · 3-min walk to <a href="https://www.suncanihvar.com/adriana" target="_blank" rel="noopener">Adriana Hvar Spa Hotel</a> · check Junior Suite, sea-view balcony, rooftop pool already glowing</li>
+            <li><strong>7:00 PM</strong> Sunset cocktails at <strong>Hula Hula Beach Bar</strong> (15-min walk west along the seafront) — the ritual sundowner; Aperol spritz €14, the playlist shifts from beach-chill to house at 6:30 PM, sunset ~20:00 mid-Aug</li>
+            <li><strong>9:00 PM</strong> Dinner at <strong><a href="https://hvar-gariful.hr/" target="_blank" rel="noopener">Gariful</a></strong> — Hvar Town's grande-dame Riva-front seafood (since 1981, own 7-boat fishing fleet). Joann: order the chateaubriand or the truffle pasta; you: the lobster ravioli + grilled fish. Reserve 45 days out.</li>
+            <li><strong>11:30 PM</strong> Carpe Diem Bar on the Riva for a long nightcap · this is the launching point, but tonight it's the warm-up, not the boat night</li>
+            <li><strong>12:30 AM</strong> Pre-arranged Pakleni private night-sail (~€350, 4 hours, two-person · Hvar Boats or Hvar Adventure) anchors in a dark bay off Sv. Klement for the Perseid peak — moonless sky, deck blanket, peak rates 02:00–04:00 UTC. Back to Riva 4:30 AM.</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the night sail. Take the 22:00 ladder-walk to the Spanish Fortress (Fortica) — it's lit and open till 22:00 in summer, the elevation (94 m) gives you the same dark-sky view minus the boat charter. €10 entry. Skip Carpe Diem entirely.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap (negligible probability — Aug avg 2 rain days):</strong> Stay at Adriana, Sensori Spa massage 21:00, late dinner at Adriana's Butchery &amp; Wine.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Swap the Pakleni night sail for a hike up to Sv. Nikola (628 m, Hvar's highest) starting from Stari Grad at 22:00 — drive (or taxi €60) the gravel road to within 1 km of summit, walk by headlamp, summit at midnight. The 360° view of Brač + Vis + the mainland is unmatched.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">02</div><div class="date">Thu Aug 13</div></div>
+        <div class="day-content">
+          <h3>Pakleni Islands private sail · Toto's lunch · Macondo · Kiva</h3>
+          <ul>
+            <li><strong>10:30 AM</strong> Recovery breakfast at Adriana's rooftop (organic buffet, included) — slow pace required</li>
+            <li><strong>11:30 AM</strong> Walk to Hvar Town Riva · meet your private skipper for a <strong>full-day Pakleni Islands sail</strong> (8 hours, €400–€770 private 6–12 pax via <a href="https://www.hvarboats.com/en/private-tours/pakleni-islands-private-boat-tour" target="_blank" rel="noopener">HvarBoats</a> or <a href="https://hvar-adventure.com/" target="_blank" rel="noopener">Hvar Adventure</a>). Hits <strong>Palmižana → Jerolim → Stipanska → Mlini → secluded coves</strong></li>
+            <li><strong>1:30 PM</strong> Anchor at Palmižana bay (Sv. Klement, the largest Pakleni island) · swim ashore · lunch at <a href="https://total-croatia-news.com/destinations/destinations-hvar/pakleni-islands-restaurants/toto-s-restaurant-palmizana/" target="_blank" rel="noopener">Toto's</a> under the pines — grilled fish, octopus salad. For Joann: the steak or the truffle pasta. Cash + cards.</li>
+            <li><strong>3:30 PM</strong> Re-board · snorkel + cliff-jump at <strong>Stipanska bay</strong> (this is where Carpe Diem Beach lives — afternoons are public + free, the night cover-charge kicks in after 22:00)</li>
+            <li><strong>6:00 PM</strong> Return to Hvar Town Riva · sun-burned, salt-crusted, perfect</li>
+            <li><strong>7:00 PM</strong> Adriana for a shower, an hour at the Sensori Spa rooftop, change</li>
+            <li><strong>9:30 PM</strong> Dinner at <strong><a href="https://www.macondo.com.hr/" target="_blank" rel="noopener">Macondo</a></strong> (stone-walled alley in the old town, no online reservations — walk in at 9 PM or call same-day) — lobster pasta is legendary, also octopus carpaccio and grilled scampi. Joann: steak or veal. Cash only.</li>
+            <li><strong>11:30 PM</strong> Old-town crawl: <strong>Kiva Bar</strong> (narrow stone-walled, packed by midnight, tequila boom shots, sing-along playlist) → <strong>Pink Champagne</strong> (underground luxe club just past the main square, bottle-service energy) → optionally hike up to <strong>Top Bar at Adriana</strong> rooftop for a quieter finish</li>
+            <li><strong>2:30 AM</strong> Walk home along the empty Riva</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Replace the full Pakleni sail with a half-day kayak tour from Hvar Adventure to Jerolim + back (4 h, 8.5 km, €50/pp, lunch + snorkel included). Afternoon at Bonj 'les bains' beach club cabana (€150 day cabana for two, food + drink delivered to sunbed).</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Add scuba diving at the start of the day — <a href="https://hvardiving.com/" target="_blank" rel="noopener">Aqualis Diving Center Hvar</a> 8 AM morning dive at Pakleni reef (€57 for certified, €130 intro for non-certified), shower, then catch the boat at noon.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Drive (taxi €30) to <strong>Stari Grad</strong> — UNESCO Stari Grad Plain (oldest Hellenic agricultural field-system in Europe, still in use), oldest town in Croatia, Tvrdalj fortified poet's-villa of Hektorović. Lunch at Konoba Bonaca. Back to Hvar by 5 PM.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">03</div><div class="date">Fri Aug 14</div></div>
+        <div class="day-content">
+          <h3>Vis Blue Cave full day · peka dinner · <em>Carpe Diem boat to Stipanska, 1 AM → 5 AM</em></h3>
+          <ul>
+            <li><strong>10:00 AM</strong> Mandatory 10:00 check-in at Hvar Port for the <strong>Blue Cave + Vis full-day speedboat tour</strong> (~8 hours, €85–€100/pp peak season via <a href="https://www.hvar.com/blue-cave-tour-croatia/" target="_blank" rel="noopener">hvar.com</a> or <a href="https://rentaboathvar.com/" target="_blank" rel="noopener">Mario Boat Tours</a>; private speedboat option €1,200–€1,800 for the day, 4–6 pax). Departure 10:30 AM.</li>
+            <li><strong>11:30 AM</strong> <strong>Biševo Blue Cave (Modra Špilja)</strong> — boat transfer onto a smaller punt, 5-min cave entry, the famous 10–11 AM blue-glow window. Entry €24 high season, cash on the dock.</li>
+            <li><strong>12:30 PM</strong> <strong>Green Cave</strong> on Vis south side (swim inside the cave, €8–€12 entry) · then <strong>Stiniva Cove</strong> for lunch and swim (the dramatic pinch-mouth limestone cove, ranked best beach in Europe 2016 — lunch at the konoba above the cove)</li>
+            <li><strong>3:30 PM</strong> <strong>Vis Town</strong> walking 90 min · then up to <a href="https://lipanovic.com/en/" target="_blank" rel="noopener">Vinarija Lipanović</a> — Antonio Lipanović's wine cellar inside a former Yugoslav-army Tito-era tunnel (only military-tunnel cellar in the world). Vugava + Plavac Mali tasting, 5 wines + olive oil + cheese · €40/pp · reserve ahead.</li>
+            <li><strong>6:00 PM</strong> Return speedboat to Hvar via the Pakleni · arrive 7:00 PM</li>
+            <li><strong>9:00 PM</strong> Dinner at <strong><a href="https://restaurantguru.com/Konoba-Vrisnik" target="_blank" rel="noopener">Konoba Vrisnik</a></strong> in Vrisnik village above Jelsa (taxi from Hvar Town €40, 25 min) — Mrs. Julija's family-run hearth kitchen. <strong>You must call yesterday to order the octopus or lamb peka 24 hours ahead</strong>; the under-the-bell cook starts at 6 PM. House Plavac, garden wine, candlelit terrace. Cash preferred.</li>
+            <li><strong>11:30 PM</strong> Taxi back to Hvar Town Riva</li>
+            <li><strong>12:30 AM</strong> Pregame at Carpe Diem Bar (Riva) · 1 cocktail + booking confirmation</li>
+            <li><strong>1:00 AM</strong> Board the <strong>Carpe Diem Beach speedboat shuttle to Stipanska</strong> — the iconic Adriatic late-night boat party. Bay floodlit, pine torches, European house/electronic DJs spinning till 5 AM. Cover €30–€50/pp, drinks separate, table reservations available via WhatsApp +385 99 446 8468. Return shuttle runs continuously.</li>
+            <li><strong>5:00 AM</strong> Last shuttle back to Hvar · sunrise walk down the Riva to Adriana</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Drop the Stipanska boat night. Have the peka dinner, then walk back to Adriana for the rooftop Top Bar — sunset-extended cocktail menu, the same DJ but at 1/10 the intensity. Sleep at 1 AM.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Trade the public group speedboat for a <strong>private 5-island full-day from Hvar</strong> (Blue Cave + Stiniva + Pakleni + Hvar coves + Vis Town, €1,293 for 8 pax via Click&amp;Boat) — same itinerary, 8 hours, no schedule-sharing with 24 strangers, swim wherever you want. Skip Vrisnik; reserve Falko Beach Bar dinner instead (under the pines, 15-min walk west of Hvar — Mediterranean small plates, more nightlife-adjacent for the post-dinner Carpe Diem run).</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Blue Cave tours cancel in moderate-or-higher swell. Plan B: drive (taxi €40) to Tomić Estate in Jelsa for the <strong>Hektorović Roman-feast experience</strong> — 2.5 hours, ancient Roman togas, paired tasting with local delicacies, €120/pp · reserve 1 day ahead at +385 21 768 160. Then peka dinner at Vrisnik later.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">04</div><div class="date">Sat Aug 15</div></div>
+        <div class="day-content">
+          <h3>Velika Gospa · Hvar → Split · Krug ★ · Bačvice club crawl</h3>
+          <ul>
+            <li><strong>10:30 AM</strong> Slow recovery breakfast at Adriana</li>
+            <li><strong>11:30 AM</strong> Check out · 3-min walk to Hvar Town Riva ferry dock</li>
+            <li><strong>12:30 PM</strong> Krilo Jet Hvar → Split · 60 min</li>
+            <li><strong>1:45 PM</strong> Arrive Split ferry terminal · taxi (or 12-min walk) to <a href="https://briig-boutique.split-dalmatia-hotels.com/en/" target="_blank" rel="noopener">Briig Boutique Hotel</a> above Bačvice beach · check in · sea-view room with balcony, rooftop pool deck overlooks the Bačvice cove</li>
+            <li><strong>3:00 PM</strong> Walk into Diocletian's Palace (15 min) — by 3:30 PM the rose-light hits the inside of <strong>Cathedral of St. Domnius</strong>. On Velika Gospa, the cathedral runs a <strong>solemn High Mass at 18:00</strong>; until then you can climb the bell tower (€7, 12 min up, the best Old Town view) and walk the cellars (€9, the cool damp Roman vaults under Diocletian's apartments)</li>
+            <li><strong>5:30 PM</strong> Aperitivo at <strong>Marvlvs Library Jazz Bar</strong> (Peristyle-adjacent, Croatian wines, jazz nights — get the Pošip)</li>
+            <li><strong>6:00 PM</strong> Catch the Cathedral Velika Gospa procession + Mass (~1 h) — non-Catholics are welcome to observe; the choral chant in the 17th-century baroque interior is the experience even if you skip Communion</li>
+            <li><strong>7:30 PM</strong> Walk west to <strong>Marjan hill</strong> for sunset — 314 stone steps from the Varoš district (10-min stairs) to the first viewpoint (Vidilica). Sun drops behind the Adriatic islands ~20:05.</li>
+            <li><strong>9:00 PM</strong> Dinner at <strong><a href="https://krugrestaurantsplit.com/" target="_blank" rel="noopener">Krug ★</a></strong> — <strong>Split's first &amp; only Michelin star</strong> (awarded 2025). 12-seat L-shaped counter around an open kitchen, contemporary fine dining, hyper-seasonal. Choose the <strong>9-course large tasting menu</strong> (~€135, wine pairing ~€85); the 5-course is for less-committed nights. Reserve 60+ days out, CC required, cancellable to 24 h. Reservation cancellable to 24h.</li>
+            <li><strong>11:30 PM</strong> Walk down to <strong>Bačvice beach</strong> (5 min from Krug) for the trio: <strong>Tropic Club</strong> ("Equador" to the locals — first-floor terrace over the Adriatic, opens 23:00, runs to 4–5 AM) → <strong>Vanilla Club</strong> (terrace + underground electronic) → optional <strong>Inbox Club</strong> back in Diocletian's Palace area. Bačvice clubs are <em>on the sand</em> — barefoot dancing till sunrise.</li>
+            <li><strong>4:00 AM</strong> Walk home along the Riva to Briig (10 min along the harbor, well-lit)</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the club crawl. Late post-Krug nightcap at the Briig rooftop pool (bar runs to midnight in summer). Marvlvs Library is a 7-min walk for a quieter jazz finish.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Swap the Krug 9-course for a private guided walking tour of Diocletian's Palace at 19:00 (the night-tour is glorious — €60/pp, 90 min, ends at the Peristyle for the Split Summer Festival evening performance, then walk to a Riva dinner at <a href="https://krugrestaurantsplit.com/" target="_blank" rel="noopener">Krug's smaller a la carte room</a> at 22:00 — they hold a few late-late slots specifically for festival-goers).</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Velika Gospa indoors. Skip Marjan. Spend 2 h inside Diocletian's Cellars and the Cathedral. Hotel Cornaro rooftop hot tub instead of Marjan sunset (covered terrace).</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">05</div><div class="date">Sun Aug 16</div></div>
+        <div class="day-content">
+          <h3>Brač summit + Zlatni Rat + Stina Winery · Zoi ★ recommended · Peristyle festival</h3>
+          <ul>
+            <li><strong>7:30 AM</strong> Early Krilo Jet Split → Bol on Brač (~50 min, €15). Bring hiking shoes + swimsuit packed in a day bag.</li>
+            <li><strong>9:00 AM</strong> Hike <strong><a href="https://www.alltrails.com/trail/croatia/split-dalmatia/bol-vidova-gora" target="_blank" rel="noopener">Vidova Gora</a></strong> (780 m — <strong>the highest peak on any Adriatic island</strong>). From Bol it's 10.6 km round trip, 715 m gain, 3–5 h total. The trail follows the macadam road then the Vela staza (Roman path) through pine forest. Summit views of Hvar across the channel, Vis behind, the Dalmatian coast east. Take it slow — the path is shaded most of the way but August midday is brutal above the tree line.</li>
+            <li><strong>1:00 PM</strong> Back in Bol · taxi to <strong>Zlatni Rat</strong> ("Golden Cape") — Croatia's iconic shape-shifting pebble tongue. Swim, ~2-h beach, lunch at the konoba behind the beach (grilled fish, Joann: pasta)</li>
+            <li><strong>4:00 PM</strong> Walk back to Bol Riva (20 min along the pine-shaded promenade)</li>
+            <li><strong>5:00 PM</strong> <strong><a href="https://stina-vino.hr/en/wine-tasting/" target="_blank" rel="noopener">Stina Winery</a></strong> tasting room (Riva 16, Bol — 4 PM–midnight summer hours, walk-in OK but call ahead for the full sit-down 5-wine flight, €25/pp). Plavac Mali, Pošip, Vugava, Tribidrag (Croatia's Zinfandel ancestor). Sea-facing tasting room directly on the Bol waterfront.</li>
+            <li><strong>7:00 PM</strong> Krilo Jet Bol → Split (~50 min, €15)</li>
+            <li><strong>8:30 PM</strong> Back at Briig · quick shower</li>
+            <li><strong>9:30 PM</strong> Dinner at <strong><a href="https://www.zoi.hr/" target="_blank" rel="noopener">Zoi</a></strong> on the Riva (Michelin-recommended, terrace inside the Diocletian Palace southern wall) — chef Alberto Garcia Perez, Spanish-Croatian crossover, 7-course ECHO tasting €135 in season. Slightly more theatrical / palace-romantic than Krug.</li>
+            <li><strong>11:45 PM</strong> Walk to a Split Summer Festival concert at the <strong>Peristyle</strong> — opera, orchestra, or ballet. Performance starts 21:30 / 22:00, you'll catch the second half if attending; on a non-Festival night, instead head to <strong>Marvlvs Library Jazz Bar</strong> for a candlelit nightcap</li>
+            <li><strong>1:30 AM</strong> Optional: Bačvice for one set at Tropic on the way home (it's literally on your walk back to Briig)</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Vidova Gora. Take a slower Brač day — Bol Riva, snorkel at Zlatni Rat, lunch + Stina + the small Bol fishermen's quarter. Same ferry schedule. Dinner at <strong>Bokeria Kitchen &amp; Wine</strong> (12-min walk from Briig, modern Mediterranean in the old fish-market hall, oxtail risotto + sea bass + Pošip pairing).</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Swap Brač for <strong>Korčula day trip</strong> by fast ferry (2 h each way) — Marco Polo's reputed birthplace, the Moreška sword dance Monday night isn't an option Sunday but Korčula's walled old town + LD Restaurant ★ for lunch is. Long day, you arrive back 21:00 — late dinner at Zoi at 22:00.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Vidova Gora is brutal in rain (limestone trail gets slick, no shelter near summit). Stay in Split — <strong>Krka National Park</strong> day trip (1.5 h drive, €30 entry June–Sept, Skradinski Buk wooden boardwalk through cascades; swimming forbidden at the Buk since 2021 but stunning). Back by 5 PM. Dinner at Zoi.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">06</div><div class="date">Mon Aug 17</div></div>
+        <div class="day-content">
+          <h3>Slow morning · Diocletian's Palace deep dive · Departure</h3>
+          <ul>
+            <li><strong>9:30 AM</strong> Breakfast on the Briig rooftop deck overlooking Bačvice</li>
+            <li><strong>10:30 AM</strong> Diocletian's Palace last walk — anything missed Saturday. The Substructures (Roman cellars under the palace, where <em>Game of Thrones</em> filmed Daenerys's dragon chamber) are the standout if you skipped them.</li>
+            <li><strong>12:00 PM</strong> Quick lunch at <strong>Villa Spiza</strong> (no reservations, daily chalkboard, a Split locals' favorite — sweetbreads, schnitzel, grilled anchovies, all under €15) or <strong>Bokeria Kitchen &amp; Wine</strong> on the way</li>
+            <li><strong>2:00 PM</strong> Taxi to SPU (~25 min, €25)</li>
+            <li><strong>4:35 PM</strong> Lufthansa LH1723 SPU → MUC (1h 15m)</li>
+            <li><strong>7:25 PM</strong> Lufthansa LH452 MUC → LAX (11h 50m)</li>
+            <li><strong>10:15 PM same day</strong> Arrive LAX (gain 9 hours on the return)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="hotels">
+      <span class="eyebrow">Where to Stay</span>
+      <h2>Two Bases · 3 + 2 Split</h2>
+      <p>Hvar Town first (3 nights Wed–Sat for the sailing days + the Carpe Diem night), then Split (2 nights Sat–Mon for Velika Gospa in the Palace + Krug ★ + Bačvice). The 60-min Krilo Jet on Saturday noon is the move. Below are the picks for each base plus a quieter "second Hvar" alternative if you want to swap one Hvar Town night for a Stari Grad Relais &amp; Châteaux night.</p>
+    </div>
+    <div class="hotels-grid">
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(12,110,156,0.25), rgba(214,90,60,0.40)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80');">
+          <span class="hotel-tier">★ Hvar · 3 nights</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Adriana Hvar Spa Hotel</h4>
+          <div class="loc">Hvar Town Riva · rooftop seawater pool · Sensori Spa · Top Bar</div>
+          <p>The Riva-front Hvar Town base — 50 deluxe rooms + 9 suites, year-round rooftop seawater pool with bar, Sensori spa, <strong>Top Bar</strong> rooftop cocktail terrace (sunset over the marina + Pakleni Islands). Three-minute walk to Carpe Diem Bar, the ferry dock, the old town, Macondo. <strong>Request a sea-view Junior Suite with a Riva-facing balcony.</strong> Sun-up to sun-up the trip's central node.</p>
+          <div class="hotel-meta">
+            <span class="price">$500–$1,200 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.suncanihvar.com/adriana" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(214,90,60,0.30), rgba(193,168,117,0.40)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80');">
+          <span class="hotel-tier">★ Split · 2 nights</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Briig Boutique Hotel</h4>
+          <div class="loc">Split · above Bačvice beach · 10-min walk to Diocletian's Palace</div>
+          <p>The newest 5-star boutique pick in Split (~2022 opening). <strong>Rooftop pool + sun deck overlooking Bačvice + the islands</strong>, sea-view rooms with balconies, spa with sauna + hot tub. The perfect Bačvice club-crawl base — you walk downstairs to Tropic/Vanilla, and 10 min the other way to Krug, the Cathedral, and the Riva. Modern boutique design, not heritage-stone, which suits the contemporary Split scene.</p>
+          <div class="hotel-meta">
+            <span class="price">$330–$600 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://briig-boutique.split-dalmatia-hotels.com/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(107,122,63,0.30), rgba(193,168,117,0.40)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80');">
+          <span class="hotel-tier">Alt · Quieter Hvar</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Maslina Resort (Stari Grad)</h4>
+          <div class="loc">Stari Grad bay · Relais &amp; Châteaux · 30-min taxi from Hvar Town</div>
+          <p>Croatia's only R&amp;C 5-star, on Maslinica Bay in a pine + olive grove · 50 rooms + 3 villas, infinity pool, private beach, spa. Sustainability-first, mindful-luxury Mediterranean. <strong>The pick if you'd rather sleep away from the Hvar Town nightlife</strong> and trade one party night for true rest. From here you taxi (~€40, 30 min) into Hvar Town for Pakleni sails + Carpe Diem and back. Pricey at $1,500+/night peak.</p>
+          <div class="hotel-meta">
+            <span class="price">$1,500–$2,500 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.maslinaresort.com/" target="_blank" rel="noopener" class="book-link">Maslina direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(12,110,156,0.30), rgba(193,168,117,0.40)), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80');">
+          <span class="hotel-tier">Hvar value · alt</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Palace Elisabeth Hvar</h4>
+          <div class="loc">Hvar Town · LHW · 13th-c palace, 1899 Empress Sisi spa-hotel restoration</div>
+          <p>The Sunčani Hvar group's heritage pick (sister to Adriana). Directly above City Hall on the main square (Pjaca), Leading Hotels of the World, 45 rooms + suites, indoor pool, multiple terraces. <strong>The history is denser than Adriana</strong> (originally the 1899 Spa Hotel Empress Elisabeth, after Austria's Sisi) but the rooftop scene + pool is less of a destination. Choose if you prefer heritage stone over Adriana's marina-rooftop scene.</p>
+          <div class="hotel-meta">
+            <span class="price">$450–$900 / night</span>
+            <span>★★★★★ LHW</span>
+          </div>
+          <a href="https://www.suncanihvar.com/palace-elisabeth" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(214,90,60,0.25), rgba(107,122,63,0.40)), url('https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80');">
+          <span class="hotel-tier">Split alt · in Palace</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Cornaro Hotel</h4>
+          <div class="loc">Split · 2-min walk to Peristyle · rooftop hot tub + bar</div>
+          <p>The "inside-the-Palace" Split pick — directly within Diocletian's walls. <strong>Rooftop terrace with hot tub + lounge bar, panoramic city views</strong>, Finnish sauna, on-site spa. The trade vs. Briig: you wake up inside UNESCO; you walk 12 min to Bačvice for the clubs (vs. 1 min from Briig). Pick Cornaro if the Festival concerts + Cathedral + Palace nights are your priority over Bačvice.</p>
+          <div class="hotel-meta">
+            <span class="price">$200–$450 / night</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.cornarohotel.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(12,110,156,0.30), rgba(214,90,60,0.40)), url('https://images.unsplash.com/photo-1455587734955-081b22074882?w=800&q=80');">
+          <span class="hotel-tier">Split alt · resort</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Le Méridien Lav, Split</h4>
+          <div class="loc">Podstrana · 8 km south of Split · 800 m private beach · Marriott</div>
+          <p>The only true full-resort 5-star in the Split area. 378 rooms + suites, all with floor-to-ceiling sea-view balconies, indoor + outdoor pools, full spa, private beach + water sports, tennis. <strong>The trade-off:</strong> 15-min taxi (~€20–€25) each way to Split center for dinner + clubs, which is fine for a couple's stay but adds friction every late night. Pick if you want a beach-resort base over an urban one.</p>
+          <div class="hotel-meta">
+            <span class="price">$300–$800 / night</span>
+            <span>★★★★★ Marriott</span>
+          </div>
+          <a href="https://www.marriott.com/en-us/hotels/spumd-le-meridien-lav-split/overview/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="wine">
+      <span class="eyebrow">The Glass</span>
+      <h2>Plavac Mali, Pošip, Vugava</h2>
+      <p>Dalmatian wine is the trip's quiet upside surprise — small production, indigenous varieties, almost zero export. <strong>Plavac Mali</strong> (a Zinfandel cousin, the king of Dalmatian reds), <strong>Pošip</strong> (a citrus-mineral white from Korčula), and <strong>Vugava</strong> (Vis-only, aromatic) are the bottles you'll only really drink at the source. From Hvar Town you have two natural target zones: <strong>Hvar's own south-coast cliff vineyards</strong> (Sveta Nedjelja, Ivan Dolac) and a <strong>Vis day add-on</strong> (Lipanović's military-tunnel cellar). Pelješac peninsula's Dingač/Postup vineyards are the trophy zone but 3+ h ferry + drive from Hvar — skip for this trip.</p>
+    </div>
+
+    <div class="wine-block hvar-wine">
+      <div class="wine-image"></div>
+      <div class="wine-text">
+        <span class="eyebrow">Hvar Island · Plavac Mali heartland</span>
+        <h3>Steep South-Coast Vineyards</h3>
+        <p>Hvar's southern slopes — Sveta Nedjelja, Ivan Dolac, Zavala — are mainland-style steep, sun-baked Plavac Mali terroir. The wineries here are small, often family-run, almost all accept by appointment only. <strong>Tomić</strong> at Jelsa is the showstopper for visitor-experience (Roman-toga Hektorović dinner); <strong>Zlatan Otok</strong> at Sveta Nedjelja is the cult name for the bottle.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://vina-tomic.com/en/" target="_blank" rel="noopener">Tomić Estate Bastijana ↗</a></div>
+            <div class="desc">Jelsa · Andro Tomić (Croatia's most-decorated winemaker) · 2.5-h Roman-style Hektorović toga feast (€120/pp, 12:00–18:00 bookings, 1 day ahead by phone +385 21 768 160 or bastijana@gmail.com)</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://zlatanotok.hr/homepage/" target="_blank" rel="noopener">Zlatan Otok (Bilo Idro) ↗</a></div>
+            <div class="desc">Sveta Nedjelja · <strong>only underwater wine cellar in the world</strong> (200 ft below sea level, seabed window in the tasting room) · season May 15–Oct 15 · reservation required, full payment at booking · Plavac Grand Cru + Crljenak (Croatia's original Zinfandel)</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://lipanovic.com/en/" target="_blank" rel="noopener">Vinarija Lipanović (Vis) ↗</a></div>
+            <div class="desc">Vis Town · Antonio Lipanović · world's only wine cellar inside a former Tito-era military tunnel · Vugava (indigenous Vis white) + Plavac · €40/pp full flight · book ahead · fits inside the Vis Blue Cave Day 3 itinerary</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://visithvar.hr/eat-and-drink/autochtone-wineries/" target="_blank" rel="noopener">Plančić (Vrbanj) ↗</a></div>
+            <div class="desc">Vrbanj village, central Hvar · long-running small family winery · less polished tasting room than Tomić, more raw + local · book via Hvar tourist board contacts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wine-block mainland" style="margin-top: 2rem;">
+      <div class="wine-image" style="order: 2;"></div>
+      <div class="wine-text" style="order: 1;">
+        <span class="eyebrow">Brač + day-trippable mainland</span>
+        <h3>Stina + Pelješac (if you stretch)</h3>
+        <p>Brač's <strong>Stina</strong> at Bol is the most visitor-friendly Adriatic-island winery — sea-front tasting room, walk-in OK, fits perfectly into a Vidova Gora + Zlatni Rat day. The Pelješac peninsula (Dingač + Postup vineyards — Croatia's grand-cru Plavac zone, cliffside terraces) is the prestige pour but a 3-h+ ferry+drive each way from Hvar — only viable if you swap a full day for it.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://stina-vino.hr/en/wine-tasting/" target="_blank" rel="noopener">Stina Winery ↗</a></div>
+            <div class="desc">Bol Riva 16 (Brač) · 1903 original, 2009 modern revival · Plavac + Pošip + Vugava + Tribidrag · summer hours 16:00–24:00 walk-in friendly · €25/pp 5-wine flight · the Sunday Brač-day winery</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.korkyra.com/en/posip" target="_blank" rel="noopener">Korčula Pošip wineries ↗</a></div>
+            <div class="desc">Korčula island (Smokvica + Čara villages) · the indigenous Pošip white grape's only real home · multiple small producers · only worth a visit if you swap the Brač day for a Korčula day (2 h fast ferry each way)</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.dingac.hr/en/" target="_blank" rel="noopener">Dingač/Postup (Pelješac) ↗</a></div>
+            <div class="desc">Pelješac peninsula's south-cliff terraces · Croatia's top-tier Plavac zone (Grgich-Hills' Mike Grgich relatives source here) · <strong>skip for this trip</strong> — 3+ h each way from Hvar via Korčula ferry + bridge</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" id="food">
+      <span class="eyebrow">The Table</span>
+      <h2>One ★ in Split · Plus the Konobas</h2>
+      <p>The 2025 Michelin Guide Croatia (current edition; 2026 not yet released) has <strong>one ★ in Split — Krug</strong> (awarded 2025, Split's first-ever) — and <strong>no ★ on Hvar Island</strong>. The nearest other ★ is <strong>Pelegrini ★</strong> in Šibenik (90 min north of Split) and <strong>LD Restaurant ★</strong> in Korčula (2 h fast ferry from Hvar). Bib Gourmands: <strong>K.užina</strong> + <strong>Šug</strong> in Split. Most of the great Dalmatian eating is in the <strong>konobas</strong> — family-run hearth-kitchens serving peka under the bell, lamb on the spit, pršut, soparnik, and grilled fish straight off the dock.</p>
+    </div>
+
+    <div class="food-list">
+      <div class="food-row">
+        <div class="place">Krug <span class="stars">★</span><span class="meta">Split · 12-seat counter · contemporary fine dining</span></div>
+        <div class="desc"><strong>Split's first-ever Michelin star (2025).</strong> 12-seat L-shaped counter around an open central kitchen — guests interact with chefs directly. 5-course small (~€95) or <strong>9-course large tasting (~€135)</strong>, wine pairing ~€85. Ingredient-driven, almost everything in-house (bread, butter, ferments). Reservations confirmed with CC, cancellable to 24 h. <a href="https://krugrestaurantsplit.com/reservations/" target="_blank" rel="noopener">krugrestaurantsplit.com</a></div>
+        <div class="drive">Split center</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Zoi <span class="stars">Michelin-recommended</span><span class="meta">Split · Riva · Palace southern wall · Spanish chef</span></div>
+        <div class="desc">Riva-front in the southern wall of Diocletian's Palace, Gault &amp; Millau 17/20, Croatian Tourist Board Restaurant of the Year 2022. Chef Alberto Garcia Perez (Spanish) does Croatia-Italy-Spain-North Africa crossover. <strong>ECHO 7-course tasting €135 in season</strong>, TERRA 7-course vegetarian €105, 3-course à la carte €95. Continuous Michelin recommendation since 2017. <a href="https://www.zoi.hr/" target="_blank" rel="noopener">zoi.hr</a></div>
+        <div class="drive">Split Riva</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Dvor <span class="stars">Michelin-recommended</span><span class="meta">Split · Firule Bay · cliffside terrace · chef Hrvoje Zirojević</span></div>
+        <div class="desc">Pine-shaded clifftop terrace over Firule Bay (10 min east of Bačvice). Modern Dalmatian under one of Croatia's most-respected chefs. Signatures: raw tuna with goose liver, smoked sea risotto, ravioli in wild rabbit sauce, homemade tagliatelle with black truffle, grilled lamb chops. Less ambitious than Krug, more romantic in setting. <a href="https://www.dvor-restaurant.com/" target="_blank" rel="noopener">dvor-restaurant.com</a></div>
+        <div class="drive">10 min Split</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Šug <span class="stars">🍴 Bib Gourmand</span><span class="meta">Split · modern Dalmatian · two-friend kitchen</span></div>
+        <div class="desc">Michelin Bib Gourmand (2022, 2023, 2024). Duje Kanajet + Mateo Kordić's reinterpretation of Dalmatian classics. <strong>3-course tasting €55 with €30 wine pairing</strong> — the value play. Squid-ink risotto, creamy prawn pasta, Pag-cheese carpaccio, venison stew. <a href="https://sug.hr/en/" target="_blank" rel="noopener">sug.hr</a></div>
+        <div class="drive">Split center</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Bokeria <span class="stars">modern Mediterranean</span><span class="meta">Split · former fish-market hall · 12:00–23:30</span></div>
+        <div class="desc">Set in Split's old fish market — high-ceiling industrial-chic, central, easy walk from anywhere in the Old Town. Modern pan-Mediterranean — <strong>oxtail risotto, squid-ink risotto, eggplant parmesan, sea bass with sun-dried tomato</strong>. Strong Dalmatian wine list. Better balance of meat + fish than most Split addresses; Joann-friendly. <a href="https://book.seatlio.com/bokeriaxbokamorra/bokeria" target="_blank" rel="noopener">Reservations</a></div>
+        <div class="drive">Split center</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Gariful <span class="stars">Hvar institution</span><span class="meta">Hvar Town · Riva-front · since 1981 · own fishing fleet</span></div>
+        <div class="desc">The Hvar Riva-front grande-dame. Pier-side terrace, 7 fishing boats supplying the kitchen, celebrity-stocked August nights (Beckhams, Brady, Ronaldos — verified sightings over the years). Lobster ravioli, fresh grilled fish, oysters, shellfish in garlic + white wine. <strong>Joann option:</strong> châteaubriand or truffle pasta. Reserve via <a href="https://reserve.hr/listing/restaurant-gariful-hvar-croatia/" target="_blank" rel="noopener">reserve.hr</a>.</div>
+        <div class="drive">Hvar Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Macondo <span class="stars">since 1989</span><span class="meta">Hvar Town · stone-walled alley · cash only · no online reservation</span></div>
+        <div class="desc">Tucked in a stone alley between the main square and the fortress. Lobster pasta is the dish (reviewers consistently call it "the best lobster pasta they've ever had"). Octopus carpaccio, grilled scampi, seafood risotto. <strong>No online reservation — walk in by 9 PM or call same-day.</strong> Cash only.</div>
+        <div class="drive">Hvar Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Dalmatino <span class="stars">steak + fish house</span><span class="meta">Hvar Town · alleyway · since 1987 · candlelit outdoor</span></div>
+        <div class="desc">The Hvar Town fine-dining pick for steak-fish balance — important for the Joann factor. Octopus carpaccio, shrimp risotto, truffle pasta, châteaubriand, excellent cellar. Candlelit white-awning courtyard. Reserve at <a href="https://dalmatino-hvar.com/" target="_blank" rel="noopener">dalmatino-hvar.com</a>.</div>
+        <div class="drive">Hvar Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Konoba Menego <span class="stars">family rustic since 1998</span><span class="meta">Hvar Town · stone-walled tavern · between Pjaca + Fortress · cash only</span></div>
+        <div class="desc">Candlelit, pršut hanging from ceilings, croatian-tapas: Pag cheese, Dalmatian pršut from Drniš, marinated anchovies, Forska pogača (the rare Hvar anchovy pie), wild boar, beef stew. House red from the family Sv. Klement vineyard. The most authentic stone-walled konoba in Hvar Town itself. Cash only.</div>
+        <div class="drive">Hvar Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Konoba Vrisnik <span class="stars">peka excellence</span><span class="meta">Vrisnik village (above Jelsa) · Mrs. Julija's hearth · 24-h advance peka order</span></div>
+        <div class="desc">The Hvar Island peka destination. Family hearth kitchen in a 200-resident village in the Jelsa hinterland — <strong>octopus, lamb, or veal peka cooked under the bell, 24 h advance reservation required</strong>. Garden setting, house wine from the family plot, the rare opportunity to eat the dish in the kitchen that's been doing it the longest. 25-min taxi from Hvar Town (€40 each way).</div>
+        <div class="drive">25 min Hvar</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Black Pepper <span class="stars">modern fine dining</span><span class="meta">Hvar Town · old-town alley · friends-run · garden seating</span></div>
+        <div class="desc">Modern interpretation of Dalmatian classics. Mains €16–€55. Reserve online at <a href="https://blackpepperhvar.com/" target="_blank" rel="noopener">blackpepperhvar.com</a> or +385 95 750 9790. Vegetarian options. Quieter than Gariful, more elegant than Macondo — the Plan B for a third Hvar night.</div>
+        <div class="drive">Hvar Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Toto's <span class="stars">Pakleni boat-only lunch</span><span class="meta">Palmižana (Sv. Klement) · pine-shaded · grilled fish</span></div>
+        <div class="desc">The Pakleni Islands lunch spot on the Day 2 sail. Sandy bay-side terrace under the pines, grilled fish (catch of the day), octopus salad. Bačo's family ran it since the 1970s. Card + cash. The boat captain will tie up directly at the pier.</div>
+        <div class="drive">boat only</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Villa Spiza <span class="stars">locals' favorite</span><span class="meta">Split · daily chalkboard · no reservations · cash + card</span></div>
+        <div class="desc">No reservations, daily-changing handwritten menu (chef literally crosses out items as ingredients run out), Split locals' favorite, under €15/plate. <strong>Sweetbreads, schnitzel, grilled anchovies, squid-ink risotto, calamari</strong> — whatever's on the board. 2-h queue at peak summer but the lunch sweet spot is 12:00 sharp. Quick stop on Day 6 before departing.</div>
+        <div class="drive">Split center</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Pelegrini <span class="stars">★</span><span class="meta">Šibenik · 700-y-o palace · 90 min north of Split · chef Rudolf Štefan</span></div>
+        <div class="desc">Croatia's most-decorated ★ outside Zagreb/Rovinj. 700-y-o Villa Pelegrini-Tambača next to the UNESCO Šibenik Cathedral. 4 + 6-course tasting menus modern-Dalmatian. <strong>Skip for this trip</strong> — 1.5 h each way from Split is dinner-only, and you have Krug ★ in town. <strong>Only viable as a Day 6 ★ lunch if you swap the morning Palace visit for a Šibenik drive</strong>. Reserve dinner-only Mon–Sat 18:30–21:30 at <a href="https://pelegrini.superbexperience.com/" target="_blank" rel="noopener">pelegrini.superbexperience.com</a></div>
+        <div class="drive">1h 30m</div>
+      </div>
+      <div class="food-row">
+        <div class="place">LD Restaurant <span class="stars">★</span><span class="meta">Korčula · Lešić Dimitri Palace · 2 h ferry from Hvar</span></div>
+        <div class="desc">Korčula Town's flagship ★. Inside the Lešić Dimitri Palace heritage hotel. The way to make it work: <strong>swap the Sunday Brač day for a Korčula day</strong> (2 h fast ferry each way), late lunch at LD + walled-town walk + 6 PM ferry back. Stretches the day but lands you a second ★ on the trip.</div>
+        <div class="drive">2 h ferry</div>
+      </div>
+    </div>
+
+    <div class="section-header" id="activities">
+      <span class="eyebrow">Beyond the Table</span>
+      <h2>The Overpacked Activity Catalog</h2>
+      <p>The trip's selling point — you literally cannot do everything below. Pick aggressively. <strong>Top picks for this couple:</strong> Pakleni private skipper day, Vis Blue Cave + Lipanović cellar, Vidova Gora summit on Brač, Sv. Nikola summit for the Perseids, Hula Hula + Carpe Diem nights, Marjan sunset, Diocletian's Palace + Cathedral bell tower. The catalog:</p>
+    </div>
+
+    <div class="activities">
+
+      <div class="activity">
+        <span class="icon">⛵</span>
+        <h4><a href="https://www.hvarboats.com/en/private-tours/pakleni-islands-private-boat-tour" target="_blank" rel="noopener">Pakleni Islands Private Sail</a></h4>
+        <p>Full-day private skipper Hvar Town → Palmižana → Jerolim → Stipanska → Mlini. €400–€770 private 6–12 pax. <strong>The central activity.</strong> 8 hours, lunch at Toto's, snorkel + cliff-jump anchorages.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏊</span>
+        <h4><a href="https://www.hvar.com/blue-cave-tour-croatia/" target="_blank" rel="noopener">Vis Blue Cave Day</a></h4>
+        <p>Speedboat from Hvar 10:30 AM · Biševo Blue Cave + Green Cave + Stiniva Cove + Vis Town + Lipanović cellar. €85–€100/pp group; €1,293–€1,800 private for 8 pax. 8 hours.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">⛰️</span>
+        <h4><a href="https://www.alltrails.com/trail/croatia/split-dalmatia/bol-vidova-gora" target="_blank" rel="noopener">Vidova Gora (Brač)</a></h4>
+        <p><strong>Highest peak on any Adriatic island, 780 m.</strong> From Bol: 10.6 km, 715 m gain, 3–5 h, moderate difficulty. Roman trail through pine forest. Summit view of Zlatni Rat + Hvar + Vis.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">☄️</span>
+        <h4><a href="https://www.komoot.com/highlight/3699886" target="_blank" rel="noopener">Sv. Nikola Hvar</a></h4>
+        <p><strong>Hvar's highest peak, 628 m.</strong> 3-h hike from Sveta Nedjelja (steepest), or near-drive from Stari Grad to within 1 km. 1495 summit chapel. 360° Brač + Vis + mainland. Perseid play.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🍹</span>
+        <h4><a href="https://hulahulahvar.com/" target="_blank" rel="noopener">Hula Hula Beach Bar</a></h4>
+        <p>The Hvar sundowner ritual — 15-min seafront walk west of town. Sunbed €40, cocktails €12–€18, music builds 4–6 PM, last call ~9 PM (transition to clubs). Cash only.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">💃</span>
+        <h4><a href="https://beach.cdhvar.com/" target="_blank" rel="noopener">Carpe Diem Stipanska</a></h4>
+        <p>Boat shuttle from Hvar Port midnight–5 AM to the Stipanska bay beach club. European house DJs, floodlit pine bay, cover €30–€50. Book via WhatsApp +385 99 446 8468.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏛️</span>
+        <h4><a href="https://www.tickets-split.com/diocletians-palace/" target="_blank" rel="noopener">Diocletian's Palace</a></h4>
+        <p>UNESCO, 4th-c Roman emperor's retirement palace, still lived-in. Open-air free; Cathedral + Bell Tower €7, Substructures €9, Temple of Jupiter included. Cathedral hours 9–19 in summer.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🥾</span>
+        <h4><a href="https://www.alltrails.com/trail/croatia/split-dalmatia/krug-po-marjanu" target="_blank" rel="noopener">Marjan Hill Sunset</a></h4>
+        <p>Split's city forest park (178 m highest). 314 stone steps from Varoš to the first viewpoint (Vidilica). 5.1-mi full loop, 2–2.5 h. Best sunset viewpoint over the islands.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏖️</span>
+        <h4><a href="https://www.bolcroatia.com/" target="_blank" rel="noopener">Zlatni Rat Beach</a></h4>
+        <p>Croatia's iconic shape-shifting pebble tongue at Bol. Walk 15 min from Bol Riva, pine-shaded path. Swimming, water sports, the postcard angle. <strong>Pair with Vidova Gora morning + Stina afternoon</strong> for the perfect Brač day.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🪂</span>
+        <h4><a href="https://www.bigbluesport.com/" target="_blank" rel="noopener">Windsurfing Bol</a></h4>
+        <p><strong>Bol = Adriatic's windsurfing capital.</strong> Maestral kicks in afternoons in Aug. Big Blue Sport on Borak beach (5 min from Zlatni Rat) — lessons + rental from €67/h, 35-year tradition.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🤿</span>
+        <h4><a href="https://hvardiving.com/" target="_blank" rel="noopener">Hvar Scuba Diving</a></h4>
+        <p>Aqualis Diving Center Hvar — Pakleni reef + Vis WWII wrecks. €57 morning dive for certified divers, €130 intro for non-certified. Fits a 8 AM slot before the Pakleni sail.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🛶</span>
+        <h4><a href="https://hvar-adventure.com/" target="_blank" rel="noopener">Sea Kayak Pakleni</a></h4>
+        <p>Half-day kayak tour from Hvar to Jerolim · 8.5 km, 4 h, €50/pp. Equipment + buoyancy + snorkel gear + lunch included. Hvar Adventure runs morning + afternoon slots.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏰</span>
+        <h4><a href="https://www.hvarheritage.com/en/cultural-heritage/fortica" target="_blank" rel="noopener">Spanish Fortress Hvar</a></h4>
+        <p>Tvrđava Fortica · 8 AM–22:00 in peak summer · €10 entry · the lit-up panoramic sunset view over Hvar Town + Pakleni. The Perseids backup viewing if you skip Sv. Nikola.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🌳</span>
+        <h4><a href="https://www.krka-nacionalniparkkarte.com/" target="_blank" rel="noopener">Krka National Park</a></h4>
+        <p>1.5 h from Split · Skradinski Buk wooden boardwalk through cascades · €30 entry June–Sept · swimming forbidden at Buk since 2021 but glorious. <strong>Day-trip alternative for the Sunday Brač day in rain.</strong></p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏛️</span>
+        <h4><a href="https://www.visit-croatia.co.uk/croatia-destinations/croatian-islands/" target="_blank" rel="noopener">Stari Grad UNESCO</a></h4>
+        <p>Oldest town in Croatia (founded 384 BC as Pharos) · Stari Grad Plain UNESCO (still-in-use Hellenic field-system) · Tvrdalj Hektorović fortified poet's villa · 30-min taxi from Hvar Town · the rainy day alternative.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🛏️</span>
+        <h4><a href="https://www.beachhvar.com/" target="_blank" rel="noopener">Bonj 'les bains'</a></h4>
+        <p>Hvar Town's beach club at Amfora Hotel bay — stone cabanas, pontoons, baldachin beds. Day-bed packages with lunch + massage. <strong>The recovery day option</strong> after the Carpe Diem night.</p>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="nightlife">
+      <span class="eyebrow">After Dark</span>
+      <h2>The Late-Night Map</h2>
+      <p>Hvar Town and Split each have their own late-night map. Hvar Town's is more concentrated — every venue below is a 10-minute walk from Adriana — and the post-midnight crowd skews international party-tourist. Split's is more spread out — Bačvice for the beach-sand clubs, Diocletian's Palace for the wine-jazz-cocktail scene, with 10–15 min walks between zones. <strong>Hours are summer Aug 2026; verify on arrival.</strong></p>
+    </div>
+
+    <div class="nightlife">
+      <div class="nightlife-col">
+        <h3>Hvar Town · the Adriatic party capital</h3>
+        <div class="venue">
+          <div class="vname">Hula Hula Beach Bar</div>
+          <div class="vmeta">Sunset ritual · 11:00–~21:00 · cash only · west of town 15-min walk</div>
+          <div class="vdesc">The afternoon-to-sunset sundowner ritual on the rocks. Sunbed €40, cocktails €12–€18 (mojito, Aperol spritz, margaritas). Music builds 16:00–18:00 (house DJ), winds down 21:00 as the crowd shifts to dinner + clubs. Cash only at the bar.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Carpe Diem Bar (Riva)</div>
+          <div class="vmeta">Afternoon → late · Riva-front · the launching point</div>
+          <div class="vdesc">Open from late afternoon for cocktails on the Hvar Town Riva. From 23:00 the crowd queues for the speedboat shuttle to Stipanska — this is the booking moment for the boat night.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Carpe Diem Beach (Stipanska)</div>
+          <div class="vmeta">Boat shuttle from midnight · party till 5 AM · cover €30–€50</div>
+          <div class="vdesc">The legendary Adriatic beach-club boat party — Stipanska bay on Sv. Klement Island floodlit, European house/electronic DJs, returns shuttle continuous. Daytime entry is free + relaxed; night entry requires cover + sometimes booking via WhatsApp +385 99 446 8468.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Kiva Bar</div>
+          <div class="vmeta">Old-town alley · packed from 20:30 · late</div>
+          <div class="vdesc">The original Hvar nightlife crawl bar — narrow stone alley, packed early, sing-along playlist, famous tequila booms shot table. Goes from zero to cram-packed between 20:30–21:30.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Pink Champagne</div>
+          <div class="vmeta">Underground club · past the main square · luxe</div>
+          <div class="vdesc">Hvar's other big club — underground (stairs or elevator down), cabaret performances + DJ sets, bottle service, neon-lit VIP sections. Late and pricey. The alternative to Stipanska if you want clubbing without a boat.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Top Bar at Adriana</div>
+          <div class="vmeta">Rooftop · sunset → late · in your hotel</div>
+          <div class="vdesc">Adriana's rooftop cocktail terrace — the quieter end-of-night option. Sea view over Pakleni, organized cocktail menu, food service. The "low-energy swap" choice on any night you'd rather not crawl.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Falko Beach Bar</div>
+          <div class="vmeta">Pine forest · 15-min seafront west · ~9 PM close</div>
+          <div class="vdesc">Boho hideaway under pine trees + olives, 15-min seafront walk west of town. Acoustic playlist, hammocks, sundowners + small plates. Closes ~21:00. The pre-Hula Hula or post-beach-day spot, not a late venue.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Bonj 'les bains' Beach Club</div>
+          <div class="vmeta">Amfora bay · stone cabanas + pontoons · day → sunset</div>
+          <div class="vdesc">Hvar Town's exclusive day beach club at Amfora — stone cabanas, baldachin beds, full-service food + spa-to-sunbed. Sundowner DJ slots. The luxe day option, not a late venue.</div>
+        </div>
+      </div>
+
+      <div class="nightlife-col">
+        <h3>Split · the Bačvice sand + Palace nights</h3>
+        <div class="venue">
+          <div class="vname">Tropic Club (a.k.a. Equador)</div>
+          <div class="vmeta">Bačvice beach · summer-only · opens ~23:00 · till 4–5 AM</div>
+          <div class="vdesc">First-floor open-air terrace jutting over the Adriatic at Bačvice. Tropical bar theme — palms, tiki, outdoor dance floor under the stars. Opens around 23:00, runs to 4–5 AM at peak August. Where the Bačvice late-night crawl starts.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Vanilla Club</div>
+          <div class="vmeta">Bačvice-adjacent · large terrace · underground electronic</div>
+          <div class="vdesc">Big terrace + intimate underground room with edgy industrial design and underground electronic music. Short walk from Tropic — the Bačvice trio's second stop.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Inbox Club</div>
+          <div class="vmeta">Diocletian's Palace area · late</div>
+          <div class="vdesc">Late-night club inside the Palace walls. House + electronic. The Palace-side alternative to Bačvice if you want stone walls over sand under your feet.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Marvlvs Library Jazz Bar</div>
+          <div class="vmeta">Peristyle-adjacent · jazz nights · candlelit · sit-down</div>
+          <div class="vdesc">Candlelit wine + jazz bar a few steps from Diocletian's Peristyle. Croatian wines by the glass (the Pošip selection is excellent), small plates, live jazz several nights/week. The post-Krug nightcap of choice.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Galerija Lukullus</div>
+          <div class="vmeta">Diocletian's Palace · rakija + wine bar · sit-down</div>
+          <div class="vdesc">Tiny rakija and Croatian-wine bar tucked into the Palace stone. ~50 Croatian rakija varieties, knowledgeable bartender — the Joann-friendly "let's slow down" finish on any night.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Diocletian's Wine House</div>
+          <div class="vmeta">Palace · wine pairing + Dalmatian small plates</div>
+          <div class="vdesc">Wine-bar-with-food inside the Palace walls. The natural transition from afternoon Palace walk to early dinner; not late-night.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Split Summer Festival evenings</div>
+          <div class="vmeta">Peristyle · Meštrović Gallery · Bačvice · 21:30 start</div>
+          <div class="vdesc">During the festival closing weekend (your Sunday Aug 16): opera, ballet, drama performances staged at the Peristyle and other heritage venues. Tickets €30–€90, advance booking required for the marquee dates.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Briig Rooftop Pool Bar</div>
+          <div class="vmeta">Bačvice-above · summer · cocktail + pool · hotel</div>
+          <div class="vdesc">Your hotel rooftop. Open to midnight in summer. Cocktail menu, pool deck loungers, panoramic Bačvice + islands view. The low-energy nightcap option after Krug.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" id="score">
+      <span class="eyebrow">Adversarial Scoring</span>
+      <h2>Re-scored on the 8 New Criteria</h2>
+      <p>Scored 0–3 per axis. Hard criteria ×2, soft ×1. Total /39. Honest read: <strong>nightlife maxes, activity density maxes</strong>; food caliber + wine are real but not Mallorca/San Sebastián level; Joann-seafood tolerance is the soft spot (Dalmatia is heavily seafood-leaning, mitigated by peka + meat traditions).</p>
+    </div>
+
+    <div class="score-grid">
+      <div class="score-row">
+        <div class="axis">Food caliber <span class="tag">Hard ×2</span></div>
+        <div class="reason">1 ★ in range (Krug ★ Split, 2025) + Bib Gourmands (Šug, K.užina) + ★-recommended (Zoi, Dvor). No ★★ in Croatia today (the closest is Agli Amici ★★ in Rovinj, Istria — out of range). Pelegrini ★ in Šibenik is 1.5 h drive add-on. Konobas (Vrisnik peka, Menego, Macondo) are top-tier traditional. Adds up to <strong>2/3</strong>.</div>
+        <div class="num">2 × 2 = 4</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Nightlife &amp; late energy <span class="tag">Hard ×2</span></div>
+        <div class="reason">World-tier. Hvar Town in August is one of Europe's top 3 island party scenes (Ibiza, Mykonos, Hvar). Carpe Diem-to-Stipanska boat party is genuinely unique. Bačvice sand-beach clubs in Split till 5 AM. <strong>3/3 max.</strong></div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Activity density <span class="tag">Hard ×2</span></div>
+        <div class="reason">Sailing, diving, kayaking, windsurfing (Bol), hiking (Vidova Gora + Sv. Nikola), cliff jumping, snorkeling, sea caves, multi-island day-tripping (Vis, Brač, Korčula in reach), winery visits, UNESCO city walking, festival concerts. <strong>3/3 max.</strong></div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Weather <span class="tag">Hard ×2</span></div>
+        <div class="reason">82–88°F days, low rain (~2 days in Aug avg), 11 h sunshine, Adriatic at 75–79°F. No mosquitoes by the sea. Brief afternoon heat but sea wind tempers. <strong>3/3</strong>.</div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Safety &amp; late walkability <span class="tag">Hard ×2</span></div>
+        <div class="reason">Croatia ranks safest in Europe for walking at night per Travel Safe Abroad. Pickpocket risk in summer-crowded Old Towns + ferry terminals is real but moderate — bag-zip + minimal-cash mitigates. Hvar Town's late drunk-tourist crowd is the main downside. <strong>2.5/3</strong>.</div>
+        <div class="num">2.5 × 2 = 5</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Wine <span class="tag">Soft ×1</span></div>
+        <div class="reason">Real, distinct, and genuinely "drinkable only here" (Plavac Mali, Pošip, Vugava, Tribidrag). Tomić's Hektorović toga feast is a one-of-one experience. Zlatan Otok underwater cellar + Lipanović Tito-tunnel cellar are unique to the world. But the catalog is small vs. Mallorca/Iberia — only ~12–15 visitable producers in range vs. Mallorca's 70+. <strong>2.5/3</strong>.</div>
+        <div class="num">2.5</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Romance / hotel quality <span class="tag">Soft ×1</span></div>
+        <div class="reason">Adriana Riva-rooftop + Briig Bačvice-rooftop is a strong pairing, neither is Belmond-tier. Maslina Resort (Stari Grad, R&amp;C) is the trip's prestige option but adds taxi friction to Hvar Town. Palace Elisabeth (LHW heritage) is the closest "marquee." Hvar Town's old-stone-alley dinners + Pakleni anchorage swims + Pjaca-Cathedral nights are real-romance moments. <strong>2.5/3</strong>.</div>
+        <div class="num">2.5</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Joann seafood tolerance <span class="tag">Soft ×1 · lower seafood = higher</span></div>
+        <div class="reason">Dalmatia leans hard seafood — but peka under the bell (lamb, veal, octopus), pršut, pašticada beef stew, soparnik, and meat-grill options at Gariful + Dalmatino + Bokeria + Krug provide real meat paths. Konoba Vrisnik does lamb + veal peka. Konoba Menego does wild boar + beef. Brač spit-roasted lamb is widely available. Worse than San Sebastián's pintxos breadth but workable. <strong>2/3</strong>.</div>
+        <div class="num">2</div>
+      </div>
+      <div class="score-row total">
+        <div class="axis">Weighted total</div>
+        <div class="reason">Hard 27/30 + Soft 7/9. Nightlife + activity + weather max out; food + safety strong; wine + romance solid; Joann is the soft spot but mitigable. <strong>The over-packed couple's pick.</strong></div>
+        <div class="num">34 / 39</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="booking" id="book">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="eyebrow">Make It Real</span>
+      <h2>Book These Now</h2>
+      <p>Twelve actions, ranked by lead time required. <strong>Krug ★ + Adriana + Briig + Krilo Jet + the Carpe Diem boat night + Konoba Vrisnik peka all need advance booking</strong>. The Pakleni sail is the only thing reasonably bookable on arrival.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="stepnum">01</div>
+        <div>
+          <h4>Book Adriana Hvar Spa Hotel (3 nights, Wed Aug 12 → Sat Aug 15)</h4>
+          <p>Request a <strong>Junior Suite with a Riva-facing sea-view balcony</strong>. August peak rates run $500–$1,200/night. Direct via Sunčani Hvar typically equals or beats booking sites + earns loyalty perks. <strong>Amex FHR / Virtuoso may show upgrade + breakfast benefits</strong> — check before booking.</p>
+          <div class="meta-line">90 days out · <a href="https://www.suncanihvar.com/adriana" target="_blank" rel="noopener">suncanihvar.com/adriana</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">02</div>
+        <div>
+          <h4>Book Briig Boutique Hotel Split (2 nights, Sat Aug 15 → Mon Aug 17)</h4>
+          <p>Newest 5-star above Bačvice — sea-view balcony room ideal. Direct via Briig + boutique-hotel sites (Splendia, Mr &amp; Mrs Smith) tend to match. Cancellation policies vary — confirm before booking.</p>
+          <div class="meta-line">60 days out · <a href="https://briig-boutique.split-dalmatia-hotels.com/en/" target="_blank" rel="noopener">briig direct</a> · <a href="https://www.booking.com/hotel/hr/briig-boutique.html" target="_blank" rel="noopener">booking.com fallback</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">03</div>
+        <div>
+          <h4>Reserve Krug ★ (Sat Aug 15, 21:00 — Velika Gospa night)</h4>
+          <p>Split's first &amp; only Michelin star. 12-seat counter, the trip's Michelin centerpiece. Choose the <strong>9-course large tasting (~€135) + wine pairing (~€85)</strong>. CC required, cancellable to 24 h. <strong>Velika Gospa is Croatia's biggest summer holiday — Saturday Aug 15 at Krug will be tight, book 60+ days out</strong>.</p>
+          <div class="meta-line">60+ days out · <a href="https://krugrestaurantsplit.com/reservations/" target="_blank" rel="noopener">krugrestaurantsplit.com/reservations</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">04</div>
+        <div>
+          <h4>Pre-book the Krilo Jet ferries (×2 legs)</h4>
+          <p>Wed Aug 12 Split→Hvar (afternoon departure after your flight lands) + Sat Aug 15 Hvar→Split (noon-ish for Velika Gospa afternoon in Split). Sunday Brač day uses separate Krilo Jet routes (Split↔Bol). <strong>August crossings sell out 1–2 weeks before departure</strong>. €25/leg/pp foot passengers; book at Krilo.hr or Ferryhopper.</p>
+          <div class="meta-line">45+ days out · <a href="https://krilo.hr/en/schedule" target="_blank" rel="noopener">krilo.hr/en/schedule</a> · <a href="https://www.ferryhopper.com/" target="_blank" rel="noopener">ferryhopper.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">05</div>
+        <div>
+          <h4>Book Lufthansa LAX↔SPU flights</h4>
+          <p>LH453 LAX→MUC (dep 4:15 PM Tue Aug 11, arr 12:40 PM Wed Aug 12) + LH1722 MUC→SPU (arr 3:25 PM). Return: LH1723 SPU→MUC + LH452 MUC→LAX. Estimated $900–$1,400 RT/pp; verify exact 2026 schedule + price before booking. Alternative carriers: Austrian via VIE, Turkish via IST. <strong>Book early — Aug 11 is high-demand departure, school summer in Europe.</strong></p>
+          <div class="meta-line">45–60 days out · <a href="https://www.lufthansa.com/lhg/us/en/o-d/cy-cy/los-angeles-split" target="_blank" rel="noopener">lufthansa.com</a> · <a href="https://www.skyscanner.com/routes/lax/spu/los-angeles-international-to-split.html" target="_blank" rel="noopener">Skyscanner LAX→SPU</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">06</div>
+        <div>
+          <h4>Reserve the Pakleni Islands private sail (Thu Aug 13, 11:30 AM)</h4>
+          <p>Private 8-h skipper day from Hvar Town · €400–€770 depending on operator + boat size · 6–12 pax. Operators: <strong>HvarBoats</strong>, <strong>Hvar Adventure</strong>, <strong>Click&amp;Boat</strong>, <strong>Sail Croatia</strong>. <strong>Book a Marlon 21 or similar speedboat — semi-rigid inflatables are wet on swell.</strong> Cancellation typically 7 days out. Lunch at Toto's not included; reserve Toto's separately (the captain knows them, can call ahead).</p>
+          <div class="meta-line">30 days out · <a href="https://www.hvarboats.com/en/private-tours/pakleni-islands-private-boat-tour" target="_blank" rel="noopener">hvarboats.com</a> · <a href="https://hvar-adventure.com/" target="_blank" rel="noopener">hvar-adventure.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">07</div>
+        <div>
+          <h4>Reserve the Vis Blue Cave day (Fri Aug 14, 10:00 AM check-in)</h4>
+          <p>Group speedboat €85–€100/pp via hvar.com or Mario Boat Tours, includes Blue Cave + Stiniva + Green Cave + Vis Town (cave entries extra: Blue €24, Green €8–€12, cash on dock). Private 5-island upgrade €1,293–€1,800 for 8 pax. <strong>Cancellation 24–48 h; weather-cancellation is common in high swell</strong> — Tomić Hektorović toga feast at Bastijana is the rainy-day backup.</p>
+          <div class="meta-line">21 days out · <a href="https://www.hvar.com/blue-cave-tour-croatia/" target="_blank" rel="noopener">hvar.com</a> · <a href="https://rentaboathvar.com/" target="_blank" rel="noopener">Mario Boat Tours</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">08</div>
+        <div>
+          <h4>Reserve Konoba Vrisnik peka (Fri Aug 14, 21:00)</h4>
+          <p>Call <strong>24 h ahead</strong> to order the octopus or lamb peka — the bell cooking starts 6 PM, you arrive 9 PM to a fully-cooked one-pot under-the-bell dish. Mrs. Julija's family runs it. Cash preferred. Taxi from Hvar Town ~€40 each way, 25 min. <strong>Phone reservation only</strong> — easier through your Adriana concierge.</p>
+          <div class="meta-line">24 h ahead · ask Adriana concierge or call Konoba Vrisnik directly · <a href="https://restaurantguru.com/Konoba-Vrisnik" target="_blank" rel="noopener">restaurant info</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">09</div>
+        <div>
+          <h4>Reserve Tomić Estate Hektorović Roman feast (rainy-day backup, or Aug 14 alt)</h4>
+          <p>Andro Tomić's Roman-toga 2.5-h tasting + paired feast at Bastijana, Jelsa. <strong>€120/pp, 12:00–18:00 booking slots, 1 day advance, phone +385 21 768 160 or email bastijana@gmail.com</strong>. Hold this as Plan B if the Blue Cave cancels for swell, or book as the wine activity if you'd rather skip Vis.</p>
+          <div class="meta-line">7+ days out · <a href="https://vina-tomic.com/en/posjetite-nas/" target="_blank" rel="noopener">vina-tomic.com/en</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">10</div>
+        <div>
+          <h4>Reserve the Carpe Diem Beach boat-night table (Fri Aug 14, 1 AM)</h4>
+          <p>WhatsApp <strong>+385 99 446 8468</strong> or email <strong>beach@cdhvar.com</strong> for table service / VIP bookings. Cover at the door is fine for walk-ups too, but if it's a big-name DJ night or peak weekend, a reserved table guarantees entry + bottle service. <strong>Aug 14 Friday + leading into Velika Gospa Saturday will be one of the August peak nights</strong> — table-reserve.</p>
+          <div class="meta-line">14 days out · <a href="https://beach.cdhvar.com/" target="_blank" rel="noopener">beach.cdhvar.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">11</div>
+        <div>
+          <h4>Reserve Hvar dinners — Gariful, Macondo, Black Pepper, Dalmatino</h4>
+          <p>Gariful: reserve via <a href="https://reserve.hr/listing/restaurant-gariful-hvar-croatia/" target="_blank" rel="noopener">reserve.hr</a> — 45+ days out for August Riva-front seating. Macondo: walk-in only / same-day phone. Dalmatino: <a href="https://dalmatino-hvar.com/" target="_blank" rel="noopener">dalmatino-hvar.com</a> reservation page, 30 days out. Black Pepper: <a href="https://blackpepperhvar.com/" target="_blank" rel="noopener">blackpepperhvar.com</a> or +385 95 750 9790. Konoba Menego: walk-in / phone, no online booking.</p>
+          <div class="meta-line">30–45 days out · multiple links above</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">12</div>
+        <div>
+          <h4>Reserve Split Summer Festival tickets (Sun Aug 16, Peristyle preferred)</h4>
+          <p>Verify the program at <a href="https://www.splitsko-ljeto.hr/en/" target="_blank" rel="noopener">splitsko-ljeto.hr</a> — the 2026 program lands ~April. Marquee Peristyle nights (opera, premiere of Don Carlo) sell out 30–60 days out at €30–€90. <strong>Even a non-marquee Meštrović Gallery chamber concert is worth the booking</strong>. The post-Krug evening anchor.</p>
+          <div class="meta-line">45 days out · <a href="https://www.splitsko-ljeto.hr/en/" target="_blank" rel="noopener">splitsko-ljeto.hr</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="adversarial">
+      <h3>Adversarial honesty — where Hvar+Split loses</h3>
+      <p><strong>vs. San Sebastián:</strong> Spain's 3 ★★★ + multiple ★★ are tiered above Croatia's entire Michelin landscape. <strong>Krug ★ is a strong but solitary star</strong> — no ★★, and the closest Croatian ★★ is Agli Amici in Rovinj (5 h+ from Split). Aste Nagusia fireworks for Aug 14–22 in San Seb are a city-wide festival on a scale Velika Gospa doesn't match. La Concha + pintxos breadth crush Hvar+Split for casual-eating density.</p>
+      <p><strong>vs. Mallorca:</strong> Belmond La Residencia + Voro ★★ in Canyamel give Mallorca an objectively higher ceiling for hotel + food caliber. Mallorca's wine catalog (70+ producers across 2 DOs) is wider than Hvar's. Tramuntana hiking (UNESCO 1,000-y-o dry stone walls + Sa Calobra) has more iconic single-locations than Croatia's island hiking. <strong>But Mallorca has nothing close to Carpe Diem Beach's nightlife</strong>.</p>
+      <p><strong>vs. Côte d'Azur:</strong> Loses on Michelin density (the entire Côte has dozens of stars). Loses on aspirational hotels (Hôtel du Cap-Eden-Roc, La Réserve, Cap d'Antibes). Wins on price-to-experience — Hvar costs roughly half of Antibes for an equivalent 5-night stay.</p>
+      <p><strong>Other weaknesses:</strong> (1) Tourist-heavy in August — Hvar Town gets 20,000 daily visitors on an island of 11,000 residents (Adriana's location partially insulates you). (2) Ferry logistics constrain timing — every island day depends on Krilo / Jadrolinija schedules that can shift in weather. (3) Heat exposure on cliffside hikes (Sv. Nikola, Vidova Gora) is real; do morning starts. (4) Limited late-dinner kitchens — most close 22:30 even in August (Krilo, Gariful, Macondo all push to 23:00 in peak). (5) Pickpocket risk in Split ferry terminals + Hvar Town crowded Old Town is moderate.</p>
+    </div>
+
+    <div class="budget-table">
+      <div class="head">
+        <span class="eyebrow">All-In For Two Travelers</span>
+        <h3>Budget by Tier</h3>
+        <p>USD, mid-August peak. Move items across tiers freely. <strong>Standard tier matches the day-by-day above</strong>. Croatia is meaningfully cheaper than Mallorca/Provence at equivalent quality — Standard Hvar+Split runs ~30% under Standard Mallorca for a similar-or-better activity load.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th class="item">Item</th>
+            <th class="tier">Budget</th>
+            <th class="tier standard">Standard ★</th>
+            <th class="tier">Splurge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="item">Flights · Lufthansa LAX↔SPU (×2)</td><td class="tier">$1,800<br><span style="font-size: 0.75rem; opacity: 0.7;">economy, basic</span></td><td class="tier standard std-mark">$2,400<br><span style="font-size: 0.75rem; opacity: 0.7;">economy + bag</span></td><td class="tier">$5,800<br><span style="font-size: 0.75rem; opacity: 0.7;">premium economy</span></td></tr>
+          <tr><td class="item">Hotels · 3 Hvar + 2 Split</td><td class="tier">$1,500<br><span style="font-size: 0.75rem; opacity: 0.7;">3★ options both bases</span></td><td class="tier standard std-mark">$2,800<br><span style="font-size: 0.75rem; opacity: 0.7;">Adriana standard + Briig standard</span></td><td class="tier">$8,500<br><span style="font-size: 0.75rem; opacity: 0.7;">Maslina Resort + Briig suite</span></td></tr>
+          <tr><td class="item">Michelin + fine dining (Krug + Zoi + Gariful)</td><td class="tier">$300<br><span style="font-size: 0.75rem; opacity: 0.7;">Šug Bib only</span></td><td class="tier standard std-mark">$950<br><span style="font-size: 0.75rem; opacity: 0.7;">Krug 9-course + Zoi + Gariful</span></td><td class="tier">$1,650<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Pelegrini ★ Šibenik lunch</span></td></tr>
+          <tr><td class="item">Other dinners + konobas + lunches</td><td class="tier">$450</td><td class="tier standard std-mark">$700<br><span style="font-size: 0.75rem; opacity: 0.7;">Macondo + Vrisnik peka + Bokeria + Toto's + Stari Grad</span></td><td class="tier">$1,100</td></tr>
+          <tr><td class="item">Pakleni private sail</td><td class="tier">$180<br><span style="font-size: 0.75rem; opacity: 0.7;">group tour</span></td><td class="tier standard std-mark">$700<br><span style="font-size: 0.75rem; opacity: 0.7;">private 8h skipper</span></td><td class="tier">$1,900<br><span style="font-size: 0.75rem; opacity: 0.7;">private yacht + crew + lunch</span></td></tr>
+          <tr><td class="item">Vis Blue Cave day</td><td class="tier">$200<br><span style="font-size: 0.75rem; opacity: 0.7;">group + cave entries</span></td><td class="tier standard std-mark">$280<br><span style="font-size: 0.75rem; opacity: 0.7;">group + Lipanović tasting</span></td><td class="tier">$1,500<br><span style="font-size: 0.75rem; opacity: 0.7;">private speedboat</span></td></tr>
+          <tr><td class="item">Brač day · ferries + Stina + lunch</td><td class="tier">$120</td><td class="tier standard std-mark">$200</td><td class="tier">$450<br><span style="font-size: 0.75rem; opacity: 0.7;">private boat to Bol</span></td></tr>
+          <tr><td class="item">Nightlife · Carpe Diem + Bačvice + Hula Hula</td><td class="tier">$200</td><td class="tier standard std-mark">$450<br><span style="font-size: 0.75rem; opacity: 0.7;">Carpe Diem boat-night + Bačvice crawl + Hula Hula</span></td><td class="tier">$1,200<br><span style="font-size: 0.75rem; opacity: 0.7;">+ VIP table service</span></td></tr>
+          <tr><td class="item">Wine experiences · Tomić + Stina + Lipanović</td><td class="tier">$80</td><td class="tier standard std-mark">$320<br><span style="font-size: 0.75rem; opacity: 0.7;">3 tastings</span></td><td class="tier">$600<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Hektorović toga dinner</span></td></tr>
+          <tr><td class="item">Krilo ferries + transfers + taxis</td><td class="tier">$150</td><td class="tier standard std-mark">$280<br><span style="font-size: 0.75rem; opacity: 0.7;">Krilo + SPU + konoba taxis</span></td><td class="tier">$550<br><span style="font-size: 0.75rem; opacity: 0.7;">private driver days</span></td></tr>
+          <tr><td class="item">Activities · Palace + Marjan + Fortica + spa</td><td class="tier">$100</td><td class="tier standard std-mark">$220<br><span style="font-size: 0.75rem; opacity: 0.7;">Palace + Cathedral + Fortica + Sensori spa</span></td><td class="tier">$650<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Bonj cabana + Krka day</span></td></tr>
+          <tr><td class="item">Cushion / tips / incidentals</td><td class="tier">$200</td><td class="tier standard std-mark">$350</td><td class="tier">$700</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="total-label">Total · two travelers, all-in</td>
+            <td class="tier">$5,280</td>
+            <td class="standard">$9,650</td>
+            <td class="tier">$24,600</td>
+          </tr>
+        </tfoot>
+      </table>
+      <p class="footnote">
+        <strong>Honest read:</strong> Hvar+Split Standard ($9,650) runs ~43% under Mallorca Standard ($17,050) for an arguably more activity-dense, more nightlife-energy week. The trade is hotel ceiling (no Belmond) and food ceiling (no ★★ in range). <strong>If hotels + Michelin are your top axes, Mallorca/San Sebastián win.</strong> If sailing + nightlife + activity density at a workable budget is the brief, Hvar+Split is the answer.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Built for Mark · August 11–17, 2026 · LAX origin · 5 hotel nights · 3 Hvar Town + 2 Split · <a href="../index.html">all trips</a> · <a href="./aug_11_europe.html">compare options</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
