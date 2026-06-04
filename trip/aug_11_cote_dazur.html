@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>August 2026 — Côte d'Azur · Riviera Grand</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azure: #2466a8;
+    --azure-deep: #102e58;
+    --gold: #c2a04a;
+    --gold-deep: #8a7026;
+    --coral: #d96a4a;
+    --olive: #6b7a3f;
+    --cream: #f4ecd8;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.6; background: #fafaf7; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
+  h3 { font-size: 1.6rem; line-height: 1.25; }
+  h4 { font-size: 1.15rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; }
+  a { color: inherit; }
+
+  .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+  .back-bar a.back-link:hover { color: var(--gold); }
+  .back-bar a.back-link .arrow { display: inline-block; transition: transform 0.2s; }
+  .back-bar a.back-link:hover .arrow { transform: translateX(-3px); }
+  .back-bar .brand-mini { font-family: 'Playfair Display', serif; font-size: 0.92rem; color: rgba(255,255,255,0.7); letter-spacing: -0.02em; text-decoration: none; }
+  .back-bar .brand-mini:hover { color: white; }
+  .back-bar .brand-mini .dot { color: var(--gold); }
+  .back-bar .meta-mini { display: none; font-size: 0.74rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
+  @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
+
+  .topnav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 1rem 0; }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; }
+  .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
+  .topnav .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .topnav .tab { padding: 0.5rem 1.25rem; border-radius: 999px; text-decoration: none; color: var(--azure-deep); font-size: 0.9rem; font-weight: 500; transition: all 0.2s; border: 1px solid var(--azure); }
+  .topnav .tab:hover { background: var(--azure); color: white; }
+
+  .intro-hero { padding: 6rem 0 4rem; text-align: center; background: linear-gradient(180deg, var(--cream) 0%, #fafaf7 100%); }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--gold-deep); }
+  .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
+  .intro-hero h1 em { font-style: italic; color: var(--azure); font-weight: 400; }
+  .intro-hero .lede { max-width: 740px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
+  .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+
+  .destination { padding: 6rem 0 4rem; background: var(--cream); }
+  .hero-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.12); margin-bottom: 4rem; }
+  .hero-card .hero-image { min-height: 500px; background-size: cover; background-position: center; position: relative;
+    background-image: linear-gradient(135deg, rgba(36,102,168,0.22), rgba(194,160,74,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Vue_du_Mont_Boron_Nice.jpg/1280px-Vue_du_Mont_Boron_Nice.jpg');
+    background-color: var(--azure); }
+  .hero-card .hero-content { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; background: white; }
+  .hero-card .eyebrow { margin-bottom: 1.25rem; color: var(--gold-deep); }
+  .hero-card h2 { margin-bottom: 1.5rem; color: var(--azure-deep); }
+  .hero-card .tagline { font-size: 1.15rem; color: var(--muted); margin-bottom: 2rem; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .stat .stat-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.1; margin-bottom: 0.2rem; color: var(--azure-deep); }
+  .stat .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 720px; }
+  .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--gold-deep); }
+  .section-header h2 { margin-bottom: 1rem; color: var(--azure-deep); }
+  .section-header p { color: var(--muted); font-size: 1.05rem; }
+
+  .flight-box { background: white; border-radius: 16px; padding: 2.5rem; max-width: 920px; margin: 2rem auto 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .flight-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+  .flight-row:last-of-type { border-bottom: none; }
+  .flight-airport .code { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1; font-weight: 700; color: var(--azure-deep); }
+  .flight-airport .city { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; }
+  .flight-line { text-align: center; color: var(--muted); }
+  .flight-line .dash { height: 1px; background: var(--line); position: relative; margin: 0.5rem 0; }
+  .flight-line .dash::after { content: '⟶'; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: white; padding: 0 0.5rem; color: var(--gold); }
+  .flight-line .info { font-size: 0.8rem; }
+  .flight-meta { display: flex; gap: 2rem; justify-content: center; padding-top: 1.5rem; margin-top: 1rem; border-top: 2px solid var(--line); }
+  .flight-meta .item { text-align: center; }
+  .flight-meta .item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 0.3rem; }
+  .flight-meta .item .val { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--azure-deep); }
+
+  .only-this-week { max-width: 1100px; margin: 0 auto 4rem; padding: 3rem; background: linear-gradient(135deg, #f4ecd8, #e6d6a8); border-radius: 24px; }
+  .only-this-week .head { text-align: center; margin-bottom: 2.5rem; }
+  .only-this-week h3 { color: var(--azure-deep); font-size: 2rem; margin-top: 0.5rem; }
+  .only-this-week .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .event-card { background: white; border-radius: 16px; padding: 2rem; border-left: 4px solid var(--azure); }
+  .event-card.clay { border-left-color: var(--coral); }
+  .event-card.olive { border-left-color: var(--olive); }
+  .event-card.stone { border-left-color: var(--gold); }
+  .event-card .head { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .event-card .icon { font-size: 2.2rem; }
+  .event-card h4 { margin: 0; color: var(--azure-deep); }
+  .event-card h4.clay { color: var(--coral); }
+  .event-card h4.olive { color: var(--olive); }
+  .event-card h4.stone { color: var(--gold-deep); }
+  .event-card .when { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
+  .event-card p { font-size: 0.95rem; color: #333; margin-bottom: 1rem; }
+  .event-card .book-link { display: inline-block; padding: 0.4rem 0.9rem; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--gold-deep); border: 1.5px solid var(--gold); }
+  .event-card .book-link:hover { background: var(--gold); color: white; }
+  .bonus-callout { margin-top: 2rem; padding: 1.5rem 2rem; background: rgba(36,102,168,0.06); border-radius: 12px; border-left: 4px solid var(--azure); }
+  .bonus-callout h4 { margin-bottom: 0.5rem; color: var(--azure-deep); }
+  .bonus-callout p { font-size: 0.95rem; color: #333; margin: 0; }
+  .bonus-callout a { color: var(--azure); font-weight: 600; }
+
+  .glance-table { max-width: 1000px; margin: 0 auto 4rem; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .glance-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .glance-table th { background: var(--azure-deep); color: white; padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600; }
+  .glance-table td { padding: 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .glance-table tr:last-child td { border-bottom: none; }
+  .glance-table tr:nth-child(even) td { background: rgba(36,102,168,0.04); }
+  .glance-table td.daynum { font-weight: 600; color: var(--gold-deep); }
+
+  .itinerary { max-width: 950px; margin: 0 auto; }
+  .day { display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
+  .day:last-child { border-bottom: none; }
+  .day-number .num { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1; font-weight: 600; font-style: italic; color: var(--gold-deep); }
+  .day-number .date { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .day-content h3 { margin-bottom: 0.75rem; color: var(--azure-deep); }
+  .day-content ul { list-style: none; }
+  .day-content ul li { padding: 0.45rem 0 0.45rem 1.5rem; position: relative; color: #333; }
+  .day-content ul li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+  .day-content ul li strong { color: var(--azure-deep); }
+  .day-content ul li a { color: var(--azure); text-decoration: none; border-bottom: 1px dotted; }
+  .alts { background: rgba(194,160,74,0.10); border-left: 3px solid var(--gold); padding: 0.85rem 1rem; margin: 0.75rem 0 0.25rem 1.5rem; border-radius: 0 6px 6px 0; font-size: 0.88rem; color: #444; }
+  .alts strong { color: var(--gold-deep); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.25rem; }
+
+  .hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .hotel-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+  .hotel-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .hotel-card .hotel-image { height: 200px; background-size: cover; background-position: center; position: relative; background-color: var(--gold); }
+  .hotel-card .hotel-tier { position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.95); padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: var(--azure-deep); z-index: 2; }
+  .hotel-card .hotel-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .hotel-card .hotel-body h4 { margin-bottom: 0.25rem; color: var(--azure-deep); }
+  .hotel-card .hotel-body .loc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+  .hotel-card .hotel-body p { font-size: 0.93rem; color: #333; margin-bottom: 1rem; line-height: 1.55; }
+  .hotel-card .hotel-meta { display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.85rem; margin-top: auto; }
+  .hotel-card .hotel-meta .price { font-weight: 600; color: var(--azure-deep); }
+  .hotel-card .book-link { display: inline-block; padding: 0.35rem 0.85rem; font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--gold-deep); border: 1.5px solid var(--gold); align-self: flex-start; margin-top: 0.5rem; }
+  .hotel-card .book-link:hover { background: var(--gold); color: white; }
+
+  .wine-block { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; max-width: 1100px; margin: 0 auto 2rem; background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.06); align-items: center; }
+  .wine-block .wine-image { min-height: 360px; background-size: cover; background-position: center; background-color: var(--gold); }
+  .wine-block.provence .wine-image { background-image: linear-gradient(135deg, rgba(36,102,168,0.20), rgba(194,160,74,0.40)), url('https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80'); }
+  .wine-block.bellet .wine-image { background-image: linear-gradient(135deg, rgba(217,106,74,0.20), rgba(194,160,74,0.40)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80'); }
+  .wine-block .wine-text { padding: 3rem 2.5rem 3rem 0; }
+  .wine-block .eyebrow { color: var(--gold-deep); }
+  .wine-block h3 { color: var(--azure-deep); margin-bottom: 1rem; }
+  .wine-block p { color: #333; font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .winery-list .winery { padding: 0.85rem 0; border-bottom: 1px dashed var(--line); }
+  .winery-list .winery:last-child { border-bottom: none; }
+  .winery-list .name { font-weight: 600; color: var(--azure-deep); margin-bottom: 0.2rem; }
+  .winery-list .name a { color: var(--gold-deep); text-decoration: none; }
+  .winery-list .desc { font-size: 0.88rem; color: var(--muted); }
+
+  .food-list { max-width: 950px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .food-row { display: grid; grid-template-columns: 1fr 1.6fr auto; gap: 1.5rem; padding: 1.5rem; border-bottom: 1px solid var(--line); align-items: center; }
+  .food-row:last-child { border-bottom: none; }
+  .food-row .place { font-family: 'Playfair Display', serif; font-weight: 600; color: var(--azure-deep); font-size: 1.1rem; }
+  .food-row .place .stars { color: var(--gold-deep); margin-left: 0.4rem; font-size: 0.9rem; }
+  .food-row .place .meta { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0; }
+  .food-row .desc { font-size: 0.92rem; color: #333; line-height: 1.55; }
+  .food-row .drive { font-size: 0.78rem; color: var(--muted); text-align: right; white-space: nowrap; }
+
+  .activities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1100px; margin: 0 auto; }
+  .activity { background: white; border-radius: 12px; padding: 1.75rem 1.25rem; text-align: center; transition: transform 0.2s; border: 1px solid var(--line); }
+  .activity:hover { transform: translateY(-2px); }
+  .activity .icon { font-size: 2.2rem; margin-bottom: 0.85rem; display: block; }
+  .activity h4 { margin-bottom: 0.5rem; font-size: 1rem; color: var(--azure-deep); }
+  .activity h4 a { color: inherit; text-decoration: none; }
+  .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+  .nightlife { max-width: 1100px; margin: 0 auto 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .nightlife-col { background: #15161a; color: white; padding: 2rem; border-radius: 16px; }
+  .nightlife-col h3 { color: var(--gold); margin-bottom: 1.25rem; font-style: italic; }
+  .nightlife-col .venue { padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nightlife-col .venue:last-child { border-bottom: none; }
+  .nightlife-col .venue .vname { font-family: 'Playfair Display', serif; font-weight: 600; color: white; font-size: 1.05rem; }
+  .nightlife-col .venue .vmeta { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
+  .nightlife-col .venue .vdesc { font-size: 0.88rem; color: rgba(255,255,255,0.75); margin-top: 0.5rem; line-height: 1.5; }
+
+  .score-grid { max-width: 1000px; margin: 0 auto 3rem; }
+  .score-row { display: grid; grid-template-columns: 1fr auto 70px; gap: 1rem; padding: 1.1rem 1.5rem; background: white; border-radius: 8px; margin-bottom: 0.6rem; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .score-row .axis { font-weight: 600; color: var(--azure-deep); }
+  .score-row .axis .tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-left: 0.5rem; font-weight: 500; }
+  .score-row .reason { font-size: 0.88rem; color: #444; max-width: 480px; text-align: right; }
+  .score-row .num { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--gold-deep); font-weight: 600; }
+  .score-row.total { background: var(--azure-deep); color: white; }
+  .score-row.total .axis { color: white; }
+  .score-row.total .num { color: var(--gold); font-size: 1.9rem; }
+
+  .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
+  .booking .section-header h2 { color: white; }
+  .booking .section-header p { color: rgba(255,255,255,0.7); }
+  .booking .section-header .eyebrow { color: rgba(255,255,255,0.7); }
+  .steps { max-width: 850px; margin: 0 auto; }
+  .step { display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .step:last-child { border-bottom: none; }
+  .step .stepnum { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--gold); font-style: italic; }
+  .step h4 { color: white; margin-bottom: 0.5rem; }
+  .step p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem; }
+  .step p strong { color: white; }
+  .step .meta-line { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+  .step .meta-line a { color: var(--gold); text-decoration: none; }
+
+  .adversarial { max-width: 950px; margin: 4rem auto 0; padding: 2.5rem; background: rgba(255,255,255,0.04); border-radius: 16px; border-left: 4px solid var(--gold); }
+  .adversarial h3 { color: white; margin-bottom: 1rem; }
+  .adversarial p { color: rgba(255,255,255,0.78); font-size: 0.95rem; margin-bottom: 1rem; }
+  .adversarial p strong { color: var(--gold); }
+
+  .budget-table { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px; }
+  .budget-table .head { text-align: center; margin-bottom: 2.5rem; }
+  .budget-table h3 { color: white; margin-top: 0.5rem; }
+  .budget-table .head p { color: rgba(255,255,255,0.6); margin-top: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 0.95rem; }
+  .budget-table table { width: 100%; border-collapse: collapse; color: white; font-size: 0.95rem; }
+  .budget-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
+  .budget-table th.item { text-align: left; color: rgba(255,255,255,0.6); width: 38%; }
+  .budget-table th.tier { text-align: center; color: rgba(255,255,255,0.85); width: 21%; font-size: 0.92rem; }
+  .budget-table th.standard { color: var(--gold); font-weight: 700; font-size: 1rem; background: rgba(194,160,74,0.14); }
+  .budget-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .budget-table td.item { color: rgba(255,255,255,0.85); }
+  .budget-table td.tier { text-align: center; }
+  .budget-table td.standard { text-align: center; background: rgba(194,160,74,0.06); }
+  .budget-table td.std-mark { font-weight: 600; }
+  .budget-table td.dim { color: rgba(255,255,255,0.3); }
+  .budget-table tfoot td { padding: 1.5rem 0.75rem 0.5rem; font-family: 'Playfair Display', serif; border-top: 2px solid rgba(255,255,255,0.25); border-bottom: none; }
+  .budget-table tfoot td.total-label { font-size: 1.3rem; color: white; }
+  .budget-table tfoot td.tier { font-size: 1.4rem; color: white; }
+  .budget-table tfoot td.standard { font-size: 1.65rem; color: var(--gold); font-weight: 700; }
+  .budget-table .footnote { text-align: center; color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-top: 2rem; line-height: 1.6; }
+
+  footer { background: #0d0d0d; color: rgba(255,255,255,0.6); padding: 2.5rem 0; text-align: center; font-size: 0.85rem; }
+
+  @media (max-width: 900px) {
+    .hero-card { grid-template-columns: 1fr; }
+    .hero-card .hero-image { min-height: 280px; }
+    .hero-card .hero-content { padding: 2.5rem 2rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .day { grid-template-columns: 1fr; gap: 1rem; }
+    .day-number .num { font-size: 3rem; }
+    .hotels-grid { grid-template-columns: 1fr 1fr; }
+    .activities { grid-template-columns: repeat(2, 1fr); }
+    .flight-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .only-this-week .grid { grid-template-columns: 1fr; }
+    .wine-block { grid-template-columns: 1fr; }
+    .wine-block .wine-text { padding: 2rem; }
+    .nightlife { grid-template-columns: 1fr; }
+    .topnav .tabs { flex-wrap: wrap; }
+    .container { padding: 0 1.25rem; }
+    .step { grid-template-columns: 60px 1fr; gap: 1rem; }
+    .food-row { grid-template-columns: 1fr; gap: 0.6rem; }
+    .food-row .drive { text-align: left; }
+    .score-row { grid-template-columns: 1fr; }
+    .score-row .reason { text-align: left; }
+    .score-row .num { text-align: left; }
+  }
+  @media (max-width: 600px) {
+    .hotels-grid, .activities { grid-template-columns: 1fr; }
+    .intro-hero .meta { gap: 1.5rem; }
+    .topnav { padding: 0.6rem 0; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .brand { font-size: 1rem; }
+    .topnav .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+    .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    .glance-table, .budget-table { overflow-x: auto; }
+    .glance-table table, .budget-table table { min-width: 540px; }
+    h2 { font-size: 1.8rem !important; }
+    .day-number .num { font-size: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
+    <span class="meta-mini">Itinerary No. 03I · Côte d'Azur · <a href="./aug_11_europe.html" style="color: var(--gold); text-decoration: none;">compare options ↗</a></span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<nav class="topnav">
+  <div class="container">
+    <div class="brand">August 11 → 17, 2026</div>
+    <div class="tabs">
+      <a href="#itinerary" class="tab">Itinerary</a>
+      <a href="#hotels" class="tab">Hotels</a>
+      <a href="#wine" class="tab">Wine</a>
+      <a href="#food" class="tab">Food</a>
+      <a href="#activities" class="tab">Activities</a>
+      <a href="#nightlife" class="tab">Nightlife</a>
+      <a href="#score" class="tab">Score</a>
+      <a href="#book" class="tab">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">France · Côte d'Azur · 5 Hotel Nights · Option I</span>
+    <h1>Côte d'Azur — <em>Riviera Grand.</em></h1>
+    <p class="lede">
+      The maximalist pick. Three nights at <strong>Hôtel Martinez</strong> on Cannes' Croisette — Z Plage front-row for the <strong>Aug 15 Festival d'Art Pyrotechnique (Team Finland, Joho Pyro)</strong>, Pakleni-of-the-French-Riviera ferry to Sainte-Marguerite for <strong>La Guérite</strong> beach club, a Saint-Tropez day for <strong>Club 55 → Bagatelle → La Vague d'Or ★★★ → Les Caves du Roy</strong>. Two nights at <strong>Hôtel de Paris Monte-Carlo</strong> — <strong>Le Louis XV — Alain Ducasse ★★★</strong>, the Casino, Jimmy'z till 5 AM. The <strong>Perseid peak Aug 12→13</strong> from Col de Vence's International Dark Sky Reserve is a new-moon, ~90-meteors/hr year. Densest Michelin per square kilometer in Europe outside Paris and Kyoto.
+    </p>
+    <div class="meta">
+      <div class="meta-item"><div class="label">Departure</div><div class="value">Tue, Aug 11</div></div>
+      <div class="meta-item"><div class="label">Return</div><div class="value">Mon, Aug 17</div></div>
+      <div class="meta-item"><div class="label">Travelers</div><div class="value">Two</div></div>
+      <div class="meta-item"><div class="label">Origin</div><div class="value">LAX</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="destination" id="itinerary">
+  <div class="container">
+
+    <div class="hero-card">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Option I · France · Riviera Coast</span>
+        <h2>Cannes +<br>Monte-Carlo</h2>
+        <p class="tagline">The Michelin-saturated romance pick. 3 nights at Hôtel Martinez on La Croisette (★ La Palme d'Or onsite, Z Plage in front, walking to the Aug 15 fireworks barges), 2 nights at Hôtel de Paris Monte-Carlo (★★★ Le Louis XV onsite, Casino across the square, Jimmy'z 5-min walk). Day trips: Saint-Tropez via the Trans Côte d'Azur ferry to Club 55 + Bagatelle, the Lérins Islands by boat to La Guérite, Saint-Paul-de-Vence + La Colombe d'Or for lunch under Picassos, Èze + La Chèvre d'Or ★★ on a cliff. 80–88°F, dry, sea-cooled.</p>
+        <div class="stats">
+          <div class="stat"><div class="stat-value">80–88°F</div><div class="stat-label">August High</div></div>
+          <div class="stat"><div class="stat-value">3× ★★★</div><div class="stat-label">In Range</div></div>
+          <div class="stat"><div class="stat-value">Côtes de Provence</div><div class="stat-label">Signature Rosé</div></div>
+          <div class="stat"><div class="stat-value">~45 min</div><div class="stat-label">Cannes ↔ Nice</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="eyebrow">Getting There</span>
+      <h2>Flight Plan</h2>
+      <p>NCE (Nice Côte d'Azur) has direct seasonal service from JFK/EWR on Delta + La Compagnie. From <strong>LAX the cleanest routings are 1-stop via Paris (CDG) on Air France/Delta, London (LHR) on BA, or Frankfurt (FRA) on Lufthansa</strong>. Land Nice early afternoon Wed, 30 min drive west to Cannes.</p>
+    </div>
+    <div class="flight-box">
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">LAX</div><div class="city">Los Angeles · Tue Aug 11 · dep 4:00 PM</div></div>
+        <div class="flight-line"><div class="info">Air France AF65</div><div class="dash"></div><div class="info">10h 50m nonstop</div></div>
+        <div class="flight-airport"><div class="code">CDG</div><div class="city">Paris · Wed Aug 12 · arr 11:50 AM</div></div>
+      </div>
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">CDG</div><div class="city">Paris · 1h 50m layover</div></div>
+        <div class="flight-line"><div class="info">Air France AF7700</div><div class="dash"></div><div class="info">1h 25m</div></div>
+        <div class="flight-airport"><div class="code">NCE</div><div class="city">Nice · arr <strong>3:05 PM</strong> · 30 min drive to Cannes</div></div>
+      </div>
+      <div class="flight-meta">
+        <div class="item"><div class="label">Est. Round-trip</div><div class="val">$1,400–$2,400</div></div>
+        <div class="item"><div class="label">In Cannes by</div><div class="val">4:30 PM</div></div>
+        <div class="item"><div class="label">Carrier</div><div class="val">Air France</div></div>
+      </div>
+    </div>
+    <p style="text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;">Backup routings: <strong>Lufthansa LAX→FRA→NCE</strong>, <strong>BA LAX→LHR→NCE</strong>, <strong>Delta LAX→JFK→NCE</strong> (seasonal nonstop JFK→NCE on Delta + La Compagnie all-business), <strong>Norse LAX→CDG→NCE</strong> on the budget end. Helicopter NCE→Monaco at $195/seat one-way on <a href="https://www.blade.com/" target="_blank" rel="noopener" style="color: var(--gold-deep);">Blade</a> for the Day 5 transfer. <a href="https://www.skyscanner.com/routes/lax/nce/los-angeles-international-to-nice.html" target="_blank" rel="noopener" style="color: var(--gold-deep);">Skyscanner LAX→NCE →</a></p>
+
+    <div class="section-header">
+      <span class="eyebrow">Day by Day</span>
+      <h2>The Itinerary</h2>
+      <p>Two bases — <strong>3 nights Cannes (Tue–Fri) → 2 nights Monte-Carlo (Fri–Sun)</strong>. The split is engineered around the <strong>Aug 15 Saturday fireworks in Cannes</strong> (Joho Pyro / Finland) and the <strong>Sunday-night Louis XV ★★★ + Casino + Jimmy'z</strong> finish in Monaco. Move Friday afternoon so Saturday is fireworks-day in your Cannes hotel and Sunday is your Monaco crescendo. Every dinner here needs 30–90 days of lead time; this is the most pre-booked itinerary in the set.</p>
+    </div>
+
+
+    <div class="only-this-week">
+      <div class="head">
+        <span class="eyebrow" style="color: var(--gold-deep);">Only This Week</span>
+        <h3>Don't-Miss Events on Your Exact Dates</h3>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 720px; margin-left: auto; margin-right: auto;">Four things happening only during your week — the Cannes pyrotechnic finale, the Perseid peak under a new moon, Cinéma en plein air Cannes, and Mon été Cinéma Nice's Cimiez slot. <strong>Monaco Art en Ciel's August date is Aug 8 — you miss by 3 days</strong>; Jazz à Juan, Nice Jazz Festival, and Festival St-Paul Classique are all over before you arrive. Nice Classic Live runs Jul 21–Aug 9, ending two days early.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="event-card clay">
+          <div class="head">
+            <span class="icon">🎆</span>
+            <div>
+              <h4 class="clay">Cannes Festival d'Art Pyrotechnique · Team Finland</h4>
+              <div class="when"><strong>Sat Aug 15 · 22:00</strong> · finale of the 4-night international competition</div>
+            </div>
+          </div>
+          <p><strong>The trip's anchor.</strong> The Cannes pyrotechnic festival is the most prestigious international fireworks competition in the world — four nights through July + August, each a different national team. <strong>Aug 15 is the Finland team — Joho Pyro Professional Fireworks AB.</strong> ~20 minutes, free public viewing, launched from barges directly in front of the Hôtel Carlton on La Croisette. Front-row is the beach + the Croisette sand-clubs (Z Plage at Martinez, Plage 55, Plage Royal); upper-rooftop views from Suquet hill or Martinez's 7th-floor suites. Crowds top 200,000 — Croisette closes to vehicles from 19:00. <strong>Book a Z Plage dinner table 90 days out</strong> for the front-row sand seat. Verify the team + date on the official site closer to summer.</p>
+          <a href="https://en.palaisdesfestivals.com/press-area/press-releases/cannes-pyrotechnique-art-festival-2026/" target="_blank" rel="noopener" class="book-link">Festival site →</a>
+        </div>
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">☄️</span>
+            <div>
+              <h4>Perseid Meteor Shower Peak · Col de Vence Dark Sky Reserve</h4>
+              <div class="when">Night of <strong>Wed Aug 12 → Thu Aug 13</strong> · arrival night</div>
+            </div>
+          </div>
+          <p><strong>A new-moon Perseid year — 90+ meteors/hr at peak, 02:00–04:00 UTC.</strong> Best dark-sky vantage in the region: <strong>Col de Vence</strong>, 15 minutes above Vence town, inside the <strong>RICE International Dark Sky Reserve</strong>. Vence's town hall runs guided <em>"Étoiles Grandeur Nature"</em> deckchair sessions through August with astronomers + telescopes — verify the Aug 12 date with the office de tourisme. Backups: <strong>Mercantour National Park</strong> (1.5 h inland from Cannes, blackest skies in southern France), the Estérel cliff roads above Théoule (45 min from Cannes, sea-side dark sky if Col de Vence is fogged), or the Eden-Roc grounds if you're a guest. <strong>Drive up after the welcome dinner</strong>: 22:30 leave Cannes → 23:30 at Col de Vence → meteor peak 02:00 → home 04:30.</p>
+          <a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener" class="book-link">Viewing guide →</a>
+        </div>
+
+        <div class="event-card olive">
+          <div class="head">
+            <span class="icon">🎬</span>
+            <div>
+              <h4 class="olive">Cinéma en plein air · Cannes</h4>
+              <div class="when"><strong>Tue Aug 11 · 22:00</strong> — arrival night, on the beach below La Croisette · free</div>
+            </div>
+          </div>
+          <p>The Cannes municipal open-air cinema, free, run by the Palais des Festivals. <strong>Aug 11 is the first of August's three screenings</strong> (then Aug 18, 25) — programmed films land in late spring (typically a mix of recent French + international titles + classics). Screen sets up on Plage Macé (in front of the Palais), 22:00 start, bring nothing or a chair (sand and Croisette seats fill from 21:30). <strong>The perfect arrival-night low-stakes anchor</strong> — land NCE 3 PM, check in by 5, dinner at the hotel, walk down the Croisette at 21:45, watch under the Riviera sky, in bed by midnight.</p>
+          <a href="https://www.cannes-destination.com/" target="_blank" rel="noopener" class="book-link">Cannes Destination →</a>
+        </div>
+
+        <div class="event-card stone">
+          <div class="head">
+            <span class="icon">🎼</span>
+            <div>
+              <h4 class="stone">Mon été Cinéma · Arènes de Cimiez Nice</h4>
+              <div class="when"><strong>Sat Aug 22</strong> — final screening of the month (you miss; Aug 7 + 8 are the only Aug dates this year)</div>
+            </div>
+          </div>
+          <p>Nice's free open-air cinema in the Roman arena at Cimiez (above Vieux Nice, next to the Matisse Museum). The summer programme typically runs Friday + Saturday nights through August — but the <strong>2026 calendar puts only Aug 7 + 8 on the schedule before a 2-week pause</strong>, then resumes Aug 22. <strong>You'd miss the August window altogether</strong>. Mentioned here only so you know to skip it — the Cannes screening above is the in-week open-air-cinema substitute. (If the city extends to a mid-month date, verify with the Nice tourist board on arrival.)</p>
+          <a href="https://www.nice.fr/" target="_blank" rel="noopener" class="book-link">Nice city site →</a>
+        </div>
+
+        <div class="event-card clay">
+          <div class="head">
+            <span class="icon">⛵</span>
+            <div>
+              <h4 class="clay">Saint-Tropez beach-club August peak</h4>
+              <div class="when">Aug 11–17 is <strong>peak Pampelonne week</strong> — every venue at full capacity</div>
+            </div>
+          </div>
+          <p>Pampelonne's beach clubs aren't a "festival" but August 11–17 is structurally the year's peak. <strong>Club 55</strong> (Brigitte Bardot's original since 1955, lunch only 12:00–17:00, book 2 months ahead at +33 4 94 55 55 55), <strong>Bagatelle</strong> (champagne-shower DJ lunches, dancing on tables from 16:00), <strong>Nikki Beach Saint-Tropez</strong> (two seatings, chill 12:00 + DJ party 15:00, runs Apr 24–Sep 13), <strong>Loulou Ramatuelle</strong> (1950s elegance + SevenRooms reservation), and <strong>Le Club 55's afternoon-only crescendo</strong> — all running. <strong>⚠️ Plage Keller (Cap d'Antibes) is CLOSED for 2026</strong>, major renovation through early 2027, operating as "La Piscine Keller" at Palm Beach Cannes for 2026 dinner only. Plan accordingly.</p>
+          <a href="https://www.club55.fr/" target="_blank" rel="noopener" class="book-link">Club 55 →</a>
+        </div>
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">🌃</span>
+            <div>
+              <h4>Caves du Roy · Jimmy'z · Bâoli · the late-night cathedral</h4>
+              <div class="when">All open through Aug · weekend nights peak</div>
+            </div>
+          </div>
+          <p><strong>Les Caves du Roy @ Hôtel Byblos Saint-Tropez</strong> (since 1967, 23:30–06:00, VIP table €1,500+ on a weeknight with Dom Pérignon credit, strict dress, book 1+ month ahead) — the Côte's most-photographed late venue. <strong>Jimmy'z Monte-Carlo</strong> (since 1971, Wed–Sun 23:00–05:00, Fri/Sat 04:00 close, smart-casual strict). <strong>Bâoli Cannes</strong> (Port Pierre Canto, restaurant→05:00, Fri+Sat 20:00–05:00 in season, smart dress, +1 347 759-6146). <strong>Twiga Monte-Carlo</strong> (Flavio Briatore's Avenue Princesse Grace, dinner-show Fri/Sat from 22:00, club doors 23:30). <strong>The Friday + Saturday + Sunday weekend is the trip's late-night arc</strong> — pick two of these for the late slots, not all three.</p>
+          <a href="https://www.byblos.com/en/cellier-du-roy/" target="_blank" rel="noopener" class="book-link">Les Caves du Roy →</a>
+        </div>
+
+      </div>
+
+      <div class="bonus-callout">
+        <h4>⚠️ What you'll <em>just</em> miss — Monaco Art en Ciel Aug 8 + Lérins Abbey first-Friday wine tour Aug 7</h4>
+        <p>The <strong>Monaco International Fireworks Competition (Art en Ciel)</strong> has only two August dates each year — the last Saturday of July and the first Saturday of August. The 2026 August date is <strong>Aug 8</strong>: you arrive Aug 12 and miss by 3 days. The Cannes pyrotechnic finale Aug 15 fully substitutes. The <strong>Saint-Honorat (Lérins Abbey) public monks-and-wine tour</strong> runs the first Friday of each month — <strong>Aug 7</strong>, also outside your window. You can still ferry to Sainte-Marguerite + La Guérite during your visit (see Day 2), just not the formal monastery wine tour. <strong>Festivals over before arrival:</strong> Jazz à Juan (Jul 9–19), Nice Jazz Festival (mid-July), Festival St-Paul Classique &amp; Jazz (Jul 20–29), Nice Classic Live (Jul 21–Aug 9 — ends two days early).</p>
+      </div>
+    </div>
+
+    <div class="glance-table">
+      <table>
+        <thead>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner + Late</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="daynum">0</td><td>Tue Aug 11</td><td>Arrive · Cinéma en plein air 🎬</td><td>NCE 3:05 PM · drive to Cannes · Martinez check-in · Z Plage aperitif · Plage Macé free open-air cinema 22:00</td><td><strong>Z Plage</strong> light dinner · early in</td></tr>
+          <tr><td class="daynum">1</td><td>Wed Aug 12</td><td>Cap d'Antibes · Perseids ☄️</td><td>Sentier du Littoral 07:30 morning hike · Antibes Picasso Museum · Eden-Roc lunch terrace · Le Plongeoir sunset · Col de Vence Perseids midnight</td><td><strong>Le Bistrot d'Antoine</strong> Vieux Nice · Col de Vence peak 02:00–04:00</td></tr>
+          <tr><td class="daynum">2</td><td>Thu Aug 13</td><td>Lérins Islands · La Guérite</td><td>Quai Laubeuf ferry 10:00 → Saint-Honorat monastery + vineyard walk → Sainte-Marguerite swim → <strong>La Guérite</strong> lunch + DJ → return 19:00 → La Palme d'Or ★</td><td><strong>La Palme d'Or ★</strong> Martinez · Bâoli 00:00–04:00</td></tr>
+          <tr><td class="daynum">3</td><td>Fri Aug 14</td><td>Saint-Tropez ferry day</td><td>Trans Côte d'Azur ferry 09:30 Cannes→St-Tropez · Club 55 lunch · Bagatelle afternoon · Sénéquier sunset · La Vague d'Or ★★★ · Caves du Roy 00:00</td><td><strong>La Vague d'Or ★★★</strong> · Caves du Roy → St-T overnight (Cheval Blanc)</td></tr>
+          <tr><td class="daynum">4</td><td>Sat Aug 15 🎆</td><td>Velika gospa · Cannes fireworks</td><td>St-Paul-de-Vence morning · Fondation Maeght · La Colombe d'Or lunch · Vence Chapelle du Rosaire · back to Cannes · <strong>Z Plage dinner 19:30 + Aug 15 fireworks 22:00 Finland</strong></td><td><strong>Z Plage front-row</strong> · Bâoli 23:30–05:00</td></tr>
+          <tr><td class="daynum">5</td><td>Sun Aug 16</td><td>Cannes → Monte-Carlo · Le Louis XV ★★★</td><td>Helicopter NCE→Monaco (Blade $195) OR coastal drive via Èze · Villa Ephrussi de Rothschild · La Chèvre d'Or ★★ lunch in Èze · Casino walk · Le Louis XV ★★★ 20:30</td><td><strong>Le Louis XV ★★★</strong> · Casino 23:30 · Jimmy'z 02:00–05:00</td></tr>
+          <tr><td class="daynum">6</td><td>Mon Aug 17</td><td>Departure</td><td>Slow breakfast on Hôtel de Paris rooftop · Oceanographic Museum 30 min · Monaco→NCE transfer</td><td>On the plane</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="itinerary">
+
+      <div class="day">
+        <div class="day-number"><div class="num">00</div><div class="date">Tue Aug 11</div></div>
+        <div class="day-content">
+          <h3>Arrive NCE → Cannes Martinez · Z Plage · Plage Macé open-air cinema</h3>
+          <ul>
+            <li><strong>3:05 PM</strong> Land NCE · Air France AF7700 from CDG · prearranged Mercedes/Tesla transfer to Cannes (~30 min, €90 fixed) or rental at NCE (€90/day in August, you'll use it for Days 1 + 5)</li>
+            <li><strong>4:30 PM</strong> Check in at <a href="https://www.hyatt.com/en-US/hotel/france/hotel-martinez-in-the-unbound-collection-by-hyatt/nceub" target="_blank" rel="noopener">Hôtel Martinez</a> on La Croisette · request a sea-view Croisette-facing room on a high floor (the Aug 15 fireworks barges launch directly in front)</li>
+            <li><strong>5:30 PM</strong> Walk down to <strong>Z Plage</strong> (Martinez's private beach across the Croisette) — Aperol spritz on the sunbeds, sundown ~20:30 mid-Aug, beach DJ softening the crowd</li>
+            <li><strong>8:00 PM</strong> Light dinner on the <strong>Z Plage terrace</strong> — grilled fish, salade niçoise, rosé. Stay restrained; the trip starts tomorrow.</li>
+            <li><strong>9:45 PM</strong> Walk 10 minutes east along La Croisette to <strong>Plage Macé</strong> (in front of the Palais des Festivals) for the <strong>free open-air cinema</strong> — programme posted at the Palais 2 weeks ahead; films start 22:00 sharp · sand seating; bring nothing</li>
+            <li><strong>12:00 AM</strong> Walk home along the Croisette · jet lag wins</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Skip the cinema. Walk west to <a href="https://www.lapalmedor-restaurant.fr/" target="_blank" rel="noopener">La Palme d'Or ★</a> for an opener at the chef's table — Jean Imbert's cinema-themed counter, late dinner 21:30 reservations available, ~€220 tasting. Pair with the Aug 15 itinerary by moving La Palme d'Or to Tuesday and the Z Plage night to Thursday.</div>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> In-room service from Martinez room service, the Sea Lounge spa for an arrival massage at 19:00, bed at 22:00.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Negligible (Cannes August has &lt;1 rainy day on average). If it happens: the Suquet covered market for a charcuterie + cheese platter, lobby bar at Martinez, in bed early.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">01</div><div class="date">Wed Aug 12</div></div>
+        <div class="day-content">
+          <h3>Cap d'Antibes · Eden-Roc lunch · Le Plongeoir sunset · Perseids at Col de Vence</h3>
+          <ul>
+            <li><strong>7:30 AM</strong> Drive Cannes → Cap d'Antibes (25 min) · park at the Plage de la Garoupe trailhead · walk the <strong><a href="https://www.alltrails.com/trail/france/provence-alpes-cote-d-azur/sentier-du-littoral-cap-d-antibes" target="_blank" rel="noopener">Sentier du Littoral</a></strong> — 5 km coastal loop, 1–2 h, jagged limestone, Billionaire's Bay swim stop. Start early to beat the heat (90+°F by noon inland).</li>
+            <li><strong>10:30 AM</strong> Drive into <strong>Antibes Old Town</strong> · <a href="https://www.antibes-juanlespins.com/musees/musee-picasso" target="_blank" rel="noopener">Musée Picasso / Château Grimaldi</a> (closed Mon; open 10:00–13:00 + 14:00–18:00 Tue–Sun, Wed/Fri extended to 20:00 July+Aug) — Picasso's 1946 studio with the Joie de Vivre + ceramics. €8/pp.</li>
+            <li><strong>12:00 PM</strong> <strong>Marché Provençal</strong> at Cours Masséna · charcuterie, olives, tapenade — picnic supplies if you skip the Eden-Roc lunch reservation</li>
+            <li><strong>1:00 PM</strong> Lunch at the <strong><a href="https://www.oetkercollection.com/hotels/hotel-du-cap-eden-roc/restaurants-and-bars/eden-roc-grill" target="_blank" rel="noopener">Eden-Roc Grill terrace</a></strong> at <a href="https://www.oetkercollection.com/hotels/hotel-du-cap-eden-roc/" target="_blank" rel="noopener">Hôtel du Cap-Eden-Roc</a> — the iconic Riviera lunch view: cliffs, the Mediterranean, the Anjuna sea-water pool below. Tartare de boeuf, lobster, niçoise salad. Day-passes for non-guests are rare in August but lunch reservations are possible 60+ days out — €120–€180/pp. <strong>Plan B if no Eden-Roc:</strong> <a href="https://restaurantbacon.com/en/" target="_blank" rel="noopener">Restaurant de Bacon ★</a> (Boulevard de Bacon — same cape — the famous bouillabaisse + sole meunière institution since 1948, 1 Michelin star).</li>
+            <li><strong>4:00 PM</strong> Drive back to Cannes (or detour to Antibes' Plage du Salis for a swim) · 60-min hotel break · shower + change</li>
+            <li><strong>7:00 PM</strong> Drive to Nice (45 min coast road) · park near Port de Nice · sunset cocktails at <strong><a href="https://www.leplongeoir.com/" target="_blank" rel="noopener">Le Plongeoir</a></strong> (60 Bd Franck Pilatte) — restaurant on a 6 m rock platform jutting into the sea, the bar room <em>Le Vivier</em> is the sundowner room. Sunset ~20:30.</li>
+            <li><strong>9:00 PM</strong> Walk to Vieux Nice (15 min along the Promenade) · dinner at <strong><a href="https://www.lebistrotdantoine.com/" target="_blank" rel="noopener">Le Bistrot d'Antoine</a></strong> (27 rue de la Préfecture) — Vieux Nice's most-loved chalkboard bistrot; cocotte de cochon (braised pork), zucchini-flower risotto, blanquette de veau. <strong>Joann-friendly</strong>: this is deep Provençal meat tradition, not Riviera seafood lean. Tue–Sat 12:00–14:00 + 19:00–22:00. +33 4 93 85 29 57.</li>
+            <li><strong>10:45 PM</strong> Cocktail at <strong>Wayne's Bar</strong> (15 rue de la Préfecture, est. 1991 live music nightly) — keep it to one</li>
+            <li><strong>11:30 PM</strong> Drive Nice → <strong>Col de Vence</strong> (30 min via D2 from Vence) · arrival 00:00, settle on a deck-chair pull-off above the col · the <strong>Perseids peak 02:00–04:00 UTC</strong> on Aug 13 (which is 04:00–06:00 local) — 90+ meteors/hr in a new-moon year, the RICE Dark Sky Reserve sky is genuinely black</li>
+            <li><strong>4:30 AM</strong> Drive Col de Vence → Cannes (1 h 15 min via the A8) · in bed by 6:00 AM, sleep deeply</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the dawn hike. Sleep in at Martinez. Half-day Sentier des Douaniers on Cap Ferrat instead (6 km, 1.5–2 h, 364 ft) — drive 1 h from Cannes after a 10 AM start. Skip Col de Vence entirely; watch the Perseids from the Eden-Roc clifftop or the Martinez 7th-floor rooftop (good but not Dark Sky Reserve).</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Add a morning private boat charter — <strong>scuba diving with <a href="https://www.easydive.fr/" target="_blank" rel="noopener">Easy Dive</a></strong> from Juan-les-Pins, 09:00 + 14:00 dives, PADI-certified, €70/pp for a single-tank Estérel red-cliff dive. Then full afternoon at Bagatelle Cannes for lunch instead of Eden-Roc; back for Le Plongeoir + Le Bistrot d'Antoine + Col de Vence.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> The Sentier du Littoral closes in rain (jagged limestone is dangerous). Plan B: Musée Picasso opening at 10:00, lunch at <a href="https://www.la-petitemaison.com/" target="_blank" rel="noopener">La Petite Maison Nice</a> (the legendary truffle-pasta + battered courgette flowers spot — Madonna's favorite — book at +33 4 93 92 59 59), Matisse Museum at Cimiez in the afternoon. Skip Col de Vence (clouds = no Perseids).</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">02</div><div class="date">Thu Aug 13</div></div>
+        <div class="day-content">
+          <h3>Lérins Islands · La Guérite Sainte-Marguerite · La Palme d'Or ★ · Bâoli</h3>
+          <ul>
+            <li><strong>10:30 AM</strong> Slow breakfast at Martinez (Le Relais is the indoor; Z Plage is the outdoor option) · sleep in after the Perseid night</li>
+            <li><strong>11:30 AM</strong> Walk to <strong>Quai Laubeuf</strong> (10 min west of Martinez) · 12:00 PM boat shuttle to <strong>Île Sainte-Marguerite</strong> · the Lérins ferries run every 30–60 minutes in summer, €17 round-trip pp</li>
+            <li><strong>12:30 PM</strong> Lunch at <strong><a href="https://excellenceriviera.com/discover/la-guerite-restaurant-cannes" target="_blank" rel="noopener">La Guérite</a></strong> on Sainte-Marguerite (open 09:00–23:00 daily, +33 4 93 43 49 30) — Mediterranean menu, the Côte's celebrity-magnet beach club, DJ from 13:00, lunch crescendos to dancing-on-chairs by 16:00. Book 45 days out — tables on the pier are the booking; the bar is walk-up.</li>
+            <li><strong>3:30 PM</strong> Walk the <strong>Fort Royal</strong> (the Iron Mask prison fortress) + 10 min into the pine forest interior — Sainte-Marguerite is bigger than it looks, and you'll want 30 min away from the DJ</li>
+            <li><strong>5:00 PM</strong> Boat to <strong>Île Saint-Honorat</strong> (the second Lérin, owned by Cistercian monks) — they make wine and Lérina liqueur on an 8 ha vineyard. The first-Friday-of-the-month monks-and-wine public tour was Aug 7 (you missed); but the abbey shop, the monastery walk, and the south-shore swim coves are open 09:30–17:30. Last boat back to Cannes 18:00.</li>
+            <li><strong>6:30 PM</strong> Back at Martinez · long shower, change into smart attire (La Palme d'Or is jacket-required for men in evening)</li>
+            <li><strong>8:30 PM</strong> Dinner at <strong><a href="https://www.lapalmedor-restaurant.fr/" target="_blank" rel="noopener">La Palme d'Or ★</a></strong> · Hôtel Martinez's 7th-floor flagship, cinema-themed under chef <strong>Jean Imbert</strong>, ~€220 5-course tasting, wine pairing ~€110. The signatures rotate but include a tribute course to a different French film each season. Joann: the Cannes lamb, the wagyu course. Reserve 60+ days out via the website.</li>
+            <li><strong>11:30 PM</strong> Walk 8 min east to <strong><a href="https://www.baolicannes.com/" target="_blank" rel="noopener">Bâoli</a></strong> at Port Pierre Canto — Cannes' single biggest restaurant-club, terrace over the water, DJ Fri+Sat from 20:00–05:00 (the Thursday slot is 23:30–04:00 typically). Cover at the door €30/pp; for a table, WhatsApp +1 347 759-6146 or book on the site. Smart-elegant dress strictly enforced.</li>
+            <li><strong>3:30 AM</strong> Walk home along the Croisette (15 min, well-lit and crowded)</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the Lérins boat. Spend the day at <strong>Plage de la Croisette</strong> at Z Plage (Martinez's private beach) — sunbed €60, cocktail service, walk back upstairs for a Sea Lounge spa massage 16:00. Dinner at La Palme d'Or ★ but skip Bâoli (cocktail on the Martinez rooftop instead).</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Half-day catamaran sailing from Quai Laubeuf — €55–€67/pp via <a href="https://www.checkyeti.com/" target="_blank" rel="noopener">CheckYeti</a> or Viator, 4 h Lérins + open-Mediterranean reach with snorkel stop. Lunch at La Guérite after, then full afternoon at the Saint-Honorat vineyard. La Palme d'Or + Bâoli unchanged.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Lérins ferries cancel in moderate swell. Plan B: drive to <strong>Mougins</strong> (15 min inland) — the medieval hill village with <strong>3 Michelin restaurants in a 200 m radius</strong>: <a href="https://www.paloma-mougins.com/" target="_blank" rel="noopener">Paloma ★★</a> (Decherchy), <a href="https://www.bruno-oger.com/" target="_blank" rel="noopener">La Villa Archange ★★</a> (Bruno Oger), <a href="https://laplacedemougins.com/" target="_blank" rel="noopener">La Place de Mougins ★</a> (Fétisson). Pick one for lunch, walk the village, back to Cannes by 17:00.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">03</div><div class="date">Fri Aug 14</div></div>
+        <div class="day-content">
+          <h3>Saint-Tropez ferry day · Club 55 → Bagatelle → La Vague d'Or ★★★ → Caves du Roy</h3>
+          <ul>
+            <li><strong>8:30 AM</strong> Coffee + croissants on the Martinez terrace · pack a swim bag (you're not coming back tonight)</li>
+            <li><strong>9:30 AM</strong> Quai Saint-Pierre · board the <strong><a href="https://trans-cote-azur.com/" target="_blank" rel="noopener">Trans Côte d'Azur</a> ferry Cannes → Saint-Tropez</strong> — 75 min direct, €74 round-trip pp, runs Tue/Thu/Sat in season. Verify Friday schedule on booking; if no Friday boat, take the alternative <strong>Riviera Lines</strong> route (similar timing) or drive (90 min in non-traffic — but August Friday Cannes→St-Tropez is 3–4 h gridlock and the ferry is the right answer)</li>
+            <li><strong>11:00 AM</strong> Arrive Saint-Tropez harbor · 15-min taxi to <strong>Pampelonne beach</strong> · check in at <a href="https://www.chevalblanc.com/en/maison/st-tropez/" target="_blank" rel="noopener">Cheval Blanc Saint-Tropez</a> (the only luxury hotel directly on the St-Tropez village waterfront; bag-drop, you go straight to lunch)</li>
+            <li><strong>12:30 PM</strong> Lunch at <strong><a href="https://www.club55.fr/" target="_blank" rel="noopener">Le Club 55</a></strong> at Pampelonne — Brigitte Bardot's original since 1955, lunch only 10:00–17:00 (open Mar 27 – Nov 1). Mats €39/parasol €19. The salade Tropézienne, grilled loup de mer, crudités basket. Book 60+ days out at +33 4 94 55 55 55. Cash + cards.</li>
+            <li><strong>3:00 PM</strong> Walk 10 min north along Pampelonne to <strong><a href="https://bagatelle.com/saint-tropez/" target="_blank" rel="noopener">Bagatelle Saint-Tropez</a></strong> — champagne-shower DJ-lunches with seatings at 13:30 + 15:30, dancing on the tables from 16:00. You catch the second half of the 15:30 seating. Cover + a magnum is the play (~€500–€800 between two).</li>
+            <li><strong>6:30 PM</strong> Walk back to Saint-Tropez village (taxi 10 min, walk 35 min along the Pampelonne sand) · check in properly at Cheval Blanc · shower, change to smart-evening</li>
+            <li><strong>7:30 PM</strong> Aperitif at <strong>Sénéquier</strong> (the red-awning institution on the Old Port, since 1887) — Aperol spritz €18, a long slow people-watch of the mega-yacht line directly in front. Sun drops behind the Esterel ~20:35.</li>
+            <li><strong>9:00 PM</strong> Dinner at <strong><a href="https://www.chevalblanc.com/en/maison/st-tropez/restaurants-bars/la-vague-dor/" target="_blank" rel="noopener">La Vague d'Or ★★★</a></strong> · Arnaud Donckele's flagship inside Cheval Blanc · dinner only 19:30–21:30 (closed Wed), tasting menu from €445/pp, wine pairing ~€280. Fish-forward but the vegetable + meat courses are substantial — Joann path: ask for the Provençal lamb signature and the courgette-flower tribute. <strong>Book 90 days out</strong> via the Cheval Blanc concierge.</li>
+            <li><strong>12:00 AM</strong> Walk 5 min to <strong><a href="https://www.byblos.com/en/cellier-du-roy/" target="_blank" rel="noopener">Les Caves du Roy</a></strong> at Hôtel Byblos — open 23:30–06:00, the Saint-Tropez night since 1967. VIP table €1,500+ on a weeknight (Dom Pérignon credit applies), heels + designer dress strictly enforced, no shorts no flip-flops no t-shirts. Book the table 1+ month ahead via Byblos concierge.</li>
+            <li><strong>4:30 AM</strong> Walk back to Cheval Blanc (5 min) · sleep until 11:30 AM</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Bagatelle. Lunch at Club 55 only, afternoon at the Cheval Blanc rooftop pool (their Dior Spa for a 16:00 massage), dinner at La Vague d'Or ★★★ unchanged. Skip Caves du Roy — quiet nightcap at the Cheval Blanc bar instead.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Charter a half-day private yacht from Saint-Tropez (€2,500–€5,000 for the afternoon) — anchor at <strong>Plage de Tahiti</strong> on Pampelonne for the swim, lunch on board (catering by Club 55 or Bagatelle to the yacht), arrive at the Vieux Port at 18:00 in style. La Vague d'Or + Caves du Roy unchanged.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Saint-Tropez in rain is genuinely sad (the beach clubs close, mega-yacht-people retreat). Plan B: stay in Cannes, drive to <strong>Château La Coste</strong> at Le Puy-Sainte-Réparade (2 h inland) — 600 acres of architecture (Tadao Ando chapel, Sean Scully chapel, Calder mobile, Bourgeois Spider, Serra) + 6 restaurants including <a href="https://www.chateau-la-coste.com/en/restauration/helene-darroze-en/" target="_blank" rel="noopener">Hélène Darroze à Villa La Coste ★</a> and a Francis Mallmann Argentine wood-fire grill. Wine tasting included with the art tour (€18 entry). Long drive but the trip's most-art-saturated day. Back to Cannes 21:00, late dinner at the hotel.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">04</div><div class="date">Sat Aug 15 🎆</div></div>
+        <div class="day-content">
+          <h3>Saint-Paul-de-Vence morning · La Colombe d'Or lunch · <em>Cannes fireworks 22:00 Finland</em></h3>
+          <ul>
+            <li><strong>9:00 AM</strong> Leave Cheval Blanc (or check out Friday and have stayed Cannes-side — see hotel note below) · ferry Saint-Tropez → Cannes 10:00 (75 min) · or drive (avoid: Saturday traffic up the A8 from St-T is bearable westbound but the eastbound parallel is brutal; you're going west, so manageable)</li>
+            <li><strong>11:30 AM</strong> Continue inland from Cannes 30 min · <strong>Saint-Paul-de-Vence</strong> — the medieval hill village above Nice where Chagall is buried, where Picasso + Braque painted, where every gallery on the main rue is a working art space</li>
+            <li><strong>12:30 PM</strong> Lunch at <strong><a href="https://www.la-colombe-dor.com/en/" target="_blank" rel="noopener">La Colombe d'Or</a></strong> · the dining room hangs Picasso, Léger, Braque, Miró, Calder originals on the walls (paid for over decades in pre-fame canvas-for-meal deals). Lunch service is the experience; book 60+ days out by phone only +33 4 93 32 80 02 (no online). The salade niçoise, courgette flowers, grilled lamb, pichet of rosé. <strong>Joann path:</strong> the boeuf en daube, the lamb.</li>
+            <li><strong>3:00 PM</strong> Walk 5 min to <strong><a href="https://www.fondation-maeght.com/en/" target="_blank" rel="noopener">Fondation Maeght</a></strong> (Jul/Aug 10:00–19:00) — the private modern-art foundation built by Aimé Maeght · sculptures by Calder, Miró, Giacometti in the garden labyrinth, Chagall mosaic, Léger mural in the courtyard. €16/pp.</li>
+            <li><strong>5:00 PM</strong> 10 min drive to <strong>Vence</strong> · <a href="https://www.chapellematisse.com/" target="_blank" rel="noopener">Chapelle du Rosaire</a> (Matisse's late-life masterpiece chapel — he designed everything, windows, vestments, tiles · open Tue+Thu 10:00–11:30 + 14:00–17:30, Sat-Wed limited). If closed Sat: walk Vence Old Town instead — Place du Peyra fountains, the medieval rampart walk.</li>
+            <li><strong>6:00 PM</strong> Drive back to Cannes (~50 min) · home by 7:00 PM</li>
+            <li><strong>7:30 PM</strong> Smart-elegant change at Martinez (you're back here from Friday's stay; the room has been held)</li>
+            <li><strong>8:00 PM</strong> Down to <strong>Z Plage</strong> for the fireworks dinner — front-row sand seating, set menu €180/pp (typical for the pyrotechnic nights), three courses + a pacing-aware service so you're on coffee + dessert at 22:00. <strong>Book this in February — 90+ days lead time is the minimum for the Aug 15 finale night</strong>. The Croisette is car-free from 19:00; your shuttle ends at the Martinez lobby and you walk.</li>
+            <li><strong>10:00 PM</strong> <strong>Cannes Festival d'Art Pyrotechnique · Team Finland (Joho Pyro Professional Fireworks AB) · 20-min show launched from barges directly off the Carlton</strong> — the Z Plage front-row is the trip's iconic image</li>
+            <li><strong>10:45 PM</strong> Walk 5 min west to <strong><a href="https://www.baolicannes.com/" target="_blank" rel="noopener">Bâoli</a></strong> for the Friday/Saturday late club night — DJ 23:30, peaks 01:30, closes 05:00</li>
+            <li><strong>3:30 AM</strong> Walk home along the now-empty Croisette</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Bâoli. Late nightcap at the <strong>Martinez Bar L'Amiral</strong> (the legendary Cannes Film Festival deal-making bar) — quieter, jacket-and-cocktail. In bed by 1:30 AM.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Swap Z Plage dinner for a private yacht charter to watch the fireworks from the water (€1,500–€4,000 for a 4-hour charter from Quai Laubeuf — boats anchor 200 m off the launching barges, the close-up view is unmatched but you trade the Z Plage dinner). Book via <a href="https://www.borrowaboat.com/" target="_blank" rel="noopener">BorrowABoat</a> or local broker 45 days out.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> The fireworks postpone only in very heavy rain (typical Aug Cannes risk: ~5%). If they're called: Martinez room service, late-night film at the Olympia cinema in Cannes. Or drive to <strong>Mougins</strong> for La Place de Mougins ★ dinner (15 min, indoor refuge).</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">05</div><div class="date">Sun Aug 16</div></div>
+        <div class="day-content">
+          <h3>Cannes → Monte-Carlo · Villa Ephrussi · La Chèvre d'Or ★★ · <em>Le Louis XV ★★★ · Casino · Jimmy'z</em></h3>
+          <ul>
+            <li><strong>10:00 AM</strong> Slow breakfast at Martinez · check out, luggage to the driver</li>
+            <li><strong>11:00 AM</strong> Two paths to Monaco:<br>
+              <strong>(a) The Blade helicopter</strong> — NCE → Monaco heliport, 7 minutes, $195/seat one-way on Blade or ~€800+ private with Monacair. Most operatic. Drop bags at Hôtel de Paris, helicopter, arrive 11:20 fresh.<br>
+              <strong>(b) The coastal drive</strong> — Cannes → Nice → Villefranche → Cap Ferrat → Èze → Monaco, ~2 h with stops. Slower but you fold in Cap Ferrat. Use this if you skipped the Cap Ferrat walk on Day 1.</li>
+            <li><strong>12:00 PM</strong> If driving: stop at <strong><a href="https://www.villa-ephrussi.com/" target="_blank" rel="noopener">Villa Ephrussi de Rothschild</a></strong> on Cap Ferrat (Jul/Aug 10:00–19:00) — Béatrice de Rothschild's pink-marble seaside villa with <strong>9 themed gardens</strong> (Florentine, Spanish, French, Japanese, Provençal, exotic, stone, rose, lapidary) and a Bellini-period collection inside. €18/pp · 90 min visit.</li>
+            <li><strong>1:30 PM</strong> Drive 15 min east to <strong>Èze village</strong> — the medieval clifftop, 427 m above sea, the Jardin Exotique cactus garden at the summit, the Fragonard perfume factory (free tour). Park at the village base.</li>
+            <li><strong>2:00 PM</strong> Lunch at <strong><a href="https://www.chevredor.com/" target="_blank" rel="noopener">La Chèvre d'Or ★★</a></strong> in Èze village — Tom Meyer's two-star restaurant inside the cliff-edge Château de la Chèvre d'Or hotel. Lunch tasting €140–€220, à la carte from €90. Terrace tables hang directly over the Mediterranean — the trip's most-photographed restaurant moment. Reserve 45+ days out.</li>
+            <li><strong>4:30 PM</strong> Drive 25 min east to Monte-Carlo · check in at <a href="https://www.montecarlosbm.com/en/hotel-monaco-hotel-de-paris" target="_blank" rel="noopener">Hôtel de Paris Monte-Carlo</a> · Belle Époque restoration, top-floor pool with the Casino square view</li>
+            <li><strong>6:00 PM</strong> Walk to the <strong>Casino de Monte-Carlo</strong> square (across the road from your hotel) · daylight photo of the Belle Époque facade · 30-min stroll down to the <strong><a href="https://www.musee.oceano.org/en/" target="_blank" rel="noopener">Oceanographic Museum</a></strong> if your stamina allows (Albert I's museum, the Mediterranean-aquarium top floor) — open till 19:00</li>
+            <li><strong>7:30 PM</strong> Aperitif at the <strong>Crystal Bar</strong> at Hôtel Hermitage (next door to Hôtel de Paris) — Belle Époque crystal-and-rose interior, the dressing-room slow-down before the Louis XV</li>
+            <li><strong>8:30 PM</strong> Dinner at <strong><a href="https://www.montecarlosbm.com/en/restaurants-monaco-le-louis-xv-alain-ducasse" target="_blank" rel="noopener">Le Louis XV — Alain Ducasse</a> ★★★</strong> at Hôtel de Paris · tasting menus €230–€490, the signatures include the vegetarian <strong>Jardin de Provence</strong> (a tribute course of 20+ Mediterranean garden vegetables) and Provençal lamb with the herbs of the Plateau d'Aups. Closed Mon all day, Tue–Thu midday, Sun all day Aug 10–Dec 22 (verify the 2026 Sunday calendar — the Aug 16 Sunday may be a dark night, in which case shift the booking to Mon Aug 17 lunch or swap with a Saturday Louis XV reservation). Book at +377 98 06 88 64 · 60–90 days lead time minimum.</li>
+            <li><strong>11:30 PM</strong> Walk 2 min back to the <strong>Casino de Monte-Carlo</strong> (open 14:00–04:00; jacket required after 20:00; €18–€20 entry to enter the salons). 30 min at the European roulette table or just to walk the rooms — this is one of the world's last Belle Époque casinos still operational.</li>
+            <li><strong>1:30 AM</strong> 7-min walk along Avenue Princesse Grace to <strong><a href="https://www.montecarlosbm.com/en/nightlife-monte-carlo-jimmyz" target="_blank" rel="noopener">Jimmy'z Monte-Carlo</a></strong> — the Riviera disco since 1971, Wed–Sun 23:00–05:00 (Fri/Sat 04:00 close, Sunday is the late-late slot), smart-casual strict. Cover €30/pp. The crowd is Monaco-Russian-French old money + Formula 1 weekenders.</li>
+            <li><strong>4:30 AM</strong> Walk home (15 min, lit and Monaco-safe)</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Èze + La Chèvre d'Or. Direct Blade helicopter 11:00, Villa Ephrussi 12:30, lunch at the Villa Ephrussi tearoom (the Rothschild garden tearoom is a genuine lunch), check in at Hôtel de Paris 15:00, spa + nap. Louis XV dinner unchanged. Skip Jimmy'z; nightcap at the Hôtel de Paris Bar Américain instead.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Swap Villa Ephrussi for the <strong>Cap Ferrat Sentier des Douaniers</strong> hike (6 km loop, 1.5–2 h, paired with the Grand-Hôtel du Cap-Ferrat lunch at <a href="https://www.fourseasons.com/capferrat/dining/restaurants/le-cap/" target="_blank" rel="noopener">Le Cap ★</a>). Then drive to Monaco, skip Èze + La Chèvre d'Or (do it on Day 4 instead). Louis XV + Casino + Jimmy'z unchanged.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Skip Villa Ephrussi (the gardens are the point). Direct helicopter or drive to Monaco. <strong>Oceanographic Museum</strong> 11:00–14:00 (3-h indoor visit, the Mediterranean tanks + the Cabinet de Curiosités), <strong>Prince's Palace</strong> 14:00 (state apartments are open Jul+Aug), <strong>Casino + Louis XV + Jimmy'z</strong> evening unchanged.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">06</div><div class="date">Mon Aug 17</div></div>
+        <div class="day-content">
+          <h3>Slow Monaco morning · Oceanographic Museum · Departure NCE</h3>
+          <ul>
+            <li><strong>10:00 AM</strong> Breakfast on the Hôtel de Paris top-floor terrace overlooking the Mediterranean + Casino square</li>
+            <li><strong>11:00 AM</strong> Walk to <strong>Le Rocher</strong> (Monaco-Ville) via the Rampe Major · the Old Town · the <strong>Prince's Palace</strong> (state apartments open Jul+Aug, €12 · changing-of-the-guard 11:55 in the courtyard daily)</li>
+            <li><strong>12:00 PM</strong> 10 min walk to the <strong>Oceanographic Museum</strong> · do the rooftop terrace + the Mediterranean aquarium, then walk Albert I's mineral collection (~1 h)</li>
+            <li><strong>1:30 PM</strong> Quick lunch at <strong><a href="https://www.maybourne.com/riviera/" target="_blank" rel="noopener">Maybourne Riviera</a> rooftop terrace</strong> in Roquebrune (a 10-min taxi north — three-bridge view of Monaco, Italy, Cap Ferrat) — or back to Hôtel de Paris for a lighter terrace lunch · cards strictly</li>
+            <li><strong>3:30 PM</strong> Prearranged Mercedes transfer Monaco → NCE (~45 min in low traffic; build 1.5 h buffer for August Mondays)</li>
+            <li><strong>6:00 PM</strong> Air France AF7701 NCE → CDG (1 h 30 m)</li>
+            <li><strong>9:00 PM</strong> Air France AF66 CDG → LAX (11 h 45 m)</li>
+            <li><strong>11:45 PM same day</strong> Arrive LAX (gain 9 hours on the return)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="hotels">
+      <span class="eyebrow">Where to Stay</span>
+      <h2>Two Bases · 3 + 2 Split</h2>
+      <p>Cannes first (3 nights Tue–Fri for the Lérins boat day + Pampelonne ferry + Aug 15 fireworks anchor), then Monte-Carlo (2 nights Fri–Sun? No — Fri overnight in Saint-Tropez at Cheval Blanc, back to Cannes Sat for fireworks, Sun + Mon at Hôtel de Paris Monte-Carlo). The Aug 15 night must be Cannes-side. The four picks below cover the recommended split + 3 alternatives (Cheval Blanc as the St-T night, Eden-Roc as the Cap d'Antibes splurge, Negresco as the Nice cheaper-luxury option).</p>
+    </div>
+    <div class="hotels-grid">
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(36,102,168,0.25), rgba(217,106,74,0.40)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80');">
+          <span class="hotel-tier">★ Cannes · 3 nights</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hôtel Martinez (Hyatt Unbound)</h4>
+          <div class="loc">73 La Croisette, Cannes · La Palme d'Or ★ onsite · Z Plage in front</div>
+          <p>The Cannes Croisette base — 410 rooms + suites Art Deco icon, 2018 Hyatt Unbound restoration. <strong>La Palme d'Or ★</strong> (Jean Imbert) is the 7th-floor rooftop restaurant. <strong>Z Plage</strong> private beach club is directly across the Croisette — the Aug 15 fireworks front-row table is the booking. Sea-view Croisette-facing rooms see the barges. Plage Royal + Plage Macé free open-air cinema both walking distance.</p>
+          <div class="hotel-meta">
+            <span class="price">$485–$1,100 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.hyatt.com/en-US/hotel/france/hotel-martinez-in-the-unbound-collection-by-hyatt/nceub" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(217,106,74,0.30), rgba(194,160,74,0.40)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80');">
+          <span class="hotel-tier">★★★ Monte-Carlo · 2 nights</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hôtel de Paris Monte-Carlo</h4>
+          <div class="loc">Place du Casino, Monte-Carlo · Le Louis XV ★★★ onsite · Casino across square</div>
+          <p>The Monte-Carlo grand-hotel ground zero — Belle Époque 1864, fully restored 2014–2018. <strong>Le Louis XV — Alain Ducasse ★★★</strong> is downstairs (the trip's centerpiece dinner); the Casino de Monte-Carlo is 80 m across the place; Jimmy'z is 7 min walk. Top-floor pool with the Casino-square view + the Riviera over the railing. Buddha-Bar Monte-Carlo is 5 min, the Hermitage's Crystal Bar is next door.</p>
+          <div class="hotel-meta">
+            <span class="price">$1,100–$2,800 / night</span>
+            <span>★★★★★ SBM</span>
+          </div>
+          <a href="https://www.montecarlosbm.com/en/hotel-monaco-hotel-de-paris" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(107,122,63,0.30), rgba(194,160,74,0.40)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80');">
+          <span class="hotel-tier">★★★ St-Tropez · 1 night opt</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Cheval Blanc Saint-Tropez</h4>
+          <div class="loc">Place du Revelin, St-Tropez · only luxury hotel on the village waterfront</div>
+          <p>LVMH's St-Tropez villa-hotel — the village waterfront's only true 5-star. <strong>La Vague d'Or ★★★</strong> (Arnaud Donckele) is the in-house dinner. Dior Spa, rooftop pool, sea-view suites overlook the mega-yacht line. The Friday St-T night base: lunch at Club 55 + Bagatelle Pampelonne, evening Sénéquier + Vague d'Or, late Caves du Roy at Byblos (5-min walk). Add ~$1,500–$4,000/night on top of the 5-night plan if you take this route.</p>
+          <div class="hotel-meta">
+            <span class="price">$1,500–$4,000 / night</span>
+            <span>★★★★★ LVMH</span>
+          </div>
+          <a href="https://www.chevalblanc.com/en/maison/st-tropez/" target="_blank" rel="noopener" class="book-link">Cheval Blanc direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(36,102,168,0.30), rgba(194,160,74,0.40)), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80');">
+          <span class="hotel-tier">Splurge · Cap d'Antibes</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hôtel du Cap-Eden-Roc</h4>
+          <div class="loc">Bd JF Kennedy, Cap d'Antibes · Oetker Collection · 22 acres on the cape tip</div>
+          <p>The Riviera's most-mythic hotel — Picasso/Hemingway/Gatsby-era, 22-acre pine + olive estate at the Cap's tip. <strong>Anjuna sea-water pool</strong> carved into the rock. <strong>Louroc ★★</strong> (Sébastien Broda) is the dinner; Eden-Roc Grill is the lunch terrace icon. Closed Oct 22 – Apr 13 yearly. Rooms €1,140–€3,660, suites €3,920–€18,300. <strong>If money is no object, this is the entire 5 nights</strong> (Eden-Roc → drive each day to the activity) and you skip Monte-Carlo.</p>
+          <div class="hotel-meta">
+            <span class="price">€1,140–€18,300 / night</span>
+            <span>★★★★★ Oetker</span>
+          </div>
+          <a href="https://www.oetkercollection.com/hotels/hotel-du-cap-eden-roc/" target="_blank" rel="noopener" class="book-link">Eden-Roc direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(217,106,74,0.25), rgba(107,122,63,0.40)), url('https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80');">
+          <span class="hotel-tier">Value · Nice base</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hôtel Negresco Nice</h4>
+          <div class="loc">37 Promenade des Anglais, Nice · Belle Époque pink dome · LHW</div>
+          <p>The Negresco — Nice's 1913 Belle Époque icon, pink-domed, Versailles-museum interior, Leading Hotels of the World. <strong>Le Chantecler ★</strong> is the onsite Michelin. The cheapest "luxury" anchor on the Riviera — $361–$784/night vs. Eden-Roc's €1,140 floor. <strong>The pick if you'd rather all 5 nights in one city</strong> and day-trip Cannes + St-T + Monaco from a single base. Trade: longer drives every day, but a remarkable hotel and Vieux Nice + Cours Saleya at your doorstep.</p>
+          <div class="hotel-meta">
+            <span class="price">$361–$784 / night</span>
+            <span>★★★★★ LHW</span>
+          </div>
+          <a href="https://www.hotel-negresco-nice.com/en/" target="_blank" rel="noopener" class="book-link">Negresco direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(36,102,168,0.30), rgba(217,106,74,0.40)), url('https://images.unsplash.com/photo-1455587734955-081b22074882?w=800&q=80');">
+          <span class="hotel-tier">Romantic · Èze</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Cap Estel · Èze-Bord-de-Mer</h4>
+          <div class="loc">1312 Av Raymond Poincaré, Èze-Bord-de-Mer · 20 rooms · 2 ha private peninsula</div>
+          <p>The contrarian splurge — 20 rooms on a private 2-hectare peninsula 5 min downhill from Èze village. <strong>L'Or Bleu ★</strong> (Kévin Garcia) is the on-site Michelin. Infinity pool over the Mediterranean, helipad on the lawn, the most-private "discovered-by-the-Beckham-set" Riviera address. Pick instead of Monte-Carlo if you'd rather sleep on the water than near the Casino — 15 min drive to Monaco for the Louis XV night.</p>
+          <div class="hotel-meta">
+            <span class="price">$1,500–$3,500 / night</span>
+            <span>★★★★★ R&amp;C</span>
+          </div>
+          <a href="https://www.capestel.com/en/" target="_blank" rel="noopener" class="book-link">Cap Estel direct →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="wine">
+      <span class="eyebrow">The Glass</span>
+      <h2>Côtes de Provence Rosé + Bellet + Lérins Monks</h2>
+      <p>The Côte d'Azur sits at the eastern edge of <strong>Côtes de Provence</strong> (the world's largest rosé-by-volume appellation) and contains the tiny <strong>Bellet AOC</strong> (Nice hills, the only urban-French appellation), with offshore additions: the <strong>Lérins Abbey vineyard</strong> on Saint-Honorat (Cistercian monks, 8 ha) and the inland day-trip option of <strong>Château La Coste</strong> (Le Puy-Sainte-Réparade, 2 h drive). The summer drinking pattern is real: <strong>chilled Provençal rosé all day, a Bandol mourvèdre red with a steak dinner, a Bellet at the Nice tables</strong>. Trophy bottles (Château d'Esclans Garrus, Domaine Tempier Bandol La Tourtine) are buyable but the live-tasting experiences are the play.</p>
+    </div>
+
+    <div class="wine-block provence">
+      <div class="wine-image"></div>
+      <div class="wine-text">
+        <span class="eyebrow">Côtes de Provence + Bandol · the rosé corridor</span>
+        <h3>Saint-Tropez Peninsula + Inland</h3>
+        <p>The Saint-Tropez peninsula's hills are the visiting heart of Côtes de Provence rosé — <strong>Château d'Esclans</strong> (the Whispering Angel + Garrus producer, three tiered tastings €10/€15/€20 per glass), <strong>Château Minuty</strong> (Pink-bottle famous), <strong>Château Léoube</strong> (Lord Bamford's biodynamic estate at Bormes-les-Mimosas). Inland, <strong>Château La Coste</strong> at Le Puy-Sainte-Réparade is the art-and-wine destination — Tadao Ando + Bourgeois + Calder + Serra + Sean Scully chapel on 600 acres, 6 restaurants including <strong>Hélène Darroze à Villa La Coste ★</strong>. For reds, the Bandol AOC (mourvèdre-led) is a 30-min drive west of St-T.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://www.esclans.com/en/" target="_blank" rel="noopener">Château d'Esclans ↗</a></div>
+            <div class="desc">La Motte (Côtes de Provence) · Whispering Angel + Rock Angel + Les Clans + Garrus · three-tier tasting €10/€15/€20 · book ahead in summer · 1 h from Cannes via A8</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.chateau-la-coste.com/en/" target="_blank" rel="noopener">Château La Coste ↗</a></div>
+            <div class="desc">Le Puy-Sainte-Réparade · Patrick McKillen · 600 acres, art-and-architecture tour €18 (Bourgeois Spider, Tadao Ando chapel, Sean Scully chapel, Calder mobile, Richard Serra) · 6 restaurants incl. <strong>Hélène Darroze à Villa La Coste ★</strong> + Francis Mallmann grill · 2 h drive from Cannes — the rainy-day Plan B</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.minuty.com/en/" target="_blank" rel="noopener">Château Minuty ↗</a></div>
+            <div class="desc">Gassin, St-Tropez peninsula · 1936 estate, the pink-bottle M de Minuty rosé is the workhorse · Prestige Rosé + 281 + Rose et Or tiers · book guided tour by appointment</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://leoube.com/en/" target="_blank" rel="noopener">Château Léoube ↗</a></div>
+            <div class="desc">Bormes-les-Mimosas · Lord Bamford's biodynamic estate · the Bandol-adjacent quiet pick · cellar door + lunch at Café Léoube on the beach</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wine-block bellet" style="margin-top: 2rem;">
+      <div class="wine-image" style="order: 2;"></div>
+      <div class="wine-text" style="order: 1;">
+        <span class="eyebrow">Nice hills + Lérins · the local-only pours</span>
+        <h3>Bellet AOC + Saint-Honorat Monks</h3>
+        <p><strong>Bellet</strong> is the smallest French urban AOC — ~50 hectares in the hills above Nice, barely 13 producers, almost all consumed locally. The signature: <strong>Folle Noire</strong> (red) + <strong>Rolle</strong> (white, the same grape as Vermentino). The producer to visit is <strong>Château de Crémat</strong> — 19th-century pink-stucco castle, sit-down tasting in the cellar room, Mon–Sat. <strong>Lérins Abbey</strong> on Saint-Honorat (the monastery island, second of the Lérins ferry pair) is a working Cistercian vineyard — 8 ha, the monks press 5 cuvées + the herbal liqueur Lérina. Public monks-and-wine tour is first Friday of each month (Aug 7 = just before you arrive); the abbey shop + tour-by-appointment is available throughout your visit.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://chateaudecremat.com/en/" target="_blank" rel="noopener">Château de Crémat ↗</a></div>
+            <div class="desc">Hills above Nice (Bellet AOC) · 19th-c pink-stucco castle · 3-wine tasting €25 / 6-wine €30 · Mon–Sat by appointment · 20-min drive from Vieux Nice — fits a Day 1 afternoon detour</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.abbayedelerins.com/" target="_blank" rel="noopener">Abbaye de Lérins · Saint-Honorat ↗</a></div>
+            <div class="desc">Île Saint-Honorat · Cistercian monks · 8 ha vineyard (Syrah, Mourvèdre, Pinot Noir, Chardonnay, Viognier) + Lérina liqueur · abbey shop open daily · first-Friday tour Aug 7 (you miss) — book private group tour 14+ days ahead</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.bandol.com/" target="_blank" rel="noopener">Domaine Tempier (Bandol) ↗</a></div>
+            <div class="desc">Le Plan-du-Castellet · the cult Bandol producer (Lulu Peyraud's), mourvèdre + cinsault · La Tourtine + La Migoua + Cabassaou single-vineyards · 1.5 h west of Cannes — only viable as a swap for the St-Tropez Friday</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.visitcotedazurfrance.com/" target="_blank" rel="noopener">Other Bellet producers ↗</a></div>
+            <div class="desc">Clos Saint-Vincent, Domaine de Toasc, Domaine Vinceline · small, family-run, mostly Mon–Sat by appointment · Nice tourist office can coordinate the rare-Bellet flight</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section-header" id="food">
+      <span class="eyebrow">The Table</span>
+      <h2>3× ★★★ in Range · Dozens of ★ · Provençal Tradition</h2>
+      <p>The Côte d'Azur is the <strong>densest Michelin region in Europe outside Paris and Kyoto</strong>. Within 1.5 h driving from Cannes: <strong>3 three-star restaurants</strong> (Le Louis XV in Monaco, La Vague d'Or in Saint-Tropez, Mirazur in Menton), <strong>4+ two-stars</strong> (La Chèvre d'Or in Èze, Louroc at Eden-Roc, Paloma + La Villa Archange in Mougins), and dozens of one-stars (La Palme d'Or, L'Or Bleu, Le Cap, Le Chantecler, La Place de Mougins, Bacon, Hélène Darroze à Villa La Coste). The list below is the curated subset. Verify <strong>Mirazur Aug 2026 opening</strong> directly with the restaurant — the 2026 closure calendar isn't yet posted.</p>
+    </div>
+
+    <div class="food-list">
+      <div class="food-row">
+        <div class="place">Le Louis XV — Alain Ducasse <span class="stars">★★★</span><span class="meta">Monte-Carlo · Hôtel de Paris · Tue–Sat evenings in Aug · jacket required</span></div>
+        <div class="desc">The trip's Michelin centerpiece. Alain Ducasse's flagship at Hôtel de Paris Monte-Carlo since 1987 (★★★ since 1990). Tasting menus <strong>€230–€490</strong>, the signatures include the vegetarian <strong>Jardin de Provence</strong> (a Mediterranean-garden 20-vegetable tribute course — also the Joann-friendly path through a fish-leaning menu) and the Provençal lamb with herbs of the Plateau d'Aups. Closed Mon all day, Tue–Thu midday, Sun all day Aug 10–Dec 22. Verify the Sunday Aug 16 status when booking. Reserve +377 98 06 88 64 · <strong>60–90 days lead time minimum</strong>. <a href="https://www.montecarlosbm.com/en/restaurants-monaco-le-louis-xv-alain-ducasse" target="_blank" rel="noopener">montecarlosbm.com</a></div>
+        <div class="drive">Monte-Carlo</div>
+      </div>
+      <div class="food-row">
+        <div class="place">La Vague d'Or <span class="stars">★★★</span><span class="meta">Saint-Tropez · Cheval Blanc · dinner only 19:30–21:30 · closed Wed</span></div>
+        <div class="desc"><strong>Arnaud Donckele's three-star</strong> at Cheval Blanc Saint-Tropez (the only ★★★ on the Pampelonne peninsula). Tasting menu <strong>from €445/pp</strong>, wine pairing ~€280. Fish-forward but the vegetable + meat courses are substantial — Joann path: the Provençal lamb signature + the courgette-flower tribute + the herb-deep amuses. The St-T Friday-night anchor. Closed Wed. Book 90 days out via Cheval Blanc concierge. <a href="https://www.chevalblanc.com/en/maison/st-tropez/restaurants-bars/la-vague-dor/" target="_blank" rel="noopener">chevalblanc.com</a></div>
+        <div class="drive">St-Tropez ferry</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Mirazur <span class="stars">★★★</span><span class="meta">Menton · Mauro Colagreco · biodynamic permaculture · Wed–Sun</span></div>
+        <div class="desc">Mauro Colagreco's three-star perched on the Italian border at Menton — <strong>World's #1 (2019)</strong>. Closed Mon/Tue, open Wed–Sun 12:30–14:00 + 19:30–22:00. The menu rotates <strong>Universe / Garden / Mountain / Sea</strong> tasting menus tied to the biodynamic calendar; meat depth comes through lamb, beef, sweetbreads when the calendar permits. <strong>Verify Aug 2026 opening status</strong> — Mirazur historically closes parts of August in alternate years. +33 4 92 41 86 86 · reservation@mirazur.fr · 1 h drive east of Monaco — viable as a Sunday lunch swap if you take Le Louis XV at lunch instead. <a href="https://www.mirazur.fr/" target="_blank" rel="noopener">mirazur.fr</a></div>
+        <div class="drive">1h Menton</div>
+      </div>
+      <div class="food-row">
+        <div class="place">La Chèvre d'Or <span class="stars">★★</span><span class="meta">Èze village · cliff-edge terrace · Tom Meyer · lunch + dinner</span></div>
+        <div class="desc">Two stars on a clifftop in medieval Èze. Lunch tasting <strong>€140–€220</strong>, dinner €270–€340, à la carte from €90. Terrace tables hang directly over the Mediterranean 427 m below — the most-photographed restaurant terrace on the Côte. Inside the Château de la Chèvre d'Or hotel; pair as a Day 5 lunch en route Cannes → Monte-Carlo. Reserve 45+ days out. <a href="https://www.chevredor.com/" target="_blank" rel="noopener">chevredor.com</a></div>
+        <div class="drive">Èze</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Louroc <span class="stars">★★</span><span class="meta">Cap d'Antibes · Hôtel du Cap-Eden-Roc · Sébastien Broda · dinner only</span></div>
+        <div class="desc">Two stars at Hôtel du Cap-Eden-Roc — Sébastien Broda's flagship, the <strong>Eden-Roc dinner experience</strong> (Eden-Roc Grill is the daytime à la carte, Louroc is the evening Michelin room). Dinner only, ~€260 tasting. Open mid-April through mid-October. Pair with a Day 1 dinner if you upgrade hotel to Eden-Roc + skip the Col de Vence Perseid night. Reserve via the hotel. <a href="https://www.oetkercollection.com/hotels/hotel-du-cap-eden-roc/restaurants-and-bars/restaurant-louroc" target="_blank" rel="noopener">oetkercollection.com</a></div>
+        <div class="drive">Cap d'Antibes</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Paloma <span class="stars">★★</span><span class="meta">Mougins · Nicolas Decherchy · contemporary · lunch + dinner</span></div>
+        <div class="desc">Mougins' two-star, Decherchy in a renovated stone house on Route de Lorgues. Lunch tasting <strong>€95</strong> midweek; dinner €180–€220. Modern Mediterranean, very precise plating. Mougins itself has three Michelin in walking distance (Paloma + La Villa Archange + La Place de Mougins). The rainy-day Plan B from Cannes (15 min drive). <a href="https://www.paloma-mougins.com/" target="_blank" rel="noopener">paloma-mougins.com</a></div>
+        <div class="drive">15 min Cannes</div>
+      </div>
+      <div class="food-row">
+        <div class="place">La Palme d'Or <span class="stars">★</span><span class="meta">Cannes · Hôtel Martinez · Jean Imbert · cinema-themed</span></div>
+        <div class="desc">Your hotel's onsite ★. Jean Imbert's cinema-themed counter on the Martinez 7th floor. <strong>5-course tasting ~€220</strong>, wine pairing ~€110. The signatures rotate but a tribute course to a different French film is the recurring trope. Joann path: the Cannes lamb, the wagyu course. Reserve 60+ days out. <a href="https://www.lapalmedor-restaurant.fr/" target="_blank" rel="noopener">lapalmedor-restaurant.fr</a></div>
+        <div class="drive">in Cannes</div>
+      </div>
+      <div class="food-row">
+        <div class="place">La Colombe d'Or <span class="stars">art-history institution</span><span class="meta">Saint-Paul-de-Vence · phone-only reservation · cards</span></div>
+        <div class="desc">The dining room hangs <strong>Picasso, Léger, Braque, Miró, Calder originals on the walls</strong> — paid in canvas-for-meal deals over decades. Lunch is the experience. Salade niçoise, courgette flowers, grilled lamb, terrines, pichet of rosé. <strong>Reservation by phone only +33 4 93 32 80 02</strong> — no online booking. Book 60 days out for August lunch. <a href="https://www.la-colombe-dor.com/en/" target="_blank" rel="noopener">la-colombe-dor.com</a></div>
+        <div class="drive">35 min Cannes</div>
+      </div>
+      <div class="food-row">
+        <div class="place">La Petite Maison <span class="stars">Provençal institution</span><span class="meta">Nice · 11 rue Saint-François de Paule · open lunch + dinner</span></div>
+        <div class="desc">Vieux Nice's Provençal-Mediterranean grande dame — Madonna's go-to, on every visiting-celebrity list. Truffle pasta, escargots de Bourgogne, battered courgette flowers, the giant niçoise vegetable platter. <strong>The Joann-meat balance is real</strong> — order the wood-fire chicken, the lamb chops, the steak frites. Reservation +33 4 93 92 59 59 · 14+ days out for August. <a href="https://www.la-petitemaison.com/" target="_blank" rel="noopener">la-petitemaison.com</a></div>
+        <div class="drive">45 min Cannes</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Le Bistrot d'Antoine <span class="stars">Vieux Nice chalkboard</span><span class="meta">27 rue de la Préfecture, Nice · Tue–Sat 12:00–14:00 + 19:00–22:00</span></div>
+        <div class="desc">Vieux Nice's most-loved chalkboard bistrot — Jeune Talent French Tradition. <strong>Cocotte de cochon (braised pork), blanquette de veau, zucchini-flower risotto, daube provençale</strong>. The Joann-meat-tradition path through a Riviera-seafood city. Tiny, no walk-in late summer — call +33 4 93 85 29 57 · cash + cards. <a href="https://www.lebistrotdantoine.com/" target="_blank" rel="noopener">lebistrotdantoine.com</a></div>
+        <div class="drive">45 min Cannes</div>
+      </div>
+      <div class="food-row">
+        <div class="place">La Merenda <span class="stars">cult Nice traditional</span><span class="meta">4 rue Raoul Bosio, Nice · cash only · no phone · walk-in</span></div>
+        <div class="desc">Dominique Le Stanc's cult Niçoise institution — daily menu, cash only, no phone, walk-in (queue from 18:30). Niçoise classics: stockfish (estocaficada), tripe à la niçoise, lapin à la sauce de l'ail, daube. <strong>Skip if you require predictability</strong> — pick if you want the most-authentic-no-fuss night in Vieux Nice. <a href="https://www.lamerenda.net/" target="_blank" rel="noopener">lamerenda.net</a></div>
+        <div class="drive">45 min Cannes</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Chez Acchiardo <span class="stars">since 1927</span><span class="meta">38 rue Droite, Vieux Nice · cash only · closed Sat/Sun</span></div>
+        <div class="desc">Four generations of the Acchiardo family running a Niçoise tradition house since 1927. Cash only, closed weekends. Daube de boeuf, gnocchi à la niçoise, pissaladière, stockfish. The "older, even more traditional than Le Bistrot d'Antoine" pick.</div>
+        <div class="drive">45 min Cannes</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Restaurant de Bacon <span class="stars">★</span><span class="meta">Boulevard de Bacon, Cap d'Antibes · since 1948 · the bouillabaisse house</span></div>
+        <div class="desc">The Cap d'Antibes one-star, the bouillabaisse + sole meunière institution since 1948. The Eden-Roc lunch alternative if no Eden-Roc reservation comes through. €120–€180 lunch. Reserve 30 days out. Closed Mon midday.</div>
+        <div class="drive">25 min Cannes</div>
+      </div>
+      <div class="food-row">
+        <div class="place">L'Or Bleu <span class="stars">★</span><span class="meta">Èze-Bord-de-Mer · Cap Estel · Kévin Garcia</span></div>
+        <div class="desc">The Cap Estel hotel's one-star, sea-level on the private peninsula. Kévin Garcia's Mediterranean menu, tasting ~€180. The alternative Èze dinner if you stay at Cap Estel for the Sunday Monte-Carlo replacement.</div>
+        <div class="drive">Èze-Mer</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Le Cap <span class="stars">★</span><span class="meta">Cap Ferrat · Grand-Hôtel du Cap-Ferrat · Four Seasons</span></div>
+        <div class="desc">Four Seasons Cap Ferrat's onsite ★ — Mediterranean, the lunch-after-the-Sentier-des-Douaniers play. Tasting ~€190. Pair with the Cap Ferrat coastal walk on the Day 5 driving route to Monaco.</div>
+        <div class="drive">1h Cap Ferrat</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Le Chantecler <span class="stars">★</span><span class="meta">Nice · Hôtel Negresco · Belle Époque dining room</span></div>
+        <div class="desc">The Negresco's one-star — Belle Époque ceiling-and-tapestry dining room, the Provençal classics done with technique. Tasting ~€180. The pick if you stay at the Negresco as the value-luxury single-base option.</div>
+        <div class="drive">45 min Cannes</div>
+      </div>
+      <div class="food-row">
+        <div class="place">La Place de Mougins <span class="stars">★</span><span class="meta">Mougins · Denis Fétisson · medieval village</span></div>
+        <div class="desc">Mougins' third Michelin in the same village square — Fétisson's terrace ★. Tasting ~€140. The lighter Mougins alternative to Paloma ★★ or La Villa Archange ★★ if you want the medieval-village dining without the two-star price.</div>
+        <div class="drive">15 min Cannes</div>
+      </div>
+    </div>
+
+    <div class="section-header" id="activities">
+      <span class="eyebrow">Beyond the Table</span>
+      <h2>The Riviera Activity Catalog</h2>
+      <p>The trip's structural luxury — every activity below is reachable inside a 1-hour drive from Cannes or Monte-Carlo. Pick aggressively: the Aug 15 fireworks + Saint-Tropez ferry day + Lérins boat day + Èze-La Chèvre d'Or + Saint-Paul-Maeght + Casino + Jimmy'z is already 8 anchors and that's the bare structure. The catalog below adds the swap options.</p>
+    </div>
+
+    <div class="activities">
+
+      <div class="activity">
+        <span class="icon">🎆</span>
+        <h4><a href="https://en.palaisdesfestivals.com/press-area/press-releases/cannes-pyrotechnique-art-festival-2026/" target="_blank" rel="noopener">Aug 15 Cannes Fireworks</a></h4>
+        <p><strong>Team Finland · Joho Pyro · 22:00 · 20 min · free</strong>. Croisette fronts the Carlton barges. Z Plage dinner front-row is the booking. The trip's anchor event.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">☄️</span>
+        <h4><a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener">Col de Vence Perseids</a></h4>
+        <p>RICE International Dark Sky Reserve. 30 min above Vence. Peak Aug 12→13 02:00–04:00 UTC = 04:00–06:00 local. Étoiles Grandeur Nature deckchair sessions run by the town hall.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">⛵</span>
+        <h4><a href="https://trans-cote-azur.com/" target="_blank" rel="noopener">St-Tropez Ferry</a></h4>
+        <p>Trans Côte d'Azur or Riviera Lines · Cannes → St-Tropez 75 min · €74 RT · Tue/Thu/Sat seasonally. Beats Friday-Aug car gridlock (3–4 h coastal). Day-trip Club 55 + Bagatelle.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏝️</span>
+        <h4><a href="https://excellenceriviera.com/discover/la-guerite-restaurant-cannes" target="_blank" rel="noopener">La Guérite Lérins</a></h4>
+        <p>Sainte-Marguerite Island · boat from Quai Laubeuf · 09:00–23:00 daily · Mediterranean lunch + DJ from 13:00, peak 16:00 · the Cannes-side beach club crescendo.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🍾</span>
+        <h4><a href="https://bagatelle.com/saint-tropez/" target="_blank" rel="noopener">Bagatelle Pampelonne</a></h4>
+        <p>Champagne-shower DJ lunches. Seatings 13:30 + 15:30. Dancing on the tables from 16:00. €500–€800 between two on cover + magnum. Apr–Sep.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🥂</span>
+        <h4><a href="https://www.club55.fr/" target="_blank" rel="noopener">Club 55 Pampelonne</a></h4>
+        <p>Brigitte Bardot's 1955 original. Lunch only 10:00–17:00. Mats €39/parasol €19. Book 2 months ahead at +33 4 94 55 55 55. Cash + cards.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🚁</span>
+        <h4><a href="https://www.blade.com/" target="_blank" rel="noopener">Blade Helicopter NCE→Monaco</a></h4>
+        <p>7-min flight · <strong>$195/seat one-way</strong>. Or Monacair private from ~€800. The Day 5 transfer alternative to the coastal drive.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏛️</span>
+        <h4><a href="https://www.villa-ephrussi.com/" target="_blank" rel="noopener">Villa Ephrussi de Rothschild</a></h4>
+        <p>Cap Ferrat · Jul/Aug 10:00–19:00 · €18 · <strong>9 themed gardens</strong> (Florentine, Spanish, Japanese, exotic, rose, Provençal +). The Day 5 art-and-garden anchor.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🎨</span>
+        <h4><a href="https://www.fondation-maeght.com/en/" target="_blank" rel="noopener">Fondation Maeght</a></h4>
+        <p>Saint-Paul-de-Vence · Jul/Aug 10:00–19:00 · €16. Calder, Miró, Giacometti sculpture garden + Chagall mosaic + Léger courtyard. Pair with La Colombe d'Or lunch.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏰</span>
+        <h4><a href="https://www.chevredor.com/" target="_blank" rel="noopener">Èze village + Chèvre d'Or</a></h4>
+        <p>Medieval clifftop, 427 m. Jardin Exotique cactus garden at summit. <strong>La Chèvre d'Or ★★ lunch terrace</strong> hangs over the sea — the trip's iconic photo spot.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🎰</span>
+        <h4><a href="https://www.montecarlosbm.com/en/casinos-monaco-casino-de-monte-carlo" target="_blank" rel="noopener">Casino de Monte-Carlo</a></h4>
+        <p>Belle Époque, 1863. Salons 14:00–04:00 (gaming). €18–€20 entry. <strong>Jacket required after 20:00.</strong> Photograph the exterior, walk the rooms, light play at the European roulette table.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🐠</span>
+        <h4><a href="https://www.musee.oceano.org/en/" target="_blank" rel="noopener">Oceanographic Museum</a></h4>
+        <p>Albert I's 1910 museum on Le Rocher. Rooftop terrace + Mediterranean aquarium + Cabinet de Curiosités. €19 · 09:00–19:00 Jul/Aug · 2 h visit · the Monday-morning departure-day anchor.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🥾</span>
+        <h4><a href="https://www.alltrails.com/trail/france/provence-alpes-cote-d-azur/sentier-du-littoral-cap-d-antibes" target="_blank" rel="noopener">Sentier du Littoral Cap d'Antibes</a></h4>
+        <p>5 km coastal loop, 1–2 h. Jagged limestone, Billionaire's Bay swim stop. <strong>Morning only in Aug heat.</strong> Start from Plage de la Garoupe trailhead.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🚶</span>
+        <h4><a href="https://www.cotedazurfrance.fr/en/" target="_blank" rel="noopener">Sentier des Douaniers Cap Ferrat</a></h4>
+        <p>6 km loop, 1.5–2 h, 364 ft. Easier than Antibes. Pair with Villa Ephrussi + Le Cap ★ lunch at the Four Seasons.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">⛰️</span>
+        <h4><a href="https://www.komoot.com/" target="_blank" rel="noopener">Pic du Cap Roux Estérel</a></h4>
+        <p><strong>Sunrise only.</strong> 5 km, 4.5 h hard, ~350 m gain. Panoramic Lérins + Estérel red cliffs. 90+°F by 11:00 in Aug — start 06:00 with headlamp.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🤿</span>
+        <h4><a href="https://www.easydive.fr/" target="_blank" rel="noopener">Easy Dive Estérel</a></h4>
+        <p>Juan-les-Pins + Cannes bases · PADI-certified · 4 dives/day · 09:00 + 14:00. €70 single-tank red-cliff. Plongée Club de Cannes is the alternative.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🎨</span>
+        <h4><a href="https://www.antibes-juanlespins.com/musees/musee-picasso" target="_blank" rel="noopener">Musée Picasso Antibes</a></h4>
+        <p>Château Grimaldi — Picasso's 1946 studio. Tue–Sun 10:00–13:00 + 14:00–18:00. Wed+Fri extended to 20:00 Jul/Aug. €8 · closed Mon.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🎨</span>
+        <h4><a href="https://www.chapellematisse.com/" target="_blank" rel="noopener">Chapelle du Rosaire Vence</a></h4>
+        <p>Matisse's late-life chapel — he designed everything. Limited hours: Tue+Thu 10:00–11:30 + 14:00–17:30 typically. €8. Verify before going.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🌿</span>
+        <h4><a href="https://www.chateau-la-coste.com/en/" target="_blank" rel="noopener">Château La Coste</a></h4>
+        <p>2 h inland · 600 acres art + architecture (Tadao Ando, Sean Scully chapel, Calder, Serra, Bourgeois) + 6 restaurants incl. <strong>Hélène Darroze à Villa La Coste ★</strong> + Mallmann grill. €18 entry. The rainy-day Plan B.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏖️</span>
+        <h4><a href="https://www.suncanihvar.com/" target="_blank" rel="noopener">Z Plage @ Hôtel Martinez</a></h4>
+        <p>Your hotel's beach club. Sunbed €60 + service. <strong>The Aug 15 fireworks front-row dinner is the play</strong> — set menu €180/pp, book Feb.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏖️</span>
+        <h4><a href="https://www.palmbeach-cannes.com/" target="_blank" rel="noopener">La Piscine Keller @ Palm Beach</a></h4>
+        <p>2026 only — Plage Keller closed for renovation at Cap d'Antibes. <strong>Operates as "La Piscine Keller" at Palm Beach Cannes for dinner only in 2026</strong>. Pool-club dinner on the pier.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🛥️</span>
+        <h4><a href="https://www.borrowaboat.com/" target="_blank" rel="noopener">Private Yacht Charter</a></h4>
+        <p>Cannes / Antibes / St-T · $500–$5,000+/day. Half-day catamaran €55–€67/pp on CheckYeti. Full-day crewed €1,500–€3,500. Pair with the Aug 15 fireworks-from-water option.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🪂</span>
+        <h4><a href="https://www.gourdon-paragliding.com/" target="_blank" rel="noopener">Paragliding Col de Vence / Gourdon</a></h4>
+        <p>~€100 tandem flight. Take-off from Col de Vence or Gourdon village; land on Plage de Cagnes-sur-Mer. The 90-min adrenaline anchor for a quieter morning.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🌳</span>
+        <h4><a href="https://www.mercantour-parcnational.fr/en/" target="_blank" rel="noopener">Mercantour National Park</a></h4>
+        <p>1.5 h inland from Cannes. The darkest skies in southern France. <strong>Backup Perseid vantage</strong> if Col de Vence is fogged. Vallée des Merveilles Bronze-Age petroglyphs are the day-hike anchor.</p>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="nightlife">
+      <span class="eyebrow">After Dark</span>
+      <h2>The Late-Night Map</h2>
+      <p>Three late-night zones with distinct DNA. <strong>Monte-Carlo</strong> is Casino-and-Jimmy'z dressed-up old money. <strong>Cannes</strong> is Croisette beach-clubs-to-Bâoli — younger, louder, smarter-dress. <strong>Saint-Tropez</strong> is Caves du Roy mythology + Bagatelle daytime carryover + VIP Room. The Vieux Nice bar crawl is the cheap-thrill alternative — €10 cocktails, live music to ~02:30. Hours below are summer Aug 2026; verify on arrival.</p>
+    </div>
+
+    <div class="nightlife">
+      <div class="nightlife-col">
+        <h3>Monte-Carlo + Cannes · the dressed-up tier</h3>
+        <div class="venue">
+          <div class="vname">Casino de Monte-Carlo</div>
+          <div class="vmeta">Belle Époque · gaming 14:00–04:00 · jacket after 20:00 · €18–€20</div>
+          <div class="vdesc">The 1863 Belle Époque casino, Place du Casino. Salons Européens, Privés, Touzet, Salle Médecin. The jacket requirement is enforced after 20:00 (rentable at the door). Walk the rooms even if you don't play — this is one of the world's last operational Belle Époque casinos.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Jimmy'z Monte-Carlo</div>
+          <div class="vmeta">Riviera disco since 1971 · Wed–Sun 23:00–05:00 · smart-casual strict</div>
+          <div class="vdesc">The Riviera disco institution since 1971, Avenue Princesse Grace. Fri+Sat 04:00 close, Sunday is the late-late slot, Wed–Thu quieter. Cover €30/pp. The crowd is Monaco-Russian-French old money + F1 weekenders. The post-Louis-XV ★★★ destination. Smart-casual heavily policed — no shorts, no sneakers, no t-shirts.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Buddha-Bar Monte-Carlo</div>
+          <div class="vmeta">Mon–Sat 18:00–02:00 in summer · open-air terrace · often fully booked Aug</div>
+          <div class="vdesc">The Monte-Carlo Buddha-Bar branch — open-air terrace dining + DJ sets, Asian-fusion menu. Mon–Sat 18:00–02:00. <strong>Often fully booked in August</strong>; if you can't get a table at Louis XV ★★★ for Sun, this is the operatic alternative.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Twiga Monte-Carlo</div>
+          <div class="vmeta">Avenue Princesse Grace · dinner-show Fri/Sat from 22:00 · Briatore</div>
+          <div class="vdesc">Flavio Briatore's Monte-Carlo branch of the Twiga / Billionaire group. Dinner-show Fri+Sat 22:00, club doors 23:30. Dress strict. Cover + bottle minimums. The Saint-Tropez Pampelonne crowd's Monaco counterpart.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Crystal Bar @ Hôtel Hermitage</div>
+          <div class="vmeta">Belle Époque crystal-and-rose · sit-down · cocktails</div>
+          <div class="vdesc">Next door to Hôtel de Paris — Belle Époque crystal-and-rose interior, the dressing-room slow-down before the Louis XV. Cocktails €25, jazz piano evenings. The Sunday pre-Louis-XV aperitif of choice.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Bâoli Cannes</div>
+          <div class="vmeta">Port Pierre Canto · restaurant→05:00 · Fri+Sat 20:00–05:00 · smart-elegant strict</div>
+          <div class="vdesc">Cannes' single biggest restaurant-club at Port Pierre Canto. Terrace over the water, DJ Fri+Sat from 20:00–05:00, mid-week 23:30–04:00. WhatsApp +1 347 759-6146 for tables. The Aug 14 + Aug 15 late slot. Smart-elegant strictly enforced.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Z Plage @ Hôtel Martinez · Plage 55</div>
+          <div class="vmeta">Croisette beach clubs · sunset DJ → dinner crescendo</div>
+          <div class="vdesc">Z Plage is Martinez's private beach (you're there). Plage 55 is the Carlton's. Both run sunset-DJ slots bleeding into dinner — Z Plage is the Aug 15 fireworks front-row booking. Walking distance from your hotel.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Le Petit Majestic</div>
+          <div class="vmeta">Cannes · film-festival deal bar · Croisette-adjacent</div>
+          <div class="vdesc">The Cannes Film Festival's mythical late-night deal bar — alley off La Croisette, packed in May during the festival, surprisingly quiet in August but still open. The contrarian late-late spot if you'd rather a cocktail bar than Bâoli.</div>
+        </div>
+      </div>
+
+      <div class="nightlife-col">
+        <h3>Saint-Tropez + Vieux Nice · myth + cheap thrills</h3>
+        <div class="venue">
+          <div class="vname">Les Caves du Roy @ Hôtel Byblos</div>
+          <div class="vmeta">St-Tropez since 1967 · 23:30–06:00 · VIP table €1,500+ · strict dress</div>
+          <div class="vdesc">The Côte d'Azur's most-photographed late venue. Open 23:30–06:00 in summer. <strong>VIP table €1,500+ weeknight (Dom Pérignon credit applies)</strong>, strict dress — heels, designer, no shorts/flip-flops/t-shirts. Book 1+ month ahead via Byblos concierge. The Aug 14 Friday St-T night anchor.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">VIP Room Saint-Tropez</div>
+          <div class="vmeta">St-Tropez · midnight–05:00 · hip-hop / house</div>
+          <div class="vdesc">The other Saint-Tropez major club — VIP Room franchise, midnight–05:00, hip-hop and house. Less mythic than Caves du Roy, easier to walk into. Cover €40 + the bottle minimum.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Bagatelle Saint-Tropez</div>
+          <div class="vmeta">Pampelonne · daytime DJ champagne lunch · 13:30 + 15:30</div>
+          <div class="vdesc">Bagatelle daytime crescendos to evening dancing — the champagne-shower DJ-lunch ritual: seatings 13:30 + 15:30, dancing on the tables from 16:00. The crowd bleeds into Sénéquier sundowner and then onward to Caves du Roy. €500–€800 between two for the table + magnum.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Sénéquier (Old Port)</div>
+          <div class="vmeta">St-Tropez · 1887 · red awnings · sunset cocktail</div>
+          <div class="vdesc">The 1887 Old Port institution with the red awnings, directly on the Vieux Port mega-yacht line. Aperol spritz €18, a 90-min people-watch slow-down. Sunset ~20:35 in August. Walks 5 min to Caves du Roy and 5 min to La Vague d'Or.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Wayne's Bar (Vieux Nice)</div>
+          <div class="vmeta">15 rue de la Préfecture · since 1991 · live music nightly</div>
+          <div class="vdesc">Vieux Nice's English-pub cornerstone, live cover-band nightly, packed by 22:30. Cocktails €10, beers €7. The bar-crawl entry point. Open till ~02:00.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Ma Nolan's Vieux Nice</div>
+          <div class="vmeta">Irish pub · live bands · Place Pierre Gautier-adjacent</div>
+          <div class="vdesc">The Vieux Nice Irish-pub branch — louder bar bands, late-late energy, students + expats + visiting bachelorette parties. The middle of the crawl after Wayne's, before The Drinkers Club.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">The Drinkers Club (Vieux Nice)</div>
+          <div class="vmeta">Cocktail bar + live music · vaulted-ceiling cave · sit-down</div>
+          <div class="vdesc">Vaulted-ceiling cocktail-and-live-music basement. Better cocktail program than Wayne's or Ma Nolan's, quieter, more grown-up. The end-of-crawl 01:30–02:30 destination.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Le Plongeoir (Nice)</div>
+          <div class="vmeta">60 Bd Franck Pilatte · restaurant + Le Vivier lounge · 6 m rock platform</div>
+          <div class="vdesc">Restaurant on a 6 m rock platform jutting into the sea east of Port de Nice — the bar room <em>Le Vivier</em> is the sundowner lounge. Best Nice cocktail-with-a-view setting. Skip if you've already got Bistrot d'Antoine for dinner; pair as the Day 1 aperitif.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" id="score">
+      <span class="eyebrow">Adversarial Scoring</span>
+      <h2>Re-scored on the 8 New Criteria</h2>
+      <p>Scored 0–3 per axis. Hard criteria ×2, soft ×1. Total /39. Honest read: <strong>food caliber + wine + romance + nightlife all max out</strong>; activity density is genuinely top-tier; weather is hot-but-tempered; the soft spot is Joann-seafood (the Riviera leans seafood, mitigated by deep Provençal meat tradition + Louis XV's vegetable signature). <strong>36/39 — tied with San Sebastián for the new leader of the set.</strong></p>
+    </div>
+
+    <div class="score-grid">
+      <div class="score-row">
+        <div class="axis">Food caliber <span class="tag">Hard ×2</span></div>
+        <div class="reason"><strong>3 ★★★ in range</strong> (Louis XV, La Vague d'Or, Mirazur — verify Aug 2026), 4+ ★★ (Chèvre d'Or, Louroc, Paloma, La Villa Archange), dozens of ★ (La Palme d'Or, L'Or Bleu, Le Cap, Le Chantecler, La Place de Mougins, Bacon, Hélène Darroze). <strong>Densest Michelin per square kilometer in Europe outside Paris and Kyoto.</strong> 3/3.</div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Nightlife &amp; late energy <span class="tag">Hard ×2</span></div>
+        <div class="reason">Caves du Roy + Jimmy'z + Bâoli + VIP Room + Twiga + Buddha-Bar + Casino de Monte-Carlo + La Guérite + Bagatelle daytime-to-night + Z Plage + Plage 55 + Vieux Nice crawl all running at August peak. The dressed-up tier (Casino + Jimmy'z + Caves du Roy) is structurally distinct from Mallorca / Ibiza / Mykonos / Hvar — old-money rather than EDM. <strong>3/3 max.</strong></div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Activity density <span class="tag">Hard ×2</span></div>
+        <div class="reason">Sailing (catamaran to Lérins, private yacht to St-T), beach clubs (La Guérite + Club 55 + Bagatelle + Nikki Beach + Loulou + Z Plage), hikes (Sentier du Littoral + Sentier des Douaniers + Pic du Cap Roux + Col de Vence), scuba (Easy Dive + Plongée Cannes), museums (Picasso, Matisse, Maeght, MAMAC, Oceanographic, Villa Ephrussi, Fragonard), wine (Côtes de Provence + Bellet + Lérins + Château La Coste), adrenaline (Blade helicopter, paragliding, jet-ski safaris). <strong>3/3 max.</strong></div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Weather <span class="tag">Hard ×2</span></div>
+        <div class="reason">80–88°F daily high, dry, sea-cooled on the coast. <strong>90+°F inland Estérel + Mougins midday in Aug</strong> — morning hikes only. Mosquitoes moderate, manageable. ~3 rain days in Aug avg. The Mistral can drop temps 5°F + flatten the sea for 24–48 h. <strong>2/3</strong> — the inland heat is real.</div>
+        <div class="num">2 × 2 = 4</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Safety &amp; late walkability <span class="tag">Hard ×2</span></div>
+        <div class="reason"><strong>Monaco is statistically the safest country in the world</strong> (no crime overnight). Nice + Cannes + Antibes Old Towns walkable + lit past 02:00. Pickpocket risk on Cours Saleya, Cannes Croisette, and Nice train station is real — bag-zip + minimal-cash mitigates. <strong>3/3.</strong></div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Wine <span class="tag">Soft ×1</span></div>
+        <div class="reason">Côtes de Provence rosé heartland at the doorstep (Esclans, Minuty, Léoube), Bandol mourvèdre 1.5 h west, Bellet AOC literally in the Nice hills (the rarest tasting in Europe — only 13 producers), Lérins Abbey monks make wine on the ferryable island, Château La Coste is the inland art-and-wine destination with Hélène Darroze ★. <strong>3/3.</strong></div>
+        <div class="num">3</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Romance / hotel quality <span class="tag">Soft ×1</span></div>
+        <div class="reason">Hôtel du Cap-Eden-Roc + Cheval Blanc Saint-Tropez + Hôtel de Paris Monte-Carlo + Cap Estel + Grand-Hôtel du Cap-Ferrat + Château de la Chèvre d'Or = <strong>the operatic ceiling of European-resort romance</strong>. No comparison set in this trip's contenders matches it. <strong>3/3.</strong></div>
+        <div class="num">3</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Joann seafood tolerance <span class="tag">Soft ×1 · lower seafood = higher</span></div>
+        <div class="reason">The Riviera leans seafood — but Vieux Nice's traditional kitchens (Le Bistrot d'Antoine, Chez Acchiardo, La Merenda, La Petite Maison) are deep meat-tradition: cocotte de cochon, daube de boeuf, blanquette de veau, lamb chops, pâtés. Louis XV's <strong>Jardin de Provence</strong> vegetarian signature provides the Michelin vegetable path. La Colombe d'Or terrines + Saint-Paul lamb. La Chèvre d'Or has the truffle pasta + Cannes lamb. Workable — better than Hvar/St-Sebastián's pintxos-saturated streets but the seafood overweight is still there. <strong>2/3.</strong></div>
+        <div class="num">2</div>
+      </div>
+      <div class="score-row total">
+        <div class="axis">Weighted total</div>
+        <div class="reason">Hard 28/30 + Soft 8/9. Food + nightlife + activity + wine + romance + safety max out; weather is the inland-heat ding; Joann-seafood is the soft spot but mitigable. <strong>Tied with San Sebastián as the new top-of-set option.</strong></div>
+        <div class="num">36 / 39</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="booking" id="book">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="eyebrow">Make It Real</span>
+      <h2>Book These Now</h2>
+      <p>Twelve actions, ranked by lead time. <strong>Aug 15 Z Plage fireworks dinner + Louis XV ★★★ + Le Vague d'Or ★★★ + Caves du Roy + Club 55 + La Chèvre d'Or ★★ + Cheval Blanc + Hôtel de Paris + Hôtel Martinez all need 60–90+ day lead time</strong>. This is the most pre-booked itinerary in the set — start in February for an August trip.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="stepnum">01</div>
+        <div>
+          <h4>Reserve Le Louis XV — Alain Ducasse ★★★ (Sun Aug 16, 20:30 — Monte-Carlo crescendo)</h4>
+          <p>The trip's centerpiece dinner. Closed Mon all day, Tue–Thu midday, <strong>Sun all day Aug 10–Dec 22 in the 2026 calendar — verify Sunday Aug 16 is open</strong>. If Sunday is dark, shift to Mon Aug 17 lunch + push departure to evening, or take a Sat or Tue–Sat dinner slot. Tasting €230–€490, wine pairing €120+. Reserve +377 98 06 88 64.</p>
+          <div class="meta-line">90+ days out · <a href="https://www.montecarlosbm.com/en/restaurants-monaco-le-louis-xv-alain-ducasse" target="_blank" rel="noopener">montecarlosbm.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">02</div>
+        <div>
+          <h4>Reserve La Vague d'Or ★★★ (Fri Aug 14, 21:00 — St-Tropez Friday)</h4>
+          <p>Arnaud Donckele's three-star at Cheval Blanc Saint-Tropez. Dinner only, 19:30–21:30 seatings, closed Wed (Friday is fine). Tasting from €445/pp, pairing ~€280. Friday Aug 14 will be one of the year's tightest tables — <strong>book via the Cheval Blanc concierge 90 days out</strong>, the moment your hotel reservation confirms.</p>
+          <div class="meta-line">90 days out · <a href="https://www.chevalblanc.com/en/maison/st-tropez/restaurants-bars/la-vague-dor/" target="_blank" rel="noopener">chevalblanc.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">03</div>
+        <div>
+          <h4>Book Hôtel de Paris Monte-Carlo (2 nights, Sun Aug 16 → Mon Aug 17)</h4>
+          <p>Belle Époque grand-hotel ground zero, directly above Le Louis XV ★★★. Request a sea-view room — the top-floor pool with the Casino-square view + Mediterranean is the photo. Aug peak rates $1,100–$2,800/night. <strong>Virtuoso + Amex FHR show upgrade + breakfast benefits — check before booking</strong>. SBM (Société des Bains de Mer) is the operator; book direct.</p>
+          <div class="meta-line">90 days out · <a href="https://www.montecarlosbm.com/en/hotel-monaco-hotel-de-paris" target="_blank" rel="noopener">montecarlosbm.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">04</div>
+        <div>
+          <h4>Book Hôtel Martinez (4 nights total · Tue Aug 11 → Wed Aug 12 + Sat Aug 15 → Sun Aug 16)</h4>
+          <p>The Cannes base. Request a sea-view Croisette-facing room on a high floor for the Aug 15 fireworks view from your balcony. 410 rooms · La Palme d'Or ★ on 7th floor · Z Plage across the Croisette. <strong>Split the reservation: 3 nights Tue–Fri morning + 1 night Sat–Sun, with a one-night gap when you're at Cheval Blanc St-T Friday</strong>. Hyatt Unbound loyalty + Globalist status pulls upgrades + breakfast.</p>
+          <div class="meta-line">90 days out · <a href="https://www.hyatt.com/en-US/hotel/france/hotel-martinez-in-the-unbound-collection-by-hyatt/nceub" target="_blank" rel="noopener">hyatt.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">05</div>
+        <div>
+          <h4>Book Z Plage Aug 15 fireworks dinner (Sat 19:30 — front-row sand)</h4>
+          <p>The most contested table in Cannes that week. Set menu €180/pp typical for the pyrotechnic-finale nights. <strong>Book in February — 90+ days lead time is the minimum for the Aug 15 finale</strong>. The Croisette closes to vehicles from 19:00; your route is from Martinez lobby down to the sand. Reserve via the Martinez concierge once your hotel reservation confirms.</p>
+          <div class="meta-line">90+ days out · via Martinez concierge · <a href="https://www.zplage.com/en/" target="_blank" rel="noopener">zplage.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">06</div>
+        <div>
+          <h4>Book Cheval Blanc Saint-Tropez (1 night, Fri Aug 14 → Sat Aug 15)</h4>
+          <p>The only luxury hotel on the St-Tropez village waterfront. Rooftop pool + sea-view suites overlook the Vieux Port mega-yacht line. Booking gates La Vague d'Or ★★★ — book the hotel first, then the dinner. LVMH loyalty pulls upgrades. €1,500–€4,000/night. <strong>Cancellation policies tighten 30 days out</strong>.</p>
+          <div class="meta-line">75 days out · <a href="https://www.chevalblanc.com/en/maison/st-tropez/" target="_blank" rel="noopener">chevalblanc.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">07</div>
+        <div>
+          <h4>Reserve Les Caves du Roy table @ Hôtel Byblos (Fri Aug 14, 00:00 — VIP table)</h4>
+          <p>Open 23:30–06:00. <strong>VIP table €1,500+ weeknight</strong> (Dom Pérignon credit applies). Strict dress — heels, designer, no shorts/flip-flops/t-shirts. Book 1+ month ahead via Byblos concierge once your Cheval Blanc reservation is in. Friday Aug 14 is the August peak — without a table booking, expect a long queue at the door.</p>
+          <div class="meta-line">60 days out · <a href="https://www.byblos.com/en/cellier-du-roy/" target="_blank" rel="noopener">byblos.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">08</div>
+        <div>
+          <h4>Reserve Club 55 Pampelonne lunch (Fri Aug 14, 12:30)</h4>
+          <p>Brigitte Bardot's 1955 original. Lunch only 10:00–17:00. <strong>Book 2 months ahead at +33 4 94 55 55 55</strong> — Friday Aug 14 will be at-capacity. Mats €39, parasol €19, lunch ~€100–€150/pp. Cash + cards. The St-T ferry day's lunch anchor.</p>
+          <div class="meta-line">60 days out · <a href="https://www.club55.fr/" target="_blank" rel="noopener">club55.fr</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">09</div>
+        <div>
+          <h4>Reserve La Chèvre d'Or ★★ (Sun Aug 16, 13:00 lunch en route to Monaco)</h4>
+          <p>Tom Meyer's two-star in cliff-edge Èze. Lunch tasting €140–€220. The Day 5 driving lunch — pair with the Villa Ephrussi morning + the Monte-Carlo afternoon check-in. Cliff-terrace tables fill earliest; <strong>request a terrace table at booking</strong>. Reserve 45+ days out.</p>
+          <div class="meta-line">45 days out · <a href="https://www.chevredor.com/" target="_blank" rel="noopener">chevredor.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">10</div>
+        <div>
+          <h4>Reserve La Palme d'Or ★ Martinez (Thu Aug 13, 20:30 — Day 2 dinner)</h4>
+          <p>Your hotel's onsite Michelin. 5-course tasting ~€220. Jean Imbert's cinema theme. Reserve via the Martinez concierge once the hotel booking is in — 45 days out for an August weekend table.</p>
+          <div class="meta-line">45 days out · <a href="https://www.lapalmedor-restaurant.fr/" target="_blank" rel="noopener">lapalmedor-restaurant.fr</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">11</div>
+        <div>
+          <h4>Reserve La Colombe d'Or lunch (Sat Aug 15, 13:00 — Saint-Paul-de-Vence)</h4>
+          <p>Phone-only reservation +33 4 93 32 80 02 — no online booking. 60 days out for August lunch. The dining-room-of-Picasso-and-Léger is the experience. Cards, lunch ~€80/pp.</p>
+          <div class="meta-line">60 days out · phone only · <a href="https://www.la-colombe-dor.com/en/" target="_blank" rel="noopener">la-colombe-dor.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">12</div>
+        <div>
+          <h4>Book LAX↔NCE flights (Air France LAX→CDG→NCE)</h4>
+          <p>Air France AF65 LAX→CDG (dep 4 PM Tue Aug 11, arr 11:50 AM CDG Wed Aug 12) + AF7700 CDG→NCE (arr 3:05 PM). Return AF7701 NCE→CDG + AF66 CDG→LAX. <strong>$1,400–$2,400 RT/pp in economy</strong>; verify the 2026 schedule. Alternatives: Lufthansa LAX→FRA→NCE, BA LAX→LHR→NCE, Delta LAX→JFK→NCE (JFK→NCE is a Delta + La Compagnie seasonal nonstop). For the Day 5 Cannes→Monaco, Blade NCE→Monaco helicopter is $195/seat one-way.</p>
+          <div class="meta-line">60 days out · <a href="https://www.airfrance.com/" target="_blank" rel="noopener">airfrance.com</a> · <a href="https://www.skyscanner.com/routes/lax/nce/los-angeles-international-to-nice.html" target="_blank" rel="noopener">Skyscanner LAX→NCE</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="adversarial">
+      <h3>Adversarial honesty — where Côte d'Azur loses</h3>
+      <p><strong>The cost is brutal.</strong> Realistic all-in: <strong>$25,000–$40,000 for two for the 5 nights</strong> at Standard tier. That's roughly 2.5–4× Mallorca Standard and ~3× Hvar Standard. The Michelin density that makes the trip special is the same Michelin density that bleeds the budget — every dinner is €200–€500/pp before wine. <strong>Hôtel de Paris + Cheval Blanc together push $4,000–$6,000 for 3 nights of hotel; Louis XV + La Vague d'Or together are $1,500+ for two dinners; Caves du Roy + Bagatelle could be another $2,500 if you do tables.</strong></p>
+      <p><strong>vs. San Sebastián:</strong> San Sebastián has <strong>3 ★★★ (Arzak, Akelarre, Martín Berasategui) on a 1/3 budget</strong> — pintxos at €4 vs. tasting menus at €490. If food-per-dollar is the brief, San Sebastián wins decisively. Côte d'Azur has the dressed-up romance + Casino + Riviera mythology that San Sebastián doesn't.</p>
+      <p><strong>vs. Mallorca:</strong> Mallorca is roughly <strong>60% cheaper at equivalent quality tier</strong> — Belmond La Residencia is $900/night vs. Hôtel de Paris $1,800; Voro ★★ in Canyamel is €290 vs. La Chèvre d'Or ★★ €340; Mallorca rosé €15 vs. Côtes de Provence rosé €25 by the glass. Mallorca has nothing close to Caves du Roy + Jimmy'z, but if the brief is wine + hiking + beach + 1–2 marquee dinners, Mallorca's the better value.</p>
+      <p><strong>vs. Hvar:</strong> Hvar is structurally cheaper and has Carpe Diem nightlife the Côte can't match (the boat-to-Stipanska party is a unique-in-Europe experience). But Hvar has no ★★ and one ★ at the very edge of range, vs. Côte d'Azur's three ★★★. Different trips.</p>
+      <p><strong>Operational frictions:</strong> (1) <strong>Aug crowds + traffic</strong> are real — Cannes→St-T by car is 3–4 h Friday-Aug gridlock, the ferry is the only sane option. (2) <strong>Plage Keller closed 2026</strong>, operates as La Piscine Keller at Palm Beach Cannes for dinner only. (3) <strong>Mirazur Aug 2026 unconfirmed</strong> — verify directly; the calendar isn't yet posted. (4) <strong>Louis XV Sunday Aug 16</strong> may be closed (the restaurant is closed Sun in Aug 10–Dec 22 typically) — confirm during booking and shift to Mon Aug 17 lunch if needed. (5) The Aug 15 fireworks crowd is 200,000+; Croisette closes to cars from 19:00; book Z Plage 90 days out or be on the sand standing 3 hours pre-show.</p>
+    </div>
+
+    <div class="budget-table">
+      <div class="head">
+        <span class="eyebrow">All-In For Two Travelers</span>
+        <h3>Budget by Tier</h3>
+        <p>USD, mid-August peak. Move items across tiers freely. <strong>Standard tier matches the day-by-day above.</strong> The Côte d'Azur is the most expensive option in the set — Standard runs ~2.5× Mallorca and ~3× Hvar at equivalent quality. The Splurge tier (Eden-Roc + 3× ★★★ + Caves du Roy VIP + Blade helicopter) is the no-cap version.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th class="item">Item</th>
+            <th class="tier">Budget</th>
+            <th class="tier standard">Standard ★</th>
+            <th class="tier">Splurge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="item">Flights · Air France LAX↔NCE (×2)</td><td class="tier">$2,400<br><span style="font-size: 0.75rem; opacity: 0.7;">economy</span></td><td class="tier standard std-mark">$3,200<br><span style="font-size: 0.75rem; opacity: 0.7;">economy + bag</span></td><td class="tier">$8,400<br><span style="font-size: 0.75rem; opacity: 0.7;">premium / business</span></td></tr>
+          <tr><td class="item">Hotels · 3 Cannes + 1 St-T + 2 Monte-Carlo</td><td class="tier">$2,800<br><span style="font-size: 0.75rem; opacity: 0.7;">Negresco all 5 nights</span></td><td class="tier standard std-mark">$7,800<br><span style="font-size: 0.75rem; opacity: 0.7;">Martinez + Cheval Blanc + Hôtel de Paris</span></td><td class="tier">$18,500<br><span style="font-size: 0.75rem; opacity: 0.7;">Eden-Roc + Cheval Blanc + Hôtel de Paris suite</span></td></tr>
+          <tr><td class="item">Michelin ★ + ★★ + ★★★ dinners</td><td class="tier">$650<br><span style="font-size: 0.75rem; opacity: 0.7;">1× ★ only</span></td><td class="tier standard std-mark">$2,800<br><span style="font-size: 0.75rem; opacity: 0.7;">Louis XV + Vague d'Or + La Chèvre d'Or + La Palme d'Or</span></td><td class="tier">$5,200<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Mirazur + Louroc + Paloma</span></td></tr>
+          <tr><td class="item">Provençal traditional + lunches</td><td class="tier">$550</td><td class="tier standard std-mark">$1,100<br><span style="font-size: 0.75rem; opacity: 0.7;">Bistrot d'Antoine + Petite Maison + Colombe d'Or + Club 55</span></td><td class="tier">$1,800</td></tr>
+          <tr><td class="item">Aug 15 Z Plage fireworks dinner</td><td class="tier">$120<br><span style="font-size: 0.75rem; opacity: 0.7;">free standing</span></td><td class="tier standard std-mark">$420<br><span style="font-size: 0.75rem; opacity: 0.7;">Z Plage set menu €180/pp</span></td><td class="tier">$2,400<br><span style="font-size: 0.75rem; opacity: 0.7;">private yacht charter 4 h</span></td></tr>
+          <tr><td class="item">Beach clubs · La Guérite + Bagatelle</td><td class="tier">$200</td><td class="tier standard std-mark">$1,400<br><span style="font-size: 0.75rem; opacity: 0.7;">La Guérite lunch + Bagatelle magnum</span></td><td class="tier">$3,500<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Nikki Beach + Loulou</span></td></tr>
+          <tr><td class="item">Nightlife · Caves du Roy + Bâoli + Jimmy'z</td><td class="tier">$200</td><td class="tier standard std-mark">$1,200<br><span style="font-size: 0.75rem; opacity: 0.7;">cover entries + 2 bottles</span></td><td class="tier">$4,800<br><span style="font-size: 0.75rem; opacity: 0.7;">Caves du Roy VIP table €1,500+ + Jimmy'z + Bâoli</span></td></tr>
+          <tr><td class="item">Wine experiences · Esclans + Bellet + Lérins</td><td class="tier">$80</td><td class="tier standard std-mark">$350<br><span style="font-size: 0.75rem; opacity: 0.7;">3 tastings + Crémat sit-down</span></td><td class="tier">$1,200<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Château La Coste day + Mallmann</span></td></tr>
+          <tr><td class="item">Activities · museums + Villa Ephrussi + Maeght + Casino + Oceanographic</td><td class="tier">$150</td><td class="tier standard std-mark">$320<br><span style="font-size: 0.75rem; opacity: 0.7;">all entries + Casino + Casino bar</span></td><td class="tier">$900<br><span style="font-size: 0.75rem; opacity: 0.7;">+ private guided</span></td></tr>
+          <tr><td class="item">Transfers · St-T ferry + Cannes-Monaco + NCE</td><td class="tier">$250</td><td class="tier standard std-mark">$680<br><span style="font-size: 0.75rem; opacity: 0.7;">ferry + Mercedes + taxis</span></td><td class="tier">$1,950<br><span style="font-size: 0.75rem; opacity: 0.7;">Blade helicopter + private driver days</span></td></tr>
+          <tr><td class="item">Casino chips + Caves du Roy bottles + cushion</td><td class="tier">$400</td><td class="tier standard std-mark">$900</td><td class="tier">$2,200</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="total-label">Total · two travelers, all-in</td>
+            <td class="tier">$7,800</td>
+            <td class="standard">$20,170</td>
+            <td class="tier">$50,850</td>
+          </tr>
+        </tfoot>
+      </table>
+      <p class="footnote">
+        <strong>Honest read:</strong> Côte d'Azur Standard ($20,170) runs <strong>~2.1× Hvar Standard ($9,650)</strong> and <strong>~1.2× Mallorca Standard ($17,050)</strong> for the densest Michelin + most-operatic romance in the set. The Splurge ($50,850) is Eden-Roc + 3 ★★★ + Caves du Roy table + Blade — no-cap. <strong>If food + romance + nightlife + wine are your top axes and budget is not the constraint, this is the trip.</strong> If price-to-experience matters more, Mallorca or San Sebastián wins. <em>Realistic operator estimate:</em> $25–$40K is the honest Standard-to-Splurge band for two travelers booking everything sensibly.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Built for Mark · August 11–17, 2026 · LAX origin · 5 hotel nights · 3 Cannes + 1 St-Tropez + 2 Monte-Carlo · <a href="../index.html">all trips</a> · <a href="./aug_11_europe.html">compare options</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

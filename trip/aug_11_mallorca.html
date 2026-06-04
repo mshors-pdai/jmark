@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>August 2026 — Mallorca · Deià &amp; the Tramuntana</title>
+<title>August 2026 — Mallorca · Palma &amp; Deià · Tramuntana Overdrive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -32,7 +32,6 @@
   .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; }
   a { color: inherit; }
 
-  /* ===== Back-to-index bar ===== */
   .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
   .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
   .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
@@ -136,6 +135,8 @@
   .day-content ul li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 6px; height: 6px; border-radius: 50%; background: var(--mallorca-clay); }
   .day-content ul li strong { color: var(--mallorca-deep); }
   .day-content ul li a { color: var(--mallorca-sea); text-decoration: none; border-bottom: 1px dotted; }
+  .alts { background: rgba(201,123,62,0.06); border-left: 3px solid var(--mallorca-clay); padding: 0.85rem 1rem; margin: 0.75rem 0 0.25rem 1.5rem; border-radius: 0 6px 6px 0; font-size: 0.88rem; color: #444; }
+  .alts strong { color: var(--mallorca-clay); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.25rem; }
 
   .hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
   .hotel-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
@@ -182,6 +183,25 @@
   .activity h4 a { color: inherit; text-decoration: none; }
   .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
 
+  .nightlife { max-width: 1100px; margin: 0 auto 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .nightlife-col { background: #15161a; color: white; padding: 2rem; border-radius: 16px; }
+  .nightlife-col h3 { color: var(--mallorca-clay); margin-bottom: 1.25rem; font-style: italic; }
+  .nightlife-col .venue { padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nightlife-col .venue:last-child { border-bottom: none; }
+  .nightlife-col .venue .vname { font-family: 'Playfair Display', serif; font-weight: 600; color: white; font-size: 1.05rem; }
+  .nightlife-col .venue .vmeta { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
+  .nightlife-col .venue .vdesc { font-size: 0.88rem; color: rgba(255,255,255,0.75); margin-top: 0.5rem; line-height: 1.5; }
+
+  .score-grid { max-width: 1000px; margin: 0 auto 3rem; }
+  .score-row { display: grid; grid-template-columns: 1fr auto 70px; gap: 1rem; padding: 1.1rem 1.5rem; background: white; border-radius: 8px; margin-bottom: 0.6rem; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .score-row .axis { font-weight: 600; color: var(--mallorca-deep); }
+  .score-row .axis .tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-left: 0.5rem; font-weight: 500; }
+  .score-row .reason { font-size: 0.88rem; color: #444; max-width: 480px; text-align: right; }
+  .score-row .num { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--mallorca-clay); font-weight: 600; }
+  .score-row.total { background: var(--mallorca-deep); color: white; }
+  .score-row.total .axis { color: white; }
+  .score-row.total .num { color: white; font-size: 1.9rem; }
+
   .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
   .booking .section-header h2 { color: white; }
   .booking .section-header p { color: rgba(255,255,255,0.7); }
@@ -195,6 +215,11 @@
   .step p strong { color: white; }
   .step .meta-line { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
   .step .meta-line a { color: var(--mallorca-stone); text-decoration: none; }
+
+  .adversarial { max-width: 950px; margin: 4rem auto 0; padding: 2.5rem; background: rgba(255,255,255,0.04); border-radius: 16px; border-left: 4px solid var(--mallorca-clay); }
+  .adversarial h3 { color: white; margin-bottom: 1rem; }
+  .adversarial p { color: rgba(255,255,255,0.78); font-size: 0.95rem; margin-bottom: 1rem; }
+  .adversarial p strong { color: var(--mallorca-clay); }
 
   .budget-table { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px; }
   .budget-table .head { text-align: center; margin-bottom: 2.5rem; }
@@ -232,11 +257,15 @@
     .only-this-week .grid { grid-template-columns: 1fr; }
     .wine-block { grid-template-columns: 1fr; }
     .wine-block .wine-text { padding: 2rem; }
+    .nightlife { grid-template-columns: 1fr; }
     .topnav .tabs { flex-wrap: wrap; }
     .container { padding: 0 1.25rem; }
     .step { grid-template-columns: 60px 1fr; gap: 1rem; }
     .food-row { grid-template-columns: 1fr; gap: 0.6rem; }
     .food-row .drive { text-align: left; }
+    .score-row { grid-template-columns: 1fr; }
+    .score-row .reason { text-align: left; }
+    .score-row .num { text-align: left; }
   }
   @media (max-width: 600px) {
     .hotels-grid, .activities { grid-template-columns: 1fr; }
@@ -258,7 +287,7 @@
 <div class="back-bar">
   <div class="container">
     <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
-    <span class="meta-mini">Itinerary No. 03F · Mallorca · <a href="./aug_11_europe.html" style="color: var(--mallorca-clay); text-decoration: none;">compare 6 options ↗</a></span>
+    <span class="meta-mini">Itinerary No. 03F · Mallorca · <a href="./aug_11_europe.html" style="color: var(--mallorca-clay); text-decoration: none;">compare options ↗</a></span>
     <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
   </div>
 </div>
@@ -272,6 +301,8 @@
       <a href="#wine" class="tab">Wine</a>
       <a href="#food" class="tab">Food</a>
       <a href="#activities" class="tab">Activities</a>
+      <a href="#nightlife" class="tab">Nightlife</a>
+      <a href="#score" class="tab">Score</a>
       <a href="#book" class="tab">Book Now</a>
     </div>
   </div>
@@ -280,9 +311,9 @@
 <section class="intro-hero">
   <div class="container">
     <span class="eyebrow">Spain · Balearic Islands · 5 Hotel Nights · Option F</span>
-    <h1>Mallorca · Deià &amp;<br>the <em>Tramuntana.</em></h1>
+    <h1>Mallorca — <em>Palma + Deià</em><br>Tramuntana Overdrive.</h1>
     <p class="lede">
-      Hillside-village base in Deià, Belmond La Residencia in two 16th–17th-century manors on 30 acres of olive and citrus groves above the Mediterranean. The savory-Spain pick that isn't Basque — <strong>sobrasada, lechona, Sóller lamb, Manchego</strong> — paired with the island's only ★★ at Voro (Canyamel) plus nine ★ across the 2026 Michelin Spain guide. Tramuntana hiking on the doorstep, Sa Calobra's hairpin drive and Cap de Formentor lighthouse within day-trip reach, and a 79°F Mediterranean below the village.
+      The over-packed pick. Three nights at <strong>Hotel Es Princep</strong> on Palma's Parc de la Mar (LHW, infinity rooftop, <strong>DINS Santi Taura ★ + Zaranda ★ on-site</strong>) for the city week — Mare de Déu d'Agost Aug 15 lockdown forces walking-distance old-town hotel anyway. Two nights at <strong>Belmond La Residencia</strong> in a 17th-century Tramuntana manor in Deià (Amex FHR 15% + $100 F&amp;B if booked by May 15) for the cliff-village + Chopin-recital weekend. The Perseids peak Aug 12→13 with a moonless sky (new moon Aug 12) — Cap de Formentor is off-limits to private cars, so the substitute is <strong>Lluc / Mortitx Tramuntana dark-sky</strong>. The <strong>Festival Chopin Valldemossa</strong> Sunday Aug 16 in the Carthusian monastery cloister and <strong>Festival de Pollença Aug 13 + Aug 15</strong> (65th edition) overlap your week. <strong>Mallorca's only ★★ — Voro at Park Hyatt Canyamel</strong> — plus 9 ★ in the 2026 guide.
     </p>
     <div class="meta">
       <div class="meta-item"><div class="label">Departure</div><div class="value">Tue, Aug 11</div></div>
@@ -300,13 +331,13 @@
       <div class="hero-image"></div>
       <div class="hero-content">
         <span class="eyebrow">Option F · Spain · Balearic Island</span>
-        <h2>Deià &amp;<br>the Tramuntana</h2>
-        <p class="tagline">Hillside Tramuntana village, Belmond La Residencia in a 16th-century manor, the meat-forward Mallorcan kitchen (sobrasada, lechona, Sóller lamb), Voro ★★ in Canyamel plus nine ★ across the 2026 guide. Hot 85–90°F days demand a coastal/AC base — Deià delivers both.</p>
+        <h2>Palma +<br>Deià</h2>
+        <p class="tagline">The activity-density + Michelin + Tramuntana-romance pick. 3 nights at Es Princep on Palma's old town for fiesta + nightlife (Abaco, Sky Bar Hostal Cuba, Purobeach, Marc Fosh ★, DINS Santi Taura ★, Zaranda ★, Adrián Quetglas, Celler Sa Premsa), 2 nights at Belmond La Residencia in Deià for Cala Deià, Sa Calobra dawn drive, El Olivo ★ in the 17th-c olive mill, Béns d'Avall ★, Sóller train, and the Festival Chopin recital in the Valldemossa monastery cloister. 85–90°F, sea always accessible, AC standard at luxury.</p>
         <div class="stats">
           <div class="stat"><div class="stat-value">85–90°F</div><div class="stat-label">August High</div></div>
-          <div class="stat"><div class="stat-value">Very High</div><div class="stat-label">Crowd Level</div></div>
+          <div class="stat"><div class="stat-value">Palma + Deià</div><div class="stat-label">Two Bases</div></div>
           <div class="stat"><div class="stat-value">Manto Negro</div><div class="stat-label">Signature Wine</div></div>
-          <div class="stat"><div class="stat-value">40 min</div><div class="stat-label">PMI → Deià</div></div>
+          <div class="stat"><div class="stat-value">45 min</div><div class="stat-label">Palma ↔ Deià</div></div>
         </div>
       </div>
     </div>
@@ -314,7 +345,7 @@
     <div class="section-header">
       <span class="eyebrow">Getting There</span>
       <h2>Flight Plan</h2>
-      <p>No US nonstop to PMI — every routing is 1-stop. <strong>Iberia is the most-served option</strong> (27 connecting flights per week LAX→PMI per Skyscanner) via Madrid. LAX→MAD nonstop on IB6172, short hop to Palma, arrive mid-afternoon, drive Deià for sunset.</p>
+      <p>No US nonstop to PMI — every routing is 1-stop. <strong>Iberia is the most-served option</strong> (27 connecting flights per week LAX→PMI per Skyscanner) via Madrid. LAX→MAD nonstop on IB6172, short hop to Palma, arrive mid-afternoon, taxi straight into Es Princep on Parc de la Mar for cathedral sunset.</p>
     </div>
     <div class="flight-box">
       <div class="flight-row">
@@ -325,11 +356,11 @@
       <div class="flight-row">
         <div class="flight-airport"><div class="code">MAD</div><div class="city">Madrid · 1h 30m layover</div></div>
         <div class="flight-line"><div class="info">Iberia IB3946</div><div class="dash"></div><div class="info">1h 15m</div></div>
-        <div class="flight-airport"><div class="code">PMI</div><div class="city">Palma · arr <strong>2:10 PM</strong> · 40 min drive to Deià</div></div>
+        <div class="flight-airport"><div class="code">PMI</div><div class="city">Palma · arr <strong>2:10 PM</strong> · 15 min taxi to Es Princep</div></div>
       </div>
       <div class="flight-meta">
         <div class="item"><div class="label">Est. Round-trip</div><div class="val">$1,000–$1,500</div></div>
-        <div class="item"><div class="label">At hotel by</div><div class="val">3:30 PM</div></div>
+        <div class="item"><div class="label">At hotel by</div><div class="val">3:00 PM</div></div>
         <div class="item"><div class="label">Carrier</div><div class="val">Iberia</div></div>
       </div>
     </div>
@@ -338,14 +369,14 @@
     <div class="section-header">
       <span class="eyebrow">Day by Day</span>
       <h2>The Itinerary</h2>
-      <p>One base — Belmond La Residencia in Deià — with day-trips to Sóller + Port de Sóller (25 min), Palma (35 min), Sa Calobra (1h), and Cap de Formentor (1h 30m). Plus one ambitious half-day to Voro ★★ in Canyamel (1h 45m each way) if you want the 2-star.</p>
+      <p>Two bases — <strong>3 nights Palma (Tue–Fri) → 2 nights Deià (Fri–Sun)</strong>. Move on Fri afternoon so Sat Aug 15 (Mare de Déu d'Agost) is partially absorbed by a Deià-stay-local plan and partially by an evening Palma walking re-entry for the procession. The Palma → Deià hand-off is a 45-min drive via MA-10. Days are stacked deliberately to under-promise on logistics and over-deliver on hours. Three-tier alternative per slot: <strong>Low energy / Doubling down / Rain</strong>.</p>
     </div>
 
     <div class="only-this-week">
       <div class="head">
         <span class="eyebrow" style="color: var(--mallorca-clay);">Only This Week</span>
         <h3>Don't-Miss Events on Your Exact Dates</h3>
-        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 700px; margin-left: auto; margin-right: auto;">Four things that only happen during the week you're there. The Perseid + Cap de Formentor combination is the trip's unrepeatable night.</p>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 720px; margin-left: auto; margin-right: auto;">Six things that only happen during the week you're there. The Perseids + moonless-sky window is the trip's unrepeatable night; Mare de Déu d'Agost is Mallorca's biggest mid-summer fiesta and physically forces the itinerary's shape; Festival Chopin Valldemossa lands on Sunday Aug 16 — your last full night.</p>
       </div>
 
       <div class="grid">
@@ -354,11 +385,11 @@
           <div class="head">
             <span class="icon">☄️</span>
             <div>
-              <h4 class="clay">Perseid Meteor Shower Peak</h4>
-              <div class="when">Night of <strong>Wed Aug 12 → Thu Aug 13</strong></div>
+              <h4 class="clay">Perseid Meteor Shower Peak — moonless</h4>
+              <div class="when">Night of <strong>Wed Aug 12 → Thu Aug 13</strong> · new moon Aug 12</div>
             </div>
           </div>
-          <p><strong>The best Perseid year of the decade.</strong> New moon on Aug 12 = moonless sky, 90+ meteors/hour at peak (1–4 AM local). Mallorca has the rare combination of dark sky over the sea and a road-to-the-lighthouse to enable it: <strong>Cap de Formentor</strong>, the island's NE tip, has minimal light pollution and an open lighthouse promontory. Drive up after 10 PM (the daytime closure ends), stake out the lighthouse parking, watch over the Mediterranean horizon. Drive back to Deià by 4:30 AM. Bring blankets, thermoses, a bottle of cava.</p>
+          <p><strong>The decade's best Perseid year — moonless dark sky, 90+ meteors/hr at peak.</strong> Peak rates 02:00–04:00 local on Aug 13. <strong>⚠️ Cap de Formentor is OFF-LIMITS</strong> — the Ma-2210 lighthouse road is closed to private vehicles 10:00–22:00 daily May 15–Oct 18, 2026 (€100–200 fines), and Bus 334 last departs 20:30. Substitute vantages: <strong>Lluc Sanctuary / Coll de sa Batalla</strong> (central Tramuntana, 530 m, dark sky, 60 min from Palma); <strong>Mortitx vineyard area</strong> (Escorca, 400 m, true dark-sky); <strong>Cap de ses Salines</strong> (south coast lighthouse, no closure); <strong>Cala Tuent</strong> (intimate dark cove north of Sa Calobra). Bring blankets, thermos, red flashlight, cava.</p>
           <a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener" class="book-link">Viewing guide →</a>
         </div>
 
@@ -366,58 +397,83 @@
           <div class="head">
             <span class="icon">⛪</span>
             <div>
-              <h4>Assumption of Mary · Mare de Déu</h4>
-              <div class="when"><strong>Sat Aug 15</strong> — national public holiday</div>
+              <h4>Festa de la Mare de Déu d'Agost</h4>
+              <div class="when"><strong>Fri Aug 14 + Sat Aug 15</strong> — Mallorca's biggest mid-summer fiesta</div>
             </div>
           </div>
-          <p>Spain's biggest summer holiday. <strong>Religious processions and "Els Llits de la Mare de Déu"</strong> (Virgin Mary recumbent displays) in churches across Palma and many villages — Biniaraix, Caimari, Valldemossa, Sineu, Esporles, Sa Coma, Son Serra de Marina, Colònia de Sant Pere. Cultural fairs, traditional music and dance, children's activities. <strong>Restaurants packed, beaches full, coastal roads gridlocked.</strong> Stay local in Deià + Valldemossa this day; don't try Sa Calobra or Palma. Book Sat dinner 60+ days ahead.</p>
-          <a href="https://www.inmallorcamagazine.com/august-events" target="_blank" rel="noopener" class="book-link">August events guide →</a>
+          <p>Spain's biggest summer holiday + Mallorca's hardest public holiday. Banks + shops shut, coastal roads gridlock, restaurants packed. <strong>Aug 14 20:00 opening of "Els Llits de la Mare de Déu"</strong> (ephemeral altars across Palma + village churches). <strong>Aug 15 18:30 procession of cossiers with the dance "Gentil Señora"</strong>. Three-day Palma old-town street party — orchestras in Plaça Major. <strong>Aug 15 = stay walking-distance in Palma OR stay-local in Deià. Do NOT plan Sa Calobra or any Tramuntana drive that day</strong> — coastal MA-10 will be bumper-to-bumper. The itinerary uses Aug 15 to swim Cala Deià + Sóller train round-trip + return to Palma 6 PM for the procession + late dinner.</p>
+          <a href="https://www.infomallorca.net/" target="_blank" rel="noopener" class="book-link">Mallorca fiesta calendar →</a>
         </div>
 
         <div class="event-card olive">
           <div class="head">
-            <span class="icon">🚗</span>
+            <span class="icon">🎻</span>
             <div>
-              <h4 class="olive">Sa Calobra Crowd Window</h4>
-              <div class="when">Best <strong>before 8:30 AM</strong> or <strong>after 5:30 PM</strong></div>
+              <h4 class="olive">Festival de Pollença 65th edition</h4>
+              <div class="when"><strong>Thu Aug 13 + Sat Aug 15</strong> · Sant Domingo cloister 22:00</div>
             </div>
           </div>
-          <p>The 10 km road of hairpins ending at the Torrent de Pareis gorge is on every Mallorca shortlist — and in August, every tour bus on the island also runs it. <strong>Be at the trailhead by 7 AM</strong>, swim by 8, drive back out before the buses arrive (around 10). Alternative: arrive at 5 PM for the soft late-afternoon light and the buses gone. Don't attempt 11 AM–4 PM — the road is single-lane in places and the wait for oncoming buses can be 30+ minutes.</p>
-          <a href="https://www.google.com/maps/place/Sa+Calobra,+Escorca,+Balearic+Islands,+Spain/" target="_blank" rel="noopener" class="book-link">Sa Calobra map →</a>
+          <p>Mallorca's most prestigious classical music festival, 65th season — the open-air programme runs all August in the Sant Domingo cloister in Pollença. <strong>Thu Aug 13: Quartet Ébène</strong> (one of Europe's most-decorated string quartets). <strong>Sat Aug 15: Freiburger Barockorchester</strong> with violinist Éva Borchi and soprano Jeanine De Bique. 55 min from Palma, 45 min from Deià. Tickets via festivalpollenca.koobin.com — 30–60 days advance recommended for the marquee dates. <strong>Aug 15 conflicts directly with the Mare de Déu street party in Palma</strong> — pick one.</p>
+          <a href="https://festivalpollenca.com/" target="_blank" rel="noopener" class="book-link">Festival site →</a>
         </div>
 
         <div class="event-card stone">
           <div class="head">
-            <span class="icon">🚦</span>
+            <span class="icon">🎹</span>
             <div>
-              <h4 class="stone">Cap de Formentor · Daytime Road Closure</h4>
-              <div class="when"><strong>Closed 10 AM → 10 PM</strong>, June 1 – Sept 30</div>
+              <h4 class="stone">Festival Chopin Valldemossa</h4>
+              <div class="when"><strong>Sun Aug 16, 21:30</strong> · Carthusian monastery cloister</div>
             </div>
           </div>
-          <p>The lighthouse road is closed to private cars in summer — you must take the public bus from Playa de Formentor parking, OR drive up before 10 AM, OR after 10 PM. For the Perseids viewing, the 10 PM reopening is ideal. For a sunset visit, you'll need the bus (~30 min from parking) and accept you can't drive back yourself until 10 PM. <strong>Plan the day around this</strong>: morning at Cap de Formentor before 10 AM, then drive south through Pollença + Alcúdia for lunch.</p>
-          <a href="https://www.alcudiamallorca.com/en/" target="_blank" rel="noopener" class="book-link">Pollença / Alcúdia info →</a>
+          <p>Sunday evening recitals in the Real Cartuja de Valldemossa — the 14th-century Carthusian monastery where Chopin and George Sand wintered in 1838–39 — where Chopin composed the Preludes Op. 28. The Sunday-night cloister format runs through August at 21:30; verify the exact Aug 16 programme at festivalchopin.com (programme typically lands April–May). <strong>This is the trip's last-night cultural climax</strong> — 15 min from Belmond La Residencia, walk the monastery before or after.</p>
+          <a href="https://festivalchopin.com/" target="_blank" rel="noopener" class="book-link">Festival Chopin →</a>
+        </div>
+
+        <div class="event-card clay">
+          <div class="head">
+            <span class="icon">🚦</span>
+            <div>
+              <h4 class="clay">Cap de Formentor Road Closure</h4>
+              <div class="when"><strong>Closed to private cars 10:00 → 22:00</strong> daily May 15 → Oct 18, 2026</div>
+            </div>
+          </div>
+          <p>The Ma-2210 lighthouse road is closed to private vehicles 10:00–22:00 daily May 15–Oct 18, 2026. €100–200 fines for unauthorized access. Bus 334 from Port de Pollença runs through the day with last departure 20:30 — no public transit for Perseids overnight. <strong>If you want Cap de Formentor in daylight</strong>: drive in before 10:00 AM (early-morning lighthouse + Mirador es Colomer + walk to Cala Formentor) and exit by 09:45. <strong>If you want sunset views</strong>: take Bus 334. <strong>For Perseids: do NOT plan Formentor</strong> — use Mortitx / Lluc / Cap de ses Salines instead. The itinerary handles this by sailing the cliffs from Port de Pollença on Day 4 instead.</p>
+          <a href="https://www.palmaairport.info/2026/03/25/formentor-access-restrictions-summer-2026/" target="_blank" rel="noopener" class="book-link">Closure details →</a>
+        </div>
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">🎼</span>
+            <div>
+              <h4>Deià International Music Festival</h4>
+              <div class="when">Runs <strong>May 2 → Oct 2, 2026</strong> · across your full week</div>
+            </div>
+          </div>
+          <p>Smaller chamber-music festival staged across Deià's intimate venues — <strong>Son Marroig</strong> (Archduke Ludwig Salvator's 16th-c clifftop villa with the Carrara marble belvedere overlooking Sa Foradada), <strong>Miramar Monastery</strong>, and <strong>Deià Church</strong>. Programme runs May 2 – Oct 2, with multiple evening recitals per week through August. <strong>Slot into one of the two Deià evenings</strong> — Fri Aug 14 or Sat Aug 15 — if the programme aligns. Smaller crowd than Pollença or Chopin festivals; the venue itself (Son Marroig's marble rotunda over the Med) is the experience.</p>
+          <a href="https://www.dimf.com/" target="_blank" rel="noopener" class="book-link">DIMF programme →</a>
         </div>
 
       </div>
 
       <div class="bonus-callout">
-        <h4>🍴 Bonus — Voro ★★ in Canyamel (the ambitious add-on)</h4>
-        <p>Voro is Mallorca's only 2-star — Chef <strong>Álvaro Salazar</strong> at the Park Hyatt Mallorca in Canyamel (NE coast). Two tasting menus: "Voro" 15–18 courses €165, "Devoro" 20–22 courses €195. From Deià it's <strong>1h 45m each way</strong> — too far for a casual dinner. Two ways to make it work: (1) lunch on a day you're doing Sa Calobra + Cap de Formentor (geographically adjacent — combine the day's drive) or (2) overnight at the Park Hyatt itself (would break the single-base plan; only if Voro is truly the trip-maker). Book early — peak season slots go 60+ days out. Email <a href="mailto:voro.parkhyattmallorca@hyatt.com">voro.parkhyattmallorca@hyatt.com</a> or call +34 871 811 234.</p>
+        <h4>⚠️ What you'll just miss — Festa de Sant Bartomeu Sóller (Aug 24) + Mallorca Live Festival (June)</h4>
+        <p>The Festa de Sant Bartomeu in Sóller (Aug 24, the "Firó" mock-battle commemorating the 1561 Moorish raid — one of the island's most colorful traditional fiestas) is a week after you leave. Mallorca Live Festival (Magaluf, ~50,000 attendees, indie + electronic) ran in June. The Aug 11–17 window misses both. <strong>What you do get — the moonless Perseids + Mare de Déu d'Agost + Pollença Festival + Festival Chopin + DIMF — is the densest cultural week of the Mallorca calendar.</strong></p>
       </div>
     </div>
 
     <div class="glance-table">
       <table>
         <thead>
-          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner</th></tr>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner + Late</th></tr>
         </thead>
         <tbody>
-          <tr><td class="daynum">1</td><td>Wed Aug 12</td><td>Arrival + Perseids ☄️</td><td>Land PMI 2 PM · Deià check-in · pool · late-night Cap de Formentor</td><td>El Olivo (Belmond) — light first night</td></tr>
-          <tr><td class="daynum">2</td><td>Thu Aug 13</td><td>Tramuntana hike</td><td>Cami des Pintors Deià→Sóller (or vice versa) · 1912 tram to Port de Sóller</td><td><strong>Béns d'Avall ★</strong> clifftop Sóller</td></tr>
-          <tr><td class="daynum">3</td><td>Fri Aug 14</td><td>Wine day</td><td>Bodega Ribas (Consell) + Macià Batle (Santa Maria) · pa amb oli lunch</td><td><strong>Marc Fosh ★</strong> Palma</td></tr>
-          <tr><td class="daynum">4</td><td>Sat Aug 15</td><td>Assumption ⛪ · stay local</td><td>Cala Deià morning swim · Valldemossa village · spa at Belmond</td><td>Belmond La Residencia (El Patio terrace)</td></tr>
-          <tr><td class="daynum">5</td><td>Sun Aug 16</td><td>Sa Calobra + NE coast</td><td>Sa Calobra 7 AM · Cap de Formentor lunch · Pollença old town</td><td><strong>DINS Santi Taura ★</strong> Lloseta</td></tr>
-          <tr><td class="daynum">6</td><td>Mon Aug 17</td><td>Departure</td><td>Slow morning · transfer PMI</td><td>On the plane</td></tr>
+          <tr><td class="daynum">1</td><td>Tue Aug 11</td><td>Arrival Palma</td><td>PMI 2:10 PM · Es Princep check-in · Catedral La Seu + Almudaina · Parc de la Mar walk</td><td><strong>DINS Santi Taura ★</strong> in-hotel · <strong>Bar Abaco</strong> nightcap</td></tr>
+          <tr><td class="daynum">2</td><td>Wed Aug 12</td><td>Palma sea day · Perseids ☄️</td><td>Purobeach Cala Estancia until 17:00 · sunset shower · driver to Tramuntana dark-sky at midnight</td><td><strong>Marc Fosh ★</strong> Convent de la Missió · Mortitx / Lluc Perseid hunt 23:00–04:00</td></tr>
+          <tr><td class="daynum">3</td><td>Thu Aug 13</td><td>Wine + lamb + sunset hike</td><td>Bodega Ribas (1711) + Macià Batle · Es Verger lamb shoulder · Castell d'Alaró hike sunset</td><td><strong>Adrián Quetglas</strong> vertical-garden jazz · <strong>Sky Bar Hostal Cuba</strong></td></tr>
+          <tr><td class="daynum">4</td><td>Fri Aug 14</td><td>Palma → Deià · Formentor sail</td><td>Sailing day from Port de Pollença · llaut with skipper · Cap de Formentor cliffs + swim stops · drive to Belmond</td><td><strong>El Olivo ★</strong> at Belmond · <strong>Sa Fonda Deià</strong> live music</td></tr>
+          <tr><td class="daynum">5</td><td>Sat Aug 15 ⛪</td><td>Cala Deià + Sóller train + Palma fiesta</td><td>Cala Deià swim · Belmond spa · Sóller wooden train round trip · drive back to Palma for procession + Els Llits</td><td><strong>Celler Sa Premsa</strong> 1958 cellar · Plaça Major orchestras · Abaco round 2</td></tr>
+          <tr><td class="daynum">6</td><td>Sun Aug 16</td><td>Sa Calobra dawn + Béns d'Avall + Chopin</td><td>Pre-dawn Sa Calobra hairpins · Mirador de Ses Barques · Belmond spa · GR221 Deià → Lluc Alcari</td><td><strong>Béns d'Avall ★</strong> sunset cliff · <strong>Festival Chopin</strong> 21:30 Valldemossa</td></tr>
+          <tr><td class="daynum">7</td><td>Mon Aug 17</td><td>Departure</td><td>Slow breakfast Belmond · drive PMI · 45 min</td><td>On the plane</td></tr>
         </tbody>
       </table>
     </div>
@@ -425,100 +481,152 @@
     <div class="itinerary">
 
       <div class="day">
-        <div class="day-number"><div class="num">01</div><div class="date">Wed Aug 12</div></div>
+        <div class="day-number"><div class="num">01</div><div class="date">Tue Aug 11</div></div>
         <div class="day-content">
-          <h3>Arrival + Perseids at Cap de Formentor</h3>
+          <h3>Arrival Palma · La Seu sunset · DINS Santi Taura ★ in-hotel · Abaco nightcap</h3>
           <ul>
-            <li><strong>2:10 PM</strong> Land PMI · Iberia IB3946</li>
-            <li><strong>3:00 PM</strong> Pre-arranged private transfer to Deià (~$130, 40 min via Ma-1 + Ma-10)</li>
-            <li><strong>3:45 PM</strong> Check in <a href="https://www.belmond.com/hotels/europe/mallorca/deia/belmond-la-residencia/" target="_blank" rel="noopener">Belmond La Residencia</a> · request a Junior Suite with sea view if upgrade is available</li>
-            <li><strong>5:00 PM</strong> Pool + olive garden + welcome drink (Mirador bar)</li>
-            <li><strong>7:30 PM</strong> Sunset on Belmond's terrace · light dinner at <strong>El Olivo</strong> (Belmond's signature restaurant in a 17th-century olive mill — three Mediterranean tasting menus, romantic stone-and-candlelight room)</li>
-            <li><strong>10:30 PM</strong> Coffee at the bar, then drive (you or pre-arranged transfer ~$180 RT) <strong>1h 30m to Cap de Formentor</strong> — the lighthouse road opens at 10 PM</li>
-            <li><strong>12:00 AM → 3:30 AM</strong> Perseid peak viewing from the lighthouse promontory — bring blankets, thermos, a bottle of cava. Peak shower is 1–4 AM, dark sky over the Mediterranean</li>
-            <li><strong>4:30 AM</strong> Drive back to Deià · sleep in tomorrow</li>
+            <li><strong>2:10 PM</strong> Land PMI · Iberia IB3946 from Madrid · prearranged taxi (~€25, 15 min) to <a href="https://www.esprincep.com/" target="_blank" rel="noopener">Hotel Es Princep</a> on Parc de la Mar</li>
+            <li><strong>3:00 PM</strong> Check in · 5-star LHW · request a sea-view room facing the cathedral · the infinity rooftop pool + Almaq Bar have direct Catedral views</li>
+            <li><strong>4:00 PM</strong> Rooftop pool unwind · espresso at Almaq · feet up</li>
+            <li><strong>6:00 PM</strong> Walk 8 min to <strong><a href="https://catedraldemallorca.org/" target="_blank" rel="noopener">Catedral La Seu</a></strong> — Gothic giant with Gaudí's interventions + Miquel Barceló's 2007 ceramic apse chapel · <strong>note: cathedral interior closes 18:15 in Aug</strong>; if too late, walk the exterior + the <strong>Palau Reial de l'Almudaina</strong> grounds (Almudaina Aug hours 10:00–20:00, last entry 19:00)</li>
+            <li><strong>7:15 PM</strong> Stroll the <strong>Parc de la Mar</strong> reflecting pool — best cathedral photograph in town · continue into La Lonja old town</li>
+            <li><strong>8:00 PM</strong> Optional aperitif at <strong>Almaq</strong> (Es Princep rooftop) — first cathedral-view cocktail of the trip, ease into it</li>
+            <li><strong>9:00 PM</strong> Dinner at <strong><a href="https://grupsantitaura.com/en/dins-santitaura/" target="_blank" rel="noopener">DINS Santi Taura ★</a></strong> — in your hotel, El Llorenç Parc de la Mar setting. <strong>Single "Origens" tasting menu (11 courses + 3 optional), bar-counter format</strong>, watch the cooking. No children under 16. Reimagines traditional Mallorcan with deep technique. ~€110 + wine pairing. The natural arrival-night choice because you don't have to go anywhere.</li>
+            <li><strong>11:30 PM</strong> Walk 5 min through La Lonja's stone alleys to <strong><a href="https://seemallorca.com/bars/abaco-cocktail-bar" target="_blank" rel="noopener">Bar Abaco</a></strong>, Calle San Juan 1 — the candle-lit Baroque cocktail bar in a 17th-century mansion. Birdcages, towers of fresh fruit + flowers, rococo mirrors, classical music, premium cocktails. <strong>"Most remarkable" cocktail bar per FT.</strong> Mandatory.</li>
+            <li><strong>1:00 AM</strong> Walk back to Es Princep — 8 min through Plaça de la Reina, harbor-lit</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Abaco. Have the DINS ★ tasting (already in your hotel), then nightcap at the Es Princep rooftop Almaq Bar with the cathedral floodlit below. In bed by midnight.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> After Abaco, taxi (€10, 12 min) to <strong>Brooklyn</strong> in Santa Catalina — underground house/techno DJs spinning till 4 AM. The serious Palma club night.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap (low probability — Aug 8 historically wettest day at 10.93 mm but post-front it clears):</strong> Skip the outdoor walk. Es Princep spa, then <strong>Es Baluard</strong> contemporary art museum (open till 21:00 in Aug, 5-min walk) for the Miró + Picasso + Mallorcan moderns collection. Then DINS ★ + Almaq.</div>
         </div>
       </div>
 
       <div class="day">
-        <div class="day-number"><div class="num">02</div><div class="date">Thu Aug 13</div></div>
+        <div class="day-number"><div class="num">02</div><div class="date">Wed Aug 12</div></div>
         <div class="day-content">
-          <h3>Tramuntana hike + Sóller train + Béns d'Avall ★</h3>
+          <h3>Palma beach club · Marc Fosh ★ · Perseids in the Tramuntana dark-sky</h3>
           <ul>
-            <li><strong>10:00 AM</strong> Slow breakfast on the Belmond terrace · recover from Perseids night</li>
-            <li><strong>11:30 AM</strong> Walk the <strong><a href="https://www.gr221.info/gr221%20english.htm" target="_blank" rel="noopener">Cami des Pintors</a></strong> ("Painters' Path") — the easiest GR-221 section, ~7 km Deià→Sóller via a 13th-century Arab path through olive groves and orange orchards. ~2.5 h walking, gentle elevation. Or take the historic Sóller train down (depart Palma) and walk back uphill if you want a different angle.</li>
-            <li><strong>2:30 PM</strong> Lunch at <strong>Ca'n Pintxo</strong> or <strong>Cas Carreter</strong> in Sóller plaza — pa amb oli with sobrasada, salt-cured tomato, Manchego</li>
-            <li><strong>3:30 PM</strong> Ride the <strong>1912 wooden tram</strong> ($10 RT) from Sóller plaza to Port de Sóller (~25 min, charming antique cars)</li>
-            <li><strong>4:30 PM</strong> Swim in Port de Sóller harbor or Platja d'en Repic · sun on the rocks</li>
-            <li><strong>7:30 PM</strong> Drive to <strong><a href="https://www.bensdavall.com/" target="_blank" rel="noopener">Béns d'Avall ★</a></strong> for sunset cocktails (15 min from Sóller) · <strong>8:30 PM dinner</strong> — clifftop terrace, father-and-son Vicens, Mallorcan contemporary, Michelin Green Star for sustainability. ~€140 tasting menu</li>
-            <li><strong>11:00 PM</strong> Return to Belmond (~30 min)</li>
+            <li><strong>9:00 AM</strong> Es Princep breakfast on the terrace · slow start required, tonight is a 4 AM finish</li>
+            <li><strong>10:30 AM</strong> Taxi (€15, 8 min) to <strong><a href="https://www.purobeach.com/" target="_blank" rel="noopener">Purobeach Palma</a></strong>, Cala Estancia (5 min from PMI airport but a polished resort cove). Pre-booked sunbed + lunch table — DJ sets ramp up afternoon, sea + freshwater pool, M3 Cuisine kitchen (Mediterranean small plates + ceviche + truffle pasta). Jet-set crowd late afternoon. <strong>Plant for the full 6 hours.</strong></li>
+            <li><strong>5:00 PM</strong> Taxi back to Es Princep · shower, change, nap if possible</li>
+            <li><strong>8:00 PM</strong> Walk 12 min through Palma old town to <strong><a href="https://www.marcfosh.com/" target="_blank" rel="noopener">Marc Fosh ★</a></strong>, Convent de la Missió — 17th-century convent transformed into a design hotel and Michelin-star restaurant. <strong>First British chef to win a Michelin star in Spain (2017), maintained continuously</strong>. <strong>7-course dinner tasting menu €130</strong> (also: 5-course weekday lunch €65; 8-course with wine €180). Modern Mediterranean with British precision.</li>
+            <li><strong>11:00 PM</strong> Pre-arranged private driver pickup at Marc Fosh (~€280 for the 5-hour Perseid run, lined up by Es Princep concierge)</li>
+            <li><strong>12:00 AM</strong> Drive 60 min into the central Tramuntana — destination <strong>Mortitx vineyard area</strong> (Escorca, 400 m, true dark-sky terraces) OR <strong>Lluc Sanctuary / Coll de sa Batalla</strong> (530 m, central monastery + pass, parking + open viewing). Lluc is the easier no-permission spot; Mortitx is the more atmospheric. <strong>⚠️ Do NOT drive Cap de Formentor</strong> — the lighthouse road is closed to private vehicles 10:00–22:00 and there's no nighttime opening; €100–200 fines + dead-end logistics.</li>
+            <li><strong>1:00 AM → 4:00 AM</strong> Peak Perseid viewing on a moonless sky (new moon Aug 12) · blankets + red flashlight + thermos · 90+ meteors/hr expected · driver waits or runs back to Inca for coffee</li>
+            <li><strong>5:00 AM</strong> Return drive to Es Princep · sleep till noon</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the dark-sky drive. Watch the Perseids from the Es Princep rooftop pool deck (light pollution but you'll see the brighter meteors; cathedral is floodlit through 02:00). Have a late Marc Fosh booking at 22:00 and crash by 01:00.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Add a 16:30 sunset sailing from Palma marina (2–3 h cocktail cruise, ~€350 for two via Sail Trip Mallorca) before Marc Fosh — back at the marina 19:30, walk 8 min to the restaurant. Then Perseids 23:00. Stack the day.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Rain blocks both Purobeach + Perseids. Pivot inside: morning Fundació Miró Mallorca, afternoon Es Baluard + La Lonja crawl, evening Marc Fosh ★. <strong>Perseids backup:</strong> attempt again Aug 13 → 14 night (still good rates the night after peak).</div>
         </div>
       </div>
 
       <div class="day">
-        <div class="day-number"><div class="num">03</div><div class="date">Fri Aug 14</div></div>
+        <div class="day-number"><div class="num">03</div><div class="date">Thu Aug 13</div></div>
         <div class="day-content">
-          <h3>Wine day · Binissalem + Palma · Marc Fosh ★</h3>
+          <h3>Binissalem wine + Es Verger lamb + Castell d'Alaró sunset hike + Adrián Quetglas jazz</h3>
           <ul>
-            <li><strong>9:30 AM</strong> Driver pickup ($650 for the day for two — required because you'll be tasting)</li>
-            <li><strong>10:30 AM</strong> <strong><a href="http://www.bodegaribas.com/" target="_blank" rel="noopener">Bodega Ribas</a></strong> tour + tasting (Consell, est. 1711 · oldest winery in Mallorca · organic · native Manto Negro red + Prensal Blanc white) — book ahead by email/phone</li>
-            <li><strong>12:30 PM</strong> Drive 15 min to <strong><a href="https://www.maciabatle.com/en/" target="_blank" rel="noopener">Macià Batle</a></strong> in Santa Maria — larger producer, more polished tasting room, easy weekend visits</li>
-            <li><strong>2:00 PM</strong> Lunch in Santa Maria — pa amb oli + Mallorcan charcuterie at <strong>Sa Vinya</strong> or back in Binissalem at <strong>Singló</strong></li>
-            <li><strong>4:30 PM</strong> Drive into Palma (~25 min) · walk the cathedral + old town · cooled-down evening</li>
-            <li><strong>7:30 PM</strong> Cocktails at <strong>Brassclub</strong> (Spain's first IBA-affiliated cocktail bar)</li>
-            <li><strong>8:30 PM</strong> <strong><a href="https://www.marcfosh.com/" target="_blank" rel="noopener">Marc Fosh ★</a></strong> — Palma's flagship address, first British chef to win a Michelin star in Spain (2017, maintained continuously). Refined modern Mediterranean in Convent de la Missió hotel. ~€130 tasting</li>
-            <li><strong>11:30 PM</strong> Driver back to Deià (~35 min)</li>
+            <li><strong>10:30 AM</strong> Late breakfast Es Princep, recovery from Perseids · slow re-emergence</li>
+            <li><strong>11:30 AM</strong> Pre-booked driver pickup ($500–700/day, two bodegas + lamb dinner round trip via Es Princep concierge)</li>
+            <li><strong>12:30 PM</strong> <strong><a href="http://www.bodegaribas.com/" target="_blank" rel="noopener">Bodega Ribas</a></strong> in Consell — <strong>founded 1711, oldest bodega in Mallorca</strong>, family-run, organic, native Manto Negro + Prensal Blanc. 2-hour tour + tasting + appetizers, ~€60/pp. EN/ES/DE/NL/FR. Reserve by email/phone 1–2 weeks ahead.</li>
+            <li><strong>2:45 PM</strong> Drive 15 min to <strong><a href="https://www.maciabatle.com/en/" target="_blank" rel="noopener">Macià Batle</a></strong> in Santa Maria del Camí — larger producer, polished tasting room. <strong>3:30 PM tour (Mon–Sat 11:30 / 12:30 / 14:00 / 15:30 / 16:30)</strong>, 5-wine tasting + Mallorcan delicacies, €25/pp. The easier of the two and lighter pour after a long Ribas visit.</li>
+            <li><strong>5:00 PM</strong> Drive 30 min via Alaró town up the narrow hairpin Camí del Castell to the <strong>Es Verger</strong> parking lot (1.5 km from the restaurant — driver navigates the cliff road)</li>
+            <li><strong>5:30 PM</strong> <strong>Hike from Es Verger to <a href="https://www.alltrails.com/trail/spain/mallorca/castell-d-alaro" target="_blank" rel="noopener">Castell d'Alaró</a></strong> — 1 h each way, ~310 m gain, well-marked from the restaurant. Ruined castle on a 822 m limestone crag, 360° view of Palma cathedral + the Tramuntana ridge + Bay of Alcúdia. <strong>Sunset ~20:25 mid-Aug</strong> — perfect alignment for the descent in golden light.</li>
+            <li><strong>8:30 PM</strong> Back at Es Verger restaurant for dinner — <strong><a href="https://www.affordablemallorca.com/insights/lamb-restaurant" target="_blank" rel="noopener">Rick Stein called the paletilla de cordero (slow-roasted lamb shoulder, beer + roast potatoes) the best he'd ever eaten</a></strong>. NO RESERVATIONS, CASH ONLY, CLOSED MONDAYS. Other plates: tumbet, sopas mallorquinas, frit mallorquí. Camí de sa Sort / Camino del Castell s/n, +34 971 18 21 26.</li>
+            <li><strong>10:30 PM</strong> Driver back into Palma (~45 min)</li>
+            <li><strong>11:30 PM</strong> Late nightcap at <strong><a href="https://adrianquetglas.es/" target="_blank" rel="noopener">Adrián Quetglas</a></strong> (Michelin-recommended — lost the star in 2026 but still a serious table) over the Riera canal — vertical garden + live jazz Wed–Sat. 1 cocktail + dessert at the bar (full dinner skipped; the lamb is dessert tonight).</li>
+            <li><strong>1:00 AM</strong> Taxi 10 min to <strong><a href="https://www.hotelhostalcuba.com/" target="_blank" rel="noopener">Sky Bar Hostal Cuba</a></strong>, Santa Catalina — daily 18:00–00:30, sweeping rooftop view over Palma + cathedral + bay. First-come tables, no reservations. <strong>Note: closes 00:30</strong> — arrive by 01:00 for a final 30-min cocktail. +34 971 452 237.</li>
+            <li><strong>1:45 AM</strong> Taxi back to Es Princep · sleep</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the Castell d'Alaró hike (the 1-h ascent in August heat is real). Have an earlier 19:30 dinner at Es Verger (drive straight to the restaurant, skip the hike), back to Palma by 21:30. Nightcap at Almaq Bar in-hotel.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Add <strong>Ànima Negra</strong> in Felanitx as a third bodega — cult Callet wine (€44 AN, €20 AN/2 blend), 13th-century estate. Pre-book at annegra.com. Adds 1 h to the driver day. Bonus: drive home via <strong>4 Kilos Vinícola</strong> (also Felanitx, natural/organic, Francesc Grimalt + Sergio Caballero project) for a tasting flight — visit by appointment +34 971 580 523.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Skip the hike + outdoor Es Verger terrace. Stay indoors: 3 bodegas in a row (Ribas + Macià Batle + a quick walk-in at <strong>José L. Ferrer</strong> Binissalem), long covered lunch at Sa Vinya in Santa Maria, back to Palma for <strong>Celler Sa Premsa</strong> (classic Mallorquín 1958 cellar — sopas mallorquinas, lamb shoulder, llom amb col, €5.95/L sangria). Cellersapremsa.com.</div>
         </div>
       </div>
 
       <div class="day">
-        <div class="day-number"><div class="num">04</div><div class="date">Sat Aug 15</div></div>
+        <div class="day-number"><div class="num">04</div><div class="date">Fri Aug 14</div></div>
         <div class="day-content">
-          <h3>Assumption Day · stay-local Deià + Valldemossa</h3>
+          <h3>Cap de Formentor full-day sail from Port de Pollença · drive to Deià · El Olivo ★ · Sa Fonda live music</h3>
           <ul>
-            <li><strong>Note:</strong> National holiday — most shops closed, restaurants packed, coastal roads gridlocked. <strong>Stay west of the Ma-1.</strong> No Palma, no Sa Calobra, no Cap de Formentor today.</li>
-            <li><strong>9:30 AM</strong> Walk down the cliff path from Deià village (~25 min steep) to <strong>Cala Deià</strong> — pebble cove, swim, Ca's Patró March cliff-side restaurant for fresh-grilled fish lunch (the local exception — this is one fish meal you'll want)</li>
-            <li><strong>1:30 PM</strong> Walk back up · siesta + pool</li>
-            <li><strong>4:00 PM</strong> Drive 20 min to <strong>Valldemossa</strong> (Chopin + George Sand winter, 1838–39) · walk the Real Cartoixa monastery cells · coca de patata pastries at <strong>Ca'n Molinas</strong></li>
-            <li><strong>6:30 PM</strong> Catch the late-afternoon <strong>Mare de Déu procession</strong> at one of the smaller villages — Esporles, Banyalbufar, or back in Deià</li>
-            <li><strong>8:30 PM</strong> <strong>Dinner at Belmond La Residencia</strong> — El Patio terrace (informal Mediterranean) or El Olivo (formal in olive mill) · the in-house option is built around exactly this day: roads clear, no driving, candle-lit garden</li>
-            <li><strong>10:30 PM</strong> Cigars + Mallorcan herbs liqueur at the Mirador bar; possibly walk into Deià village for the local Assumption festes (free, low-key, traditional music + ball)</li>
+            <li><strong>8:00 AM</strong> Check out Es Princep · driver loads bags + drives to Belmond directly (~€90 hotel-to-hotel, 1 h via MA-13 → MA-2200, drops bags at Belmond La Residencia for arrival)</li>
+            <li><strong>9:00 AM</strong> You + Joann travel separately by hired car (or share the driver) to <strong>Port de Pollença</strong> (1 h from Palma via MA-13). The car parks at the marina.</li>
+            <li><strong>10:30 AM</strong> Board pre-booked <strong>Cap de Formentor full-day sail</strong> from Port de Pollença — Mallorcan <strong>llaut with skipper</strong> via <a href="https://mallorcatopcharters.com/" target="_blank" rel="noopener">Mallorca Top Charters</a> (~€800–€2,000/day crewed up to 12) or <a href="https://www.perfectcharter.com/" target="_blank" rel="noopener">Perfect Charter</a> (luxury yachts ex Port Pollença/Sóller/Palma). <strong>Cheaper alternative: shared group sail €80/pp</strong> (Cap de Formentor cliffs + Cala Formentor swim stops + lunch onboard).</li>
+            <li><strong>11:30 AM → 17:00</strong> Sail Cap de Formentor — the dramatic limestone cliffs of Mallorca's northeast cape (which you can't drive due to the Ma-2210 closure are the perfect from-the-water angle anyway). Swim stops at <strong>Cala Formentor</strong> (umbrella-pine cove), <strong>Platja de Formentor</strong>, possibly <strong>Cala Murta</strong>. Lunch on board (paella + grilled fish typical). Cliff-jump bays accessible only from sea.</li>
+            <li><strong>5:30 PM</strong> Dock Port de Pollença · drive (you) the MA-2200 → MA-10 to Deià (~1 h via Sa Calobra ridge — slow, twisty, scenic; the road IS the activity)</li>
+            <li><strong>6:45 PM</strong> Check in <strong><a href="https://www.belmond.com/hotels/europe/mallorca/deia/belmond-la-residencia/" target="_blank" rel="noopener">Belmond La Residencia</a></strong> — 67-room 17th-century manor on the Tramuntana hillside, 2 pools, El Olivo ★ on-site, Joan Miró paintings on the walls. <strong>Request a Junior Suite with sea view; Amex FHR 15% off + $100 F&amp;B credit if booked by May 15, 2026 for Jul–Aug travel.</strong></li>
+            <li><strong>9:00 PM</strong> Dinner at <strong><a href="https://menus.belmond.com/la-residencia/el-olivo" target="_blank" rel="noopener">El Olivo ★</a></strong> — chef Pablo Aranda. <strong>Inside a 17th-century olive oil mill with the original press still in the room.</strong> 8-course Lorca-inspired tasting (vegetarian option), terrace seating in summer. <strong>Non-residents bookable only 30 days ahead</strong> — Belmond residents have priority and can book on arrival. Dinner only 19:30–21:30 in summer. +34 971 63 90 11.</li>
+            <li><strong>11:30 PM</strong> Walk 5 min down to the village to <strong><a href="https://safondadeia.com/" target="_blank" rel="noopener">Sa Fonda Deià</a></strong> — legendary village bar since 1988. <strong>Live music + open mic + jam sessions every summer night.</strong> Past patrons: Sting, Bono, Mike Oldfield, Kate Moss. The Mallorca-CBGB; no reservations.</li>
+            <li><strong>1:30 AM</strong> Walk 5 min back uphill to Belmond — village is pin-drop quiet at 2 AM</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Half-day sail (4 hours, 09:30–13:30) only, lunch in Pollença old town at Q11 or 365 Bistro after dropping the boat, slow afternoon drive to Belmond via Lluc Sanctuary stop. Early Belmond pool/spa, El Olivo dinner, no Sa Fonda — in bed by midnight.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> After Sa Fonda, taxi (~€80 each way, 45 min) back into Palma for an Abaco round-two nightcap — 02:30 to 04:00. Return taxi at 04:30. Brutal but if you have one more Palma night left in you.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Sail cancels in moderate swell. Pivot: drive Sa Calobra hairpins (the 26 hairpins + 270° "tie knot" curve) + stop Lluc Sanctuary for the Black Madonna and the Escolanía choir if scheduled, then Mirador de Ses Barques overlook before Belmond check-in. Pollença Festival Quartet Ébène 22:00 (Sant Domingo cloister) as a covered substitute.</div>
         </div>
       </div>
 
       <div class="day">
-        <div class="day-number"><div class="num">05</div><div class="date">Sun Aug 16</div></div>
+        <div class="day-number"><div class="num">05</div><div class="date">Sat Aug 15</div></div>
         <div class="day-content">
-          <h3>Sa Calobra dawn + NE coast + DINS ★</h3>
+          <h3>Mare de Déu d'Agost · Cala Deià · Sóller train · Palma fiesta procession · Sa Premsa</h3>
           <ul>
-            <li><strong>6:00 AM</strong> Driver pickup (or you drive — winding mountain road, fresh and ideal early) · Belmond → Sa Calobra trailhead at the parking lot end of Ma-2141 (~1 h)</li>
-            <li><strong>7:00 AM</strong> Walk the cliff-tunnel path to <strong>Torrent de Pareis</strong> beach — gigantic vertical limestone walls, swim in crystal water before the tour boats arrive</li>
-            <li><strong>9:30 AM</strong> Drive back up Sa Calobra serpentine (the "Nus de Sa Corbata" knot photo stop) · continue east via Ma-10 to <strong>Cap de Formentor area</strong></li>
-            <li><strong>10:45 AM</strong> Park at <strong>Playa de Formentor</strong> (last car park before the closure) · catch the public bus or walk the 4 km path to the lighthouse</li>
-            <li><strong>12:30 PM</strong> Cap de Formentor lighthouse · panoramic views from Mallorca's northern tip · drive back through Pollença</li>
-            <li><strong>2:00 PM</strong> Lunch in <strong>Pollença</strong> old town (medieval hilltop · the 365-step Calvari) — <strong>Q11 Restaurant</strong> for modern Mallorcan</li>
-            <li><strong>4:00 PM</strong> Drive back toward Deià via Lloseta (~40 min)</li>
-            <li><strong>5:30 PM</strong> Brief rest + change at Belmond (~30 min)</li>
-            <li><strong>8:00 PM</strong> Drive to <strong><a href="https://www.dinsbysantitaura.com/" target="_blank" rel="noopener">DINS Santi Taura ★</a></strong> in Lloseta (~45 min) — chef Santi Taura's flagship in Hotel Es Princep–owned Es Cul de Sa Plaça. Mallorcan-rooted tasting menu only · ~€95</li>
-            <li><strong>11:30 PM</strong> Return to Belmond</li>
+            <li><strong>Note:</strong> National public holiday — Mare de Déu d'Agost. Coastal MA-10 gridlocked midday, restaurants packed. Plan A: morning local in Deià, afternoon Sóller round trip by car, evening drive INTO Palma for the procession at 18:30. Belmond stays as your base — return to Deià for sleep.</li>
+            <li><strong>8:00 AM</strong> Early Belmond breakfast on the terrace — heads-up that today is a long lunch + early-evening drive</li>
+            <li><strong>9:30 AM</strong> Walk down the cliff path from Deià village (~25 min steep) to <strong>Cala Deià</strong> — pebble cove with rocks for jumping, crystal water. Beat the heat.</li>
+            <li><strong>11:30 AM</strong> Lunch at <strong><a href="https://ca-spatromarch.com/" target="_blank" rel="noopener">Ca's Patró March</a></strong> if Joann tolerates a fish-heavy menu (tables on the rocks of Cala Deià, accessible by 5-min walk from car park OR 30-min walk from village, featured in BBC's <em>The Night Manager</em>, cash only). <strong>If not</strong>: skip + walk back up to Deià village for a quick salad + bocadillo lunch at Ca'n Quet or a pa amb oli at Cafè Sa Fonda.</li>
+            <li><strong>1:30 PM</strong> Hike back up to Belmond · siesta + pool</li>
+            <li><strong>3:00 PM</strong> Drive 25 min to <strong>Sóller</strong> · park near the train station</li>
+            <li><strong>3:45 PM</strong> Ride the <strong><a href="https://trendesoller.com/eng/timetable/" target="_blank" rel="noopener">1912 wooden Sóller train</a></strong> (narrow-gauge) — Aug schedule departing Palma 10:10/10:50/12:15/13:00/14:00/15:00/19:40; you'll catch the return-from-Palma 15:00 arrival into Sóller, then take a short 1912 wooden tram (different line) down to Port de Sóller for 20 min of harbor air. €23 one-way for the train. <strong>Aug peak sells out — book online ahead.</strong></li>
+            <li><strong>5:00 PM</strong> Drive Sóller → Palma (~30 min via MA-11) · park near Es Princep (you booked an overnight bag drop OR a single-night Sant Francesc booking; check with Belmond concierge to arrange a single-night Palma return)</li>
+            <li><strong>6:00 PM</strong> Walk to <strong>Plaça de l'Església / Sant Francesc</strong> for the <strong>18:30 procession of the cossiers</strong> — the traditional dance "Gentil Señora" — one of Mallorca's most-photographed annual rituals. Verify exact start village + time on arrival; the cossiers move through multiple old-town squares.</li>
+            <li><strong>7:30 PM</strong> Visit <strong>Els Llits de la Mare de Déu</strong> — recumbent-Madonna ephemeral altars installed in churches across Palma + key villages. La Seu cathedral has the central one; smaller churches in La Lonja have more atmospheric ones. Walk Carrer Apuntadors + Calle de Sant Joan.</li>
+            <li><strong>9:30 PM</strong> Late dinner at <strong><a href="https://cellersapremsa.com/" target="_blank" rel="noopener">Celler Sa Premsa</a></strong>, Plaça del Bisbe Berenguer de Palou 8 · <strong>1958 in an old olive-oil press cellar, decor untouched</strong>. The classic Mallorquín order: sopas mallorquinas (vegetable + bread soup), pa amb oli with sobrasada + Mahón cheese, tumbet, llom amb col (pork wrapped in cabbage), lamb shoulder, frit mallorquí. House sangria €5.95/L. Cash + cards. Reservations recommended on Aug 15.</li>
+            <li><strong>11:45 PM</strong> Walk through <strong>Plaça Major</strong> — orchestras playing the three-day fiesta street party, locals + families + later the young crowd takes over · second visit to <strong>Bar Abaco</strong> 5-min walk through La Lonja</li>
+            <li><strong>1:30 AM</strong> Drive back to Belmond (~45 min via MA-10 — empty road overnight)</li>
+            <li><strong>2:30 AM</strong> Bed at Belmond</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the Palma drive entirely. Stay in Deià all day — Cala Deià + Belmond spa + a second El Olivo ★ dinner on the terrace. Watch the fiesta on the local TV news. Honest assessment: this is a defensible Aug 15 plan, and the Palma drive is the ambitious overlay.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> <strong>Festival de Pollença at Sant Domingo cloister 22:00 (Freiburger Barockorchester + Éva Borchi violin + Jeanine De Bique soprano)</strong> — but it directly conflicts with the Palma procession + Plaça Major street party. Pick one. If Pollença wins: drive Deià → Pollença (45 min), concert 22:00–00:00, drive back via the moonlit MA-10. Skip Sa Premsa, eat at Q11 Pollença before the concert.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Aug 15 historically rare for rain in Mallorca (high pressure typical). If it does: skip Cala Deià + Sóller train, do Belmond spa morning + drive Palma 4 PM for the indoor cathedral + Almudaina + Es Baluard route, then procession + Sa Premsa. The fiesta runs rain or shine.</div>
         </div>
       </div>
 
       <div class="day">
-        <div class="day-number"><div class="num">06</div><div class="date">Mon Aug 17</div></div>
+        <div class="day-number"><div class="num">06</div><div class="date">Sun Aug 16</div></div>
         <div class="day-content">
-          <h3>Departure</h3>
+          <h3>Sa Calobra dawn · Mirador de Ses Barques · GR221 Deià → Lluc Alcari · Béns d'Avall ★ · Festival Chopin</h3>
           <ul>
-            <li><strong>9:00 AM</strong> Slow breakfast on the Belmond terrace</li>
+            <li><strong>6:00 AM</strong> Early start — drive Belmond → Sa Calobra (~1 h via MA-10 → MA-2141) <strong>before the tour buses arrive at 9 AM</strong>. The MA-2141 is a single-lane road with 26 hairpins ending at the 270° "tie knot" Coll dels Reis curve.</li>
+            <li><strong>7:00 AM</strong> Park at Sa Calobra · walk through the twin tunnels to the small Torrent de Pareis beach. <strong>⚠️ DO NOT attempt the Torrent de Pareis canyon hike in August</strong> — locals call it "an express ER ticket": extreme heat + no water in the canyon + people rescued every year. The cove + tunnel walk is plenty.</li>
+            <li><strong>8:30 AM</strong> Coffee at the small Sa Calobra café · drive back over the Coll dels Reis pass (the 270° hairpin photo from the south side)</li>
+            <li><strong>10:00 AM</strong> Stop at <strong>Mirador de Ses Barques</strong> overlooking Port de Sóller — best Tramuntana vista, second coffee · continue back to Belmond (~30 min)</li>
+            <li><strong>11:30 AM</strong> Belmond brunch on the terrace · pool</li>
+            <li><strong>2:30 PM</strong> Optional <strong>short GR221 hike Deià → Lluc Alcari</strong> — out-and-back ~2 h, much easier than the full Deià → Sóller leg, shaded most of the way, end at Sa Cala beach for a swim. <strong>The serious GR221 hiking section (Deià → Sóller, 5 h moderate-tough via the Barranc de Biniaraix zigzag) is too brutal in Aug heat — save for spring.</strong></li>
+            <li><strong>5:30 PM</strong> Belmond spa or pool — last full down-shift before the dinner + Chopin evening</li>
+            <li><strong>7:30 PM</strong> Drive 15 min to <strong><a href="https://bensdavall.com/" target="_blank" rel="noopener">Béns d'Avall ★ + 🌿 Green</a></strong> on the Sóller coast (Vicens family, Benet + Jaume, father + son, Mallorcan contemporary cuisine, Michelin Green Star for sustainability). <strong>8:00 PM tasting menu (~€90–€160 depending on courses)</strong>, dramatic clifftop terrace overlooking the Med — best sunset booking on the island. Reserve 2 weeks ahead.</li>
+            <li><strong>10:00 PM</strong> Drive 25 min to <strong>Valldemossa</strong> · park near the Real Cartuja monastery</li>
+            <li><strong>10:45 PM</strong> Doors open for the <strong><a href="https://festivalchopin.com/" target="_blank" rel="noopener">Festival Chopin Valldemossa</a></strong> · cloister of the Real Cartuja (where Chopin + George Sand wintered 1838–39 and where Chopin composed the Op. 28 Preludes) · <strong>21:30 Sunday recital</strong> (verify exact 2026 Aug 16 programme at festivalchopin.com; programme typically lands April–May)</li>
+            <li><strong>11:00 PM → 12:30 AM</strong> Recital (~1.5 h with intermission) — piano-only Chopin in the very cloister where it was composed</li>
+            <li><strong>1:00 AM</strong> Drive 20 min back to Belmond · nightcap at La Residencia bar or last Sa Fonda visit (it's still going)</li>
+            <li><strong>2:00 AM</strong> Bed</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the Sa Calobra dawn drive. Sleep till 9 AM, Belmond breakfast, lazy spa morning, Sóller train scenic round trip in the afternoon, Béns d'Avall + Chopin still. Loses Sa Calobra but the recital is the day's anchor anyway.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Replace Festival Chopin with the <strong>Deià International Music Festival</strong> evening event at <strong>Son Marroig</strong> (clifftop villa belvedere over Sa Foradada) if scheduled Aug 16. Walking distance from Belmond, the venue itself is the experience (16th-c villa, Carrara marble belvedere, sunset directly into the cliffs).</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Sa Calobra hairpins in rain = dangerous, abort. Stay at Belmond — spa morning, El Olivo ★ lunch on covered terrace, Béns d'Avall reschedules to in-house Belmond dinner. Festival Chopin runs rain or shine in the covered cloister.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">07</div><div class="date">Mon Aug 17</div></div>
+        <div class="day-content">
+          <h3>Slow Belmond morning · Departure</h3>
+          <ul>
+            <li><strong>9:00 AM</strong> Last slow breakfast on the Belmond terrace · Tramuntana view, citrus + olive groves below</li>
             <li><strong>10:30 AM</strong> Optional last swim at Cala Deià</li>
-            <li><strong>12:30 PM</strong> Transfer to PMI (~$130, 40 min)</li>
-            <li><strong>3:30 PM</strong> Iberia IB3947 PMI → MAD (1h 15m)</li>
-            <li><strong>6:00 PM</strong> Iberia IB6171 MAD → LAX (12h)</li>
+            <li><strong>11:30 AM</strong> Pack · check out</li>
+            <li><strong>12:30 PM</strong> Pre-arranged transfer Belmond → PMI (~45 min, ~€140 via MA-10 → MA-20)</li>
+            <li><strong>3:30 PM</strong> Iberia IB3947 PMI → MAD (1 h 15 m)</li>
+            <li><strong>6:00 PM</strong> Iberia IB6171 MAD → LAX (12 h)</li>
             <li><strong>9:00 PM same day</strong> Arrive LAX (gain 9 hours on the return)</li>
           </ul>
         </div>
@@ -528,21 +636,37 @@
 
     <div class="section-header" id="hotels">
       <span class="eyebrow">Where to Stay</span>
-      <h2>Three Hotels, One Decision</h2>
-      <p>All in or near Deià (the operator's base of choice — Tramuntana hideaway, walking village, ~35 min from Palma, ~25 min from Sóller). Belmond La Residencia is the marquee; Hotel Es Molí is the value-luxury alternative in the same village; Castell Son Claret is the inland-finca alternative if you'd rather sleep near Voro/DINS instead of the coast.</p>
+      <h2>Two Bases · 3 Palma + 2 Deià</h2>
+      <p>Palma first (3 nights Tue–Fri for cathedral + nightlife + Michelin density + Mare de Déu lead-up), then Deià (2 nights Fri–Sun for cliff-village + Belmond spa + El Olivo ★ + Chopin recital). The 45-min Palma → Deià drive on Fri afternoon is the move. <strong>Hotel pair: Es Princep + Belmond La Residencia.</strong> Below are those two plus four credible alternates for each base.</p>
     </div>
     <div class="hotels-grid">
 
       <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(30,96,145,0.25), rgba(201,123,62,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Dei%C3%A0_2017.jpg/800px-Dei%C3%A0_2017.jpg');">
-          <span class="hotel-tier">★ Top Pick · 5 nights</span>
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(30,96,145,0.25), rgba(201,123,62,0.40)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80');">
+          <span class="hotel-tier">★ Palma · 3 nights</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hotel Es Princep</h4>
+          <div class="loc">Palma · Parc de la Mar · LHW · cathedral + sea view</div>
+          <p>5-star Leading Hotels of the World on Parc de la Mar — directly under La Seu cathedral, infinity rooftop pool with Almaq Bar, sea + cathedral views. <strong>DINS Santi Taura ★ on-site (no children under 16) + Zaranda ★ on-site</strong> in the former tannery. The 12-min walk to Marc Fosh ★ + 5-min walk to Bar Abaco + 8-min walk to La Seu makes it the unrivaled Palma luxury base for this trip. Sun-up to sun-up the central node.</p>
+          <div class="hotel-meta">
+            <span class="price">$550–$1,000 / night</span>
+            <span>★★★★★ LHW</span>
+          </div>
+          <a href="https://www.esprincep.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(201,123,62,0.25), rgba(30,96,145,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Dei%C3%A0_2017.jpg/800px-Dei%C3%A0_2017.jpg');">
+          <span class="hotel-tier">★ Deià · 2 nights</span>
         </div>
         <div class="hotel-body">
           <h4>Belmond La Residencia</h4>
-          <div class="loc">Deià · 16th–17th-c twin manors · 30 acres olive + citrus</div>
-          <p>Two restored manor houses spread across olive groves on the edge of Deià. Three restaurants (including <strong>El Olivo</strong> in a 17th-century oil mill with 33 original Joan Miró paintings on the walls). Two pools, award-winning spa, tennis, mountain biking, yoga. Previously owned by Richard Branson; now Belmond's Mallorca flagship. <strong>Request a Junior Suite with sea view.</strong> Amex FHR offer: 15% off July–Aug 2026 if booked by May 15.</p>
+          <div class="loc">Deià · 17th-c Tramuntana manor · 67 rooms · 2 pools</div>
+          <p>The Tramuntana marquee — 17th-century manor on the hillside above Deià village. 67 rooms + suites, 2 pools, award-winning spa, El Olivo ★ on-site in a 17th-century olive oil mill with the original press intact. <strong>Amex FHR: 15% off + $100 F&amp;B credit for Jul–Aug 2026 travel, book by May 15.</strong> $1,800–$3,300 typical peak August; entry rates from $822. Belmond's Mallorca flagship. <strong>Request a Junior Suite with sea view.</strong></p>
           <div class="hotel-meta">
-            <span class="price">$2,000–$3,500 / night</span>
+            <span class="price">$1,800–$3,300 / night</span>
             <span>★★★★★</span>
           </div>
           <a href="https://www.belmond.com/hotels/europe/mallorca/deia/belmond-la-residencia/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
@@ -550,13 +674,29 @@
       </div>
 
       <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(184,137,91,0.25), rgba(30,96,145,0.40)), url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');">
+          <span class="hotel-tier">Palma alt · heritage</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Sant Francesc Hotel Singular</h4>
+          <div class="loc">Palma · Plaça Sant Francesc · 19th-c manor · 42 rooms</div>
+          <p>42-room 19th-century neoclassical manor on Plaça Sant Francesc in the old town. Smaller rooftop pool than Es Princep but more intimate; on-site Restaurant Quadrat. <strong>Pick Sant Francesc if you want heritage stone over the infinity-pool / Michelin-on-site Es Princep package</strong>. The trade: you walk 5 extra min to La Seu, you don't have DINS or Zaranda downstairs, but you wake up inside the old town's heart.</p>
+          <div class="hotel-meta">
+            <span class="price">$450–$800 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://hotelsantfrancesc.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
         <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(107,122,63,0.30), rgba(184,137,91,0.40)), url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80');">
-          <span class="hotel-tier">Value alternative</span>
+          <span class="hotel-tier">Deià alt · value</span>
         </div>
         <div class="hotel-body">
           <h4>Hotel Es Molí</h4>
           <div class="loc">Deià · 17th-c hilltop mansion · 4-star · same village</div>
-          <p>Hilltop 17th-century mansion with panoramic views of Deià village, the Tramuntana, and the Mediterranean. 32-yard fresh-water pool, gardens, free four-times-daily shuttle to a rocky cove (Sa Muleta) for sea swimming. <strong>The right pick if Belmond's price band doesn't work</strong> — same village, same views, friendly staff, "timeless elegance." Less polished than Belmond (some dated furniture) but full of character.</p>
+          <p>17th-century hilltop mansion with panoramic Deià + Tramuntana + Med views. 32-yard fresh-water pool, gardens, free 4×/day shuttle to a rocky cove (Sa Muleta) for sea swimming. <strong>Pick Es Molí if Belmond's $1,800+/night Aug rate doesn't work</strong> — same village, same cliff-village atmosphere, friendly staff. Less polished than Belmond, more character + a third of the price. The hotel is the alternative that makes the whole trip viable on a tighter budget.</p>
           <div class="hotel-meta">
             <span class="price">$280–$700 / night</span>
             <span>★★★★</span>
@@ -566,18 +706,34 @@
       </div>
 
       <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(184,137,91,0.25), rgba(30,96,145,0.40)), url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');">
-          <span class="hotel-tier">Inland finca</span>
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(30,96,145,0.30), rgba(201,123,62,0.40)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80');">
+          <span class="hotel-tier">Splurge · fortress</span>
         </div>
         <div class="hotel-body">
-          <h4>Castell Son Claret</h4>
-          <div class="loc">Es Capdellà · Tramuntana foothills · 38 rooms · Relais &amp; Châteaux</div>
-          <p>Restored 13th-century castle on a 326-acre estate. R&amp;C 5-star, two pools, spa, on-site Michelin context (the property hosts the ★ <strong>Sa Clastra</strong> and is in <strong>Zaranda ★'s</strong> neighborhood). <strong>The pick if you'd rather sleep inland near Palma + the south-coast Michelin scene than coastal/cliff Deià.</strong> Trade-off: not as charming a village walk; more "country estate" feel. ~40 min to Palma, ~50 min to Deià.</p>
+          <h4>Cap Rocat</h4>
+          <div class="loc">Llucmajor · Cala Blava · 19th-c fortress · adults-only</div>
+          <p>Adults-only 24-room 19th-c stone fortress carved into the cliff, 88 acres, salt-water pool, private jetty into the bay. Open Mar 12–Nov 10. $706–$4,632/night, avg $1,531. <strong>Pick Cap Rocat for a one-night fortress splurge</strong> between Palma + Deià if you want the bonkers "I slept inside a carved cliff" memory. Only 24 rooms = books 4+ months out for Aug. 25 min from Palma.</p>
           <div class="hotel-meta">
-            <span class="price">$900–$1,800 / night</span>
-            <span>★★★★★</span>
+            <span class="price">$706–$4,632 / night</span>
+            <span>★★★★★ adults-only</span>
           </div>
-          <a href="https://www.castellsonclaret.com/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+          <a href="https://www.caprocat.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(184,137,91,0.25), rgba(30,96,145,0.40)), url('https://images.unsplash.com/photo-1455587734955-081b22074882?w=800&q=80');">
+          <span class="hotel-tier">Voro-base · NE coast</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Park Hyatt Mallorca (Cap Vermell Grand)</h4>
+          <div class="loc">Canyamel · NE coast · <strong>Voro ★★ on-site</strong></div>
+          <p>The Voro ★★ base — Mallorca's only 2-star is downstairs. €474 entry / €655 standard / ~€800–€1,200 peak. 1 h+ from Palma + 1 h 30 m+ from Deià. <strong>Pick Park Hyatt only if Voro ★★ is the trip's centerpiece</strong> and you'll spend 2+ nights here — too far for a casual dinner detour from either Palma or Deià. The 3+2 itinerary above does NOT include Voro for this reason; the geography is wrong. Add a separate Park Hyatt night if you want the ★★.</p>
+          <div class="hotel-meta">
+            <span class="price">€474–€1,200 / night</span>
+            <span>★★★★★ Hyatt</span>
+          </div>
+          <a href="https://www.hyatt.com/park-hyatt/en-US/pmiph-park-hyatt-mallorca" target="_blank" rel="noopener" class="book-link">Park Hyatt direct →</a>
         </div>
       </div>
 
@@ -585,32 +741,32 @@
 
     <div class="section-header" id="wine">
       <span class="eyebrow">The Glass</span>
-      <h2>Two DOs, 30 Minutes Apart</h2>
-      <p>Mallorca has two official Denominations of Origin: <strong>DO Binissalem</strong> (between Inca and Palma) and <strong>DO Pla i Llevant</strong> (central + eastern, around Manacor and Felanitx). Small but real — most don't export at scale, so the bottles you taste here are bottles you can only really drink here. The signature reds are made from <strong>Manto Negro</strong>; the whites from <strong>Prensal Blanc</strong> and <strong>Moll</strong>.</p>
+      <h2>Two DOs · Manto Negro + Callet</h2>
+      <p>Mallorca has two official Denominations of Origin: <strong>DO Binissalem</strong> (between Inca and Palma, the heritage zone) and <strong>DO Pla i Llevant</strong> (central + eastern, around Manacor and Felanitx, the experimentalists). Small but real — most don't export at scale, so the bottles you taste here are bottles you can only really drink here. The signature reds are made from <strong>Manto Negro</strong> (Binissalem) and <strong>Callet</strong> (Pla i Llevant cult variety, championed by Ànima Negra); the whites from <strong>Prensal Blanc</strong> and <strong>Moll</strong>. Plus one rogue: <strong>Vinyes Mortitx</strong> in the Tramuntana at 400 m — high-altitude mountain terraces that pair with the Perseids night drive.</p>
     </div>
 
     <div class="wine-block binissalem">
       <div class="wine-image"></div>
       <div class="wine-text">
         <span class="eyebrow">DO Binissalem · the heritage zone</span>
-        <h3>Mallorca's First DO (1991)</h3>
-        <p>The older + larger of the two DOs, between Inca and Palma. <strong>Manto Negro</strong> dominates the reds (medium-bodied, savory, lower acidity); <strong>Prensal Blanc</strong> the whites (citrus, herbal, food-friendly). Closer to Deià (~30 min via Ma-13) — easier wine-day target than Pla i Llevant.</p>
+        <h3>Mallorca's First DO (1991) · Manto Negro</h3>
+        <p>Older + larger of the two DOs, between Inca and Palma. <strong>Manto Negro</strong> dominates the reds (medium-bodied, savory, lower acidity); <strong>Prensal Blanc</strong> the whites (citrus, herbal, food-friendly). Closer to Palma (~25 min via MA-13) — easier wine-day target. The Day 3 wine route uses Ribas (1711, oldest) + Macià Batle (Santa Maria, polished tasting room).</p>
         <div class="winery-list">
           <div class="winery">
             <div class="name"><a href="http://www.bodegaribas.com/" target="_blank" rel="noopener">Bodega Ribas ↗</a></div>
-            <div class="desc">Consell · est. 1711 · oldest winery in Mallorca, still family-run · organic + native varieties only · books by email/phone</div>
+            <div class="desc">Consell · <strong>est. 1711, oldest bodega in Mallorca</strong>, still family-run · organic + native varieties only · Mon–Sat 10:00–18:00 · 2-hour tour + tasting + appetizers ~€60/pp · EN/ES/DE/NL/FR · +34 971 62 26 73 · 1–2 weeks advance booking</div>
           </div>
           <div class="winery">
             <div class="name"><a href="https://www.maciabatle.com/en/" target="_blank" rel="noopener">Macià Batle ↗</a></div>
-            <div class="desc">Santa Maria · larger producer · polished tasting room · weekend visits accepted · GetYourGuide/Viator bookable</div>
+            <div class="desc">Santa Maria del Camí · larger producer · polished tasting room · <strong>Mon–Sat tours 11:30 / 12:30 / 14:00 / 15:30 / 16:30</strong> · €25/pp 5-wine + Mallorcan delicacies · weekend visits accepted · GetYourGuide / Viator bookable</div>
           </div>
           <div class="winery">
             <div class="name"><a href="https://www.vinosferrer.com/en/" target="_blank" rel="noopener">José L. Ferrer ↗</a></div>
-            <div class="desc">Binissalem town · est. 1931 · long-running, popular tours, easy weekday visits</div>
+            <div class="desc">Binissalem town · est. 1931 · long-running, popular tours, easy weekday visits · the third-stop walk-in option after Ribas + Macià Batle</div>
           </div>
           <div class="winery">
-            <div class="name"><a href="https://www.bodegasantonionadal.com/" target="_blank" rel="noopener">Bodegas Antonio Nadal ↗</a></div>
-            <div class="desc">Binissalem · est. 1968 · early DO Binissalem producer · book by email</div>
+            <div class="name"><a href="https://www.vinyesmortitx.com/" target="_blank" rel="noopener">Vinyes Mortitx ↗</a></div>
+            <div class="desc">Escorca · Pollença–Lluc road km 10.9 · <strong>Tramuntana high-altitude 400 m terraces</strong> · Mon–Sat 10:00–15:00 · 5-wine + bread + Mahón cheese + olive oil · killer mountain views · <strong>doubles as Perseids vantage</strong> — dark-sky area</div>
           </div>
         </div>
       </div>
@@ -620,24 +776,24 @@
       <div class="wine-image" style="order: 2;"></div>
       <div class="wine-text" style="order: 1;">
         <span class="eyebrow">DO Pla i Llevant · the experimentalists</span>
-        <h3>Newer DO, Looser Rules (1999)</h3>
-        <p>Vineyards around Manacor + Felanitx in the central and eastern interior — flatter, warmer, more experimental. <strong>4 Kilos Vinícola</strong> is the cult name here (natural wines, minimal-intervention). ~1 h drive from Deià, so realistically a half-day target on a wine day that combines with Binissalem only if you're committed.</p>
+        <h3>Newer DO (1999) · Callet cult</h3>
+        <p>Vineyards around Manacor + Felanitx in the central + eastern interior — flatter, warmer, more experimental. <strong>Ànima Negra</strong> is the cult name (Callet variety, 13th-century estate); <strong>4 Kilos Vinícola</strong> is the natural-wine project (Francesc Grimalt + Sergio Caballero, indigenous Callet/Manto Negro/Fogoneu + Syrah/Cab/Merlot). ~1 h drive from Palma — realistically a doubling-down half-day or a dedicated bodega tour day if you skip Day 3's Castell d'Alaró hike.</p>
         <div class="winery-list">
           <div class="winery">
-            <div class="name"><a href="https://www.4kilos.com/en/" target="_blank" rel="noopener">4 Kilos Vinícola ↗</a></div>
-            <div class="desc">Felanitx · founded 2006 · natural wines, experimental winemaking, minimal intervention · book ahead by email</div>
+            <div class="name"><a href="https://annegra.com/" target="_blank" rel="noopener">Ànima Negra ↗</a></div>
+            <div class="desc">Felanitx · <strong>13th-c estate · cult Callet wine</strong> (€44 AN, €20 AN/2 blend) · pre-book at annegra.com · the Pla i Llevant icon · the "second wine day" doubling-down add-on</div>
+          </div>
+          <div class="winery">
+            <div class="name">4 Kilos Vinícola ↗</div>
+            <div class="desc">Felanitx · Francesc Grimalt + Sergio Caballero project · <strong>natural / organic minimal-intervention</strong> · indigenous Callet + Manto Negro + Fogoneu + Syrah/Cab/Merlot · +34 971 580 523 · by appointment</div>
           </div>
           <div class="winery">
             <div class="name"><a href="https://www.pereseda.com/en/" target="_blank" rel="noopener">Pere Seda ↗</a></div>
-            <div class="desc">Manacor · largest Pla i Llevant winery · 19th-century roots · awards and tours, easier booking</div>
+            <div class="desc">Manacor · largest Pla i Llevant winery · 19th-century roots · awards and tours, easier booking · the walk-in alternative</div>
           </div>
           <div class="winery">
             <div class="name"><a href="https://www.bodegacanmajoral.com/" target="_blank" rel="noopener">Can Majoral ↗</a></div>
             <div class="desc">Algaida · organic + biodynamic since 1979 · cult following · email/phone reservation</div>
-          </div>
-          <div class="winery">
-            <div class="name"><a href="https://www.son-vives.com/en/" target="_blank" rel="noopener">Son Vives (Banyalbufar) ↗</a></div>
-            <div class="desc">NOT in Pla i Llevant — this is on the Tramuntana coast, ~30 min south of Deià. Dramatic terraced cliff vineyards (Malvasia de Banyalbufar) · pairs well with the Tramuntana driving day · visits by appointment</div>
           </div>
         </div>
       </div>
@@ -645,109 +801,390 @@
 
     <div class="section-header" id="food">
       <span class="eyebrow">The Table</span>
-      <h2>One ★★, Nine ★, Plus the Local Heroes</h2>
-      <p>Per the 2026 Michelin Spain guide — Mallorca has 12 stars across 11 establishments. Voro is the only ★★. From Deià, the natural-fit ★ tables in dinner range are <strong>Béns d'Avall</strong> (Sóller, 25 min), <strong>Marc Fosh</strong> (Palma, 30 min), <strong>DINS Santi Taura</strong> (Lloseta, 45 min), and <strong>Es Fum</strong> (St. Regis Mardavall, Calvià, 45 min). Voro and the Capdepera/Canyamel scene (Andreu Genestra, Voro itself) require half-day commitments.</p>
+      <h2>One ★★, Nine ★, Plus the Meat-Forward Mallorquín</h2>
+      <p>Per the 2026 Michelin Spain guide — Mallorca has 12 stars across 11 establishments. <strong>Voro ★★ at Park Hyatt Canyamel is the island's only 2-star</strong>. From Palma, the natural-fit ★ tables walking-distance or short-cab are <strong>DINS Santi Taura</strong> (in Es Princep), <strong>Zaranda</strong> (in Es Princep), <strong>Marc Fosh</strong> (12-min walk). From Deià: <strong>El Olivo</strong> (in Belmond), <strong>Béns d'Avall</strong> (25 min, Sóller coast). Voro + the NE-coast scene (Andreu Genestra, Maca de Castro) require half-day commitments. Plus the local meat-forward heroes — Es Verger lamb, Celler Sa Premsa, Sa Fonda — which are arguably the trip's most-talked-about meals.</p>
     </div>
 
     <div class="food-list">
       <div class="food-row">
         <div class="place">Voro <span class="stars">★★</span><span class="meta">Canyamel · Park Hyatt Mallorca · Álvaro Salazar</span></div>
-        <div class="desc">The island's only 2-star. Two tasting menus only: <strong>Voro</strong> 15–18 courses (€165), <strong>Devoro</strong> 20–22 courses (€195). Ambitious modern Mediterranean rooted in Andalusian and Mallorcan tradition. <strong>Book 60+ days out</strong> — <a href="mailto:voro.parkhyattmallorca@hyatt.com">email</a> or +34 871 811 234.</div>
-        <div class="drive">1h 45m from Deià</div>
+        <div class="desc"><strong>Mallorca's only 2-star.</strong> Two tasting menus: <strong>Voro</strong> 10 courses + <strong>Devoro</strong> 14 courses. Ambitious modern Mediterranean rooted in Andalusian + Mallorcan tradition. <strong>1 h 45 m each way from Palma / 1 h 30 m from Deià</strong> — not on this itinerary because of geography but addable with a separate Park Hyatt night. Book 4+ weeks out (longer for Sat). <a href="https://vororestaurant.com/" target="_blank" rel="noopener">vororestaurant.com</a></div>
+        <div class="drive">1h 45m</div>
       </div>
       <div class="food-row">
-        <div class="place">Béns d'Avall <span class="stars">★ + 🌿 Green</span><span class="meta">Sóller · clifftop · Vicens family</span></div>
-        <div class="desc">Father-and-son Benet and Jaume Vicens. Mallorcan contemporary cuisine with a Green Star for sustainability. Dramatic clifftop terrace overlooking the Mediterranean — best 8 PM sunset booking. ~€140 tasting menu. <a href="https://www.bensdavall.com/" target="_blank" rel="noopener">bensdavall.com</a></div>
-        <div class="drive">25 min</div>
-      </div>
-      <div class="food-row">
-        <div class="place">Marc Fosh <span class="stars">★</span><span class="meta">Palma · Convent de la Missió hotel · Marc Fosh</span></div>
-        <div class="desc">Refined modern Mediterranean inside the Convent de la Missió design hotel. <strong>First British chef to win a Michelin star in Spain (2017)</strong> and has maintained continuously. Tasting menu ~€130. <a href="https://www.marcfosh.com/" target="_blank" rel="noopener">marcfosh.com</a></div>
-        <div class="drive">30 min</div>
-      </div>
-      <div class="food-row">
-        <div class="place">DINS by Santi Taura <span class="stars">★</span><span class="meta">Lloseta · Es Princep / Es Cul de Sa Plaça · Santi Taura</span></div>
-        <div class="desc">Chef Santi Taura's flagship — a single Mallorcan-rooted tasting menu that changes by season. Intimate, candle-lit dining room. ~€95. The most affordable ★ in dinner range from Deià. <a href="https://www.dinsbysantitaura.com/" target="_blank" rel="noopener">dinsbysantitaura.com</a></div>
-        <div class="drive">45 min</div>
-      </div>
-      <div class="food-row">
-        <div class="place">Es Fum <span class="stars">★</span><span class="meta">Calvià · St. Regis Mardavall</span></div>
-        <div class="desc">Refined hotel dining on the south-west coast — pristine Mediterranean ingredients, contemporary technique. The St. Regis setting is glossy resort, not village-rustic. Tasting menu ~€175. <a href="https://www.marriott.com/en-us/hotels/pmiwj-the-st-regis-mardavall-mallorca-resort/dining/" target="_blank" rel="noopener">St. Regis Mardavall</a></div>
-        <div class="drive">45 min</div>
-      </div>
-      <div class="food-row">
-        <div class="place">Andreu Genestra <span class="stars">★ + 🌿 Green</span><span class="meta">Capdepera · Pleta hotel</span></div>
-        <div class="desc">Land-to-table cooking on the NE side of the island — own garden, foraging, classic Mallorcan techniques modernized. Pairs naturally with a Voro day (both NE coast). Tasting menus ~€120–€150. <a href="https://www.andreugenestra.com/" target="_blank" rel="noopener">andreugenestra.com</a></div>
-        <div class="drive">1h 30m</div>
-      </div>
-      <div class="food-row">
-        <div class="place">El Olivo <span class="stars">Belmond restaurant · highly regarded but not ★</span><span class="meta">Deià · Belmond La Residencia · 17th-c oil mill · Pablo Aranda</span></div>
-        <div class="desc">Belmond La Residencia's flagship restaurant. Modern Mediterranean with Arabic influences inspired by Federico García Lorca's poetic world. Three menus including a vegetarian. <strong>Dining room moves to the terrace in summer</strong> — romantic Tramuntana views. Right downstairs from your room. <a href="https://www.belmond.com/hotels/europe/mallorca/deia/belmond-la-residencia/restaurants-bars/el-olivo/" target="_blank" rel="noopener">Belmond El Olivo</a></div>
+        <div class="place">DINS by Santi Taura <span class="stars">★</span><span class="meta">Palma · in Es Princep · "Origens" 11-course tasting · bar-counter</span></div>
+        <div class="desc"><strong>The arrival-night centerpiece — in your hotel.</strong> Single tasting menu "Origens" 11 courses (+3 optional), reimagines traditional Mallorcan with deep technique. Bar-counter format, watch the cooking. No children under 16. ~€110 + wine pairing. <strong>The most affordable ★ in dinner range from Palma</strong> + the strongest argument for Es Princep as the base. Reserve 3–4 weeks ahead. <a href="https://grupsantitaura.com/en/dins-santitaura/" target="_blank" rel="noopener">grupsantitaura.com/en/dins-santitaura</a></div>
         <div class="drive">on-site</div>
       </div>
       <div class="food-row">
-        <div class="place">Ca's Patró March <span class="stars">cult casual</span><span class="meta">Cala Deià · cliffside fish shack</span></div>
-        <div class="desc">The Deià exception. Whitewashed cliff-side restaurant down a 25-min walking path from the village. Fresh-grilled fish, paella, swim before lunch. <strong>Famous, packed, walk-in only (no reservations)</strong> — get there by noon. Cash preferred.</div>
-        <div class="drive">25 min walk</div>
+        <div class="place">Marc Fosh <span class="stars">★</span><span class="meta">Palma · Convent de la Missió · 17th-c convent · British chef</span></div>
+        <div class="desc">Refined modern Mediterranean inside the Convent de la Missió design hotel. <strong>First British chef to win a Michelin star in Spain (2017)</strong>, maintained continuously. <strong>5-course weekday lunch €65 / 7-course dinner €130 / 8-course with wine €180</strong>. 12-min walk from Es Princep through La Lonja — easy to combine with Abaco nightcap. <a href="https://www.marcfosh.com/" target="_blank" rel="noopener">marcfosh.com</a></div>
+        <div class="drive">12 min walk</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Zaranda <span class="stars">★</span><span class="meta">Palma · in Es Princep · former tannery · Fernando Pérez Arellano</span></div>
+        <div class="desc">Architecturally striking former tannery within Es Princep's complex — <strong>your hotel's second ★ restaurant</strong>. Menus: "A flor de piel" 12 courses + "Plena flor" 18 courses. Modern Mediterranean with Andalusian roots. The "I want a second on-site ★" alt to DINS on a slow night. <a href="https://www.zaranda.es/" target="_blank" rel="noopener">zaranda.es</a></div>
+        <div class="drive">on-site</div>
+      </div>
+      <div class="food-row">
+        <div class="place">El Olivo <span class="stars">★</span><span class="meta">Deià · Belmond La Residencia · 17th-c olive mill · Pablo Aranda</span></div>
+        <div class="desc"><strong>Inside a 17th-century olive oil mill with the original press still in the room.</strong> Chef Pablo Aranda's 8-course Lorca-inspired tasting (vegetarian option), terrace seating in summer overlooking the Tramuntana. <strong>Non-residents bookable only 30 days ahead</strong>; Belmond residents have priority. Dinner only 19:30–21:30 in summer. +34 971 63 90 11. The arrival-night Deià centerpiece. <a href="https://menus.belmond.com/la-residencia/el-olivo" target="_blank" rel="noopener">El Olivo menu</a></div>
+        <div class="drive">on-site Deià</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Béns d'Avall <span class="stars">★ + 🌿 Green</span><span class="meta">Sóller coast · Vicens family · clifftop terrace</span></div>
+        <div class="desc">Father + son Benet + Jaume Vicens. Mallorcan contemporary cuisine with a Green Star for sustainability. Dramatic clifftop terrace overlooking the Mediterranean — <strong>best 20:00 sunset booking</strong> on the island. Tasting ~€90–€160 depending on courses. 15 min from Deià (via Sóller). Reserve 2 weeks ahead. <a href="https://bensdavall.com/" target="_blank" rel="noopener">bensdavall.com</a></div>
+        <div class="drive">15 min Deià</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Es Fum <span class="stars">★</span><span class="meta">Costa d'en Blanes · St. Regis Mardavall · Miguel Navarro</span></div>
+        <div class="desc">Refined hotel dining on the south-west coast — St. Regis setting is glossy resort, not village-rustic. Menus: <strong>Recorrido</strong> (11 acts: childhood→love→doubt→fulfillment), Origen, Vegetal. Signatures: lavender kefir + salt-baked pigeon shaped like a skull. The "I'd rather stay glossy-resort-luxe than rustic-Deià-cliff" alt to El Olivo. <a href="https://www.restaurant-esfum.com/" target="_blank" rel="noopener">restaurant-esfum.com</a></div>
+        <div class="drive">15 min Palma</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Maca de Castro <span class="stars">★</span><span class="meta">Port d'Alcúdia · single surprise menu fortnightly</span></div>
+        <div class="desc">Single surprise menu changes fortnightly: 3 apps + 3 starters + 1 fish + 1 meat + pre-dessert + cheeses + dessert. Macarena (Maca) de Castro's seafood-forward modern Mallorcan. <strong>Pairs naturally with the Cap de Formentor sailing day</strong> — 25 min from Port de Pollença. The Fri Aug 14 alt-dinner if you skip El Olivo for the first Deià night. <a href="https://www.macadecastro.com/" target="_blank" rel="noopener">macadecastro.com</a></div>
+        <div class="drive">25 min Pollença</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Andreu Genestra <span class="stars">★ + 🌿 Green</span><span class="meta">Llucmajor · Zoëtry Mallorca Sa Torre · organic produce</span></div>
+        <div class="desc">Land-to-table cooking — own garden, foraging, classic Mallorcan techniques modernized. Pairs with a Voro-day (both NE coast). Tasting menus ~€120–€150. <a href="https://www.andreugenestra.com/" target="_blank" rel="noopener">andreugenestra.com</a></div>
+        <div class="drive">25 min</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Sa Clastra <span class="stars">★</span><span class="meta">Es Capdellà · Castell Son Claret · Jordi Cantó</span></div>
+        <div class="desc">Inside the Castell Son Claret estate (Relais &amp; Châteaux, 13th-c castle on 326 acres). Single ★ tasting menu, modern Mediterranean using estate produce. The "I'd rather sleep inland near Palma than coastal Deià" base alt. 40 min from Palma. <a href="https://www.castellsonclaret.com/" target="_blank" rel="noopener">castellsonclaret.com</a></div>
+        <div class="drive">40 min</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Fusión 19 <span class="stars">★</span><span class="meta">Playa de Muro · Aleix Serra + Marc Marsol</span></div>
+        <div class="desc">Recent ★ on the north shore — modern Mediterranean fusion with Asian-leaning technique, two young chefs. Pairs with a Playa de Muro kitesurf / SUP afternoon or the Pollença sailing day.</div>
+        <div class="drive">50 min</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Es Verger <span class="stars">institution</span><span class="meta">Alaró · Camí de sa Sort/Camino del Castell s/n · NO RESERVATIONS · CASH ONLY · CLOSED MONDAYS</span></div>
+        <div class="desc"><strong>Rick Stein said it's the best roast lamb shoulder he'd ever eaten.</strong> Paletilla de cordero slow-cooked in beer + roast potatoes. Narrow hairpin access road, terrace overlooking the Alaró valley. Pair with the Castell d'Alaró sunset hike from the same parking lot — the trip's most-discussed single meal. +34 971 18 21 26.</div>
+        <div class="drive">45 min Palma</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Celler Sa Premsa <span class="stars">since 1958</span><span class="meta">Palma center · old olive-oil press cellar · classic Mallorquín</span></div>
+        <div class="desc"><strong>Decor untouched since 1958.</strong> Classic Mallorquín order: sopas mallorquinas, pa amb oli with sobrasada + Mahón cheese, tumbet, llom amb col (pork wrapped in cabbage), lamb shoulder, frit mallorquí. House sangria €5.95/L. The Mare de Déu d'Agost late-dinner choice when you re-enter Palma for the procession. <a href="https://cellersapremsa.com/" target="_blank" rel="noopener">cellersapremsa.com</a></div>
+        <div class="drive">Palma center</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Restaurante Sebastian <span class="stars">since 1994</span><span class="meta">Deià · 250-y-o stable · Sebastian Pasch + Patricia · modern Mediterranean</span></div>
+        <div class="desc">Modern Mediterranean inside a 250-year-old converted stable — exposed stone walls, intimate candlelit room. The Deià-village fine-dining alt to El Olivo if you want one night off the Belmond property. Reservation recommended.</div>
+        <div class="drive">Deià village</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Ca's Patró March <span class="stars">cult casual</span><span class="meta">Cala Deià · cliffside · cash only · BBC Night Manager</span></div>
+        <div class="desc">Tables literally on the rocks of Cala Deià, accessible by 5-min walk from car park or 30-min walk from village. Fresh-grilled fish, paella, swim before lunch. Featured in BBC's <em>The Night Manager</em>. <strong>CASH ONLY · NO RESERVATIONS.</strong> Fish-heavy — Joann not the target audience, but the location justifies a half-meal stop on Day 5.</div>
+        <div class="drive">25 min walk Deià</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Adrián Quetglas <span class="stars">Michelin-recommended</span><span class="meta">Palma · Riera canal · vertical garden · jazz Wed–Sat</span></div>
+        <div class="desc">Lost the ★ in 2026 but still Michelin-recommended Mediterranean bistro with the vertical garden + jazz over the Riera canal. The late-night Day 3 dessert-and-cocktail-only stop on the way back from Castell d'Alaró + Es Verger. Mains €18–€38; the bar is its own scene. <a href="https://adrianquetglas.es/" target="_blank" rel="noopener">adrianquetglas.es</a></div>
+        <div class="drive">Palma center</div>
+      </div>
+      <div class="food-row">
+        <div class="place">La Rosa Vermutería &amp; Colmado <span class="stars">tapas + pa amb oli</span><span class="meta">Palma · Santa Catalina-adjacent · vermut + Mallorcan small plates</span></div>
+        <div class="desc">Vermut + pa amb oli + sobrasada + Mallorcan cheeses, sit-down bar format. The casual mid-trip lunch or pre-dinner stop. Strong Mallorcan wine list. Also: Quina Creu (similar format, more central) + Forn de Sant Joan (in La Lonja, more formal) for the same Mallorquín-tapas spectrum.</div>
+        <div class="drive">Palma center</div>
       </div>
     </div>
 
     <div class="section-header" id="activities">
       <span class="eyebrow">Beyond the Table</span>
-      <h2>Things You Won't Do Anywhere Else</h2>
-      <p>The Tramuntana is UNESCO-listed for its 1,000-year-old dry-stone landscape. Sa Calobra and Cap de Formentor are the iconic drives. The Sóller train is a Spain rarity. Pick three or four.</p>
+      <h2>The Overpacked Activity Catalog</h2>
+      <p>The trip's selling point — you literally cannot do everything below. Pick aggressively. <strong>Top picks for this couple:</strong> Cap de Formentor full-day sail, Castell d'Alaró sunset hike (paired with Es Verger lamb), Sa Calobra dawn drive, Sóller wooden train round trip, Cala Deià swim + Ca's Patró March, Tramuntana dark-sky Perseids drive, Festival Chopin Valldemossa, Purobeach Palma. The catalog:</p>
     </div>
 
     <div class="activities">
 
       <div class="activity">
-        <span class="icon">🥾</span>
-        <h4><a href="https://www.gr221.info/gr221%20english.htm" target="_blank" rel="noopener">GR-221 Dry Stone Route</a></h4>
-        <p>The 140 km UNESCO trail. Best day section from Deià: <strong>Cami des Pintors to Sóller</strong> (7 km, easy, Arab path). Ambitious: <strong>Valldemossa→Sóller</strong> (24 km, 1,200 m gain, "most rewarding").</p>
+        <span class="icon">⛵</span>
+        <h4><a href="https://mallorcatopcharters.com/" target="_blank" rel="noopener">Cap Formentor Sail</a></h4>
+        <p>Full-day Mallorcan <strong>llaut with skipper</strong> from Port de Pollença · cliffs of Cap de Formentor (which you can't drive due to closure) + Cala Formentor + Cala Murta swim stops + lunch. €800–€2,000/day private; €80/pp shared. The Day 4 anchor.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏰</span>
+        <h4><a href="https://www.alltrails.com/trail/spain/mallorca/castell-d-alaro" target="_blank" rel="noopener">Castell d'Alaró Hike</a></h4>
+        <p>From Es Verger parking · 1 h each way, ~310 m gain, 822 m summit. 360° Tramuntana + cathedral + Bay of Alcúdia view. <strong>Pair with Es Verger lamb dinner</strong> — same parking lot.</p>
       </div>
 
       <div class="activity">
         <span class="icon">🚗</span>
-        <h4>Sa Calobra Hairpin Drive</h4>
-        <p>10 km of relentless hairpins ending at the Torrent de Pareis gorge beach. <strong>Go at 7 AM</strong> to avoid the tour-bus convoys. The "Nus de Sa Corbata" knot photo stop is on the way down. Swim in vertical-walled rock canyon.</p>
-      </div>
-
-      <div class="activity">
-        <span class="icon">🚌</span>
-        <h4>Cap de Formentor Lighthouse</h4>
-        <p>Mallorca's NE tip. <strong>Road closed to cars 10 AM–10 PM in summer</strong> — take the public bus from Playa de Formentor parking. Drive yourself for the Perseids (after 10 PM) or before 10 AM for an early-morning visit.</p>
+        <h4>Sa Calobra Hairpins</h4>
+        <p>26 hairpins + 270° "tie knot" Coll dels Reis curve. <strong>Drive before 9 AM or after 17:00</strong> to beat tour buses. <strong>⚠️ Do NOT attempt Torrent de Pareis canyon hike in August</strong> — heat-lethal, locals call it "an express ER ticket."</p>
       </div>
 
       <div class="activity">
         <span class="icon">🚃</span>
-        <h4>1912 Sóller Train + Tram</h4>
-        <p>Vintage narrow-gauge railway Palma→Sóller (1 h, through Tramuntana tunnels) + 1912 wooden tram Sóller→Port de Sóller. Operating ~10 round trips/day in summer. ~$30 RT for the train, $10 for the tram.</p>
+        <h4><a href="https://trendesoller.com/eng/timetable/" target="_blank" rel="noopener">1912 Sóller Train</a></h4>
+        <p>Narrow-gauge wooden train Palma → Sóller via Tramuntana tunnels. Aug departures from Palma: 10:10 / 10:50 / 12:15 / 13:00 / 14:00 / 15:00 / 19:40. €23 one-way. <strong>Peak summer sells out — book online ahead.</strong> Plus the Sóller → Port de Sóller wooden tram on a different line.</p>
       </div>
 
       <div class="activity">
         <span class="icon">🏊</span>
         <h4>Cala Deià Swim</h4>
-        <p>Steep 25-minute walk down from Deià village to a pebble cove with two cliff-restaurants (Ca's Patró March + Sa Cala). Crystal water, jump rocks, rope swing. <strong>The best after-hike swim.</strong> Walk back up at sunset.</p>
+        <p>Steep 25-min walk down from Deià village to pebble cove. Crystal water, jump rocks. Two cliff-restaurants (<strong>Ca's Patró March</strong> + <strong>Sa Cala</strong>). The best after-hike swim. Walk back up at sunset.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">☄️</span>
+        <h4><a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener">Tramuntana Dark Sky</a></h4>
+        <p><strong>Mortitx vineyard (400 m) / Lluc Sanctuary / Coll de sa Batalla (530 m) / Cap de ses Salines</strong> — Perseids vantages with moonless Aug 12 sky. <strong>Cap de Formentor closed</strong> 10:00–22:00 to private cars.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🎹</span>
+        <h4><a href="https://festivalchopin.com/" target="_blank" rel="noopener">Festival Chopin</a></h4>
+        <p>Sunday Aug 16 recital at <strong>Real Cartuja de Valldemossa</strong> — 14th-c Carthusian monastery cloister where Chopin + George Sand wintered. 21:30. 15 min from Belmond La Residencia. info@festivalchopin.com.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🎻</span>
+        <h4><a href="https://festivalpollenca.com/" target="_blank" rel="noopener">Festival de Pollença</a></h4>
+        <p>65th edition · Sant Domingo cloister 22:00 · Thu Aug 13 Quartet Ébène · Sat Aug 15 Freiburger Barockorchester + Borchi + De Bique. 55 min from Palma / 45 min from Deià. festivalpollenca.koobin.com.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🍷</span>
+        <h4><a href="http://www.bodegaribas.com/" target="_blank" rel="noopener">Binissalem Wine Day</a></h4>
+        <p>Bodega Ribas (1711, oldest) + Macià Batle (Santa Maria, polished) + optional José L. Ferrer walk-in. Hire a driver $500–$700/day. <strong>Pair with Es Verger lamb + Castell d'Alaró sunset.</strong></p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🍷</span>
+        <h4><a href="https://annegra.com/" target="_blank" rel="noopener">Ànima Negra Felanitx</a></h4>
+        <p>13th-c estate, cult Callet wine (€44 AN, €20 AN/2 blend). Pre-book annegra.com. Pair with <strong>4 Kilos Vinícola</strong> (Felanitx, natural/organic, +34 971 580 523) for the "second wine day" Pla i Llevant doubling-down.</p>
       </div>
 
       <div class="activity">
         <span class="icon">⛪</span>
-        <h4><a href="https://www.cartoixadevalldemossa.com/en/" target="_blank" rel="noopener">Valldemossa Cartoixa</a></h4>
-        <p>The Carthusian monastery where Chopin and George Sand wintered in 1838–39. Walk Chopin's cell, see the original Pleyel pianoforte. Pair with coca de patata pastries at Ca'n Molinas.</p>
-      </div>
-
-      <div class="activity">
-        <span class="icon">⛵</span>
-        <h4>Port de Sóller Boat Day</h4>
-        <p>Charter a small RIB or take a sunset cruise from Port de Sóller harbor. Coastline-only — the NW coast cliffs are otherwise inaccessible by land. Sa Calobra approachable by sea instead of road.</p>
+        <h4><a href="https://www.cartoixadevalldemossa.com/en/" target="_blank" rel="noopener">Valldemossa Cartuja</a></h4>
+        <p>Carthusian monastery where Chopin + George Sand wintered 1838–39 (Op. 28 Preludes composed here). Walk Chopin's cell + original Pleyel pianoforte. Pair with coca de patata pastries at Ca'n Molinas. <strong>Then Festival Chopin in the cloister at 21:30.</strong></p>
       </div>
 
       <div class="activity">
         <span class="icon">🏰</span>
-        <h4>Palma Cathedral (La Seu)</h4>
-        <p>13th–16th-century Gothic cathedral with Gaudí + Miquel Barceló interventions. Best at 3:30 PM in summer when the rose-window light hits the floor. Pair with old-town walk + Es Baluard contemporary art museum.</p>
+        <h4><a href="https://catedraldemallorca.org/" target="_blank" rel="noopener">Palma Catedral La Seu</a></h4>
+        <p>13th–16th-c Gothic giant with Gaudí + Miquel Barceló's 2007 ceramic apse chapel. <strong>Aug interior hours close 18:15</strong>. Pair with Almudaina (Aug 10:00–20:00) + Es Baluard modern art + La Lonja old-town walk.</p>
       </div>
 
+      <div class="activity">
+        <span class="icon">🥾</span>
+        <h4><a href="https://www.gr221.info/gr221%20english.htm" target="_blank" rel="noopener">GR-221 Dry Stone Route</a></h4>
+        <p>UNESCO 140 km / 10 stages Port Andratx → Pollença. Best from Deià: <strong>Cami des Pintors to Sóller</strong> (7 km, ~2.5 h, easier — Arab path through olive groves). Hard: <strong>Valldemossa → Sóller</strong>. <strong>Aug warning: heat. Start at dawn, 2L+ water.</strong></p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">⛵</span>
+        <h4><a href="https://www.perfectcharter.com/" target="_blank" rel="noopener">Port de Sóller Boat Day</a></h4>
+        <p>Charter Bavaria sailboat or license-free motorboat ≤5m no license €150–350/day from Port de Sóller. Coastline-only — the NW cliffs otherwise inaccessible by land. Sa Calobra approachable by sea instead of road.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🤿</span>
+        <h4><a href="https://www.cabreraparc.com/" target="_blank" rel="noopener">Cabrera National Park Scuba</a></h4>
+        <p>Spain's first marine NP (1991), 214 fish species, monk seals, turtles, dolphins. May–Oct, 18–26 °C. <strong>Permit cap 300 visitors/day — book 3–5 days ahead in Aug.</strong> PADI ex Colònia Sant Jordi / Santa Ponsa / Palma. Ferry from Colònia Sant Jordi.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏖️</span>
+        <h4><a href="https://www.purobeach.com/" target="_blank" rel="noopener">Purobeach Palma</a></h4>
+        <p>Cala Estancia (5 min PMI). <strong>DJ sets weekends sunset May–Sept</strong>, M3 Cuisine, freshwater pool + sea, jet-set crowd. <strong>Book sunbeds + dinner ahead.</strong> The Day 2 sea-day anchor.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">💃</span>
+        <h4><a href="https://nikkibeach.com/mallorca" target="_blank" rel="noopener">Nikki Beach Mallorca</a></h4>
+        <p>Magaluf. Champagne brunch + Sunday "Amazing" parties + daily 11:00–01:00 Jun–Sept 2026. The "I want a wilder beach club than Purobeach" alt. 20 min from Palma.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🛏️</span>
+        <h4><a href="https://mharesseaclub.com/" target="_blank" rel="noopener">Mhares Sea Club</a></h4>
+        <p>Llucmajor · adults-only · 200 loungers · 30 VIP + Balinese beds · pool + sea · live music. The classier alt to Magaluf Nikki Beach. +34 871 038 018.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🛏️</span>
+        <h4><a href="https://beachclubgranfolies.com/" target="_blank" rel="noopener">Gran Folies Beach Club</a></h4>
+        <p>Cala Llamp · Port d'Andratx. Cliff-perched · restaurant + bistro + cocktail + pool + Balinese beds. <strong>Daily 10:30–22:00 May–Oct 15.</strong> +34 971 67 10 94. The west-coast cliff-club alt.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏄</span>
+        <h4>Kitesurf Playa de Muro</h4>
+        <p>Water Sports Mallorca + Mallorca Kiteboarding (Port Pollença). Wide flat-water bay, the Tramuntana wind makes Aug afternoons reliable. €80/h lesson. The "different sea-day from Purobeach" alt.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🚤</span>
+        <h4>Jet Ski Alcúdia</h4>
+        <p>GoJet Mallorca · Alcúdia / Can Picafort / Andratx · no-license ≤55hp · €70/30 min or €110/h. Pair with the Cap Formentor sail day or the Playa de Muro kitesurf afternoon.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🪂</span>
+        <h4>Hot-Air Balloon Tramuntana</h4>
+        <p>Manacor or Tramuntana sunrise flight ~1 h aloft / 4 h total + champagne landing toast. €130–€187/pp. Book 2 weeks ahead, weather-dependent. The "I want a different sunrise activity than Sa Calobra dawn" alt.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏛️</span>
+        <h4>Alcúdia + Pollentia</h4>
+        <p>Walled Alcúdia old town + Roman Pollentia ruins (1st-c BC). Pair with the Cap Formentor sail day morning. Plus the Pollença old town + <strong>365-step Calvari</strong> medieval climb on the way back.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🕳️</span>
+        <h4><a href="https://www.cuevasdeldrach.com/" target="_blank" rel="noopener">Drach Caves</a></h4>
+        <p>Lake Martel underground · daily classical concert on the lake from a string quartet in rowboats · €18. East coast (Manacor area, 1 h from Palma). The rainy-day-and-it's-not-Aug-15 backup.</p>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="nightlife">
+      <span class="eyebrow">After Dark</span>
+      <h2>The Late-Night Map</h2>
+      <p>Palma is the real nightlife base — Abaco for the once-in-a-lifetime baroque cocktail bar, Sky Bar Hostal Cuba for the rooftop sunset, Santa Catalina for the trendier later crowd (Brooklyn, La Demence, Kaelum), Magaluf for the beach-club-into-club crawl (Tito's at BCM, Nikki Beach), and the old-town cocktail crawl through La Lonja (Bar Cuba, Bar Antiquari, Es Brins, La Vinya de Santa Clara). Deià is intimate but real — Sa Fonda is the legend. <strong>Hours are summer Aug 2026; verify on arrival.</strong></p>
+    </div>
+
+    <div class="nightlife">
+      <div class="nightlife-col">
+        <h3>Palma · old town + Santa Catalina + Magaluf</h3>
+        <div class="venue">
+          <div class="vname">Bar Abaco</div>
+          <div class="vmeta">La Lonja · Calle San Juan 1 · candle-lit baroque · premium cocktails</div>
+          <div class="vdesc"><strong>"Most remarkable cocktail bar" per FT.</strong> Candle-lit Baroque cocktail bar in a 17th-c mansion · birdcages, towers of fresh fruit + flowers, classical music, rococo mirrors. Premium prices, mandatory single visit minimum. No reservations. 5-min walk from Es Princep.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Sky Bar Hostal Cuba</div>
+          <div class="vmeta">Santa Catalina · daily 18:00–00:30 · cathedral + bay rooftop</div>
+          <div class="vdesc">Daily 18:00–00:30. Sweeping views of Palma + cathedral + bay. First-come tables. +34 971 452 237. The sunset rooftop choice, and a 24:30 last-call nightcap stop. Earlier than Abaco — work it into the same evening.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Almaq (Es Princep rooftop)</div>
+          <div class="vmeta">In your hotel · infinity pool + cathedral view · open till midnight</div>
+          <div class="vdesc">Es Princep's rooftop bar over the infinity pool. The "I want a quiet last drink in my hotel" choice. Cathedral floodlit until ~02:00, the view is the experience. Open through midnight.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Brooklyn</div>
+          <div class="vmeta">Santa Catalina · underground house/techno · late</div>
+          <div class="vdesc">Underground house/techno DJs spinning till 4 AM. <strong>The serious Palma club night</strong> if you want to actually dance vs. cocktail-bar-hop. €15–€20 cover on big nights.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Bar Cuba / Bar Antiquari / Es Brins / La Vinya de Santa Clara</div>
+          <div class="vmeta">La Lonja crawl · old town walkable cluster</div>
+          <div class="vdesc">The La Lonja old-town cocktail crawl — five stops within 4 blocks of Es Princep. Bar Cuba is the legend; Bar Antiquari has antique-store-meets-bar atmosphere; Es Brins is dive-y; La Vinya is the vermut + wine corner. Walk between them through stone alleys.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Tito's at BCM Magaluf</div>
+          <div class="vmeta">Magaluf · Fri/Sat year-round + Thu/Sun Jul–Aug 2026</div>
+          <div class="vdesc">Tito's has moved into the <strong>BCM complex in Magaluf</strong>. The big-club Magaluf experience — 23:00–06:00 Apr–Sept · €25–€40 cover · big-room EDM. 20 min taxi from Palma. The "I want to commit to a real club night" choice.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Hotel Cort / Es Princep / Sant Francesc rooftops</div>
+          <div class="vmeta">Palma old-town hotels · sunset → midnight</div>
+          <div class="vdesc">The rooftop-bar circuit beyond Sky Bar Hostal Cuba — Hotel Cort overlooks Plaça Cort, Es Princep overlooks the cathedral, Sant Francesc has a smaller pool-deck terrace. All Mediterranean-cocktail format, all walking-distance from Es Princep.</div>
+        </div>
+      </div>
+
+      <div class="nightlife-col">
+        <h3>Deià + beach clubs</h3>
+        <div class="venue">
+          <div class="vname">Sa Fonda Deià</div>
+          <div class="vmeta">Deià village · since 1988 · live music + jam sessions every summer night</div>
+          <div class="vdesc"><strong>Mallorca-CBGB · the legend.</strong> Past patrons: Sting, Bono, Mike Oldfield, Kate Moss. Live music + open mic + jam sessions all summer. Open late, no reservations. 5-min walk down from Belmond. The Day 4 + Day 6 night anchor.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">El Olivo bar at Belmond La Residencia</div>
+          <div class="vmeta">In your hotel · terrace nightcap · candlelit</div>
+          <div class="vdesc">Belmond's bar + terrace — the "El Olivo restaurant lobby" + adjacent garden terrace. The quietest possible Deià nightcap, the post-Béns d'Avall ★ pre-Sa Fonda or post-Festival Chopin stop.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Purobeach Palma</div>
+          <div class="vmeta">Cala Estancia · DJ sunset May–Sept · jet-set crowd</div>
+          <div class="vdesc">Cala Estancia (5 min PMI). DJ sets weekend sunsets May–Sept, M3 Cuisine restaurant, pool + sea, sunbed €40–€80 + cabana €200+. Book ahead. The Day 2 sea-day + late-afternoon DJ ramp-up.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Nikki Beach Mallorca</div>
+          <div class="vmeta">Magaluf · daily 11:00–01:00 · champagne brunch + Sunday "Amazing"</div>
+          <div class="vdesc">Magaluf · the global Nikki Beach franchise outpost. Champagne brunch + Sunday "Amazing" parties + daily 11:00–01:00 Jun–Sept 2026. 20 min from Palma. The "wilder" Magaluf beach-club alt to the polished Purobeach.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Mhares Sea Club</div>
+          <div class="vmeta">Llucmajor · adults-only · pool + sea + live music</div>
+          <div class="vdesc">Adults-only, 200 loungers, 30 VIP + Balinese beds, pool + sea, live music. The classier alt to both Nikki + Purobeach. +34 871 038 018.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Gran Folies Beach Club</div>
+          <div class="vmeta">Cala Llamp Port d'Andratx · cliff-perched · daily 10:30–22:00 May–Oct 15</div>
+          <div class="vdesc">Cliff-perched in Cala Llamp, west-coast Port d'Andratx side. Restaurant + bistro + cocktail + pool + Balinese beds. The cliff-club spread alt to the beach-club Magaluf row. +34 971 67 10 94.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">BCM Magaluf</div>
+          <div class="vmeta">Magaluf · Apr–Sept · 23:00–06:00 · the original superclub</div>
+          <div class="vdesc">The Magaluf big-room superclub. Now also home to Tito's. €25–€40 cover, multi-room, EDM + commercial. <strong>The "I'm committing to a Magaluf club night" choice</strong> — different planet from the Palma old-town cocktail-bar scene.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" id="score">
+      <span class="eyebrow">Adversarial Scoring</span>
+      <h2>Re-scored on the 8 New Criteria</h2>
+      <p>Scored 0–3 per axis. Hard criteria ×2, soft ×1. Total /39. <strong>Mallorca rose +4.5 from 30 → 34.5/39</strong> on the new criteria. Food + activity + romance + safety max out; nightlife + wine + Joann-seafood are real but not San Sebastián-tier; weather is the soft spot (hot edge of Aug).</p>
+    </div>
+
+    <div class="score-grid">
+      <div class="score-row">
+        <div class="axis">Food caliber <span class="tag">Hard ×2</span></div>
+        <div class="reason"><strong>Voro ★★ (Mallorca's only) + 9 ★ in 2026 guide</strong>: DINS Santi Taura ★, Marc Fosh ★, Zaranda ★, El Olivo ★, Béns d'Avall ★ + Green, Es Fum ★, Maca de Castro ★, Andreu Genestra ★ + Green, Sa Clastra ★, Fusión 19 ★ · plus Mallorquín institutions (Es Verger lamb, Celler Sa Premsa, Sa Fonda). <strong>3/3.</strong></div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Nightlife &amp; late energy <span class="tag">Hard ×2</span></div>
+        <div class="reason">Palma is serious — Abaco baroque cocktail bar (FT "most remarkable"), Sky Bar Hostal Cuba rooftop, Santa Catalina later trendy (Brooklyn), beach clubs (Purobeach + Nikki + Mhares + Gran Folies), Tito's at BCM Magaluf for big-room. Deià is gentle = Sa Fonda only. Not Mykonos/Hvar but a legitimate Palma base. <strong>2.5/3.</strong></div>
+        <div class="num">2.5 × 2 = 5</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Activity density <span class="tag">Hard ×2</span></div>
+        <div class="reason">Cap Formentor sail + GR221 + Sa Calobra hairpins + Castell d'Alaró sunset hike + hot-air balloon + Cabrera scuba + coasteering + jet ski Muro + wine route + Sóller train + Drach Caves + Tramuntana dark-sky drive + Valldemossa + Pollença + Alcúdia. <strong>3/3.</strong></div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Weather <span class="tag">Hard ×2</span></div>
+        <div class="reason">85–90°F highs, 65–73% humidity, hot edge of Aug. Sea always accessible (78°F). Aug 8 historically wettest single day (~10.93 mm) + 5 rain days/month avg. AC standard at luxury hotels. The soft spot vs. SS (cooler ~75°F) and Côte d'Azur (drier). <strong>2/3.</strong></div>
+        <div class="num">2 × 2 = 4</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Safety &amp; late walkability <span class="tag">Hard ×2</span></div>
+        <div class="reason">Palma old town very walkable late, Spain low violent crime, tourist police visible. Pickpockets in La Lonja crowd + ferry terminal-equivalents the only real concern. Deià pin-drop quiet. <strong>3/3.</strong></div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Wine <span class="tag">Soft ×1</span></div>
+        <div class="reason">Real emerging DO Binissalem + Pla i Llevant — Bodega Ribas (1711, oldest in Mallorca), Macià Batle, Ànima Negra Callet cult, 4 Kilos natural, Vinyes Mortitx mountain. ~70+ producers across 2 DOs (wider than Croatia's ~15). Not Rioja or San Sebastián's Txakoli + La Rioja Alavesa hub but distinctive + drinkable-only-here. <strong>2.5/3.</strong></div>
+        <div class="num">2.5</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Romance / hotel quality <span class="tag">Soft ×1</span></div>
+        <div class="reason"><strong>Belmond La Residencia + Cap Rocat fortress + Castell Son Claret + Es Princep cathedral views</strong> = world-class. Belmond's 17th-c manor on the Tramuntana hillside above Deià is one of Europe's most-photographed romantic stays; Cap Rocat carved into a 19th-c cliff fortress is one-of-one in the Med. <strong>3/3.</strong></div>
+        <div class="num">3</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Joann seafood tolerance <span class="tag">Soft ×1 · lower seafood = higher</span></div>
+        <div class="reason">Mallorquín meat tradition is strong — sobrasada (cured pork sausage), lechona (suckling pig), Sóller lamb, llom amb col (pork-cabbage), frit mallorquí. Es Verger lamb shoulder is one of Europe's most-cited single dishes. DINS + Sa Premsa + Sebastian + Marc Fosh have full meat menus. Béns d'Avall + Es Fum + Maca de Castro lean coastal-fish. <strong>2/3.</strong></div>
+        <div class="num">2</div>
+      </div>
+      <div class="score-row total">
+        <div class="axis">Weighted total</div>
+        <div class="reason">Hard 27/30 + Soft 7.5/9. Food + activity + romance + safety max out; nightlife + wine + Joann-seafood are strong; weather is the soft spot. <strong>+4.5 from 30 to 34.5.</strong></div>
+        <div class="num">34.5 / 39</div>
+      </div>
     </div>
 
   </div>
@@ -759,7 +1196,7 @@
     <div class="section-header">
       <span class="eyebrow">Make It Real</span>
       <h2>Book These Now</h2>
-      <p>Seven actions, ranked by lead time required. <strong>Belmond La Residencia + Voro + Marc Fosh need 60–90 days</strong>; everything else is 30 days or less.</p>
+      <p>Fourteen actions, ranked by lead time required. <strong>Belmond La Residencia + Cap Rocat + Voro ★★ + Marc Fosh ★ all need 4+ months</strong>; everything else is 4–8 weeks or less. The Amex FHR deadline on Belmond is hard — <strong>book by May 15, 2026</strong>.</p>
     </div>
 
     <div class="steps">
@@ -767,91 +1204,147 @@
       <div class="step">
         <div class="stepnum">01</div>
         <div>
-          <h4>Book Belmond La Residencia (5 nights, Wed Aug 12 → Mon Aug 17)</h4>
-          <p>Request a <strong>Junior Suite with sea view</strong>. <strong>Amex FHR offer: 15% off July–Aug 2026 if booked by May 15, 2026.</strong> Belmond rate-only direct typically beats third-party (+ benefits).</p>
-          <div class="meta-line">90 days out · <a href="https://www.belmond.com/hotels/europe/mallorca/deia/belmond-la-residencia/" target="_blank" rel="noopener">belmond.com</a></div>
+          <h4>Book Belmond La Residencia (2 nights, Fri Aug 14 → Sun Aug 16)</h4>
+          <p>Request a <strong>Junior Suite with sea view</strong>. <strong>Amex FHR offer: 15% off + $100 F&amp;B credit, Jul–Aug 2026 travel, book by May 15, 2026.</strong> Belmond direct rate matches third-party + adds benefits. Peak Aug rates $1,800–$3,300/night. 6+ months out for August.</p>
+          <div class="meta-line">6+ months out · <a href="https://www.belmond.com/hotels/europe/mallorca/deia/belmond-la-residencia/" target="_blank" rel="noopener">belmond.com/la-residencia</a></div>
         </div>
       </div>
 
       <div class="step">
         <div class="stepnum">02</div>
         <div>
-          <h4>Reserve dinner at Voro ★★ (if you're doing it)</h4>
-          <p>Decide before booking flights: Voro = 1h 45m each way from Deià. Either lunch on the Sa Calobra+Formentor day (geographically adjacent NE coast), or an overnight at the Park Hyatt itself. Reserve <strong>60+ days ahead</strong> for peak season.</p>
-          <div class="meta-line">60+ days out · <a href="mailto:voro.parkhyattmallorca@hyatt.com">voro.parkhyattmallorca@hyatt.com</a> · +34 871 811 234</div>
+          <h4>Book Hotel Es Princep (3 nights, Tue Aug 11 → Fri Aug 14)</h4>
+          <p>5★ LHW on Parc de la Mar. Request sea-view room with cathedral angle. <strong>DINS Santi Taura ★ + Zaranda ★ on-site</strong> — request DINS reservation at hotel booking. Direct via esprincep.com or via LHW. 2–3 months out for August.</p>
+          <div class="meta-line">2–3 months out · <a href="https://www.esprincep.com/" target="_blank" rel="noopener">esprincep.com</a></div>
         </div>
       </div>
 
       <div class="step">
         <div class="stepnum">03</div>
         <div>
-          <h4>Reserve dinner at Marc Fosh ★ (Fri Aug 14, ~8:30 PM)</h4>
-          <p>Palma's most-celebrated table. Book directly; the Convent de la Missió setting is small. Tasting menu ~€130.</p>
-          <div class="meta-line">60 days out · <a href="https://www.marcfosh.com/" target="_blank" rel="noopener">marcfosh.com</a></div>
+          <h4>Reserve dinner at Voro ★★ (if doing the half-day round-trip)</h4>
+          <p>Decide before booking flights: Voro = 1 h 45 m each way from Palma / 1 h 30 m from Deià. Either: (1) add a separate Park Hyatt night, or (2) skip for this trip (the recommended path — the 3+2 Palma+Deià itinerary above does not include Voro). If doing it, reserve 4+ weeks ahead (longer for Sat).</p>
+          <div class="meta-line">4+ weeks out · <a href="https://vororestaurant.com/" target="_blank" rel="noopener">vororestaurant.com</a> · email or +34 871 811 234</div>
         </div>
       </div>
 
       <div class="step">
         <div class="stepnum">04</div>
         <div>
-          <h4>Reserve dinner at Béns d'Avall ★ (Thu Aug 13, sunset)</h4>
-          <p>Clifftop terrace; the 8 PM seating catches the Mediterranean sunset. ~€140 tasting.</p>
-          <div class="meta-line">45 days out · <a href="https://www.bensdavall.com/" target="_blank" rel="noopener">bensdavall.com</a></div>
+          <h4>Reserve DINS Santi Taura ★ (Tue Aug 11, 21:00 — arrival night)</h4>
+          <p>In your hotel. <strong>Single "Origens" 11-course tasting</strong> (+3 optional), no children under 16. Bar-counter format. Reserve 3–4 weeks ahead via grupsantitaura.com or via Es Princep concierge at booking. ~€110 + €70 pairing.</p>
+          <div class="meta-line">3–4 weeks out · <a href="https://grupsantitaura.com/en/dins-santitaura/" target="_blank" rel="noopener">grupsantitaura.com/en/dins-santitaura</a></div>
         </div>
       </div>
 
       <div class="step">
         <div class="stepnum">05</div>
         <div>
-          <h4>Reserve dinner at DINS Santi Taura ★ (Sun Aug 16)</h4>
-          <p>Single-menu format, ~€95. Easier booking than the Palma flagships.</p>
-          <div class="meta-line">30 days out · <a href="https://www.dinsbysantitaura.com/" target="_blank" rel="noopener">dinsbysantitaura.com</a></div>
+          <h4>Reserve Marc Fosh ★ (Wed Aug 12, 20:00)</h4>
+          <p>Palma's most-celebrated table. Convent de la Missió setting is small. <strong>7-course dinner tasting €130</strong>. Reserve directly via marcfosh.com 2–3 weeks weekend / longer for the marquee Sat slot.</p>
+          <div class="meta-line">2–3 weeks out · <a href="https://www.marcfosh.com/" target="_blank" rel="noopener">marcfosh.com</a></div>
         </div>
       </div>
 
       <div class="step">
         <div class="stepnum">06</div>
         <div>
-          <h4>Book Iberia LAX→MAD→PMI flights</h4>
-          <p>IB6172 LAX→MAD (overnight, dep 3:25 PM Tue Aug 11, arr 11:25 AM Wed Aug 12) + IB3946 MAD→PMI (arr 2:10 PM). Return: IB3947 PMI→MAD then IB6171 MAD→LAX on Mon Aug 17. Estimated $1,000–$1,500 RT per person — <strong>verify exact 2026 schedule + price before booking</strong>.</p>
-          <div class="meta-line">45–60 days out · <a href="https://www.iberia.com/us/" target="_blank" rel="noopener">iberia.com</a> · <a href="https://www.skyscanner.com/routes/lax/pmi/los-angeles-international-to-palma-majorca.html" target="_blank" rel="noopener">Skyscanner LAX→PMI</a></div>
+          <h4>Reserve El Olivo ★ at Belmond (Fri Aug 14, 21:00 — Deià arrival night)</h4>
+          <p>17th-c olive oil mill with original press · 8-course Lorca-inspired tasting · vegetarian option · terrace summer. <strong>Dinner only 19:30–21:30 summer. NON-RESIDENTS bookable only 30 days ahead.</strong> Belmond residents can request at booking — note your check-in date. +34 971 63 90 11.</p>
+          <div class="meta-line">30 days out (non-residents) · <a href="https://menus.belmond.com/la-residencia/el-olivo" target="_blank" rel="noopener">menus.belmond.com/la-residencia/el-olivo</a></div>
         </div>
       </div>
 
       <div class="step">
         <div class="stepnum">07</div>
         <div>
-          <h4>Schedule winery visits (Fri Aug 14)</h4>
-          <p><strong>Bodega Ribas</strong> (Consell, oldest in Mallorca) + <strong>Macià Batle</strong> (Santa Maria). Both require advance reservation. Hire a driver for the day ($650 for two — required because you'll be tasting). For 4 Kilos in Felanitx (cult natural wines), email separately — drive time makes it a separate half-day.</p>
-          <div class="meta-line">30 days out · <a href="http://www.bodegaribas.com/" target="_blank" rel="noopener">bodegaribas.com</a> · <a href="https://www.maciabatle.com/en/" target="_blank" rel="noopener">maciabatle.com</a></div>
+          <h4>Reserve Béns d'Avall ★ (Sun Aug 16, 20:00 sunset slot)</h4>
+          <p>Vicens family clifftop terrace overlooking the Med — 20:00 sunset slot is the trip's romance-peak booking. ~€90–€160 tasting menus. 15 min from Belmond. Reserve 2 weeks ahead.</p>
+          <div class="meta-line">2 weeks out · <a href="https://bensdavall.com/" target="_blank" rel="noopener">bensdavall.com</a></div>
         </div>
       </div>
 
       <div class="step">
         <div class="stepnum">08</div>
         <div>
-          <h4>Pre-book PMI ↔ Deià transfers + the Sa Calobra driver</h4>
-          <p>PMI→Deià $130 each way (40 min via Ma-1 + Ma-10). Sa Calobra driver $250 for the early-morning + Cap de Formentor day (you'll want to relax, not navigate hairpins at dawn). Use <strong>Palma Mallorca Airport Transfer</strong> or your Belmond concierge.</p>
-          <div class="meta-line">14 days out · ask Belmond concierge or book via <a href="https://www.welcomepickups.com/" target="_blank" rel="noopener">Welcome Pickups</a></div>
+          <h4>Book Iberia LAX↔PMI flights</h4>
+          <p>IB6172 LAX→MAD (dep 3:25 PM Tue Aug 11, arr 11:25 AM Wed Aug 12) + IB3946 MAD→PMI (arr 2:10 PM). Return: IB3947 PMI→MAD then IB6171 MAD→LAX Mon Aug 17. Estimated $1,000–$1,500 RT/pp — <strong>verify exact 2026 schedule + price before booking</strong>. Backup carriers: Lufthansa via FRA/MUC, SWISS via ZRH.</p>
+          <div class="meta-line">45–60 days out · <a href="https://www.iberia.com/us/" target="_blank" rel="noopener">iberia.com</a> · <a href="https://www.skyscanner.com/routes/lax/pmi/los-angeles-international-to-palma-majorca.html" target="_blank" rel="noopener">Skyscanner LAX→PMI</a></div>
         </div>
       </div>
 
       <div class="step">
         <div class="stepnum">09</div>
         <div>
-          <h4>Verify Cap de Formentor + Sa Calobra road status (1 week out)</h4>
-          <p>Cap de Formentor road closure (10 AM–10 PM, June 1–Sept 30) and Sa Calobra access can change in summer 2026. Confirm with Belmond concierge 7 days before. <strong>If the daytime Formentor closure is extended to a 24-hour bus-only rule</strong>, replan the Perseids viewing for Mirador de Ses Barques (Tramuntana ridge, accessible by car overnight).</p>
-          <div class="meta-line">7 days out · ask Belmond concierge</div>
+          <h4>Book the Cap de Formentor full-day sail (Fri Aug 14, 10:30 AM)</h4>
+          <p>Mallorcan llaut with skipper from Port de Pollença · 6 hours · Cap Formentor cliffs + Cala Formentor + Cala Murta swim + onboard lunch · €800–€2,000/day private (Mallorca Top Charters / Perfect Charter); €80/pp shared. <strong>The skipper alternative drives + provides cooler etc.</strong> Reserve 2–3 weeks ahead (longer for skipper).</p>
+          <div class="meta-line">2–3 weeks out · <a href="https://mallorcatopcharters.com/" target="_blank" rel="noopener">mallorcatopcharters.com</a> · <a href="https://www.perfectcharter.com/" target="_blank" rel="noopener">perfectcharter.com</a></div>
         </div>
       </div>
 
+      <div class="step">
+        <div class="stepnum">10</div>
+        <div>
+          <h4>Schedule winery visits + book wine-day driver (Thu Aug 13)</h4>
+          <p><strong>Bodega Ribas</strong> (Consell, oldest 1711, +34 971 62 26 73 — 1–2 weeks ahead) + <strong>Macià Batle</strong> (Santa Maria — 1 week ahead, choose 12:30 or 14:00 tour slot). Hire a driver for the day ($500–$700 for two — required because you'll be tasting). Driver continues to Es Verger lamb / Castell d'Alaró sunset / back to Palma at 22:30. Use Es Princep concierge or independent driver service.</p>
+          <div class="meta-line">2 weeks out (driver) + 1–2 weeks out (bodegas) · <a href="http://www.bodegaribas.com/" target="_blank" rel="noopener">bodegaribas.com</a> · <a href="https://www.maciabatle.com/en/" target="_blank" rel="noopener">maciabatle.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">11</div>
+        <div>
+          <h4>Book Festival Chopin Valldemossa (Sun Aug 16, 21:30)</h4>
+          <p>2026 programme typically lands April–May. Verify Aug 16 Sunday recital at festivalchopin.com or email info@festivalchopin.com. Tickets €30–€60 typical. <strong>Marquee Sunday-night cloister slots sell out 30 days ahead.</strong> The trip's last-night cultural anchor.</p>
+          <div class="meta-line">30+ days out · <a href="https://festivalchopin.com/" target="_blank" rel="noopener">festivalchopin.com</a> · info@festivalchopin.com</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">12</div>
+        <div>
+          <h4>Book Festival de Pollença Aug 13 OR Aug 15 (if going)</h4>
+          <p>65th edition Sant Domingo cloister 22:00. <strong>Thu Aug 13: Quartet Ébène</strong>. <strong>Sat Aug 15: Freiburger Barockorchester + Borchi + De Bique</strong> (conflicts with Palma Mare de Déu — pick one). Tickets via festivalpollenca.koobin.com 30+ days ahead.</p>
+          <div class="meta-line">30+ days out · <a href="https://festivalpollenca.com/" target="_blank" rel="noopener">festivalpollenca.com</a> · festivalpollenca.koobin.com</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">13</div>
+        <div>
+          <h4>Pre-book PMI ↔ hotel transfers + Sa Calobra driver / Perseids driver</h4>
+          <p>PMI → Es Princep (~€25, 15 min taxi, walk-up OK at PMI). Belmond → PMI (~€140, 45 min, prearrange with Belmond concierge). <strong>Perseids driver Wed Aug 12 23:00–05:00 ~€280</strong> (book Es Princep concierge 2 weeks ahead). Sa Calobra dawn Day 6 — self-drive from Belmond, 6 AM start. The Day 3 wine + lamb day is its own driver (#10 above).</p>
+          <div class="meta-line">14 days out · ask Es Princep + Belmond concierges · <a href="https://www.welcomepickups.com/" target="_blank" rel="noopener">Welcome Pickups</a> backup</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">14</div>
+        <div>
+          <h4>Pre-book Purobeach sunbed + table (Wed Aug 12) + Sóller train tickets (Sat Aug 15)</h4>
+          <p>Purobeach: sunbed €40–€80 + cabana €200+ via purobeach.com — DJ weekend sets sell out the cabana row. Sóller train: book trendesoller.com online — <strong>August peak sells out</strong>, choose the 15:00 round-trip slot for the Day 5 itinerary.</p>
+          <div class="meta-line">7 days out · <a href="https://www.purobeach.com/" target="_blank" rel="noopener">purobeach.com</a> · <a href="https://trendesoller.com/eng/timetable/" target="_blank" rel="noopener">trendesoller.com</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="adversarial">
+      <h3>Adversarial honesty — where Mallorca loses</h3>
+      <p><strong>Heat is real + dates are worst of year.</strong> Aug 8 historically wettest single day at 10.93 mm; sea always accessible but midday hiking in the Tramuntana (Castell d'Alaró, GR221) is brutal — dawn starts mandatory. Sa Calobra is bumper-to-bumper after 9 AM. <strong>Cap de Formentor lighthouse road is OFF-LIMITS</strong> to private cars 10:00–22:00 May 15–Oct 18, 2026 (€100–200 fines, Bus 334 last 20:30) — handle by sailing the cliffs from Port de Pollença instead.</p>
+      <p><strong>Aug 15 Mare de Déu d'Agost is structural.</strong> Coastal MA-10 gridlocked, restaurants demand 14+ day reservations, beaches wall-to-wall. <strong>Forces the itinerary into a walking-Palma OR staying-Deià shape</strong> — the dual Cala Deià + Sóller + Palma-procession plan above is the densest packing of the day. The Aug 15 conflict between Festival Pollença (Freiburger Barockorchester) and the Palma procession is real — pick one. Most ★ tables book out 30+ days ahead for the Sat night specifically.</p>
+      <p><strong>Two-hotel split has real cost.</strong> Belmond peak Aug $1,800–$3,300/night. 5 nights Belmond alone would top $15K; the Amex FHR 15% + $100 F&amp;B drop the 2-night Belmond cost to ~$3,800. <strong>Es Princep + Belmond pair Standard ≈ $17,050 all-in for two</strong>. If hotels are the budget pinch, swap Belmond for <strong>Hotel Es Molí</strong> (same village, ~70% cheaper, 4★ instead of 5★) and the total drops to ~$10K — below Provence.</p>
+      <p><strong>Deià is gorgeous but isolated for nightlife.</strong> Sa Fonda + Belmond bar only. Palma 45 min winding MA-10 road, taxis €80 each way. <strong>The 3+2 Palma+Deià split deliberately front-loads the city + nightlife</strong> so Deià doesn't feel nightlife-starved — by Day 4 you'll have already done Abaco + Sky Bar + Brooklyn (if you wanted), and Deià becomes the romance + scenery wind-down.</p>
+      <p><strong>vs. San Sebastián:</strong> SS wins on food density (Arzak + Mugaritz + Akelarre + Etxebarri all ★★★-tier within 30 km + pintxos walkable) + cooler weather (~75°F). Mallorca wins on activity density + beaches + nightlife + romance scenery + the Joann-friendlier menu (SS is fish heaven; Mallorca is lamb-shoulder + sobrasada island).</p>
+      <p><strong>vs. Mykonos:</strong> Mykonos beats outright on nightlife (Scorpios + Cavo Tagoo + Nammos = global top-10 beach clubs) and Cycladic whitewash romance. Loses on food (no ★★ on island), heat comparable, no Tramuntana hiking peer. Pure nightlife-maxxing = Mykonos; balanced active + food + nightlife = Mallorca.</p>
+      <p><strong>vs. Côte d'Azur:</strong> CdA beats on glamour-nightlife (Nikki Beach St-Tropez + Caves du Roy) + Michelin star count in tight radius + Hôtel du Cap-Eden-Roc / La Réserve aspirational hotels. Loses on hiking/active density + price (CdA 30–40% more in Aug). Mallorca Tramuntana is the real differentiator.</p>
     </div>
 
     <div class="budget-table">
       <div class="head">
         <span class="eyebrow">All-In For Two Travelers</span>
         <h3>Budget by Tier</h3>
-        <p>USD, mid-August peak. Move items across tiers freely. The Standard tier matches the day-by-day above. <strong>Mallorca's Splurge is the highest of the six options</strong> because Belmond peak rooms run $3,000–$3,500/night.</p>
+        <p>USD, mid-August peak. Move items across tiers freely. The Standard tier matches the day-by-day above. <strong>Belmond drives the high end</strong> — if budget is the pinch, swap Belmond for Hotel Es Molí and Standard drops to ~$10K.</p>
       </div>
       <table>
         <thead>
@@ -863,26 +1356,30 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td class="item">Flights · Iberia LAX↔PMI (×2)</td><td class="tier">$2,000</td><td class="tier standard std-mark">$2,400</td><td class="tier">$3,200</td></tr>
-          <tr><td class="item">Hotel · 5 nights</td><td class="tier">$1,400<br><span style="font-size: 0.75rem; opacity: 0.7;">Hotel Es Molí</span></td><td class="tier standard std-mark">$10,500<br><span style="font-size: 0.75rem; opacity: 0.7;">Belmond La Residencia · standard room</span></td><td class="tier">$17,500<br><span style="font-size: 0.75rem; opacity: 0.7;">Belmond Garden Suite · peak</span></td></tr>
-          <tr><td class="item">Michelin dinners · 3 ★ tables</td><td class="tier">$650<br><span style="font-size: 0.75rem; opacity: 0.7;">1 ★ + 2 casual</span></td><td class="tier standard std-mark">$1,400<br><span style="font-size: 0.75rem; opacity: 0.7;">Béns d'Avall + Marc Fosh + DINS</span></td><td class="tier">$2,200<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Voro ★★ lunch</span></td></tr>
-          <tr><td class="item">Other dinners + lunches</td><td class="tier">$600</td><td class="tier standard std-mark">$900</td><td class="tier">$1,300</td></tr>
-          <tr><td class="item">Wine day · driver + tastings</td><td class="tier">$200<br><span style="font-size: 0.75rem; opacity: 0.7;">single visit, taxi</span></td><td class="tier standard std-mark">$750<br><span style="font-size: 0.75rem; opacity: 0.7;">private driver + 2 wineries</span></td><td class="tier">$1,100<br><span style="font-size: 0.75rem; opacity: 0.7;">+ 4 Kilos add-on</span></td></tr>
-          <tr><td class="item">Transfers + Sa Calobra driver</td><td class="tier">$200<br><span style="font-size: 0.75rem; opacity: 0.7;">bus + self-drive rental</span></td><td class="tier standard std-mark">$540<br><span style="font-size: 0.75rem; opacity: 0.7;">private transfers + Sa Calobra driver</span></td><td class="tier">$900<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Perseids driver</span></td></tr>
-          <tr><td class="item">Activities</td><td class="tier">$80<br><span style="font-size: 0.75rem; opacity: 0.7;">tram + monastery</span></td><td class="tier standard std-mark">$260<br><span style="font-size: 0.75rem; opacity: 0.7;">train + tram + Cartoixa + Boat sunset</span></td><td class="tier">$1,200<br><span style="font-size: 0.75rem; opacity: 0.7;">+ private RIB + helicopter</span></td></tr>
-          <tr><td class="item">Cushion / tips / incidentals</td><td class="tier">$200</td><td class="tier standard std-mark">$300</td><td class="tier">$600</td></tr>
+          <tr><td class="item">Flights · Iberia LAX↔PMI (×2)</td><td class="tier">$2,000<br><span style="font-size: 0.75rem; opacity: 0.7;">economy basic</span></td><td class="tier standard std-mark">$2,400<br><span style="font-size: 0.75rem; opacity: 0.7;">economy + bag</span></td><td class="tier">$5,800<br><span style="font-size: 0.75rem; opacity: 0.7;">premium economy</span></td></tr>
+          <tr><td class="item">Hotels · 3 Palma + 2 Deià</td><td class="tier">$1,800<br><span style="font-size: 0.75rem; opacity: 0.7;">3★ Palma + Hotel Es Molí Deià</span></td><td class="tier standard std-mark">$7,300<br><span style="font-size: 0.75rem; opacity: 0.7;">Es Princep + Belmond La Residencia (Amex FHR)</span></td><td class="tier">$15,500<br><span style="font-size: 0.75rem; opacity: 0.7;">Cap Rocat + Belmond suite + Park Hyatt</span></td></tr>
+          <tr><td class="item">Michelin ★ dinners (DINS + Marc Fosh + El Olivo + Béns d'Avall)</td><td class="tier">$650<br><span style="font-size: 0.75rem; opacity: 0.7;">1 ★ + Sa Premsa + Es Verger</span></td><td class="tier standard std-mark">$1,800<br><span style="font-size: 0.75rem; opacity: 0.7;">DINS + Marc Fosh + El Olivo + Béns d'Avall</span></td><td class="tier">$2,800<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Voro ★★ lunch + Zaranda ★</span></td></tr>
+          <tr><td class="item">Other dinners + lunches + Es Verger lamb + Sa Premsa</td><td class="tier">$650</td><td class="tier standard std-mark">$1,050<br><span style="font-size: 0.75rem; opacity: 0.7;">Es Verger + Sa Premsa + Adrián Quetglas + Ca's Patró + Sebastian</span></td><td class="tier">$1,500</td></tr>
+          <tr><td class="item">Wine day · driver + 2 bodegas + tastings</td><td class="tier">$200<br><span style="font-size: 0.75rem; opacity: 0.7;">single visit, taxi</span></td><td class="tier standard std-mark">$850<br><span style="font-size: 0.75rem; opacity: 0.7;">private driver + Ribas + Macià Batle + lunch</span></td><td class="tier">$1,200<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Ànima Negra Felanitx 3rd bodega</span></td></tr>
+          <tr><td class="item">Cap Formentor sailing day</td><td class="tier">$320<br><span style="font-size: 0.75rem; opacity: 0.7;">shared group €80/pp</span></td><td class="tier standard std-mark">$1,200<br><span style="font-size: 0.75rem; opacity: 0.7;">Mallorcan llaut with skipper full day</span></td><td class="tier">$2,200<br><span style="font-size: 0.75rem; opacity: 0.7;">private luxury yacht with crew + lunch</span></td></tr>
+          <tr><td class="item">Beach club · Purobeach / Nikki / Mhares</td><td class="tier">$160<br><span style="font-size: 0.75rem; opacity: 0.7;">sunbed × 2</span></td><td class="tier standard std-mark">$450<br><span style="font-size: 0.75rem; opacity: 0.7;">Purobeach cabana + lunch + DJ sundowner</span></td><td class="tier">$900<br><span style="font-size: 0.75rem; opacity: 0.7;">+ VIP table + day at Nikki Sunday</span></td></tr>
+          <tr><td class="item">Nightlife · Abaco + Sky Bar + Brooklyn</td><td class="tier">$150</td><td class="tier standard std-mark">$320<br><span style="font-size: 0.75rem; opacity: 0.7;">Abaco × 2 + Sky Bar + Brooklyn cover</span></td><td class="tier">$700<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Magaluf BCM + Tito's VIP</span></td></tr>
+          <tr><td class="item">Perseids driver + transfers + Sa Calobra fuel</td><td class="tier">$240<br><span style="font-size: 0.75rem; opacity: 0.7;">self-drive rental</span></td><td class="tier standard std-mark">$580<br><span style="font-size: 0.75rem; opacity: 0.7;">PMI taxi + Belmond xfer + Perseids driver</span></td><td class="tier">$1,100<br><span style="font-size: 0.75rem; opacity: 0.7;">+ private daily driver service</span></td></tr>
+          <tr><td class="item">Festival tickets · Chopin + (optional) Pollença</td><td class="tier">$60<br><span style="font-size: 0.75rem; opacity: 0.7;">1 recital</span></td><td class="tier standard std-mark">$140<br><span style="font-size: 0.75rem; opacity: 0.7;">Chopin Sun + DIMF Deià</span></td><td class="tier">$320<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Pollença Festival marquee night</span></td></tr>
+          <tr><td class="item">Activities · Sóller train + cathedral + spa</td><td class="tier">$140</td><td class="tier standard std-mark">$320<br><span style="font-size: 0.75rem; opacity: 0.7;">Sóller train + La Seu + Almudaina + Belmond spa</span></td><td class="tier">$1,200<br><span style="font-size: 0.75rem; opacity: 0.7;">+ hot-air balloon + Cabrera scuba day</span></td></tr>
+          <tr><td class="item">Cushion / tips / incidentals</td><td class="tier">$200</td><td class="tier standard std-mark">$640</td><td class="tier">$1,200</td></tr>
         </tbody>
         <tfoot>
           <tr>
             <td class="total-label">Total · two travelers, all-in</td>
-            <td class="tier">$5,330</td>
+            <td class="tier">$6,570</td>
             <td class="standard">$17,050</td>
-            <td class="tier">$28,000</td>
+            <td class="tier">$34,420</td>
           </tr>
         </tfoot>
       </table>
       <p class="footnote">
-        <strong>Honest read:</strong> Mallorca Standard is the most-expensive Standard of the six options ($17,050 vs. Provence baseline $9,580) — almost entirely because Belmond La Residencia peak nights are 2–3× more than the Provence/Cascais/Basque/Madeira marquee hotels. If you swap Belmond for Hotel Es Molí (same village, ~70% cheaper), Standard drops to ~$8,200 — below Provence. So the real Mallorca question is: <em>do you want Belmond, or do you want the village?</em> Belmond gives you both; Hotel Es Molí gives you the village at one third the price. Both keep you in Deià with the same views.
+        <strong>Honest read:</strong> Mallorca Standard ($17,050) is the highest of the European options — almost entirely because Belmond La Residencia peak nights are 2–3× the Provence/Cascais/Basque marquee hotels. The Amex FHR 15% + $100 F&amp;B credit drops Belmond's effective rate, and you only sleep there 2 of 5 nights, but it still drives the budget. <strong>If you swap Belmond → Hotel Es Molí (same Deià village, 4★ instead of 5★), Standard drops to ~$10,500</strong> — competitive with Hvar+Split. The real Mallorca question: <em>do you want Belmond, or do you want Mallorca?</em> Belmond gives you both; Es Molí gives you Mallorca at 60% of the price, in the same village.
       </p>
     </div>
 
@@ -891,7 +1388,7 @@
 
 <footer>
   <div class="container">
-    <p>Built for Mark · August 11–17, 2026 · LAX origin · 5 hotel nights in Deià · <a href="../index.html">all trips</a> · <a href="./aug_11_europe.html">compare 6 options</a></p>
+    <p>Built for Mark · August 11–17, 2026 · LAX origin · 5 hotel nights · 3 Palma + 2 Deià · <a href="../index.html">all trips</a> · <a href="./aug_11_europe.html">compare options</a></p>
   </div>
 </footer>
 
