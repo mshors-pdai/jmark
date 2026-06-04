@@ -1,7 +1,8 @@
 # AGENT.md — Personal Index Context
 
 > Handoff doc for future Claude sessions. Read this first, then read [STYLE.md](./STYLE.md).
-> Last updated: 2026-06-02 — Mallorca added as Trip 03 Option F; criteria + scoring-matrix section added to the hub (Annecy currently leads at 38/39); repo moved out of `/tmp/jmark-deploy/` to `~/embeddedLayers/jmark/`; legacy local edit copies archived to `.archive-pre-merge-2026-06-02/`.
+> Last updated: 2026-06-04 — **Trip 03 criteria recalibrated to active+nightlife+late-dinners+good-food** (Joann said original brief was boring). Hub expanded 6 → 9 options: Mykonos, Hvar+Split, Côte d'Azur added. New standings: **San Sebastián 36 = Côte d'Azur 36 (tied)**; Cascais 35; Mallorca 34.5; Annecy 34 (old winner, drops on nightlife); Hvar+Split 34; Madeira 32.5; Mykonos 32; Provence 31.5 (booked baseline). Criteria reshape: out "less seafood / low crowds" as hard filters, in "nightlife & late energy / activity density" as hard filters; seafood demoted to soft modifier. Each option backed by 3,000–5,000-word deep-research dossier (web-cited; ~80 tool calls / agent). Per-page over-packed itinerary rewrites still pending; hub scoring + verdict already reflect the recalibration.
+> 2026-06-02 — Mallorca added as Trip 03 Option F; criteria + scoring-matrix section added to the hub (Annecy then led at 38/39); repo moved out of `/tmp/jmark-deploy/` to `~/embeddedLayers/jmark/`; legacy local edit copies archived to `.archive-pre-merge-2026-06-02/`.
 
 ## What this repo is
 
@@ -22,13 +23,16 @@ jmark/
 ├── STYLE.md                         # Style guide — read before building a new trip page
 ├── AGENT.md                         # This file
 ├── trip/                            # Travel itineraries
-│   ├── aug_11_europe.html           # Trip No. 03 HUB — 6-option Aug 11-17 decision · criteria + scoring matrix · Annecy currently leads 38/39
-│   ├── aug_11_provence.html         # Itinerary No. 01 — couples', Aug 2026 (also Trip 03 · Option A · booked baseline)
-│   ├── aug_11_cascais.html          # Trip 03 · Option B — Portugal Atlantic (NEW · added 2026-06-02)
-│   ├── aug_11_san_sebastian.html    # Trip 03 · Option C — Basque food capital (NEW · added 2026-06-02)
-│   ├── aug_11_madeira.html          # Trip 03 · Option D — Atlantic island (NEW · added 2026-06-02)
-│   ├── aug_11_annecy.html           # Trip 03 · Option E — French Alps, the savory non-seafood pick (NEW · added 2026-06-02)
-│   ├── aug_11_mallorca.html         # Trip 03 · Option F — Balearic island, meat-Spain at Deià (NEW · added 2026-06-02)
+│   ├── aug_11_europe.html           # Trip No. 03 HUB — 9-option Aug 11-17 decision · recalibrated 2026-06-04 · SS + Côte d'Azur tied 36/39
+│   ├── aug_11_provence.html         # Itinerary No. 01 — couples', Aug 2026 (also Trip 03 · Option A · booked baseline · new score 31.5)
+│   ├── aug_11_cascais.html          # Trip 03 · Option B — Portugal Atlantic · new score 35 (+8 from old criteria — biggest jump)
+│   ├── aug_11_san_sebastian.html    # Trip 03 · Option C — Basque · TIED LEADER 36 · Aste Nagusia Aug 8-15 lands inside trip
+│   ├── aug_11_madeira.html          # Trip 03 · Option D — Atlantic island · new score 32.5 (-1.5 on nightlife)
+│   ├── aug_11_annecy.html           # Trip 03 · Option E — French Alps · new score 34 (-4 from old 38, was old winner)
+│   ├── aug_11_mallorca.html         # Trip 03 · Option F — Balearic, Deià · new score 34.5 (+4.5)
+│   ├── aug_11_mykonos.html          # Trip 03 · Option G — Cycladic nightlife · new score 32 · NEW added 2026-06-04
+│   ├── aug_11_hvar.html             # Trip 03 · Option H — Dalmatian sailing · new score 34 · NEW added 2026-06-04
+│   ├── aug_11_cote_dazur.html       # Trip 03 · Option I — French Riviera grand · TIED LEADER 36 · NEW added 2026-06-04
 │   └── jun_20_kern.html             # Itinerary No. 02 — family, summer 2026
 ├── practice/                        # Daily / weekly / monthly protocols
 │   └── index.html                   # The full practice prescription (sage palette)
@@ -97,22 +101,34 @@ jmark/
 
 ### Trip No. 03 · Europe Decision Hub · Aug 11–17, 2026
 
-**Status:** active deliberation · 6 plans on the table, Provence is the booked baseline, Annecy currently leads the criteria matrix at 38/39
+**Status (recalibrated 2026-06-04):** active deliberation · 9 plans on the table, Provence is the booked baseline, **San Sebastián and Côte d'Azur tied at 36/39** under the new criteria.
 **Dates:** Tue Aug 11 → Mon Aug 17, 2026 (6 days, **5 hotel nights**) — same dates as Trip No. 01
-**Origin:** LAX · **Travelers:** 2 · **Decision deadline:** by July 1, 2026 (to keep Belcanto + Kappo + 3★ + Voro ★★ tables on the table)
+**Origin:** LAX · **Travelers:** 2 · **Decision deadline:** by July 1, 2026 (to keep Belcanto + Berasategui + 3★ tables + Voro ★★ + Caves du Roy + Le Louis XV on the table)
 
-**The 6 options (linked from `trip/aug_11_europe.html`):**
+**The 9 options (linked from `trip/aug_11_europe.html`):**
 
-| Option | Where | Slug | Standard tier | Score /39 | Differentiator |
-|--------|-------|------|---------------|-----------|----------------|
-| **A** | Cassis / Provence (France) | `aug_11_provence.html` | **$9,580** | 31 | Booked baseline · La Villa Madie ★★★ · single hotel · classic Med summer |
-| **B** | Cascais / Guincho (Portugal) | `aug_11_cascais.html` | **$9,815** | 27 | Only US nonstop (TAP) · world-class wind/kite at Guincho · Belcanto ★★ in Lisbon · Sintra palaces |
-| **C** | San Sebastián / Basque (Spain) | `aug_11_san_sebastian.html` | **$11,254** | 32 | 3× ★★★ within 12 mi · lands inside Aste Nagusia (fireworks ×4 incl. finale Aug 15) · coolest climate (77°F) |
-| **D** | Madeira / Funchal (Portugal) | `aug_11_madeira.html` | **$10,748** | 34 | Cannot heatwave (trade winds) · Perseids from 5,965 ft above the cloud sea · Garajau dive reserve · Belmond Reid's Palace |
-| **E** | Annecy / French Alps (France) | `aug_11_annecy.html` | **$11,160** | **38** ⭐ | **The savory non-seafood pick** · Reblochon + Beaufort + tartiflette + charcuterie · ★★★ Clos des Sens + ★★ Conte + ★★ Père Bise · 75°F clear lake · paragliding Col de la Forclaz · Aiguille du Midi day trip · matrix leader |
-| **F** | Mallorca / Deià (Spain) | `aug_11_mallorca.html` | **$17,050** | 30 | Belmond La Residencia in Tramuntana village · sobrasada / lechona / Sóller lamb (meat-Spain ≠ Basque) · Voro ★★ Canyamel + ★ ×9 (2026 guide) · Sa Calobra hairpin drive · Cap de Formentor lighthouse · hottest of the 6 at 85–90°F · Belmond peak drives Standard up |
+| Option | Where | Slug | Standard tier | New /39 | Old /39 | Differentiator |
+|--------|-------|------|---------------|---------|---------|----------------|
+| **C** | San Sebastián / Basque (Spain) | `aug_11_san_sebastian.html` | **$11,254** | **36** ⭐ | 32 | **Aste Nagusia Aug 8–15 lands inside trip** · fireworks 22:45 every night · up to 10 Michelin stars possible across 5 dinners · pintxos + txosnas = built-in nightlife · value pick at $12–15K |
+| **I** | Côte d'Azur (France/Monaco) | `aug_11_cote_dazur.html` | **$25,000+** | **36** ⭐ | NEW | **3× ★★★ in 90 min** (Louis XV + Vague d'Or + Mirazur) · Cannes fireworks Aug 15 22:00 Finland team · Caves du Roy + Jimmy'z + Bâoli · glamour pick at $25–40K |
+| **B** | Cascais / Guincho (Portugal) | `aug_11_cascais.html` | **$9,815** | **35** | 27 | **Biggest jump (+8)** · Lisbon ★★ ×3 (Belcanto/Henrique Sá Pessoa/Fifty Seconds) · Bairro Alto + Lux Frágil · Aug 15 Armand Van Helden DJ · Perseids Cabo da Roca · only US nonstop (TAP) |
+| **F** | Mallorca / Deià + Palma (Spain) | `aug_11_mallorca.html` | **$17,050** | **34.5** | 30 | Belmond + Voro ★★ + Palma nightlife (Abaco + Santa Catalina + Tito's BCM + Purobeach) · 3 Palma + 2 Deià split recommended · 85–90°F · Cap Formentor road closed 10 AM–10 PM through Oct 18 |
+| **E** | Annecy / French Alps (France) | `aug_11_annecy.html` | **$11,160** | **34** | **38** | **Old winner drops −4 on nightlife** · 13 stars / 7 restaurants in basin · Le Brise Glace closed Jul 10–Aug 24 · Fête du Lac Aug 1 missed · Fête des Guides Chamonix Aug 15 salvage anchor |
+| **H** | Hvar + Split (Croatia) | `aug_11_hvar.html` | **$9,650** | **34** | NEW | Pakleni Islands sail + Vis Blue Cave + Brač Vidova Gora · Hvar Town nightlife to 5 AM · Krug ★ Split (only ★ in range) · 43% cheaper than Mallorca |
+| **D** | Madeira / Funchal (Portugal) | `aug_11_madeira.html` | **$10,748** | **32.5** | 34 | Perseids above cloud sea Pico do Arieiro · Il Gallo d'Oro ★★ + William ★ + Desarma ★ · Belmond Reid's · **Wine festival starts Aug 27 — missed by 10 days** · nightlife real but small |
+| **G** | Mykonos / Cyclades (Greece) | `aug_11_mykonos.html` | **~$15,000+** | **32** | NEW | Best beach-club nightlife in Med Aug (Scorpios/SantAnna/Cavo Paradiso · Diplo Aug 16 confirmed) · Greek meat tradition (Beefbar + Kiki's) · **no Michelin stars on island** · Meltemi cancels 30%+ boat days |
+| **A** | Cassis / Provence (France) | `aug_11_provence.html` | **$9,580** | **31.5** | 31 | **Booked baseline** · La Villa Madie ★★★ + Bandol wines locked · Cassis quiet at night (last seatings 21:30) · Marseille nightlife requires 35-min drive · seafood-capital cuisine works against new brief |
 
-**Locked decision criteria (added 2026-06-02):** 5 hard filters (less seafood / Michelin / safety / weather / low crowds) + 3 soft (romance / wine / activities). Scored on the hub at `#scoring`. Hard criteria count 2×, soft 1×. Max 39.
+**Recalibrated criteria (locked 2026-06-04):** Out: "less seafood" (demoted to soft modifier), "low crowds" (dropped — festivals are now a feature). In: "nightlife & late energy" (hard ×2), "activity density" (hard ×2). Reframed: "Michelin" → "Food caliber" (Michelin + late-dinner culture + non-seafood depth). Held: Weather (hard), Safety (hard), Wine (soft), Romance (soft). Scored on the hub at `#scoring`. Hard ×2, soft ×1. Max 39.
+
+**Critical findings from research (2026-06-04 deep web research, 9 agents, ~80 tool calls each):**
+- **🌑 Aug 12 2026 = total solar eclipse over northern Spain** — flight/hotel disruption risk for San Sebastián trip; SS is in deep-partial coverage zone, central Spain (Aragón/Castilla) on centerline.
+- **Etxebarri ★ closed all of August** — confirmed from restaurant site; swap to Azurmendi ★★★ (Bilbao, 1h) for the wood-fire fix.
+- **Cap de Formentor road closed 10 AM–10 PM May 15–Oct 18 2026** — kills the planned Perseids viewing at the lighthouse for Mallorca; substitute Mortitx / Coll de sa Batalla / Cap de ses Salines.
+- **Plage Keller (Cap d'Antibes) closed for 2026 renovation** — operates as "La Piscine Keller" at Palm Beach Cannes (Côte d'Azur).
+- **Madeira Wine Festival starts Aug 27** — we miss by 10 days; mitigate with Blandy's + Pereira d'Oliveira + Barbeito cellar visits.
+- **Cannes International Fireworks Festival Aug 15 22:00** — Finland team (Joho Pyro) confirmed; free, La Croisette.
+- **Diplo at Cavo Paradiso Sun Aug 16** — confirmed Mykonos late-Sunday anchor.
 
 **Time-locked events shared across all 6 options:**
 
@@ -120,7 +136,7 @@ jmark/
 - **🎆/⛪ Aug 15 Assumption** — Catholic national holiday in France, Spain, Portugal. Each town has its own tradition; the Basque one (Aste Nagusia finale at La Concha) is the most spectacular fireworks; Mallorca = island-wide religious processions and "Els Llits de la Mare de Déu" displays, restaurants packed, coastal roads gridlocked.
 - **🎵 Music festival** — Provence has Festival de La Roque d'Anthéron (through Aug 16); Basque has Aste Nagusia; Cascais has Festival de Sintra; Madeira's Wine Festival opens Aug 27 (just misses).
 
-**Hub page recommendation:** Per the locked criteria, **Annecy (E) is the matrix winner at 38/39** — the only option that clears every hard filter at a 3. Cascais (B) was the prior recommendation for activity variety and the +$235 delta but loses on the seafood + Michelin criteria. Provence (A) remains the booked fallback if decision fatigue wins. Mallorca (F) is the meat-Spain alternative to Basque, but at the highest Standard cost and with peak-Med crowds + heat — only solid if those are acceptable trades.
+**Hub page recommendation (recalibrated 2026-06-04):** Per the new criteria, **San Sebastián (C) and Côte d'Azur (I) tie at 36/39** — the value pick (SS at $12–15K with Aste Nagusia overlay) vs. the glamour pick (Côte d'Azur at $25–40K with 3× ★★★ stacked). **Cascais (B, 35)** is the dark horse +8 jumper — Lisbon's three ★★ + Bairro Alto crawl + Lux Frágil + Perseids at Cabo da Roca with the only US nonstop. **Mallorca (F, 34.5)** rises on Palma's nightlife + beach-club density. **Annecy (E, 34)** — the old 38 winner — drops 4 on nightlife (Le Brise Glace closed all trip, Fête du Lac missed); still elite on food + activity if pure-nightlife isn't the dominant axis. **Provence (A, 31.5)** is the booked-default fallback.
 
 **Open booking items (decision phase):**
 
