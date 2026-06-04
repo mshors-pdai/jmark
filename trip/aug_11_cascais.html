@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>August 2026 — Cascais &amp; the Guincho Coast</title>
+<title>August 2026 — Cascais &amp; the Guincho Coast · Overpacked</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -32,7 +32,6 @@
   .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; }
   a { color: inherit; }
 
-  /* ===== Back-to-index bar (shared component) ===== */
   .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
   .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
   .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
@@ -45,7 +44,6 @@
   .back-bar .meta-mini { display: none; font-size: 0.74rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
   @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
 
-  /* ===== Top Nav ===== */
   .topnav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 1rem 0; }
   .topnav .container { display: flex; justify-content: space-between; align-items: center; }
   .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
@@ -53,17 +51,15 @@
   .topnav .tab { padding: 0.5rem 1.25rem; border-radius: 999px; text-decoration: none; color: var(--cascais-deep); font-size: 0.9rem; font-weight: 500; transition: all 0.2s; border: 1px solid var(--cascais-terra); }
   .topnav .tab:hover { background: var(--cascais-terra); color: white; }
 
-  /* ===== Intro Hero ===== */
   .intro-hero { padding: 6rem 0 4rem; text-align: center; background: linear-gradient(180deg, var(--cascais-cream) 0%, #fafaf7 100%); }
   .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--cascais-terra); }
   .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
   .intro-hero h1 em { font-style: italic; color: var(--cascais-terra); font-weight: 400; }
-  .intro-hero .lede { max-width: 720px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .lede { max-width: 740px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
   .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
   .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
   .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
 
-  /* ===== Destination ===== */
   .destination { padding: 6rem 0 4rem; background: var(--cascais-cream); }
   .hero-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.12); margin-bottom: 4rem; }
   .hero-card .hero-image { min-height: 500px; background-size: cover; background-position: center; position: relative;
@@ -78,13 +74,11 @@
   .stat .stat-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.1; margin-bottom: 0.2rem; color: var(--cascais-deep); }
   .stat .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
 
-  /* ===== Section header ===== */
-  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 700px; }
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 720px; }
   .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--cascais-terra); }
   .section-header h2 { margin-bottom: 1rem; color: var(--cascais-deep); }
   .section-header p { color: var(--muted); font-size: 1.05rem; }
 
-  /* ===== Flight Box ===== */
   .flight-box { background: white; border-radius: 16px; padding: 2.5rem; max-width: 920px; margin: 2rem auto 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
   .flight-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
   .flight-row:last-of-type { border-bottom: none; }
@@ -99,7 +93,6 @@
   .flight-meta .item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 0.3rem; }
   .flight-meta .item .val { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--cascais-deep); }
 
-  /* ===== Only This Week ===== */
   .only-this-week { max-width: 1100px; margin: 0 auto 4rem; padding: 3rem; background: linear-gradient(135deg, #faf4e8, #f5e8d8); border-radius: 24px; }
   .only-this-week .head { text-align: center; margin-bottom: 2.5rem; }
   .only-this-week h3 { color: var(--cascais-deep); font-size: 2rem; margin-top: 0.5rem; }
@@ -123,7 +116,6 @@
   .bonus-callout p { font-size: 0.95rem; color: #333; margin: 0; }
   .bonus-callout a { color: var(--cascais-sea); font-weight: 600; }
 
-  /* ===== Day at a glance ===== */
   .glance-table { max-width: 1000px; margin: 0 auto 4rem; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
   .glance-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
   .glance-table th { background: var(--cascais-terra); color: white; padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600; }
@@ -132,7 +124,6 @@
   .glance-table tr:nth-child(even) td { background: rgba(193,100,74,0.03); }
   .glance-table td.daynum { font-weight: 600; color: var(--cascais-terra); }
 
-  /* ===== Itinerary timeline ===== */
   .itinerary { max-width: 950px; margin: 0 auto; }
   .day { display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
   .day:last-child { border-bottom: none; }
@@ -144,8 +135,9 @@
   .day-content ul li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 6px; height: 6px; border-radius: 50%; background: var(--cascais-terra); }
   .day-content ul li strong { color: var(--cascais-deep); }
   .day-content ul li a { color: var(--cascais-terra); text-decoration: none; border-bottom: 1px dotted; }
+  .alts { background: rgba(193,100,74,0.06); border-left: 3px solid var(--cascais-terra); padding: 0.85rem 1rem; margin: 0.75rem 0 0.25rem 1.5rem; border-radius: 0 6px 6px 0; font-size: 0.88rem; color: #444; }
+  .alts strong { color: var(--cascais-terra); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.25rem; }
 
-  /* ===== Hotel / Food cards ===== */
   .hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
   .hotel-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
   .hotel-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
@@ -160,7 +152,6 @@
   .hotel-card .book-link { display: inline-block; padding: 0.35rem 0.85rem; font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--cascais-terra); border: 1.5px solid var(--cascais-terra); align-self: flex-start; margin-top: 0.5rem; }
   .hotel-card .book-link:hover { background: var(--cascais-terra); color: white; }
 
-  /* ===== Wine block ===== */
   .wine-block { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; max-width: 1100px; margin: 0 auto 2rem; background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.06); align-items: center; }
   .wine-block .wine-image { min-height: 360px; background-size: cover; background-position: center; background-color: var(--cascais-sand); }
   .wine-block.whites .wine-image { background-image: linear-gradient(135deg, rgba(193,100,74,0.25), rgba(212,163,115,0.35)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80'); }
@@ -175,7 +166,15 @@
   .winery-list .name a { color: var(--cascais-terra); text-decoration: none; }
   .winery-list .desc { font-size: 0.88rem; color: var(--muted); }
 
-  /* ===== Activities ===== */
+  .food-list { max-width: 950px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .food-row { display: grid; grid-template-columns: 1fr 1.6fr auto; gap: 1.5rem; padding: 1.5rem; border-bottom: 1px solid var(--line); align-items: center; }
+  .food-row:last-child { border-bottom: none; }
+  .food-row .place { font-family: 'Playfair Display', serif; font-weight: 600; color: var(--cascais-deep); font-size: 1.1rem; }
+  .food-row .place .stars { color: var(--cascais-terra); margin-left: 0.4rem; font-size: 0.9rem; }
+  .food-row .place .meta { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0; }
+  .food-row .desc { font-size: 0.92rem; color: #333; line-height: 1.55; }
+  .food-row .drive { font-size: 0.78rem; color: var(--muted); text-align: right; white-space: nowrap; }
+
   .activities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1100px; margin: 0 auto; }
   .activity { background: white; border-radius: 12px; padding: 1.75rem 1.25rem; text-align: center; transition: transform 0.2s; border: 1px solid var(--line); }
   .activity:hover { transform: translateY(-2px); }
@@ -184,7 +183,25 @@
   .activity h4 a { color: inherit; text-decoration: none; }
   .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
 
-  /* ===== Booking + Budget ===== */
+  .nightlife { max-width: 1100px; margin: 0 auto 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .nightlife-col { background: #15161a; color: white; padding: 2rem; border-radius: 16px; }
+  .nightlife-col h3 { color: var(--cascais-terra); margin-bottom: 1.25rem; font-style: italic; }
+  .nightlife-col .venue { padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nightlife-col .venue:last-child { border-bottom: none; }
+  .nightlife-col .venue .vname { font-family: 'Playfair Display', serif; font-weight: 600; color: white; font-size: 1.05rem; }
+  .nightlife-col .venue .vmeta { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
+  .nightlife-col .venue .vdesc { font-size: 0.88rem; color: rgba(255,255,255,0.75); margin-top: 0.5rem; line-height: 1.5; }
+
+  .score-grid { max-width: 1000px; margin: 0 auto 3rem; }
+  .score-row { display: grid; grid-template-columns: 1fr auto 70px; gap: 1rem; padding: 1.1rem 1.5rem; background: white; border-radius: 8px; margin-bottom: 0.6rem; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .score-row .axis { font-weight: 600; color: var(--cascais-deep); }
+  .score-row .axis .tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-left: 0.5rem; font-weight: 500; }
+  .score-row .reason { font-size: 0.88rem; color: #444; max-width: 480px; text-align: right; }
+  .score-row .num { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--cascais-terra); font-weight: 600; }
+  .score-row.total { background: var(--cascais-deep); color: white; }
+  .score-row.total .axis { color: white; }
+  .score-row.total .num { color: white; font-size: 1.9rem; }
+
   .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
   .booking .section-header h2 { color: white; }
   .booking .section-header p { color: rgba(255,255,255,0.7); }
@@ -199,6 +216,11 @@
   .step .meta-line { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
   .step .meta-line a { color: var(--cascais-sand); text-decoration: none; }
 
+  .adversarial { max-width: 950px; margin: 4rem auto 0; padding: 2.5rem; background: rgba(255,255,255,0.04); border-radius: 16px; border-left: 4px solid var(--cascais-terra); }
+  .adversarial h3 { color: white; margin-bottom: 1rem; }
+  .adversarial p { color: rgba(255,255,255,0.78); font-size: 0.95rem; margin-bottom: 1rem; }
+  .adversarial p strong { color: var(--cascais-terra); }
+
   .budget-table { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px; }
   .budget-table .head { text-align: center; margin-bottom: 2.5rem; }
   .budget-table h3 { color: white; margin-top: 0.5rem; }
@@ -207,7 +229,7 @@
   .budget-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
   .budget-table th.item { text-align: left; color: rgba(255,255,255,0.6); width: 38%; }
   .budget-table th.tier { text-align: center; color: rgba(255,255,255,0.85); width: 21%; font-size: 0.92rem; }
-  .budget-table th.standard { color: var(--cascais-terra); font-weight: 700; font-size: 1rem; background: rgba(193,100,74,0.12); }
+  .budget-table th.standard { color: var(--cascais-terra); font-weight: 700; font-size: 1rem; background: rgba(193,100,74,0.14); }
   .budget-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
   .budget-table td.item { color: rgba(255,255,255,0.85); }
   .budget-table td.tier { text-align: center; }
@@ -222,7 +244,6 @@
 
   footer { background: #0d0d0d; color: rgba(255,255,255,0.6); padding: 2.5rem 0; text-align: center; font-size: 0.85rem; }
 
-  /* ===== Responsive ===== */
   @media (max-width: 900px) {
     .hero-card { grid-template-columns: 1fr; }
     .hero-card .hero-image { min-height: 280px; }
@@ -233,12 +254,18 @@
     .hotels-grid { grid-template-columns: 1fr 1fr; }
     .activities { grid-template-columns: repeat(2, 1fr); }
     .flight-row { grid-template-columns: 1fr; gap: 0.5rem; }
-    .topnav .tabs { flex-wrap: wrap; }
     .only-this-week .grid { grid-template-columns: 1fr; }
     .wine-block { grid-template-columns: 1fr; }
     .wine-block .wine-text { padding: 2rem; }
+    .nightlife { grid-template-columns: 1fr; }
+    .topnav .tabs { flex-wrap: wrap; }
     .container { padding: 0 1.25rem; }
     .step { grid-template-columns: 60px 1fr; gap: 1rem; }
+    .food-row { grid-template-columns: 1fr; gap: 0.6rem; }
+    .food-row .drive { text-align: left; }
+    .score-row { grid-template-columns: 1fr; }
+    .score-row .reason { text-align: left; }
+    .score-row .num { text-align: left; }
   }
   @media (max-width: 600px) {
     .hotels-grid, .activities { grid-template-columns: 1fr; }
@@ -260,7 +287,7 @@
 <div class="back-bar">
   <div class="container">
     <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
-    <span class="meta-mini">Itinerary No. 03A · Cascais · <a href="./aug_11_europe.html" style="color: var(--cascais-terra); text-decoration: none;">compare 4 options ↗</a></span>
+    <span class="meta-mini">Itinerary No. 03A · Cascais · <a href="./aug_11_europe.html" style="color: var(--cascais-terra); text-decoration: none;">compare options ↗</a></span>
     <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
   </div>
 </div>
@@ -274,6 +301,8 @@
       <a href="#wine" class="tab">Wine</a>
       <a href="#food" class="tab">Food</a>
       <a href="#activities" class="tab">Activities</a>
+      <a href="#nightlife" class="tab">Nightlife</a>
+      <a href="#score" class="tab">Score</a>
       <a href="#book" class="tab">Book Now</a>
     </div>
   </div>
@@ -281,10 +310,10 @@
 
 <section class="intro-hero">
   <div class="container">
-    <span class="eyebrow">Portugal · Atlantic Coast · 5 Hotel Nights</span>
+    <span class="eyebrow">Portugal · Atlantic Coast · 5 Hotel Nights · Option A · Overpacked</span>
     <h1>Cascais &amp;<br>the <em>Guincho Coast.</em></h1>
     <p class="lede">
-      A former royal seaside retreat 30 minutes from Lisbon, hemmed in by the wild beaches of Sintra-Cascais Natural Park. One of Europe's best wind &amp; kite coasts, multiple Michelin tables on the cliff, and a steady Atlantic breeze that keeps the heatwave inland. A single hotel for all five nights, a TAP nonstop into Lisbon, and zero compromises.
+      The overpacked Atlantic pick — biggest jump in re-scoring (+8). Three nights cliff-side at <strong>Fortaleza do Guincho</strong> (R&amp;C, ★ on-site) then two nights at <strong>Bairro Alto Hotel</strong> in Lisbon for the Michelin run. <strong>Belcanto ★★</strong> + <strong>Henrique Sá Pessoa ★★</strong> + <strong>Fortaleza Guincho ★</strong> stacked across the week; Guincho kite + Carcavelos surf + Cascais sunset sail + Arrábida coasteering + Sintra palaces + Cabo da Roca paragliding all inside a 40-km radius. <strong>The Perseids peak Aug 12→13 from Cabo da Roca</strong> (moonless new-moon sky, 90+/hr, westernmost continental Europe), <strong>Aug 15 brings the Cascais Maritime Procession of Senhora dos Navegantes</strong> + <strong>Armand Van Helden at Forte de Santo António da Barra</strong> (Cascais Atlantic Sunsets, €25 early bird). Bairro Alto crawl + <strong>Lux Frágil</strong> riverside till 6 AM for the Lisbon night. Only US nonstop in the comparison.
     </p>
     <div class="meta">
       <div class="meta-item"><div class="label">Departure</div><div class="value">Tue, Aug 11</div></div>
@@ -302,12 +331,12 @@
       <div class="hero-image"></div>
       <div class="hero-content">
         <span class="eyebrow">Option A · Portugal · Atlantic Coast</span>
-        <h2>Cascais &amp;<br>the Guincho Coast</h2>
-        <p class="tagline">A former royal seaside retreat hemmed in by Sintra-Cascais Natural Park, with one of Europe's elite wind/kite coasts, multiple Michelin tables on the cliff, and a steady Atlantic breeze that keeps the heatwave inland.</p>
+        <h2>Cascais +<br>Lisbon Nights</h2>
+        <p class="tagline">A former royal seaside retreat hemmed in by Sintra-Cascais Natural Park — one of Europe's elite wind/kite coasts, multiple Michelin tables, and a steady Atlantic breeze that keeps the heatwave inland. The 3+2 split lets the Cascais activity stack (kite, surf, sail, sand vineyards, Sintra palaces, Setúbal wine, Arrábida coasteering) sit alongside the Lisbon Michelin run + Bairro Alto + Lux Frágil. Aug 15 anchored by the fishermen's procession in Cascais Bay and Armand Van Helden at Forte de Santo António da Barra (€25 early bird).</p>
         <div class="stats">
-          <div class="stat"><div class="stat-value">79–82°F</div><div class="stat-label">August High</div></div>
-          <div class="stat"><div class="stat-value">High</div><div class="stat-label">Crowd Level</div></div>
-          <div class="stat"><div class="stat-value">Setúbal</div><div class="stat-label">Signature Wine</div></div>
+          <div class="stat"><div class="stat-value">78–85°F</div><div class="stat-label">August High</div></div>
+          <div class="stat"><div class="stat-value">High Energy</div><div class="stat-label">Crowd Level</div></div>
+          <div class="stat"><div class="stat-value">Setúbal · Colares</div><div class="stat-label">Signature Wine</div></div>
           <div class="stat"><div class="stat-value">35 min</div><div class="stat-label">LIS → Cascais</div></div>
         </div>
       </div>
@@ -317,38 +346,38 @@
     <div class="section-header">
       <span class="eyebrow">Getting There</span>
       <h2>Flight Plan</h2>
-      <p>TAP runs a nonstop LAX → Lisbon. Take the daytime departure on Aug 11 — lands LIS at <strong>11:55 AM</strong> on Aug 12. Lunch in Cascais by 1:30, swim by 3.</p>
+      <p><strong>TAP runs the only US nonstop in this comparison</strong> — LAX → LIS nonstop on TP224, lands 11:55 AM Wed. Lunch in Cascais by 1:30, ocean by 3, Cabo da Roca sunset hike before dinner. Return TP223 LIS → LAX nonstop on Mon Aug 17.</p>
     </div>
     <div class="flight-box">
       <div class="flight-row">
         <div class="flight-airport"><div class="code">LAX</div><div class="city">Los Angeles · Tue Aug 11 · dep 4:50 PM</div></div>
-        <div class="flight-line"><div class="info">TAP TP224</div><div class="dash"></div><div class="info">11h 5m nonstop</div></div>
+        <div class="flight-line"><div class="info">TAP TP224 · only US nonstop</div><div class="dash"></div><div class="info">11h 5m nonstop</div></div>
         <div class="flight-airport"><div class="code">LIS</div><div class="city">Lisbon · Wed Aug 12 · arr 11:55 AM</div></div>
       </div>
       <div class="flight-row">
-        <div class="flight-airport"><div class="code">LIS</div><div class="city">Lisbon · pickup by hotel</div></div>
-        <div class="flight-line"><div class="info">Welcome Pickups transfer</div><div class="dash"></div><div class="info">~35 min, $50</div></div>
-        <div class="flight-airport"><div class="code">CSC</div><div class="city">Cascais · arr <strong>1:00 PM</strong> · check in lunch</div></div>
+        <div class="flight-airport"><div class="code">LIS</div><div class="city">Lisbon · pickup by hotel · 35 min A5 motorway west</div></div>
+        <div class="flight-line"><div class="info">Welcome Pickups / hotel transfer</div><div class="dash"></div><div class="info">~45 min, $50–65</div></div>
+        <div class="flight-airport"><div class="code">CSC</div><div class="city">Guincho cliff · arr <strong>1:00 PM</strong> · lunch on the fortress terrace</div></div>
       </div>
       <div class="flight-meta">
         <div class="item"><div class="label">Est. Round-trip</div><div class="val">$1,000–$1,400</div></div>
-        <div class="item"><div class="label">At hotel by</div><div class="val">1:30 PM</div></div>
+        <div class="item"><div class="label">At hotel by</div><div class="val">1:00 PM</div></div>
         <div class="item"><div class="label">Carrier</div><div class="val">TAP Air Portugal</div></div>
       </div>
     </div>
+    <p style="text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;">Backup routings: <strong>United LAX→EWR→LIS</strong>, <strong>Lufthansa LAX→FRA→LIS</strong>, <strong>Delta/Air France LAX→CDG→LIS</strong>, <strong>British Airways LAX→LHR→LIS</strong>. None nonstop. TAP nonstop is the move — verify exact 2026 schedules. <a href="https://www.flytap.com/en_us/flights-from-los-angeles-to-lisbon" target="_blank" rel="noopener" style="color: var(--cascais-terra);">flytap.com LAX→LIS →</a></p>
 
-    <!-- Only This Week -->
     <div class="section-header">
       <span class="eyebrow">Day by Day</span>
       <h2>The Itinerary</h2>
-      <p>One base — Cascais — with everything reachable in under 45 minutes by car, train, or boat.</p>
+      <p>Two bases — <strong>3 nights Fortaleza do Guincho (Wed–Sat) → 2 nights Bairro Alto Hotel Lisbon (Sat–Mon)</strong>. Move on Sat morning so Saturday's Maritime Procession + Van Helden show keep you in Cascais all day, then Sun morning Lisbon Belém + Alfama is walkable from Bairro Alto. Days are stacked deliberately to over-promise on slots and over-deliver on alternatives — every major block has a rainy-day swap, a low-energy swap, and a doubling-down swap.</p>
     </div>
 
     <div class="only-this-week">
       <div class="head">
         <span class="eyebrow" style="color: var(--cascais-terra);">Only This Week</span>
         <h3>Don't-Miss Events on Your Exact Dates</h3>
-        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 700px; margin-left: auto; margin-right: auto;">Four experiences that only happen during the week you're there. Plan the itinerary around these.</p>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 720px; margin-left: auto; margin-right: auto;">Five things happening only during your week — Perseids peak from Cabo da Roca on a moonless sky, Aug 15 Cascais Maritime Procession + Armand Van Helden, FIARTIL handicrafts fair active the full visit, Casino Estoril open daily with summer Tamariz extension. You miss <strong>NOS Alive (Jul 9–11), Festival de Sintra (Jun 12–22), Kaytranada (Aug 8, just 3 days early)</strong>, and the <strong>Festas do Mar Cascais (Aug 20–23 + 27–30, 3 days after departure)</strong>. The week's anchor is what's <em>actually</em> hitting on Aug 12–17.</p>
       </div>
 
       <div class="grid">
@@ -357,71 +386,94 @@
           <div class="head">
             <span class="icon">☄️</span>
             <div>
-              <h4>Perseid Meteor Shower Peak</h4>
-              <div class="when">Night of <strong>Wed Aug 12 → Thu Aug 13</strong></div>
+              <h4>Perseid Meteor Shower Peak · Cabo da Roca</h4>
+              <div class="when">Night of <strong>Wed Aug 12 → Thu Aug 13</strong> · arrival night · moonless</div>
             </div>
           </div>
-          <p><strong>The best Perseid year of the decade.</strong> New moon on Aug 12 = moonless sky, 90+ meteors/hour at peak (1–4 AM local). Drive 30 min to <strong>Cabo da Roca</strong> — westernmost point of mainland Europe, dark-sky bluff over the Atlantic. Bring blankets, a thermos of bica, a bottle of Setúbal Moscatel. Plan to be back at hotel by 4 AM.</p>
+          <p><strong>The decade's best Perseid year — new moon Aug 12, dark sky, ~90 meteors/hr.</strong> Peak rates 02:00–04:00 GMT (= local Portugal). <strong>Cabo da Roca</strong> is THE vantage — westernmost point of continental Europe, cliff-top park, 140-m drop straight to Atlantic, certified-dark-sky country. Drive 25 min from Guincho, park near the lighthouse, walk to the south bluff. Bring blankets, a thermos of bica, a bottle of Setúbal Moscatel. Alternative: book a private cliff-edge dinner at the Fortaleza terrace and watch from your hotel — the 17th-c fortress sits on an unlit headland, same dark sky.</p>
           <a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener" class="book-link">Viewing guide →</a>
         </div>
 
         <div class="event-card sea">
           <div class="head">
-            <span class="icon">🎆</span>
+            <span class="icon">⚓</span>
             <div>
-              <h4 class="sea">Assumption Day in Cascais</h4>
-              <div class="when"><strong>Sat Aug 15</strong> — Portuguese national holiday</div>
+              <h4 class="sea">Cascais Maritime Procession · Senhora dos Navegantes</h4>
+              <div class="when"><strong>Sat Aug 15</strong> — Assumption Day public holiday · fishermen's procession by sea</div>
             </div>
           </div>
-          <p>Religious processions in the morning at Igreja da Assunção, then Cascais lights up for the night. <strong>10 PM fireworks</strong> over the bay from Marina de Cascais; harbor restaurants stay open late. Hotel concierges arrange terrace tables — request one for 8 PM with a view of the marina. Trains to Lisbon run late; don't plan a Lisbon dinner this night.</p>
-          <a href="https://visitcascais.com/en/event/dia-da-assuncao" target="_blank" rel="noopener" class="book-link">Event listing →</a>
+          <p>The annual Cascais fishermen's procession honoring Our Lady of the Navigators. Mass at the <strong>parish church</strong>, then the statue is carried in procession down to the <strong>wharf</strong>, loaded onto fishing boats, and rowed out to the <strong>Ermida da Guia</strong> (the small chapel on the coast road toward Boca do Inferno). Flowers thrown into the sea. Hundreds of locals in the boats; thousands line the Paredão promenade. <strong>The most authentic single moment of the week</strong> — and it happens before the Van Helden show, so you can do both in one Saturday.</p>
+          <a href="https://visitcascais.com/en/whats-on" target="_blank" rel="noopener" class="book-link">Cascais what's on →</a>
         </div>
 
         <div class="event-card olive">
           <div class="head">
-            <span class="icon">🎷</span>
+            <span class="icon">🎧</span>
             <div>
-              <h4 class="olive">Festival de Sintra · summer concerts</h4>
-              <div class="when">Runs through your trip · weekend concerts</div>
+              <h4 class="olive">Armand Van Helden · Cascais Atlantic Sunsets</h4>
+              <div class="when"><strong>Sat Aug 15</strong> · 22:00–02:00 · Forte de Santo António da Barra</div>
             </div>
           </div>
-          <p>The chamber-music + jazz festival of the Sintra hills. Concerts in 18th-century palaces (Quinta da Regaleira ballroom, Palácio Nacional) and the Centro Cultural Olga Cadaval. 30 min drive or 35 min train from Cascais. Aim for the Sat Aug 15 evening concert if you want a refined alternative to the Cascais fireworks. Tickets €25–€60.</p>
-          <a href="https://www.festivaldesintra.pt/en/" target="_blank" rel="noopener" class="book-link">Program →</a>
+          <p>US house-music heavyweight Armand Van Helden headlining the <strong>Cascais Atlantic Sunsets</strong> open-air series at the 16th-century <strong>Forte de Santo António da Barra</strong> — the seafront fortress on the Marginal between Cascais and Estoril, fortress walls dropping straight to the Atlantic. €25 early bird via Shotgun (will sell out — book now). Kaytranada played Aug 8 (you miss by 3 days), Van Helden is <em>your</em> headline. Walk back to Cascais hotels along the lit Paredão (1.5 km, busy Sat). The post-Velika Gospa party night.</p>
+          <a href="https://www.timeout.com/cascais/news/armand-van-helden-joins-kaytranada-at-forte-de-santo-antonio-da-barra-this-summer-051926" target="_blank" rel="noopener" class="book-link">Time Out announcement →</a>
         </div>
 
         <div class="event-card sand">
           <div class="head">
             <span class="icon">🎨</span>
             <div>
-              <h4 class="sand">Cascais Marina nightly summer market</h4>
-              <div class="when"><strong>Every evening</strong> in your week, 7 PM–midnight</div>
+              <h4 class="sand">FIARTIL Estoril International Handicrafts Fair</h4>
+              <div class="when">Active <strong>Jun 27 → Aug 24, 2026</strong> · open-air, adjacent to Casino Estoril</div>
             </div>
           </div>
-          <p>Largo Cidade de Vitória and the marina boardwalk fill with local makers, painters, ceramicists, and street musicians from 7 PM nightly through August. Built into your post-dinner walks — wander down from any hotel, watch the sun fall behind the marina, occasionally something is worth taking home. Free.</p>
-          <a href="https://visitcascais.com/en/whats-on" target="_blank" rel="noopener" class="book-link">What's on →</a>
+          <p>One of Portugal's oldest open-air handicrafts fairs (60+ editions), running every summer evening through Aug 24. Adjacent to Casino Estoril gardens — pottery, jewelry, textiles, regional foods, live music, fado pop-ups. Free entry, nightly through your stay, pairs with a Casino Estoril gambling night or a Tamariz beachside dinner. <strong>The post-dinner wander on a low-energy night</strong> — wander down from the hotel, eat a bifana, buy nothing or one thing.</p>
+          <a href="https://www.fiartil.pt/" target="_blank" rel="noopener" class="book-link">FIARTIL site →</a>
+        </div>
+
+        <div class="event-card sea">
+          <div class="head">
+            <span class="icon">🎰</span>
+            <div>
+              <h4 class="sea">Casino Estoril · daily 15:00–03:00</h4>
+              <div class="when">Open <strong>every day</strong> of your stay · summer Tamariz extension Jun–Oct</div>
+            </div>
+          </div>
+          <p>Europe's 5th-largest casino (NOT the largest, despite the legend) — slots, tables, poker, <strong>D Lounge</strong> live concerts + DJ sets, and the summer-only <strong>Tamariz beachside extension</strong> (open-air bar + DJ on Praia do Tamariz, 100 m from the casino). Casino itself open 15:00–03:00 daily. Ian Fleming wrote part of Casino Royale here in 1941. The doubling-down nightcap after any Cascais dinner; the rainy-day backup any night the Atlantic forecast turns. Bond-strict dress code at the casino tables (jacket recommended men, no shorts).</p>
+          <a href="https://www.casino-estoril.pt/en" target="_blank" rel="noopener" class="book-link">Casino Estoril →</a>
+        </div>
+
+        <div class="event-card olive">
+          <div class="head">
+            <span class="icon">🌙</span>
+            <div>
+              <h4 class="olive">Quinta da Regaleira Night Tour</h4>
+              <div class="when">Daily <strong>Apr–Oct</strong> · 19:30–23:00 · Initiation Well by lantern</div>
+            </div>
+          </div>
+          <p>The Sintra trick most day-trippers miss. <strong>Quinta da Regaleira opens for night tours</strong> April through October — the same 19th-c Romantic gardens, the same 27-m Initiation Well, but walked by lantern light, soundtrack of crickets, with maybe 50 people instead of 5,000. Pre-book a Wed evening slot in your Sintra-day window. €15. Pairs with a late Adega Regional de Colares tasting (open till 19:00) on the drive back.</p>
+          <a href="https://www.regaleira.pt/en" target="_blank" rel="noopener" class="book-link">Regaleira night tickets →</a>
         </div>
 
       </div>
 
       <div class="bonus-callout">
-        <h4>🍇 Bonus — Setúbal Moscatel harvest (the ambitious add-on)</h4>
-        <p>The Setúbal Moscatel harvest is one of Portugal's oldest fortified-wine traditions, and August 13–16 is when the José Maria da Fonseca and Bacalhôa cellars open their doors for the early-harvest tour with rare Moscatel Roxo tastings. <strong>50 min drive south</strong> across the Tagus bridge. Doable as a long day trip — leave at 9 AM, return for the marina sunset. <a href="https://www.jmf.pt/en/casa-museu" target="_blank" rel="noopener">JMF visits →</a></p>
+        <h4>⚠️ What you'll <em>just</em> miss — Festas do Mar Cascais (Aug 20–23 + 27–30, 2026)</h4>
+        <p>The annual Cascais "Festas do Mar" (Sea Festivals) run <strong>Aug 20–23 and Aug 27–30, 2026</strong> — concerts, fireworks, food + drink stalls along the Cascais bay, the city's biggest summer party. You depart Mon Aug 17 — miss by 3 days. <strong>If you flex departure to Sun Aug 23 instead of Mon Aug 17</strong>, you could include the opening Aug 20–23 weekend. Skip otherwise; the schedule simply doesn't align on the booked LAX-return dates. The Aug 15 Maritime Procession + Van Helden show is the consolation — and they're real anchors. <a href="https://visitcascais.com/en/whats-on" target="_blank" rel="noopener">visitcascais.com →</a></p>
       </div>
     </div>
 
-    <!-- Day at a glance -->
     <div class="glance-table">
       <table>
         <thead>
-          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner</th></tr>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner + Late</th></tr>
         </thead>
         <tbody>
-          <tr><td class="daynum">1</td><td>Wed Aug 12</td><td>Arrival + Perseids ☄️</td><td>Pool, sunset apéro, meteor shower at Cabo da Roca</td><td>Mar do Inferno</td></tr>
-          <tr><td class="daynum">2</td><td>Thu Aug 13</td><td>Sintra palaces</td><td>Pena Palace 10 AM slot, Quinta da Regaleira</td><td>Maré · José Avillez</td></tr>
-          <tr><td class="daynum">3</td><td>Fri Aug 14</td><td>Wine day</td><td>Setúbal Moscatel · Bacalhôa reds</td><td><strong>Fortaleza do Guincho ★</strong></td></tr>
-          <tr><td class="daynum">4</td><td>Sat Aug 15</td><td>Assumption Day 🎆</td><td>Surf, pool, marina fireworks at 10 PM</td><td>Mariscos no Cais (early)</td></tr>
-          <tr><td class="daynum">5</td><td>Sun Aug 16</td><td>Lisbon day</td><td>Belém · Alfama · Time Out Market</td><td><strong>Belcanto ★★ (Avillez)</strong></td></tr>
-          <tr><td class="daynum">6</td><td>Mon Aug 17</td><td>Departure</td><td>Beach morning · transfer to LIS</td><td>On the plane</td></tr>
+          <tr><td class="daynum">1</td><td>Wed Aug 12</td><td>Arrive · Perseids ☄️</td><td>LIS 11:55 AM · Fortaleza transfer · Cabo Raso walk · Praia da Rainha dip · midnight Cabo da Roca for the Perseid peak</td><td><strong>Hífen</strong> Cascais Riva · Largo Camões bar crawl</td></tr>
+          <tr><td class="daynum">2</td><td>Thu Aug 13</td><td>Sintra stack + Colares</td><td>Pena 09:00 timed · Castelo dos Mouros PR2 6.6 km loop · Quinta da Regaleira · Adega Regional de Colares · Praia da Adraga sunset</td><td><strong>LAB by Sergi Arola ★</strong> Penha Longa</td></tr>
+          <tr><td class="daynum">3</td><td>Fri Aug 14</td><td>Setúbal wine + Arrábida</td><td>Quinta da Bacalhôa · JMF moscatel cellars · Portinho da Arrábida swim · Mar do Inferno cliffside</td><td><strong>Fortaleza do Guincho ★</strong> · Casino Estoril D Lounge</td></tr>
+          <tr><td class="daynum">4</td><td>Sat Aug 15 ⚓🎧</td><td>Procession + Van Helden</td><td>Guincho Wind Factory kite/SUP morning · check out Cascais hotel · transfer to Lisbon · Belém speed run · 17:30 Maritime Procession · 22:00 Van Helden</td><td><strong>Henrique Sá Pessoa ★★</strong> (pre-show 19:30) · Forte Santo António 22:00–02:00 · Lux Frágil 02:30 (peak Sat)</td></tr>
+          <tr><td class="daynum">5</td><td>Sun Aug 16</td><td>Lisbon Michelin run · Fado</td><td>Time Out Market brunch · Alfama · Castelo São Jorge · PARK rooftop sunset</td><td><strong>Belcanto ★★</strong> 21:00 (Avillez Lisboa Menu) · Mesa de Frades Alfama 00:30 fado · Pink Street</td></tr>
+          <tr><td class="daynum">6</td><td>Mon Aug 17</td><td>Departure</td><td>Pastéis de Belém · Jerónimos exterior · transfer LIS · TAP nonstop LIS→LAX</td><td>On the plane (gain 8 h)</td></tr>
         </tbody>
       </table>
     </div>
@@ -431,132 +483,178 @@
       <div class="day">
         <div class="day-number"><div class="num">01</div><div class="date">Wed Aug 12</div></div>
         <div class="day-content">
-          <h3>Arrival + the Perseids</h3>
+          <h3>Arrive Lisbon → Fortaleza Guincho → Cabo da Roca Perseids</h3>
           <ul>
-            <li><strong>11:55 AM</strong> Land LIS · pre-booked <a href="https://www.welcomepickups.com/lisbon/airport-transfer-to-cascais/" target="_blank" rel="noopener">Welcome Pickups</a> transfer ($50, 30 min)</li>
-            <li><strong>1:00 PM</strong> Check in. Bags up. Quick lunch on hotel terrace</li>
-            <li><strong>3:00 PM</strong> Beach time at Praia da Rainha or Praia da Conceição (Blue Flag, 67°F sea — brisk)</li>
-            <li><strong>7:00 PM</strong> Sundowner at Hotel Albatroz bar over the bay</li>
-            <li><strong>9:00 PM</strong> Light dinner at <a href="https://www.mardoinferno.pt/en" target="_blank" rel="noopener">Mar do Inferno</a> on the cliff next to Boca do Inferno</li>
-            <li><strong>11:30 PM</strong> Drive to <strong>Cabo da Roca</strong> for the Perseid peak · 30 min. Park near the lighthouse, walk to the dark south bluff. Watch 1–3 AM</li>
-            <li><strong>3:30 AM</strong> Back at hotel</li>
+            <li><strong>11:55 AM</strong> Land LIS · TAP TP224 nonstop · pre-booked Welcome Pickups transfer ($65, 45 min via A5 west)</li>
+            <li><strong>1:00 PM</strong> Check in at <strong><a href="https://www.fortalezadoguincho.com/" target="_blank" rel="noopener">Fortaleza do Guincho</a></strong> — 17th-century clifftop fortress (R&amp;C). Request sea-view room with the Atlantic 40 m below your window</li>
+            <li><strong>2:00 PM</strong> Lunch on the Fortaleza terrace — light Portuguese seafood (skip the full ★ menu, save for Friday)</li>
+            <li><strong>3:30 PM</strong> Walk the <strong>Cabo Raso → Guincho cliffs</strong> coastal path (1.5 h, lit by Atlantic glare) — Pedra do Guincho lighthouse, Forte do Guincho, the Nortada whipping kite-surfers across the bay below you</li>
+            <li><strong>5:00 PM</strong> <strong>Praia da Rainha</strong> dip — small sheltered cove in central Cascais (10 min taxi), warmer water than wind-whipped Guincho, no swell. Joann-friendly.</li>
+            <li><strong>7:30 PM</strong> Aperitivo at the <strong>Hôtel Albatroz bar</strong> over Cascais Bay — Aperol spritz, watch the marina light up</li>
+            <li><strong>8:30 PM</strong> Dinner at <strong><a href="https://www.hifen.pt/" target="_blank" rel="noopener">Hífen</a></strong> on the Cascais Riva — contemporary Portuguese, terrace over the harbor. Truffle pasta + bacalhau à brás. Joann: the steak or the Iberian pork loin. ~$140/cpl</li>
+            <li><strong>10:30 PM</strong> Walk to <strong>Largo Luís de Camões</strong> central plaza — bar terraces till 02:00. Crawl: <strong>John Bull</strong> (Brit pub anchor) → <strong>The Crafty Cellar</strong> (craft beer, 30+ taps) → <strong>Cascais Jazz Club</strong> (live Wed–Sun, the Wed jam is informal)</li>
+            <li><strong>12:00 AM</strong> Drive (or pre-arranged taxi €30) 25 min to <strong>Cabo da Roca</strong> — westernmost point of continental Europe, cliff-top park, certified dark sky, moonless new-moon sky. Park near the lighthouse, walk 200 m south to the bluff. Blanket on the grass, thermos of bica, bottle of Moscatel.</li>
+            <li><strong>1:00–4:00 AM</strong> Perseid peak window — 90+ meteors/hr, ~1 every 40 seconds at peak rates. Sirius rising over the Atlantic at 03:00.</li>
+            <li><strong>4:30 AM</strong> Back to Fortaleza Guincho. Crash.</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Cabo da Roca drive. Walk 200 m from the Fortaleza Guincho terrace to the unlit headland in front of the fortress — 17th-c fortress already on a dark cape, same dark sky. Hotel room service for the thermos. Sleep at 02:00.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap (Aug avg 2 rain days):</strong> Forget the Perseids if cloud cover is &gt;60%. Long pre-dinner at LAB by Sergi Arola ★ at Penha Longa instead — 20 min drive inland from Guincho, "mountain-to-sea" tapas progression by the Spanish ★-chef, all indoors, runs to 22:30.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> After Perseids, hit Lux Frágil in Lisbon (open till 06:00 Thu/Fri/Sat only — but Wed Aug 12 is not a Lux night). Trade for late Casino Estoril D Lounge instead (open till 03:00 daily, summer Tamariz extension on Praia do Tamariz) — 12 min drive from Guincho on the Marginal.</div>
         </div>
       </div>
 
       <div class="day">
         <div class="day-number"><div class="num">02</div><div class="date">Thu Aug 13</div></div>
         <div class="day-content">
-          <h3>Sintra palaces</h3>
+          <h3>Sintra palaces stack · Colares sand vineyards · LAB ★ at Penha Longa</h3>
           <ul>
-            <li><strong>9:30 AM</strong> Uber to Sintra (30 min, $40) — beat the heat AND the bus crowds</li>
-            <li><strong>10:00 AM</strong> <strong><a href="https://www.parquesdesintra.pt/en/plan-your-visit/tickets-palace-of-pena/" target="_blank" rel="noopener">Pena Palace</a></strong> (pre-booked 10 AM timed slot, $16/pp) — Romantic-era extravagance</li>
-            <li><strong>12:30 PM</strong> Lunch in Sintra village — Tascantiga or Café Saudade</li>
-            <li><strong>2:00 PM</strong> <strong><a href="https://www.regaleira.pt/en" target="_blank" rel="noopener">Quinta da Regaleira</a></strong> — initiation well, grottoes, gothic gardens</li>
-            <li><strong>5:00 PM</strong> Back to Cascais; pool time</li>
-            <li><strong>8:30 PM</strong> <strong><a href="https://marejoseavillez.pt/en/" target="_blank" rel="noopener">Maré by José Avillez</a></strong> — terrace, raw bar, charcoal seafood (~$170/cpl)</li>
+            <li><strong>7:30 AM</strong> Hotel coffee in the courtyard · light start (recovery from Perseid night)</li>
+            <li><strong>9:00 AM</strong> Drive 20 min inland to Sintra · <strong><a href="https://www.parquesdesintra.pt/en/plan-your-visit/tickets-palace-of-pena/" target="_blank" rel="noopener">Pena Palace</a></strong> 09:30 timed-entry slot ($16, pre-booked 7–14 days out) — Romantic-era extravagance, yellow + magenta turrets, beat the bus crowds by 90 min</li>
+            <li><strong>11:00 AM</strong> <strong>Castelo dos Mouros PR2 loop</strong> — 6.6 km shaded forest loop linking the palaces · moderate · pine canopy keeps Aug heat off the trail · Moorish Castle walk-the-walls included</li>
+            <li><strong>1:30 PM</strong> Lunch in Sintra village — <strong>Tascantiga</strong> petiscos (Portuguese tapas, garden seating) or <strong>Incomum</strong> (chef Diogo Costa, contemporary)</li>
+            <li><strong>3:30 PM</strong> <strong><a href="https://www.regaleira.pt/en" target="_blank" rel="noopener">Quinta da Regaleira</a></strong> timed afternoon slot ($14, pre-booked — sells days out) — descend the 27-m <strong>Initiation Well</strong>, walk the underground grotto network out to the lake, the gothic gardens up to the chapel</li>
+            <li><strong>5:30 PM</strong> Drive 15 min NW to <strong>Colares</strong> — <strong><a href="https://www.adegaregionaldecolares.pt/" target="_blank" rel="noopener">Adega Regional de Colares</a></strong> tasting (the historic 1931 co-op, only sand-vineyard ungrafted-Ramisco reds + Malvasia whites in Europe — phylloxera couldn't penetrate Atlantic dunes). 5-wine flight €20/pp, book 14 days ahead</li>
+            <li><strong>7:00 PM</strong> Drive 5 min to <strong>Praia da Adraga</strong> sunset — dramatic cliff-mouth beach 8 km south of Cabo da Roca, single beachside konoba (<strong>Restaurante Praia da Adraga</strong>) for sundowner beer + percebes barnacles</li>
+            <li><strong>9:00 PM</strong> Drive 15 min inland to <strong><a href="https://www.penhalonga.com/lab" target="_blank" rel="noopener">LAB by Sergi Arola ★</a></strong> at Penha Longa Resort — Spanish ★-chef's "mountain to sea" Portuguese-Catalan tapas progression. 8-course tasting €120, wine pairing €60. <strong>Better meat balance than the seafood-heavy Fortaleza Guincho ★</strong> — flag Joann's preference at booking, the kitchen accommodates</li>
+            <li><strong>11:30 PM</strong> Back to Fortaleza Guincho · nightcap on the terrace, listen to Atlantic</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Pena Palace AND Castelo dos Mouros morning. Late 11:00 start, Quinta da Regaleira night tour 19:30 (lit by lantern, far quieter), Praia da Adraga sunset, light dinner at Restaurante Praia da Adraga right on the cove. Back to Fortaleza by 22:30.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Long lunch + spa at <strong>Banyan Tree Spa at Palácio Estoril Hotel</strong> (Thai-trained therapists, deep tissue / Thai massage 90 min €180/pp, included sauna + steam + indoor pool, 15 min drive). Skip palaces. Late LAB by Sergi Arola ★ still on.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Add a <strong>Convento dos Capuchos + Peninha</strong> hike between palaces — Capuchos Trail PR11 is 3 mi shaded loop through cork-oak forest, ending at the 16th-c cork-cell monastery (monks slept on cork). 90 min. Then drive 10 min to Peninha hermitage chapel for a 360° Atlantic view — Cascais visible to the south, Cabo da Roca cliffs to the west.</div>
         </div>
       </div>
 
       <div class="day">
         <div class="day-number"><div class="num">03</div><div class="date">Fri Aug 14</div></div>
         <div class="day-content">
-          <h3>Setúbal wine country + Fortaleza ★</h3>
+          <h3>Setúbal Peninsula wine + Arrábida swim · Fortaleza Guincho ★ · Casino Estoril</h3>
           <ul>
-            <li><strong>9:30 AM</strong> Pre-arranged driver to Setúbal (50 min)</li>
-            <li><strong>10:30 AM</strong> <strong><a href="https://www.jmf.pt/en/casa-museu" target="_blank" rel="noopener">José Maria da Fonseca</a></strong> — Moscatel tasting in the historic Azeitão cellars (founded 1834)</li>
-            <li><strong>12:30 PM</strong> Lunch in Setúbal — grilled choco (cuttlefish) at Casa Santiago</li>
-            <li><strong>2:30 PM</strong> <strong><a href="https://www.bacalhoa.pt/" target="_blank" rel="noopener">Quinta da Bacalhôa</a></strong> — reds + azulejo museum</li>
-            <li><strong>5:00 PM</strong> Back to Cascais; rest, change for dinner</li>
-            <li><strong>8:30 PM</strong> <strong><a href="https://guide.michelin.com/en/lisboa-region/cascais/restaurant/fortaleza-do-guincho" target="_blank" rel="noopener">Fortaleza do Guincho ★</a></strong> — Memórias tasting menu, ~$540–$760/cpl with wine</li>
+            <li><strong>10:30 AM</strong> Recovery brunch at Fortaleza Guincho — slow pace required after LAB ★ night</li>
+            <li><strong>12:00 PM</strong> Pre-arranged driver / private car 45 min south across the Tagus Bridge to <strong>Setúbal Peninsula</strong> (€80 one-way each leg, or €230/pp full-day driver via local operators)</li>
+            <li><strong>1:30 PM</strong> <strong><a href="https://www.bacalhoa.pt/" target="_blank" rel="noopener">Quinta da Bacalhôa</a></strong> tour + lunch (Azeitão · 14th-c palace + Portugal's most important contemporary tile factory + Bacalhôa reds and Moscatel cellars · book 14 days ahead)</li>
+            <li><strong>3:00 PM</strong> 10-min drive to <strong><a href="https://www.jmf.pt/en/casa-museu" target="_blank" rel="noopener">José Maria da Fonseca</a></strong> (Azeitão · founded 1834 · the Moscatel de Setúbal benchmark + Periquita reds · museum + 19th-c cellars · 1-hour tour + tasting €15/pp). Try the 20-year Moscatel Roxo.</li>
+            <li><strong>5:30 PM</strong> Drive 25 min via the <strong>Arrábida coastal road</strong> (one of Iberia's most beautiful coast drives) to <strong>Portinho da Arrábida</strong> marine reserve · turquoise water against a 500-m limestone backdrop · swim 20 min in the calmest, clearest cove in mainland Portugal · this is the Joann-friendly Med-style swim of the trip</li>
+            <li><strong>7:00 PM</strong> Drive back to Cascais (50 min via Tagus Bridge + A5) · time-pressure-free, light traffic Fri evening westbound</li>
+            <li><strong>8:30 PM</strong> Dinner at <strong><a href="https://guide.michelin.com/en/lisboa-region/cascais/restaurant/fortaleza-do-guincho" target="_blank" rel="noopener">Fortaleza do Guincho ★</a></strong> — Chef Gil Fernandes' maritime-focused ★ menu, in your own hotel. <strong>Memórias €175 / Experiência €220, wine pairings €70–110.</strong> Open Wed–Sat dinner only, 19:30–21:30. <strong>Flag Joann's preference at booking</strong> — kitchen substitutes Iberico pork or aged Mirandesa for some seafood courses</li>
+            <li><strong>11:00 PM</strong> 12-min drive east on the Marginal to <strong>Casino Estoril</strong> — D Lounge live concert / DJ set, blackjack tables, or the summer Tamariz beachside DJ extension (open-air bar + DJ on Praia do Tamariz, summer only Jun–Oct). Bond-strict dress on the floor.</li>
+            <li><strong>1:30 AM</strong> Back to Fortaleza Guincho</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Setúbal full day. Stay Cascais-side. Late brunch, 2 h sunset cruise from Cascais Marina (<a href="https://www.cascaiscruises.com/" target="_blank" rel="noopener">Palma Yachts</a> €150–250/2pax, passes Santa Marta lighthouse, Boca do Inferno, Cabo Raso). Pool. Fortaleza Guincho ★ still on at 20:30. Skip the casino, nightcap on terrace.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Setúbal wine works in rain (cellars are indoors). Replace the Arrábida swim with a long late lunch at <strong>Casa Santiago</strong> in Setúbal (grilled choco — cuttlefish — Setúbal's signature dish, since 1976). Back to Cascais 5 PM, indoor spa at Albatroz or Banyan Tree at Palácio Estoril, then Fortaleza ★.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Full-day <strong><a href="https://arrabidalife.com/" target="_blank" rel="noopener">Arrábida Life</a> coasteering + kayak + cliff-jumping</strong> (7-person small group, €120/pp, includes wetsuit + gear + safety briefing + cliff-jumping into the marine reserve). 9:00 AM start, 4 PM finish. Then dinner in Setúbal at Casa Santiago, or skip Setúbal wine entirely and drive straight back for Fortaleza ★. Most-active version of this day.</div>
         </div>
       </div>
 
       <div class="day">
-        <div class="day-number"><div class="num">04</div><div class="date">Sat Aug 15</div></div>
+        <div class="day-number"><div class="num">04</div><div class="date">Sat Aug 15 ⚓🎧</div></div>
         <div class="day-content">
-          <h3>Assumption Day · surf + fireworks</h3>
+          <h3>Guincho wind morning · Cascais → Lisbon move · Procession · Sá Pessoa ★★ · Van Helden · Lux Frágil</h3>
           <ul>
-            <li><strong>Note:</strong> Aug 15 is Portuguese Assumption Day — banks, post offices, most shops closed. Restaurants and waterfront open. Plan around it; stay in Cascais this evening.</li>
-            <li><strong>10:00 AM</strong> <a href="https://www.surfcascais.com/" target="_blank" rel="noopener">Surf lesson at Carcavelos</a> with Surf Cascais ($35 pp, 2 hrs, beginner-perfect)</li>
-            <li><strong>1:00 PM</strong> Beachside lunch at a Carcavelos café</li>
-            <li><strong>3:00 PM</strong> Praia do Guincho — watch the wind/kite circus shred the Nortada</li>
-            <li><strong>6:30 PM</strong> Early dinner at <strong>Mariscos no Cais</strong> (harbor seafood, walk-in OK)</li>
-            <li><strong>9:00 PM</strong> Walk to Marina de Cascais for the <strong>10 PM fireworks</strong> over the bay. Stay for the band</li>
-            <li><strong>11:30 PM</strong> Drinks at Bar Bardot on the marina</li>
+            <li><strong>9:00 AM</strong> <strong><a href="https://guinchowindfactory.com/" target="_blank" rel="noopener">Guincho Wind Factory</a></strong> — kite / wing-foil / windsurf intro lesson at Praia do Guincho (€100/pp 1h individual lesson, includes wetsuit + gear + safety briefing). For Joann: <strong>SUP in the calmer lagoon side</strong> behind the dunes (€25/h rental + tutorial) — Guincho currents too strong for casual swim per Joann, but the lagoon is flat</li>
+            <li><strong>11:30 AM</strong> Back to Fortaleza Guincho · pack · check out</li>
+            <li><strong>12:30 PM</strong> Lunch at <strong>Bar do Guincho</strong> beach shack on Praia do Guincho (grilled fish, octopus salad, swimsuit-and-shorts simple — the antidote to Friday's ★ tasting menu)</li>
+            <li><strong>2:00 PM</strong> Pre-arranged transfer 45 min east to Lisbon · check in at <strong><a href="https://www.bairroaltohotel.com/" target="_blank" rel="noopener">Bairro Alto Hotel</a></strong> (87 rooms in 18th-c building above Largo de Camões, Tagus + Chiado views, rooftop bar) — request Tagus-view room</li>
+            <li><strong>3:30 PM</strong> Belém speed run (Uber 15 min): <strong><a href="https://pasteisdebelem.pt/en/" target="_blank" rel="noopener">Pastéis de Belém</a></strong> (open till midnight Aug · the original since 1837 · 6 to-go, no queue at the counter), Jerónimos Monastery exterior + cloister, MAAT museum promenade along the river</li>
+            <li><strong>5:30 PM</strong> Train back from Cais do Sodré to Cascais (40 min) for the <strong>Maritime Procession</strong>. Watch the <strong>Senhora dos Navegantes</strong> statue carried from the parish church to the wharf, loaded onto fishing boats, rowed out to the <strong>Ermida da Guia</strong> chapel · flowers thrown into the sea · ~17:30–19:00 sequence · stand on the Paredão promenade</li>
+            <li><strong>7:30 PM</strong> Light pre-show dinner at <strong>Marisco na Praça</strong> (Cascais Market hall, sea-to-table, open till 22:00) — petiscos + grilled sardines + bifana. <em>Save the appetite for tonight's later double.</em></li>
+            <li><strong>9:30 PM</strong> Walk 8 min east along the Marginal to <strong>Forte de Santo António da Barra</strong> (between Cascais and Estoril, fortress walls dropping to the Atlantic)</li>
+            <li><strong>10:00 PM–02:00 AM</strong> <strong><a href="https://shotgun.live/en/events/armand-van-helden-cascais-atlantic-sunsets" target="_blank" rel="noopener">Armand Van Helden · Cascais Atlantic Sunsets</a></strong> — US house DJ open-air at the fortress. €25 early bird via Shotgun (will sell out). Sunset over the Atlantic, Cascais lights, fortress walls</li>
+            <li><strong>2:30 AM</strong> Uber to Lisbon (€55, 35 min) · check into Bairro Alto Hotel · drop bag</li>
+            <li><strong>3:00 AM</strong> <strong><a href="https://www.luxfragil.com/" target="_blank" rel="noopener">Lux Frágil</a></strong> — riverside Santa Apolónia, co-owned by John Malkovich, <strong>open Thu/Fri/Sat 23:30–06:00 only</strong>. <strong>Saturday Aug 15 = peak Lux night</strong>. Three floors (riverside terrace, main dance, panoramic bar). Door prefers couples / regulars / music-oriented dress — avoid sportswear, arrive 1–3 AM for best odds. €20–25 cover, drinks separate. Stay till 5 AM if you have the legs</li>
+            <li><strong>5:30 AM</strong> Uber back to Bairro Alto · crash</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Lux. After Van Helden, walk back along the lit Paredão to the Cascais hotel, sleep in Cascais (skip the Lisbon move — keep Fortaleza Guincho 4 nights instead). Trade-off: lose Sun morning Belém walkability and Bairro Alto base — but gain a real night's sleep before Sun Belcanto ★★.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Van Helden show goes on in light rain (fortress courtyard has overhang). If heavy rain, swap to <strong>Hot Clube de Portugal</strong> (Lisbon's oldest jazz club, Bairro Alto-adjacent, runs to 02:00 Fri/Sat, the post-dinner jazz move). Lux Frágil still on after.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Add a <strong>Pink Street (Rua Nova do Carvalho) bar crawl</strong> before Lux — Lisbon's densest nightlife strip in Cais do Sodré, walk distance from any Bairro Alto hotel. Hit <strong>Pensão Amor</strong> (Belle Époque bordello-turned-bar, 02:00 close), <strong>Sol e Pesca</strong> (canned-fish bar), <strong>Tokyo Bar</strong>. Get to Lux 02:30 instead of 03:00. Or pre-Van Helden upgrade dinner from Marisco na Praça to the 19:30 first seating at <strong>Henrique Sá Pessoa ★★</strong> in Lisbon (drive back in Uber for Van Helden show 22:00). This is the "see two ★★ in one day" version.</div>
         </div>
       </div>
 
       <div class="day">
         <div class="day-number"><div class="num">05</div><div class="date">Sun Aug 16</div></div>
         <div class="day-content">
-          <h3>Lisbon day · Belcanto ★★</h3>
+          <h3>Lisbon Michelin run · Alfama · Belcanto ★★ · Mesa de Frades fado · Pink Street</h3>
           <ul>
-            <li><strong>10:00 AM</strong> Train Cascais → Cais do Sodré (40 min, $3 RT)</li>
-            <li><strong>11:00 AM</strong> Belém — Jerónimos Monastery, MAAT museum, the original <a href="https://pasteisdebelem.pt/en/" target="_blank" rel="noopener">Pastéis de Belém</a></li>
-            <li><strong>1:30 PM</strong> Lunch at <a href="https://www.timeoutmarket.com/lisboa/en/" target="_blank" rel="noopener">Time Out Market</a> (Mercado da Ribeira)</li>
-            <li><strong>3:00 PM</strong> Alfama walk — Sé Cathedral, Miradouro de Santa Luzia, São Jorge Castle</li>
-            <li><strong>5:30 PM</strong> Drinks at Park Bar (Bairro Alto rooftop)</li>
-            <li><strong>8:00 PM</strong> <strong><a href="https://www.belcanto.pt/en/" target="_blank" rel="noopener">Belcanto ★★ (Avillez)</a></strong> in Chiado — Lisbon Menu or Merry-Go-Round (~$650–$865/cpl)</li>
-            <li><strong>11:30 PM</strong> Uber back to Cascais (~$55, 30 min)</li>
+            <li><strong>11:00 AM</strong> Slow brunch at <strong><a href="https://www.timeoutmarket.com/lisboa/en/" target="_blank" rel="noopener">Time Out Market</a></strong> (Mercado da Ribeira, 26 chef-curated stalls, the original food-hall concept) — try the <strong>Marlene Vieira stall</strong> (first female Portuguese ★-chef in 30 years), the Henrique Sá Pessoa Tasca, the Garrafeira Nacional wine stall. Walk to the riverside.</li>
+            <li><strong>1:30 PM</strong> Walk <strong>Alfama</strong> — the old Moorish quarter, narrow lanes uphill from the river. Stop at <strong>Miradouro de Santa Luzia</strong> (azulejo terrace over the river) and <strong>Miradouro das Portas do Sol</strong> (the postcard angle). Continue up to <strong>Sé Cathedral</strong> (12th-c, Romanesque). End at <strong>Castelo de São Jorge</strong> (Moorish castle, panoramic city view, €15)</li>
+            <li><strong>4:30 PM</strong> Walk west to Príncipe Real — <strong>By the Wine</strong> (José Maria da Fonseca Lisbon outpost, 200+ bottles by the glass) or <strong>Black Sheep Lisboa</strong> wine bar — afternoon glass + petiscos break</li>
+            <li><strong>6:30 PM</strong> Sunset at <strong><a href="https://parkbarlisboa.com/" target="_blank" rel="noopener">PARK</a></strong> rooftop (Calçada do Combro 58, Bairro Alto — top of a parking garage, Tue–Sat 13:00–02:00, 25 de Abril Bridge view, Tagus, Cristo Rei statue across the river). Cocktail €10–14 · go now or at 21:30 closing time, sunset 20:00 mid-Aug · the Lisbon rooftop ritual</li>
+            <li><strong>9:00 PM</strong> Dinner at <strong><a href="https://www.belcanto.pt/en/" target="_blank" rel="noopener">Belcanto ★★</a></strong> — José Avillez, Chiado, Largo São Carlos 10. <strong>Lisboa Menu €165 / Merry-Go-Round Menu €185</strong>, wine pairing €85–120. Tue–Sat lunch + dinner, closed Sun + Mon — <strong>but Sun Aug 16 is open as the kitchen runs through Aug peak season</strong>; verify on booking. <strong>Book 60+ days ahead</strong>, €200/pax no-show fee. Portugal's most-coveted table, full stop.</li>
+            <li><strong>12:00 AM</strong> 12-min Uber to Alfama · <strong><a href="https://www.mesadefrades.com/" target="_blank" rel="noopener">Mesa de Frades</a></strong> — 18th-c restored chapel (azulejo-tiled walls, possibly oldest continuous fado venue in Lisbon). Late seating 00:30 · share a Douro red, listen to fadistas trade sets till 02:00. Meat-friendly Portuguese menu if you skipped dessert at Belcanto.</li>
+            <li><strong>2:00 AM</strong> Walk down to <strong>Pink Street (Rua Nova do Carvalho)</strong> in Cais do Sodré · 5-min walk · <strong>Pensão Amor</strong> (Belle Époque bordello-turned-cocktail-bar with rotating burlesque), <strong>Sol e Pesca</strong> (the original canned-fish bar), <strong>Tokyo Bar</strong></li>
+            <li><strong>3:30 AM</strong> Uber back to Bairro Alto · crash</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Pink Street post-fado. Walk 10 min uphill from Mesa de Frades to a Bairro Alto wine bar (<strong>A Capela</strong>, vinyl DJs funk/house/disco, 22:00–03:00). Bed by 02:00.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Alfama walking turns slick + uphill. Skip Castelo São Jorge climb. Use the time for <strong>National Tile Museum (Museu Nacional do Azulejo)</strong> — 16th-c convent, Portugal's signature art form, 1.5h. Then PARK rooftop. Belcanto ★★ + Mesa de Frades fado run regardless of weather.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Trade Belcanto ★★ for a <strong>second new ★★ — Henrique Sá Pessoa ★★</strong> (formerly Alma, closed end-2025, reopened early 2026 at Páteo Bagatela, Rua Artilharia 1 #51 — got both stars immediately on reopening). Three tasting menus: Encontros / Clássicos / Costa a Costa. Tue–Sat 12:00–15:30 / 18:30–24:00. If you also did Sá Pessoa as the pre-show 19:30 first seating on Saturday, you've now hit Lisbon's two ★★ in three days. Add <strong>Clube de Fado</strong> (behind Sé, more polished than Mesa de Frades) after.</div>
         </div>
       </div>
 
       <div class="day">
         <div class="day-number"><div class="num">06</div><div class="date">Mon Aug 17</div></div>
         <div class="day-content">
-          <h3>Departure</h3>
+          <h3>Last Pastéis · departure on TAP's only US nonstop</h3>
           <ul>
-            <li><strong>9:00 AM</strong> Breakfast on the terrace</li>
-            <li><strong>10:30 AM</strong> Beach morning at Praia da Conceição · last swim</li>
-            <li><strong>12:30 PM</strong> Light lunch at the hotel</li>
-            <li><strong>2:00 PM</strong> Transfer to LIS (~$50, 30 min)</li>
-            <li><strong>4:55 PM</strong> Air France or TAP nonstop LIS → LAX</li>
-            <li><strong>9:00 PM same day</strong> Arrive LAX (gain 8 hours on the way back)</li>
+            <li><strong>9:00 AM</strong> Slow breakfast at Bairro Alto Hotel · rooftop view over the Tagus</li>
+            <li><strong>10:30 AM</strong> Uber 15 min to Belém · last <strong>Pastéis de Belém</strong> (6 to-go for the plane, the queue is bearable Mon morning) · 5 min walk Jerónimos Monastery cloister</li>
+            <li><strong>12:30 PM</strong> Light lunch at <strong>Casa do Alentejo</strong> (Moorish-revival restored 18th-c palace, central Lisbon) or a Time Out Market grab-and-go</li>
+            <li><strong>2:00 PM</strong> Transfer to LIS (~$50, 25 min)</li>
+            <li><strong>4:55 PM</strong> TAP TP223 LIS → LAX nonstop (11h 25m) — <strong>the only US nonstop in the comparison</strong></li>
+            <li><strong>8:20 PM same day</strong> Arrive LAX (gain 8 hours on the return)</li>
           </ul>
         </div>
       </div>
 
     </div>
 
-    <!-- Hotels -->
     <div class="section-header" id="hotels">
       <span class="eyebrow">Where to Stay</span>
-      <h2>Six Hotels, One Decision</h2>
-      <p>Cascais is small — pick one and stay all five nights. Ranked top-down for romance, location, and fit to the $400–$1,000/night band in mid-August. All prices USD, peak August.</p>
+      <h2>Two Bases · 3 + 2 Split</h2>
+      <p>Cascais first (3 nights Wed–Sat at <strong>Fortaleza do Guincho</strong> for the cliff-side + ★ on-site + Cabo da Roca Perseids), then Lisbon (2 nights Sat–Mon at <strong>Bairro Alto Hotel</strong> for Belcanto ★★ + Lux Frágil + Belém walkability). The Sat afternoon hotel move is the move — keeps Aug 15 Maritime Procession + Van Helden walkable in Cascais, then Lisbon Bairro Alto base for the Sat-late Lux night + Sun Belcanto + Mon LIS departure. Six options below: 3 Cascais picks + 3 Lisbon picks.</p>
     </div>
     <div class="hotels-grid">
 
       <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(30,90,122,0.4)), url('https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&q=80');">
-          <span class="hotel-tier">★ Top Pick</span>
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.30), rgba(30,90,122,0.40)), url('https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&q=80');">
+          <span class="hotel-tier">★ Cascais · 3 nights</span>
         </div>
         <div class="hotel-body">
           <h4>Fortaleza do Guincho</h4>
-          <div class="loc">Relais &amp; Châteaux · Guincho cliff · 5.5 mi NW of town</div>
-          <p>17th-century fortress directly above Guincho beach. 27 rooms, intimate, dramatic Atlantic exposure. <strong>1★ Michelin restaurant on premises</strong> (Chef Gil Fernandes). Best if foodie + ocean drama matters more than walking to town.</p>
+          <div class="loc">Relais &amp; Châteaux · Guincho cliff · 5.5 mi NW of Cascais town · ★ Michelin on-site</div>
+          <p>17th-century fortress directly above Guincho beach. 27 rooms, intimate, dramatic Atlantic exposure, on-site <strong>Fortaleza Guincho ★</strong> (Chef Gil Fernandes). The trip-defining cliff hotel — wake up to whitecaps below your window, dinner at the ★ in the same fortress. Sea-view suites top out $700–1,000 in peak Aug; standard sea-view €228–312. <strong>Best if cliffside + ★ on-site matter more than walking to Cascais town.</strong></p>
           <div class="hotel-meta">
-            <span class="price">$490–$700 / night</span>
-            <span>★★★★★</span>
+            <span class="price">$490–$1,000 / night</span>
+            <span>★★★★★ R&amp;C</span>
           </div>
           <a href="https://www.fortalezadoguincho.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
         </div>
       </div>
 
       <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(74,144,164,0.4)), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80');">
-          <span class="hotel-tier">Best value</span>
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.30), rgba(74,144,164,0.40)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80');">
+          <span class="hotel-tier">Cascais · design alt</span>
         </div>
         <div class="hotel-body">
-          <h4>The Albatroz</h4>
-          <div class="loc">Town center · cliff above Conceição beach</div>
-          <p>Pink 19th-century royal villa, 51 rooms, outdoor pool over the bay. Walkable to old town, restaurants, train station. <strong>Best if you want town buzz and ocean view from the same window.</strong></p>
+          <h4>Farol Hotel</h4>
+          <div class="loc">Design Hotels · cliff-edge near Santa Marta lighthouse · 8-min walk to Cascais Marina</div>
+          <p>Cliffside design boutique, 8 fashion-designer rooms (each by a different Portuguese designer), infinity pool over the rocks, Restaurant Mix, 9.3/10 average review. <strong>Walk to Cascais town center 8 min</strong> — best if the Aug 15 Maritime Procession + Largo Camões nightlife matter more than the Guincho cliff. €350–800 Aug peak.</p>
           <div class="hotel-meta">
-            <span class="price">$380–$560 / night</span>
+            <span class="price">$420–$880 / night</span>
+            <span>★★★★★ Design</span>
+          </div>
+          <a href="https://farol.com.pt/en/about-us" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.30), rgba(138,143,90,0.40)), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80');">
+          <span class="hotel-tier">Cascais · value</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hôtel Albatroz</h4>
+          <div class="loc">Pink 19th-c royal villa · cliff above Conceição beach · town center walkable</div>
+          <p>Pink 19th-century royal seaside villa, 51 rooms, outdoor pool over the bay, classic seafront elegance. Walking distance to Largo Camões + Cascais Marina + the parish church for the Aug 15 procession. <strong>Best Cascais value</strong> in the Aug peak window — €350–700/night. Lower-key than Fortaleza or Farol but the best urban Cascais location.</p>
+          <div class="hotel-meta">
+            <span class="price">$380–$700 / night</span>
             <span>★★★★★</span>
           </div>
           <a href="https://thealbatroz-hotel-cascais.h-rez.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
@@ -564,64 +662,48 @@
       </div>
 
       <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(138,143,90,0.4)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80');">
-          <span class="hotel-tier">Design-forward</span>
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(30,90,122,0.30), rgba(193,100,74,0.40)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80');">
+          <span class="hotel-tier">★ Lisbon · 2 nights</span>
         </div>
         <div class="hotel-body">
-          <h4>Farol Hotel</h4>
-          <div class="loc">Design Hotels · cliff edge · 10 min walk from town</div>
-          <p>33 rooms each by a different Portuguese designer. Bold, contemporary, infinity pool over the rocks, two restaurants including a strong sushi room. <strong>Best if you want edge over heritage.</strong></p>
+          <h4>Bairro Alto Hotel</h4>
+          <div class="loc">Chiado · Largo de Camões · 18th-c building · 87 rooms · rooftop bar</div>
+          <p>The Lisbon Michelin-night base. 18th-c heritage building on Largo de Camões, between Chiado and Bairro Alto. <strong>Tagus + Chiado views, rooftop BAHR &amp; Terrace bar</strong>, 7-min walk to Belcanto ★★ in Chiado, 5-min walk to Pink Street, 15-min Uber to Lux Frágil. Request a Tagus-view room.</p>
           <div class="hotel-meta">
-            <span class="price">$430–$650 / night</span>
-            <span>★★★★★</span>
+            <span class="price">$500–$900 / night</span>
+            <span>★★★★★ LHW</span>
           </div>
-          <a href="https://farol.com.pt/en/about-us" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+          <a href="https://www.bairroaltohotel.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
         </div>
       </div>
 
       <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(90,74,122,0.3), rgba(193,100,74,0.4)), url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');">
-          <span class="hotel-tier">Adults only</span>
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.30), rgba(90,74,122,0.40)), url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');">
+          <span class="hotel-tier">Lisbon · splurge</span>
         </div>
         <div class="hotel-body">
-          <h4>The Oitavos</h4>
-          <div class="loc">Quinta da Marinha · between town &amp; Guincho · inside Natural Park</div>
-          <p>Modern minimalist by Champalimaud family. 142 rooms (40+ m² minimum), floor-to-ceiling windows over the Oitavos Dunes Golf Course out to the Atlantic. <strong>Two seawater pools, full spa, championship golf.</strong></p>
+          <h4>Four Seasons Ritz Lisbon</h4>
+          <div class="loc">Avenida da Liberdade · Marquês de Pombal · CURA ★ + Kabuki ★ on property</div>
+          <p>The Lisbon ★ trophy hotel. 282 rooms + suites, the Eduardo VII Park view, two ★ Michelin restaurants on property: <strong>CURA ★</strong> (chef Rodolfo Lavrador, 5 consecutive years, Percurso + Passo menus) and <strong>Kabuki Lisboa ★</strong> (chef Paulo Alves, Japanese-Mediterranean with wagyu / Iberian pork). $808–$1,096+ start, suites $1,200+. <strong>The splurge Lisbon base</strong> — skip Belcanto, do both in-house stars instead.</p>
           <div class="hotel-meta">
-            <span class="price">$510–$920 / night</span>
-            <span>★★★★★</span>
+            <span class="price">$808–$1,500 / night</span>
+            <span>★★★★★ FS</span>
           </div>
-          <a href="https://the-oitavos.cascais-hotels.com/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+          <a href="https://www.fourseasons.com/lisbon/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
         </div>
       </div>
 
       <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.25), rgba(74,144,164,0.4)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80');">
-          <span class="hotel-tier">Sea-view B&amp;B</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Villa Cascais Boutique Hotel</h4>
-          <div class="loc">Quiet lane · 5-min walk to port · garden + pool</div>
-          <p>Renovated 19th-century villa with 14 rooms, intimate garden pool, Portuguese breakfast on the terrace. <strong>The hideaway pick</strong> — lower-key but the walk to town is two minutes longer than Albatroz.</p>
-          <div class="hotel-meta">
-            <span class="price">$340–$520 / night</span>
-            <span>★★★★</span>
-          </div>
-          <a href="https://www.i-escape.com/villa-cascais-boutique-hotel" target="_blank" rel="noopener" class="book-link">Book direct →</a>
-        </div>
-      </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(138,143,90,0.3), rgba(193,100,74,0.35)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80');">
-          <span class="hotel-tier">Splurge</span>
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(138,143,90,0.30), rgba(193,100,74,0.40)), url('https://images.unsplash.com/photo-1455587734955-081b22074882?w=600&q=80');">
+          <span class="hotel-tier">Sintra · alt 5-night base</span>
         </div>
         <div class="hotel-body">
           <h4>Penha Longa Resort</h4>
-          <div class="loc">Sintra-Cascais Natural Park · 20 min inland · Ritz-Carlton</div>
-          <p>Ritz-Carlton-run resort inside a 14th-century monastery estate. <strong>Two Michelin stars on property</strong> (Midori 1★ Japanese, LAB 1★). 27-hole championship golf, Natura Bissé spa, indoor + outdoor infinity pools. <strong>Trade-off:</strong> inland, you lose immediate-ocean.</p>
+          <div class="loc">Sintra-Cascais Natural Park · 14th-c monastery · Ritz-Carlton · Amex 30% off through Aug 31, 2026</div>
+          <p>14th-c monastery estate run by Ritz-Carlton. Three ★ Michelin restaurants on property — <strong>Midori ★</strong> (Pedro Almeida kaiseki, Joann-skip on sushi), <strong>LAB by Sergi Arola ★</strong> (Spanish-Catalan tapas progression, better non-seafood balance), and the new <strong>Eneko Atxa Basque concept</strong> (3-★ Basque chef does Basque-Sintra crossover). 27-hole championship golf, Natura Bissé spa, indoor + outdoor infinity pools. Suites from $364, top $800–1,200. <strong>Amex FHR runs 30% off through Aug 31, 2026 — book before Jul 15 for the discount.</strong></p>
           <div class="hotel-meta">
-            <span class="price">$650–$975 / night</span>
-            <span>★★★★★</span>
+            <span class="price">$650–$1,200 / night</span>
+            <span>★★★★★ R-C</span>
           </div>
           <a href="https://www.ritzcarlton.com/en/hotels/lisrz-penha-longa-resort/overview/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
         </div>
@@ -629,34 +711,33 @@
 
     </div>
 
-    <!-- Wine -->
     <div class="section-header" id="wine">
       <span class="eyebrow">The Glass</span>
-      <h2>Two Regions, 50 Minutes Apart</h2>
-      <p>The fortified Moscatels of Setúbal and the cool-climate whites of Colares — both small, both serious, and both rarely poured outside Portugal. Most visits are by appointment; details below.</p>
+      <h2>Setúbal Moscatel · Colares Sand Vineyards</h2>
+      <p>Two regions, 50 minutes apart from Cascais, both rarely poured outside Portugal. <strong>Setúbal Peninsula</strong> (south, 50 min across the Tagus bridge) — fortified Moscatel + Periquita reds in 1830s cellars. <strong>Colares AOC</strong> (15 min north, on the Sintra coast) — Europe's only ungrafted-vine region (Ramisco planted directly in Atlantic dune sand, which phylloxera couldn't penetrate). Less than 20 hectares left in production. Bottles you cannot find outside Portugal.</p>
     </div>
     <div class="wine-block whites">
       <div class="wine-image"></div>
       <div class="wine-text">
-        <span class="eyebrow">Setúbal AOC · the Moscatels</span>
+        <span class="eyebrow">Setúbal Peninsula · the Moscatels</span>
         <h3>Portugal's Oldest Fortified Wine</h3>
-        <p>The Setúbal peninsula has produced fortified Moscatel since at least the 16th century, but the AOC was codified in 1907. The <strong>Moscatel de Setúbal</strong> and the rarer red-skin <strong>Moscatel Roxo</strong> are aged in century-old oak — the 20-year and 40-year bottlings are world-class. 50 min south of Cascais across the Tagus bridge.</p>
+        <p>The Setúbal peninsula has produced fortified Moscatel since the 16th century; the AOC was codified in 1907. The <strong>Moscatel de Setúbal</strong> and the rarer red-skin <strong>Moscatel Roxo</strong> age in century-old oak — 20-year and 40-year bottlings are world-class. The Periquita reds (Castelão grape) are Portugal's best-selling table reds. 50 min south of Cascais via the Tagus bridge.</p>
         <div class="winery-list">
           <div class="winery">
             <div class="name"><a href="https://www.jmf.pt/en/casa-museu" target="_blank" rel="noopener">José Maria da Fonseca ↗</a></div>
-            <div class="desc">Founded 1834, Azeitão. Vila Nogueira de Azeitão cellars. Mon–Sat tours 10–12 &amp; 2:30–5. Tasting +$10. +351 21 219 8940.</div>
+            <div class="desc">Founded 1834, Azeitão. The Moscatel de Setúbal benchmark + Periquita reds. 19th-c Vila Nogueira de Azeitão cellars. Mon–Sat tours 10–12 + 14:30–17. Tasting €15. +351 21 219 8940.</div>
           </div>
           <div class="winery">
             <div class="name"><a href="https://www.bacalhoa.pt/" target="_blank" rel="noopener">Quinta da Bacalhôa ↗</a></div>
-            <div class="desc">15th-century manor + azulejo museum + cellars. Reds and Moscatels. Mon–Sat by appointment. +351 21 219 8060.</div>
-          </div>
-          <div class="winery">
-            <div class="name"><a href="https://www.google.com/search?q=Adega+Cooperativa+Palmela" target="_blank" rel="noopener">Adega Cooperativa de Palmela ↗</a></div>
-            <div class="desc">The local co-op — honest value, traditional Castelão reds. Walk-in welcome Sat mornings.</div>
+            <div class="desc">14th-c manor + the country's most important contemporary tile factory + Azeitão cheese. Reds and Moscatels. Mon–Sat by appointment. +351 21 219 8060.</div>
           </div>
           <div class="winery">
             <div class="name"><a href="https://www.casaermelinda.pt/" target="_blank" rel="noopener">Casa Ermelinda Freitas ↗</a></div>
-            <div class="desc">Fourth-generation winemaker Leonor Freitas. Modern facility outside Setúbal. By appointment.</div>
+            <div class="desc">Fourth-generation winemaker Leonor Freitas. Modern facility outside Setúbal. By appointment. Private 2-winery driver day combining JMF + Bacalhôa: ~€230/pp.</div>
+          </div>
+          <div class="winery">
+            <div class="name">Adega Cooperativa de Palmela ↗</div>
+            <div class="desc">The local co-op — honest value, traditional Castelão reds. Walk-in welcome Sat mornings 09:00–13:00.</div>
           </div>
         </div>
       </div>
@@ -665,261 +746,571 @@
     <div class="wine-block reds" style="margin-top: 2rem;">
       <div class="wine-image" style="order: 2;"></div>
       <div class="wine-text" style="order: 1;">
-        <span class="eyebrow">Colares AOC · the survivors</span>
-        <h3>The Wine That Survived Phylloxera</h3>
-        <p>Portugal's smallest AOC — and possibly Europe's most extreme. <strong>Ramisco</strong> vines planted directly in Atlantic dune sand (which phylloxera couldn't penetrate), 15 minutes north of Cascais on the wild Sintra coast. Less than 20 hectares left in production. Reds and whites both age for decades. The bottles are difficult to find outside Portugal.</p>
+        <span class="eyebrow">Colares AOC · the phylloxera survivors</span>
+        <h3>The Sand-Vineyard Wine That Survived Phylloxera</h3>
+        <p>Portugal's smallest AOC — and Europe's most extreme. <strong>Ramisco</strong> vines planted directly in Atlantic dune sand (phylloxera couldn't penetrate), 15 min north of Cascais on the wild Sintra coast. Less than 20 hectares left in production — the AOC was 1,500 ha at its peak in the 1930s, now 1% of that. <strong>Unique in Europe — only place ungrafted vinifera vines still produce commercial wine.</strong> Reds and Malvasia whites both age for decades. Pairs with Day 2 Sintra stack on the drive back.</p>
         <div class="winery-list">
           <div class="winery">
             <div class="name"><a href="https://www.adegaregionaldecolares.pt/" target="_blank" rel="noopener">Adega Regional de Colares ↗</a></div>
-            <div class="desc">The historic co-op — founded 1931, defended Colares from extinction. Tastings + cellar tour Tue–Sat. +351 21 929 1210.</div>
+            <div class="desc">The historic 1931 co-op — defended Colares from extinction. Tastings + cellar tour Tue–Sat. 5-wine flight €20/pp, book 14 days ahead. +351 21 929 1210.</div>
           </div>
           <div class="winery">
             <div class="name"><a href="https://www.viuvagomes.com/" target="_blank" rel="noopener">Viúva Gomes ↗</a></div>
-            <div class="desc">Family producer continuing the dune-grown Ramisco tradition. Library going back to 1934. By appointment.</div>
+            <div class="desc">Family producer continuing the dune-grown Ramisco tradition. Library going back to 1934. By appointment. The cult bottle.</div>
           </div>
           <div class="winery">
             <div class="name"><a href="https://casalsantamaria.com/" target="_blank" rel="noopener">Casal Santa Maria ↗</a></div>
-            <div class="desc">Estate on the Penedo cliff with sea-view tasting room. Reds, whites, and Bual aperitif. Daily 11–6.</div>
+            <div class="desc">Estate on the Penedo cliff with sea-view tasting room. Reds, whites, and Bual aperitif. Daily 11–18.</div>
           </div>
           <div class="winery">
-            <div class="name"><a href="https://www.parato.com/" target="_blank" rel="noopener">Quinta de Parato ↗</a></div>
-            <div class="desc">Sub-region of Lisbon AOC, 30 min north. Modern bottlings of Castelão and Touriga. By appointment.</div>
+            <div class="name">Setúbal moscatel-roxo library bottles ↗</div>
+            <div class="desc">Both JMF and Bacalhôa keep 20+ and 40+ year Moscatel Roxo back-vintages on the tour menu. The unique drinking experience of the trip — request from the tour guide.</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Food -->
     <div class="section-header" id="food">
       <span class="eyebrow">The Table</span>
-      <h2>Where You'll Eat</h2>
-      <p>Two Cascais Michelin stars, two more in Sintra at Penha Longa, and a 2★ in Lisbon for the gastronomic dinner. <strong>Reserve Belcanto + Kappo now</strong> — they book out 6–8 weeks ahead.</p>
-    </div>
-    <div class="hotels-grid">
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.4), rgba(90,74,122,0.5)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
-          <span class="hotel-tier">★★ Michelin</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Belcanto</h4>
-          <div class="loc">Lisbon Chiado · 35 min by train · Avillez</div>
-          <p>Portugal's most-coveted table — Chef <strong>José Avillez's</strong> two-star room in a converted 1830s building. Two tasting menus: <strong>Lisbon Menu $180</strong> and <strong>Merry-Go-Round Menu $200</strong>. Wine pairings $90/$130. Estimate <strong>$650–$865/cpl</strong>. Closed Sun + Mon.</p>
-          <div class="hotel-meta">
-            <span class="price">$180–$250 / person</span>
-            <span>★★ Michelin</span>
-          </div>
-          <a href="https://www.belcanto.pt/en/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
-      </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(74,144,164,0.45)), url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80');">
-          <span class="hotel-tier">★ Michelin</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Fortaleza do Guincho</h4>
-          <div class="loc">Inside the fortress hotel · Chef Gil Fernandes</div>
-          <p>1★ since 2001. Modern Portuguese with maritime focus, inside the 17th-century fortress on Guincho cliff. Two tasting menus: <strong>Memórias $155</strong> and <strong>Experiência $205</strong>. Wine pairings additional. Open <strong>Wed–Sat dinner only</strong>, 7–9:30 PM.</p>
-          <div class="hotel-meta">
-            <span class="price">$155–$205 / person</span>
-            <span>★ Michelin</span>
-          </div>
-          <a href="https://guide.michelin.com/en/lisboa-region/cascais/restaurant/fortaleza-do-guincho" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
-      </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(138,143,90,0.45)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80');">
-          <span class="hotel-tier">★ Michelin (new 2026)</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Kappo</h4>
-          <div class="loc">Cascais · 12-seat omakase · Chef Tiago Penão</div>
-          <p>The 2026 Michelin star — Cascais's first new standalone star in years. <strong>12 seats only</strong>, 9-course omakase $145 pp (~$380–$490/cpl with sake/wine pairings). Penão previously held a star at Midori. <strong>Book 6–8 weeks ahead</strong>; the hardest reservation in town this summer.</p>
-          <div class="hotel-meta">
-            <span class="price">$145 / person</span>
-            <span>★ Michelin</span>
-          </div>
-          <a href="https://kappo.pt/en/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
-      </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(74,144,164,0.4)), url('https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80');">
-          <span class="hotel-tier">Harbor seafood</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Maré by José Avillez</h4>
-          <div class="loc">Between Cascais and Guincho · terrace over the sea</div>
-          <p>Portugal's most decorated chef does informal seafood on a sea-view terrace. Raw bar (marinated meagre, scarlet shrimp), royal seafood platter, charcoal-grilled sea bass, garlic octopus over embers. Lunch on the terrace is the romantic move.</p>
-          <div class="hotel-meta">
-            <span class="price">$60–$100 / person</span>
-            <span>★★★★</span>
-          </div>
-          <a href="https://marejoseavillez.pt/en/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
-      </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(193,100,74,0.3), rgba(90,74,122,0.45)), url('https://images.unsplash.com/photo-1481833761820-0509d3217039?w=600&q=80');">
-          <span class="hotel-tier">Cliff classic</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Mar do Inferno</h4>
-          <div class="loc">Cliff next to Boca do Inferno · classic Portuguese seafood</div>
-          <p>Av. Rei Humberto II, beside the famous "Hell's Mouth" cliffs. Generous platters of fresh fish, lobster, prawns, mussels. Panoramic ocean views, professional service, no fuss. Best with a bottle of Colares white.</p>
-          <div class="hotel-meta">
-            <span class="price">$50–$80 / person</span>
-            <span>★★★★</span>
-          </div>
-          <a href="https://www.mardoinferno.pt/en" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
-      </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(138,143,90,0.3), rgba(193,100,74,0.45)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
-          <span class="hotel-tier">Trailhead lunch</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Furnas do Guincho</h4>
-          <div class="loc">Ocean rocks at Guincho · lobster crêpes</div>
-          <p>Perched on rocks at Guincho beach — ideal outdoor lunch after a beach morning. Signature lobster crêpes and tableside flambé fish. Generous Portuguese seafood done well. Big white-wine list of Cascais Tejo and Setúbal whites.</p>
-          <div class="hotel-meta">
-            <span class="price">$45–$70 / person</span>
-            <span>★★★★</span>
-          </div>
-          <a href="https://furnasdoguincho.pt/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
-      </div>
-
+      <h2>3 × ★★ + 14 × ★ in Lisbon · plus the steakhouses</h2>
+      <p>The <strong>2026 Michelin Guide Portugal</strong> has <strong>three ★★ in Lisbon</strong> (Belcanto, Henrique Sá Pessoa, Fifty Seconds — the last new in 2026) + <strong>14 × ★</strong> in Lisbon + <strong>Fortaleza do Guincho ★</strong> in Cascais + <strong>Midori ★ and LAB by Sergi Arola ★</strong> at Penha Longa in Sintra. The Joann factor: Portugal leans seafood, so the meat-forward Portuguese houses (O Talho, Solar dos Presuntos, Café de São Bento, Bairro do Avillez Taberna) get equal weight below. <strong>Reserve Belcanto + Henrique Sá Pessoa NOW</strong> — 60+ days for Belcanto with €200/pax no-show fee.</p>
     </div>
 
-    <!-- Activities -->
+    <div class="food-list">
+      <div class="food-row">
+        <div class="place">Belcanto <span class="stars">★★</span><span class="meta">Lisbon Chiado · José Avillez · Lisboa Menu €165 · 60+ days lead</span></div>
+        <div class="desc"><strong>Portugal's most-coveted table.</strong> José Avillez's Chiado ★★ since 2014. <strong>Lisboa Menu €165 / Merry-Go-Round Menu €185</strong>, wine pairing €85–120. Tue–Sat lunch + dinner (closed Sun + Mon nominally — verify Aug 16 with kitchen). <strong>Book 60+ days ahead, €200/pax no-show fee, CC required.</strong> Largo São Carlos 10. <a href="https://www.belcanto.pt/en/" target="_blank" rel="noopener">belcanto.pt</a></div>
+        <div class="drive">Chiado</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Henrique Sá Pessoa <span class="stars">★★</span><span class="meta">Lisbon · reopened early 2026 · got both stars immediately</span></div>
+        <div class="desc">Formerly Alma (closed end-2025), reopened early 2026 at <strong>Páteo Bagatela, Rua Artilharia 1 #51</strong>. Awarded both stars on reopening — biggest 2026 Michelin Portugal story. Three tasting menus: <strong>Encontros / Clássicos / Costa a Costa</strong>. Tue–Sat 12:00–15:30 / 18:30–24:00. Reservation by phone +351 218 384 605 or via web. 30–45 days lead. <a href="https://hsapessoa.pt/" target="_blank" rel="noopener">hsapessoa.pt</a></div>
+        <div class="drive">Lisbon</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Fifty Seconds <span class="stars">★★</span><span class="meta">Lisbon · Vasco da Gama Tower top floor · Martín Berasategui</span></div>
+        <div class="desc">The new 2026 second star. Top of Vasco da Gama Tower (the 145-m landmark on the Tagus), Martín Berasategui's Lisbon project. Vertiginous river-view tasting menu. Less central than Belcanto + Sá Pessoa, but the view is the experience. Book via OpenTable / fiftysecondsexperience.com 45 days out.</div>
+        <div class="drive">12 min</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Fortaleza do Guincho <span class="stars">★</span><span class="meta">Cascais · Guincho cliff · Chef Gil Fernandes · maritime-focused</span></div>
+        <div class="desc">★ since 2001 (current chef Gil Fernandes). Maritime-focused inside the 17th-c clifftop fortress hotel. <strong>Memórias €175 / Experiência €220</strong>, wine pairing extra. Open <strong>Wed–Sat dinner only, 19:30–21:30 + Sun lunch</strong>. <strong>Flag Joann's seafood-skip at booking</strong> — kitchen substitutes Iberico pork or aged Mirandesa. +351 21 487 0491.</div>
+        <div class="drive">on-site</div>
+      </div>
+      <div class="food-row">
+        <div class="place">LAB by Sergi Arola <span class="stars">★</span><span class="meta">Penha Longa Resort Sintra · "mountain to sea" tapas</span></div>
+        <div class="desc">Spanish ★-chef Sergi Arola's Penha Longa room. <strong>"Mountain to sea" Portuguese-Catalan tapas progression</strong> — best non-seafood balance of the regional ★ options. 8-course tasting €120, wine pairing €60. Tue–Sat dinner. Better Joann-fit than Midori (sushi-heavy) or the Fortaleza Guincho ★ (seafood-leaning). <a href="https://www.penhalonga.com/lab" target="_blank" rel="noopener">penhalonga.com/lab</a></div>
+        <div class="drive">25 min</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Midori <span class="stars">★</span><span class="meta">Penha Longa · Pedro Almeida kaiseki · sushi-heavy</span></div>
+        <div class="desc">★ kaiseki by Chef Pedro Almeida at Penha Longa. <strong>Sushi-heavy — Joann-skip</strong>. Listed for completeness; LAB by Sergi Arola ★ is the Penha Longa pick for this couple. Tue–Sat dinner.</div>
+        <div class="drive">25 min</div>
+      </div>
+      <div class="food-row">
+        <div class="place">CURA <span class="stars">★</span><span class="meta">Four Seasons Ritz Lisbon · 5 consecutive years · Rodolfo Lavrador</span></div>
+        <div class="desc">★ at the Four Seasons Ritz. Chef Rodolfo Lavrador, 5 consecutive years starred. <strong>Percurso + Passo menus</strong>. The "stay at the Ritz, eat in-house" play. Kabuki Lisboa ★ (Paulo Alves, Japanese-Mediterranean with wagyu + Iberian pork) is the second on-property star — meat-forward, Joann-friendlier.</div>
+        <div class="drive">Lisbon</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Marlene <span class="stars">★</span><span class="meta">Lisbon Cruise Terminal · first female Portuguese chef star in 30 yrs</span></div>
+        <div class="desc">Marlene Vieira's terminal-deck ★ — <strong>first female Portuguese chef to win a star in 30 years</strong>. Modern Portuguese, Tagus-view dining room. The stall at Time Out Market is the bargain entry; the full restaurant is the experience. <a href="https://www.marlene.pt/" target="_blank" rel="noopener">marlene.pt</a></div>
+        <div class="drive">Lisbon</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Solar dos Presuntos <span class="stars">since 1974</span><span class="meta">Lisbon · roasted suckling pig · presunto bar</span></div>
+        <div class="desc">Lisbon's most-famous Portuguese meat house. Roasted suckling pig (leitão), roasted lamb, presunto (cured ham) bar, multiple Algarve-style cataplanas with meat options. <strong>The Joann-anchor restaurant</strong>. Decades-deep cellar. Reserve 14 days ahead.</div>
+        <div class="drive">Lisbon</div>
+      </div>
+      <div class="food-row">
+        <div class="place">O Talho <span class="stars">Kiko Martins steakhouse</span><span class="meta">Lisbon · second-gen butcher-shop steakhouse · industrial-chic</span></div>
+        <div class="desc">Kiko Martins' steakhouse — ribeye, filet mignon, dry-aged. Industrial-chic interior with the butcher-shop window. <strong>The pure meat play for Joann</strong>. Mains €25–55. Walk-in possible early evening.</div>
+        <div class="drive">Lisbon</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Café de São Bento <span class="stars">classic steakhouse · open till 02:00</span><span class="meta">Lisbon · steak in pepper sauce · iconic</span></div>
+        <div class="desc">Lisbon's classic steakhouse near the Parliament. <strong>Steak in pepper sauce (bife à café), open till 02:00</strong> — the late-night meat option after a Bairro Alto crawl. Reserves recommended. The post-Lux-Frágil 04:00 meal if you can hold out.</div>
+        <div class="drive">Lisbon</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Bairro do Avillez · Taberna <span class="stars">Avillez gastropub</span><span class="meta">Lisbon · Rua Nova da Trindade · noon–midnight</span></div>
+        <div class="desc">Avillez's Bairro Alto-side gastronomic complex. <strong>Taberna</strong> open noon–midnight (Iberian snacks, pršut-style cured meat, market-board), <strong>Páteo</strong> (seafood-focused with meat), <strong>Mini Bar Lisboa</strong> (gastropub + live music after 22:00). The casual Avillez entry-point if Belcanto is locked out. <a href="https://bairrodoavillez.pt/" target="_blank" rel="noopener">bairrodoavillez.pt</a></div>
+        <div class="drive">Bairro Alto</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Cervejaria Ramiro <span class="stars">shellfish + the prego sandwich</span><span class="meta">Lisbon · Tue–Sun 12:00–00:30 · iconic</span></div>
+        <div class="desc">Lisbon's most-loved cervejaria. <strong>Famous shellfish (Joann skip)</strong>, BUT the standard practice is to finish with <strong>the prego (steak sandwich)</strong> as a final course — that's Joann's order. House wines by the carafe. Walk-in queues 30 min Sat night, faster pre-19:30 or post-22:30.</div>
+        <div class="drive">Lisbon</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Hífen <span class="stars">contemporary Portuguese</span><span class="meta">Cascais Riva · terrace · the arrival-day dinner</span></div>
+        <div class="desc">Cascais Riva-front contemporary Portuguese. Truffle pasta, bacalhau à brás, dry-aged steak. The arrival-day dinner if you skip the Fortaleza Guincho terrace. Reserve via website 14 days ahead. <a href="https://www.hifen.pt/" target="_blank" rel="noopener">hifen.pt</a></div>
+        <div class="drive">Cascais</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Mar do Inferno <span class="stars">cliffside classic</span><span class="meta">Cascais · Boca do Inferno cliff · Portuguese seafood + meat</span></div>
+        <div class="desc">Av. Rei Humberto II, beside the "Hell's Mouth" cliffs. Generous platters of fresh fish, lobster, prawns, mussels, panoramic ocean views, cataplana to share. Bottle of Colares white. Joann: the bife à café or the steak cataplana. <a href="https://www.mardoinferno.pt/en" target="_blank" rel="noopener">mardoinferno.pt</a></div>
+        <div class="drive">Cascais</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Mesa de Frades <span class="stars">fado venue · 18th-c chapel</span><span class="meta">Alfama · possibly oldest continuous fado venue · 21:00 + 00:30 sets</span></div>
+        <div class="desc">18th-c restored chapel covered floor-to-ceiling in 18th-c azulejos. Possibly Lisbon's oldest continuous fado venue. <strong>Two seatings: 21:00 + 00:30</strong> — the post-Belcanto 00:30 seating is the move. Meat-friendly Portuguese menu (alheira sausage, bacalhau, slow-cooked pork). Reserve 14 days. <a href="https://www.mesadefrades.com/" target="_blank" rel="noopener">mesadefrades.com</a></div>
+        <div class="drive">Alfama</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Time Out Market <span class="stars">26 chef-curated stalls</span><span class="meta">Mercado da Ribeira · Marlene Vieira + Sá Pessoa stalls</span></div>
+        <div class="desc">The original food-hall concept. 26 stalls curated by Time Out editors — includes the Marlene Vieira stall (first female ★-chef in 30 yrs), Henrique Sá Pessoa Tasca, Manteigaria pastéis de nata. The Sunday brunch sweet spot before the Alfama walk. Open daily 10:00–24:00.</div>
+        <div class="drive">Cais do Sodré</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Pastéis de Belém <span class="stars">since 1837</span><span class="meta">Belém · open till midnight Aug · the original</span></div>
+        <div class="desc">The original pastel de nata, since 1837. <strong>Open till midnight in August.</strong> Counter for 6-to-go is queue-free; sit-down rooms have the 30-min queue. Eat warm on the lawn outside Jerónimos. Last morning before LIS departure.</div>
+        <div class="drive">Belém</div>
+      </div>
+    </div>
+
     <div class="section-header" id="activities">
-      <span class="eyebrow">Unique Experiences</span>
-      <h2>Things You Won't Do Anywhere Else</h2>
-      <p>Anyone can rent a beach umbrella. Here are the 16 that turn a good week into the one you'll talk about.</p>
+      <span class="eyebrow">Beyond the Table</span>
+      <h2>The Overpacked Activity Catalog</h2>
+      <p>You literally cannot do everything below. Pick aggressively. <strong>Top picks for this couple:</strong> Guincho kite / wing-foil / SUP morning, Carcavelos surf lesson, Cascais sunset sail, Sintra palaces stack, Cabo da Roca Perseids, Adega Regional de Colares sand vineyard, Setúbal moscatel cellars, Arrábida coasteering, Cascais Marina jet ski, Banyan Tree spa, paragliding off Cabo da Roca. Everything below is &lt;40 km from Cascais.</p>
     </div>
+
     <div class="activities">
-      <div class="activity"><span class="icon">🪁</span><h4><a href="https://kitesurfingportugal.com/kitesurfing-cascais-portugal/" target="_blank" rel="noopener">Kitesurf at Guincho ↗</a></h4><p>Peak Nortada 20–40 knots in Aug. Intermediate+ only. Private lesson $100–$140/hr.</p></div>
-      <div class="activity"><span class="icon">🏄</span><h4><a href="https://cascais-windsurf.com/" target="_blank" rel="noopener">Windsurf Center ↗</a></h4><p>Cascais Windsurf Center on Guincho. Hosted World Championships. Lessons $65–$90/hr.</p></div>
-      <div class="activity"><span class="icon">🌊</span><h4><a href="https://www.surfcascais.com/" target="_blank" rel="noopener">Surf Cascais ↗</a></h4><p>Beginner lessons at Carcavelos (protected, consistent). 2hr group lesson with kit. $30–$40 pp.</p></div>
-      <div class="activity"><span class="icon">⛵</span><h4><a href="https://www.samboat.com/boat-rental/cascais-e-estoril-portugal" target="_blank" rel="noopener">Private sunset sail ↗</a></h4><p>3-hr catamaran from Marina de Cascais. Wine on deck to Cabo da Roca. $490–$650/cpl.</p></div>
-      <div class="activity"><span class="icon">🚣</span><h4><a href="https://www.google.com/search?q=SUP+rental+Cascais+Marina" target="_blank" rel="noopener">SUP &amp; kayak ↗</a></h4><p>Cascais Marina rentals. Best mornings before the Nortada builds. $16–$27/hr.</p></div>
-      <div class="activity"><span class="icon">🤿</span><h4><a href="https://www.haliotis.pt/" target="_blank" rel="noopener">Diving Cascais ↗</a></h4><p>Haliotis &amp; Diving Center Cascais — shore + boat dives off the coast. $60–$100/dive.</p></div>
-      <div class="activity"><span class="icon">🏝️</span><h4><a href="https://www.getyourguide.com/lisbon-l42/berlengas-the-atlantic-frontier-full-day-tour-t53016/" target="_blank" rel="noopener">Berlengas day trip ↗</a></h4><p>UNESCO biosphere reserve · departs Peniche (1hr drive). Snorkel + cave tour. $110–$215 pp.</p></div>
-      <div class="activity"><span class="icon">🌅</span><h4><a href="https://www.cascais-portugal.com/Attractions/Cabo-da-Roca.html" target="_blank" rel="noopener">Cabo da Roca ↗</a></h4><p>Westernmost point of mainland Europe. Free. Bring layers — 10–18°F cooler. Sunset spot.</p></div>
-      <div class="activity"><span class="icon">🏰</span><h4><a href="https://www.parquesdesintra.pt/en/plan-your-visit/tickets-palace-of-pena/" target="_blank" rel="noopener">Pena Palace ↗</a></h4><p>Sintra · Romantic-era extravagance. Pre-book 10 AM timed slot. $16/pp.</p></div>
-      <div class="activity"><span class="icon">🌳</span><h4><a href="https://www.regaleira.pt/en" target="_blank" rel="noopener">Quinta da Regaleira ↗</a></h4><p>Sintra · initiation well, grottoes, gothic gardens. Skip-the-queue ticket $14.</p></div>
-      <div class="activity"><span class="icon">🍇</span><h4><a href="https://www.jmf.pt/en/casa-museu" target="_blank" rel="noopener">JMF cellars Azeitão ↗</a></h4><p>Setúbal Moscatel since 1834. Mon–Sat 10–5. Tasting + cellar tour $20.</p></div>
-      <div class="activity"><span class="icon">🍷</span><h4><a href="https://www.adegaregionaldecolares.pt/" target="_blank" rel="noopener">Adega de Colares ↗</a></h4><p>Sand-grown Ramisco · the wine phylloxera couldn't kill. By appointment Tue–Sat.</p></div>
-      <div class="activity"><span class="icon">🐚</span><h4><a href="https://www.thalassovitalis.com/" target="_blank" rel="noopener">Thalasso Vitalis ↗</a></h4><p>Seawater spa at the Cascais marina · 2h thermal circuit $46–$51. Add couples massage.</p></div>
-      <div class="activity"><span class="icon">🚲</span><h4><a href="https://www.google.com/search?q=ebike+rental+Cascais+Cabo+da+Roca" target="_blank" rel="noopener">E-bike Cabo da Roca ↗</a></h4><p>Coastal greenway from Cascais to Cabo da Roca (12 mi each way). Self-guided e-bike day.</p></div>
-      <div class="activity"><span class="icon">🎷</span><h4><a href="https://www.festivaldesintra.pt/en/" target="_blank" rel="noopener">Festival de Sintra ↗</a></h4><p>Chamber music in palace ballrooms. Aug weekend concerts overlap your trip. €25–60.</p></div>
-      <div class="activity"><span class="icon">🥐</span><h4><a href="https://pasteisdebelem.pt/en/" target="_blank" rel="noopener">Pastéis de Belém ↗</a></h4><p>Lisbon · the original since 1837. 6 to-go from the counter, no queue, eat on the lawn.</p></div>
+
+      <div class="activity">
+        <span class="icon">🪁</span>
+        <h4><a href="https://guinchowindfactory.com/" target="_blank" rel="noopener">Guincho Wind Factory</a></h4>
+        <p>Praia do Guincho's main kite + wing-foil + windsurf + SUP school. Aug Nortada 20–35 knots. <strong>€100/pp 1h individual kite lesson</strong>, all gear. SUP rental €25/h on the calmer lagoon. Joann-safe via SUP.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏄</span>
+        <h4><a href="https://www.gustykite.com/" target="_blank" rel="noopener">Gustykite</a></h4>
+        <p>Kite-only school since 2003 on Guincho. IKO-certified instructors, all levels including discovery. €80–120/h. Best for first-timer kite intro.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🌊</span>
+        <h4><a href="https://www.carcavelossurfschool.com/" target="_blank" rel="noopener">Carcavelos Surf School</a></h4>
+        <p>The Portuguese Federation-certified school since 2001 at Praia de Carcavelos (10 min east of Cascais on the train line). Protected, consistent beach break. <strong>2h group €30–40/pp all-in</strong>. Best for absolute beginners and second-session intermediates.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">⛵</span>
+        <h4><a href="https://www.cascaiscruises.com/" target="_blank" rel="noopener">Cascais Sunset Sail</a></h4>
+        <p>2-h sunset cruise from Cascais Marina · passes Santa Marta lighthouse + Boca do Inferno + Cabo Raso. <strong>€150–250/2pax private</strong>. GetMyBoat option from $115/h. Wine on deck.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🛥️</span>
+        <h4><a href="https://www.titotravel.com/" target="_blank" rel="noopener">TiToTravel Jet Ski</a></h4>
+        <p>30-min Cascais Marina jet ski €200 (up to 2 ppl, includes transfer + fuel + insurance, min age 16). Loops Boca do Inferno cliff coast.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏊</span>
+        <h4><a href="https://arrabidalife.com/" target="_blank" rel="noopener">Arrábida Coasteering + Kayak</a></h4>
+        <p>Arrábida Life — full-day kayak + coasteering + cliff jumping in the marine reserve · max 7-person small group · €120/pp. The serious water-day. Pairs with Setúbal wine afternoon.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🤿</span>
+        <h4><a href="https://www.cascaisdive.com/" target="_blank" rel="noopener">CascaisDive</a></h4>
+        <p>SSI school, Av. Marginal 6538 Estoril. PADI option at Clube Naval de Cascais. Shore + boat dives along the Cascais coast — €60–100/dive. Underwater visibility 10–15 m in Aug.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏰</span>
+        <h4><a href="https://www.parquesdesintra.pt/en/plan-your-visit/tickets-palace-of-pena/" target="_blank" rel="noopener">Pena Palace</a></h4>
+        <p>Sintra · 09:30–19:00 Apr–Sep. <strong>Mandatory timed entry</strong> €14–20. Romantic-era extravagance, yellow + magenta turrets. Pre-book 7–14 days ahead. 20 min drive from Guincho.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🌳</span>
+        <h4><a href="https://www.regaleira.pt/en" target="_blank" rel="noopener">Quinta da Regaleira</a></h4>
+        <p>Sintra · 10:00–19:30. <strong>NIGHT TOURS daily Apr–Oct</strong> (lantern, 19:30–23:00). 27-m Initiation Well, grotto network, gothic gardens. Sells days out — book ahead.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🥾</span>
+        <h4><a href="https://www.alltrails.com/trail/portugal/lisbon/cabo-da-roca-to-praia-da-ursa" target="_blank" rel="noopener">Cabo da Roca → Praia da Ursa</a></h4>
+        <p>3.9 km round trip, 250 m gain, dramatic descent to hidden cove · <strong>sunrise/sunset only in Aug heat</strong>. The walk-the-edge-of-Europe hike.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">⛰️</span>
+        <h4><a href="https://www.alltrails.com/trail/portugal/lisbon/convento-dos-capuchos-loop" target="_blank" rel="noopener">Capuchos Trail PR11</a></h4>
+        <p>3-mi shaded loop through cork-oak forest. Convento dos Capuchos at the end (monks slept on cork). 90 min. Pairs between Pena + Regaleira.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🍇</span>
+        <h4><a href="https://www.adegaregionaldecolares.pt/" target="_blank" rel="noopener">Adega Regional de Colares</a></h4>
+        <p>15 min north of Cascais. <strong>Europe's only ungrafted sand-vineyard region.</strong> 1931 historic co-op. 5-wine flight €20/pp. Tue–Sat, book 14 days ahead.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🍷</span>
+        <h4><a href="https://www.jmf.pt/en/casa-museu" target="_blank" rel="noopener">JMF cellars Azeitão</a></h4>
+        <p>Setúbal Moscatel since 1834. 50 min south via Tagus bridge. Mon–Sat 10–12 + 14:30–17 tours. €15 tasting incl. 20-year Moscatel Roxo.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🪂</span>
+        <h4><a href="https://godiscoverportugal.com/" target="_blank" rel="noopener">Tandem Paragliding</a></h4>
+        <p>Off Cabo da Roca / Sintra hills. <strong>€65/pp, 30 min</strong>. Go Discover Portugal, Portugal Paragliding, Espiral. The bucket-list aerial of the trip.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🚲</span>
+        <h4><a href="https://parkebike.com/" target="_blank" rel="noopener">Park-e-Bike Sintra</a></h4>
+        <p>E-bike rental + routes. The 40 km Sintra-Capuchos-Peninha-Guincho descent (mostly downhill). Self-guided full day. €45–60/pp/day.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🚴</span>
+        <h4><a href="https://www.rent4trail.com/" target="_blank" rel="noopener">Rent4Trail MTB</a></h4>
+        <p>Full-suspension MTB rental + shuttle service. The serious Sintra mountain-biking option (Capuchos + Peninha + Guincho descents). Shuttle to top, ride to coast.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">💆</span>
+        <h4><a href="https://www.banyantree.com/portugal/estoril" target="_blank" rel="noopener">Banyan Tree Spa</a></h4>
+        <p>At Palácio Estoril Hotel. Thai-trained therapists. Balinese / deep tissue / Thai massage 90 min €180/pp · included sauna + steam + indoor pool. The recovery-day spa.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🎰</span>
+        <h4><a href="https://www.casino-estoril.pt/en" target="_blank" rel="noopener">Casino Estoril</a></h4>
+        <p>Europe's 5th-largest casino. Daily 15:00–03:00. Slots / tables / poker / D Lounge live concerts + DJ + summer Tamariz beachside extension Jun–Oct. Bond dress code at tables.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏝️</span>
+        <h4><a href="https://www.getyourguide.com/lisbon-l42/berlengas-the-atlantic-frontier-full-day-tour-t53016/" target="_blank" rel="noopener">Berlengas Day Trip</a></h4>
+        <p>UNESCO biosphere reserve · departs Peniche (1h drive north). Snorkel + cave tour. $110–$215 pp. The "skip the Cascais area" full-day add.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🌅</span>
+        <h4><a href="https://www.cascais-portugal.com/Attractions/Cabo-da-Roca.html" target="_blank" rel="noopener">Cabo da Roca</a></h4>
+        <p>Westernmost point of mainland Europe. Free. Bring layers — 10°F cooler. Sunset spot. <strong>The Perseids spot.</strong> 25 min from Cascais.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏛️</span>
+        <h4><a href="https://www.parquesdesintra.pt/en/" target="_blank" rel="noopener">Castelo dos Mouros</a></h4>
+        <p>Sintra Moorish castle + PR2 loop (6.6 km shaded). Walk-the-walls panoramic view. €8 entry. Pairs with Pena Palace morning.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">⚓</span>
+        <h4><a href="https://visitcascais.com/en/whats-on" target="_blank" rel="noopener">Aug 15 Maritime Procession</a></h4>
+        <p>Cascais Maritime Procession of Senhora dos Navegantes. <strong>Sat Aug 15, ~17:30–19:00</strong>. Parish church → wharf → boats → Ermida da Guia. Free. Stand on Paredão promenade.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🎧</span>
+        <h4><a href="https://shotgun.live/" target="_blank" rel="noopener">Cascais Atlantic Sunsets</a></h4>
+        <p>Forte de Santo António da Barra. Open-air DJ series. <strong>Armand Van Helden Aug 15</strong>. €25 early bird via Shotgun. Will sell out — book now.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🌃</span>
+        <h4><a href="https://www.luxfragil.com/" target="_blank" rel="noopener">Lux Frágil Lisbon</a></h4>
+        <p>Lisbon's flagship club, riverside Santa Apolónia. John Malkovich co-owns. <strong>Thu/Fri/Sat 23:30–06:00 only.</strong> 3 floors. Saturday peak. Door is the gate.</p>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="nightlife">
+      <span class="eyebrow">After Dark</span>
+      <h2>The Late-Night Map</h2>
+      <p>Cascais and Lisbon each have their own late-night map. <strong>Cascais after midnight is quieter</strong> — Largo Camões bar terraces till ~02:00, Cascais Marina bars till 03:00, Casino Estoril till 03:00 daily. <strong>Real late-night = Lisbon</strong>, 40 min by Cais do Sodré train (last 1:30 AM) or €40–60 Uber. Bairro Alto crawl, Pink Street strip, Lux Frágil till 06:00 Thu/Fri/Sat. The 3+2 split puts you in Lisbon Sat + Sun nights for the late stuff.</p>
+    </div>
+
+    <div class="nightlife">
+      <div class="nightlife-col">
+        <h3>Cascais + Estoril · the early-late map</h3>
+        <div class="venue">
+          <div class="vname">Largo Luís de Camões</div>
+          <div class="vmeta">Central plaza · bar terraces till ~02:00 · pedestrianized</div>
+          <div class="vdesc">Cascais's central plaza — bar terraces, live acoustic spillover, summer pop-up bars. The post-dinner ritual stroll. Pedestrianized, walk between 5–6 venues without leaving the square.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">John Bull</div>
+          <div class="vmeta">Largo Camões anchor pub · since 1996 · till 02:00</div>
+          <div class="vdesc">The Cascais expat anchor — Brit pub on the central plaza, live football, Guinness on tap, late kitchen (steaks + burgers till 23:00). The Wed-night warm-up.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Cascais Jazz Club</div>
+          <div class="vmeta">Live jazz Wed–Sun · 21:00 sets · cover €10–15</div>
+          <div class="vdesc">Small live-jazz venue tucked off Largo Camões. Wed Brazilian + samba night, Fri–Sat headliner Portuguese jazz trios. €10–15 cover. Sits 60.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">The Crafty Cellar</div>
+          <div class="vmeta">Craft beer · 30+ taps · till 02:00</div>
+          <div class="vdesc">The Cascais craft-beer destination. 30+ rotating taps of Portuguese + Belgian + UK craft, charcuterie boards. Cellar-vibe interior. Open till 02:00 Fri–Sat.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Bafureira Club</div>
+          <div class="vmeta">Praia da Bafureira beachside · DJ · summer-only</div>
+          <div class="vdesc">Cascais's beachside DJ spot at Praia da Bafureira (5 min from Largo Camões). Summer-only, sundowner + late dance, runs to 03:00 Fri–Sat in peak Aug.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Cascais Marina bars</div>
+          <div class="vmeta">Waterfront strip · runs till 02–03:00 summer</div>
+          <div class="vdesc">The Marina waterfront has a 6-bar strip — Bar Bardot, the Yacht Club bar, harbor-view terraces. The late-walk option after dinner anywhere in town.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Casino Estoril D Lounge + Tamariz</div>
+          <div class="vmeta">Casino till 03:00 daily · summer Tamariz beachside extension Jun–Oct</div>
+          <div class="vdesc">D Lounge concerts + DJ inside Casino Estoril. <strong>Summer Tamariz extension</strong> — open-air bar + DJ on Praia do Tamariz beach (100 m from casino) Jun–Oct. The rain-day backup any night. Bond-strict dress at the casino tables.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Forte de Santo António da Barra</div>
+          <div class="vmeta">Cascais Atlantic Sunsets DJ series · €25 early bird · Aug 15 = Van Helden</div>
+          <div class="vdesc">16th-c seafront fortress between Cascais + Estoril. The Cascais Atlantic Sunsets DJ series — Kaytranada Aug 8, <strong>Armand Van Helden Aug 15</strong>. 22:00–02:00 sessions. Book via Shotgun. The trip's marquee Cascais night.</div>
+        </div>
+      </div>
+
+      <div class="nightlife-col">
+        <h3>Lisbon · Bairro Alto + Pink Street + Lux Frágil</h3>
+        <div class="venue">
+          <div class="vname">Lux Frágil</div>
+          <div class="vmeta">Santa Apolónia riverside · Thu/Fri/Sat 23:30–06:00 only · co-owned John Malkovich</div>
+          <div class="vdesc">Lisbon's flagship club. <strong>Open Thu/Fri/Sat only</strong>, 23:30–06:00. 3 floors: riverside terrace, main dance, panoramic bar. Door prefers couples / regulars / music-oriented dress (avoid sportswear). Arrive 01:00–03:00 for best odds. <strong>Saturday Aug 15 = peak night.</strong> €20–25 cover.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Bairro Alto crawl · Rua da Atalaia</div>
+          <div class="vmeta">Bar-lined Bairro Alto axis · 22:00–03:00</div>
+          <div class="vdesc">The dense bar strip — <strong>A Capela</strong> (vinyl DJs funk / house / disco), <strong>The Old Pharmacy</strong> (wine + small plates), <strong>Pub Português</strong>, <strong>Pensão Amor</strong> (Belle Époque bordello-turned-bar with rotating burlesque), <strong>Cinco Lounge</strong> (cocktail temple), <strong>Groove Bar</strong>, <strong>Jam Club</strong>.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Pink Street (Rua Nova do Carvalho)</div>
+          <div class="vmeta">Cais do Sodré · Lisbon's densest nightlife strip · Thu–Sat peak</div>
+          <div class="vdesc">The pink-painted bar street in Cais do Sodré. <strong>Sol e Pesca</strong> (canned-fish bar), <strong>Tokyo Bar</strong>, <strong>Musicbox</strong> (live bands + late club), pub crawls €20. Thursday–Saturday peak. 10-min walk from Bairro Alto Hotel.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">PARK rooftop</div>
+          <div class="vmeta">Calçada do Combro 58 · top of parking garage · Tue–Sat 13:00–02:00</div>
+          <div class="vdesc">Lisbon's iconic rooftop — top of a parking garage in Bairro Alto, planted garden, 25 de Abril Bridge view. Cocktails €10–14. The sunset ritual + late-evening wind-down.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">TOPO Martim Moniz</div>
+          <div class="vmeta">Daily 12:30–02:00 · 360° view incl. São Jorge</div>
+          <div class="vdesc">Rooftop bar with 360° view including Castelo de São Jorge. Cocktails €9–13. Daily 12:30–02:00. The post-dinner rooftop if PARK is mobbed.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">SEEN Sky Bar Tivoli Avenida Liberdade</div>
+          <div class="vmeta">Hotel rooftop · Avenida da Liberdade · DJ nights</div>
+          <div class="vdesc">Tivoli hotel rooftop on the Avenida — DJ nights + cocktail list. Smartly dressed crowd. The "polished version of PARK." Daily 18:00–02:00.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">K Urban Beach</div>
+          <div class="vmeta">Cais da Viscondessa, Santos · riverside terrace + pool + dance floors</div>
+          <div class="vdesc">Riverside megaclub west of Cais do Sodré — terrace + pool + multiple dance floors. Friday + Saturday only. The "big production" alternative to Lux Frágil if you can't get past the door there.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Mesa de Frades + Tasca do Chico · fado in Alfama</div>
+          <div class="vmeta">21:00 + 00:30 sets · meat-friendly menus</div>
+          <div class="vdesc"><strong>Mesa de Frades</strong> (18th-c chapel, oldest continuous), <strong>Tasca do Chico Alfama</strong> (raw, walk-in, fadistas trade sets till 02:00), <strong>Clube de Fado</strong> (behind Sé, top-tier polished), <strong>Sr. Vinho</strong> (Lapa, set-menu + fado). The post-Belcanto Alfama hour.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" id="score">
+      <span class="eyebrow">Adversarial Scoring</span>
+      <h2>Re-scored on the 8 New Criteria — Biggest Jump (+8)</h2>
+      <p>Scored 0–3 per axis. Hard criteria ×2, soft ×1. Total /39. Honest read: <strong>activity density + weather + romance max out; food caliber is real-tier ★★ Lisbon stack; nightlife is strong but requires 40-min train to Lisbon for late; Joann seafood is the soft spot</strong>. Total <strong>35/39 — biggest jump in the comparison, +8 from old 27</strong>.</p>
+    </div>
+
+    <div class="score-grid">
+      <div class="score-row">
+        <div class="axis">Food caliber <span class="tag">Hard ×2</span></div>
+        <div class="reason">2026 Michelin Portugal: <strong>3 × ★★ in Lisbon</strong> (Belcanto, Henrique Sá Pessoa, Fifty Seconds-new), <strong>14 × ★</strong> in Lisbon, <strong>Fortaleza Guincho ★</strong> in Cascais, <strong>Midori ★ + LAB ★</strong> Penha Longa. Marlene = first female Portuguese ★ in 30 yrs. Meat-forward Portuguese houses deep (Solar dos Presuntos, O Talho, Café de São Bento till 02:00). <strong>3/3.</strong></div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Nightlife &amp; late energy <span class="tag">Hard ×2</span></div>
+        <div class="reason">Bairro Alto + Pink Street + Lux Frágil till 06:00 + PARK + Aug 15 Van Helden at Forte Santo António is a real top-tier stack. Cascais quieter — most late nights require 40 min train. Strong but not the off-charts Hvar / Ibiza tier. <strong>2/3.</strong></div>
+        <div class="num">2 × 2 = 4</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Activity density <span class="tag">Hard ×2</span></div>
+        <div class="reason">Guincho kite + Carcavelos surf + Cascais sailing + Arrábida coasteering + Sintra 4 palaces + 5 hike routes + Setúbal winery + jet ski + paragliding + scuba + Cabo da Roca + Banyan Tree spa + Berlengas day-trip — all in &lt;40 km radius. <strong>3/3.</strong></div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Weather <span class="tag">Hard ×2</span></div>
+        <div class="reason">Cascais Aug: <strong>78.8°F avg high / 63.5°F low</strong> (75–85°F band), 355h sun/month, <strong>~2 rainy days</strong>, 6mm total rain. Atlantic breeze + Nortada keep the inland heatwave off. Dry = low mosquito. Cooler than Mallorca / Costa del Sol — better sleeping. <strong>3/3.</strong></div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Safety &amp; late walkability <span class="tag">Hard ×2</span></div>
+        <div class="reason"><strong>Cascais 81/100 night safety</strong> (Numbeo); Lisbon Chiado / Bairro Alto / Pink Street / Cais do Sodré all busy + safe. Pickpockets in Lisbon trams + tourist zones moderate, bag-zip mitigates. Trains till 1:30 AM Lisbon–Cascais; 24-h Ubers Cascais. <strong>3/3.</strong></div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Wine <span class="tag">Soft ×1</span></div>
+        <div class="reason">Colares sand vineyards = unique in Europe (ungrafted vinifera, phylloxera survivor); Setúbal Moscatel + Moscatel Roxo 20+ year = world-class fortified. But the catalog is smaller than Rioja / Douro / Mallorca — only ~10 visitable producers in range. <strong>2/3.</strong></div>
+        <div class="num">2</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Romance / hotel quality <span class="tag">Soft ×1</span></div>
+        <div class="reason">Fortaleza Guincho cliff fortress R&amp;C + Farol on the waves + Penha Longa 14th-c monastery + Bairro Alto Hotel 18th-c + Four Seasons Ritz Lisbon — all top-tier. Multiple Belmond-level. <strong>3/3.</strong></div>
+        <div class="num">3</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Joann seafood tolerance <span class="tag">Soft ×1 · lower seafood = higher</span></div>
+        <div class="reason">Portugal does heavy seafood — flag at booking. But Lisbon meat depth is real: <strong>Solar dos Presuntos suckling pig + O Talho ribeye + Café de São Bento till 02:00 + Iberico pork everywhere + Mirandesa beef + Alentejano black pork</strong>. Fortaleza Guincho ★ + Midori ★ are seafood-heavy → flag at booking. LAB ★ is meat-balanced. <strong>2/3.</strong></div>
+        <div class="num">2</div>
+      </div>
+      <div class="score-row total">
+        <div class="axis">Weighted total</div>
+        <div class="reason">Hard 28/30 + Soft 7/9. <strong>The +8 swing</strong> from old 27. The activity-density + Cabo da Roca Perseids + only-US-nonstop combination + Aug 15 anchor + 3 × ★★ Lisbon stack lifts Cascais from "nice arrival cruise" to a real top-tier overpacked pick. <strong>The under-the-radar winner.</strong></div>
+        <div class="num">35 / 39</div>
+      </div>
     </div>
 
   </div>
 </section>
 
-<!-- Booking + Budget -->
 <section class="booking" id="book">
   <div class="container">
+
     <div class="section-header">
-      <span class="eyebrow">Pre-Trip Punch List</span>
+      <span class="eyebrow">Make It Real</span>
       <h2>Book These Now</h2>
-      <p>Listed in priority order. Items 1–4 sell out 60+ days ahead in August. Today is your trigger.</p>
+      <p>Twelve actions, ranked by lead time required. <strong>Belcanto ★★ + Fortaleza Guincho + Bairro Alto Hotel + Van Helden ticket + Penha Longa (for the Amex 30% off through Aug 31)</strong> all need 60+ day lead. The Pakleni-equivalent — the Cascais sunset cruise + Guincho Wind Factory — are reasonably bookable 1 week ahead.</p>
     </div>
 
     <div class="steps">
 
       <div class="step">
-        <div class="stepnum">1</div>
+        <div class="stepnum">01</div>
         <div>
-          <h4>Flight — TAP TP224, Aug 11 4:50 PM LAX → LIS (nonstop)</h4>
-          <p>Book on flytap.com or via Chase/Amex travel portal. Premium Economy adds ~$700 each but the bigger seat is worth the 11-hour eastbound. Round-trip target: <strong>$1,000–$1,400</strong>.</p>
-          <div class="meta-line">→ <a href="https://www.flytap.com/en_us/flights-from-los-angeles-to-lisbon" target="_blank" rel="noopener">flytap.com</a> · share confirmation # with hotel concierge for transfer</div>
+          <h4>Book Belcanto ★★ (Sun Aug 16, 21:00) — 60+ days lead, €200/pax no-show</h4>
+          <p>Portugal's most-coveted table. José Avillez, Largo São Carlos 10 Chiado. <strong>Lisboa Menu €165 / Merry-Go-Round Menu €185</strong>, wine pairing €85–120. Tue–Sat — verify Aug 16 Sun opening with kitchen at booking. <strong>CC required, €200/pax no-show fee, 60+ days lead minimum for Aug peak.</strong></p>
+          <div class="meta-line">60+ days · <a href="https://www.belcanto.pt/en/" target="_blank" rel="noopener">belcanto.pt</a> · +351 21 342 0607</div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">2</div>
+        <div class="stepnum">02</div>
         <div>
-          <h4>Hotel — Fortaleza do Guincho (or your alternate from the six)</h4>
-          <p>Aug 12 → Aug 17 (5 nights). Sea-view room. Request airport transfer at booking. <strong>Mid-August is their fully-booked week</strong> — call directly rather than booking through a third party for better room assignment.</p>
-          <div class="meta-line">→ <a href="https://www.fortalezadoguincho.com/" target="_blank" rel="noopener">fortalezadoguincho.com</a> · +351 21 487 0491</div>
+          <h4>Book Fortaleza do Guincho (3 nights, Wed Aug 12 → Sat Aug 15)</h4>
+          <p>17th-c clifftop fortress R&amp;C. Request sea-view room with Atlantic 40 m below window. Mid-August is the peak week — book direct via fortalezadoguincho.com (Amex FHR / Virtuoso may show upgrade + breakfast benefits). <strong>$490–$1,000/night peak Aug.</strong></p>
+          <div class="meta-line">60+ days · <a href="https://www.fortalezadoguincho.com/" target="_blank" rel="noopener">fortalezadoguincho.com</a> · +351 21 487 0491</div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">3</div>
+        <div class="stepnum">03</div>
         <div>
-          <h4>Belcanto ★★ — pick a night, lock it in</h4>
-          <p>Recommend dinner on Day 5 (Sunday Aug 16) — pairs with the Lisbon day. Tasting menu only. <strong>Book directly with the restaurant 60+ days ahead</strong> — third-party platforms have limited inventory.</p>
-          <div class="meta-line">→ <a href="https://www.belcanto.pt/en/" target="_blank" rel="noopener">belcanto.pt</a> · +351 21 342 0607</div>
+          <h4>Book Bairro Alto Hotel Lisbon (2 nights, Sat Aug 15 → Mon Aug 17)</h4>
+          <p>18th-c building, Largo de Camões, Chiado, rooftop BAHR &amp; Terrace. Request Tagus-view room. LHW member — Amex FHR + Virtuoso eligible. 5-min walk Pink Street, 7-min Belcanto, 15-min Uber Lux Frágil. <strong>$500–$900/night.</strong></p>
+          <div class="meta-line">60 days · <a href="https://www.bairroaltohotel.com/" target="_blank" rel="noopener">bairroaltohotel.com</a></div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">4</div>
+        <div class="stepnum">04</div>
         <div>
-          <h4>Kappo ★ — the hardest table in Cascais</h4>
-          <p>12 seats, new 2026 star. Book any night except Sun/Mon — try Thu Aug 13 to bookend Fortaleza on Friday. <strong>Book 8 weeks ahead.</strong></p>
-          <div class="meta-line">→ <a href="https://kappo.pt/en/" target="_blank" rel="noopener">kappo.pt</a> · @kappo.cascais</div>
+          <h4>Buy Armand Van Helden tickets — Cascais Atlantic Sunsets · Sat Aug 15</h4>
+          <p>US house DJ at <strong>Forte de Santo António da Barra</strong>, 22:00–02:00. <strong>€25 early bird via Shotgun — will sell out.</strong> The Aug 15 marquee, pairs with the Maritime Procession that same afternoon.</p>
+          <div class="meta-line">Now · <a href="https://shotgun.live/" target="_blank" rel="noopener">shotgun.live</a> · search "Cascais Atlantic Sunsets Van Helden"</div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">5</div>
+        <div class="stepnum">05</div>
         <div>
-          <h4>Setúbal wine day — 4 calls to make</h4>
-          <p>
-            <strong>José Maria da Fonseca</strong> (+351 21 219 8940, Mon–Sat 10–5) — request Friday Aug 14 morning.<br>
-            <strong>Quinta da Bacalhôa</strong> (+351 21 219 8060) — same day, afternoon.<br>
-            <strong>Adega de Colares</strong> (+351 21 929 1210) — Sat Aug 15 if not doing Setúbal.<br>
-            <strong>Viúva Gomes</strong> (Colares) — walk-in welcome.
-          </p>
+          <h4>Book TAP TP224 LAX → LIS nonstop · TAP TP223 LIS → LAX nonstop</h4>
+          <p>Outbound TP224 dep 4:50 PM LAX Tue Aug 11, arr 11:55 AM LIS Wed Aug 12 · return TP223 Mon Aug 17. <strong>Only US nonstop in the comparison.</strong> Premium Economy adds ~$700/seat — worth it for 11-h eastbound. RT target <strong>$1,000–$1,400/pp</strong>.</p>
+          <div class="meta-line">45–60 days · <a href="https://www.flytap.com/en_us/flights-from-los-angeles-to-lisbon" target="_blank" rel="noopener">flytap.com</a></div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">6</div>
+        <div class="stepnum">06</div>
         <div>
-          <h4>Rental car — pick up LIS, drop LIS</h4>
-          <p>Compact automatic. Sixt or Europcar at Lisbon airport. <strong>~$400 for 5 days</strong>. Note: manuals are $100 cheaper if you can drive stick — most cars in Portugal are manual. You can do this trip without a car (trains + Ubers) but Setúbal and Cabo da Roca are much easier with wheels.</p>
-          <div class="meta-line">→ <a href="https://www.sixt.com/" target="_blank" rel="noopener">sixt.com</a> · <a href="https://www.europcar.com/" target="_blank" rel="noopener">europcar.com</a></div>
+          <h4>Reserve Henrique Sá Pessoa ★★ — alternative or pre-show Sat Aug 15</h4>
+          <p>Reopened early 2026 at Páteo Bagatela, Rua Artilharia 1 #51. Got both stars immediately. <strong>Encontros / Clássicos / Costa a Costa</strong> menus. Tue–Sat 12:00–15:30 / 18:30–24:00. Book as either: (a) backup if Belcanto doesn't confirm, or (b) the pre-Van Helden 19:30 first seating to hit two ★★ in three days. 30–45 days lead.</p>
+          <div class="meta-line">30–45 days · <a href="https://hsapessoa.pt/" target="_blank" rel="noopener">hsapessoa.pt</a> · +351 218 384 605</div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">7</div>
+        <div class="stepnum">07</div>
         <div>
-          <h4>Sintra timed-entry tickets</h4>
-          <p>Pena Palace 10 AM slot ($16), Quinta da Regaleira ($14). Both sell out in August by mid-morning. Book 21 days ahead.</p>
-          <div class="meta-line">→ <a href="https://www.parquesdesintra.pt/en/plan-your-visit/tickets-palace-of-pena/" target="_blank" rel="noopener">Pena Palace</a> · <a href="https://www.regaleira.pt/en" target="_blank" rel="noopener">Regaleira</a></div>
+          <h4>Reserve Fortaleza do Guincho ★ (Fri Aug 14, 20:30)</h4>
+          <p>Chef Gil Fernandes maritime-focused ★ at the hotel. <strong>Memórias €175 / Experiência €220</strong>, wine pairings €70–110. Open Wed–Sat dinner only 19:30–21:30 + Sun lunch. <strong>Flag Joann's seafood-skip at booking — kitchen substitutes Iberico pork or aged Mirandesa</strong>. 14–21 days lead.</p>
+          <div class="meta-line">14–21 days · <a href="https://www.fortalezadoguincho.com/restaurant/" target="_blank" rel="noopener">hotel restaurant page</a></div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">8</div>
+        <div class="stepnum">08</div>
         <div>
-          <h4>Other dinner reservations</h4>
-          <p>Reserve <strong>Maré</strong> (Thu Aug 13), <strong>Mar do Inferno</strong> (any night), and <strong>Furnas do Guincho</strong> (lunch). All take direct reservations by phone or through their websites. 30 days ahead is enough for these.</p>
+          <h4>Reserve LAB by Sergi Arola ★ (Thu Aug 13, 21:00)</h4>
+          <p>Penha Longa Resort, Sintra. Spanish ★-chef's "mountain to sea" tapas progression. <strong>Better non-seafood balance than Midori ★</strong>. 8-course tasting €120, wine pairing €60. Tue–Sat dinner. 14 days lead.</p>
+          <div class="meta-line">14 days · <a href="https://www.penhalonga.com/lab" target="_blank" rel="noopener">penhalonga.com/lab</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">09</div>
+        <div>
+          <h4>Pre-book Sintra timed-entry — Pena + Regaleira (incl. NIGHT tour)</h4>
+          <p><strong>Pena Palace 09:30 slot</strong> €14–20 — 7–14 days ahead. <strong>Quinta da Regaleira</strong> €14 timed slot — sells days out. <strong>Regaleira night-tour</strong> (lantern, 19:30–23:00, daily Apr–Oct) — book a Wed evening slot in the Sintra-day window. Both via the Sintra Parks website.</p>
+          <div class="meta-line">7–14 days · <a href="https://www.parquesdesintra.pt/en/" target="_blank" rel="noopener">parquesdesintra.pt</a> · <a href="https://www.regaleira.pt/en" target="_blank" rel="noopener">regaleira.pt</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">10</div>
+        <div>
+          <h4>Book Mesa de Frades Alfama fado (Sun Aug 16, 00:30 late seating)</h4>
+          <p>18th-c restored chapel, possibly oldest continuous fado venue in Lisbon. <strong>Late 00:30 seating is the post-Belcanto move</strong>. Meat-friendly Portuguese menu. 14 days lead via website. Backup: <strong>Clube de Fado</strong> (behind Sé, top-tier polished) or <strong>Tasca do Chico Alfama</strong> (raw, walk-in OK till 02:00).</p>
+          <div class="meta-line">14 days · <a href="https://www.mesadefrades.com/" target="_blank" rel="noopener">mesadefrades.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">11</div>
+        <div>
+          <h4>Setúbal wine day + Colares — 3 calls to make</h4>
+          <p><strong>Quinta da Bacalhôa</strong> (+351 21 219 8060) — Fri Aug 14 afternoon, 1.5h tour + lunch. <strong>José Maria da Fonseca</strong> (+351 21 219 8940, Mon–Sat 10–17:00) — same day, late afternoon 1h tour + tasting €15. <strong>Adega Regional de Colares</strong> (+351 21 929 1210) — Thu Aug 13 late-afternoon stop on the Sintra → Cascais drive, €20/pp 5-wine flight. 14 days each.</p>
+          <div class="meta-line">14 days · multiple direct phone bookings</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">12</div>
+        <div>
+          <h4>Reserve Guincho Wind Factory + Cascais sunset cruise + Arrábida Life</h4>
+          <p><strong>Guincho Wind Factory</strong> (kite/SUP, 3–7 days ahead, €100/pp 1h kite lesson via guinchowindfactory.com). <strong>Carcavelos Surf School</strong> (24–48 h ahead, €30–40/pp 2h group). <strong>Cascais sunset cruise</strong> (Palma Yachts, 7 days ahead, 48-h refund window, €150–250/2pax). <strong>Arrábida Life</strong> (coasteering + kayak, 7 days ahead, €120/pp). All bookable last-minute except Arrábida Life if you want the small-group slot.</p>
+          <div class="meta-line">3–14 days · multiple operator websites above</div>
         </div>
       </div>
 
     </div>
 
-    <!-- Budget tier -->
+    <div class="adversarial">
+      <h3>Adversarial honesty — where Cascais loses (and where it wins)</h3>
+      <p><strong>vs. San Sebastián:</strong> SS wins the food math — <strong>3 × ★★★ in 12 mi (Arzak, Akelarre, Martín Berasategui) + Aste Nagusia's 8 nights of fireworks Aug 14–22</strong>. Lisbon has <em>zero</em> ★★★. SS pintxos breadth is in another league. <strong>BUT Joann-seafood is far worse in SS</strong> (Basque cuisine is fish-anchored). And SS lacks Cascais's water-sport breadth + the Perseids at Cabo da Roca + the only US nonstop.</p>
+      <p><strong>vs. Mallorca:</strong> Mallorca wins the trophy hotel + restaurant combination — <strong>Belmond La Residencia in Deià + Voro ★★ at Park Hyatt Canyamel + Maca de Castro ★★</strong>. Mallorca's calmer Med swimming is real (Cascais has Guincho currents). Mallorca's wine catalog (70+ producers across 2 DOs) is wider. <strong>BUT Cascais has 3 × ★★ in Lisbon + the Cabo da Roca Perseids + only US nonstop + better Aug 15 alignment + cheaper.</strong></p>
+      <p><strong>vs. Côte d'Azur:</strong> Côte d'Azur wins on Michelin density (Mirazur ★★★ + many ★★) + glamour nightlife (Caves du Roy, Jimmy'z, Les Caves du Roy at Tropez). Higher hotel ceiling (Cap-Eden-Roc, La Réserve Ramatuelle, Cap d'Antibes). <strong>BUT Cascais wins on cost (~60% cheaper for equivalent week) + on the Perseids new-moon vantage + on the only US nonstop + on activity-density breadth.</strong></p>
+      <p><strong>Other weaknesses:</strong> (1) Cascais nightlife after midnight is meaningfully quieter than Lisbon's — most real late requires a 40-min train. The 3+2 split mitigates this. (2) Guincho's Nortada (20–35 knots Aug) is brutal for beach lounging — Cascais's central Praia da Rainha + Praia da Conceição are sheltered alternatives. (3) Joann-seafood is the soft spot — flag at every ★ booking, the kitchens accommodate. (4) Aug 15 = Assumption Day public holiday → banks + non-tourist shops shut, tourist restaurants packed (book 60 days for any Sat dinner). (5) August Sintra is mobbed — pre-book Pena 09:30 timed slot or skip. (6) Perseids viewing depends on Wed Aug 12 weather; cloud cover &gt;60% kills it. Fortaleza Guincho terrace is the moonless-dark-cape backup.</p>
+    </div>
+
     <div class="budget-table">
       <div class="head">
-        <span class="eyebrow">Three Ways to Do It</span>
+        <span class="eyebrow">All-In For Two Travelers</span>
         <h3>Budget by Tier</h3>
-        <p>Same trip, three spending levels. ✓ = included in that tier. Standard is the recommended plan with Fortaleza do Guincho + Belcanto ★★ + Kappo ★.</p>
+        <p>USD, mid-August peak. Move items across tiers freely. <strong>Standard tier matches the day-by-day above</strong>. Cascais Standard ($12,000) sits below Mallorca/SS Standard for an arguably equivalent activity + Michelin load — TAP nonstop saves $400–600/cpl vs. connecting options.</p>
       </div>
-
-      <div style="overflow-x: auto;">
       <table>
         <thead>
           <tr>
@@ -930,140 +1321,32 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="item">✈️ Flights · Economy</td>
-            <td class="tier">✓ $2,200</td>
-            <td class="standard">✓ $2,200</td>
-            <td class="tier dim">—</td>
-          </tr>
-          <tr>
-            <td class="item">✈️ Flights · Premium Economy</td>
-            <td class="tier dim">—</td>
-            <td class="standard dim">—</td>
-            <td class="tier">✓ $3,600</td>
-          </tr>
-          <tr>
-            <td class="item">🏨 The Albatroz · 5 nights</td>
-            <td class="tier">✓ $2,100</td>
-            <td class="standard dim">—</td>
-            <td class="tier dim">—</td>
-          </tr>
-          <tr>
-            <td class="item">🏨 Fortaleza do Guincho · 5 nights</td>
-            <td class="tier dim">—</td>
-            <td class="standard std-mark">✓ $2,950</td>
-            <td class="tier dim">—</td>
-          </tr>
-          <tr>
-            <td class="item">🏨 Penha Longa Resort · 5 nights</td>
-            <td class="tier dim">—</td>
-            <td class="standard dim">—</td>
-            <td class="tier">✓ $4,200</td>
-          </tr>
-          <tr>
-            <td class="item">🚗 Car rental + fuel · 5 days</td>
-            <td class="tier">✓ $450</td>
-            <td class="standard">✓ $450</td>
-            <td class="tier">✓ $600</td>
-          </tr>
-          <tr>
-            <td class="item">⛵ Public boat to Cascais Bay</td>
-            <td class="tier">✓ $80</td>
-            <td class="standard dim">—</td>
-            <td class="tier dim">—</td>
-          </tr>
-          <tr>
-            <td class="item">⛵ Private sunset catamaran · 3h</td>
-            <td class="tier dim">—</td>
-            <td class="standard">✓ $590</td>
-            <td class="tier">✓ $900</td>
-          </tr>
-          <tr>
-            <td class="item">🪁 Private kite or windsurf lesson</td>
-            <td class="tier dim">—</td>
-            <td class="standard">✓ $260</td>
-            <td class="tier">✓ $400</td>
-          </tr>
-          <tr>
-            <td class="item">⭐ Belcanto ★★ (Lisbon, Avillez)</td>
-            <td class="tier dim">—</td>
-            <td class="standard std-mark">✓ $865</td>
-            <td class="tier">✓ $1,050</td>
-          </tr>
-          <tr>
-            <td class="item">⭐ Fortaleza do Guincho ★</td>
-            <td class="tier dim">—</td>
-            <td class="standard">✓ $620</td>
-            <td class="tier">✓ $760</td>
-          </tr>
-          <tr>
-            <td class="item">⭐ Kappo ★ (omakase, new 2026)</td>
-            <td class="tier dim">—</td>
-            <td class="standard dim">—</td>
-            <td class="tier">✓ $440</td>
-          </tr>
-          <tr>
-            <td class="item">🍽️ Other dinners · 3 nights</td>
-            <td class="tier">✓ $400</td>
-            <td class="standard">✓ $750</td>
-            <td class="tier">✓ $1,200</td>
-          </tr>
-          <tr>
-            <td class="item">🥖 Lunches · 5 days</td>
-            <td class="tier">✓ $250</td>
-            <td class="standard">✓ $500</td>
-            <td class="tier">✓ $800</td>
-          </tr>
-          <tr>
-            <td class="item">🥐 Breakfasts out</td>
-            <td class="tier dim">—</td>
-            <td class="standard">✓ $100</td>
-            <td class="tier">✓ $350</td>
-          </tr>
-          <tr>
-            <td class="item">🍷 Wineries · 4 tastings</td>
-            <td class="item">✓ $200</td>
-            <td class="standard">✓ $250</td>
-            <td class="tier">✓ $400</td>
-          </tr>
-          <tr>
-            <td class="item">🧖 Seawater spa + couples massage</td>
-            <td class="tier dim">—</td>
-            <td class="standard">✓ $220</td>
-            <td class="tier">✓ $450</td>
-          </tr>
-          <tr>
-            <td class="item">🏰 Sintra timed tickets · two palaces</td>
-            <td class="tier">✓ $60</td>
-            <td class="standard">✓ $60</td>
-            <td class="tier">✓ $60</td>
-          </tr>
-          <tr>
-            <td class="item">🚲 E-bike Cabo da Roca</td>
-            <td class="tier dim">—</td>
-            <td class="standard dim">—</td>
-            <td class="tier">✓ $120</td>
-          </tr>
-          <tr>
-            <td class="item" style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">🎆 Free · Aug 15 fireworks · ☄️ Perseids · 🎨 Marina market · 🥾 Coast walks</td>
-            <td class="tier" style="color: rgba(255,255,255,0.5);">included</td>
-            <td class="standard" style="color: rgba(255,255,255,0.5);">included</td>
-            <td class="tier" style="color: rgba(255,255,255,0.5);">included</td>
-          </tr>
+          <tr><td class="item">Flights · TAP TP224/223 LAX↔LIS nonstop (×2)</td><td class="tier">$2,000<br><span style="font-size: 0.75rem; opacity: 0.7;">economy, basic</span></td><td class="tier standard std-mark">$2,600<br><span style="font-size: 0.75rem; opacity: 0.7;">economy + bag + select seats</span></td><td class="tier">$5,400<br><span style="font-size: 0.75rem; opacity: 0.7;">premium economy</span></td></tr>
+          <tr><td class="item">Hotels · 3 Cascais + 2 Lisbon</td><td class="tier">$1,700<br><span style="font-size: 0.75rem; opacity: 0.7;">Albatroz Cascais + 4★ Lisbon</span></td><td class="tier standard std-mark">$3,400<br><span style="font-size: 0.75rem; opacity: 0.7;">Fortaleza Guincho 3 + Bairro Alto 2</span></td><td class="tier">$8,800<br><span style="font-size: 0.75rem; opacity: 0.7;">Penha Longa suite + Four Seasons Ritz</span></td></tr>
+          <tr><td class="item">Michelin run (Belcanto ★★ + Fortaleza ★ + LAB ★)</td><td class="tier">$280<br><span style="font-size: 0.75rem; opacity: 0.7;">LAB ★ only</span></td><td class="tier standard std-mark">$1,250<br><span style="font-size: 0.75rem; opacity: 0.7;">Belcanto ★★ + Fortaleza ★ + LAB ★</span></td><td class="tier">$2,400<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Sá Pessoa ★★ + Marlene ★</span></td></tr>
+          <tr><td class="item">Other dinners + Hífen + Mesa de Frades + Solar dos Presuntos</td><td class="tier">$400</td><td class="tier standard std-mark">$700<br><span style="font-size: 0.75rem; opacity: 0.7;">Hífen + Marisco na Praça + Mesa de Frades + Solar dos Presuntos + Bairro do Avillez</span></td><td class="tier">$1,100</td></tr>
+          <tr><td class="item">Setúbal wine day + Colares + Tagus driver</td><td class="tier">$120<br><span style="font-size: 0.75rem; opacity: 0.7;">walk-in tastings, train</span></td><td class="tier standard std-mark">$520<br><span style="font-size: 0.75rem; opacity: 0.7;">private driver day + 3 tastings</span></td><td class="tier">$900<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Roman feast at Bacalhôa</span></td></tr>
+          <tr><td class="item">Guincho kite/SUP + Carcavelos surf + Arrábida coasteering</td><td class="tier">$80<br><span style="font-size: 0.75rem; opacity: 0.7;">surf only</span></td><td class="tier standard std-mark">$480<br><span style="font-size: 0.75rem; opacity: 0.7;">Guincho lesson + Carcavelos surf + Arrábida half-day</span></td><td class="tier">$900<br><span style="font-size: 0.75rem; opacity: 0.7;">+ jet ski + scuba</span></td></tr>
+          <tr><td class="item">Cascais sunset sail + paragliding</td><td class="tier">$0</td><td class="tier standard std-mark">$330<br><span style="font-size: 0.75rem; opacity: 0.7;">2-h sunset sail</span></td><td class="tier">$650<br><span style="font-size: 0.75rem; opacity: 0.7;">+ tandem paragliding off Cabo da Roca</span></td></tr>
+          <tr><td class="item">Aug 15 Van Helden tickets · Casino Estoril</td><td class="tier">$50<br><span style="font-size: 0.75rem; opacity: 0.7;">Van Helden 2 × €25</span></td><td class="tier standard std-mark">$200<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Casino tables + drinks</span></td><td class="tier">$550<br><span style="font-size: 0.75rem; opacity: 0.7;">+ VIP Casino + D Lounge</span></td></tr>
+          <tr><td class="item">Lisbon nightlife · Lux Frágil + Pink Street + Bairro Alto</td><td class="tier">$80</td><td class="tier standard std-mark">$280<br><span style="font-size: 0.75rem; opacity: 0.7;">2 nights Lux Frágil + Pink Street crawl + PARK</span></td><td class="tier">$650<br><span style="font-size: 0.75rem; opacity: 0.7;">+ VIP Lux table + bottle service</span></td></tr>
+          <tr><td class="item">Sintra palaces (Pena + Regaleira night) + Castelo dos Mouros</td><td class="tier">$60</td><td class="tier standard std-mark">$110<br><span style="font-size: 0.75rem; opacity: 0.7;">Pena + Regaleira day + Regaleira night</span></td><td class="tier">$280<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Castelo dos Mouros + private guide</span></td></tr>
+          <tr><td class="item">Transfers · LIS airport + Cascais ↔ Lisbon + Sintra driver</td><td class="tier">$200<br><span style="font-size: 0.75rem; opacity: 0.7;">trains + Ubers</span></td><td class="tier standard std-mark">$420<br><span style="font-size: 0.75rem; opacity: 0.7;">Welcome Pickups + Cascais transfer + driver days</span></td><td class="tier">$900<br><span style="font-size: 0.75rem; opacity: 0.7;">private driver entire trip</span></td></tr>
+          <tr><td class="item">Banyan Tree spa + Albatroz pool day</td><td class="tier">$0</td><td class="tier standard std-mark">$380<br><span style="font-size: 0.75rem; opacity: 0.7;">Banyan Tree couples massage 90 min</span></td><td class="tier">$900<br><span style="font-size: 0.75rem; opacity: 0.7;">+ full spa day at Fortaleza</span></td></tr>
+          <tr><td class="item">Lunches + breakfast out + Pastéis de Belém + Time Out</td><td class="tier">$280</td><td class="tier standard std-mark">$520<br><span style="font-size: 0.75rem; opacity: 0.7;">Time Out + Sintra + Cascais market + Belém</span></td><td class="tier">$820</td></tr>
+          <tr><td class="item">Cushion / tips / incidentals</td><td class="tier">$250</td><td class="tier standard std-mark">$380</td><td class="tier">$700</td></tr>
         </tbody>
         <tfoot>
           <tr>
-            <td class="total-label">Total · all in</td>
-            <td class="tier">$5,740</td>
-            <td class="standard">$9,815</td>
-            <td class="tier">$15,330</td>
+            <td class="total-label">Total · two travelers, all-in</td>
+            <td class="tier">$5,500</td>
+            <td class="standard">$11,570</td>
+            <td class="tier">$23,950</td>
           </tr>
         </tfoot>
       </table>
-      </div>
-
       <p class="footnote">
-        All figures USD, for two travelers. Hotel rates assume mid-August peak. Boat / spa / class prices quoted from operators' published rates. Move items between tiers freely — the framework is the design, not the prescription. EUR converted at ~1.08 / USD.
+        <strong>Honest read:</strong> Cascais Standard ($11,570) runs ~32% under Mallorca Standard ($17,050) and ~28% under Côte d'Azur Standard for an arguably equivalent activity + Michelin load. <strong>The TAP nonstop saves $400–600/cpl vs. every connecting option in the comparison.</strong> If hotels-ceiling + ★★★ are your top axes, San Sebastián wins. If overpacked activity + only US nonstop + value at ★★ ceiling is the brief, Cascais is the answer — and the biggest re-score jump in the comparison (+8, from 27 → 35).
       </p>
     </div>
 
@@ -1072,7 +1355,7 @@
 
 <footer>
   <div class="container">
-    <p>Built for Mark · August 11–17, 2026 · LAX origin · Prices in USD, subject to live booking</p>
+    <p>Built for Mark · August 11–17, 2026 · LAX origin · 5 hotel nights · 3 Cascais + 2 Lisbon · <a href="../index.html">all trips</a> · <a href="./aug_11_europe.html">compare options</a></p>
   </div>
 </footer>
 
