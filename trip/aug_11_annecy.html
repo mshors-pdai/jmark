@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>August 2026 — Annecy &amp; the Lake</title>
+<title>August 2026 — Annecy &amp; the Lake · Over-Packed</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -56,7 +56,7 @@
   .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--annecy-terra); }
   .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
   .intro-hero h1 em { font-style: italic; color: var(--annecy-lake); font-weight: 400; }
-  .intro-hero .lede { max-width: 720px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .lede { max-width: 740px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
   .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
   .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
   .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
@@ -75,7 +75,7 @@
   .stat .stat-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.1; margin-bottom: 0.2rem; color: var(--annecy-deep); }
   .stat .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
 
-  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 700px; }
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 720px; }
   .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--annecy-terra); }
   .section-header h2 { margin-bottom: 1rem; color: var(--annecy-deep); }
   .section-header p { color: var(--muted); font-size: 1.05rem; }
@@ -136,6 +136,8 @@
   .day-content ul li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 6px; height: 6px; border-radius: 50%; background: var(--annecy-terra); }
   .day-content ul li strong { color: var(--annecy-deep); }
   .day-content ul li a { color: var(--annecy-lake); text-decoration: none; border-bottom: 1px dotted; }
+  .alts { background: rgba(200,85,61,0.06); border-left: 3px solid var(--annecy-terra); padding: 0.85rem 1rem; margin: 0.75rem 0 0.25rem 1.5rem; border-radius: 0 6px 6px 0; font-size: 0.88rem; color: #444; }
+  .alts strong { color: var(--annecy-terra); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.25rem; }
 
   .hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
   .hotel-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
@@ -165,6 +167,15 @@
   .winery-list .name a { color: var(--annecy-terra); text-decoration: none; }
   .winery-list .desc { font-size: 0.88rem; color: var(--muted); }
 
+  .food-list { max-width: 950px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .food-row { display: grid; grid-template-columns: 1fr 1.6fr auto; gap: 1.5rem; padding: 1.5rem; border-bottom: 1px solid var(--line); align-items: center; }
+  .food-row:last-child { border-bottom: none; }
+  .food-row .place { font-family: 'Playfair Display', serif; font-weight: 600; color: var(--annecy-deep); font-size: 1.1rem; }
+  .food-row .place .stars { color: var(--annecy-terra); margin-left: 0.4rem; font-size: 0.9rem; }
+  .food-row .place .meta { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0; }
+  .food-row .desc { font-size: 0.92rem; color: #333; line-height: 1.55; }
+  .food-row .drive { font-size: 0.78rem; color: var(--muted); text-align: right; white-space: nowrap; }
+
   .activities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1100px; margin: 0 auto; }
   .activity { background: white; border-radius: 12px; padding: 1.75rem 1.25rem; text-align: center; transition: transform 0.2s; border: 1px solid var(--line); }
   .activity:hover { transform: translateY(-2px); }
@@ -172,6 +183,25 @@
   .activity h4 { margin-bottom: 0.5rem; font-size: 1rem; color: var(--annecy-deep); }
   .activity h4 a { color: inherit; text-decoration: none; }
   .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+  .nightlife { max-width: 1100px; margin: 0 auto 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .nightlife-col { background: #15161a; color: white; padding: 2rem; border-radius: 16px; }
+  .nightlife-col h3 { color: var(--annecy-terra); margin-bottom: 1.25rem; font-style: italic; }
+  .nightlife-col .venue { padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nightlife-col .venue:last-child { border-bottom: none; }
+  .nightlife-col .venue .vname { font-family: 'Playfair Display', serif; font-weight: 600; color: white; font-size: 1.05rem; }
+  .nightlife-col .venue .vmeta { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
+  .nightlife-col .venue .vdesc { font-size: 0.88rem; color: rgba(255,255,255,0.75); margin-top: 0.5rem; line-height: 1.5; }
+
+  .score-grid { max-width: 1000px; margin: 0 auto 3rem; }
+  .score-row { display: grid; grid-template-columns: 1fr auto 70px; gap: 1rem; padding: 1.1rem 1.5rem; background: white; border-radius: 8px; margin-bottom: 0.6rem; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .score-row .axis { font-weight: 600; color: var(--annecy-deep); }
+  .score-row .axis .tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-left: 0.5rem; font-weight: 500; }
+  .score-row .reason { font-size: 0.88rem; color: #444; max-width: 480px; text-align: right; }
+  .score-row .num { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--annecy-terra); font-weight: 600; }
+  .score-row.total { background: var(--annecy-deep); color: white; }
+  .score-row.total .axis { color: white; }
+  .score-row.total .num { color: white; font-size: 1.9rem; }
 
   .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
   .booking .section-header h2 { color: white; }
@@ -186,6 +216,11 @@
   .step p strong { color: white; }
   .step .meta-line { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
   .step .meta-line a { color: var(--annecy-stone); text-decoration: none; }
+
+  .adversarial { max-width: 950px; margin: 4rem auto 0; padding: 2.5rem; background: rgba(255,255,255,0.04); border-radius: 16px; border-left: 4px solid var(--annecy-terra); }
+  .adversarial h3 { color: white; margin-bottom: 1rem; }
+  .adversarial p { color: rgba(255,255,255,0.78); font-size: 0.95rem; margin-bottom: 1rem; }
+  .adversarial p strong { color: var(--annecy-terra); }
 
   .budget-table { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px; }
   .budget-table .head { text-align: center; margin-bottom: 2.5rem; }
@@ -223,9 +258,15 @@
     .only-this-week .grid { grid-template-columns: 1fr; }
     .wine-block { grid-template-columns: 1fr; }
     .wine-block .wine-text { padding: 2rem; }
+    .nightlife { grid-template-columns: 1fr; }
     .topnav .tabs { flex-wrap: wrap; }
     .container { padding: 0 1.25rem; }
     .step { grid-template-columns: 60px 1fr; gap: 1rem; }
+    .food-row { grid-template-columns: 1fr; gap: 0.6rem; }
+    .food-row .drive { text-align: left; }
+    .score-row { grid-template-columns: 1fr; }
+    .score-row .reason { text-align: left; }
+    .score-row .num { text-align: left; }
   }
   @media (max-width: 600px) {
     .hotels-grid, .activities { grid-template-columns: 1fr; }
@@ -247,7 +288,7 @@
 <div class="back-bar">
   <div class="container">
     <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
-    <span class="meta-mini">Itinerary No. 03E · Annecy · <a href="./aug_11_europe.html" style="color: var(--annecy-lake); text-decoration: none;">compare 5 options ↗</a></span>
+    <span class="meta-mini">Itinerary No. 03E · Annecy · <a href="./aug_11_europe.html" style="color: var(--annecy-lake); text-decoration: none;">compare options ↗</a></span>
     <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
   </div>
 </div>
@@ -261,6 +302,8 @@
       <a href="#wine" class="tab">Cheese &amp; Wine</a>
       <a href="#food" class="tab">Food</a>
       <a href="#activities" class="tab">Activities</a>
+      <a href="#nightlife" class="tab">Nightlife</a>
+      <a href="#score" class="tab">Score</a>
       <a href="#book" class="tab">Book Now</a>
     </div>
   </div>
@@ -268,10 +311,10 @@
 
 <section class="intro-hero">
   <div class="container">
-    <span class="eyebrow">France · French Alps · 5 Hotel Nights</span>
+    <span class="eyebrow">France · French Alps · 4 Annecy + 1 Chamonix · Option E</span>
     <h1>Annecy &amp;<br>the <em>Lake.</em></h1>
     <p class="lede">
-      The "Venice of the Alps" on the cleanest lake in Europe, between Geneva and Mont Blanc. World-class lake water sports (sailing, SUP, swim, paragliding off Col de la Forclaz), <strong>Le Clos des Sens ★★★</strong> doing lake-fish-and-foraged-greens cuisine, <strong>Yoann Conte ★★</strong> on the eastern shore at La Maison Bleue, and a food culture built on Reblochon, Beaufort, charcuterie, and crusty bread — not seafood.
+      The Alpine pick, brutally honest. <strong>13 Michelin stars across 7 restaurants</strong> in the lake basin (Le Clos des Sens ★★★, Père Bise ★★, Yoann Conte ★★, Auberge de Montmin ★★, Maison Benoît Vidal ★★, L'Esquisse ★, La Rotonde des Trésoms ★). Europe's cleanest lake at 22–25 °C, world-class paragliding off Col de la Forclaz, the <strong>Perseids peaking on a moonless Aug 12→13 sky from a 1,147 m overlook</strong>, and <strong>Fête des Guides de Chamonix on Aug 15</strong> — anchors we genuinely hit. But: <strong>Fête du Lac is Aug 1 (miss by 10), Imperial Annecy Festival starts Aug 18 (miss by 1), Le Brise Glace closed Jul 10–Aug 24</strong>. The trip drops 4 points on nightlife versus the old scoring and lands at <strong>34/39</strong> — credible high-end pick if you accept dinner-at-21:00 plus Casino-after-midnight rhythm.
     </p>
     <div class="meta">
       <div class="meta-item"><div class="label">Departure</div><div class="value">Tue, Aug 11</div></div>
@@ -290,10 +333,10 @@
       <div class="hero-content">
         <span class="eyebrow">Option E · France · French Alps</span>
         <h2>Annecy &amp;<br>the Lake</h2>
-        <p class="tagline">"Venice of the Alps" — Europe's cleanest lake, swimmable at 75°F, with sailing, paragliding off Col de la Forclaz, the Reblochon-Beaufort-charcuterie food culture, two Michelin powerhouses (Le Clos des Sens ★★★, Yoann Conte ★★), and Mont Blanc on the horizon.</p>
+        <p class="tagline">"Venice of the Alps" on Europe's cleanest lake, between Geneva and Mont Blanc. 13 Michelin stars in basin, Perseids over Col de la Forclaz on a new moon, Fête des Guides at Chamonix Aug 15, paragliding/canyoning/Aiguille du Midi/42-km bike loop, and a food culture built on Reblochon, Beaufort, charcuterie, lake féra — no ocean seafood. Honest nightlife: Casino Impérial (table games till 04:00 Fri/Sat), Pop Plage Thu–Sat till dawn, Rue Sainte-Claire bar crawl till 01:00. Most Michelin kitchens close 21:30.</p>
         <div class="stats">
-          <div class="stat"><div class="stat-value">76–82°F</div><div class="stat-label">August High</div></div>
-          <div class="stat"><div class="stat-value">Moderate</div><div class="stat-label">Crowd Level</div></div>
+          <div class="stat"><div class="stat-value">75–79°F</div><div class="stat-label">August High</div></div>
+          <div class="stat"><div class="stat-value">High</div><div class="stat-label">Activity Density</div></div>
           <div class="stat"><div class="stat-value">Apremont</div><div class="stat-label">Signature Wine</div></div>
           <div class="stat"><div class="stat-value">40 min</div><div class="stat-label">GVA → Annecy</div></div>
         </div>
@@ -303,7 +346,7 @@
     <div class="section-header">
       <span class="eyebrow">Getting There</span>
       <h2>Flight Plan</h2>
-      <p>No US nonstops to Geneva. Best routing: Swiss via Zurich, Lufthansa via Munich/Frankfurt, or Air France via Paris. Land GVA, 40-min car to Annecy. <strong>At the hotel by mid-afternoon Day 1.</strong></p>
+      <p>No US nonstop to Geneva. Swiss via Zurich is the cleanest routing; Lufthansa via MUC/FRA + Air France via CDG are workable backups. Land GVA mid-morning Wed, 40-min car to Annecy, in your hotel by mid-afternoon Day 1.</p>
     </div>
     <div class="flight-box">
       <div class="flight-row">
@@ -322,90 +365,91 @@
         <div class="item"><div class="label">Carrier</div><div class="val">Swiss / Star Alliance</div></div>
       </div>
     </div>
+    <p style="text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;">Backup routings: <strong>Lufthansa LAX→MUC→GVA</strong>, <strong>Air France LAX→CDG→GVA</strong>, <strong>United LAX→FRA→GVA</strong>. Cheapest dates flex to Thursday Aug 20 returns. Verify exact 2026 schedules before booking. <a href="https://www.skyscanner.com/routes/lax/gva/los-angeles-international-to-geneva.html" target="_blank" rel="noopener" style="color: var(--annecy-terra);">Skyscanner LAX→GVA →</a></p>
 
     <div class="section-header">
       <span class="eyebrow">Day by Day</span>
       <h2>The Itinerary</h2>
-      <p>One base on the lake, six days. Lake water sports + Michelin + Alpine cheese tour + Chamonix Mont Blanc day + Geneva day or Yvoire medieval village.</p>
+      <p>Two bases — <strong>4 nights at L'Impérial Palace Annecy (Wed–Sat) → 1 night at Hameau Albert 1er Chamonix (Sat–Sun) → back to Annecy region only for last morning</strong>. The Chamonix overnight unlocks Fête des Guides Aug 15, Aiguille du Midi at first light, ★ Albert 1er dinner, and Chambre Neuf/Jekyll &amp; Hyde till 2 AM. Days are over-packed deliberately — each one has a low-energy swap, a doubling-down swap, and a rainy-day swap inline.</p>
     </div>
 
     <div class="only-this-week">
       <div class="head">
         <span class="eyebrow" style="color: var(--annecy-terra);">Only This Week</span>
-        <h3>Don't-Miss Events on Your Exact Dates</h3>
-        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 700px; margin-left: auto; margin-right: auto;">Four experiences that only happen during the week you're there. The Perseids over Col de la Forclaz is the headline.</p>
+        <h3>The Brutal Calendar Truth</h3>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 720px; margin-left: auto; margin-right: auto;">Annecy's marquee 2026 events bracket the trip on both ends — Fête du Lac fell <em>10 days</em> before arrival, Imperial Annecy Festival starts <em>1 day</em> after departure, Annecy Classic Festival is 6 days later, and Le Brise Glace (the city's main concert hall, 500-cap) is <strong>closed Jul 10–Aug 24, 2026</strong> — the entire trip. What we DO hit: the Perseids on a moonless sky, Fête des Guides Aug 15, and Assumption Day processions.</p>
       </div>
 
       <div class="grid">
 
-        <div class="event-card">
+        <div class="event-card terra">
           <div class="head">
             <span class="icon">☄️</span>
             <div>
-              <h4>Perseids from Col de la Forclaz</h4>
-              <div class="when">Night of <strong>Wed Aug 12 → Thu Aug 13</strong></div>
+              <h4 class="terra">Perseids on a moonless sky</h4>
+              <div class="when">Night of <strong>Wed Aug 12 → Thu Aug 13</strong> · arrival night</div>
             </div>
           </div>
-          <p><strong>The best Perseid year of the decade.</strong> New moon Aug 12 = moonless sky, 90+ meteors/hour at peak (1–4 AM). Drive 30 min up to <strong>Col de la Forclaz</strong> — the paragliding launch site at 4,500 ft above Lake Annecy, looking south down the full length of the lake to the Tournette and Bauges mountains. Dark sky, restaurant terrace open late. Bring a fleece and a thermos of génépi.</p>
+          <p><strong>Once-in-a-decade Perseids — New Moon Aug 12 = pitch-black sky, zero lunar interference, ~90 meteors/hr at peak 01:00–04:00 local.</strong> Annecy basin has two world-class dark-sky perches: (1) <strong>Col de la Forclaz</strong> at 1,147 m — the paragliding launch above the lake, 30-min drive up, restaurant terrace open late, full south-down-the-lake view; (2) <strong>Le Semnoz</strong> at 1,704 m — telemix cabin €4 RT in summer or free Sibra bus 6× daily July/August, family meadows + grazing herds + 360° panorama, the better high-altitude backup. Col de la Forclaz is the Day 1 play (you'll be there for dinner anyway).</p>
           <a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener" class="book-link">Viewing guide →</a>
-        </div>
-
-        <div class="event-card terra">
-          <div class="head">
-            <span class="icon">⛪</span>
-            <div>
-              <h4 class="terra">Assomption · Fêtes Mariales</h4>
-              <div class="when"><strong>Sat Aug 15</strong> — French national holiday</div>
-            </div>
-          </div>
-          <p>Major French Catholic holiday. Religious processions through the old town to the <strong>Basilique de la Visitation</strong> on the hill. Most shops closed. Restaurants packed (book Yoann Conte for this night well ahead). The town is alive — Place Saint-François fills with markets and street musicians. Evening boat lights on the lake; smaller hotels run special Assumption Day menus.</p>
-          <a href="https://en.lac-annecy.com/" target="_blank" rel="noopener" class="book-link">Lake Annecy tourism →</a>
         </div>
 
         <div class="event-card sage">
           <div class="head">
-            <span class="icon">🎵</span>
+            <span class="icon">🏔️</span>
             <div>
-              <h4 class="sage">Annecy Classic Festival</h4>
-              <div class="when">Mid-August in the Imperial Palace gardens</div>
+              <h4 class="sage">Fête des Guides de Chamonix 2026</h4>
+              <div class="when">Festival <strong>Aug 12–16</strong> · ceremony day <strong>Fri Aug 15</strong></div>
             </div>
           </div>
-          <p>Chamber music + opera + recitals through mid-August in lakeside venues — the gardens of Impérial Palace, the Cathédrale Saint-Pierre, château courtyards. Sunset concerts on the lake at 8 PM. Tickets €25–€80. Pairs naturally with a Day 4 or Day 5 dinner before/after. The most refined evening Annecy offers.</p>
-          <a href="https://www.annecyclassicfestival.com/" target="_blank" rel="noopener" class="book-link">Program →</a>
+          <p>The Compagnie des Guides de Chamonix annual fête — Aug 15, the Assumption holiday, is the ceremony day. <strong>08:30–13:00 market + climbing wall + music on the church square; 14:00–18:00 climbing demos + zip line at Les Gaillands; president's speech + new Guides accepted into the Compagnie; evening fireworks tradition.</strong> Major asset, 1h25 drive from Annecy. Pair with <strong>Servoz crafts festival</strong> (8 AM–11 PM same day, adjacent valley) and the Aiguille du Midi morning. The reason to sleep one night at Hameau Albert 1er on Sat Aug 15.</p>
+          <a href="https://www.chamonix.com/" target="_blank" rel="noopener" class="book-link">Chamonix tourism →</a>
+        </div>
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">⛪</span>
+            <div>
+              <h4>Assumption · Basilique de la Visitation</h4>
+              <div class="when"><strong>Sat Aug 15</strong> — French national holiday</div>
+            </div>
+          </div>
+          <p>Major French Catholic holiday. Mass + procession at <strong>Basilique de la Visitation</strong> on the hill above Annecy (funicular or 30-min walk up). Most shops closed midday; tourist restaurants packed (book Saturday tables 6+ weeks ahead). Village fêtes throughout Haute-Savoie all day. Even if you skip Annecy for Chamonix on Aug 15 (as the standard itinerary does), the Basilique procession is the morning option for a low-energy variant. Evening boat lights on Lake Annecy if you return early enough.</p>
+          <a href="https://www.basilique-de-la-visitation.fr/" target="_blank" rel="noopener" class="book-link">Basilique →</a>
         </div>
 
         <div class="event-card stone">
           <div class="head">
-            <span class="icon">🧀</span>
+            <span class="icon">🌿</span>
             <div>
-              <h4 class="stone">Alpine cheese harvest season</h4>
-              <div class="when">Aug = peak alpage season</div>
+              <h4 class="stone">Annecy Paysages 2026</h4>
+              <div class="when">Runs <strong>Jul 1 → Sept 15, 2026</strong> — overlaps your full Annecy stay</div>
             </div>
           </div>
-          <p>August is when the <em>alpage</em> (high-pasture) cheeses are at their peak — cows have been grazing wildflowers since June. The summer-milk Reblochon, Beaufort d'été, Tomme des Bauges are at their best right now. Visit an alpage producer (<strong>Coopérative laitière du Val d'Aulps</strong>, <strong>Fromagerie Pingon</strong>) — they run morning tastings July–August only. Pair with an Alpine drive.</p>
-          <a href="https://www.fromages-aop.com/fromages-aop/" target="_blank" rel="noopener" class="book-link">AOP cheese guide →</a>
+          <p>Open-air contemporary art trail along the Thiou canal, the Pâquier lawn, and the Jardins de l'Europe — large-scale installations free to wander day-or-evening. <strong>Best self-guided as a sunset stroll</strong> with an apéro stop at Ô Cèdre rooftop. Pairs with the lake-side open-air cinema on Le Pâquier (mid-July through mid-August; family-tier programming — Frozen, Totoro, Lion King — pleasant but not edgy). The reliable "Annecy in the evening" anchor when you don't want to drive somewhere.</p>
+          <a href="https://annecypaysages.com/" target="_blank" rel="noopener" class="book-link">Annecy Paysages →</a>
         </div>
 
       </div>
 
       <div class="bonus-callout">
-        <h4>⚠ Fête du Lac just missed — Aug 1, 2026</h4>
-        <p>The big lake festival (35-min pyrotechnic show with 100,000+ attendees on the water) falls on the <strong>first Saturday of August</strong> — Aug 1, 2026, ten days before your arrival. You'll miss it. Trade-off: smaller summer crowds the week you're there. If the festival is a must, shift dates to overlap. <a href="https://en.lac-annecy.com/agenda/" target="_blank" rel="noopener">Lake Annecy events →</a></p>
+        <h4>⚠️ What you miss by 10 days, 1 day, 6 days, and 45 days</h4>
+        <p><strong>Fête du Lac d'Annecy 2026 "L'Âme du Monde"</strong> — Europe's largest pyrotechnic show, ~200,000 spectators, drones, water bikes, 70-min 9-act show across Albigny Bay — falls <strong>Sat Aug 1, 19:00–23:00</strong>, 10 days before you land. <strong>Imperial Annecy Festival</strong> (jazz Benny Green, classical Nemanja Radulović, comedy Edouard Baer at Imperial Palace) runs <strong>Aug 18–28, 2026</strong> — starts the day after you fly. <strong>Annecy Classic Festival</strong> (chamber music at Talloires Abbey) runs <strong>Aug 23–27</strong>. <strong>Le Brise Glace</strong> (Annecy's main contemporary music venue, 500-cap) is <strong>closed Jul 10–Aug 24, 2026</strong> — the whole trip. Flex Aug 18+ if those four are your priority; otherwise lean into Perseids + Fête des Guides + Casino Impérial and accept the calendar.</p>
       </div>
     </div>
 
     <div class="glance-table">
       <table>
         <thead>
-          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner</th></tr>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner + Late</th></tr>
         </thead>
         <tbody>
-          <tr><td class="daynum">1</td><td>Wed Aug 12</td><td>Arrival + Perseids ☄️</td><td>Land GVA 2 PM · check Maison Bleue · evening Perseids at Col de la Forclaz</td><td>Hotel terrace (light)</td></tr>
-          <tr><td class="daynum">2</td><td>Thu Aug 13</td><td>Old town + paragliding 🪂</td><td>Cobbled old town · Palais de l'Île · sunset tandem paraglide</td><td><strong>Yoann Conte ★★</strong></td></tr>
-          <tr><td class="daynum">3</td><td>Fri Aug 14</td><td>Cheese tour + boat day 🧀⛵</td><td>Alpage cheese morning · catamaran on the lake · swim at Plage d'Albigny</td><td>Le Belvédère (Talloires)</td></tr>
-          <tr><td class="daynum">4</td><td>Sat Aug 15</td><td>Assomption ⛪ + ★★★</td><td>Basilique procession · lake cycle · spa afternoon</td><td><strong>Le Clos des Sens ★★★</strong></td></tr>
-          <tr><td class="daynum">5</td><td>Sun Aug 16</td><td>Chamonix Mont Blanc 🏔️</td><td>Aiguille du Midi cable car to 12,605 ft · lunch in Chamonix · return for sunset apéro</td><td>Auberge du Père Bise · Jean Sulpice ★★</td></tr>
-          <tr><td class="daynum">6</td><td>Mon Aug 17</td><td>Departure</td><td>Lake swim · drive GVA</td><td>On the plane</td></tr>
+          <tr><td class="daynum">1</td><td>Wed Aug 12</td><td>Arrival + Perseids ☄️</td><td>Land GVA · drive Annecy · lake swim + Annecy Paysages · sunset Col de la Forclaz</td><td><strong>Auberge de Montmin ★★</strong> · Perseids 01:00–04:00 at the col</td></tr>
+          <tr><td class="daynum">2</td><td>Thu Aug 13</td><td>Paragliding + canyoning 🪂</td><td>Takamaka Prestige flight Col de la Forclaz · canyoning Angon · spa</td><td><strong>L'Esquisse ★</strong> · Rue Sainte-Claire bar crawl · Casino Impérial</td></tr>
+          <tr><td class="daynum">3</td><td>Fri Aug 14</td><td>Lake loop bike + ★★★ 🚴</td><td>42-km e-bike loop · lake swim Marquisats · Paysages illuminated dusk</td><td><strong>Le Clos des Sens ★★★</strong> · Pop Plage / Pop Night Club Fri</td></tr>
+          <tr><td class="daynum">4</td><td>Sat Aug 15 ⛪</td><td>CHAMONIX Fête des Guides 🏔️</td><td>Aiguille du Midi 09:00 · Fête des Guides ceremony · Les Gaillands · check Albert 1er</td><td><strong>Albert 1er ★</strong> · Chambre Neuf live band · Jekyll &amp; Hyde till 2 AM</td></tr>
+          <tr><td class="daynum">5</td><td>Sun Aug 16</td><td>Savoie wine + final ★★ 🍷</td><td>Combe de Savoie 3-stop winery day (Berlioz · Quénard · Grisard) · return Imperial Palace</td><td><strong>Yoann Conte ★★</strong> (Terre d'Adoption menu) · Casino Impérial nightcap</td></tr>
+          <tr><td class="daynum">6</td><td>Mon Aug 17</td><td>Departure</td><td>Plage d'Albigny last swim · Old Town pastries · drive GVA</td><td>On the plane</td></tr>
         </tbody>
       </table>
     </div>
@@ -415,94 +459,131 @@
       <div class="day">
         <div class="day-number"><div class="num">01</div><div class="date">Wed Aug 12</div></div>
         <div class="day-content">
-          <h3>Arrival + the Perseids</h3>
+          <h3>Arrival · Lake first · ★★ Montmin sunset · Perseids till 4 AM</h3>
           <ul>
-            <li><strong>1:55 PM</strong> Land GVA · pre-booked transfer to Annecy (~$90, 40 min)</li>
-            <li><strong>3:30 PM</strong> Check in at <a href="https://yoann-conte.com/en/la-maison-bleue/hotel-la-maison-bleue/" target="_blank" rel="noopener">La Maison Bleue</a> (Veyrier-du-Lac) — sea-view room overlooking the lake</li>
-            <li><strong>4:30 PM</strong> Walk down to the lakeshore · cold dip in the lake (75°F, perfect)</li>
-            <li><strong>6:30 PM</strong> Apéro on the hotel terrace — Vin de Savoie blanc + Beaufort cheese</li>
-            <li><strong>8:00 PM</strong> Light dinner: terrace at <a href="https://yoann-conte.com/en/la-maison-bleue/le-roc/" target="_blank" rel="noopener">Le Roc</a> (Yoann Conte's casual second restaurant) — saucisson, tartines, lake fish</li>
-            <li><strong>11:00 PM</strong> Drive 30 min up to <strong>Col de la Forclaz (4,500 ft)</strong> — paragliding launch site, dark sky over the lake. Bring a fleece + thermos.</li>
-            <li><strong>1–4 AM</strong> Perseid peak. The lake glints below you. New-moon sky.</li>
-            <li><strong>4:30 AM</strong> Back at hotel</li>
+            <li><strong>11:35 AM</strong> Land ZRH · 1h25 layover · 12:55 PM LX2810 boards</li>
+            <li><strong>1:55 PM</strong> Land GVA · rental car (Hertz/Sixt, ~$320 for 5 days, auto) — 40-min drive A41 south to Annecy</li>
+            <li><strong>3:30 PM</strong> Check in <a href="https://www.hotel-imperial-palace.com/en/" target="_blank" rel="noopener">L'Impérial Palace</a> on the lakefront — Belle Époque 1913, 104 rooms, request lake-view room facing Albigny Bay</li>
+            <li><strong>4:30 PM</strong> Walk Plage d'Albigny (5 min) — lake swim 22–25 °C "cleanest in Europe" · kayak walk-up €11/h from <strong>Mini Golf de l'Impérial</strong> at Petit Port (no reservation needed; single sit-on €11/h, triple €15/h)</li>
+            <li><strong>5:30 PM</strong> <strong>Annecy Paysages</strong> open-air contemporary art trail along the Thiou + Jardins de l'Europe — free, self-guided, ~45 min loop</li>
+            <li><strong>6:30 PM</strong> Apéro at <strong>Ô Cèdre rooftop</strong> at Hôtel Le Pélican — gins/cocktails, lake view, summer hours noon–11 PM</li>
+            <li><strong>7:30 PM</strong> Drive 30 min up to <strong>Col de la Forclaz (1,147 m)</strong> — paragliding launch overlook, full south-down-the-lake view</li>
+            <li><strong>8:00 PM</strong> Dinner <strong><a href="https://guide.michelin.com/fr/fr/auvergne-rhone-alpes/talloires/restaurant/l-auberge-de-montmin" target="_blank" rel="noopener">L'Auberge de Montmin ★★</a></strong> (Florian Favario + Sandrine) — Talloires-Montmin at Col de la Forclaz · lamb, piglets, garden veg, wildflowers · ~€180–€280/pp tasting · book <strong>6–8 weeks ahead</strong>. <strong>Joann-perfect</strong>: mountain meats, zero ocean seafood</li>
+            <li><strong>10:30 PM</strong> Linger over génépi on the terrace — peak rates 01:00–04:00 local, sky pitch-black New Moon</li>
+            <li><strong>01:00–04:00 AM</strong> <strong>Perseids peak</strong> — deck blanket, thermos. Once-in-a-decade dark-sky year.</li>
+            <li><strong>04:30 AM</strong> Drive back down to L'Impérial Palace</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy:</strong> Skip the Col de la Forclaz climb. Book <strong>Le Freti</strong> (12 Rue Sainte-Claire, Savoyard tartiflette + raclette institution since 1968) for 8 PM, then walk Quais d'Annecy along the Thiou with the Annecy Paysages installations lit, finish at L'Impérial Palace gardens with the Perseids overhead from the lakefront — less dark than Col but still good. Sleep at midnight.</div>
+          <div class="alts"><strong>Alternative · Doubling down:</strong> Add a <strong>Takamaka tandem paragliding flight</strong> (Discovery €110 · 10–20 min) launching from Col de la Forclaz at 17:00 before Montmin dinner — book 1+ week ahead. Lands at Doussard on the south end of the lake, 25-min minibus back up. Then back to Col for the meal + meteor watch.</div>
+          <div class="alts"><strong>Alternative · Rainy day:</strong> Col de la Forclaz fogs in. Replace with <strong>Le Freti</strong> in the Old Town (Rue Sainte-Claire arcades) + <strong>Casino Impérial</strong> table games (English roulette, Texas Hold'em + Ultimate Poker, blackjack, 20:00–04:00 Fri/Sat, 20:00–02:00 Wed). The Perseids will still produce a few visible meteors from the L'Impérial Palace lakefront terrace under cloud breaks.</div>
         </div>
       </div>
 
       <div class="day">
         <div class="day-number"><div class="num">02</div><div class="date">Thu Aug 13</div></div>
         <div class="day-content">
-          <h3>Old town · paragliding · Yoann Conte ★★</h3>
+          <h3>Paragliding Prestige · canyoning Angon · ★ Esquisse · Sainte-Claire crawl</h3>
           <ul>
-            <li><strong>11:00 AM</strong> Sleep in · breakfast on the terrace</li>
-            <li><strong>12:30 PM</strong> Drive 10 min to Annecy old town · lunch at <a href="https://www.la-cuisine-des-amis.com/" target="_blank" rel="noopener">La Cuisine des Amis</a> on the canal (tartiflette, charcuterie)</li>
-            <li><strong>2:30 PM</strong> Walk old town — <strong>Palais de l'Île</strong> (12th-c island prison), Pont des Amours, Quartier Sainte-Claire, Château d'Annecy</li>
-            <li><strong>4:30 PM</strong> Take the funicular (15 min) up to the <strong>Basilique de la Visitation</strong> for lake panorama</li>
-            <li><strong>6:00 PM</strong> <strong>Tandem paragliding from Col de la Forclaz</strong> with <a href="https://www.flyannecy.com/" target="_blank" rel="noopener">Fly Annecy</a> ($150 pp, 30 min in the air, lands on the lakeshore at Doussard). Sunset light is the move.</li>
-            <li><strong>8:30 PM</strong> <strong><a href="https://yoann-conte.com/" target="_blank" rel="noopener">La Table de Yoann Conte ★★</a></strong> at La Maison Bleue — Alpine produce, lake fish + Savoyard meats. Estimate $480–$620/cpl with wine.</li>
+            <li><strong>09:00 AM</strong> Recovery breakfast at L'Impérial Palace</li>
+            <li><strong>09:30 AM</strong> Drive 25 min to Col de la Forclaz · meet <a href="https://annecy.takamaka.fr/" target="_blank" rel="noopener">Takamaka</a> guide</li>
+            <li><strong>10:00 AM</strong> <strong>Takamaka Prestige tandem paragliding</strong> — 40-min thermals over the full lake, €165/pp · lands at Doussard on the south end · minibus return · book <strong>10 days ahead</strong>, peak demand. Alternative outfitter: <a href="https://flyeo.com/" target="_blank" rel="noopener">Flyeo Prestige €165 · 40 min</a></li>
+            <li><strong>12:30 PM</strong> Drive 20 min north to Talloires village · lakeside bistro lunch (L'Auberge du Père Bise's casual <strong>L'Office</strong> or the village brasserie) — féra carpaccio, Tomme tart, glass of Apremont</li>
+            <li><strong>2:30 PM</strong> Meet <a href="https://www.vertical-aventure.com/" target="_blank" rel="noopener">Vertical Aventure</a> at <strong>Angon</strong> (Talloires) for <strong>canyoning Angon Performance</strong> — cliffs straight into Lake Annecy, many abseils + few jumps · €85/pp · 3 h · book 3–5 days ahead. Other outfitters: Monté Médio, Evolution 2, YouCanyon, Takamaka.</li>
+            <li><strong>6:00 PM</strong> Return Impérial Palace · shower + 45 min at <strong>Spa Deep Nature</strong> — thermal pool + hammam</li>
+            <li><strong>8:00 PM</strong> Cocktails at <strong>Le Hip Bar</strong> on-premises (Imperial Palace's cocktail bar)</li>
+            <li><strong>9:00 PM</strong> Dinner <strong><a href="https://www.esquisse-annecy.fr/" target="_blank" rel="noopener">L'Esquisse ★</a></strong> (21 Rue Royale, Old Town) — Stéphane Dattrino (former Le Clos des Sens sous-chef), 20-cover, two floors, <strong>mostly vegetable-based</strong> tasting menu (vegetable reductions replace jus) · €120–€180/pp · book <strong>8 weeks ahead</strong> +33 4 50 27 78 02 · <strong>Joann-perfect, near-zero seafood</strong></li>
+            <li><strong>11:00 PM</strong> <strong>Old Town bar crawl Rue Sainte-Claire</strong> — start <strong>La Queue du Coq</strong> (cocktail bar, Passage Pré Carré, exposed brick, open until 01:00 Mon–Fri, 01:00 Sat) → <strong>Captain Pub</strong> (Irish, lively expat) → <strong>Casa Santa Clara</strong> (Spanish + tapas) → <strong>Milton Pub</strong> (wood-clad, sports + terrace people-watching) → <strong>Le Munich</strong> (Bavarian beer hall on the canals)</li>
+            <li><strong>01:00 AM</strong> Walk back along the Thiou to <strong>Casino Impérial</strong> (Allée de l'Impérial, on-premises at the hotel) — Thu open till 02:00; tables (English roulette, Texas Hold'em + Ultimate Poker, blackjack) opened at 20:00. Cash games + TexaPoker tournaments most nights.</li>
+            <li><strong>2:30 AM</strong> 2-min walk home</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy:</strong> Drop canyoning Angon (the cliffs-into-the-lake abseil set is no joke after 4 hrs sleep). Replace with a half-day <strong>license-free 8-seat electric GoBoat</strong> from <a href="https://www.le-deck-veyrier.fr/" target="_blank" rel="noopener">Le Deck de Veyrier</a> (Veyrier-du-Lac, €190 morning / €230 afternoon / €370 full day · €1,000 CC deposit) — drive the lake, swim from the boat, pull up to lakeside bistros. Book 1–2 weeks ahead August.</div>
+          <div class="alts"><strong>Alternative · Doubling down:</strong> Add <strong>canyoning Montmin</strong> (aquatic, jumps + slides, one 10-m abseil; €64–€76) in the morning before paragliding, or run <strong>YouCanyon's "Pack Sportif"</strong> = Angon + Montmin combo (~€140 for two canyons same day). Then skip Esquisse and book <strong>★★ Maison Benoît Vidal</strong> (Annecy-le-Vieux, 20-cover intimate, pike/trout/crayfish + foraged elderberry/sorrel/caraway, 8 weeks ahead).</div>
+          <div class="alts"><strong>Alternative · Rainy day:</strong> Both paragliding + canyoning cancel in rain. Pivot the day: drive 50 min to <strong>Aix-les-Bains</strong> for a thermal spa morning at Thermes Chevalley · lunch at <a href="https://www.atmospheres-hotel.com/" target="_blank" rel="noopener">★ Atmosphères</a> (Alain Perrillat-Mercerot, Le Bourget-du-Lac, France's largest natural lake panorama, menus €115–140 Tue–Sat) · afternoon at Pâquerette des Champs winery · back Annecy 18:00. Replace Esquisse with <strong>Casino Impérial dinner + tables</strong>.</div>
         </div>
       </div>
 
       <div class="day">
         <div class="day-number"><div class="num">03</div><div class="date">Fri Aug 14</div></div>
         <div class="day-content">
-          <h3>Cheese tour + lake day</h3>
+          <h3>42-km lake bike loop · Paysages dusk · ★★★ Clos des Sens · Pop Plage till dawn</h3>
           <ul>
-            <li><strong>8:30 AM</strong> Pre-arranged driver-guide (or self-drive) for the morning cheese loop</li>
-            <li><strong>9:30 AM</strong> <strong><a href="https://www.fromagerie-pingon.fr/" target="_blank" rel="noopener">Fromagerie Pingon</a></strong> (Manigod, ~45 min) — alpage Reblochon producer · tour the cave · taste 6-month vs 3-month Reblochon</li>
-            <li><strong>11:30 AM</strong> Drive to <strong>Beaufortain valley</strong> (45 min) — <a href="https://www.fromages-aop.com/fromages-aop/beaufort/" target="_blank" rel="noopener">Coopérative laitière du Beaufortain</a> for Beaufort d'été tasting + cave visit</li>
-            <li><strong>1:30 PM</strong> Lunch at <a href="https://www.aubergedebeaufort.fr/" target="_blank" rel="noopener">Auberge du Beaufortain</a> — diots saucisses + crozets au Beaufort + Vin de Savoie</li>
-            <li><strong>4:00 PM</strong> Back to lake · book a 2-hr <a href="https://www.compagniedesbateaux.com/" target="_blank" rel="noopener">Compagnie des Bateaux du Lac</a> catamaran sail · cool down with a swim from the boat</li>
-            <li><strong>7:00 PM</strong> Drive 20 min around the lake to <strong>Talloires</strong> — sunset apéro on the quay</li>
-            <li><strong>8:30 PM</strong> Dinner at <a href="https://www.lebelvedere-talloires.com/" target="_blank" rel="noopener">Le Belvédère Talloires</a> — terrace over the lake, regional menu (~$120/cpl)</li>
+            <li><strong>08:00 AM</strong> Pick up e-bikes at <a href="https://www.roulmapoule-annecy.com/" target="_blank" rel="noopener">Roul' ma Poule</a> (Annecy old town shop) — €40/day for two e-bikes · <strong>book 1+ week ahead</strong>. Alternatives: Cyclable, Vélonecy, Annecy Location Vélo</li>
+            <li><strong>08:30 AM</strong> Ride clockwise on the <strong>42-km dedicated lake cycle path</strong> (Voie Verte du Lac) — mostly separated from road, clockwise easier · Annecy → Sevrier → Saint-Jorioz → Duingt → <strong>Plage de la Brune at Doussard</strong> (south-end swim stop, 21 km, allow 90 min) → Talloires (lunch)</li>
+            <li><strong>1:00 PM</strong> Lunch in <strong>Talloires</strong> — Auberge du Père Bise's casual <strong>L'Office</strong> (no Michelin theatrics, féra grillée + Apremont) or the village brasserie</li>
+            <li><strong>3:00 PM</strong> Continue Talloires → Veyrier-du-Lac → Annecy (21 km return, 1.5h with one swim stop at Menthon) · return bikes by 5 PM</li>
+            <li><strong>5:00 PM</strong> Lake swim at <strong>Plage des Marquisats</strong> (city beach, fewer tourists than Albigny)</li>
+            <li><strong>6:00 PM</strong> 45 min at <strong>Spa Deep Nature</strong> at L'Impérial Palace — recovery</li>
+            <li><strong>7:30 PM</strong> <strong>Annecy Paysages installations illuminated at dusk</strong> along the Thiou + Pâquier — 30-min stroll with a glass at Le Diplomate (French aperitif terrace, Rue Sainte-Claire) or Le Décalé canal-side</li>
+            <li><strong>8:45 PM</strong> Drive 8 min Annecy-le-Vieux to <strong><a href="https://closdessens.com/" target="_blank" rel="noopener">Le Clos des Sens ★★★</a></strong> — Franck Derouet + Thomas Lorival (succeeded Laurent + Martine Petit 2023) · <strong>vegetal + lake-fish</strong>, 100% local within 100 km, permaculture garden · <em>Plein d'Envies</em> tasting €280/pp + paired wine €185 · <strong>book 12 weeks ahead</strong> via closdessens.com · <strong>Joann-perfect</strong>: zero ocean seafood, lake fish freshwater not marine</li>
+            <li><strong>11:30 PM</strong> Drive 6 min to <strong>Pop Plage / Le Pop Night Club</strong> (Imperial Palace gardens, 30 av d'Albigny) — summer-only Apr–Oct nightclub <strong>Thu–Sat 23:00 until dawn</strong>, lakefront, "THE Annecy summer party venue" · cover ~€20–30 · Fri is the night</li>
+            <li><strong>03:00 AM</strong> Walk back to L'Impérial Palace (3 min along the lake)</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy:</strong> Skip the e-bike loop. Take <strong>Compagnie des Bateaux du Lac MS Libellule</strong> lunch cruise — electric boat, 2-h luncheon at 11:30, Annecy → Talloires → return · <strong>reservations mandatory weeks ahead Aug</strong> +33 4 50 51 08 40. Then half-day SUP rental at NCY SUP (Petit Port, €15–25/h walk-up) and a long Sensori Spa afternoon. Same Clos des Sens dinner, skip the club.</div>
+          <div class="alts"><strong>Alternative · Doubling down:</strong> Run the <strong>full 42-km loop non-stop</strong> (3 h with no swim stops) — back by 11:30, then swap dinner from Le Clos des Sens to <strong>★★ Père Bise · Jean Sulpice</strong> in Talloires (terrace lakeside, 6–8 step alpine tasting, féra + game + saffron de Savoie, 10 weeks ahead) since you'd already be in Talloires at the loop's midpoint and could check in for the spa pre-dinner. Then drive back to Annecy for Pop Plage.</div>
+          <div class="alts"><strong>Alternative · Rainy day:</strong> Replace the bike loop with a <strong>Geneva day trip</strong> (50 min A41 north) — Old Town walking, Jet d'Eau, Bains des Pâquis lake baths, lunch at Café du Soleil for the legendary cheese fondue. Evening Geneva or back to Annecy — and use the night for Carouge nightlife (Le Chat Noir jazz/blues + DJs, Bar la Forge, La Plage, Le Borsalino) which goes until 04–05 AM weekends — Carouge is the closest 4 AM scene to Annecy.</div>
         </div>
       </div>
 
       <div class="day">
         <div class="day-number"><div class="num">04</div><div class="date">Sat Aug 15</div></div>
         <div class="day-content">
-          <h3>Assomption · lake cycle · Le Clos des Sens ★★★</h3>
+          <h3>CHAMONIX · Aiguille du Midi · Fête des Guides · ★ Albert 1er · Chambre Neuf</h3>
           <ul>
-            <li><strong>Note:</strong> French national holiday. Shops closed, Basilique procession at 10 AM. Lake activities run normally.</li>
-            <li><strong>9:30 AM</strong> Rent e-bikes at <a href="https://velonecy.com/" target="_blank" rel="noopener">Vélonecy</a> · ride the <strong>Voie Verte du Lac d'Annecy</strong> — the 26-mi paved lake-loop greenway. Do half (13 mi to Doussard at the south end) and back via the east shore for variety</li>
-            <li><strong>1:00 PM</strong> Lunch in Saint-Jorioz at a lakeside guinguette — Tomme cheese plate + lake féra + jambon de Savoie</li>
-            <li><strong>3:30 PM</strong> Spa afternoon at <a href="https://www.hotel-imperial-palace.com/en/spa-deep-nature" target="_blank" rel="noopener">Spa Deep Nature</a> at Impérial Palace — couples massage + thermal pool, ~$300/cpl</li>
-            <li><strong>7:00 PM</strong> Stroll the Quais d'Annecy at sunset · Assomption Day boat lights on the water</li>
-            <li><strong>8:30 PM</strong> <strong><a href="https://closdessens.com/" target="_blank" rel="noopener">Le Clos des Sens ★★★</a></strong> (Annecy-le-Vieux, 5 min) — <em>Plein d'Envies</em> 7-course tasting ($280 pp) with the cellar wine pairing. Vegetable + lake fish focus from the permaculture garden. <strong>Estimate $720–$880/cpl with pairings.</strong></li>
+            <li><strong>06:30 AM</strong> Breakfast at L'Impérial Palace · check out (keep room for Sun, store luggage)</li>
+            <li><strong>07:00 AM</strong> Drive Annecy → Chamonix 1h25 via A41 then RN205 (overnight bag only)</li>
+            <li><strong>09:00 AM</strong> <strong><a href="https://www.aiguilledumidi.montblancnaturalresort.com/" target="_blank" rel="noopener">Aiguille du Midi cable car</a></strong> — 3,842 m Mont Blanc views · <strong>booking compulsory summer 2026, sells out 5–10 days ahead Aug</strong> · €70+ RT · daily 08:10 AM–17:30 (Aug) · <strong>Step Into the Void glass box</strong>, Mont Blanc terrace open</li>
+            <li><strong>11:30 AM</strong> Back Chamonix center · stroll <strong>Fête des Guides on the church square</strong>: market, climbing wall, musical entertainment</li>
+            <li><strong>12:30 PM</strong> Light lunch at <strong>Le Matafan</strong> or Hameau Albert 1er's bistronomic room (croute aux morilles, savoyard charcuterie, Pinot Blanc)</li>
+            <li><strong>1:00 PM</strong> Fête des Guides ceremony: <strong>president's speech + new Guides accepted into the Compagnie</strong>, church square. The community ritual.</li>
+            <li><strong>2:30 PM</strong> Check into <a href="https://www.hameaualbert.fr/" target="_blank" rel="noopener">Hameau Albert 1er</a> R&amp;C — indoor + outdoor pool with Mont Blanc views, spa, Carrier family-run since 1903</li>
+            <li><strong>4:00 PM</strong> <strong>Fête des Guides afternoon at Les Gaillands</strong>: climbing demos + zip line, 14:00–18:00 · OR optionally drive 8 min to <strong>Servoz crafts festival</strong> (adjacent valley, 8 AM–11 PM same day)</li>
+            <li><strong>6:00 PM</strong> Back to Albert 1er · sauna + nap · cocktail at the hotel bar</li>
+            <li><strong>8:30 PM</strong> Dinner <strong><a href="https://www.hameaualbert.fr/restaurants/albert-premier/" target="_blank" rel="noopener">Albert 1er ★</a></strong> · Damien Leveau (succeeded Pierre Maillet 2018) · alpine refinement, Tarine beef, féra de lac, morilles · ~€140–€220/pp · book <strong>6 weeks ahead</strong> · <strong>Joann-friendly</strong>: mountain meats + lake fish, no ocean seafood</li>
+            <li><strong>11:00 PM</strong> Walk 5 min to <strong>Chambre Neuf</strong> (top of village near train station) — <strong>legendary après-ski hotspot, live band 6 nights/week, dancing on tables, DJ until 1 AM</strong>, happy hour 8 PM 2-for-1 (cocktails). Strong on Fête des Guides night.</li>
+            <li><strong>01:00 AM</strong> <strong>Le Jekyll &amp; Hyde</strong> — cozy pub, live bands, comedy quizzes, dance parties. "Bars shut later than you'd expect for mountain town, often 2 AM."</li>
+            <li><strong>02:00 AM</strong> Walk home through quiet Chamonix center</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy:</strong> Stay in Annecy. Sleep in. <strong>09:00 AM Mass + procession at Basilique de la Visitation</strong> (funicular up). Lunch on the L'Impérial Palace lakeside terrace. <strong>★★ Maison Benoît Vidal</strong> for dinner (Annecy-le-Vieux, 79 Route de Thônes, pike/trout/crayfish + foraged elderberry, 8 weeks ahead). Then Casino Impérial table games till 04:00 (Sat hours). No luggage shuffle.</div>
+          <div class="alts"><strong>Alternative · Doubling down:</strong> Aiguille du Midi sells out and crowds — pre-dawn it. <strong>06:00 AM Chamonix arrival, 06:30 AM first cable car</strong> (less queue, alpenglow on Mont Blanc), back by 09:30 to do <strong>Mer de Glace + Montenvers train + ice cave</strong> (1,913 m · Jul 4–Aug 30, 2026 daily 08:00–17:30 · first train 08:30 every 20–60 min · €49.70 full package · 2.5–3 h). Then Fête des Guides afternoon + ★ Albert 1er dinner. (Both Mer de Glace + Aiguille du Midi same day requires the pre-dawn start.)</div>
+          <div class="alts"><strong>Alternative · Rainy day:</strong> Aiguille du Midi closes in weather frequently. Skip the cable car. Do <strong>Mer de Glace + Montenvers train + ice cave</strong> instead (Jul 4–Aug 30, €49.70, 2.5–3 h, mostly indoor train + cave). Then full Fête des Guides indoor program (church square covered, Compagnie speeches still happen). ★ Albert 1er dinner unchanged.</div>
         </div>
       </div>
 
       <div class="day">
         <div class="day-number"><div class="num">05</div><div class="date">Sun Aug 16</div></div>
         <div class="day-content">
-          <h3>Chamonix Mont Blanc + Jean Sulpice ★★</h3>
+          <h3>Combe de Savoie winery day · ★★ Yoann Conte (Alpine menu) · Casino nightcap</h3>
           <ul>
-            <li><strong>7:30 AM</strong> Drive to Chamonix (~1h)</li>
-            <li><strong>9:00 AM</strong> <strong><a href="https://www.compagniedumontblanc.fr/en/equipement/aiguille-du-midi" target="_blank" rel="noopener">Aiguille du Midi cable car</a></strong> to 12,605 ft — pre-booked 9 AM slot (sells out 1+ wk ahead in August). 20-min ride past the Glacier des Bossons. Step Into the Void glass box · panoramic terrace.</li>
-            <li><strong>12:00 PM</strong> Lunch back in Chamonix at <a href="https://www.albert1er.com/le-jardin-restaurant-bistronomique-chamonix-mont-blanc/" target="_blank" rel="noopener">Le Jardin (Albert 1er hotel)</a> — bistronomique, terrace with Mont Blanc view</li>
-            <li><strong>2:30 PM</strong> Optional: short walk on the Bossons or Mer de Glace train</li>
-            <li><strong>4:30 PM</strong> Drive back to Annecy via the autoroute (1h)</li>
-            <li><strong>6:00 PM</strong> Sunset apéro on La Maison Bleue terrace</li>
-            <li><strong>8:30 PM</strong> Dinner at <strong><a href="https://www.aubergedupere-bise.com/" target="_blank" rel="noopener">Auberge du Père Bise · Jean Sulpice ★★</a></strong> in Talloires — historic R&amp;C lakeside, terrace dining at sunset (~$540–$700/cpl)</li>
+            <li><strong>07:30 AM</strong> Breakfast Albert 1er · check out</li>
+            <li><strong>09:00 AM</strong> Drive Chamonix → Combe de Savoie (~1h40 via A41 + A43)</li>
+            <li><strong>11:00 AM</strong> Winery 1 — <a href="https://www.berlioz-chignin.com/" target="_blank" rel="noopener">Adrien Berlioz</a> in Chignin · <strong>Mondeuse (Savoyard red) + Chignin-Bergeron (Roussanne white)</strong> · book ahead +33 4 79 28 13 28 · 60-min tasting + cellar tour, €15/pp</li>
+            <li><strong>12:30 PM</strong> Lunch in Chignin or Apremont village — bistro Chez Béatrice or village brasserie · Apremont (Jacquère) + diots aux vins + crozets au Beaufort</li>
+            <li><strong>2:30 PM</strong> Winery 2 — <a href="https://www.jeanfrancoisquenard.com/" target="_blank" rel="noopener">Jean-François Quénard</a> in Chignin · benchmark Chignin-Bergeron + cult Roussette de Savoie (Altesse) · book ahead</li>
+            <li><strong>4:00 PM</strong> Winery 3 (optional) — <strong>Maison Philippe Grisard</strong> in Cruet · broad Savoie portfolio, Jacquère + Roussanne + Mondeuse · walk-in often OK Sun afternoon</li>
+            <li><strong>6:00 PM</strong> Drive back Imperial Palace Annecy (~1h)</li>
+            <li><strong>7:30 PM</strong> 45 min Spa Deep Nature reset</li>
+            <li><strong>9:00 PM</strong> Dinner <strong><a href="https://yoann-conte.com/" target="_blank" rel="noopener">La Maison Bleue · La Table de Yoann Conte ★★</a></strong> at Veyrier-du-Lac (15 min drive on the east shore) · Yoann Conte · <strong>order "Terre d'Adoption" Alpine terroir menu (skip "Bretagne natale" Brittany seafood menu)</strong> · €320–420/pp ex drinks · €85 lunch "Premier de cordée" · book <strong>10 weeks ahead</strong> +33 4 50 09 97 49 · <strong>Joann-OK with Alpine menu order</strong></li>
+            <li><strong>11:30 PM</strong> Drive back to L'Impérial Palace · nightcap at <strong>Casino Impérial table games</strong> (Sun open until 02:00 — slots from 10:00, tables 20:00–02:00) — English roulette, blackjack, Texas Hold'em</li>
+            <li><strong>1:00 AM</strong> Bed</li>
           </ul>
+          <div class="alts"><strong>Alternative · Low energy:</strong> Cut to one winery only — Adrien Berlioz Chignin, 11 AM tasting + lunch on his terrace. Afternoon spa at L'Impérial Palace. Early dinner at <strong>★ L'Esquisse</strong> (Old Town, 20-cover, vegetable-driven — easier seating than Yoann Conte and fits a Joann-friendly veg-forward profile if you've had enough). Casino Impérial finish.</div>
+          <div class="alts"><strong>Alternative · Doubling down:</strong> Swap Yoann Conte for <strong>★★★ Flocons de Sel in Megève</strong> (Emmanuel Renaut, MOF, mountain herbs/mushrooms/berries/lake fish; 50 min drive from Annecy; closed Tue/Wed) — 3 stars, book <strong>12+ weeks ahead</strong> +33 4 50 21 49 99. Means leaving Combe de Savoie earlier and driving direct to Megève. Two ★★★ on one trip (Clos des Sens + Flocons) — the Splurge variant.</div>
+          <div class="alts"><strong>Alternative · Rainy day:</strong> Skip the Savoie winery day (driving Combe de Savoie wet roads + tastings + 1h40 each way is a lot). Replace with a <strong>Geneva day</strong> — Old Town + Jet d'Eau + Patek Philippe Museum + lunch Café du Soleil fondue + Carouge browsing. Back to Annecy for Yoann Conte unchanged. Or full Carouge nightlife if you want to extend.</div>
         </div>
       </div>
 
       <div class="day">
         <div class="day-number"><div class="num">06</div><div class="date">Mon Aug 17</div></div>
         <div class="day-content">
-          <h3>Departure</h3>
+          <h3>Departure · Lake swim · Pastries · GVA</h3>
           <ul>
-            <li><strong>9:00 AM</strong> Slow breakfast on the terrace · last lake view</li>
-            <li><strong>10:30 AM</strong> Walk down for one final lake swim at Plage de Veyrier</li>
-            <li><strong>12:30 PM</strong> Light lunch at the hotel</li>
-            <li><strong>2:00 PM</strong> Driver to GVA (40 min, $90)</li>
+            <li><strong>09:00 AM</strong> Slow breakfast on L'Impérial Palace lakeside terrace</li>
+            <li><strong>10:00 AM</strong> Final lake swim at <strong>Plage d'Albigny</strong> (5 min walk) — 22–25 °C, the cleanest lake water in Europe</li>
+            <li><strong>11:30 AM</strong> Walk Old Town for last pastries at <strong>Boulangerie Maison Pesando</strong> or <strong>Philippe Rigollot</strong> (MOF pastry chef, opera, vacherin, his signature gateau) · stroll Palais de l'Île + Pont des Amours one more time</li>
+            <li><strong>12:30 PM</strong> Drive to GVA (50 min · return rental at airport)</li>
             <li><strong>4:55 PM</strong> Swiss LX2811 GVA → ZRH (55 min)</li>
-            <li><strong>7:15 PM</strong> Swiss LX40 ZRH → LAX (12h 5m)</li>
-            <li><strong>10:20 PM same day</strong> Arrive LAX (gain 9 hours on the way back)</li>
+            <li><strong>7:15 PM</strong> Swiss LX40 ZRH → LAX (12h 05m)</li>
+            <li><strong>10:20 PM same day</strong> Arrive LAX (gain 9 hours on the return)</li>
           </ul>
         </div>
       </div>
@@ -511,21 +592,53 @@
 
     <div class="section-header" id="hotels">
       <span class="eyebrow">Where to Stay</span>
-      <h2>Six Hotels, One Lake</h2>
-      <p>The lake has two faces — the town shore (Annecy itself, busier, walkable to old town) and the east shore (Veyrier · Menthon · Talloires, quieter, all the Michelin). Pick a side and stay all five nights. All prices USD, peak August.</p>
+      <h2>Two Bases · 4 Annecy + 1 Chamonix</h2>
+      <p>The Standard plan splits 4 nights at <strong>L'Impérial Palace Annecy</strong> + 1 night at <strong>Hameau Albert 1er Chamonix</strong> on Sat Aug 15. The Chamonix overnight unlocks Fête des Guides Aug 15, Aiguille du Midi at first light, ★ Albert 1er dinner, and Chambre Neuf till 1 AM. Alternative single-base plays + 5-star R&amp;C lake hotels below. All prices USD peak August.</p>
     </div>
     <div class="hotels-grid">
 
       <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(42,122,140,0.3), rgba(184,137,91,0.4)), url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');">
+          <span class="hotel-tier">★ Annecy · 4 nights</span>
+        </div>
+        <div class="hotel-body">
+          <h4>L'Impérial Palace</h4>
+          <div class="loc">Annecy lakefront · 1913 Belle Époque · 104 rooms · casino + Pop Plage on-site</div>
+          <p>The Annecy grande dame on Albigny Bay — Spa Deep Nature (thermal pool + hammam), lake-side restaurant, in-house <strong>Casino Impérial</strong> (tables 20:00–04:00 Fri/Sat), <strong>Le Hip Bar</strong> cocktail bar, <strong>Pop Plage / Le Pop Night Club</strong> in the hotel gardens (Thu–Sat 23:00 till dawn summer). Walk to Old Town. <strong>The built-in nightlife pick</strong> — most concentrated late-night package in town.</p>
+          <div class="hotel-meta">
+            <span class="price">$385–$770 / night</span>
+            <span>★★★★ palace</span>
+          </div>
+          <a href="https://www.hotel-imperial-palace.com/en/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(123,166,150,0.3), rgba(13,59,79,0.4)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80');">
+          <span class="hotel-tier">★ Chamonix · 1 night</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hameau Albert 1er</h4>
+          <div class="loc">Chamonix · R&amp;C · Mont Blanc views · Carrier family since 1903</div>
+          <p>R&amp;C Chamonix's marquee — indoor + outdoor pool with Mont Blanc views, spa, on-site <strong>★ Albert 1er</strong> restaurant + La Maison Carrier savoyard table. The Aug 15 Fête des Guides + Aiguille du Midi anchor. <strong>Book 4+ months ahead for Aug 15</strong> — Fête des Guides is the year's peak weekend in Chamonix.</p>
+          <div class="hotel-meta">
+            <span class="price">$650–$1,300 / night</span>
+            <span>★★★★★ R&amp;C</span>
+          </div>
+          <a href="https://www.hameaualbert.fr/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
         <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(42,122,140,0.3), rgba(13,59,79,0.4)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80');">
-          <span class="hotel-tier">★ Top Pick</span>
+          <span class="hotel-tier">Alt · Veyrier R&amp;C</span>
         </div>
         <div class="hotel-body">
           <h4>La Maison Bleue (Yoann Conte)</h4>
           <div class="loc">Veyrier-du-Lac · east shore · 5-star R&amp;C · 11 rooms</div>
-          <p>The eastern shore Relais &amp; Châteaux — 11 rooms, all lake view. <strong>Yoann Conte ★★</strong> on premises + Le Roc as the casual second table. Private dock. Most intimate of the six.</p>
+          <p>The eastern-shore R&amp;C — 11 rooms, all lake view. <strong>★★ Yoann Conte</strong> on premises + <strong>Le Roc</strong> casual second table (14/20 Gault Millau). Private dock. Most intimate of the lake hotels — quiet evenings, 10-min drive to Annecy nightlife. <strong>Pick if you'd rather sleep at a Michelin destination than next to Pop Plage.</strong></p>
           <div class="hotel-meta">
-            <span class="price">$760–$1,200 / night</span>
+            <span class="price">$760–$1,500 / night</span>
             <span>★★★★★ R&amp;C</span>
           </div>
           <a href="https://yoann-conte.com/en/la-maison-bleue/hotel-la-maison-bleue/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
@@ -534,15 +647,15 @@
 
       <div class="hotel-card">
         <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(184,137,91,0.3), rgba(200,85,61,0.4)), url('https://images.unsplash.com/photo-1551516114-c39ed83b3946?w=600&q=80');">
-          <span class="hotel-tier">★★★ on site</span>
+          <span class="hotel-tier">Alt · ★★★ on site</span>
         </div>
         <div class="hotel-body">
           <h4>Le Clos des Sens (hotel + restaurant)</h4>
-          <div class="loc">Annecy-le-Vieux · hills above town · 5-star · 11 suites</div>
-          <p>5-star hotel attached to the <strong>3-Michelin-star Le Clos des Sens</strong>. 11 suites, permaculture garden, panoramic terrace over Annecy. The food-first pick — elevator from your room to the dining room.</p>
+          <div class="loc">Annecy-le-Vieux · hills above town · 5-star R&amp;C · 11 suites</div>
+          <p>R&amp;C 5-star attached to the <strong>3-Michelin-star Le Clos des Sens</strong>. 11 suites, permaculture garden, panoramic terrace over Annecy. <strong>The food-first pick</strong> — elevator from your room to the dining room makes Clos des Sens night logistic-free. On the hill above town not lakefront; tiny.</p>
           <div class="hotel-meta">
-            <span class="price">$650–$1,100 / night</span>
-            <span>★★★★★</span>
+            <span class="price">$650–$1,400 / night</span>
+            <span>★★★★★ R&amp;C</span>
           </div>
           <a href="https://closdessens.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
         </div>
@@ -550,14 +663,14 @@
 
       <div class="hotel-card">
         <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(42,122,140,0.3), rgba(123,166,150,0.4)), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80');">
-          <span class="hotel-tier">Historic R&amp;C</span>
+          <span class="hotel-tier">Alt · Talloires R&amp;C</span>
         </div>
         <div class="hotel-body">
-          <h4>Auberge du Père Bise</h4>
-          <div class="loc">Talloires · east shore · 5-star R&amp;C · 1903</div>
-          <p>The oldest Michelin presence on the lake — Père Bise has held stars since 1928. Restored by Jean Sulpice (★★ today). Lakeside terrace dining, swimming pool, 33 rooms in original lakeshore villa + modern wing.</p>
+          <h4>Auberge du Père Bise · Jean Sulpice</h4>
+          <div class="loc">Talloires · east-shore lakefront · R&amp;C · 21 rooms + suites</div>
+          <p>The oldest Michelin presence on the lake — Père Bise has held stars since 1928, restored by Jean Sulpice (<strong>★★ today + Green Star</strong>). Lakeside terrace dining, swimming pool + spa, private pontoon. Storybook bay setting. <strong>The R&amp;C lakefront romance pick</strong> — but 25 min from Annecy nightlife, kitchen closes 21:30, sleeps early.</p>
           <div class="hotel-meta">
-            <span class="price">$590–$980 / night</span>
+            <span class="price">$760–$1,500 / night</span>
             <span>★★★★★ R&amp;C</span>
           </div>
           <a href="https://www.aubergedupere-bise.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
@@ -565,50 +678,18 @@
       </div>
 
       <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(42,122,140,0.3), rgba(184,137,91,0.4)), url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&q=80');">
-          <span class="hotel-tier">Town center</span>
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(123,166,150,0.3), rgba(184,137,91,0.4)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80');">
+          <span class="hotel-tier">Alt · Lakeside Abbey</span>
         </div>
         <div class="hotel-body">
-          <h4>Impérial Palace</h4>
-          <div class="loc">Annecy town · directly on the lake · Belle Époque</div>
-          <p>1913 Belle Époque grande dame, directly on the lakeshore at the edge of the old town. <strong>Spa Deep Nature</strong> (thermal pool, hammam, couples treatments), lakeside restaurant, casino. Walk to everything.</p>
+          <h4>Abbaye de Talloires</h4>
+          <div class="loc">Talloires lakeside · 1018-Benedictine abbey · 37 rooms + 5 suites · Feb–Nov</div>
+          <p>Historic Benedictine abbey on the bay — 200 m² spa, private pontoon + hotel boat, gastronomic + bistronomic dining. <strong>Strongest romance through-line on the lake</strong>; private pontoon swims; lakefront walks from the abbey courtyard. 25 min from Annecy; quiet at night. The "I want history + water" pick under the Père Bise tier.</p>
           <div class="hotel-meta">
-            <span class="price">$430–$760 / night</span>
-            <span>★★★★ (large palace style)</span>
-          </div>
-          <a href="https://www.hotel-imperial-palace.com/en" target="_blank" rel="noopener" class="book-link">Book direct →</a>
-        </div>
-      </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(42,122,140,0.3), rgba(13,59,79,0.4)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80');">
-          <span class="hotel-tier">Design boutique</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Black Bass</h4>
-          <div class="loc">Sevrier · west shore · 5-star design hotel</div>
-          <p>Newest 5-star on the lake (opened 2021). Bold blue-and-curves design, every room with a lake view, restaurant + bar terrace, infinity pool over the water. The contemporary pick.</p>
-          <div class="hotel-meta">
-            <span class="price">$540–$870 / night</span>
-            <span>★★★★★</span>
-          </div>
-          <a href="https://blackbasshotel-annecy.com/en/accueil/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
-        </div>
-      </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(123,166,150,0.3), rgba(200,85,61,0.35)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80');">
-          <span class="hotel-tier">Lake spa</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Rivage Hôtel &amp; Spa</h4>
-          <div class="loc">Saint-Jorioz · west shore · 4-star</div>
-          <p>The best spa quality-to-price ratio on the lake. Sea-view rooms, large spa with thermal pools, lake-shore restaurant. Quieter, less-luxury-glossy than the 5-stars — value pick.</p>
-          <div class="hotel-meta">
-            <span class="price">$280–$460 / night</span>
+            <span class="price">$485–$970 / night</span>
             <span>★★★★</span>
           </div>
-          <a href="https://www.lerivagehotel.com/en" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+          <a href="https://abbaye-talloires.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
         </div>
       </div>
 
@@ -616,31 +697,36 @@
 
     <div class="section-header" id="wine">
       <span class="eyebrow">The Glass &amp; Plate</span>
-      <h2>Cheese, Bread, Wine — Not Seafood</h2>
-      <p>The Savoyard food culture is built on Alpine cheese (Reblochon, Beaufort, Tomme), cured meats (saucisson, jambon, diots), crusty bread, and crisp Vin de Savoie whites. Lake fish (omble chevalier, féra) plays a supporting role — fresher and lighter than sea fish.</p>
+      <h2>Savoie Wine &amp; Alpine Cheese — Not Seafood</h2>
+      <p>Savoie is a real but small wine region 45–60 min south of Annecy in the Combe de Savoie — <strong>Jacquère</strong> (Apremont/Abymes), <strong>Roussanne</strong> (Chignin-Bergeron), <strong>Altesse</strong> (Roussette), <strong>Mondeuse</strong> (red), and cult <strong>Gringet</strong> (Ayze). Not Beaujolais/Burgundy/Rhône scale, but the only place to drink these properly. The cheese side is where Annecy genuinely wins — <strong>Reblochon, Beaufort, Tomme, Abondance</strong> are all made within 90 min, Aug = peak alpage harvest. This is also the no-seafood capital of France.</p>
     </div>
+
     <div class="wine-block cheese">
       <div class="wine-image"></div>
       <div class="wine-text">
         <span class="eyebrow">The cheese trail · 4 AOP cheeses</span>
         <h3>Reblochon · Beaufort · Tomme · Abondance</h3>
-        <p>Four Savoie AOP cheeses, all made within 90 minutes of the lake. August is peak <em>alpage</em> season — the cows have been grazing wildflowers since June, the summer cheese is at its best. Producers run morning tastings July–August only.</p>
+        <p>August is peak <em>alpage</em> (high-pasture) season — cows have been grazing wildflowers since June, summer-milk cheese is at its best right now. Producers run morning tastings July–August only. Combined with Savoyard charcuterie (saucisson, jambon de Savoie, diots) at the Mercato des Halles, this is the no-seafood food culture in one weekly market.</p>
         <div class="winery-list">
           <div class="winery">
             <div class="name"><a href="https://www.fromagerie-pingon.fr/" target="_blank" rel="noopener">Fromagerie Pingon (Manigod) ↗</a></div>
-            <div class="desc">Alpage Reblochon producer 45 min east of Annecy. Cave tour + tasting 3-month vs 6-month, $15 pp. Tue–Sat 10 AM–noon.</div>
+            <div class="desc">Alpage Reblochon producer 45 min east of Annecy · cave tour + tasting 3-month vs 6-month, €15/pp · Tue–Sat 10 AM–noon · the postcard Reblochon visit</div>
           </div>
           <div class="winery">
             <div class="name"><a href="https://www.beaufort-cooperative.com/" target="_blank" rel="noopener">Coopérative Beaufortain ↗</a></div>
-            <div class="desc">Beaufortain valley, 45 min SE. Beaufort d'été (summer Beaufort), 12/18/24-month bottlings. Daily tour 10:30 AM. €8.</div>
+            <div class="desc">Beaufortain valley, 45 min SE · Beaufort d'été (summer Beaufort) + 12/18/24-month bottlings · daily tour 10:30 AM · €8/pp</div>
           </div>
           <div class="winery">
-            <div class="name"><a href="https://www.tommesavoie.com/" target="_blank" rel="noopener">Tomme producers Bauges ↗</a></div>
-            <div class="desc">Tomme de Savoie + Tome des Bauges — the everyday cheese. Many small producers; Marchello at Bauges (drop-in OK Tue–Sat 9–1).</div>
+            <div class="name">Tomme producers Bauges</div>
+            <div class="desc">Tomme de Savoie + Tome des Bauges (drier, sharper) · many small producers, Marchello at Bauges drop-in OK Tue–Sat 9–13</div>
           </div>
           <div class="winery">
             <div class="name">Mercato des Halles, Annecy</div>
-            <div class="desc">Tue/Fri/Sun mornings, central Annecy. All four AOP cheeses + Savoyard charcuterie under one roof. Best one-stop tasting if not doing the alpage drive.</div>
+            <div class="desc">Tue/Fri/Sun mornings, central Annecy · all four AOP cheeses + Savoyard charcuterie under one roof · the one-stop tasting if not doing the alpage drive</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.lefreti.com/" target="_blank" rel="noopener">Le Freti Fromagerie ↗</a></div>
+            <div class="desc">12 Rue Sainte-Claire, Annecy Old Town arcades · since 1968 · the fromagerie next door to Le Freti restaurant · raw-milk farmhouse cheeses + their signature aged Reblochon</div>
           </div>
         </div>
       </div>
@@ -649,25 +735,33 @@
     <div class="wine-block wine" style="margin-top: 2rem;">
       <div class="wine-image" style="order: 2;"></div>
       <div class="wine-text" style="order: 1;">
-        <span class="eyebrow">Vin de Savoie · the Alpine whites</span>
-        <h3>Apremont · Chignin-Bergeron · Roussette</h3>
-        <p>The Alpine wines are crisp, mineral, lightly fizzy — built to drink with fondue, raclette, and lake fish. <strong>Apremont</strong> (from Jacquère grape) is the classic; <strong>Chignin-Bergeron</strong> (Roussanne) is the structured one; <strong>Roussette de Savoie</strong> (Altesse) is the most age-worthy. All within 1h drive of Annecy in the Combe de Savoie.</p>
+        <span class="eyebrow">Vin de Savoie · the Alpine whites + Mondeuse</span>
+        <h3>Apremont · Chignin-Bergeron · Roussette · Gringet</h3>
+        <p>The Alpine wines are crisp, mineral, lightly fizzy — built to drink with fondue + raclette + lake fish. <strong>Apremont</strong> (Jacquère) is the everyday classic; <strong>Chignin-Bergeron</strong> (Roussanne) is the structured one; <strong>Roussette de Savoie</strong> (Altesse) is the most age-worthy; <strong>Mondeuse</strong> is the local peppery red; <strong>Gringet</strong> (Ayze) is the cult sparkling. Combe de Savoie producers 45–60 min south of Annecy.</p>
         <div class="winery-list">
           <div class="winery">
-            <div class="name"><a href="https://www.domaine-belluard.com/" target="_blank" rel="noopener">Domaine Belluard ↗</a></div>
-            <div class="desc">Cult Ayze producer — late Dominique Belluard's natural-wine estate, sparkling Gringet a benchmark. By appointment only.</div>
+            <div class="name"><a href="https://www.berlioz-chignin.com/" target="_blank" rel="noopener">Adrien Berlioz (Chignin) ↗</a></div>
+            <div class="desc">Benchmark Chignin-Bergeron + Mondeuse · Sun tastings + cellar tour by appointment · the cleanest Day 5 first stop</div>
           </div>
           <div class="winery">
-            <div class="name">Domaine des 13 Lunes (Apremont)</div>
-            <div class="desc">Biodynamic Jacquère + Mondeuse, 45 min south. Sat tastings + lunch on the terrace. By appointment.</div>
+            <div class="name"><a href="https://www.jeanfrancoisquenard.com/" target="_blank" rel="noopener">Jean-François Quénard (Chignin) ↗</a></div>
+            <div class="desc">Cult Chignin-Bergeron + Roussette de Savoie · structured + age-worthy · book ahead</div>
+          </div>
+          <div class="winery">
+            <div class="name">Maison Philippe Grisard (Cruet) ↗</div>
+            <div class="desc">Broad Savoie portfolio — Jacquère + Roussanne + Mondeuse · walk-in often OK Sun · the third stop of the Day 5 trio</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.domaine-belluard.com/" target="_blank" rel="noopener">Domaine Belluard (Ayze) ↗</a></div>
+            <div class="desc">Cult biodynamic — Gringet 95% · sparkling Gringet a benchmark · "call ahead" tasting times · <strong>caveat: Dominique Belluard passed 2021; estate continuing — confirm visitor policy directly before betting a day</strong></div>
           </div>
           <div class="winery">
             <div class="name">Domaine Gilles Berlioz (Chignin-Bergeron)</div>
-            <div class="desc">Benchmark Chignin-Bergeron producer in Chignin (40 min). Tastings by appointment Tue–Sat.</div>
+            <div class="desc">Distinct from Adrien Berlioz · benchmark Chignin-Bergeron · 40 min south · Tue–Sat appointments</div>
           </div>
           <div class="winery">
-            <div class="name">Génépi des Pères Chartreux (Voiron, 1h 30m)</div>
-            <div class="desc">The Alpine herb liqueur. Distillery tour at Grande Chartreuse — the only place that knows the recipe of green and yellow Chartreuse. Optional Day 5 detour.</div>
+            <div class="name">Domaine de Vens-le-Haut · Charles Trosset (Mondeuse)</div>
+            <div class="desc">Mondeuse specialists · the peppery Savoyard red worth the detour · appointments only</div>
           </div>
         </div>
       </div>
@@ -675,131 +769,352 @@
 
     <div class="section-header" id="food">
       <span class="eyebrow">The Table</span>
-      <h2>Where You'll Eat</h2>
-      <p>Two Michelin two-stars on the lake (Yoann Conte at Maison Bleue, Jean Sulpice at Père Bise), one 3-star (Le Clos des Sens), plus the great Savoyard auberges. <strong>Book Le Clos des Sens + Yoann Conte 60+ days ahead.</strong></p>
+      <h2>13 Michelin Stars in 7 Restaurants</h2>
+      <p>The 2026 Michelin Guide France has <strong>13 stars across 7 restaurants in the Lake Annecy basin</strong> alone — <strong>★★★ Le Clos des Sens, ★★ Père Bise, ★★ Yoann Conte, ★★ Auberge de Montmin, ★★ Maison Benoît Vidal, ★ L'Esquisse, ★ La Rotonde des Trésoms</strong>. Add <strong>★★★ Flocons de Sel (Megève 50 min)</strong>, <strong>★ Atmosphères (Aix-les-Bains 50 min)</strong>, <strong>★ Albert 1er (Chamonix 1h25)</strong>, <strong>★ 1920 + ★ La Table de l'Alpaga (Megève)</strong> and you have one of the densest fine-dining clusters in France. <strong>Most kitchens close ~21:30</strong> — book the latest available seating and plan post-dinner Casino or Pop Plage. <strong>Joann note:</strong> Savoyard tradition (cheese, charcuterie, lake féra, mountain meats) is essentially seafood-free — Annecy is structurally Joann-friendly.</p>
     </div>
-    <div class="hotels-grid">
 
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(200,85,61,0.4), rgba(13,59,79,0.5)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
-          <span class="hotel-tier">★★★ Michelin</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Le Clos des Sens</h4>
-          <div class="loc">Annecy-le-Vieux · Chef Franck Derouet · "lacustre &amp; vegetable"</div>
-          <p>3 stars since 2019. After Laurent Petit stepped away end of 2022, Franck Derouet (long-time chef de cuisine) holds the kitchen. The concept stays: lake fish (féra, omble, perch) + 1,500 m² permaculture garden + foraging + in-house garum. <strong>Plein d'Envies $280 pp dinner.</strong></p>
-          <div class="hotel-meta">
-            <span class="price">$185–$280 / person</span>
-            <span>★★★ Michelin</span>
-          </div>
-          <a href="https://closdessens.com/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
+    <div class="food-list">
+      <div class="food-row">
+        <div class="place">Le Clos des Sens <span class="stars">★★★</span><span class="meta">Annecy-le-Vieux · Franck Derouet + Thomas Lorival · 11-suite hotel attached</span></div>
+        <div class="desc"><strong>The lake's three-star.</strong> Held since 2019. Franck Derouet + sommelier-partner Thomas Lorival succeeded Laurent + Martine Petit in 2023. Concept stays: <strong>vegetal + lake fish</strong> (féra, omble, perch) · 100% local within 100 km · 1,500 m² permaculture garden · in-house garum · foraged greens. <em>Plein d'Envies</em> tasting ~€280/pp + paired wine ~€185. <strong>Book 12 weeks ahead Aug</strong>. <strong>Joann-perfect</strong>: zero ocean seafood. <a href="https://closdessens.com/" target="_blank" rel="noopener">closdessens.com</a></div>
+        <div class="drive">Annecy-le-Vieux</div>
       </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(42,122,140,0.3), rgba(13,59,79,0.45)), url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80');">
-          <span class="hotel-tier">★★ Michelin</span>
-        </div>
-        <div class="hotel-body">
-          <h4>La Table de Yoann Conte</h4>
-          <div class="loc">Veyrier-du-Lac · at La Maison Bleue · east shore</div>
-          <p>Conte's 2-star inside the iconic blue villa on the lake. Refined Savoyard with lake fish + Alpine meats + foraged greens. Terrace seating with direct lake view. <strong>Menu Découverte $220 pp.</strong></p>
-          <div class="hotel-meta">
-            <span class="price">$220–$320 / person</span>
-            <span>★★ Michelin</span>
-          </div>
-          <a href="https://yoann-conte.com/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
+      <div class="food-row">
+        <div class="place">L'Auberge du Père Bise · Jean Sulpice <span class="stars">★★ + Green Star</span><span class="meta">Talloires-Montmin · lakeside R&amp;C · since 1903 / 1928 stars</span></div>
+        <div class="desc">Jean Sulpice (+ wife Magali) holds the historic Talloires lakeside ★★. 6–8 step alpine tasting · <strong>féra de lac, game, garden herbs, saffron de Savoie</strong>. Lake-fish-heavy (Joann note: féra freshwater + alpine meats — manageable). Terrace dining at sunset over the bay. Tasting ~€220–€280/pp · book <strong>10 weeks ahead</strong>. <a href="https://www.aubergedupere-bise.com/" target="_blank" rel="noopener">perebise.com</a></div>
+        <div class="drive">25 min Annecy</div>
       </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(184,137,91,0.3), rgba(200,85,61,0.45)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80');">
-          <span class="hotel-tier">★★ Michelin</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Auberge du Père Bise · Jean Sulpice</h4>
-          <div class="loc">Talloires · east shore · lakeside R&amp;C · 1903</div>
-          <p>The lake's historic 2-star, held continuously since 1928. Jean Sulpice's contemporary Alpine cuisine on the legendary lakeshore terrace. Lake féra carpaccio, Tarine beef. <strong>Tasting $260 pp.</strong></p>
-          <div class="hotel-meta">
-            <span class="price">$210–$300 / person</span>
-            <span>★★ Michelin</span>
-          </div>
-          <a href="https://www.aubergedupere-bise.com/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
+      <div class="food-row">
+        <div class="place">La Maison Bleue · La Table de Yoann Conte <span class="stars">★★ + Green Star</span><span class="meta">Veyrier-du-Lac · lakefront · 11-room hotel attached</span></div>
+        <div class="desc">Two menus offered: <strong>"Terre d'Adoption" (Alpine terroir) + "Bretagne natale" (chef's hometown Brittany seafood)</strong>. Joann play: <strong>order Terre d'Adoption, skip Bretagne natale</strong>. €320–€420/pp ex drinks · €85 lunch "Premier de cordée". <strong>Book 10 weeks ahead</strong> +33 4 50 09 97 49. <a href="https://yoann-conte.com/" target="_blank" rel="noopener">yoann-conte.com</a></div>
+        <div class="drive">15 min east</div>
       </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(42,122,140,0.3), rgba(184,137,91,0.4)), url('https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80');">
-          <span class="hotel-tier">Casual second</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Le Roc</h4>
-          <div class="loc">At La Maison Bleue · Yoann Conte's casual table</div>
-          <p>Yoann Conte's second restaurant in the same building — relaxed lakeside terrace, charcuterie + tartines + house pasta + saucisses. Where you eat on the night you didn't book the 2-star upstairs.</p>
-          <div class="hotel-meta">
-            <span class="price">$50–$80 / person</span>
-            <span>★★★★</span>
-          </div>
-          <a href="https://yoann-conte.com/en/la-maison-bleue/le-roc/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
+      <div class="food-row">
+        <div class="place">L'Auberge de Montmin <span class="stars">★★</span><span class="meta">Talloires-Montmin · Col de la Forclaz 1,147 m · Florian Favario + Sandrine</span></div>
+        <div class="desc"><strong>Mountain meats not lake fish</strong> — lamb, piglets, garden veg, wildflowers, walnut tableware designed by the chef. Perched at the Col de la Forclaz paragliding overlook — sunset view down the lake. <strong>Excellent Joann fit</strong>. Tasting ~€180–€280/pp · book <strong>6–8 weeks ahead</strong>. <a href="https://guide.michelin.com/fr/fr/auvergne-rhone-alpes/talloires/restaurant/l-auberge-de-montmin" target="_blank" rel="noopener">Michelin listing</a></div>
+        <div class="drive">30 min · Col de la Forclaz</div>
       </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(123,166,150,0.3), rgba(200,85,61,0.45)), url('https://images.unsplash.com/photo-1481833761820-0509d3217039?w=600&q=80');">
-          <span class="hotel-tier">Tartiflette canon</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Le Freti</h4>
-          <div class="loc">Annecy old town · 12 rue Sainte-Claire · since 1968</div>
-          <p>The institution for Savoyard mountain food in the old town. Tartiflette, raclette, fondue Savoyarde, croûte aux morilles — done right with cheese from the family fromagerie next door. Slate boards of regional charcuterie.</p>
-          <div class="hotel-meta">
-            <span class="price">$45–$75 / person</span>
-            <span>★★★★</span>
-          </div>
-          <a href="https://www.lefreti.com/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
+      <div class="food-row">
+        <div class="place">Maison Benoît Vidal <span class="stars">★★</span><span class="meta">Annecy-le-Vieux · 79 Route de Thônes · ~20 covers</span></div>
+        <div class="desc">Benoît Vidal (ex-Trama, ex-Guérard) · intimate ~20 cover · <strong>pike, trout, crayfish · foraged elderberry, sorrel, caraway</strong>. Lake-fish freshwater + foraged greens — Joann-OK. Less booked than Clos des Sens or Yoann Conte. <strong>Book 8 weeks ahead</strong>. <a href="https://www.maison-benoit-vidal.com/" target="_blank" rel="noopener">maison-benoit-vidal.com</a></div>
+        <div class="drive">Annecy-le-Vieux</div>
       </div>
-
-      <div class="hotel-card">
-        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(184,137,91,0.3), rgba(13,59,79,0.4)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80');">
-          <span class="hotel-tier">Lake terrace</span>
-        </div>
-        <div class="hotel-body">
-          <h4>Le Belvédère Talloires</h4>
-          <div class="loc">Talloires · east shore terrace · regional menu</div>
-          <p>Quiet terrace over the lake in Talloires village. Classic Savoyard menu — féra fillet, Tomme tart, Tarine entrecôte. Wide Vin de Savoie list by the glass. The reliable mid-trip dinner without the Michelin lift.</p>
-          <div class="hotel-meta">
-            <span class="price">$50–$85 / person</span>
-            <span>★★★★</span>
-          </div>
-          <a href="https://www.lebelvedere-talloires.com/" target="_blank" rel="noopener" class="book-link">Reserve →</a>
-        </div>
+      <div class="food-row">
+        <div class="place">L'Esquisse <span class="stars">★</span><span class="meta">Annecy · 21 Rue Royale Old Town · Stéphane Dattrino · 20 covers 2 floors</span></div>
+        <div class="desc">Dattrino (former Le Clos des Sens sous-chef under Laurent Petit) pivoted ~2 years ago to <strong>mostly vegetable-based — vegetable reductions replace jus</strong>. 20 covers, two floors, Old Town backstreet. <strong>Strong Joann option, near-zero seafood</strong>. Menus €98–€148. <strong>Book 8 weeks ahead</strong> +33 4 50 27 78 02 — 20 covers fills fast. <a href="https://www.esquisse-annecy.fr/" target="_blank" rel="noopener">esquisse-annecy.fr</a></div>
+        <div class="drive">Annecy Old Town</div>
       </div>
-
+      <div class="food-row">
+        <div class="place">La Rotonde des Trésoms <span class="stars">★</span><span class="meta">Annecy · 15 boulevard de la Corniche · Eric Prowalski · Art Nouveau rotunda</span></div>
+        <div class="desc">Lake-hilltop Art Nouveau rotunda, 180° view. <strong>Chef from Arcachon — menu IS seafood-dominant</strong>. <strong>PASS for Joann</strong>. Menus €99–€199. Listed for completeness; the view is the draw. <a href="https://lestresoms.com/" target="_blank" rel="noopener">lestresoms.com</a></div>
+        <div class="drive">Annecy hill</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Flocons de Sel <span class="stars">★★★</span><span class="meta">Megève · 50 min · Emmanuel Renaut MOF · closed Tue/Wed</span></div>
+        <div class="desc">3-star in Megève — Emmanuel Renaut MOF · <strong>mountain herbs, mushrooms, berries, lake fish</strong>. The Splurge variant for Day 5 (swap Yoann Conte). Closed Tue/Wed. <strong>Book 12+ weeks ahead</strong> +33 4 50 21 49 99. <a href="https://www.floconsdesel.com/" target="_blank" rel="noopener">floconsdesel.com</a></div>
+        <div class="drive">50 min Megève</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Atmosphères <span class="stars">★ + Green Star</span><span class="meta">Le Bourget-du-Lac · 50 min · Alain Perrillat-Mercerot · hotel-restaurant · 4 rooms</span></div>
+        <div class="desc">Hotel-restaurant on France's largest natural lake (Lac du Bourget) panorama. Menus €115–€140 Tue–Sat dinner. <strong>The rainy-day pivot</strong> from Day 2 (combine with Aix-les-Bains thermal spa). <a href="https://www.atmospheres-hotel.com/" target="_blank" rel="noopener">atmospheres-hotel.com</a></div>
+        <div class="drive">50 min south</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Albert 1er <span class="stars">★</span><span class="meta">Chamonix · 1h25 · Damien Leveau · at Hameau Albert 1er R&amp;C</span></div>
+        <div class="desc">The Chamonix overnight anchor (Day 4 Aug 15) — Damien Leveau (succeeded Pierre Maillet 2018) · alpine refinement, Tarine beef, féra de lac, morilles. <strong>Joann-friendly</strong>: mountain meats + lake fish. ~€140–€220/pp · book <strong>6 weeks ahead</strong> for Fête des Guides weekend. <a href="https://www.hameaualbert.fr/restaurants/albert-premier/" target="_blank" rel="noopener">hameaualbert.fr</a></div>
+        <div class="drive">1h25 Chamonix</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Le Freti <span class="stars">Savoyard canon</span><span class="meta">Annecy Old Town · 12 Rue Sainte-Claire · since 1968 · own fromagerie</span></div>
+        <div class="desc">The institution for Savoyard mountain food. <strong>15+ fondue variants raw-milk farmhouse cheese · unlimited raclette by wheel · "Brisgotte"</strong> (signature fondue in bread bowl with bacon-wrapped potatoes) · tartiflettes · crozets gratin. <strong>Joann-perfect</strong>: cheese, meat, no seafood. €45–€75/pp. <a href="https://www.lefreti.com/" target="_blank" rel="noopener">lefreti.com</a></div>
+        <div class="drive">Old Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Chez Ingalls <span class="stars">late dinner workaround</span><span class="meta">Annecy city center · "continuous service until midnight"</span></div>
+        <div class="desc">The Annecy answer to "I want dinner at 22:00." <strong>Continuous service until midnight</strong>, traditional French cuisine. Not a marquee meal but solves the late-dinner problem when Michelin kitchens close 21:30. Walk-in often OK weeknights. <a href="https://www.chezingalls.fr/" target="_blank" rel="noopener">chezingalls.fr</a></div>
+        <div class="drive">Annecy center</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Vif <span class="stars">natural wine</span><span class="meta">Annecy Old Town · shared plates · kitchen to ~22:30</span></div>
+        <div class="desc">Natural wine bar + small shared plates. <strong>Avoid 21:30 if you want to avoid kitchen-close pressure</strong>. Mostly veg + seasonal local. Walk-in or 1-2 days ahead.</div>
+        <div class="drive">Old Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Restaurant Cozna <span class="stars">modern Savoyard</span><span class="meta">Annecy Vieille Ville · locavore</span></div>
+        <div class="desc">Modern locavore Savoyard in the Old Town — the lighter contemporary alternative to Le Freti's cheese-and-meat canon. Strong on charcuterie + grilled meats + lake fish. Reservation recommended.</div>
+        <div class="drive">Old Town</div>
+      </div>
     </div>
 
     <div class="section-header" id="activities">
-      <span class="eyebrow">Unique Experiences</span>
-      <h2>Things You Won't Do Anywhere Else</h2>
-      <p>Paragliding over Europe's cleanest lake. Aiguille du Midi at 12,605 ft. Cheese caves at peak alpage. Here are the 16 that turn a good week into the one you'll talk about.</p>
+      <span class="eyebrow">Beyond the Table</span>
+      <h2>The Over-Packed Activity Catalog</h2>
+      <p>You literally cannot do everything below in 5 days. Pick aggressively. <strong>Top picks for this couple:</strong> Takamaka Prestige paragliding 40-min thermals, canyoning Angon Performance into the lake, 42-km e-bike lake loop, Aiguille du Midi at first light, Fête des Guides Aug 15, Combe de Savoie wine day, Perseids Col de la Forclaz, La Tournette guided summit. The catalog:</p>
     </div>
+
     <div class="activities">
-      <div class="activity"><span class="icon">🪂</span><h4><a href="https://www.flyannecy.com/" target="_blank" rel="noopener">Tandem paraglide ↗</a></h4><p>Fly Annecy from Col de la Forclaz · 30 min in the air · lands on the lake shore. $150 pp.</p></div>
-      <div class="activity"><span class="icon">⛵</span><h4><a href="https://www.compagniedesbateaux.com/" target="_blank" rel="noopener">Catamaran sail ↗</a></h4><p>Compagnie des Bateaux du Lac · 2-hr private sail with skipper. $280/cpl.</p></div>
-      <div class="activity"><span class="icon">🚣</span><h4>SUP &amp; kayak</h4><p>Rental from any beach (Plage d'Albigny, Doussard). $20/hr SUP, $25/hr double kayak.</p></div>
-      <div class="activity"><span class="icon">🏊</span><h4>Lake swim</h4><p>Plage d'Albigny (Annecy), Plage de Menthon, Plage Impérial. 75°F clear water. Free.</p></div>
-      <div class="activity"><span class="icon">🌊</span><h4>Wakeboard cable park</h4><p>Wam Park Sevrier — cable-tow wakeboard/wakesurf. $35/hr, no boat needed.</p></div>
-      <div class="activity"><span class="icon">🚴</span><h4><a href="https://velonecy.com/" target="_blank" rel="noopener">Voie Verte e-bike ↗</a></h4><p>26-mi paved lake-loop greenway. Half-loop 13 mi to Doussard. $30/day e-bike rental.</p></div>
-      <div class="activity"><span class="icon">🏰</span><h4>Yvoire medieval village</h4><p>40-min drive to Lac Léman — 14th-century walled flower-village. Lunch + jardin des cinq sens.</p></div>
-      <div class="activity"><span class="icon">🏔️</span><h4><a href="https://www.compagniedumontblanc.fr/en/equipement/aiguille-du-midi" target="_blank" rel="noopener">Aiguille du Midi ↗</a></h4><p>Cable car to 12,605 ft. Step Into the Void glass box. Pre-book the 9 AM slot. $90 pp.</p></div>
-      <div class="activity"><span class="icon">🧀</span><h4>Reblochon at Pingon</h4><p>Cave tour + alpage tasting in Manigod. 45 min east. $15 pp.</p></div>
-      <div class="activity"><span class="icon">🟡</span><h4>Beaufort cellar visit</h4><p>Coopérative du Beaufortain · Beaufort d'été tasting 10:30 AM daily. €8.</p></div>
-      <div class="activity"><span class="icon">🍷</span><h4>Vin de Savoie tasting</h4><p>Domaine des 13 Lunes (biodynamic Apremont) — Sat tastings + lunch. By appointment.</p></div>
-      <div class="activity"><span class="icon">🧘</span><h4><a href="https://www.hotel-imperial-palace.com/en/spa-deep-nature" target="_blank" rel="noopener">Spa Deep Nature ↗</a></h4><p>Impérial Palace — thermal pool, hammam, couples massage. $300/cpl 2 hr.</p></div>
-      <div class="activity"><span class="icon">🎵</span><h4><a href="https://www.annecyclassicfestival.com/" target="_blank" rel="noopener">Annecy Classic Festival ↗</a></h4><p>Mid-August chamber + opera. Sunset concerts on the lake. €25–€80.</p></div>
-      <div class="activity"><span class="icon">🛍️</span><h4>Mercato des Halles</h4><p>Tue/Fri/Sun mornings, central Annecy. AOP cheeses + charcuterie + Vin de Savoie under one roof.</p></div>
-      <div class="activity"><span class="icon">🏛️</span><h4>Palais de l'Île</h4><p>12th-century island prison on the canal — the most-photographed building in Annecy. €4.</p></div>
-      <div class="activity"><span class="icon">🥾</span><h4>Mont Veyrier hike</h4><p>3-hr round trip to 4,300 ft. Full panorama over the lake. Free.</p></div>
+
+      <div class="activity">
+        <span class="icon">🪂</span>
+        <h4><a href="https://annecy.takamaka.fr/" target="_blank" rel="noopener">Takamaka Prestige</a></h4>
+        <p>40-min tandem thermals from <strong>Col de la Forclaz</strong> · €165/pp · 800 m descent to Doussard landing. Other operators: Flyeo, Fly Annecy, Aéro Pro, Air Adventure, K2 Parapente. Best morning thermals; afternoons often canceled wind. Book 10+ days Aug.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🚴</span>
+        <h4><a href="https://www.roulmapoule-annecy.com/" target="_blank" rel="noopener">42-km Lake Loop E-Bike</a></h4>
+        <p>Dedicated cycle path almost entirely separate from road · 3 h non-stop, half-day with stops · clockwise easier · e-bikes recommended for climbs near Talloires · Roul' ma Poule / Cyclable / Vélonecy / Annecy Location Vélo · ~€40/day e-bike · book 1+ week.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🌊</span>
+        <h4><a href="https://www.le-deck-veyrier.fr/" target="_blank" rel="noopener">Electric GoBoat</a></h4>
+        <p>License-free 8-seat electric — Le Deck de Veyrier · season Apr 5–Oct 31 · €190 morning / €230 afternoon / €190 evening / €370 full day · €1,000 CC deposit · book 1–2 weeks ahead Aug. Walk-in alternatives: SUP, sit-on kayak.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">⛵</span>
+        <h4>Sailing / Catamaran</h4>
+        <p>Voile Léman, École de Voile Sevrier, Société Nautique d'Annecy · dinghy/catamaran/keelboat half-day €60–€150 with skipper · 1 week ahead Aug · Compagnie des Bateaux du Lac MS Libellule electric dinner cruise 2 h €110 — book weeks ahead.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🤿</span>
+        <h4><a href="https://www.vertical-aventure.com/" target="_blank" rel="noopener">Canyoning Angon Performance</a></h4>
+        <p>Cliffs straight into Lake Annecy · many abseils + few jumps · €85/pp · 3 h · Vertical Aventure / Monté Médio / Evolution 2 / YouCanyon / Takamaka. Sister run "Pack Sportif" pairs Angon + Montmin (~€140).</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">💦</span>
+        <h4><a href="https://www.youcanyon.fr/" target="_blank" rel="noopener">Canyoning Montmin</a></h4>
+        <p>Aquatic, jumps + slides, one 10 m abseil · €64–€76 · 3 h · YouCanyon "Pack Sportif" combo with Angon (2 canyons same day, €140). Book 3–5 days.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🪜</span>
+        <h4><a href="https://www.annecy-aventure.com/" target="_blank" rel="noopener">Via Ferrata Roche du Roux</a></h4>
+        <p>La Roche du Roux at Montmin (foot Tournette Massif) — zip line, monkey bridge, ladders, abseil. Annecy Aventure guides. Alt: <strong>Via ferrata La Sambuy / La Cordée des Dahuts</strong> (Faverges-Seythenex easier, Lake + Mont Blanc views, 1.5h).</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🥾</span>
+        <h4><a href="https://annecymountainguide.com/" target="_blank" rel="noopener">La Tournette (2,351 m)</a></h4>
+        <p>Iconic peak · 950 m gain · 6–8 h RT from Chalet de l'Aulp parking · final pitch <strong>chains + iron ladder, "extreme exposure"</strong> not for unsteady. Bureau des Guides d'Annecy guided group hike — book 1 week.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏔️</span>
+        <h4><a href="https://www.aiguilledumidi.montblancnaturalresort.com/" target="_blank" rel="noopener">Aiguille du Midi</a></h4>
+        <p>Chamonix → 3,842 m Mont Blanc views · glass "Step Into the Void" box · daily 08:10–17:30 Aug · €70+ RT · <strong>booking compulsory summer 2026, sells out 5–10 days ahead</strong>.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🚂</span>
+        <h4><a href="https://www.montenverstrain.com/" target="_blank" rel="noopener">Mer de Glace + Ice Cave</a></h4>
+        <p>Montenvers cog train Jul 4–Aug 30 2026 daily 08:00–17:30 · first train 08:30 every 20–60 min · €49.70 full package · 2.5–3 h · the Aiguille du Midi rainy-day swap.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏞️</span>
+        <h4><a href="https://www.lac-annecy.com/" target="_blank" rel="noopener">Le Semnoz (1,704 m)</a></h4>
+        <p>Telemix cabin €4 RT summer · <strong>free Sibra bus from Annecy 6× daily July/August</strong> · family meadows + grazing herds + 360° panorama · great Perseids backup site (higher than Col de la Forclaz).</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🌄</span>
+        <h4><a href="https://www.lac-annecy.com/" target="_blank" rel="noopener">Col de la Forclaz (1,147 m)</a></h4>
+        <p>Easy drive-up paragliding launch · bistro/restaurant at top · perfect sunset + Perseids viewing perch · ★★ L'Auberge de Montmin at the col.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🥾</span>
+        <h4>Mont Veyrier loop</h4>
+        <p>Quick 4 km easy loop east of Annecy · 3 h round trip · full panorama over the lake · free · the low-effort "I want a hike" day.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏖️</span>
+        <h4><a href="https://www.lac-annecy.com/" target="_blank" rel="noopener">Lake Beaches</a></h4>
+        <p>Plage d'Albigny, Plage de Menthon, Plage Impérial, Plage des Marquisats (city), Plage de la Brune (Doussard south end). <strong>22–25 °C August water · "cleanest lake in Europe"</strong>. Free.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🪨</span>
+        <h4><a href="https://www.gorgesdufier.com/" target="_blank" rel="noopener">Gorges du Fier</a></h4>
+        <p>Lovagny 15 min drive · suspended footbridge through canyon · daily 09:30–19:15 August · €6/pp · 45-min loop · the rainy-day backup option.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏰</span>
+        <h4><a href="https://en.lac-annecy.com/" target="_blank" rel="noopener">Yvoire</a></h4>
+        <p>Medieval Lake Geneva village 1 h via A41 · 14th-century walled "Pearl of Lake Geneva" · 4-flower Village Fleuri · <strong>Jardin des 5 Sens mid-Apr–early Oct</strong> · lunch + browse.</p>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="nightlife">
+      <span class="eyebrow">After Dark</span>
+      <h2>Honest Late-Night Map</h2>
+      <p>The honest assessment: Annecy nightlife is <strong>real but tactical, not strategic</strong>. The reliable anchors: <strong>Casino Impérial</strong> (tables 20:00–04:00 Fri/Sat), <strong>Pop Plage / Le Pop Night Club</strong> (Thu–Sat 23:00 till dawn summer), <strong>Le Garage</strong> (Tue–Sat 23:00–05:00 year-round), and the <strong>Rue Sainte-Claire bar crawl</strong> (Vieille Ville, bars to 01:00). <strong>Le Brise Glace is closed Jul 10–Aug 24, 2026</strong> — the entire trip. <strong>Most Michelin kitchens close ~21:30</strong> — book latest seating, plan post-dinner Casino. For true 04:00 every night, Geneva Carouge (1 h drive) and Chamonix (1h25) are the extensions. <strong>Hours summer Aug 2026 — verify on arrival.</strong></p>
+    </div>
+
+    <div class="nightlife">
+      <div class="nightlife-col">
+        <h3>Annecy · town anchors</h3>
+        <div class="venue">
+          <div class="vname">Casino Impérial</div>
+          <div class="vmeta">Allée de l'Impérial · on-site at L'Impérial Palace · <strong>Sun–Thu 10:00–02:00, Fri–Sat 10:00–04:00</strong></div>
+          <div class="vdesc">Slots from 10:00, tables (English roulette, Texas Hold'em + Ultimate Poker, blackjack) <strong>20:00–02:00 Sun–Thu, 20:00–04:00 Fri–Sat</strong>. Cash games + TexaPoker tournaments most nights. <strong>The true late-night Annecy anchor</strong> — and you're sleeping in the same building.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Pop Plage / Le Pop Night Club</div>
+          <div class="vmeta">Imperial Palace gardens, 30 av d'Albigny · <strong>Thu–Sat 23:00 until dawn</strong> · summer Apr–Oct only</div>
+          <div class="vdesc"><strong>THE Annecy summer party venue</strong> — lakefront drone-shot territory. Beach club daily 11–19; cocktails Thu–Sun until 23:00; nightclub Thu–Sat 23:00 until dawn. Cover ~€20–€30 weekend. Fri night = the play.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Le Garage</div>
+          <div class="vmeta">Discotheque · <strong>Tue–Sat 23:00–05:00 year-round</strong></div>
+          <div class="vdesc">Discotheque 25+ years · large veranda for sunrise after · 25+ crowd. The reliable Tue/Wed late option when Pop Night Club is closed.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Le Bowl</div>
+          <div class="vmeta">Discotheque + bowling + restaurant · VIP area</div>
+          <div class="vdesc">International DJs (David Vendetta, Big Ali, Jay Style) · VIP area · bowling lanes attached. The party-pack alternative.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Le Hip Bar (Imperial Palace)</div>
+          <div class="vmeta">Cocktail bar on-premises · sunset → late</div>
+          <div class="vdesc">L'Impérial Palace's cocktail bar — Le Hip Bar. Pre-dinner anchor on Day 2 (post-canyoning, pre-Esquisse).</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Ô Cèdre rooftop (Hôtel Le Pélican)</div>
+          <div class="vmeta">Annecy rooftop · gins/cocktails · lake view · summer 12:00–23:00</div>
+          <div class="vdesc">The principal Annecy rooftop with a lake view — gins, cocktails, light food. The apéro stop on Day 1 before driving up to Col de la Forclaz.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Poney Club</div>
+          <div class="vmeta">Café-bar · theme nights · DJs + live music · Lake Annecy</div>
+          <div class="vdesc">Smaller café-bar with theme nights + DJs + occasional live music. Younger crowd, mid-week alternative.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Fitzgerald Club (Rue Vaugelas)</div>
+          <div class="vmeta">Intimate · Fri nights · bar DJs + live music</div>
+          <div class="vdesc">Small intimate bar/club, DJ + live music on Fri nights. The cellar-bar mood.</div>
+        </div>
+      </div>
+
+      <div class="nightlife-col">
+        <h3>Rue Sainte-Claire crawl · Vieille Ville</h3>
+        <div class="venue">
+          <div class="vname">La Queue du Coq</div>
+          <div class="vmeta">Passage Pré Carré · exposed brick · <strong>Mon–Fri 17–01, Sat 16–01, Sun 16–24</strong></div>
+          <div class="vdesc">Cocktail bar in an exposed-brick passage off Rue Sainte-Claire — the best cocktails on the Old Town crawl. The crawl's first stop on Day 2.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Captain Pub</div>
+          <div class="vmeta">Rue Sainte-Claire · Irish · lively expat · open till ~01:00 summer</div>
+          <div class="vdesc">Irish pub anchor on Sainte-Claire spine. Lively expat scene, simple beer + shots, the "let's go louder" stop.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Casa Santa Clara</div>
+          <div class="vmeta">Rue Sainte-Claire · Spanish + tapas · till ~01:00</div>
+          <div class="vdesc">Spanish-themed bar with tapas + sangria. Outdoor terrace people-watching the canal.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Milton Pub</div>
+          <div class="vmeta">Rue Sainte-Claire · wood-clad · sports on TVs · terrace</div>
+          <div class="vdesc">Wood-clad pub with sports on TVs and a terrace people-watching the cobblestones. Late.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Le Diplomate</div>
+          <div class="vmeta">French aperitif · terrace</div>
+          <div class="vdesc">French aperitif terrace bar — the early-evening Sainte-Claire civilized stop.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Le Munich</div>
+          <div class="vmeta">Bavarian beer hall · Annecy institution on canals</div>
+          <div class="vdesc">Annecy institution — Bavarian beer hall on the canals, long communal tables, sausages + steins. The "we're committed" mid-crawl stop.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Le Décalé / Café des Arts / La Cantina / L'Albanais / Cabaret Salé</div>
+          <div class="vmeta">Canal-side · Vieille Ville · bar crawl spine</div>
+          <div class="vdesc">The remaining canal-side Vieille Ville bar-crawl spine. Most close at 01:00 summer.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Le Bon Pain Bon Vin</div>
+          <div class="vmeta">12 rue Sainte-Claire · Fri/Sat to 23:00 · late dinner workaround</div>
+          <div class="vdesc">Natural wine + late dinner on Fri/Sat to 23:00. One of the few Old Town options for a 22:00 sit-down meal.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">⚠️ Le Brise Glace · CLOSED entire trip</div>
+          <div class="vmeta">Annecy's main concert hall 500-cap + 140-cap club · <strong>closed Jul 10–Aug 24, 2026</strong></div>
+          <div class="vdesc">The city's main contemporary music venue — would normally cover the "live music + DJ" slot Annecy is otherwise thin on. Closed the entire trip. Verified at <a href="https://www.le-brise-glace.com/" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.75);">le-brise-glace.com</a>.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Geneva Carouge — 1 h drive</div>
+          <div class="vmeta">Rue Vautier + Place du Marché · clubs to <strong>04–05 weekends</strong></div>
+          <div class="vdesc">For true 4 AM nights, cross the border. Anchors: Le Chat Noir (jazz/blues + DJs), Bar la Forge, La Plage, Le Borsalino, Le Marchand de Sable. Bars peak 22:30–02:00; clubs until 04–05 weekends. Realistic for one big night.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Chamonix — 1h25 drive</div>
+          <div class="vmeta">Chambre Neuf, Jekyll &amp; Hyde, Casino de Chamonix · <strong>often 02:00</strong></div>
+          <div class="vdesc">Chambre Neuf legendary après-ski hotspot live band 6 nights/week, dancing on tables, DJ until 1 AM, happy hour 8 PM 2-for-1. Jekyll &amp; Hyde cozy pub live bands comedy quizzes dance parties. Casino de Chamonix gambling tables. "Bars shut later than you'd expect for mountain town, often 2 AM." Strong on Fête des Guides night Aug 15 — covered by the Day 4 plan.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" id="score">
+      <span class="eyebrow">Adversarial Scoring</span>
+      <h2>Re-scored on the 8 New Criteria — 34/39</h2>
+      <p>Scored 0–3 per axis. Hard criteria ×2, soft ×1. <strong>Total /39 = 34</strong> (was 38 on old criteria — <strong>drops 4 points on nightlife</strong>). Honest read: food caliber + activity density + weather + safety + Joann food fit are genuinely elite. Perseids overlay + Chamonix Fête des Guides + Casino Impérial save it from 28–32 if nightlife were truly empty. <strong>No longer unambiguous winner but still top-3-or-better destination under new framework.</strong></p>
+    </div>
+
+    <div class="score-grid">
+      <div class="score-row">
+        <div class="axis">Food caliber <span class="tag">Hard ×2</span></div>
+        <div class="reason">13 Michelin stars in 7 restaurants in basin + ★★★ Flocons de Sel + ★ Atmosphères + ★ Albert 1er within 1 h. ★★★ Le Clos des Sens + 4 × ★★ on lake. Deep alpine/Savoyard tradition. <strong>3/3</strong>.</div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Nightlife &amp; late energy <span class="tag">Hard ×2</span></div>
+        <div class="reason"><strong>HONEST.</strong> Casino Impérial 02/04 + Pop Night Club Thu–Sat + Le Garage to 05:00 + Sainte-Claire bars to 01:00 = real but thin. <strong>Le Brise Glace closed entire trip.</strong> Most Michelin kitchens close 21:30. No 4 AM clubbing Sun/Wed. Geneva Carouge + Chamonix are 1+ hour drives. <strong>1/3.</strong></div>
+        <div class="num">1 × 2 = 2</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Activity density <span class="tag">Hard ×2</span></div>
+        <div class="reason">World-class paragliding + best-in-Europe cleanest lake (swim/SUP/sail/wakeboard/electric boat) + Aiguille du Midi + Mer de Glace + canyoning Angon/Montmin + via ferrata + 42-km bike loop + La Tournette + Mont Veyrier + Semnoz + Fête des Guides Aug 15 + Perseids ideal Aug 12 + Savoie wineries + Gorges du Fier. Genuinely overpackable. <strong>3/3</strong>.</div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Weather <span class="tag">Hard ×2</span></div>
+        <div class="reason">August highs 24–26 °C base, peaks 30+ °C · lows 14–16 °C / 58–60 °F cool nights · low–medium humidity 50–63% · 10.8 h sunshine (sunniest month) · lake at 22–25 °C. Bug presence low at altitude. Rain risk 14/31 days but typically afternoon thunderstorms — pad activities. Sweet spot. <strong>3/3</strong>.</div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Safety &amp; late walkability <span class="tag">Hard ×2</span></div>
+        <div class="reason">French Alpine resort town · Vieille Ville canals well-lit · foot traffic at midnight August · low crime · dense tourist infrastructure. <strong>3/3</strong>.</div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Wine <span class="tag">Soft ×1</span></div>
+        <div class="reason">Savoie small but real — Apremont/Chignin/Roussette/Bergeron/Mondeuse · Domaine Belluard Gringet cult (estate flux post-2021). Not Beaujolais/Burgundy/Rhône scale. 45-min drive. Real but not destination-quality. <strong>2/3</strong>.</div>
+        <div class="num">2</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Romance / hotel quality <span class="tag">Soft ×1</span></div>
+        <div class="reason">Multiple R&amp;C lakefront: La Maison Bleue + Père Bise + Clos des Sens + Hameau Albert 1er; Imperial Palace grand-hotel; Abbaye de Talloires 1018-Benedictine; Black Bass lakefront 5★. Bay of Talloires + Veyrier-du-Lac arguably most photogenic lakefront Alps. <strong>3/3</strong>.</div>
+        <div class="num">3</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Joann seafood tolerance <span class="tag">Soft ×1 · lower seafood = higher</span></div>
+        <div class="reason">Annecy's whole identity = mountain meat/cheese/charcuterie/lake-fish — essentially no ocean seafood Savoyard tradition. Fondue, raclette, tartiflette, diots aux vins, charcuterie de montagne, lamb, piglet. ★★ Auberge de Montmin ideal. ★★★ Clos des Sens vegetal. ★ Esquisse veg-focused. Even ★★ Yoann Conte has non-seafood "Terre d'Adoption" menu. <strong>3/3 max</strong>.</div>
+        <div class="num">3</div>
+      </div>
+      <div class="score-row total">
+        <div class="axis">Weighted total</div>
+        <div class="reason">Hard 26/30 + Soft 8/9. Food + activity + weather + safety + Joann max out; nightlife is the soft spot (1/3 honest); wine + romance solid. <strong>The elite-food + activity-density pick that accepts dinner-at-21:00 + Casino-after-midnight rhythm.</strong></div>
+        <div class="num">34 / 39</div>
+      </div>
     </div>
 
   </div>
@@ -807,94 +1122,144 @@
 
 <section class="booking" id="book">
   <div class="container">
+
     <div class="section-header">
-      <span class="eyebrow">Pre-Trip Punch List</span>
+      <span class="eyebrow">Make It Real</span>
       <h2>Book These Now</h2>
-      <p>3-star + 2-star tables drive the trip. Hotels gate everything. Mid-August is peak lake season; everything books 60–90 days ahead.</p>
+      <p>Twelve actions ranked by lead time. <strong>★★★ Le Clos des Sens needs 12 weeks · L'Impérial Palace + Hameau Albert 1er 4+ months · Aiguille du Midi sells out 5–10 days ahead Aug</strong>. Casino Impérial is walk-up no reservation.</p>
     </div>
 
     <div class="steps">
 
       <div class="step">
-        <div class="stepnum">1</div>
+        <div class="stepnum">01</div>
         <div>
-          <h4>Flight — Swiss LX41 / LX2810, Aug 11 4:25 PM LAX → ZRH → GVA</h4>
-          <p>Book on swiss.com or via Chase/Amex travel portal. Premium Economy adds ~$700. <strong>Round-trip target: $900–$1,400</strong>. Alternative: Lufthansa via MUC, Air France via CDG.</p>
-          <div class="meta-line">→ <a href="https://www.swiss.com/" target="_blank" rel="noopener">swiss.com</a> · share confirmation # with hotel for transfer</div>
+          <h4>Book L'Impérial Palace Annecy (4 nights, Wed Aug 12 → Sat Aug 15 + Sun Aug 16 → Mon Aug 17)</h4>
+          <p>Request a <strong>lake-view room facing Albigny Bay</strong>. August peak rates $385–$770/night standard, $700–$1,400 suite. Direct via hotel-imperial-palace.com typically equals or beats booking sites + earns hotel perks. <strong>Amex FHR / Virtuoso may show upgrade + breakfast benefits</strong> — check before booking.</p>
+          <div class="meta-line">4+ months out · <a href="https://www.hotel-imperial-palace.com/en/" target="_blank" rel="noopener">hotel-imperial-palace.com</a></div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">2</div>
+        <div class="stepnum">02</div>
         <div>
-          <h4>Hotel — La Maison Bleue (Yoann Conte) · 5 nights Aug 12–17</h4>
-          <p>Request lake-view room. The 11-room R&amp;C books fast. <strong>Alternative anchors</strong>: Le Clos des Sens hotel (★★★ on-site), Père Bise (historic Talloires), or Impérial Palace (town center).</p>
-          <div class="meta-line">→ <a href="https://yoann-conte.com/en/la-maison-bleue/hotel-la-maison-bleue/" target="_blank" rel="noopener">yoann-conte.com</a> · +33 4 50 09 97 49</div>
+          <h4>Book Hameau Albert 1er Chamonix (1 night, Sat Aug 15 → Sun Aug 16)</h4>
+          <p>R&amp;C Chamonix · Mont Blanc views · indoor + outdoor pool · spa · on-site ★ Albert 1er. <strong>Aug 15 is Fête des Guides ceremony day — the year's peak weekend in Chamonix.</strong> $650–$1,300/night. <strong>Book 4+ months ahead</strong>; rooms sell out for this weekend earlier than anywhere else on the trip.</p>
+          <div class="meta-line">4+ months out · <a href="https://www.hameaualbert.fr/" target="_blank" rel="noopener">hameaualbert.fr</a></div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">3</div>
+        <div class="stepnum">03</div>
         <div>
-          <h4>Le Clos des Sens ★★★ — pick a night, lock it in</h4>
-          <p>Recommend Day 4 (Sat Aug 15) — pairs with the relaxed lake-cycle day. <strong>Plein d'Envies tasting $280 pp.</strong> Book 60+ days ahead via the website.</p>
-          <div class="meta-line">→ <a href="https://closdessens.com/" target="_blank" rel="noopener">closdessens.com</a> · +33 4 50 23 07 90</div>
+          <h4>Reserve ★★★ Le Clos des Sens (Fri Aug 14, 20:30)</h4>
+          <p>The trip's centerpiece — Franck Derouet + Thomas Lorival · <em>Plein d'Envies</em> tasting ~€280/pp + paired wine ~€185. Vegetal + lake-fish, 100% local within 100 km. Direct via closdessens.com. <strong>Annecy's only 3-star — books 12 weeks out for August Fri.</strong> CC required.</p>
+          <div class="meta-line">12 weeks out · <a href="https://closdessens.com/" target="_blank" rel="noopener">closdessens.com</a> · +33 4 50 23 07 90</div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">4</div>
+        <div class="stepnum">04</div>
         <div>
-          <h4>Yoann Conte ★★ + Père Bise ★★</h4>
-          <p>Day 2 (Thu Aug 13) for Yoann Conte at the hotel — elevator down to the dining room. Day 5 (Sun Aug 16) for Père Bise after the Chamonix day. Both book 4–6 weeks ahead.</p>
-          <div class="meta-line">→ <a href="https://yoann-conte.com/" target="_blank" rel="noopener">yoann-conte.com</a> · <a href="https://www.aubergedupere-bise.com/" target="_blank" rel="noopener">aubergedupere-bise.com</a></div>
+          <h4>Reserve ★★ Yoann Conte (Sun Aug 16, 21:00) + ★★ Auberge de Montmin (Wed Aug 12, 20:00) + ★ L'Esquisse (Thu Aug 13, 21:00) + ★ Albert 1er (Sat Aug 15, 20:30)</h4>
+          <p>Four-Michelin booking pass: <strong>Yoann Conte 10 weeks ahead</strong> +33 4 50 09 97 49 (specify "Terre d'Adoption" Alpine menu, Joann no seafood). <strong>Auberge de Montmin 6–8 weeks</strong>. <strong>L'Esquisse 8 weeks</strong> +33 4 50 27 78 02 (20 covers, fills fast). <strong>Albert 1er Chamonix 6 weeks</strong> (Fête des Guides weekend peak).</p>
+          <div class="meta-line">6–10 weeks out · <a href="https://yoann-conte.com/" target="_blank" rel="noopener">yoann-conte.com</a> · <a href="https://www.esquisse-annecy.fr/" target="_blank" rel="noopener">esquisse-annecy.fr</a> · <a href="https://www.hameaualbert.fr/restaurants/albert-premier/" target="_blank" rel="noopener">albert 1er</a></div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">5</div>
+        <div class="stepnum">05</div>
         <div>
-          <h4>Tandem paraglide from Col de la Forclaz</h4>
-          <p>Fly Annecy, Day 2 (Thu Aug 13) at 6 PM for sunset light. $150 pp each. 30 min in the air, lands at Doussard on the south end of the lake. Book 2 weeks ahead.</p>
-          <div class="meta-line">→ <a href="https://www.flyannecy.com/" target="_blank" rel="noopener">flyannecy.com</a></div>
+          <h4>Book Swiss LAX ↔ GVA flights</h4>
+          <p>LX41 LAX→ZRH (dep 4:25 PM Tue Aug 11, arr 11:35 AM Wed Aug 12) + LX2810 ZRH→GVA (arr 1:55 PM). Return: LX2811 GVA→ZRH + LX40 ZRH→LAX. Estimated $900–$1,400 RT/pp; verify exact 2026 schedule + price before booking. Backup carriers: Lufthansa via MUC, Air France via CDG, United via FRA.</p>
+          <div class="meta-line">45–60 days out · <a href="https://www.swiss.com/" target="_blank" rel="noopener">swiss.com</a> · <a href="https://www.skyscanner.com/routes/lax/gva/los-angeles-international-to-geneva.html" target="_blank" rel="noopener">Skyscanner LAX→GVA</a></div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">6</div>
+        <div class="stepnum">06</div>
         <div>
-          <h4>Aiguille du Midi cable car · pre-booked 9 AM slot</h4>
-          <p>Day 5 (Sun Aug 16). 9 AM slot sells out 1+ wk ahead in August. $90 pp. Pair with lunch at Albert 1er in Chamonix.</p>
-          <div class="meta-line">→ <a href="https://www.compagniedumontblanc.fr/en/equipement/aiguille-du-midi" target="_blank" rel="noopener">compagniedumontblanc.fr</a></div>
+          <h4>Pre-book Aiguille du Midi cable car (Sat Aug 15, 09:00 slot)</h4>
+          <p><strong>Booking compulsory summer 2026 · sells out 5–10 days ahead Aug</strong> · €70+ RT · Step Into the Void glass box + Mont Blanc terrace. Daily 08:10 AM–17:30 (Aug), first cable car 08:10. <strong>Pre-dawn 06:30 first slot if doubling up with Mer de Glace</strong>.</p>
+          <div class="meta-line">10+ days out · <a href="https://www.aiguilledumidi.montblancnaturalresort.com/" target="_blank" rel="noopener">aiguilledumidi.montblancnaturalresort.com</a></div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">7</div>
+        <div class="stepnum">07</div>
         <div>
-          <h4>Cheese morning + Vin de Savoie tasting</h4>
-          <p>Day 3 (Fri Aug 14) — call Fromagerie Pingon (+33 4 50 44 90 89) for a 9:30 AM cave tour. Combine with Coopérative Beaufortain (+33 4 79 38 33 62) for the late-morning Beaufort visit. Optional Domaine des 13 Lunes call ahead for Sat tasting.</p>
+          <h4>Reserve Takamaka Prestige paragliding (Thu Aug 13, 10:00)</h4>
+          <p>40-min tandem thermals from Col de la Forclaz · €165/pp · Doussard lake landing · 25-min minibus return. <strong>Book 1+ week August (peak demand)</strong>. Best morning thermals; afternoons often canceled wind. Alternatives: Flyeo Prestige €165, Fly Annecy, Aéro Pro, Air Adventure, K2 Parapente.</p>
+          <div class="meta-line">10+ days out · <a href="https://annecy.takamaka.fr/" target="_blank" rel="noopener">annecy.takamaka.fr</a> · <a href="https://flyeo.com/" target="_blank" rel="noopener">flyeo.com</a></div>
         </div>
       </div>
 
       <div class="step">
-        <div class="stepnum">8</div>
+        <div class="stepnum">08</div>
         <div>
-          <h4>GVA transfer, rental car decision, casual dinners</h4>
-          <p>Pre-book Welcome Pickups for arrival (~$90). Rent a small auto at GVA for the 5 days (Chamonix + cheese day + lake loop) — ~$320 for 5 days. Reserve <strong>Le Freti</strong> (Day 6 farewell tartiflette), <strong>Le Belvédère Talloires</strong>, <strong>Le Roc</strong>. All take phone reservations 30 days ahead.</p>
+          <h4>Reserve canyoning Angon (Thu Aug 13, 14:30)</h4>
+          <p>Cliffs straight into Lake Annecy · many abseils + few jumps · €85/pp · 3 h · book <strong>3–5 days ahead</strong>. Vertical Aventure / Monté Médio / Evolution 2 / YouCanyon / Takamaka. Optional combo "Pack Sportif" = Angon + Montmin same day ~€140.</p>
+          <div class="meta-line">3–5 days out · <a href="https://www.vertical-aventure.com/" target="_blank" rel="noopener">vertical-aventure.com</a> · <a href="https://www.youcanyon.fr/" target="_blank" rel="noopener">youcanyon.fr</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">09</div>
+        <div>
+          <h4>Book e-bike + Roul' ma Poule (Fri Aug 14, 08:00 pickup)</h4>
+          <p>Two e-bikes ~€40/day each via Roul' ma Poule (Annecy Old Town shop). <strong>Book 1+ week ahead</strong>. Alternatives: Cyclable, Vélonecy, Annecy Location Vélo. The 42-km lake loop = the Day 3 anchor.</p>
+          <div class="meta-line">7+ days out · <a href="https://www.roulmapoule-annecy.com/" target="_blank" rel="noopener">roulmapoule-annecy.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">10</div>
+        <div>
+          <h4>Pre-book Combe de Savoie wineries (Sun Aug 16, 11:00)</h4>
+          <p>Adrien Berlioz (Chignin) 11:00 + Jean-François Quénard (Chignin) 14:30 + Maison Philippe Grisard (Cruet) 16:00. All by appointment — book <strong>1 week ahead</strong> by phone / email. <strong>Domaine Belluard Gringet visit: "call ahead" but confirm post-2021 estate visitor policy directly</strong>.</p>
+          <div class="meta-line">7+ days out · <a href="https://www.berlioz-chignin.com/" target="_blank" rel="noopener">berlioz-chignin.com</a> · <a href="https://www.jeanfrancoisquenard.com/" target="_blank" rel="noopener">jeanfrancoisquenard.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">11</div>
+        <div>
+          <h4>Optional · Compagnie des Bateaux MS Libellule dinner cruise</h4>
+          <p>Electric boat, 2-h luncheon at 11:30 or dinner at 19:00 — Annecy → Talloires → return. <strong>Reservations mandatory weeks ahead Aug</strong> +33 4 50 51 08 40 / info@annecy-croisieres.com. The Day 3 low-energy swap option (in place of the 42-km bike loop).</p>
+          <div class="meta-line">3+ weeks out · phone reservation</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">12</div>
+        <div>
+          <h4>Rental car GVA + casual dinners</h4>
+          <p>Rent a small auto at GVA for the 5 days (Chamonix + Combe de Savoie + lake basin drives) — ~$320 for 5 days. Reserve <strong>Le Freti</strong> (Old Town tartiflette canon) for any flexible night via lefreti.com, <strong>Chez Ingalls</strong> as the 22:00 late-dinner workaround when Michelin kitchens close, <strong>Vif</strong> for natural wine. All take phone reservations 1–2 weeks ahead.</p>
+          <div class="meta-line">30 days out · <a href="https://www.hertz.com/" target="_blank" rel="noopener">Hertz</a> · <a href="https://www.sixt.com/" target="_blank" rel="noopener">Sixt</a> · <a href="https://www.lefreti.com/" target="_blank" rel="noopener">lefreti.com</a></div>
         </div>
       </div>
 
     </div>
 
+    <div class="adversarial">
+      <h3>Adversarial honesty — where Annecy loses</h3>
+      <p><strong>The festival calendar fails us on both ends.</strong> Fête du Lac falls Aug 1 (miss by 10). Imperial Annecy Festival starts Aug 18 (miss by 1). Annecy Classic Festival Aug 23 (miss by 6). <strong>Le Brise Glace closed Jul 10–Aug 24 — the entire trip.</strong> A 2-week dead window between Aug 2 and Aug 17 is structurally what we landed in.</p>
+      <p><strong>Nightlife real but tactical, not strategic.</strong> Le Garage + Pop Night Club + Casino Impérial + Rue Sainte-Claire crawl exist. Pop Night Club Thu–Sat only (so 3 nights of 5 overlap — Thu, Fri, Sat). Bar scene closes 01:00 mostly not 03–04 AM. <strong>No 4 AM clubbing Sun or Wed</strong>. Compare to SS / Mallorca / Mykonos where every night is 03:00 minimum.</p>
+      <p><strong>Late dinners actual problem.</strong> Michelin kitchen close ~21:30. 22:00 dining in Annecy = brasserie/bistro tier (Chez Ingalls to midnight, Vif to 22:30). "10 PM Michelin seating" doesn't exist locally. Workaround: book 21:00 then Casino-after; OR shift one night to Chamonix where Albert 1er + alpine restaurants accept later bookings + bar scene rolls until 02:00.</p>
+      <p><strong>Small town reality.</strong> Annecy ~127,000 residents. Old Town delightful but exhausts in 36 hours. Density of "what tonight WALKING distance" bounded.</p>
+      <p><strong>Savoie wine real but small.</strong> Not Beaujolais, not Burgundy, not Rhône. Gringet + Mondeuse cool but tasting at 3–5 small estates not 50. <strong>Domaine Belluard estate flux post-2021</strong> — confirm visitor policy.</p>
+      <p><strong>vs. San Sebastián:</strong> SS's pintxo culture solves late-dinner natively (eat 6 small meals 8 PM–02:00 + bars rage 03:00 nightly). 3 of world's top 50 (Arzak, Mugaritz, Akelarre) tier Annecy's ★★★ on caliber. Plus Semana Grande mid-month fireworks every night. Penalty: heavy seafood.</p>
+      <p><strong>vs. Mallorca / Ibiza / Mykonos:</strong> Clubs to dawn every night, beach club day-into-night, Med nightlife at scale. Penalty: less active outdoors, less Michelin density.</p>
+      <p><strong>vs. Côte d'Azur (Nice / Cap-Ferrat / Monaco):</strong> Casino de Monte-Carlo + multiple Michelin + beach clubs + 03:00 bars in Nice + wineries (Provence Rosé). Penalty: more crowded, more performative.</p>
+      <p><strong>NET:</strong> Annecy <strong>34/39</strong>. No longer the matrix champion (was 38 old criteria — drops 4 on nightlife) but credible high-end pick if (a) value food + alpine activity over club scene, (b) Perseids viewing + Chamonix Fête des Guides Aug 15 deliberately leveraged, (c) accept dinner-at-21:00 + Casino-after-midnight rhythm. <strong>If pure nightlife is the dominant axis, SS + Côte d'Azur outrank.</strong></p>
+    </div>
+
     <div class="budget-table">
       <div class="head">
-        <span class="eyebrow">Three Ways to Do It</span>
+        <span class="eyebrow">All-In For Two Travelers</span>
         <h3>Budget by Tier</h3>
-        <p>Same trip, three spending levels. ✓ = included in that tier. Standard is the recommended plan with La Maison Bleue + Le Clos des Sens ★★★ + Yoann Conte ★★ + Père Bise ★★.</p>
+        <p>USD, mid-August peak. Move items across tiers freely. <strong>Standard tier matches the day-by-day above</strong> — Imperial Palace 4 + Albert 1er Chamonix 1 + Clos des Sens ★★★ + Yoann Conte ★★ + Auberge de Montmin ★★ + Albert 1er ★ + Aiguille du Midi + paragliding + canyoning + bike loop.</p>
       </div>
-
-      <div style="overflow-x: auto;">
       <table>
         <thead>
           <tr>
@@ -905,42 +1270,33 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td class="item">✈️ Flights · Economy (Swiss via ZRH)</td><td class="tier">✓ $2,000</td><td class="standard">✓ $2,000</td><td class="tier dim">—</td></tr>
-          <tr><td class="item">✈️ Flights · Premium Economy</td><td class="tier dim">—</td><td class="standard dim">—</td><td class="tier">✓ $3,400</td></tr>
-          <tr><td class="item">🏨 Rivage Hôtel &amp; Spa · 5 nights</td><td class="tier">✓ $1,800</td><td class="standard dim">—</td><td class="tier dim">—</td></tr>
-          <tr><td class="item">🏨 La Maison Bleue (R&amp;C) · 5 nights</td><td class="tier dim">—</td><td class="standard std-mark">✓ $4,400</td><td class="tier dim">—</td></tr>
-          <tr><td class="item">🏨 Le Clos des Sens hotel · 5 nights</td><td class="tier dim">—</td><td class="standard dim">—</td><td class="tier">✓ $4,800</td></tr>
-          <tr><td class="item">🚗 Rental car (auto) + fuel · 5 days</td><td class="tier">✓ $320</td><td class="standard">✓ $320</td><td class="tier">✓ $400</td></tr>
-          <tr><td class="item">🚗 GVA ↔ Annecy private transfer (RT)</td><td class="tier">✓ $50</td><td class="standard">✓ $180</td><td class="tier">✓ $180</td></tr>
-          <tr><td class="item">🪂 Tandem paragliding for 2</td><td class="tier dim">—</td><td class="standard">✓ $300</td><td class="tier">✓ $300</td></tr>
-          <tr><td class="item">⛵ Catamaran sail (private 2 hr)</td><td class="tier">✓ $80 (public)</td><td class="standard">✓ $280</td><td class="tier">✓ $450 (4 hr)</td></tr>
-          <tr><td class="item">🚣 SUP / kayak rentals</td><td class="tier">✓ $60</td><td class="standard">✓ $60</td><td class="tier">✓ $100</td></tr>
-          <tr><td class="item">🏔️ Aiguille du Midi cable car</td><td class="tier dim">—</td><td class="standard">✓ $180</td><td class="tier">✓ $180</td></tr>
-          <tr><td class="item">⭐ Le Clos des Sens ★★★</td><td class="tier dim">—</td><td class="standard std-mark">✓ $800</td><td class="tier">✓ $880</td></tr>
-          <tr><td class="item">⭐ Yoann Conte ★★</td><td class="tier dim">—</td><td class="standard std-mark">✓ $560</td><td class="tier">✓ $640</td></tr>
-          <tr><td class="item">⭐ Père Bise (Jean Sulpice) ★★</td><td class="tier dim">—</td><td class="standard">✓ $620</td><td class="tier">✓ $700</td></tr>
-          <tr><td class="item">🍽️ Other dinners · 2 nights (Belvédère, Le Roc, Le Freti)</td><td class="tier">✓ $200</td><td class="standard">✓ $300</td><td class="tier">✓ $500</td></tr>
-          <tr><td class="item">🥖 Lunches · 5 days (auberges + lake-side)</td><td class="tier">✓ $250</td><td class="standard">✓ $500</td><td class="tier">✓ $850</td></tr>
-          <tr><td class="item">🥐 Breakfasts out</td><td class="tier dim">—</td><td class="standard">included in hotel</td><td class="tier">included</td></tr>
-          <tr><td class="item">🧀 Cheese cellar visits + tastings (3)</td><td class="tier">✓ $40</td><td class="standard">✓ $80</td><td class="tier">✓ $150</td></tr>
-          <tr><td class="item">🍷 Vin de Savoie tastings (2)</td><td class="tier">✓ $40</td><td class="standard">✓ $80</td><td class="tier">✓ $150</td></tr>
-          <tr><td class="item">🧖 Spa Deep Nature + couples massage</td><td class="tier dim">—</td><td class="standard">✓ $320</td><td class="tier">✓ $500</td></tr>
-          <tr><td class="item">🚴 E-bike rental Voie Verte (2 bikes/day)</td><td class="tier">✓ $50</td><td class="standard">✓ $60</td><td class="tier">✓ $100</td></tr>
-          <tr><td class="item">🎵 Annecy Classic Festival tickets (2)</td><td class="tier dim">—</td><td class="standard">✓ $120</td><td class="tier">✓ $160</td></tr>
-          <tr><td class="item" style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">☄️ Free · Perseids at Col de la Forclaz · ⛪ Assomption procession · 🏊 Lake swim · 🥾 Hikes</td><td class="tier" style="color: rgba(255,255,255,0.5);">included</td><td class="standard" style="color: rgba(255,255,255,0.5);">included</td><td class="tier" style="color: rgba(255,255,255,0.5);">included</td></tr>
+          <tr><td class="item">Flights · Swiss LAX↔GVA (×2)</td><td class="tier">$1,800<br><span style="font-size: 0.75rem; opacity: 0.7;">economy, basic</span></td><td class="tier standard std-mark">$2,400<br><span style="font-size: 0.75rem; opacity: 0.7;">economy + bag</span></td><td class="tier">$5,400<br><span style="font-size: 0.75rem; opacity: 0.7;">premium economy</span></td></tr>
+          <tr><td class="item">Hotels · 4 Annecy + 1 Chamonix</td><td class="tier">$1,800<br><span style="font-size: 0.75rem; opacity: 0.7;">Black Bass Sevrier 5 nights</span></td><td class="tier standard std-mark">$3,200<br><span style="font-size: 0.75rem; opacity: 0.7;">Imperial Palace 4 + Albert 1er 1</span></td><td class="tier">$7,400<br><span style="font-size: 0.75rem; opacity: 0.7;">Maison Bleue + Père Bise + Albert 1er suite</span></td></tr>
+          <tr><td class="item">Michelin marquee meals</td><td class="tier">$300<br><span style="font-size: 0.75rem; opacity: 0.7;">1 ★ (Esquisse) only</span></td><td class="tier standard std-mark">$2,200<br><span style="font-size: 0.75rem; opacity: 0.7;">Clos des Sens ★★★ + Yoann Conte ★★ + Montmin ★★ + Albert 1er ★ + Esquisse ★</span></td><td class="tier">$3,400<br><span style="font-size: 0.75rem; opacity: 0.7;">+ ★★★ Flocons de Sel replaces Yoann Conte</span></td></tr>
+          <tr><td class="item">Other dinners + lunches + Savoyard</td><td class="tier">$450<br><span style="font-size: 0.75rem; opacity: 0.7;">Le Freti + brasseries</span></td><td class="tier standard std-mark">$700<br><span style="font-size: 0.75rem; opacity: 0.7;">Le Freti + Talloires + Chignin lunch + pastries</span></td><td class="tier">$1,100</td></tr>
+          <tr><td class="item">Paragliding Takamaka Prestige (2)</td><td class="tier">$220<br><span style="font-size: 0.75rem; opacity: 0.7;">Discovery €110 each</span></td><td class="tier standard std-mark">$370<br><span style="font-size: 0.75rem; opacity: 0.7;">Prestige €165 each</span></td><td class="tier">$700<br><span style="font-size: 0.75rem; opacity: 0.7;">+ helicopter Mont Blanc add-on</span></td></tr>
+          <tr><td class="item">Canyoning + via ferrata + adrenaline</td><td class="tier">$0</td><td class="tier standard std-mark">$190<br><span style="font-size: 0.75rem; opacity: 0.7;">Angon Performance × 2</span></td><td class="tier">$430<br><span style="font-size: 0.75rem; opacity: 0.7;">Pack Sportif × 2</span></td></tr>
+          <tr><td class="item">Aiguille du Midi cable car + Chamonix activities</td><td class="tier">$80<br><span style="font-size: 0.75rem; opacity: 0.7;">Aiguille du Midi only</span></td><td class="tier standard std-mark">$200<br><span style="font-size: 0.75rem; opacity: 0.7;">Aiguille du Midi + Fête des Guides + Les Gaillands zip</span></td><td class="tier">$550<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Mer de Glace + ice cave</span></td></tr>
+          <tr><td class="item">E-bike lake loop + lake water (kayak/SUP/GoBoat)</td><td class="tier">$90<br><span style="font-size: 0.75rem; opacity: 0.7;">2 bikes + walk-up kayaks</span></td><td class="tier standard std-mark">$280<br><span style="font-size: 0.75rem; opacity: 0.7;">e-bikes + GoBoat half-day</span></td><td class="tier">$650<br><span style="font-size: 0.75rem; opacity: 0.7;">+ full-day GoBoat + sailing</span></td></tr>
+          <tr><td class="item">Nightlife · Casino + Pop Plage + bars</td><td class="tier">$80</td><td class="tier standard std-mark">$280<br><span style="font-size: 0.75rem; opacity: 0.7;">Casino budget + Pop Night Club cover + Sainte-Claire crawl</span></td><td class="tier">$800<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Geneva Carouge late-night</span></td></tr>
+          <tr><td class="item">Combe de Savoie winery day</td><td class="tier">$60</td><td class="tier standard std-mark">$220<br><span style="font-size: 0.75rem; opacity: 0.7;">3 tastings + lunch</span></td><td class="tier">$500<br><span style="font-size: 0.75rem; opacity: 0.7;">+ private driver Combe de Savoie</span></td></tr>
+          <tr><td class="item">Rental car + fuel + Annecy parking</td><td class="tier">$330</td><td class="tier standard std-mark">$420<br><span style="font-size: 0.75rem; opacity: 0.7;">small auto · 5 days + fuel</span></td><td class="tier">$680<br><span style="font-size: 0.75rem; opacity: 0.7;">midsize + Chamonix tolls</span></td></tr>
+          <tr><td class="item">Spa Deep Nature + Albert 1er spa</td><td class="tier">$0</td><td class="tier standard std-mark">$420<br><span style="font-size: 0.75rem; opacity: 0.7;">Spa Deep Nature couples + Albert 1er spa</span></td><td class="tier">$700</td></tr>
+          <tr><td class="item">Cushion / tips / incidentals</td><td class="tier">$190</td><td class="tier standard std-mark">$280</td><td class="tier">$700</td></tr>
+          <tr><td class="item" style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">☄️ Free · Perseids at Col de la Forclaz · ⛪ Fête des Guides · 🏊 Lake swim · 🥾 Mont Veyrier · 🌿 Annecy Paysages</td><td class="tier" style="color: rgba(255,255,255,0.5);">included</td><td class="standard" style="color: rgba(255,255,255,0.5);">included</td><td class="tier" style="color: rgba(255,255,255,0.5);">included</td></tr>
         </tbody>
         <tfoot>
           <tr>
-            <td class="total-label">Total · all in</td>
-            <td class="tier">$4,890</td>
+            <td class="total-label">Total · two travelers, all-in</td>
+            <td class="tier">$5,400</td>
             <td class="standard">$11,160</td>
-            <td class="tier">$14,440</td>
+            <td class="tier">$23,010</td>
           </tr>
         </tfoot>
       </table>
-      </div>
-
-      <p class="footnote">All figures USD, for two travelers. Hotel rates assume mid-August peak. Standard includes all three Michelin meals (Clos des Sens 3★, Yoann Conte 2★, Père Bise 2★) — the marquee gastronomic week. EUR converted at ~1.08 / USD.</p>
+      <p class="footnote">
+        <strong>Honest read:</strong> Annecy Standard ($11,160) gets you a <strong>13-Michelin-star basin + 1 night Chamonix + Fête des Guides + Perseids + paragliding + canyoning + bike loop + casino</strong> at roughly the same all-in as Hvar+Split Standard ($9,650) — the trade is Annecy buys you more Michelin and trades away club-till-dawn nightlife. <strong>If hotels + Michelin + Alpine activity are your top axes, Annecy wins. If pure nightlife is the dominant axis, Hvar/SS/Côte d'Azur outrank.</strong> EUR converted at ~1.08 / USD.
+      </p>
     </div>
 
   </div>
@@ -948,7 +1304,7 @@
 
 <footer>
   <div class="container">
-    <p>Built for Mark · August 11–17, 2026 · LAX origin · Prices in USD, subject to live booking</p>
+    <p>Built for Mark · August 11–17, 2026 · LAX origin · 4 Annecy + 1 Chamonix · <a href="../index.html">all trips</a> · <a href="./aug_11_europe.html">compare options</a></p>
   </div>
 </footer>
 
