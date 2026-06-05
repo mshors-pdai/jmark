@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>August 17 → 23, 2026 — Europe · 9 Options · Scored · $9–15K Band</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --provence-lavender: #5a4a7a;
+    --provence-terra: #c4622d;
+    --cascais-terra: #c1644a;
+    --cascais-deep: #8e4530;
+    --basque-olive: #7d8b5c;
+    --basque-deep: #5a6740;
+    --madeira-sea: #1e5a7a;
+    --madeira-deep: #133e54;
+    --annecy-lake: #2a7a8c;
+    --annecy-deep: #0d3b4f;
+    --annecy-sage: #7ba696;
+    --annecy-terra: #c8553d;
+    --mallorca-sea: #1e6091;
+    --mallorca-deep: #134268;
+    --mallorca-stone: #b8895b;
+    --mallorca-clay: #c97b3e;
+    --mallorca-olive: #6b7a3f;
+    --mykonos-blue: #1d6fb8;
+    --mykonos-deep: #0e3d6f;
+    --mykonos-white: #f1f4f9;
+    --hvar-adriatic: #2a7a8c;
+    --hvar-deep: #14495a;
+    --hvar-stone: #b89978;
+    --coteazur-azure: #2466a8;
+    --coteazur-deep: #102e58;
+    --coteazur-gold: #c2a04a;
+    --cream: #faf4e8;
+    --warm: #f5ecd9;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.6; background: #fafaf7; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
+  h3 { font-size: 1.6rem; line-height: 1.25; }
+  h4 { font-size: 1.15rem; }
+  a { color: inherit; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; }
+
+  /* ===== Back-to-index bar (shared component) ===== */
+  .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+  .back-bar a.back-link:hover { color: var(--cascais-terra); }
+  .back-bar a.back-link .arrow { display: inline-block; transition: transform 0.2s; }
+  .back-bar a.back-link:hover .arrow { transform: translateX(-3px); }
+  .back-bar .brand-mini { font-family: 'Playfair Display', serif; font-size: 0.92rem; color: rgba(255,255,255,0.7); letter-spacing: -0.02em; text-decoration: none; }
+  .back-bar .brand-mini:hover { color: white; }
+  .back-bar .brand-mini .dot { color: var(--cascais-terra); }
+  .back-bar .meta-mini { display: none; font-size: 0.74rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
+  @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
+
+  /* ===== Top Nav ===== */
+  .topnav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 1rem 0; }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; }
+  .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
+  .topnav .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .topnav .tab { padding: 0.5rem 1.1rem; border-radius: 999px; text-decoration: none; color: var(--ink); font-size: 0.88rem; font-weight: 500; transition: all 0.2s; border: 1px solid transparent; }
+  .topnav .tab:hover { background: rgba(0,0,0,0.04); }
+  .topnav .tab.provence { color: var(--provence-lavender); border-color: var(--provence-lavender); }
+  .topnav .tab.provence:hover { background: var(--provence-lavender); color: white; }
+  .topnav .tab.cascais { color: var(--cascais-terra); border-color: var(--cascais-terra); }
+  .topnav .tab.cascais:hover { background: var(--cascais-terra); color: white; }
+  .topnav .tab.basque { color: var(--basque-deep); border-color: var(--basque-olive); }
+  .topnav .tab.basque:hover { background: var(--basque-olive); color: white; }
+  .topnav .tab.madeira { color: var(--madeira-sea); border-color: var(--madeira-sea); }
+  .topnav .tab.madeira:hover { background: var(--madeira-sea); color: white; }
+  .topnav .tab.annecy { color: var(--annecy-deep); border-color: var(--annecy-lake); }
+  .topnav .tab.annecy:hover { background: var(--annecy-lake); color: white; }
+  .topnav .tab.mallorca { color: var(--mallorca-deep); border-color: var(--mallorca-sea); }
+  .topnav .tab.mallorca:hover { background: var(--mallorca-sea); color: white; }
+
+  /* ===== Intro Hero ===== */
+  .intro-hero { padding: 6rem 0 4rem; text-align: center; background: linear-gradient(180deg, var(--cream) 0%, #fafaf7 100%); }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--cascais-terra); }
+  .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
+  .intro-hero h1 em { font-style: italic; color: var(--cascais-terra); font-weight: 400; }
+  .intro-hero .lede { max-width: 760px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
+  .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+
+  /* ===== Section header ===== */
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 720px; }
+  .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--cascais-terra); }
+  .section-header h2 { margin-bottom: 1rem; color: var(--ink); }
+  .section-header p { color: var(--muted); font-size: 1.05rem; }
+
+  /* ===== 4-Card overview grid ===== */
+  .opt-section { padding: 4rem 0; }
+  .opt-section.alt { background: var(--cream); }
+  .opts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .opt-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+  .opt-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.12); }
+  .opt-card .opt-image { height: 240px; background-size: cover; background-position: center; position: relative; }
+  .opt-card.provence .opt-image { background-image: linear-gradient(135deg, rgba(196,98,45,0.2), rgba(90,74,122,0.45)), url('https://images.unsplash.com/photo-1568849676085-51415703900f?w=1200&q=80'); background-color: var(--provence-terra); }
+  .opt-card.cascais .opt-image { background-image: linear-gradient(135deg, rgba(30,90,122,0.2), rgba(193,100,74,0.45)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Cascais_-_Santa_Marta_%2853854018150%29.jpg/1280px-Cascais_-_Santa_Marta_%2853854018150%29.jpg'); background-color: var(--cascais-terra); }
+  .opt-card.basque .opt-image { background-image: linear-gradient(135deg, rgba(125,139,92,0.2), rgba(30,90,122,0.45)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/San_Sebasti%C3%A1n_-_Ayuntamiento_10.jpg/1280px-San_Sebasti%C3%A1n_-_Ayuntamiento_10.jpg'); background-color: var(--basque-olive); }
+  .opt-card.madeira .opt-image { background-image: linear-gradient(135deg, rgba(19,62,84,0.25), rgba(193,100,74,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Funchal%2C_Jardins_da_Quinta_Vigia_%28lookout%29.jpg/1280px-Funchal%2C_Jardins_da_Quinta_Vigia_%28lookout%29.jpg'); background-color: var(--madeira-deep); }
+  .opt-card.annecy .opt-image { background-image: linear-gradient(135deg, rgba(42,122,140,0.10), rgba(13,59,79,0.20)), url('https://images.unsplash.com/photo-1747241548334-b53c0fcd1d27?w=1400&q=80'); background-color: var(--annecy-lake); }
+  .opt-card.mallorca .opt-image { background-image: linear-gradient(135deg, rgba(30,96,145,0.20), rgba(184,137,91,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Dei%C3%A0_2017.jpg/1280px-Dei%C3%A0_2017.jpg'); background-color: var(--mallorca-sea); }
+  .opt-card .opt-tier { position: absolute; top: 1rem; left: 1rem; background: rgba(255,255,255,0.95); padding: 0.35rem 0.9rem; border-radius: 999px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; }
+  .opt-card.provence .opt-tier { color: var(--provence-lavender); }
+  .opt-card.cascais .opt-tier { color: var(--cascais-deep); }
+  .opt-card.basque .opt-tier { color: var(--basque-deep); }
+  .opt-card.madeira .opt-tier { color: var(--madeira-deep); }
+  .opt-card.annecy .opt-tier { color: var(--annecy-deep); }
+  .opt-card.mallorca .opt-tier { color: var(--mallorca-deep); }
+  .opt-card .opt-body { padding: 1.75rem; flex: 1; display: flex; flex-direction: column; }
+  .opt-card .opt-body h3 { margin-bottom: 0.25rem; }
+  .opt-card.provence .opt-body h3 { color: var(--provence-lavender); }
+  .opt-card.cascais .opt-body h3 { color: var(--cascais-deep); }
+  .opt-card.basque .opt-body h3 { color: var(--basque-deep); }
+  .opt-card.madeira .opt-body h3 { color: var(--madeira-deep); }
+  .opt-card.annecy .opt-body h3 { color: var(--annecy-deep); }
+  .opt-card.mallorca .opt-body h3 { color: var(--mallorca-deep); }
+  .opt-card .opt-body .loc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+  .opt-card .opt-body p { font-size: 0.92rem; color: #333; margin-bottom: 1rem; flex: 1; line-height: 1.55; }
+  .opt-card .opt-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 1rem; }
+  .opt-card .opt-stats .stat-val { font-family: 'Playfair Display', serif; font-size: 1.05rem; margin-bottom: 0.1rem; }
+  .opt-card .opt-stats .stat-lbl { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+  .opt-card .opt-cta { margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; font-weight: 600; }
+  .opt-card.provence .opt-cta { color: var(--provence-terra); }
+  .opt-card.cascais .opt-cta { color: var(--cascais-terra); }
+  .opt-card.basque .opt-cta { color: var(--basque-deep); }
+  .opt-card.madeira .opt-cta { color: var(--madeira-sea); }
+  .opt-card.annecy .opt-cta { color: var(--annecy-lake); }
+  .opt-card.mallorca .opt-cta { color: var(--mallorca-sea); }
+  .opt-card .opt-cta .arrow { transition: transform 0.2s; }
+  .opt-card:hover .opt-cta .arrow { transform: translateX(4px); }
+  .opt-card.provence .opt-stats .stat-val { color: var(--provence-lavender); }
+  .opt-card.cascais .opt-stats .stat-val { color: var(--cascais-deep); }
+  .opt-card.basque .opt-stats .stat-val { color: var(--basque-deep); }
+  .opt-card.madeira .opt-stats .stat-val { color: var(--madeira-deep); }
+  .opt-card.annecy .opt-stats .stat-val { color: var(--annecy-deep); }
+  .opt-card.mallorca .opt-stats .stat-val { color: var(--mallorca-deep); }
+  /* Mykonos */
+  .opt-card.mykonos .opt-image { background-image: linear-gradient(135deg, rgba(29,111,184,0.20), rgba(241,244,249,0.30)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Mykonos_Chora.jpg/1280px-Mykonos_Chora.jpg'); background-color: var(--mykonos-blue); }
+  .opt-card.mykonos .opt-tier { color: var(--mykonos-deep); }
+  .opt-card.mykonos .opt-body h3 { color: var(--mykonos-deep); }
+  .opt-card.mykonos .opt-cta { color: var(--mykonos-blue); }
+  .opt-card.mykonos .opt-stats .stat-val { color: var(--mykonos-deep); }
+  /* Hvar + Split */
+  .opt-card.hvar .opt-image { background-image: linear-gradient(135deg, rgba(42,122,140,0.20), rgba(184,153,120,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Hvar_Old_Town_view_from_above.jpg/1280px-Hvar_Old_Town_view_from_above.jpg'); background-color: var(--hvar-adriatic); }
+  .opt-card.hvar .opt-tier { color: var(--hvar-deep); }
+  .opt-card.hvar .opt-body h3 { color: var(--hvar-deep); }
+  .opt-card.hvar .opt-cta { color: var(--hvar-adriatic); }
+  .opt-card.hvar .opt-stats .stat-val { color: var(--hvar-deep); }
+  /* Côte d'Azur */
+  .opt-card.coteazur .opt-image { background-image: linear-gradient(135deg, rgba(36,102,168,0.20), rgba(194,160,74,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Vue_du_Mont_Boron_Nice.jpg/1280px-Vue_du_Mont_Boron_Nice.jpg'); background-color: var(--coteazur-azure); }
+  .opt-card.coteazur .opt-tier { color: var(--coteazur-deep); }
+  .opt-card.coteazur .opt-body h3 { color: var(--coteazur-deep); }
+  .opt-card.coteazur .opt-cta { color: var(--coteazur-azure); }
+  .opt-card.coteazur .opt-stats .stat-val { color: var(--coteazur-deep); }
+  /* Pros-cons borders */
+  .pc-card.mykonos { border-top-color: var(--mykonos-blue); }
+  .pc-card.mykonos h3 { color: var(--mykonos-deep); }
+  .pc-card.mykonos .footer-link { color: var(--mykonos-blue); }
+  .pc-card.hvar { border-top-color: var(--hvar-adriatic); }
+  .pc-card.hvar h3 { color: var(--hvar-deep); }
+  .pc-card.hvar .footer-link { color: var(--hvar-adriatic); }
+  .pc-card.coteazur { border-top-color: var(--coteazur-azure); }
+  .pc-card.coteazur h3 { color: var(--coteazur-deep); }
+  .pc-card.coteazur .footer-link { color: var(--coteazur-azure); }
+  /* If-then verdict cards */
+  .ift-card.mykonos h4 { color: var(--mykonos-deep); }
+  .ift-card.mykonos .pick { color: var(--mykonos-blue); }
+  .ift-card.hvar h4 { color: var(--hvar-deep); }
+  .ift-card.hvar .pick { color: var(--hvar-adriatic); }
+  .ift-card.coteazur h4 { color: var(--coteazur-deep); }
+  .ift-card.coteazur .pick { color: var(--coteazur-azure); }
+
+  /* ===== Comparison table ===== */
+  .compare-table { max-width: 1100px; margin: 0 auto; background: white; border-radius: 16px; overflow-x: auto; overflow-y: visible; box-shadow: 0 4px 20px rgba(0,0,0,0.06); -webkit-overflow-scrolling: touch; position: relative; }
+  .compare-table table { width: 100%; min-width: 880px; border-collapse: separate; border-spacing: 0; font-size: 0.92rem; }
+  .compare-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-align: left; background: #1a1a1a; color: white; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .compare-table th.dim { position: sticky; left: 0; z-index: 6; color: var(--muted); background: #f0eee5; font-size: 0.78rem; box-shadow: 2px 0 4px rgba(0,0,0,0.06); }
+  .compare-table th.provence-h { background: var(--provence-lavender); }
+  .compare-table th.cascais-h { background: var(--cascais-deep); }
+  .compare-table th.basque-h { background: var(--basque-deep); }
+  .compare-table th.madeira-h { background: var(--madeira-deep); }
+  .compare-table th.annecy-h { background: var(--annecy-deep); }
+  .compare-table th.mallorca-h { background: var(--mallorca-deep); }
+  .compare-table td { padding: 0.9rem 0.75rem; border-bottom: 1px solid var(--line); vertical-align: top; background: white; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table tr:nth-child(even) td { background: #fafafa; }
+  .compare-table td.metric { position: sticky; left: 0; z-index: 4; font-weight: 600; color: var(--ink); font-size: 0.86rem; width: 17%; background: white; box-shadow: 2px 0 4px rgba(0,0,0,0.04); }
+  .compare-table tr:nth-child(even) td.metric { background: #fafafa; }
+  .compare-table td.cell { text-align: center; width: 16.6%; font-size: 0.84rem; }
+  .compare-table td.cell strong { display: block; }
+  .compare-table td.cell .sub { display: block; color: var(--muted); font-size: 0.78rem; margin-top: 0.15rem; }
+  /* Mobile scroll hint */
+  .compare-table::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 24px; background: linear-gradient(90deg, transparent, rgba(0,0,0,0.06)); pointer-events: none; opacity: 0; transition: opacity 0.2s; }
+  @media (max-width: 900px) { .compare-table::after { opacity: 1; } }
+
+  /* ===== Pros and Cons ===== */
+  .pros-cons-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 1100px; margin: 0 auto 1.5rem; }
+  .pc-card { background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-top: 4px solid var(--cascais-terra); }
+  .pc-card.provence { border-top-color: var(--provence-lavender); }
+  .pc-card.cascais { border-top-color: var(--cascais-terra); }
+  .pc-card.basque { border-top-color: var(--basque-olive); }
+  .pc-card.madeira { border-top-color: var(--madeira-sea); }
+  .pc-card.annecy { border-top-color: var(--annecy-lake); }
+  .pc-card.mallorca { border-top-color: var(--mallorca-sea); }
+  .pc-card h3 { margin-bottom: 0.25rem; }
+  .pc-card.provence h3 { color: var(--provence-lavender); }
+  .pc-card.cascais h3 { color: var(--cascais-deep); }
+  .pc-card.basque h3 { color: var(--basque-deep); }
+  .pc-card.madeira h3 { color: var(--madeira-deep); }
+  .pc-card.annecy h3 { color: var(--annecy-deep); }
+  .pc-card.mallorca h3 { color: var(--mallorca-deep); }
+  .pc-card .sub { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.25rem; }
+  .pc-card h4 { font-family: 'Inter', sans-serif; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; margin: 1.25rem 0 0.5rem; font-weight: 700; }
+  .pc-card h4.pros { color: #1e7a4d; }
+  .pc-card h4.cons { color: #a3461c; }
+  .pc-card ul { list-style: none; padding: 0; }
+  .pc-card ul li { padding: 0.35rem 0 0.35rem 1.4rem; position: relative; font-size: 0.91rem; color: #333; line-height: 1.5; }
+  .pc-card ul.pros li::before { content: '✓'; position: absolute; left: 0; top: 0.35rem; color: #1e7a4d; font-weight: 700; }
+  .pc-card ul.cons li::before { content: '−'; position: absolute; left: 0; top: 0.35rem; color: #a3461c; font-weight: 700; }
+  .pc-card .footer-link { display: inline-block; margin-top: 1.25rem; padding: 0.5rem 1.1rem; border-radius: 999px; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; transition: all 0.2s; border: 1.5px solid currentColor; }
+  .pc-card.provence .footer-link { color: var(--provence-terra); }
+  .pc-card.cascais .footer-link { color: var(--cascais-terra); }
+  .pc-card.basque .footer-link { color: var(--basque-olive); }
+  .pc-card.madeira .footer-link { color: var(--madeira-sea); }
+  .pc-card.annecy .footer-link { color: var(--annecy-lake); }
+  .pc-card.mallorca .footer-link { color: var(--mallorca-sea); }
+
+  /* ===== Budget comparison ===== */
+  .budget-block { max-width: 1100px; margin: 0 auto; background: #1a1a1a; color: white; border-radius: 24px; padding: 3rem; }
+  .budget-block .head { text-align: center; margin-bottom: 2rem; }
+  .budget-block h3 { color: white; margin-top: 0.5rem; }
+  .budget-block .head .eyebrow { color: rgba(255,255,255,0.7); }
+  .budget-block .head p { color: rgba(255,255,255,0.65); margin-top: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 0.95rem; }
+  .budget-block table { width: 100%; border-collapse: collapse; color: white; font-size: 0.95rem; }
+  .budget-block th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.78rem; }
+  .budget-block th.dim { text-align: left; color: rgba(255,255,255,0.6); width: 18%; }
+  .budget-block th.col { text-align: center; width: 16.4%; font-size: 0.85rem; }
+  .budget-block th.provence-h { color: #c4a3e0; background: rgba(90,74,122,0.18); }
+  .budget-block th.cascais-h { color: var(--cascais-terra); background: rgba(193,100,74,0.14); }
+  .budget-block th.basque-h { color: #b5c290; background: rgba(125,139,92,0.18); }
+  .budget-block th.madeira-h { color: #79b3d5; background: rgba(30,90,122,0.20); }
+  .budget-block th.annecy-h { color: #8fc5d3; background: rgba(42,122,140,0.20); }
+  .budget-block th.mallorca-h { color: #7eb0d4; background: rgba(30,96,145,0.20); }
+  .budget-block td { padding: 0.85rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .budget-block td.tier-label { color: rgba(255,255,255,0.8); font-weight: 600; }
+  .budget-block td.amt { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.05rem; }
+  .budget-block td.amt.std { font-weight: 700; font-size: 1.2rem; }
+  .budget-block tfoot td { padding: 1.5rem 0.75rem 0.5rem; border-top: 2px solid rgba(255,255,255,0.25); border-bottom: none; }
+  .budget-block tfoot td.totals { font-family: 'Playfair Display', serif; }
+  .budget-block .footnote { text-align: center; color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-top: 1.5rem; line-height: 1.6; }
+
+  /* ===== Verdict / framework ===== */
+  .framework { max-width: 1100px; margin: 0 auto; background: white; border-radius: 24px; padding: 3rem; box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
+  .framework h3 { color: var(--ink); margin-bottom: 1rem; }
+  .framework .if-then { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+  .ift-card { padding: 1.5rem; border-radius: 12px; background: rgba(0,0,0,0.02); border-left: 4px solid var(--cascais-terra); }
+  .ift-card.provence { border-left-color: var(--provence-lavender); background: rgba(90,74,122,0.04); }
+  .ift-card.cascais { border-left-color: var(--cascais-terra); background: rgba(193,100,74,0.04); }
+  .ift-card.basque { border-left-color: var(--basque-olive); background: rgba(125,139,92,0.05); }
+  .ift-card.madeira { border-left-color: var(--madeira-sea); background: rgba(30,90,122,0.04); }
+  .ift-card.annecy { border-left-color: var(--annecy-lake); background: rgba(42,122,140,0.05); }
+  .ift-card.mallorca { border-left-color: var(--mallorca-sea); background: rgba(30,96,145,0.05); }
+  .ift-card h4 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+  .ift-card.provence h4 { color: var(--provence-lavender); }
+  .ift-card.cascais h4 { color: var(--cascais-deep); }
+  .ift-card.basque h4 { color: var(--basque-deep); }
+  .ift-card.madeira h4 { color: var(--madeira-deep); }
+  .ift-card.annecy h4 { color: var(--annecy-deep); }
+  .ift-card.mallorca h4 { color: var(--mallorca-deep); }
+  .ift-card p { color: #333; font-size: 0.92rem; margin-bottom: 0.75rem; }
+  .ift-card .pick { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; }
+  .ift-card.provence .pick { color: var(--provence-lavender); }
+  .ift-card.cascais .pick { color: var(--cascais-terra); }
+  .ift-card.basque .pick { color: var(--basque-olive); }
+  .ift-card.madeira .pick { color: var(--madeira-sea); }
+  .ift-card.annecy .pick { color: var(--annecy-lake); }
+  .ift-card.mallorca .pick { color: var(--mallorca-sea); }
+
+  .verdict-block { max-width: 900px; margin: 2.5rem auto 0; padding: 2.5rem; background: linear-gradient(135deg, var(--warm), var(--cream)); border-radius: 20px; }
+  .verdict-block .eyebrow { color: var(--cascais-terra); }
+  .verdict-block h3 { color: var(--ink); margin: 0.5rem 0 1rem; font-size: 1.8rem; }
+  .verdict-block p { color: #333; font-size: 1rem; line-height: 1.7; margin-bottom: 1rem; }
+  .verdict-block p strong { color: var(--ink); }
+
+  /* ===== Criteria cards ===== */
+  .criteria-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; max-width: 1100px; margin: 0 auto; }
+  .criterion-card { background: white; border-radius: 14px; padding: 1.25rem 1.4rem; border-left: 4px solid var(--cascais-terra); box-shadow: 0 4px 14px rgba(0,0,0,0.04); }
+  .criterion-card.hard { border-left-color: var(--cascais-terra); }
+  .criterion-card.soft { border-left-color: var(--madeira-sea); }
+  .criterion-card .tag { display: inline-block; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; padding: 0.18rem 0.55rem; border-radius: 999px; margin-bottom: 0.55rem; color: white; }
+  .criterion-card.hard .tag { background: var(--cascais-terra); }
+  .criterion-card.soft .tag { background: var(--madeira-sea); }
+  .criterion-card h4 { margin-bottom: 0.35rem; color: var(--ink); font-size: 1.05rem; }
+  .criterion-card p { font-size: 0.88rem; color: #333; line-height: 1.5; margin: 0; }
+
+  /* ===== Scoring matrix ===== */
+  .scoring-wrap { max-width: 1180px; margin: 0 auto; background: white; border-radius: 16px; overflow-x: auto; overflow-y: visible; box-shadow: 0 4px 20px rgba(0,0,0,0.06); -webkit-overflow-scrolling: touch; position: relative; }
+  .scoring-table { width: 100%; min-width: 880px; border-collapse: separate; border-spacing: 0; font-size: 0.92rem; }
+  .scoring-table thead th { background: #1a1a1a; color: white; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.02em; padding: 1rem 0.45rem; text-align: center; border-bottom: 1px solid #2a2a2a; }
+  .scoring-table thead th.label-col { position: sticky; left: 0; z-index: 6; text-align: left; padding-left: 1.25rem; min-width: 180px; box-shadow: 2px 0 4px rgba(0,0,0,0.12); }
+  .scoring-table tbody td { padding: 0.8rem 0.5rem; text-align: center; border-bottom: 1px solid var(--line); vertical-align: middle; background: white; }
+  .scoring-table tbody td.label { position: sticky; left: 0; z-index: 4; text-align: left; padding-left: 1.25rem; font-weight: 600; color: var(--ink); background: white; box-shadow: 2px 0 4px rgba(0,0,0,0.04); }
+  .scoring-table tbody td.label .sub { display: block; font-weight: 400; font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
+  .scoring-table tbody td.label a { text-decoration: none; color: inherit; border-bottom: 1px dotted var(--muted); }
+  .scoring-table tbody td.label a:hover { color: var(--cascais-terra); border-bottom-color: var(--cascais-terra); }
+  .scoring-table tbody tr:nth-child(even) td { background: #f8f8f6; }
+  .scoring-table tbody tr:nth-child(even) td.label { background: #f8f8f6; }
+  .scoring-table tbody tr:hover td { background: rgba(193,100,74,0.05); }
+  .scoring-table tbody tr:hover td.label { background: rgba(193,100,74,0.08); }
+  .scoring-table tbody td.total { font-weight: 700; color: var(--ink); font-family: 'Playfair Display', serif; font-size: 1.05rem; }
+  .scoring-table tbody tr.winner td { background: #ebf4ec; }
+  .scoring-table tbody tr.winner td.label { background: #ebf4ec; }
+  .scoring-table tbody tr.winner td.total { color: #1e7a4d; font-size: 1.2rem; }
+  /* Scroll hint on mobile */
+  .scoring-wrap::after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 24px; background: linear-gradient(90deg, transparent, rgba(0,0,0,0.06)); pointer-events: none; opacity: 0; transition: opacity 0.2s; }
+  @media (max-width: 900px) { .scoring-wrap::after { opacity: 1; } }
+  .score-pill { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; font-size: 0.7rem; font-weight: 700; color: white; line-height: 1; }
+  .score-pill.s3 { background: #2e8540; }
+  .score-pill.s2 { background: #d4a72c; color: #2a2200; }
+  .score-pill.s1 { background: #c1554a; }
+  .score-legend { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; margin-top: 1.25rem; font-size: 0.82rem; color: var(--muted); }
+  .score-legend span { display: inline-flex; align-items: center; gap: 0.45rem; }
+
+  footer { background: #0d0d0d; color: rgba(255,255,255,0.6); padding: 2.5rem 0; text-align: center; font-size: 0.85rem; }
+  footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  footer a:hover { color: var(--cascais-terra); }
+
+  @media (max-width: 900px) {
+    .opts-grid { grid-template-columns: 1fr; }
+    .pros-cons-grid { grid-template-columns: 1fr; }
+    .framework .if-then { grid-template-columns: 1fr; }
+    .topnav .tabs { flex-wrap: wrap; }
+    .container { padding: 0 1.25rem; }
+  }
+  @media (max-width: 600px) {
+    .intro-hero h1 { font-size: 2.2rem; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+    .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    h2 { font-size: 1.8rem !important; }
+    h3 { font-size: 1.3rem; }
+    .container { padding: 0 1rem; }
+    .opt-section { padding: 2.5rem 0; }
+    .opt-card .opt-stats { grid-template-columns: repeat(3, 1fr); }
+    .budget-block, .framework { padding: 2rem 1.5rem; }
+    /* Topnav offset for sticky headers is handled dynamically by JS — no top override needed */
+    .scoring-table thead th { padding: 0.65rem 0.3rem; font-size: 0.72rem; }
+    .scoring-table thead th.label-col { min-width: 140px; padding-left: 0.85rem; }
+    .scoring-table { font-size: 0.82rem; }
+    .scoring-table tbody td { padding: 0.6rem 0.3rem; }
+    .scoring-table tbody td.label { padding-left: 0.85rem; min-width: 140px; }
+    .scoring-table tbody td.label .sub { font-size: 0.7rem; }
+    .compare-table th { padding: 0.65rem 0.4rem; font-size: 0.72rem; }
+    .compare-table th.dim { min-width: 130px; padding-left: 0.85rem; }
+    .compare-table td { padding: 0.6rem 0.4rem; font-size: 0.78rem; }
+    .compare-table td.metric { min-width: 130px; padding-left: 0.85rem; font-size: 0.78rem; }
+    .compare-table td.cell .sub { font-size: 0.7rem; }
+    .budget-block table { display: block; overflow-x: auto; min-width: unset; }
+  }
+  /* Floating sticky header clones (created by JS at end of body) */
+  .floating-thead { position: fixed; left: 0; overflow: hidden; z-index: 50; pointer-events: none; display: none; will-change: transform; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+  .floating-thead table { margin: 0; border-collapse: separate; border-spacing: 0; transform-origin: left top; }
+  .floating-thead .scoring-table, .floating-thead .compare-table-inner { background: #1a1a1a; }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
+    <span class="meta-mini">Itinerary No. 03-V2 · Europe Decision · Aug 17–23, 2026</span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<nav class="topnav">
+  <div class="container">
+    <div class="brand">August 17 → 23, 2026</div>
+    <div class="tabs">
+      <a href="#options" class="tab">Options</a>
+      <a href="#criteria" class="tab">Criteria</a>
+      <a href="#scoring" class="tab">Scoring</a>
+      <a href="#compare" class="tab">Compare</a>
+      <a href="#proscons" class="tab">Pros &amp; Cons</a>
+      <a href="#budgets" class="tab">Budgets</a>
+      <a href="#verdict" class="tab">Verdict</a>
+    </div>
+  </div>
+</nav>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">Trip No. 03 · Europe · 9 Options · 5 Hotel Nights · Dates Shifted 2026-06-05</span>
+    <h1>Europe, <em>August.</em> <span style="font-size: 0.5em; color: var(--cascais-terra);">V2 · Shifted +6 days</span></h1>
+    <p class="lede">
+      Same nine options, same criteria, **shifted six days later** for crowd + cost relief. Anchored to the $9–15K Standard tier band. All event windows re-verified for Mon Aug 17 → Sun Aug 23, 2026. <strong>Cascais now leads at 37.5</strong> — Festas do Mar Cascais Aug 20–23 catches 4 festival nights we previously missed. <strong>San Sebastián collapses −6 to 30</strong> (Aste Nagusia entirely past Aug 15). <strong>Annecy rises to 35–36</strong> (Imperial Annecy Festival Aug 18–28 fixes nightlife axis). <strong>Côte d'Azur drops to 34 with Aug 24 extension / 32 without</strong>. <a href="./aug_11_europe.html" style="color: var(--cascais-terra); text-decoration: underline;">Compare to Aug 11–17 version →</a>
+    </p>
+    <div class="meta">
+      <div class="meta-item"><div class="label">Departure</div><div class="value">Mon, Aug 17</div></div>
+      <div class="meta-item"><div class="label">Return</div><div class="value">Sun, Aug 23</div></div>
+      <div class="meta-item"><div class="label">Travelers</div><div class="value">Two</div></div>
+      <div class="meta-item"><div class="label">Origin</div><div class="value">LAX</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="opt-section alt" id="options">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">The Nine</span>
+      <h2>Options on the Table</h2>
+      <p>Each card links to the full plan — itinerary, hotels, restaurants, wineries, activities, budget tiers. Cards show food character + Michelin tally + Standard tier cost. Sorted by new-criteria score.</p>
+    </div>
+
+    <div class="opts-grid">
+
+      <a href="./aug_17_provence.html" class="opt-card provence">
+        <div class="opt-image"><span class="opt-tier">Option A · The Booked Plan</span></div>
+        <div class="opt-body">
+          <h3>Cassis &amp; the Calanques</h3>
+          <div class="loc">France · Provence · Mediterranean</div>
+          <p>Working fishing port at the foot of Europe's tallest sea cliff. Limestone fjords, Cassis whites + Bandol reds within walking distance, La Villa Madie ★★★ on the clifftop terrace, Aug 15 fireworks at the port, Perseids at Cap Canaille. <strong>Food character:</strong> seafood-centric (bouillabaisse capital, port-fish institutions, oysters everywhere).</p>
+          <div class="opt-stats">
+            <div><div class="stat-val">78–82°F</div><div class="stat-lbl">Aug high</div></div>
+            <div><div class="stat-val">★★★ ×1</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$9,580</div><div class="stat-lbl">Standard</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="./aug_17_cascais.html" class="opt-card cascais">
+        <div class="opt-image"><span class="opt-tier">Option B · Active Atlantic</span></div>
+        <div class="opt-body">
+          <h3>Cascais &amp; the Guincho Coast</h3>
+          <div class="loc">Portugal · Atlantic · Sintra-Cascais Natural Park</div>
+          <p>Former royal seaside retreat 30 min from Lisbon. Guincho is one of Europe's elite wind/kite spots. Multiple Michelin in Cascais + 2★ Belcanto in Lisbon. Sintra palaces, Cabo da Roca, Setúbal Moscatel. The activity-rich pick. <strong>Food character:</strong> coastal Portuguese, fish-forward (bacalhau, sardines, octopus); Kappo ★ is omakase sushi. Land-protein options exist but seafood dominates.</p>
+          <div class="opt-stats">
+            <div><div class="stat-val">79–82°F</div><div class="stat-lbl">Aug high</div></div>
+            <div><div class="stat-val">★★ + ★×3</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$9,815</div><div class="stat-lbl">Standard</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="./aug_17_san_sebastian.html" class="opt-card basque">
+        <div class="opt-image"><span class="opt-tier">Option C · Food Capital</span></div>
+        <div class="opt-body">
+          <h3>San Sebastián &amp; the Basque Coast</h3>
+          <div class="loc">Spain · Basque Country · Bay of Biscay</div>
+          <p>World capital of food: 3× three-star Michelin within 12 mi. Lands inside Aste Nagusia — international fireworks competition every night. Coolest sea (72°F). Etxebarri 1★ (#1 world) day trip. Pintxos crawl in Parte Vieja. <strong>Food character:</strong> meat-forward — txuleta (huge aged Basque rib steak) is the signature, plus Idiazabal cheese, foie, Iberico, beef at Etxebarri. The <em>least seafood-dependent</em> of the four.</p>
+          <div class="opt-stats">
+            <div><div class="stat-val">73–77°F</div><div class="stat-lbl">Aug high</div></div>
+            <div><div class="stat-val">★★★ ×3</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$11,254</div><div class="stat-lbl">Standard</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="./aug_17_madeira.html" class="opt-card madeira">
+        <div class="opt-image"><span class="opt-tier">Option D · Atlantic Island</span></div>
+        <div class="opt-body">
+          <h3>Madeira &amp; the Funchal Cliffs</h3>
+          <div class="loc">Portugal · Atlantic island · 600 mi from mainland</div>
+          <p>Subtropical island that cannot heatwave (trade winds + Canary Current). <strong>Perseids viewed from 5,965 ft above the cloud sea.</strong> Garajau Marine Reserve dives, whale schooners, levadas, Belmond Reid's Palace. The singular landscape pick. <strong>Food character:</strong> mixed — espetada (beef skewers on laurel wood) is the signature, plus island lamb, bolo do caco bread, poncha; some fish (tuna, scabbardfish) but not seafood-dominated.</p>
+          <div class="opt-stats">
+            <div><div class="stat-val">75–80°F</div><div class="stat-lbl">Aug high</div></div>
+            <div><div class="stat-val">★★ + ★×2</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$10,748</div><div class="stat-lbl">Standard</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="./aug_17_annecy.html" class="opt-card annecy">
+        <div class="opt-image"><span class="opt-tier">Option E · French Alps</span></div>
+        <div class="opt-body">
+          <h3>Annecy &amp; the Lake</h3>
+          <div class="loc">France · French Alps · Europe's cleanest lake</div>
+          <p>"Venice of the Alps" between Geneva and Mont Blanc. Lake water sports (sailing, SUP, swim in 75°F clear water, paragliding off Col de la Forclaz), <strong>Le Clos des Sens ★★★</strong> doing lake-fish-and-foraged-greens, <strong>Yoann Conte ★★</strong> at La Maison Bleue, <strong>Père Bise ★★ (Jean Sulpice)</strong> in Talloires. Aiguille du Midi day trip to 12,605 ft. <strong>Food character:</strong> <em>least seafood of all six</em> — Reblochon, Beaufort, charcuterie, tartiflette, fondue, crusty bread, Vin de Savoie whites. Lake fish (féra, omble) plays a supporting role.</p>
+          <div class="opt-stats">
+            <div><div class="stat-val">76–82°F</div><div class="stat-lbl">Aug high</div></div>
+            <div><div class="stat-val">★★★ + ★★ ×2</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$11,160</div><div class="stat-lbl">Standard</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="./aug_17_mallorca.html" class="opt-card mallorca">
+        <div class="opt-image"><span class="opt-tier">Option F · Balearic Island</span></div>
+        <div class="opt-body">
+          <h3>Mallorca · Deià &amp; the Tramuntana</h3>
+          <div class="loc">Spain · Balearic Islands · Tramuntana Mountains</div>
+          <p>Hillside-village base in Deià, <strong>Belmond La Residencia</strong> in a 16th-century hideaway above the sea. <strong>Food character: meat-forward</strong> — sobrasada, lechona, Sóller lamb, Manchego; the savory-Spain pick that's not Basque. <strong>Voro ★★</strong> in Canyamel (Álvaro Salazar) + nine ★ across the island. Palma nightlife (Abaco, Santa Catalina, Tito's at BCM) + beach clubs (Purobeach, Nikki Beach, Mhares). Sa Calobra hairpin drive, Cap de Formentor lighthouse, Palma cathedral.</p>
+          <div class="opt-stats">
+            <div><div class="stat-val">85–90°F</div><div class="stat-lbl">Aug high</div></div>
+            <div><div class="stat-val">★★ + ★ ×9</div><div class="stat-lbl">Michelin (2026)</div></div>
+            <div><div class="stat-val">$17,050</div><div class="stat-lbl">Standard</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="./aug_17_mykonos.html" class="opt-card mykonos">
+        <div class="opt-image"><span class="opt-tier">Option G · Cycladic Nightlife</span></div>
+        <div class="opt-body">
+          <h3>Mykonos &amp; the Cyclades</h3>
+          <div class="loc">Greece · Cyclades · Aegean</div>
+          <p>Best beach-club nightlife in the Mediterranean in August. <strong>Scorpios + SantAnna + Nammos + Cavo Paradiso</strong> with confirmed Solomun residency at Alemagou + Diplo at Cavo Paradiso Sun Aug 16. Delos UNESCO archaeology day, Korfos kitesurfing (Meltemi world-class), Profitis Ilias hike for Perseids viewing. <strong>Food character: meat-forward Greek</strong> — souvlaki, paidakia lamb chops, kleftiko, gyros at Sakis, Beefbar at Bill &amp; Coo, charcoal-grilled meat at Kiki's. No Michelin stars on island (2026 expansion adds Santorini + Thessaloniki, not Mykonos).</p>
+          <div class="opt-stats">
+            <div><div class="stat-val">82–88°F</div><div class="stat-lbl">Aug high · Meltemi</div></div>
+            <div><div class="stat-val">No ★</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$15,000+</div><div class="stat-lbl">est · club bills brutal</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="./aug_17_hvar.html" class="opt-card hvar">
+        <div class="opt-image"><span class="opt-tier">Option H · Dalmatian Sailing</span></div>
+        <div class="opt-body">
+          <h3>Hvar + Split · Dalmatia</h3>
+          <div class="loc">Croatia · Dalmatian Coast · Adriatic</div>
+          <p>Adriatic sailing capital. <strong>Pakleni Islands day sail</strong>, Vis Blue Cave, Brač Zlatni Rat + Vidova Gora (highest Adriatic island peak). Hvar Town world-class summer nightlife: <strong>Hula Hula sundowner + Carpe Diem Beach club until 5 AM</strong>. Diocletian's Palace UNESCO old town in Split. <strong>Krug ★ in Split</strong> (city's first Michelin star, 2025). Food character: Mediterranean-Dalmatian — peka under-the-bell lamb/veal, pršut, sip on Plavac Mali reds; fish-leaning but with strong meat tradition. <strong>43% cheaper than Mallorca.</strong></p>
+          <div class="opt-stats">
+            <div><div class="stat-val">82–88°F</div><div class="stat-lbl">Aug high</div></div>
+            <div><div class="stat-val">★ ×1 (Split)</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$9,650</div><div class="stat-lbl">Standard</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="./aug_17_cote_dazur.html" class="opt-card coteazur">
+        <div class="opt-image"><span class="opt-tier">Option I · Riviera Grand</span></div>
+        <div class="opt-body">
+          <h3>Côte d'Azur · Nice → Monaco → Saint-Tropez</h3>
+          <div class="loc">France · French Riviera · Maritime Alps</div>
+          <p>The densest Michelin ★★★ in the candidate set — <strong>Le Louis XV (Ducasse) Monte-Carlo + La Vague d'Or (Donckele) Saint-Tropez + Mirazur (Colagreco) Menton</strong>, plus La Chèvre d'Or ★★ and Louroc ★★ within reach. <strong>Cannes International Fireworks Festival Aug 15</strong> at 22:00 (Finland team) front-row from Z Plage / Plage 55. Caves du Roy (Saint-Tropez) + Jimmy'z (Monte-Carlo) + Bâoli (Cannes) for late nights. Sentier du Littoral Cap d'Antibes, Sainte-Marguerite Lérins sail, Saint-Paul-de-Vence + Fondation Maeght. <strong>Most expensive of the 9: $25–40K realistic.</strong></p>
+          <div class="opt-stats">
+            <div><div class="stat-val">80–88°F</div><div class="stat-lbl">Aug high</div></div>
+            <div><div class="stat-val">★★★ ×3 + ★★ ×2</div><div class="stat-lbl">Michelin</div></div>
+            <div><div class="stat-val">$25,000+</div><div class="stat-lbl">Realistic</div></div>
+          </div>
+          <div class="opt-cta">See full plan <span class="arrow">→</span></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================== -->
+<!-- CRITERIA -->
+<!-- ============================================================== -->
+<section class="opt-section alt" id="criteria">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">What I'm Optimizing For — Recalibrated 2026-06-04</span>
+      <h2>Locked Criteria</h2>
+      <p>Reshaped after Joann said the original brief was boring. Active + nightlife + late dinners + good food is now the spine. Five hard filters at 2× weight + three soft modifiers at 1× weight. Max 39. <em>Out: low crowds, less seafood as hard filters. In: nightlife &amp; late energy, activity density.</em></p>
+    </div>
+
+    <div class="criteria-grid">
+
+      <div class="criterion-card hard">
+        <span class="tag">Hard · 1</span>
+        <h4>Food caliber</h4>
+        <p>Multiple Michelin within ≤30 min · late-dinner culture normal (9–10 PM seatings standard) · meaningful non-seafood depth so Joann eats well.</p>
+      </div>
+
+      <div class="criterion-card hard">
+        <span class="tag">Hard · 2</span>
+        <h4>Nightlife &amp; late energy</h4>
+        <p>Bars / wine bars / clubs / beach clubs running past midnight. Walkable scene. Happens <em>nightly</em>, not "only Saturday." Festival energy is a feature, not a bug.</p>
+      </div>
+
+      <div class="criterion-card hard">
+        <span class="tag">Hard · 3</span>
+        <h4>Activity density</h4>
+        <p>Can stack water sports + hiking + winery + culture without &gt;1.5 h transfers. Enough options that a 5-night week never repeats. Over-packing is possible.</p>
+      </div>
+
+      <div class="criterion-card hard">
+        <span class="tag">Hard · 4</span>
+        <h4>Weather</h4>
+        <p>75–85°F highs · low rain probability · no bug pressure (Mediterranean dry climates pass; tropical mosquito zones fail). Heatwave risk drags.</p>
+      </div>
+
+      <div class="criterion-card hard">
+        <span class="tag">Hard · 5</span>
+        <h4>Safety &amp; walkability after dark</h4>
+        <p>Couple can walk to dinner + back at 1 AM without thinking about it. Pickpocket risk subtracts, late-night transit access adds.</p>
+      </div>
+
+      <div class="criterion-card soft">
+        <span class="tag">Soft · 6</span>
+        <h4>Wine</h4>
+        <p>Named producers in region, appointment-quality, day-trip viable. Bonus: indigenous varieties or terroir that doesn't travel.</p>
+      </div>
+
+      <div class="criterion-card soft">
+        <span class="tag">Soft · 7</span>
+        <h4>Romance / hotel quality</h4>
+        <p>Iconic property (Belmond / Relais &amp; Châteaux / LHW tier), scenic anchor, an "I'd put this view on the wall" moment.</p>
+      </div>
+
+      <div class="criterion-card soft">
+        <span class="tag">Soft · 8</span>
+        <h4>Joann-seafood tolerance</h4>
+        <p>Demoted from hard filter → soft. Seafood-heavy cuisines still lose a point, but no longer kill a destination if the non-seafood Michelin depth + nightlife are there.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================== -->
+<!-- SCORING MATRIX -->
+<!-- ============================================================== -->
+<section class="opt-section" id="scoring">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">All Nine, Side by Side · Aug 17–23, 2026 Scores</span>
+      <h2>Scoring Matrix</h2>
+      <p>Hard criteria count 2×, soft criteria 1×. Maximum total: 39. <strong>Cascais now leads at 37.5</strong> (Festas do Mar Aug 20-23 4-night overlap). Annecy rises to 35-36 (Imperial Festival fix). San Sebastián collapses to 30 (Aste Nagusia entirely past). Côte d'Azur 34 with Aug 24 extension. Click any row for the full plan. <a href="./aug_11_europe.html#scoring" style="color: var(--cascais-terra);">Compare Aug 11-17 scores →</a></p>
+    </div>
+
+    <div class="scoring-wrap">
+      <table class="scoring-table">
+        <thead>
+          <tr>
+            <th class="label-col">Option</th>
+            <th title="Food caliber: Michelin density + late-dinner culture + non-seafood depth">Food</th>
+            <th title="Nightlife &amp; late energy: bars/clubs/beach clubs running past midnight, nightly">Nightlife</th>
+            <th title="Activity density: water sports + hiking + wine + culture stacked, ≤1.5h transfers">Activity</th>
+            <th title="Weather: 75–85°F sweet spot, low rain, low bug pressure">Weather</th>
+            <th title="Safety &amp; walkability after dark, including late-night transit">Safety</th>
+            <th title="Wine: named producers in region, day-trip viable">Wine</th>
+            <th title="Romance / hotel quality">Romance</th>
+            <th title="Joann-seafood tolerance: lower seafood ratio = higher">Seafood</th>
+            <th>Total / 39</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="winner">
+            <td class="label"><a href="./aug_17_cascais.html">B · Cascais</a><span class="sub">Festas do Mar 4-night overlap + Lux Frágil</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td class="total">37.5</td>
+          </tr>
+
+          <tr>
+            <td class="label"><a href="./aug_17_annecy.html">E · Annecy</a><span class="sub">Imperial Festival Aug 18–28 fixes nightlife</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2.5</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td class="total">35.5</td>
+          </tr>
+
+          <tr>
+            <td class="label"><a href="./aug_17_mallorca.html">F · Mallorca</a><span class="sub">Pollença Aug 19 + 22 · Sineu Wed · Value Pair $11K</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2.5</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2.5</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td class="total">34.5</td>
+          </tr>
+
+          <tr>
+            <td class="label"><a href="./aug_17_cote_dazur.html">I · Côte d'Azur</a><span class="sub">Extend to Aug 24 for Cannes finale · band tight</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2.5</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2.5</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td class="total">34</td>
+          </tr>
+
+          <tr>
+            <td class="label"><a href="./aug_17_hvar.html">H · Hvar + Split</a><span class="sub">Jelsa Wine Fest Aug 20–30 · $9.6K cheapest</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2.5</span></td>
+            <td><span class="score-pill s2">2.5</span></td>
+            <td><span class="score-pill s2">2.5</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td class="total">34</td>
+          </tr>
+
+          <tr>
+            <td class="label"><a href="./aug_17_madeira.html">D · Madeira</a><span class="sub">Funchal City Day Aug 21 · Reid's Palace</span></td>
+            <td><span class="score-pill s2">2.5</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s1">1.5</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td class="total">33</td>
+          </tr>
+
+          <tr>
+            <td class="label"><a href="./aug_17_mykonos.html">G · Mykonos</a><span class="sub">⚠️ XLSIOR Aug 20–25 · vibe-dependent · 33 or 28–31</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td class="total">33</td>
+          </tr>
+
+          <tr>
+            <td class="label"><a href="./aug_17_san_sebastian.html">C · San Sebastián</a><span class="sub">⬇️ Aste Nagusia entirely past · −6 from Aug 11–17</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s2">2</span></td>
+            <td class="total">30</td>
+          </tr>
+
+          <tr>
+            <td class="label"><a href="./aug_17_provence.html">A · Provence</a><span class="sub">Bandol Aoûtiennes restructured · Aug 15 anchors gone</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s1">1</span></td>
+            <td><span class="score-pill s2">2.5</span></td>
+            <td><span class="score-pill s2">2.5</span></td>
+            <td><span class="score-pill s2">2.5</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s3">3</span></td>
+            <td><span class="score-pill s1">1.5</span></td>
+            <td class="total">30</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <div class="score-legend">
+      <span><span class="score-pill s3">3</span> Strong fit</span>
+      <span><span class="score-pill s2">2</span> Mixed / acceptable</span>
+      <span><span class="score-pill s1">1</span> Weak / fails the filter</span>
+    </div>
+  </div>
+</section>
+
+<section class="opt-section" id="compare">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">By the Numbers</span>
+      <h2>Side-by-Side Comparison</h2>
+      <p>Every variable that should drive the decision. Climate from WMO 1991–2020 normals plus 2025 actuals. Michelin counts from the 2026 guide. Hotel rates peak mid-August.</p>
+    </div>
+
+    <div class="compare-table">
+      <table>
+        <thead>
+          <tr>
+            <th class="dim">Variable</th>
+            <th class="provence-h">Provence</th>
+            <th class="cascais-h">Cascais</th>
+            <th class="basque-h">Basque</th>
+            <th class="madeira-h">Madeira</th>
+            <th class="annecy-h">Annecy</th>
+            <th class="mallorca-h">Mallorca</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="metric">Climate · Aug high</td><td class="cell"><strong>78–82°F</strong><span class="sub">heat-spike risk</span></td><td class="cell"><strong>79–82°F</strong><span class="sub">Atlantic-cooled</span></td><td class="cell"><strong>73–77°F</strong><span class="sub">coolest</span></td><td class="cell"><strong>75–80°F</strong><span class="sub">zero heatwave</span></td><td class="cell"><strong>76–82°F</strong><span class="sub">cool nights 50–59°F</span></td><td class="cell"><strong>85–90°F</strong><span class="sub">hot · AC base needed</span></td></tr>
+          <tr><td class="metric">Sea / lake temp</td><td class="cell"><strong>76°F</strong><span class="sub">swim-friendly</span></td><td class="cell"><strong>67°F</strong><span class="sub">brisk Atlantic</span></td><td class="cell"><strong>72°F</strong><span class="sub">glassy bay</span></td><td class="cell"><strong>73°F</strong><span class="sub">warmest sea</span></td><td class="cell"><strong>75°F lake</strong><span class="sub">Europe's cleanest</span></td><td class="cell"><strong>79°F</strong><span class="sub">warm Med</span></td></tr>
+          <tr><td class="metric">Heatwave risk</td><td class="cell"><strong>Real</strong><span class="sub">interior Provence bakes</span></td><td class="cell"><strong>Moderate</strong><span class="sub">sea breeze refuge</span></td><td class="cell"><strong>Low</strong><span class="sub">Bay of Biscay</span></td><td class="cell"><strong>None</strong><span class="sub">trade winds</span></td><td class="cell"><strong>Low</strong><span class="sub">Alpine elevation</span></td><td class="cell"><strong>Real</strong><span class="sub">peak Med summer</span></td></tr>
+          <tr><td class="metric">Flight from LAX</td><td class="cell"><strong>~11h + 1h</strong><span class="sub">AF65 + AF6004</span></td><td class="cell"><strong>~11h nonstop</strong><span class="sub">TAP TP224</span></td><td class="cell"><strong>~11h + 1h</strong><span class="sub">Iberia via MAD</span></td><td class="cell"><strong>~11h + 2h</strong><span class="sub">TAP via LIS</span></td><td class="cell"><strong>~11h + 1h</strong><span class="sub">Swiss via ZRH</span></td><td class="cell"><strong>~11h + 1.5h</strong><span class="sub">Iberia via MAD/BCN</span></td></tr>
+          <tr><td class="metric">Flight RT cost</td><td class="cell"><strong>$700–$950</strong></td><td class="cell"><strong>$1,000–$1,400</strong></td><td class="cell"><strong>$1,000–$1,400</strong></td><td class="cell"><strong>$1,150–$1,600</strong></td><td class="cell"><strong>$900–$1,400</strong></td><td class="cell"><strong>est. $1,000–$1,500</strong><span class="sub">verify before booking</span></td></tr>
+          <tr><td class="metric">Michelin nearby</td><td class="cell"><strong>★★★ ×1</strong><span class="sub">La Villa Madie</span></td><td class="cell"><strong>★★ ×1, ★ ×3</strong><span class="sub">+ LIS day-trip</span></td><td class="cell"><strong>★★★ ×3, ★★ ×2</strong><span class="sub">+ world #1 Etxebarri</span></td><td class="cell"><strong>★★ ×1, ★ ×2</strong><span class="sub">island scene</span></td><td class="cell"><strong>★★★ ×1, ★★ ×2</strong><span class="sub">Clos · Conte · Père Bise</span></td><td class="cell"><strong>★★ ×1, ★ ×9</strong><span class="sub">Voro + DINS + Marc Fosh + 7 more</span></td></tr>
+          <tr><td class="metric">Food character</td><td class="cell"><strong>Seafood-heavy</strong><span class="sub">bouillabaisse capital · port fish · oysters</span></td><td class="cell"><strong>Fish-forward</strong><span class="sub">bacalhau · sardines · octopus · sushi (Kappo)</span></td><td class="cell"><strong>Meat-forward ✓</strong><span class="sub">txuleta steak · cheese · foie · Etxebarri beef</span></td><td class="cell"><strong>Mixed / meaty ✓</strong><span class="sub">espetada beef · lamb · poncha · some fish</span></td><td class="cell"><strong>Cheese / cured / bread ✓✓</strong><span class="sub">Reblochon · Beaufort · charcuterie · tartiflette · lake fish</span></td><td class="cell"><strong>Meat-forward ✓</strong><span class="sub">sobrasada · lechona · Sóller lamb · Manchego</span></td></tr>
+          <tr><td class="metric">Signature dish</td><td class="cell">Bouillabaisse · grilled fish</td><td class="cell">Bacalhau à brás · grilled sardines</td><td class="cell">Txuleta + pintxos crawl</td><td class="cell">Espetada · bolo do caco</td><td class="cell">Tartiflette · fondue Savoyarde · Reblochon</td><td class="cell">Sobrasada · lechona · pa amb oli</td></tr>
+          <tr><td class="metric">Water sports</td><td class="cell"><strong>Boat-focused</strong><span class="sub">RIB Calanques · light swim</span></td><td class="cell"><strong>World-class</strong><span class="sub">wind/kite/surf/sail</span></td><td class="cell"><strong>Bay-focused</strong><span class="sub">surf Zurriola · SUP Concha</span></td><td class="cell"><strong>Ocean-focused</strong><span class="sub">dive Garajau · whale schooner</span></td><td class="cell"><strong>Lake + air</strong><span class="sub">sail · SUP · swim 75°F · paragliding</span></td><td class="cell"><strong>Sea + sail</strong><span class="sub">Sa Calobra · Cap de Formentor · cliff jumping</span></td></tr>
+          <tr><td class="metric">Crime &amp; safety</td><td class="cell"><strong>Low</strong><span class="sub">small town · low petty crime</span></td><td class="cell"><strong>Moderate</strong><span class="sub">Lisbon-area pickpockets · Cascais lower</span></td><td class="cell"><strong>Moderate</strong><span class="sub">Aste Nagusia crowds = pickpockets</span></td><td class="cell"><strong>Very low</strong><span class="sub">crime index 19.8 · safest</span></td><td class="cell"><strong>Very low</strong><span class="sub">low-density Alpine town · safest tied</span></td><td class="cell"><strong>Moderate</strong><span class="sub">Palma pickpockets · Deià base low</span></td></tr>
+          <tr><td class="metric">Hotel band</td><td class="cell">$350–$1,100</td><td class="cell">$380–$1,000</td><td class="cell">$380–$975</td><td class="cell">$410–$1,200</td><td class="cell">$280–$1,200</td><td class="cell">$400–$3,500<span class="sub">Belmond peak ≈ $3,300</span></td></tr>
+          <tr><td class="metric">Single-base?</td><td class="cell"><strong>Yes (Cassis)</strong></td><td class="cell"><strong>Yes (Cascais)</strong></td><td class="cell"><strong>Split</strong><span class="sub">Maria Cristina + Akelarre</span></td><td class="cell"><strong>Yes (Funchal)</strong></td><td class="cell"><strong>Yes (lake-side)</strong></td><td class="cell"><strong>Yes (Deià)</strong></td></tr>
+          <tr><td class="metric">Dated event #1</td><td class="cell">☄️ Perseids Cap Canaille</td><td class="cell">☄️ Perseids Cabo da Roca</td><td class="cell">🎆 Aste Nagusia fireworks ×4</td><td class="cell">☄️ Perseids above cloud sea</td><td class="cell">☄️ Perseids Col de la Forclaz</td><td class="cell">☄️ Perseids Cap de Formentor</td></tr>
+          <tr><td class="metric">Dated event #2</td><td class="cell">🎆 Aug 15 Cassis fireworks</td><td class="cell">🎆 Aug 15 Marina fireworks</td><td class="cell">🎆 Aug 15 Aste Nagusia FINALE</td><td class="cell">⛪ Aug 15 Sé procession + fireworks</td><td class="cell">⛪ Aug 15 Basilique procession + Classic Festival</td><td class="cell">⛪ Aug 15 Assumption processions<span class="sub">island-wide · public holiday</span></td></tr>
+          <tr><td class="metric">Crowd level</td><td class="cell">High</td><td class="cell">High</td><td class="cell"><strong>Very high</strong><span class="sub">Aste Nagusia week</span></td><td class="cell">High</td><td class="cell"><strong>Moderate</strong><span class="sub">Fête du Lac just missed</span></td><td class="cell"><strong>Very high</strong><span class="sub">peak Med season</span></td></tr>
+          <tr><td class="metric">Standard tier total</td><td class="cell"><strong>$9,580</strong></td><td class="cell"><strong>$9,815</strong></td><td class="cell"><strong>$11,254</strong></td><td class="cell"><strong>$10,748</strong></td><td class="cell"><strong>$11,160</strong></td><td class="cell"><strong>$17,050</strong><span class="sub">Belmond peak drives it</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="opt-section alt" id="proscons">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Honest Trade-offs</span>
+      <h2>Pros &amp; Cons, Per Option</h2>
+      <p>What's genuinely great about each, and what's the real cost. No marketing copy.</p>
+    </div>
+
+    <div class="pros-cons-grid">
+
+      <div class="pc-card provence">
+        <h3>Cassis &amp; the Calanques</h3>
+        <div class="sub">Option A · Provence · the booked plan</div>
+        <h4 class="pros">Pros</h4>
+        <ul class="pros">
+          <li>Most-complete plan — booked, vetted, vendors lined up</li>
+          <li>One hotel for all 5 nights (no mid-week packing)</li>
+          <li>La Villa Madie ★★★ is the marquee dining experience</li>
+          <li>Cassis whites + Bandol reds within 30 min — walkable wineries</li>
+          <li>Daytime AF65 LAX→CDG lands you at lunch in Cassis, not midnight</li>
+          <li>Perseids at Cap Canaille = France's tallest sea cliff, 1,300 ft</li>
+          <li>Aug 15 = the village's biggest party of the year (fireworks + ball)</li>
+          <li>Closest to "classic European summer" fantasy</li>
+        </ul>
+        <h4 class="cons">Cons</h4>
+        <ul class="cons">
+          <li><strong>Seafood-dominated cuisine</strong> — bouillabaisse capital, every harbor table is fish-forward; thin if you're cooler on shellfish or want more red meat</li>
+          <li>Heatwave-exposed (Provence interior hit 104°F+ in 2025)</li>
+          <li>Cassis is small — 8,000 people, every restaurant booked in August</li>
+          <li>No real water sports (boat tours yes, but no surf/kite/dive scene)</li>
+          <li>Only 1× Michelin in town (other tables are atmospheric, not starred)</li>
+          <li>Crowds peak in August — narrow harbor streets, full beaches</li>
+          <li>Highway 559 / Route des Crêtes can be a parking lot weekends</li>
+        </ul>
+        <a href="./aug_17_provence.html" class="footer-link">Full plan →</a>
+      </div>
+
+      <div class="pc-card cascais">
+        <h3>Cascais &amp; the Guincho Coast</h3>
+        <div class="sub">Option B · Portugal · activity-rich Atlantic</div>
+        <h4 class="pros">Pros</h4>
+        <ul class="pros">
+          <li>Only US nonstop in the comparison (TAP TP224 LAX→LIS)</li>
+          <li>Highest activity variety: wind/kite/surf/sail + Sintra palaces + Lisbon culture</li>
+          <li>Atlantic upwelling keeps coast 15–22°F cooler than inland Lisbon</li>
+          <li>Lisbon 30 min away for Belcanto ★★ — capital city night</li>
+          <li>Sintra-Cascais Natural Park hiking on the doorstep</li>
+          <li>Setúbal Moscatel + Colares dune-vine wines = unique tastings</li>
+          <li>Cabo da Roca — westernmost point of mainland Europe — perfect dark sky for Perseids</li>
+          <li>Lower hotel cost than Basque/Madeira at top tier</li>
+        </ul>
+        <h4 class="cons">Cons</h4>
+        <ul class="cons">
+          <li><strong>Fish-forward Portuguese cuisine</strong> — coast = bacalhau, sardines, octopus, prawns; Kappo ★ is omakase sushi; land protein takes a back seat</li>
+          <li>Coldest sea (67°F) — brisk swimming even in August</li>
+          <li>No 3-Michelin star in town (Belcanto 2★ is the apex in Lisbon)</li>
+          <li>Heatwave risk if 2025-style summer repeats (Lisbon hit 113°F)</li>
+          <li>Guincho beach is too dangerous to swim casually (currents + wind)</li>
+          <li>More driving/Uber than San Seb (less concentrated)</li>
+          <li>Peak August crowds across Lisbon + Sintra (Pena Palace especially)</li>
+        </ul>
+        <a href="./aug_17_cascais.html" class="footer-link">Full plan →</a>
+      </div>
+
+      <div class="pc-card basque">
+        <h3>San Sebastián &amp; Basque Coast</h3>
+        <div class="sub">Option C · Spain · food capital + fireworks</div>
+        <h4 class="pros">Pros</h4>
+        <ul class="pros">
+          <li>World's highest Michelin density (3× ★★★ within 12 mi)</li>
+          <li><strong>Least seafood-dependent</strong> of the four — txuleta steak is the regional signature, plus Idiazabal sheep cheese, foie, Iberico, and Etxebarri's world-class wood-fire beef. Pintxos crawl is mostly meat + cheese + wine</li>
+          <li><strong>Lands inside Aste Nagusia</strong> — international fireworks every night ×4, including the finale</li>
+          <li>Coolest reliable climate (77°F high) — no heatwave risk</li>
+          <li>Best sea for swimming + kayak (72°F, La Concha is glassy)</li>
+          <li>World-best pintxos scene in Parte Vieja — singular experience</li>
+          <li>Day-trip range to Bilbao Guggenheim + Azurmendi ★★★</li>
+          <li>Rioja Alavesa wineries 90 min south — Calatrava + Gehry architecture</li>
+          <li>Etxebarri ★ in Atxondo (#1 World's 50 Best 2023) within day-trip reach</li>
+        </ul>
+        <h4 class="cons">Cons</h4>
+        <ul class="cons">
+          <li><strong>Most expensive Standard tier ($11,254)</strong> — 3-stars stack up</li>
+          <li>No US nonstop — 1-stop via MAD/FRA/LHR</li>
+          <li>Aste Nagusia = peak crowds, peak prices, all hotels gated 90+ days</li>
+          <li>Hotel split (Maria Cristina + Akelarre) = packing mid-week</li>
+          <li>Aug 15 Assumption + fireworks finale = restaurant insanity</li>
+          <li>Less swimmable beaches than Cascais/Madeira</li>
+          <li>Rioja day requires $750+ private driver</li>
+        </ul>
+        <a href="./aug_17_san_sebastian.html" class="footer-link">Full plan →</a>
+      </div>
+
+      <div class="pc-card madeira">
+        <h3>Madeira &amp; the Funchal Cliffs</h3>
+        <div class="sub">Option D · Portugal · Atlantic island</div>
+        <h4 class="pros">Pros</h4>
+        <ul class="pros">
+          <li><strong>Zero heatwave risk</strong> — trade winds + Canary Current lock 75–80°F</li>
+          <li>Most singular Perseids vantage on the planet (5,965 ft above the cloud sea)</li>
+          <li><strong>Less seafood-dependent than the Iberian coast</strong> — espetada (beef on laurel skewers) is the local signature, plus lamb, bolo do caco bread, poncha; fish exists but doesn't dominate</li>
+          <li>Warmest swim sea (73°F) at the most stable temperature</li>
+          <li>~95% whale + dolphin sighting rate · sailing schooner tour available</li>
+          <li>Garajau Marine Reserve = world-class dive (hand-feedable groupers)</li>
+          <li>Belmond Reid's Palace = 1891 grand-dame heritage stay (Churchill's spot)</li>
+          <li>Most dramatic landscape (volcanic peaks, levadas, UNESCO laurel forest, lava pools)</li>
+          <li>Reid's half-board credit reduces effective restaurant cost ~$120/day</li>
+        </ul>
+        <h4 class="cons">Cons</h4>
+        <ul class="cons">
+          <li>1-stop required (LAX→LIS→FNC) — longest door-to-door (~15h)</li>
+          <li>No sandy beaches in Funchal — cliff pools/lidos only</li>
+          <li>Only 1× ★★ (Il Gallo d'Oro) + 2× ★ — lower food density than Basque</li>
+          <li>Pico Arieiro pre-dawn requires fitness + commitment</li>
+          <li>Madeira Wine Festival (Aug 27) opens 10 days <em>after</em> you leave</li>
+          <li>Surf is small in August (winter Dec–Feb is the big-wave season)</li>
+          <li>Most expensive flight band ($1,150–$1,600 RT)</li>
+        </ul>
+        <a href="./aug_17_madeira.html" class="footer-link">Full plan →</a>
+      </div>
+
+      <div class="pc-card annecy">
+        <h3>Annecy &amp; the Lake</h3>
+        <div class="sub">Option E · France · French Alps · the savory pick</div>
+        <h4 class="pros">Pros</h4>
+        <ul class="pros">
+          <li><strong>Least seafood of all five</strong> — the trip is built on Reblochon, Beaufort, Tomme, charcuterie, tartiflette, fondue, crusty bread, Vin de Savoie whites; lake fish (féra, omble) is the only "fish" and it's freshwater + light</li>
+          <li>Three serious Michelin tables: <strong>Le Clos des Sens ★★★</strong> (lacustre + vegetable), <strong>Yoann Conte ★★</strong> at La Maison Bleue, <strong>Père Bise ★★</strong> in Talloires</li>
+          <li>Europe's cleanest lake — <strong>75°F clear water</strong> for swim, SUP, sailing, paragliding off Col de la Forclaz at sunset</li>
+          <li>Cool Alpine climate — 76–82°F highs, <strong>50–59°F nights</strong>, no heatwave risk thanks to elevation</li>
+          <li>Day-trip to <strong>Chamonix Mont Blanc</strong> — Aiguille du Midi cable car to 12,605 ft</li>
+          <li>Cheese country at peak alpage season — taste summer-milk Reblochon and Beaufort d'été straight from the producers</li>
+          <li>Very low crime — quiet Alpine town, lowest tourist-petty-crime profile tied with Madeira</li>
+          <li>Romantic old town ("Venice of the Alps") with canals, Palais de l'Île, and the most-photographed lakeshore in France</li>
+        </ul>
+        <h4 class="cons">Cons</h4>
+        <ul class="cons">
+          <li>No US nonstop — 1-stop via ZRH (Swiss), MUC/FRA (Lufthansa), or CDG (Air France)</li>
+          <li>Fête du Lac (the big lake fireworks festival) is Aug 1, 2026 — <strong>10 days before your trip starts</strong>. You miss it.</li>
+          <li>Standard tier $11,160 — slightly higher than Provence/Cascais/Madeira (three 2/3-star meals stack up)</li>
+          <li>Lake fish is the only "fish" — if you'd actually wanted sea bream once, you're out of luck</li>
+          <li>Le Clos des Sens lost Laurent Petit at end of 2022 — Franck Derouet now holds the kitchen (concept unchanged but the founder is gone)</li>
+          <li>Less "active" water-sports menu than Cascais (no kite, no surf)</li>
+        </ul>
+        <a href="./aug_17_annecy.html" class="footer-link">Full plan →</a>
+      </div>
+
+      <div class="pc-card mallorca">
+        <h3>Mallorca · Deià &amp; the Tramuntana</h3>
+        <div class="sub">Option F · Spain · Balearic island · meat-Spain pick</div>
+        <h4 class="pros">Pros</h4>
+        <ul class="pros">
+          <li><strong>Meat-forward Spanish cooking</strong> — sobrasada cured pork, lechona (Mallorcan suckling pig), Sóller lamb, pa amb oli with Manchego/Mahón cheese; the savory-Spain pick that <em>isn't</em> Basque</li>
+          <li><strong>Voro ★★</strong> in Canyamel (Álvaro Salazar) is the island's only 2-star — plus <strong>★ ×9</strong> across the island (DINS Santi Taura, Marc Fosh, Es Fum, Andreu Genestra, Maca de Castro, Zaranda, Béns d'Avall, Fusión 19, Sa Clastra) per the 2026 Michelin guide</li>
+          <li><strong>Belmond La Residencia</strong> in Deià — 16th-century hillside hideaway, Robert Graves' village, Tramuntana UNESCO landscape, two pools, on-site spa</li>
+          <li>Tramuntana mountain coast for hikes (GR-221 dry-stone trail), Sa Calobra serpentine drive + sea-caves, Cap de Formentor lighthouse at the northern tip</li>
+          <li>Palma cathedral + Castell de Bellver + arabic baths for the cultural day (35 min from Deià)</li>
+          <li>Sóller village + 1912 wooden tram to Port de Sóller for the village-and-harbor day</li>
+          <li>Lower altitude than Annecy = warm sea swimming (79°F Mediterranean) — boats, snorkel, cliff dives</li>
+        </ul>
+        <h4 class="cons">Cons</h4>
+        <ul class="cons">
+          <li><strong>Hottest of the six (85–90°F highs)</strong> — needs strict coastal/AC base, midday is for the pool not the road; heatwave-exposed</li>
+          <li><strong>Peak-Med crowds</strong> — Mallorca sees ~13M visitors/year concentrated in summer; Palma/coastal-resort areas crushed in August</li>
+          <li>Palma has documented petty-crime in tourist zones — base in Deià to avoid most of it</li>
+          <li>No US nonstop — 1-stop via MAD or BCN (Iberia), or Frankfurt/Munich (Lufthansa); ~14h door-to-door</li>
+          <li>Wine is the weakest of the six — Binissalem &amp; Pla i Llevant DOs are real but small (~70 producers total) and most don't export at scale</li>
+          <li>August 15 is a public holiday with island-wide processions — restaurants packed, beach roads jammed; no fireworks tradition as central as Cassis/Aste Nagusia</li>
+          <li>Belmond La Residencia peak-August rooms hit $3,000–$3,500/night — pushes Standard tier well above Provence baseline</li>
+          <li>Less singular landscape than Madeira (no above-cloud Perseids; the cloud-pool spectacle isn't on offer here)</li>
+        </ul>
+        <a href="./aug_17_mallorca.html" class="footer-link">Full plan →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="opt-section" id="budgets">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Total Cost</span>
+      <h2>Budget Comparison · Three Tiers</h2>
+      <p>All-in for two travelers, USD. Each option's full plan has the line-item breakdown — flights, hotel, restaurants, activities, wine, lunches. Standard is the recommended tier on each.</p>
+    </div>
+
+    <div class="budget-block">
+      <div class="head">
+        <span class="eyebrow">Side-by-Side</span>
+        <h3>Tier Totals · All-In</h3>
+        <p>What the trip actually costs at three spending levels. Standard column is the recommended plan on each.</p>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th class="dim">Tier</th>
+            <th class="col provence-h">Provence</th>
+            <th class="col cascais-h">Cascais</th>
+            <th class="col basque-h">Basque</th>
+            <th class="col madeira-h">Madeira</th>
+            <th class="col annecy-h">Annecy</th>
+            <th class="col mallorca-h">Mallorca</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tier-label">Budget</td>
+            <td class="amt">$5,430</td>
+            <td class="amt">$5,740</td>
+            <td class="amt">$5,314</td>
+            <td class="amt">$5,908</td>
+            <td class="amt">$4,890</td>
+            <td class="amt">$5,330</td>
+          </tr>
+          <tr>
+            <td class="tier-label">Standard ★</td>
+            <td class="amt std">$9,580</td>
+            <td class="amt std">$9,815</td>
+            <td class="amt std">$11,254</td>
+            <td class="amt std">$10,748</td>
+            <td class="amt std">$11,160</td>
+            <td class="amt std">$17,050</td>
+          </tr>
+          <tr>
+            <td class="tier-label">Splurge</td>
+            <td class="amt">$15,290</td>
+            <td class="amt">$15,330</td>
+            <td class="amt">$18,587</td>
+            <td class="amt">$16,234</td>
+            <td class="amt">$14,440</td>
+            <td class="amt">$28,000</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="tier-label totals">Δ vs Provence Standard</td>
+            <td class="amt">—</td>
+            <td class="amt">+$235</td>
+            <td class="amt">+$1,674</td>
+            <td class="amt">+$1,168</td>
+            <td class="amt">+$1,580</td>
+            <td class="amt">+$7,470</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <p class="footnote">Provence (booked plan) is the price floor at Standard. Cascais costs $235 more — same level. Basque costs $1,674 more (three 3-stars + premium hotel split). Madeira costs $1,168 more (longer flight + Reid's Palace premium, partially offset by HB credit). Annecy costs $1,580 more — pays for the 3× Michelin meals (★★★ + ★★ + ★★) at the lowest hotel cost of the 5-star options. <strong>Mallorca Standard at $17,050 is the most-expensive Standard by ~$5,800</strong> — Belmond La Residencia peak-August rooms ($2,000–$3,500/night) drive it. Swap Belmond for Hotel Es Molí (same village, ~70% cheaper) and Standard drops to ~$8,200 — below Provence. <a href="./aug_17_mallorca.html#book" style="color: var(--cascais-terra);">See full Mallorca budget breakdown →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="opt-section alt" id="verdict">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Decision Framework</span>
+      <h2>If/Then · Pick By What You Value</h2>
+      <p>Four "if/then" lenses that should drive the call. The verdict is below.</p>
+    </div>
+
+    <div class="framework">
+
+      <div class="if-then">
+
+        <div class="ift-card provence">
+          <h4>If you value the booked-in baseline</h4>
+          <p>The vendors are lined up, the AF65 lands at lunch, La Villa Madie ★★★ is reserved. Lowest activation energy. The trip you'll actually take if you don't decide.</p>
+          <div class="pick">→ Pick Provence</div>
+        </div>
+
+        <div class="ift-card cascais">
+          <h4>If you value water sports + activity variety</h4>
+          <p>Guincho is one of the world's best wind/kite spots; Sintra-Cascais Natural Park is at your doorstep; Lisbon is 30 min away. Plus the only US nonstop in the comparison.</p>
+          <div class="pick">→ Pick Cascais</div>
+        </div>
+
+        <div class="ift-card basque">
+          <h4>If you value food + fireworks</h4>
+          <p>Three 3-stars within 12 miles, the best pintxos scene in the world, and Aste Nagusia fireworks every night — including the finale on Aug 15. The unmatched gastronomic week.</p>
+          <div class="pick">→ Pick San Sebastián</div>
+        </div>
+
+        <div class="ift-card madeira">
+          <h4>If you value weather certainty + landscape</h4>
+          <p>Cannot heatwave. Perseids viewed from above the cloud sea. Whales 95%. Garajau dive. Belmond Reid's. The singular landscape week with the safest climate bet.</p>
+          <div class="pick">→ Pick Madeira</div>
+        </div>
+
+        <div class="ift-card annecy">
+          <h4>If you value cheese, charcuterie, bread + cool Alpine evenings</h4>
+          <p>Annecy's food culture is built on Reblochon, Beaufort, Tomme, charcuterie, tartiflette, fondue, crusty bread, Vin de Savoie. Three Michelin tables (★★★ + ★★ + ★★), Europe's cleanest lake at 75°F, paragliding off Col de la Forclaz, Aiguille du Midi day trip, cool 50–59°F nights, low crime. <strong>Scores 38/39 — currently the matrix winner.</strong></p>
+          <div class="pick">→ Pick Annecy</div>
+        </div>
+
+        <div class="ift-card mallorca">
+          <h4>If you value Spanish meat tradition + Mediterranean island base</h4>
+          <p>Sobrasada, lechona, Sóller lamb, Manchego — meat-Spain without the Aste Nagusia crowds. Voro ★★ in Canyamel + 9× ★ across the island per the 2026 guide. Belmond La Residencia in Deià for a Tramuntana hillside base, warm 79°F Med swim, Sa Calobra and Cap de Formentor for drama. The hot, busy peak-Med pick — needs an AC base and patience with crowds.</p>
+          <div class="pick">→ Pick Mallorca</div>
+        </div>
+
+      </div>
+
+      <div class="verdict-block">
+        <span class="eyebrow">The Verdict V2 · Shifted Dates · 2026-06-04</span>
+        <h3>The Recommendation</h3>
+        <p>
+          <strong>Cascais leads at 37.5/39</strong> — the biggest single mover from the Aug 11–17 window. The shift +6 days catches <em>Festas do Mar Cascais Aug 20–23, 2026</em> (4 of 5 nights = nightly free outdoor concerts at Praia da Ribeira + Largo da Camara Municipal until 02:00), <em>Bairro Alto Lisboa crowds back from holiday</em>, <em>Lux Frágil at 3-night peak</em>, and Belcanto ★★ + Henrique Sá Pessoa ★★ + Kappo ★ all in service. The <em>only</em> destination to gain points by shifting. Bairro Alto Hotel (3 nights Lisbon) + Farol Hotel Cascais (2 nights ocean) at $11,690 Standard.
+        </p>
+        <p>
+          <strong>Annecy (35.5, +1.5 vs Aug 11–17)</strong> — the second-biggest gainer. <em>Imperial Annecy Festival Aug 18–28</em> opens 1 day into the trip and runs the full week, fixing the nightlife-axis collapse that pulled the old leader to 4th. Three Michelin tables in service (Le Clos des Sens ★★★, La Ciboulette ★★, La Rotonde ★★). Annecy Le Vieux beach + Doussard kitesurf + Aiguille du Midi cable car + paragliding off Col de la Forclaz. Now the high-end contender if pure-nightlife isn't the dominant axis. Joann-seafood remains the strongest in the field.
+        </p>
+        <p>
+          <strong>Mallorca (34.5)</strong> — held flat. Festes de la Mare de Déu dels Àngels in Pollença Aug 19 + Sineu Wednesday market Aug 19 + Pollença Patron Saint Aug 22 + Voro ★★ Canyamel + 9× ★ on island. <strong>Value Pair $11,690 Standard</strong> (Es Princep Palma 3 nights + Es Molí Deià 2 nights) replaces the $17K Belmond marquee. Palma nightlife (Bar Abaco, Santa Catalina rooftops, Tito's BCM) + beach clubs (Purobeach, Nikki Beach). The Aug 15 Mare de Déu d'Agost forced-Palma-day risk that hurt the Aug 11–17 version is now <em>before</em> the trip — clean win.
+        </p>
+        <p>
+          <strong>Côte d'Azur (34 w/ Aug 24 extension, 32 without)</strong> — recommended extending to Aug 24 to catch the <em>Cannes International Fireworks Festival closing night Aug 24, 22:00</em>. 3× ★★★ within 90 min — Louis XV (Ducasse, Monte-Carlo), La Vague d'Or (Donckele, Saint-Tropez), Mirazur (Colagreco, Menton). Les Caves du Roy + Jimmy'z + Bâoli for late nights. Pre-budget-cap version was $25–40K; the $9–15K Standard now anchors on Hôtel Negresco Nice (5 nights base, no Eden-Roc/Cheval Blanc). Tight but workable.
+        </p>
+        <p>
+          <strong>Hvar + Split (34, $9,650 cheapest of all 9)</strong> — Dalmatian sailing capital. Pakleni Islands sail + Vis Blue Cave + Bol/Brač + Hvar Town nightlife. <em>Jelsa Wine Festival Aug 20–30</em> opens during the trip + <em>Hvar Summer Festival</em> classical concerts ongoing. Carpe Diem until 5 AM, with caveats — Hvar 2026 noise crackdown enforces 02:00 cuts in some venues. Krug ★ Split (book 30-day-midnight Resy). Tourist crush still real (20K daily on 11K-resident island).
+        </p>
+        <p>
+          <strong>Madeira (33, +0.5)</strong> — <em>Funchal City Day Aug 21</em> adds a nightlife bump the Aug 11–17 version didn't have. Perseids above the cloud sea at Pico do Arieiro remains the unique anchor — peak Aug 12–13 is missed by both windows but the meteor shower runs through Aug 24. Il Gallo d'Oro ★★ + William ★ + Desarma ★. Belmond Reid's Palace ($11K Standard). Wine festival starts Aug 27 — still missed.
+        </p>
+        <p>
+          <strong>Mykonos (33 if vibe-aligned, 28–31 if not) — ⚠️ XLSIOR Festival Aug 20–25, 2026</strong> overlaps 5 of 5 nights. The world's largest gay circuit festival is amazing energy if you're into it; it dominates Cavo Paradiso, Jackie O', and several beach clubs and tips the island heavily LGBT-celebratory all week. Vibe-aligned = 33. Not aligned = drop the nightlife axis 2 points → 28–31 and reconsider. No Michelin stars on island. Meltemi wind cancels 30%+ of boat days. Belvedere Hotel base, ~$13–14K Standard top-of-band.
+        </p>
+        <p>
+          <strong>San Sebastián (30, collapsed −6 from Aug 11–17 leader) — DO NOT BOOK FOR THIS WINDOW.</strong> <em>Aste Nagusia ends Aug 15</em> — the festival that anchored the entire Aug 11–17 case is <em>over</em> 2 days before this trip starts. No nightly fireworks. No txosnas on the Boulevard. Pintxos crawl persists but the city is in post-festival deflation week. Michelin density unchanged (Arzak ★★★, Akelarre ★★★, Berasategui ★★★ still bookable) but the nightlife + activity axes both drop. If you want San Sebastián, do the Aug 11–17 window.
+        </p>
+        <p>
+          <strong>Provence (30, ties for last) — also weaker this window.</strong> Bandol Aoûtiennes restructured for 2026 (the Aug 15 weekend the original itinerary anchored on is gone). La Villa Madie ★★★ + L'Eden Boat still locked. Cassis remains 21:30-last-seating. Decision-fatigue default — only pick this if you're <em>literally</em> the booked baseline holder and don't want to switch.
+        </p>
+        <p>
+          <strong>The new short list for Aug 17–23:</strong> <em>Cascais (37.5)</em> by a wide margin — Festas do Mar 4-night overlap + Lisbon Michelin + TAP nonstop. <em>Annecy (35.5)</em> if low-key sophistication beats club energy. <em>Mallorca Value Pair (34.5)</em> if Med beach + nightlife at $11.7K is the brief. <strong>Skip San Sebastián for this window</strong> — wait until Aug 11–17 if it's the destination. <strong>Decide by July 1</strong> to keep Belcanto ★★, Le Clos des Sens ★★★, Voro ★★, Es Princep, Farol Hotel on the table.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Built for Mark · August 17–23, 2026 (V2 · shifted +6 days) · LAX origin · Prices in USD, subject to live booking · <a href="./aug_11_europe.html">compare Aug 11–17 version</a> · <a href="../index.html">all trips</a></p>
+  </div>
+</footer>
+
+<script>
+/* Floating sticky table headers — vertical sticky on page scroll for wide tables that need horizontal scroll. */
+(function() {
+  'use strict';
+
+  function topnavBottom() {
+    var tn = document.querySelector('.topnav');
+    if (!tn) return 0;
+    var r = tn.getBoundingClientRect();
+    return Math.max(0, r.bottom);
+  }
+
+  function setupSticky(table) {
+    var wrap = table.closest('.scoring-wrap, .compare-table');
+    var thead = table.querySelector('thead');
+    if (!wrap || !thead) return;
+
+    // Outer fixed clip container
+    var stick = document.createElement('div');
+    stick.className = 'floating-thead';
+
+    // Inner table clone — only the thead
+    var tbl = document.createElement('table');
+    tbl.className = table.className;
+    tbl.style.cssText = 'margin:0;border-collapse:separate;border-spacing:0;table-layout:fixed';
+
+    var cloneThead = thead.cloneNode(true);
+    tbl.appendChild(cloneThead);
+    stick.appendChild(tbl);
+    document.body.appendChild(stick);
+
+    // First-column header in clone — counter-translated to act sticky-left
+    var stickyLeftHeader = cloneThead.querySelector('.label-col, .dim');
+    if (stickyLeftHeader) {
+      stickyLeftHeader.style.position = 'relative';
+      stickyLeftHeader.style.zIndex = '2';
+    }
+
+    function syncWidths() {
+      var origs = thead.querySelectorAll('th');
+      var clones = cloneThead.querySelectorAll('th');
+      var totalWidth = 0;
+      origs.forEach(function(th, i) {
+        var w = th.offsetWidth;
+        totalWidth += w;
+        if (clones[i]) {
+          clones[i].style.width = w + 'px';
+          clones[i].style.minWidth = w + 'px';
+          clones[i].style.maxWidth = w + 'px';
+          clones[i].style.boxSizing = 'border-box';
+        }
+      });
+      tbl.style.width = Math.max(totalWidth, table.offsetWidth) + 'px';
+      tbl.style.minWidth = tbl.style.width;
+    }
+
+    function positionClone() {
+      var wr = wrap.getBoundingClientRect();
+      stick.style.left = Math.max(0, wr.left) + 'px';
+      stick.style.width = wr.width + 'px';
+      // Translate the whole inner table to match wrap's horizontal scroll
+      tbl.style.transform = 'translateX(' + (-wrap.scrollLeft) + 'px)';
+      // Counter-translate first column so it appears sticky-left
+      if (stickyLeftHeader) {
+        stickyLeftHeader.style.transform = 'translateX(' + wrap.scrollLeft + 'px)';
+      }
+    }
+
+    function update() {
+      var offsetTop = topnavBottom();
+      var r = table.getBoundingClientRect();
+      var show = r.top < offsetTop && r.bottom > offsetTop + 30;
+
+      if (show) {
+        if (stick.style.display === 'none' || !stick.style.display) {
+          stick.style.display = 'block';
+        }
+        stick.style.top = offsetTop + 'px';
+        syncWidths();
+        positionClone();
+      } else {
+        stick.style.display = 'none';
+      }
+    }
+
+    var raf = null;
+    function schedule() {
+      if (raf !== null) return;
+      raf = requestAnimationFrame(function() { update(); raf = null; });
+    }
+
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', function() { syncWidths(); schedule(); });
+    wrap.addEventListener('scroll', function() {
+      // Just retranslate — no need to recheck visibility
+      if (stick.style.display === 'block') positionClone();
+    }, { passive: true });
+
+    // Initial run after layout settles
+    setTimeout(function() { syncWidths(); update(); }, 50);
+  }
+
+  function init() {
+    var tables = document.querySelectorAll('.scoring-table, .compare-table > table');
+    tables.forEach(setupSticky);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+</body>
+</html>

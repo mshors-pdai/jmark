@@ -33,6 +33,16 @@ jmark/
 │   ├── aug_11_mykonos.html          # Trip 03 · Option G — Cycladic nightlife · new score 32 · NEW added 2026-06-04
 │   ├── aug_11_hvar.html             # Trip 03 · Option H — Dalmatian sailing · new score 34 · NEW added 2026-06-04
 │   ├── aug_11_cote_dazur.html       # Trip 03 · Option I — French Riviera grand · TIED LEADER 36 · NEW added 2026-06-04
+│   ├── aug_17_europe.html           # Trip No. 03-V2 HUB — same 9 options shifted +6 days, Aug 17-23 · $9-15K band cap · Cascais NEW LEADER 37.5
+│   ├── aug_17_provence.html         # Trip 03-V2 · Option A-2 — booked baseline shifted · score 30 (-1.5; Bandol Aoûtiennes Aug 15 past)
+│   ├── aug_17_cascais.html          # Trip 03-V2 · Option B-2 — NEW LEADER 37.5 (+2.5; Festas do Mar Aug 20-23 4-night overlap)
+│   ├── aug_17_san_sebastian.html    # Trip 03-V2 · Option C-2 — COLLAPSED to 30 (-6; Aste Nagusia past) · warns to pick Aug 11 version instead
+│   ├── aug_17_madeira.html          # Trip 03-V2 · Option D-2 — score 33 (+0.5; Funchal City Day Aug 21)
+│   ├── aug_17_annecy.html           # Trip 03-V2 · Option E-2 — score 35.5 (+1.5; Imperial Annecy Festival Aug 18-28 fixes nightlife)
+│   ├── aug_17_mallorca.html         # Trip 03-V2 · Option F-2 — score 34.5 unchanged · VALUE PAIR $11,690 ($17K Marquee replaced for band)
+│   ├── aug_17_mykonos.html          # Trip 03-V2 · Option G-2 — score 33 vibe-aligned / 28-31 not (⚠️ XLSIOR Aug 20-25 overlap)
+│   ├── aug_17_hvar.html             # Trip 03-V2 · Option H-2 — score 34 unchanged · $9,650 cheapest of 9 (Jelsa Wine Fest Aug 20-30)
+│   ├── aug_17_cote_dazur.html       # Trip 03-V2 · Option I-2 — score 34 w/ Aug 24 extension / 32 without · downscaled to $9-15K band
 │   └── jun_20_kern.html             # Itinerary No. 02 — family, summer 2026
 ├── practice/                        # Daily / weekly / monthly protocols
 │   └── index.html                   # The full practice prescription (sage palette)
@@ -50,7 +60,9 @@ jmark/
 
 **Future trips:** add `trip/<mon3>_<dd>_<slug>.html` and a card to `index.html`. STYLE.md has the full pattern.
 
-**Decision hubs:** when a trip has multiple candidate destinations under active deliberation, build a hub page at `trip/<mon3>_<dd>_<region>.html` that side-by-sides them. Pattern: hero + N-card option grid + criteria-card section + scoring matrix + comparison table + pros/cons grid + budget side-by-side + verdict. Hub grid + pros-cons-grid use 2-col layout (rows of 2); odd-numbered options get a `style="grid-column: span 2;"` to fill. See `trip/aug_11_europe.html` for the canonical example — now 6 options A–F with an 8-criterion scoring matrix (5 hard / 3 soft, scored /39). Each option file gets a back-bar `meta-mini` that links back to the hub via `compare N options ↗`.
+**Decision hubs:** when a trip has multiple candidate destinations under active deliberation, build a hub page at `trip/<mon3>_<dd>_<region>.html` that side-by-sides them. Pattern: hero + N-card option grid + criteria-card section + scoring matrix + comparison table + pros/cons grid + budget side-by-side + verdict. Hub grid + pros-cons-grid use 2-col layout (rows of 2); odd-numbered options get a `style="grid-column: span 2;"` to fill. See `trip/aug_11_europe.html` for the canonical example — now 9 options A–I with an 8-criterion scoring matrix (5 hard / 3 soft, scored /39). Each option file gets a back-bar `meta-mini` that links back to the hub via `compare N options ↗`.
+
+**Date-shift parallel versions** (added 2026-06-04): when exploring a different date window for the same trip, build a parallel `<mon3>_<dd>_<X>.html` set rather than replacing the original. Pattern: `aug_11_*.html` (V1) and `aug_17_*.html` (V2) coexist; both hubs link to each other ("Compare Aug 11-17 version →" / "compare V2 →"). Each destination has both versions. This preserves the previously-validated work and makes the trade-off auditable side-by-side. V2 hub uses `Trip No. 03-V2` ID space and `Option X-2` per destination. V2 was triggered by Joann asking "what if Aug 17?" — V2 dates anchor on $9–15K Standard tier band, with Cascais emerging as the new leader at 37.5 (Festas do Mar Aug 20-23 overlap) and San Sebastián collapsing to 30 (Aste Nagusia past).
 
 **Future content in other domains:** each section index is self-contained with its own palette. Add items by editing the appropriate section's `index.html` — promote ideas → articles, version supplements by quarter, add reference blocks as patterns repeat.
 

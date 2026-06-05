@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>August 17–23, 2026 — Annecy &amp; the Lake · Imperial Festival Week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --annecy-lake: #2a7a8c;
+    --annecy-deep: #0d3b4f;
+    --annecy-sage: #7ba696;
+    --annecy-sage-deep: #4e7a68;
+    --annecy-stone: #b8895b;
+    --annecy-terra: #c8553d;
+    --annecy-cream: #faf4e8;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.6; background: #fafaf7; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
+  h3 { font-size: 1.6rem; line-height: 1.25; }
+  h4 { font-size: 1.15rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; }
+  a { color: inherit; }
+
+  .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+  .back-bar a.back-link:hover { color: var(--annecy-lake); }
+  .back-bar a.back-link .arrow { display: inline-block; transition: transform 0.2s; }
+  .back-bar a.back-link:hover .arrow { transform: translateX(-3px); }
+  .back-bar .brand-mini { font-family: 'Playfair Display', serif; font-size: 0.92rem; color: rgba(255,255,255,0.7); letter-spacing: -0.02em; text-decoration: none; }
+  .back-bar .brand-mini:hover { color: white; }
+  .back-bar .brand-mini .dot { color: var(--annecy-lake); }
+  .back-bar .meta-mini { display: none; font-size: 0.74rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
+  @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
+
+  .topnav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 1rem 0; }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; }
+  .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
+  .topnav .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .topnav .tab { padding: 0.5rem 1.25rem; border-radius: 999px; text-decoration: none; color: var(--annecy-deep); font-size: 0.9rem; font-weight: 500; transition: all 0.2s; border: 1px solid var(--annecy-lake); }
+  .topnav .tab:hover { background: var(--annecy-lake); color: white; }
+
+  .intro-hero { padding: 6rem 0 4rem; text-align: center; background: linear-gradient(180deg, var(--annecy-cream) 0%, #fafaf7 100%); }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--annecy-terra); }
+  .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
+  .intro-hero h1 em { font-style: italic; color: var(--annecy-lake); font-weight: 400; }
+  .intro-hero .lede { max-width: 740px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
+  .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+
+  .destination { padding: 6rem 0 4rem; background: var(--annecy-cream); }
+  .hero-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.12); margin-bottom: 4rem; }
+  .hero-card .hero-image { min-height: 500px; background-size: cover; background-position: center; position: relative;
+    background-image: linear-gradient(135deg, rgba(42,122,140,0.10), rgba(13,59,79,0.20)), url('https://images.unsplash.com/photo-1747241548334-b53c0fcd1d27?w=1400&q=80');
+    background-color: var(--annecy-lake); }
+  .hero-card .hero-content { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; background: white; }
+  .hero-card .eyebrow { margin-bottom: 1.25rem; color: var(--annecy-terra); }
+  .hero-card h2 { margin-bottom: 1.5rem; color: var(--annecy-deep); }
+  .hero-card .tagline { font-size: 1.15rem; color: var(--muted); margin-bottom: 2rem; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .stat .stat-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.1; margin-bottom: 0.2rem; color: var(--annecy-deep); }
+  .stat .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 720px; }
+  .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--annecy-terra); }
+  .section-header h2 { margin-bottom: 1rem; color: var(--annecy-deep); }
+  .section-header p { color: var(--muted); font-size: 1.05rem; }
+
+  .flight-box { background: white; border-radius: 16px; padding: 2.5rem; max-width: 920px; margin: 2rem auto 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .flight-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+  .flight-row:last-of-type { border-bottom: none; }
+  .flight-airport .code { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1; font-weight: 700; color: var(--annecy-deep); }
+  .flight-airport .city { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; }
+  .flight-line { text-align: center; color: var(--muted); }
+  .flight-line .dash { height: 1px; background: var(--line); position: relative; margin: 0.5rem 0; }
+  .flight-line .dash::after { content: '⟶'; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: white; padding: 0 0.5rem; color: var(--annecy-terra); }
+  .flight-line .info { font-size: 0.8rem; }
+  .flight-meta { display: flex; gap: 2rem; justify-content: center; padding-top: 1.5rem; margin-top: 1rem; border-top: 2px solid var(--line); }
+  .flight-meta .item { text-align: center; }
+  .flight-meta .item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 0.3rem; }
+  .flight-meta .item .val { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--annecy-deep); }
+
+  .only-this-week { max-width: 1100px; margin: 0 auto 4rem; padding: 3rem; background: linear-gradient(135deg, #faf4e8, #ecf2ee); border-radius: 24px; }
+  .only-this-week .head { text-align: center; margin-bottom: 2.5rem; }
+  .only-this-week h3 { color: var(--annecy-deep); font-size: 2rem; margin-top: 0.5rem; }
+  .only-this-week .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .event-card { background: white; border-radius: 16px; padding: 2rem; border-left: 4px solid var(--annecy-lake); }
+  .event-card.terra { border-left-color: var(--annecy-terra); }
+  .event-card.sage { border-left-color: var(--annecy-sage); }
+  .event-card.stone { border-left-color: var(--annecy-stone); }
+  .event-card .head { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .event-card .icon { font-size: 2.2rem; }
+  .event-card h4 { margin: 0; color: var(--annecy-deep); }
+  .event-card h4.terra { color: var(--annecy-terra); }
+  .event-card h4.sage { color: var(--annecy-sage-deep); }
+  .event-card h4.stone { color: var(--annecy-stone); }
+  .event-card .when { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
+  .event-card p { font-size: 0.95rem; color: #333; margin-bottom: 1rem; }
+  .event-card .book-link { display: inline-block; padding: 0.4rem 0.9rem; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--annecy-terra); border: 1.5px solid var(--annecy-terra); }
+  .event-card .book-link:hover { background: var(--annecy-terra); color: white; }
+  .bonus-callout { margin-top: 2rem; padding: 1.5rem 2rem; background: rgba(42,122,140,0.06); border-radius: 12px; border-left: 4px solid var(--annecy-lake); }
+  .bonus-callout h4 { margin-bottom: 0.5rem; color: var(--annecy-deep); }
+  .bonus-callout p { font-size: 0.95rem; color: #333; margin: 0; }
+  .bonus-callout a { color: var(--annecy-lake); font-weight: 600; }
+
+  .festival-table { max-width: 1100px; margin: 2rem auto 0; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .festival-table table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  .festival-table th { background: var(--annecy-terra); color: white; padding: 0.85rem 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 0.92rem; }
+  .festival-table td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .festival-table tr:last-child td { border-bottom: none; }
+  .festival-table tr:nth-child(even) td { background: rgba(200,85,61,0.04); }
+  .festival-table td.day { font-weight: 600; color: var(--annecy-terra); white-space: nowrap; }
+  .festival-table td.headline { font-weight: 600; color: var(--annecy-deep); }
+  .festival-table .tag-vip { display: inline-block; background: var(--annecy-terra); color: white; padding: 0.1rem 0.5rem; border-radius: 4px; font-size: 0.7rem; margin-left: 0.4rem; }
+  .festival-table .tag-free { display: inline-block; background: var(--annecy-sage-deep); color: white; padding: 0.1rem 0.5rem; border-radius: 4px; font-size: 0.7rem; margin-left: 0.4rem; }
+
+  .glance-table { max-width: 1000px; margin: 0 auto 4rem; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .glance-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .glance-table th { background: var(--annecy-deep); color: white; padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600; }
+  .glance-table td { padding: 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .glance-table tr:last-child td { border-bottom: none; }
+  .glance-table tr:nth-child(even) td { background: rgba(42,122,140,0.04); }
+  .glance-table td.daynum { font-weight: 600; color: var(--annecy-terra); }
+
+  .itinerary { max-width: 950px; margin: 0 auto; }
+  .day { display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
+  .day:last-child { border-bottom: none; }
+  .day-number .num { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1; font-weight: 600; font-style: italic; color: var(--annecy-terra); }
+  .day-number .date { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .day-content h3 { margin-bottom: 0.75rem; color: var(--annecy-deep); }
+  .day-content ul { list-style: none; }
+  .day-content ul li { padding: 0.45rem 0 0.45rem 1.5rem; position: relative; color: #333; }
+  .day-content ul li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 6px; height: 6px; border-radius: 50%; background: var(--annecy-terra); }
+  .day-content ul li strong { color: var(--annecy-deep); }
+  .day-content ul li a { color: var(--annecy-lake); text-decoration: none; border-bottom: 1px dotted; }
+  .alts { background: rgba(200,85,61,0.06); border-left: 3px solid var(--annecy-terra); padding: 0.85rem 1rem; margin: 0.75rem 0 0.25rem 1.5rem; border-radius: 0 6px 6px 0; font-size: 0.88rem; color: #444; }
+  .alts strong { color: var(--annecy-terra); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.25rem; }
+
+  .hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .hotel-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+  .hotel-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .hotel-card .hotel-image { height: 200px; background-size: cover; background-position: center; position: relative; background-color: var(--annecy-sage); }
+  .hotel-card .hotel-tier { position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.95); padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: var(--annecy-deep); z-index: 2; }
+  .hotel-card .hotel-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .hotel-card .hotel-body h4 { margin-bottom: 0.25rem; color: var(--annecy-deep); }
+  .hotel-card .hotel-body .loc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+  .hotel-card .hotel-body p { font-size: 0.93rem; color: #333; margin-bottom: 1rem; line-height: 1.55; }
+  .hotel-card .hotel-meta { display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.85rem; margin-top: auto; }
+  .hotel-card .hotel-meta .price { font-weight: 600; color: var(--annecy-deep); }
+  .hotel-card .book-link { display: inline-block; padding: 0.35rem 0.85rem; font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--annecy-terra); border: 1.5px solid var(--annecy-terra); align-self: flex-start; margin-top: 0.5rem; }
+  .hotel-card .book-link:hover { background: var(--annecy-terra); color: white; }
+
+  .wine-block { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; max-width: 1100px; margin: 0 auto 2rem; background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.06); align-items: center; }
+  .wine-block .wine-image { min-height: 360px; background-size: cover; background-position: center; background-color: var(--annecy-stone); }
+  .wine-block.cheese .wine-image { background-image: linear-gradient(135deg, rgba(184,137,91,0.30), rgba(123,166,150,0.40)), url('https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=800&q=80'); }
+  .wine-block.wine .wine-image { background-image: linear-gradient(135deg, rgba(42,122,140,0.25), rgba(13,59,79,0.40)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80'); }
+  .wine-block .wine-text { padding: 3rem 2.5rem 3rem 0; }
+  .wine-block .eyebrow { color: var(--annecy-terra); }
+  .wine-block h3 { color: var(--annecy-deep); margin-bottom: 1rem; }
+  .wine-block p { color: #333; font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .winery-list .winery { padding: 0.85rem 0; border-bottom: 1px dashed var(--line); }
+  .winery-list .winery:last-child { border-bottom: none; }
+  .winery-list .name { font-weight: 600; color: var(--annecy-deep); margin-bottom: 0.2rem; }
+  .winery-list .name a { color: var(--annecy-terra); text-decoration: none; }
+  .winery-list .desc { font-size: 0.88rem; color: var(--muted); }
+
+  .food-list { max-width: 950px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .food-row { display: grid; grid-template-columns: 1fr 1.6fr auto; gap: 1.5rem; padding: 1.5rem; border-bottom: 1px solid var(--line); align-items: center; }
+  .food-row:last-child { border-bottom: none; }
+  .food-row .place { font-family: 'Playfair Display', serif; font-weight: 600; color: var(--annecy-deep); font-size: 1.1rem; }
+  .food-row .place .stars { color: var(--annecy-terra); margin-left: 0.4rem; font-size: 0.9rem; }
+  .food-row .place .meta { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0; }
+  .food-row .desc { font-size: 0.92rem; color: #333; line-height: 1.55; }
+  .food-row .drive { font-size: 0.78rem; color: var(--muted); text-align: right; white-space: nowrap; }
+
+  .activities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1100px; margin: 0 auto; }
+  .activity { background: white; border-radius: 12px; padding: 1.75rem 1.25rem; text-align: center; transition: transform 0.2s; border: 1px solid var(--line); }
+  .activity:hover { transform: translateY(-2px); }
+  .activity .icon { font-size: 2.2rem; margin-bottom: 0.85rem; display: block; }
+  .activity h4 { margin-bottom: 0.5rem; font-size: 1rem; color: var(--annecy-deep); }
+  .activity h4 a { color: inherit; text-decoration: none; }
+  .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+  .nightlife { max-width: 1100px; margin: 0 auto 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .nightlife-col { background: #15161a; color: white; padding: 2rem; border-radius: 16px; }
+  .nightlife-col h3 { color: var(--annecy-terra); margin-bottom: 1.25rem; font-style: italic; }
+  .nightlife-col .venue { padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nightlife-col .venue:last-child { border-bottom: none; }
+  .nightlife-col .venue .vname { font-family: 'Playfair Display', serif; font-weight: 600; color: white; font-size: 1.05rem; }
+  .nightlife-col .venue .vmeta { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
+  .nightlife-col .venue .vdesc { font-size: 0.88rem; color: rgba(255,255,255,0.75); margin-top: 0.5rem; line-height: 1.5; }
+
+  .score-grid { max-width: 1000px; margin: 0 auto 3rem; }
+  .score-row { display: grid; grid-template-columns: 1fr auto 70px; gap: 1rem; padding: 1.1rem 1.5rem; background: white; border-radius: 8px; margin-bottom: 0.6rem; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .score-row .axis { font-weight: 600; color: var(--annecy-deep); }
+  .score-row .axis .tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-left: 0.5rem; font-weight: 500; }
+  .score-row .reason { font-size: 0.88rem; color: #444; max-width: 480px; text-align: right; }
+  .score-row .num { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--annecy-terra); font-weight: 600; }
+  .score-row.total { background: var(--annecy-deep); color: white; }
+  .score-row.total .axis { color: white; }
+  .score-row.total .num { color: white; font-size: 1.9rem; }
+
+  .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
+  .booking .section-header h2 { color: white; }
+  .booking .section-header p { color: rgba(255,255,255,0.7); }
+  .booking .section-header .eyebrow { color: rgba(255,255,255,0.7); }
+  .steps { max-width: 850px; margin: 0 auto; }
+  .step { display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .step:last-child { border-bottom: none; }
+  .step .stepnum { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--annecy-terra); font-style: italic; }
+  .step h4 { color: white; margin-bottom: 0.5rem; }
+  .step p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem; }
+  .step p strong { color: white; }
+  .step .meta-line { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+  .step .meta-line a { color: var(--annecy-stone); text-decoration: none; }
+
+  .adversarial { max-width: 950px; margin: 4rem auto 0; padding: 2.5rem; background: rgba(255,255,255,0.04); border-radius: 16px; border-left: 4px solid var(--annecy-terra); }
+  .adversarial h3 { color: white; margin-bottom: 1rem; }
+  .adversarial p { color: rgba(255,255,255,0.78); font-size: 0.95rem; margin-bottom: 1rem; }
+  .adversarial p strong { color: var(--annecy-terra); }
+
+  .budget-table { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px; }
+  .budget-table .head { text-align: center; margin-bottom: 2.5rem; }
+  .budget-table h3 { color: white; margin-top: 0.5rem; }
+  .budget-table .head p { color: rgba(255,255,255,0.6); margin-top: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 0.95rem; }
+  .budget-table table { width: 100%; border-collapse: collapse; color: white; font-size: 0.95rem; }
+  .budget-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
+  .budget-table th.item { text-align: left; color: rgba(255,255,255,0.6); width: 38%; }
+  .budget-table th.tier { text-align: center; color: rgba(255,255,255,0.85); width: 21%; font-size: 0.92rem; }
+  .budget-table th.standard { color: var(--annecy-terra); font-weight: 700; font-size: 1rem; background: rgba(200,85,61,0.14); }
+  .budget-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .budget-table td.item { color: rgba(255,255,255,0.85); }
+  .budget-table td.tier { text-align: center; }
+  .budget-table td.standard { text-align: center; background: rgba(200,85,61,0.06); }
+  .budget-table td.std-mark { font-weight: 600; }
+  .budget-table td.dim { color: rgba(255,255,255,0.3); }
+  .budget-table tfoot td { padding: 1.5rem 0.75rem 0.5rem; font-family: 'Playfair Display', serif; border-top: 2px solid rgba(255,255,255,0.25); border-bottom: none; }
+  .budget-table tfoot td.total-label { font-size: 1.3rem; color: white; }
+  .budget-table tfoot td.tier { font-size: 1.4rem; color: white; }
+  .budget-table tfoot td.standard { font-size: 1.65rem; color: var(--annecy-terra); font-weight: 700; }
+  .budget-table .footnote { text-align: center; color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-top: 2rem; line-height: 1.6; }
+
+  footer { background: #0d0d0d; color: rgba(255,255,255,0.6); padding: 2.5rem 0; text-align: center; font-size: 0.85rem; }
+
+  @media (max-width: 900px) {
+    .hero-card { grid-template-columns: 1fr; }
+    .hero-card .hero-image { min-height: 280px; }
+    .hero-card .hero-content { padding: 2.5rem 2rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .day { grid-template-columns: 1fr; gap: 1rem; }
+    .day-number .num { font-size: 3rem; }
+    .hotels-grid { grid-template-columns: 1fr 1fr; }
+    .activities { grid-template-columns: repeat(2, 1fr); }
+    .flight-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .only-this-week .grid { grid-template-columns: 1fr; }
+    .wine-block { grid-template-columns: 1fr; }
+    .wine-block .wine-text { padding: 2rem; }
+    .nightlife { grid-template-columns: 1fr; }
+    .topnav .tabs { flex-wrap: wrap; }
+    .container { padding: 0 1.25rem; }
+    .step { grid-template-columns: 60px 1fr; gap: 1rem; }
+    .food-row { grid-template-columns: 1fr; gap: 0.6rem; }
+    .food-row .drive { text-align: left; }
+    .score-row { grid-template-columns: 1fr; }
+    .score-row .reason { text-align: left; }
+    .score-row .num { text-align: left; }
+  }
+  @media (max-width: 600px) {
+    .hotels-grid, .activities { grid-template-columns: 1fr; }
+    .intro-hero .meta { gap: 1.5rem; }
+    .topnav { padding: 0.6rem 0; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .brand { font-size: 1rem; }
+    .topnav .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+    .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    .glance-table, .budget-table, .festival-table { overflow-x: auto; }
+    .glance-table table, .budget-table table, .festival-table table { min-width: 540px; }
+    h2 { font-size: 1.8rem !important; }
+    .day-number .num { font-size: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
+    <span class="meta-mini">Itinerary No. 03E-2 · Annecy · Aug 17–23, 2026</span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<nav class="topnav">
+  <div class="container">
+    <div class="brand">August 17 → 23, 2026</div>
+    <div class="tabs">
+      <a href="#itinerary" class="tab">Itinerary</a>
+      <a href="#hotels" class="tab">Hotels</a>
+      <a href="#wine" class="tab">Cheese &amp; Wine</a>
+      <a href="#food" class="tab">Food</a>
+      <a href="#activities" class="tab">Activities</a>
+      <a href="#nightlife" class="tab">Nightlife</a>
+      <a href="#score" class="tab">Score</a>
+      <a href="#book" class="tab">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">France · French Alps · 5 nights Imperial Palace · Festival Week</span>
+    <h1>Annecy &amp;<br>the <em>Festival.</em></h1>
+    <p class="lede">
+      The Aug 17–23 alternative — same Alpine lake, same <strong>16 Michelin stars across the basin</strong> (★★★ Clos des Sens + 5 × ★★ now that Auberge de Montmin promoted 2024 + ★ Esquisse + ★ Albert 1er Chamonix + ★★★ Flocons de Sel Megève), same world-class paragliding off Col de la Forclaz, same 22–25 °C "cleanest in Europe" lake. <strong>Plus an Imperial Annecy Festival anchor we missed by 1 day last week</strong> — nightly 18:00 FREE TERRACE jazz/world/classical at the Hip Bar overlooking the lake + 21:00 TICKETED headliner inside Salle de l'Europe at L'Impérial Palace, six nights running (Tue Aug 18 → Sun Aug 23). Benny Green Jazz Aug 18 · <strong>Nemanja Radulović &amp; Double Sens Classical Aug 21 sells out first</strong> · Carmen Bradford 4TET Aug 20. <strong>Perseids past peak Aug 12–13 (residual tail through Aug 24), Le Brise Glace closed until Aug 24 (miss by 1 day), Annecy Classic Festival DOES NOT EXIST in 2026 (discontinued 2016 when Russian patron Cheglakov pulled funding), Édouard Baer Aug 28 (miss by 5).</strong> Trade Perseids + Fête des Guides for Imperial Festival + a nightly free-then-ticketed cultural rhythm. Nightlife genteel concert culture not late-night clubbing — shows end ~22:30, Casino + Pop Plage carry Fri/Sat. <strong>35/39</strong> — +1 nightlife from the Festival anchor, same elite food + activity.
+    </p>
+    <div class="meta">
+      <div class="meta-item"><div class="label">Departure</div><div class="value">Mon, Aug 17</div></div>
+      <div class="meta-item"><div class="label">Return</div><div class="value">Sun, Aug 23</div></div>
+      <div class="meta-item"><div class="label">Travelers</div><div class="value">Two</div></div>
+      <div class="meta-item"><div class="label">Origin</div><div class="value">LAX</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="destination" id="itinerary">
+  <div class="container">
+
+    <div class="hero-card">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Option E-2 · France · Imperial Festival Week</span>
+        <h2>Annecy &amp;<br>the Festival</h2>
+        <p class="tagline">"Venice of the Alps" on Europe's cleanest lake, between Geneva and Mont Blanc. 16 Michelin stars in basin (Montmin promoted to ★★ in 2024). <strong>Imperial Annecy Festival Aug 18–28 nightly anchors at the Imperial Palace</strong> — free terrace concerts 18:00 + ticketed headliners 21:00 — Benny Green, Carmen Bradford, Radulović, Camille Berthollet. Paragliding/canyoning/Aiguille du Midi/42-km bike loop. Same Savoyard cuisine built on Reblochon, Beaufort, charcuterie, lake féra — no ocean seafood. Honest nightlife: Festival + Casino Impérial (Fri/Sat to 04:00) + Pop Plage Thu–Sat + Rue Sainte-Claire bars to 01:00. Most Michelin kitchens close 21:30; festival shows end ~22:30.</p>
+        <div class="stats">
+          <div class="stat"><div class="stat-value">73–77°F</div><div class="stat-label">Late Aug High</div></div>
+          <div class="stat"><div class="stat-value">High</div><div class="stat-label">Activity Density</div></div>
+          <div class="stat"><div class="stat-value">Festival</div><div class="stat-label">6 nights anchor</div></div>
+          <div class="stat"><div class="stat-value">40 min</div><div class="stat-label">GVA → Annecy</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="eyebrow">Getting There</span>
+      <h2>Flight Plan</h2>
+      <p>No US nonstop to Geneva. Swiss via Zurich is the cleanest routing; Lufthansa via MUC/FRA + Air France via CDG are workable backups. Land GVA mid-morning Mon, 40-min car to Annecy, in your hotel by early afternoon Day 1 — and the Festival's first night is the very next evening (Tue Aug 18).</p>
+    </div>
+    <div class="flight-box">
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">LAX</div><div class="city">Los Angeles · Sun Aug 16 · dep 4:25 PM</div></div>
+        <div class="flight-line"><div class="info">Swiss LX41</div><div class="dash"></div><div class="info">11h 10m nonstop</div></div>
+        <div class="flight-airport"><div class="code">ZRH</div><div class="city">Zurich · Mon Aug 17 · arr 11:35 AM</div></div>
+      </div>
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">ZRH</div><div class="city">Zurich · 1h 25m layover</div></div>
+        <div class="flight-line"><div class="info">Swiss LX2810</div><div class="dash"></div><div class="info">55 min</div></div>
+        <div class="flight-airport"><div class="code">GVA</div><div class="city">Geneva · arr <strong>1:55 PM Mon Aug 17</strong> · 40-min car to Annecy</div></div>
+      </div>
+      <div class="flight-meta">
+        <div class="item"><div class="label">Est. Round-trip</div><div class="val">$1,200–$1,800</div></div>
+        <div class="item"><div class="label">At hotel by</div><div class="val">3:30 PM Mon</div></div>
+        <div class="item"><div class="label">Carrier</div><div class="val">Swiss / Star Alliance</div></div>
+      </div>
+    </div>
+    <p style="text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;">Backup routings: <strong>Lufthansa LAX→MUC→GVA</strong>, <strong>Air France LAX→CDG→GVA</strong>, <strong>United LAX→FRA→GVA</strong>. Return Sun Aug 23 evening or Mon Aug 24 morning. Verify exact 2026 schedules before booking. <a href="https://www.skyscanner.com/routes/lax/gva/los-angeles-international-to-geneva.html" target="_blank" rel="noopener" style="color: var(--annecy-terra);">Skyscanner LAX→GVA →</a></p>
+
+    <div class="section-header">
+      <span class="eyebrow">Day by Day</span>
+      <h2>The Itinerary</h2>
+      <p>One base for the whole trip — <strong>5 nights at L'Impérial Palace Annecy (Mon Aug 17 → Sat Aug 22) + 1 final night (Sat Aug 22 → Sun Aug 23)</strong>. The Imperial Palace IS the Festival venue — Hip Bar terrace + Salle de l'Europe inside the same building you sleep in. No Chamonix overnight this week (Fête des Guides ended Aug 16, the day before you land — no anchor to chase). Day 4 still does Aiguille du Midi but as a day trip back. Days deliberately over-packed — each one has a low-energy swap, a doubling-down swap, and a rainy-day swap inline.</p>
+    </div>
+
+    <div class="only-this-week">
+      <div class="head">
+        <span class="eyebrow" style="color: var(--annecy-terra);">Only This Week</span>
+        <h3>Imperial Annecy Festival · The Six-Night Anchor</h3>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 720px; margin-left: auto; margin-right: auto;">The <strong>11th edition of the Imperial Annecy Festival runs Aug 18–28, 2026</strong> at the Imperial Palace — exactly the venue we'd sleep in. Six festival nights overlap the trip (Tue Aug 18 → Sun Aug 23). <strong>Each night doubles up</strong>: 18:00 FREE outdoor terrace concert at the Hip Bar (lake view) + 21:00 TICKETED headliner inside Salle de l'Europe. <strong>Tickets are VIP €25–€38 not full-tier</strong> — this is a genteel cultural anchor, not Glastonbury. Free terrace is walk-up; ticketed shows book NOW especially Radulović and Berthollet which sell first.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="event-card terra">
+          <div class="head">
+            <span class="icon">🎶</span>
+            <div>
+              <h4 class="terra">Imperial Annecy Festival · in-house</h4>
+              <div class="when">Festival <strong>Aug 18–28, 2026</strong> · we hit nights 1–6 (Tue Aug 18 → Sun Aug 23)</div>
+            </div>
+          </div>
+          <p><strong>The 11th-edition Imperial Annecy Festival</strong> at L'Impérial Palace — the hotel <em>is</em> the venue. Nightly: <strong>18:00 FREE TERRACE at Hip Bar (lake view) + 21:00 TICKETED at Salle de l'Europe</strong> · €25–€38 VIP. <strong>Tue Aug 18:</strong> Djoukil Jazz Band free + <strong>Benny Green Jazz</strong> ticketed. <strong>Wed Aug 19:</strong> Rusan Filiztek World free + <strong>Camille Berthollet Classical</strong> ticketed. <strong>Thu Aug 20:</strong> Ella Rabeson 4TET free + Carmen Bradford 4TET Jazz ticketed. <strong>Fri Aug 21:</strong> Azahar World free + <strong>Nemanja Radulović &amp; Double Sens Classical</strong> ticketed — headline night, sells first. <strong>Sat Aug 22:</strong> 2026 lineup not yet posted as of June. <strong>Sun Aug 23:</strong> People Aki! Ska free + Philippe Caverivière Comedy ticketed (French stand-up — language barrier).</p>
+          <a href="https://imperial-annecy-festival.fr/" target="_blank" rel="noopener" class="book-link">Festival site →</a>
+        </div>
+
+        <div class="event-card stone">
+          <div class="head">
+            <span class="icon">🌿</span>
+            <div>
+              <h4 class="stone">Annecy Paysages 2026</h4>
+              <div class="when">Runs <strong>Jul 1 → Sept 15, 2026</strong> — overlaps your full stay</div>
+            </div>
+          </div>
+          <p>Open-air contemporary art trail along the <strong>Thiou canal + Pâquier lawn + Jardins de l'Europe</strong> — large-scale installations free to wander day-or-evening. <strong>Best self-guided as a sunset stroll</strong> with an apéro stop at Ô Cèdre rooftop. Pairs with the lake-side open-air cinema on Le Pâquier (mid-July through mid-August; family-tier programming). The reliable "Annecy in the evening" anchor when you don't want to drive somewhere — and the natural warm-up to the 18:00 Hip Bar terrace concerts.</p>
+          <a href="https://annecypaysages.com/" target="_blank" rel="noopener" class="book-link">Annecy Paysages →</a>
+        </div>
+
+        <div class="event-card sage">
+          <div class="head">
+            <span class="icon">🏰</span>
+            <div>
+              <h4 class="sage">Aiguille du Midi at €83 RT — book ahead</h4>
+              <div class="when">Jul 1–Aug 23 daily 06:10–18:00 · Aug 24+ 07:10–17:30</div>
+            </div>
+          </div>
+          <p><strong>3,842 m above Chamonix in a single cable car</strong> — Mont Blanc terrace + Step Into the Void glass box. <strong>€83 RT adult (verified 2026 price)</strong>, booking compulsory summer 2026, sells out 5–10 days ahead in August. Morning slots are the play — clearer weather, alpenglow on Mont Blanc, fewer queues. Day 4 Thu Aug 20 anchor: pre-dawn drive Chamonix 1h15 → first lift → Mer de Glace train + ice cave € → optional Megève wine stop on return. Back Annecy in time for the 18:00 Hip Bar terrace.</p>
+          <a href="https://www.aiguilledumidi.montblancnaturalresort.com/" target="_blank" rel="noopener" class="book-link">Book Aiguille du Midi →</a>
+        </div>
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">☄️</span>
+            <div>
+              <h4>Perseids residual tail</h4>
+              <div class="when">Active <strong>through Aug 24</strong> · peak past Aug 12–13</div>
+            </div>
+          </div>
+          <p>The Perseids new-moon peak fell <strong>Aug 12–13 — 5 days before you land</strong>. Residual meteors continue through Aug 24 but at maybe 10–20/hr not the 90+/hr peak. Col de la Forclaz is still a great dark-sky perch (1,147 m, paragliding overlook, ★★ Auberge de Montmin at the col) — worth a Day 3 dinner + late terrace sit on the off-chance, but not the structural anchor it was the week prior. <strong>The decade-best moonless show belongs to the Aug 11–17 itinerary; this trip trades it for the Imperial Festival.</strong></p>
+          <a href="https://www.timeanddate.com/astronomy/meteor-shower/perseid.html" target="_blank" rel="noopener" class="book-link">Viewing guide →</a>
+        </div>
+
+      </div>
+
+      <div class="bonus-callout">
+        <h4>⚠️ What you miss — and a fact-check on the "Annecy Classic Festival"</h4>
+        <p><strong>Fête du Lac d'Annecy 2026 "L'Âme du Monde"</strong> — Europe's largest pyrotechnic show, ~200,000 spectators — fell <strong>Sat Aug 1, 16 days before you land</strong>. <strong>Fête des Guides de Chamonix 2026 Aug 12–16</strong> — ceremony day fell Sat Aug 15, the day before departure. <strong>Le Brise Glace</strong> (Annecy's main contemporary music venue, 500-cap) reopens <strong>Mon Aug 24 — miss by 1 day</strong>. <strong>Édouard Baer Aug 28</strong> at the Festival — the most universally-stage-presence headliner — falls 5 days after departure (Caverivière Aug 23 is French stand-up = language barrier). And the <strong>"Annecy Classic Festival Aug 23–27"</strong> sometimes cited in older guidebooks <strong>DOES NOT EXIST in 2026</strong> — the original Annecy Classic Festival was discontinued in 2016 after Russian patron Andreï Cheglakov pulled funding; the successor "Variations Classiques" runs Jan–Mar at Bonlieu in winter only. Talloires Abbey hosts its own classical concert series Aug 29–31, also after departure. <strong>Don't assume the Classic Festival is happening — it isn't.</strong></p>
+      </div>
+    </div>
+
+    <div class="festival-table">
+      <table>
+        <thead>
+          <tr><th>Night</th><th>Date</th><th>18:00 Free Terrace · Hip Bar</th><th>21:00 Ticketed · Salle de l'Europe</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="day">1</td><td>Tue Aug 18</td><td>Djoukil Jazz Band <span class="tag-free">FREE</span></td><td class="headline">Benny Green Jazz <span class="tag-vip">VIP €25–38</span></td></tr>
+          <tr><td class="day">2</td><td>Wed Aug 19</td><td>Rusan Filiztek (World) <span class="tag-free">FREE</span></td><td class="headline">Camille Berthollet (Classical) <span class="tag-vip">VIP</span></td></tr>
+          <tr><td class="day">3</td><td>Thu Aug 20</td><td>Ella Rabeson 4TET <span class="tag-free">FREE</span></td><td class="headline">Carmen Bradford 4TET (Jazz) <span class="tag-vip">VIP</span></td></tr>
+          <tr><td class="day">4</td><td>Fri Aug 21</td><td>Azahar (World) <span class="tag-free">FREE</span></td><td class="headline">Nemanja Radulović &amp; Double Sens (Classical) <span class="tag-vip">VIP — sells first</span></td></tr>
+          <tr><td class="day">5</td><td>Sat Aug 22</td><td>TBD (2026 lineup not yet posted as of June)</td><td class="headline">TBD (2026 lineup not yet posted)</td></tr>
+          <tr><td class="day">6</td><td>Sun Aug 23</td><td>People Aki! (Ska) <span class="tag-free">FREE</span></td><td class="headline">Philippe Caverivière (Comedy · French stand-up) <span class="tag-vip">VIP · ⚠️ language barrier</span></td></tr>
+          <tr style="opacity: 0.55;"><td class="day">post-trip</td><td>Mon Aug 24</td><td>Francesca Tandoi (Jazz)</td><td>Peter Cincotti (Jazz)</td></tr>
+          <tr style="opacity: 0.55;"><td class="day">post-trip</td><td>Fri Aug 28</td><td>—</td><td>Édouard Baer (Comedy — universal-translatable headliner we miss)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="glance-table" style="margin-top: 3rem;">
+      <table>
+        <thead>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner + Festival + Late</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="daynum">1</td><td>Mon Aug 17</td><td>Arrival + Easy Lake 🛬</td><td>Land GVA · drive Annecy · Albigny swim · Annecy Paysages walk</td><td><strong>MS Libellule dinner cruise €66.60/pp</strong> · Casino Impérial nightcap (Pop Plage + Le Garage closed Mon)</td></tr>
+          <tr><td class="daynum">2</td><td>Tue Aug 18</td><td>Bike Loop + Festival Opens 🚴🎶</td><td>42-km e-bike lake loop · Black Bass mid-loop lunch · Annecy Paysages dusk</td><td>18:00 Djoukil free terrace · <strong>L'Esquisse ★ early dinner</strong> · <strong>21:00 Benny Green Jazz VIP</strong> · 23:30 Casino</td></tr>
+          <tr><td class="daynum">3</td><td>Wed Aug 19</td><td>Paragliding + ★★ Montmin 🪂</td><td>Takamaka Prestige 40-min thermals Col de la Forclaz · Talloires swim</td><td><strong>L'Auberge de Montmin ★★ lunch at the col</strong> · 18:00 Rusan free · <strong>21:00 Camille Berthollet Classical VIP</strong> · 23:30 Le Garage</td></tr>
+          <tr><td class="daynum">4</td><td>Thu Aug 20</td><td>CHAMONIX · Aiguille du Midi 🏔️</td><td>Pre-dawn drive Chamonix 1h15 · 08:00 Aiguille du Midi €83 RT · Mer de Glace · return Megève wine stop optional</td><td>18:00 Ella Rabeson free terrace · light hotel terrace dinner · <strong>21:00 Carmen Bradford 4TET Jazz VIP</strong></td></tr>
+          <tr><td class="daynum">5</td><td>Fri Aug 21</td><td>Canyoning + ★★ Yoann Conte 🤿</td><td>Canyoning Angon Sensation €85 · spa afternoon Imperial Palace</td><td>18:00 Azahar free · <strong>La Maison Bleue · Yoann Conte ★★ (Terre d'Adoption Alpine menu)</strong> · <strong>21:00 Radulović Classical VIP — headline night</strong> · Pop Plage till dawn</td></tr>
+          <tr><td class="daynum">6</td><td>Sat Aug 22</td><td>Geneva day OR Veyrier hike + ★★★ 🍷</td><td>Option A: Geneva/Carouge day trip · Option B: Mont Veyrier loop 4 km · Option C: La Tournette extreme</td><td>18:00 TBD free terrace · <strong>Le Clos des Sens ★★★ destination dinner</strong> · 00:30 Pop Plage Saturday peak</td></tr>
+          <tr><td class="daynum">7</td><td>Sun Aug 23</td><td>Final ★★ Sunday lunch + Comedy 🍴</td><td>Brunch at hotel · <strong>Auberge du Père Bise ★★ Talloires Sun lunch</strong> · Talloires lake swim</td><td>18:00 People Aki! Ska free · <strong>21:00 Caverivière VIP (French — language barrier)</strong> · 23:00 final Casino · Mon AM GVA</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="itinerary">
+
+      <div class="day">
+        <div class="day-number"><div class="num">01</div><div class="date">Mon Aug 17</div></div>
+        <div class="day-content">
+          <h3>Arrival · Easy Lake Day · MS Libellule dinner cruise · Casino nightcap</h3>
+          <ul>
+            <li><strong>11:35 AM</strong> Land ZRH · 1h25 layover · 12:55 PM LX2810 boards</li>
+            <li><strong>1:55 PM</strong> Land GVA · rental car (Hertz/Sixt, ~$380 for 6 days, auto) — 40-min drive A41 south to Annecy</li>
+            <li><strong>3:30 PM</strong> Check in <a href="https://www.hotel-imperial-palace.com/en/" target="_blank" rel="noopener">L'Impérial Palace</a> on the lakefront — Belle Époque 1913, 90 rooms + 14 suites · request lake-view room facing Albigny Bay · <strong>15% discount if booked &gt;21 days out direct</strong> · the Festival venue itself starts <em>tomorrow</em> night</li>
+            <li><strong>4:30 PM</strong> Walk Plage d'Albigny (5 min) — lake swim 22–25 °C "cleanest in Europe" · kayak walk-up €11/h from Mini Golf de l'Impérial at Petit Port</li>
+            <li><strong>5:30 PM</strong> <strong>Annecy Paysages</strong> open-air contemporary art trail along the Thiou + Jardins de l'Europe — free, self-guided, ~45 min loop · the perfect "we just landed" warm-up</li>
+            <li><strong>6:30 PM</strong> Apéro at <strong>La Perla Plage Lounge</strong> lakeside (or Ô Cèdre rooftop at Hôtel Le Pélican) — gins/cocktails, lake view</li>
+            <li><strong>7:30 PM</strong> Walk back to Imperial Palace · freshen up · stroll to Pâquerie d'Annecy ferry terminal</li>
+            <li><strong>7:45 PM</strong> Board <strong><a href="https://www.annecy-croisieres.com/" target="_blank" rel="noopener">MS Libellule "Dragonfly" dinner cruise</a></strong> · Compagnie des Bateaux du Lac d'Annecy · electric boat, 2-h cruise 19:30 boarding · <strong>Dragonfly menu €66.60/pp</strong> (Escapade €59 · Couronne de Savoie €91.50) · Annecy → Talloires → return · the no-cook arrival night · book 1–2 weeks +33 4 50 51 08 40</li>
+            <li><strong>10:00 PM</strong> Off the boat · 5-min walk back to Imperial Palace</li>
+            <li><strong>10:30 PM</strong> Nightcap at <strong>Casino Impérial</strong> on-premises (Sun–Thu 10:00–02:00, Mon hours apply) — tables (English roulette, Texas Hold'em + Ultimate Poker, blackjack) from 20:00. <strong>Note: Pop Plage / Le Pop Night Club + Le Garage are CLOSED Mondays</strong> — Casino is the Monday-night anchor.</li>
+            <li><strong>00:30 AM</strong> 2-min walk to bed</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy:</strong> Skip the dinner cruise. Walk to <strong>Le Freti</strong> (12 Rue Sainte-Claire, Savoyard institution since 1974) for 19:00 — 15+ fondue variants raw-milk farmhouse cheese · unlimited raclette by wheel · their signature <strong>"Brisgotte"</strong> (fondue in a bread bowl with bacon-wrapped potatoes). €55/pp. The "we just flew 11 hours, give us cheese and bed" play.</div>
+          <div class="alts"><strong>Alternative · Doubling down:</strong> Push earlier and grab a daytime <strong>Compagnie des Bateaux Crouy-class lake tour</strong> (90-min, walk-up at the harbor) before dinner — circles the southern half of the lake in daylight, gives you orientation, leaves you ready for a proper land-based dinner at <strong>Chez Mamie Lise</strong> or <strong>L'Étage</strong> (modern Savoyard, Vieille Ville) instead of the cruise.</div>
+          <div class="alts"><strong>Alternative · Rainy day:</strong> Cruise cancels in heavy storm but boards in light rain. If full cancel: dinner at <strong>Chez Ingalls</strong> (city center · "continuous service until midnight" · the Annecy answer to a 22:00 sit-down) + Casino tables till close. Or pivot to <strong>Le M Annecy</strong> modern Savoyard for a comfortable indoor finish.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">02</div><div class="date">Tue Aug 18</div></div>
+        <div class="day-content">
+          <h3>42-km lake bike loop · Paysages dusk · ★ Esquisse early · 🎶 Festival Night 1 — Benny Green Jazz</h3>
+          <ul>
+            <li><strong>08:00 AM</strong> Pick up two e-bikes at <a href="https://www.roulmapoule-annecy.com/" target="_blank" rel="noopener">Roul' ma Poule</a> (Annecy Old Town shop) — <strong>€27/day each (verified)</strong> · walk-in OK weekdays but book 3+ days ahead for Aug · alternatives: Cyclable, Vélonecy, Annecy Location Vélo</li>
+            <li><strong>08:30 AM</strong> Ride <strong>counterclockwise on the 42-km dedicated lake cycle path (Voie Verte du Lac)</strong> — mostly separated from road · Annecy → Annecy-le-Vieux → Veyrier-du-Lac → Menthon → Talloires (10:30 swim stop) → Doussard south end (lunch)</li>
+            <li><strong>11:30 AM</strong> Lunch at <a href="https://www.blackbasshotel-annecy.com/" target="_blank" rel="noopener">Black Bass Hôtel Sevrier</a> bistro (mid-loop, west shore) — féra carpaccio, Tomme tart, glass of Apremont · 5★ lakefront, casual second restaurant</li>
+            <li><strong>2:30 PM</strong> Complete the loop · Sevrier → St-Jorioz → Annecy · return bikes 15:00</li>
+            <li><strong>3:30 PM</strong> Lake swim at <strong>Plage des Marquisats</strong> (city beach, fewer tourists than Albigny) · then 45-min recovery at <strong>Sensori Spa</strong> at L'Impérial Palace — thermal pool + hammam</li>
+            <li><strong>5:00 PM</strong> <strong>Annecy Paysages</strong> sunset stroll along the Thiou + Pâquier — installations illuminated dusk · ends at the Pâquier near Imperial Palace gardens</li>
+            <li><strong>6:00 PM</strong> 🎶 <strong>Festival Night 1 · 18:00 FREE TERRACE — Djoukil Jazz Band at Hip Bar</strong> (Imperial Palace lakeside terrace) · walk-up, no ticket · grab a glass of Chignin-Bergeron · lake view sunset jazz</li>
+            <li><strong>7:30 PM</strong> Quick drink change at room (1-min walk)</li>
+            <li><strong>8:00 PM</strong> Early dinner at <strong><a href="https://www.esquisse-annecy.fr/" target="_blank" rel="noopener">L'Esquisse ★</a></strong> (21 Rue Royale, Old Town · 3-min walk from Imperial Palace) — Stéphane Dattrino · <strong>mostly vegetable-based since 2-yr-ago pivot</strong> (vegetable reductions replace jus) · €55 lunch / €110+ dinner tasting · 20 covers 2 floors · book <strong>8 weeks ahead</strong> +33 4 50 27 78 02 · <strong>Joann-perfect, near-zero seafood</strong> · alert them you have a 21:00 Festival ticket so they pace the courses</li>
+            <li><strong>9:00 PM</strong> 🎶 <strong>Festival Night 1 · 21:00 TICKETED — Benny Green Jazz</strong> at Salle de l'Europe (inside Imperial Palace) · <strong>VIP €25–€38</strong> · book NOW · ~90 min set</li>
+            <li><strong>10:45 PM</strong> Out of the show · stroll Casino Impérial table games (Tue 20:00–02:00) — English roulette / Texas Hold'em / blackjack · ~90 min</li>
+            <li><strong>00:30 AM</strong> Bed (or push to Le Garage Tue–Sat 23:00–05:00 if energy remains)</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy:</strong> Skip the bike loop. Take <strong>Compagnie des Bateaux MS Libellule lunch cruise</strong> at 11:30 (Annecy → Talloires → return). Long Sensori Spa afternoon. Same Hip Bar terrace + Benny Green Jazz evening anchor — the festival doesn't require you to have biked 42 km first.</div>
+          <div class="alts"><strong>Alternative · Doubling down:</strong> Bike the full 42-km loop non-stop in 3 hrs (no swim stops) — back by 11:30. Then add a <strong>Takamaka Discovery tandem paragliding 10–20 min €110/pp</strong> from Col de la Forclaz at 14:00 (book 1+ week). Spa for 1 hr recovery. Same Festival night. <em>Caveat: this packs in two of the trip's anchor activities on day 2 and could fatigue you for the rest of the week.</em></div>
+          <div class="alts"><strong>Alternative · Rainy day:</strong> Bike loop cancels in heavy rain. Pivot: <strong>Gorges du Fier</strong> (Lovagny 15 min drive · suspended footbridge through canyon · €6/pp daily 09:30–19:15 · 45 min) + lunch at <strong>L'Étage</strong> Vieille Ville + Spa Deep Nature afternoon. Same Festival night anchor — most of the Festival action is indoor at Salle de l'Europe even on the free 18:00 set (Hip Bar has lake terrace + an indoor room).</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">03</div><div class="date">Wed Aug 19</div></div>
+        <div class="day-content">
+          <h3>Paragliding Col de la Forclaz · ★★ Auberge de Montmin lunch · 🎶 Camille Berthollet Classical</h3>
+          <ul>
+            <li><strong>09:00 AM</strong> Breakfast at L'Impérial Palace lakeside terrace</li>
+            <li><strong>09:30 AM</strong> Drive 30 min up to <strong>Col de la Forclaz (1,147 m)</strong> · meet <a href="https://annecy.takamaka.fr/" target="_blank" rel="noopener">Takamaka</a> or <a href="https://flyeo.com/" target="_blank" rel="noopener">Flyeo</a> guide at the paragliding launch · check in</li>
+            <li><strong>10:30 AM</strong> <strong>Tandem paragliding Prestige 40-min thermals</strong> — €165/pp (Takamaka) or €165 (Flyeo Prestige) · 800 m descent over the full lake · lands at Doussard south end · minibus return to col · <strong>book 1–2 weeks ahead late Aug (less than peak Jul)</strong>. Cheaper alternatives: Takamaka Discovery €110 / Sensation €120 / Prestige €149; Flyeo Standard €95 / Thermique €125. Other outfitters: Fly Annecy, Aéro Pro, Air Adventure, K2 Parapente.</li>
+            <li><strong>12:30 PM</strong> Walk 5 min along the col to <strong><a href="https://guide.michelin.com/fr/fr/auvergne-rhone-alpes/talloires/restaurant/l-auberge-de-montmin" target="_blank" rel="noopener">L'Auberge de Montmin ★★</a></strong> · Florian Favario · <strong>promoted to two stars in 2024</strong> · mountain meats not lake fish — lamb, piglets, garden veg, wildflowers, walnut tableware designed by chef · sunset view down the lake from the col · ~€180–€280/pp tasting (or shorter lunch menu) · book <strong>6–8 weeks ahead</strong> · <strong>Joann-perfect</strong>: zero ocean seafood</li>
+            <li><strong>3:30 PM</strong> Drive 15 min down to Talloires village · lake swim at Plage de Talloires · the postcard bay</li>
+            <li><strong>5:00 PM</strong> Drive 25 min back to L'Impérial Palace · 30-min Sensori Spa recovery</li>
+            <li><strong>6:00 PM</strong> 🎶 <strong>Festival Night 2 · 18:00 FREE TERRACE — Rusan Filiztek (World music)</strong> at Hip Bar · Kurdish-French saz player · lake terrace, summer light · walk-up</li>
+            <li><strong>7:30 PM</strong> Quick light dinner at Imperial Palace's <strong>brasserie restaurant La Voile</strong> or in-room (kitchen closes at 22:00 anyway — eating early lets you carry directly into the 21:00 show)</li>
+            <li><strong>9:00 PM</strong> 🎶 <strong>Festival Night 2 · 21:00 TICKETED — Camille Berthollet (Classical)</strong> at Salle de l'Europe · <strong>VIP €25–€38</strong> · cross-over violin · book NOW</li>
+            <li><strong>10:45 PM</strong> Out of the show · walk 5 min to <strong>Le Garage</strong> discotheque (Tue–Sat 23:00–05:00 year-round) — large veranda, 25+ crowd. The reliable mid-week Annecy late option when Pop Night Club doesn't open until Thursday.</li>
+            <li><strong>02:00 AM</strong> Cab/walk back</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy:</strong> Skip paragliding (no €165/pp + 25-min minibus + altitude). Drive 30 min Col de la Forclaz, walk easy 1.5-hr loop trail at the col with view, lunch at the same ★★ Auberge de Montmin (just lunch, not the post-flight version), back Annecy 16:00 for full spa + Hip Bar terrace + early dinner Imperial + Berthollet ticket.</div>
+          <div class="alts"><strong>Alternative · Doubling down:</strong> Add <strong>canyoning Angon Discovery €60</strong> (Vertical Aventure) at 14:30 Talloires after lunch — half-day water canyon, abseils into lake. Replaces the Talloires swim with a real adrenaline sequence. Then back for Spa + Festival night. Or swap lunch for <strong>L'Auberge du Père Bise ★★</strong> in Talloires village (Jean Sulpice lakeside, longer + more dressy) and skip canyoning.</div>
+          <div class="alts"><strong>Alternative · Rainy day:</strong> Paragliding cancels in wind/storm (afternoons frequently canceled even sun days). Pivot: <strong>Gorges du Fier</strong> + <strong>Château de Montrottier</strong> nearby + lunch in Lovagny + Sensori Spa afternoon. Same Festival night — the Berthollet classical concert is indoor at Salle de l'Europe regardless.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">04</div><div class="date">Thu Aug 20</div></div>
+        <div class="day-content">
+          <h3>CHAMONIX day · Aiguille du Midi 3,842 m · Mer de Glace · 🎶 Carmen Bradford 4TET Jazz</h3>
+          <ul>
+            <li><strong>06:30 AM</strong> Pre-dawn drive Annecy → Chamonix via A41 + RN205 · 1h15 in light traffic · grab pastries + coffee at the bakery in Sallanches en route</li>
+            <li><strong>08:00 AM</strong> <strong><a href="https://www.aiguilledumidi.montblancnaturalresort.com/" target="_blank" rel="noopener">Aiguille du Midi cable car first lift</a></strong> · 3,842 m Mont Blanc views · <strong>€83 RT adult (verified 2026 price)</strong> · daily 06:10 AM–18:00 (Jul 1–Aug 23 schedule) · <strong>booking compulsory · sells out 5–10 days ahead Aug</strong> · Step Into the Void glass box · Mont Blanc terrace · ~2 h on top</li>
+            <li><strong>10:30 AM</strong> Back Chamonix center · short coffee break in town</li>
+            <li><strong>11:00 AM</strong> <strong><a href="https://www.montenverstrain.com/" target="_blank" rel="noopener">Mer de Glace + Montenvers train + ice cave</a></strong> · 1,913 m via cog train · Jul 4–Aug 30 2026 daily 08:00–17:30 · first train 08:30 every 20–60 min · <strong>€49.70 full package</strong> · 2.5–3 h</li>
+            <li><strong>1:30 PM</strong> Lunch in Chamonix center — <strong>Le Matafan</strong> casual Savoyard, or Hameau Albert 1er's bistronomic room <strong>La Maison Carrier</strong> (croute aux morilles, Savoyard charcuterie, Pinot Blanc) if you want a taste of the R&amp;C kitchen without the dinner commitment</li>
+            <li><strong>3:00 PM</strong> Drive back Annecy via Megève + <strong>optional Combe de Savoie wine stop</strong> at <a href="https://www.jeanfrancoisquenard.com/" target="_blank" rel="noopener">Jean-François Quénard (Chignin)</a> · call 1 week ahead · benchmark Chignin-Bergeron Roussanne + Persan red · 60-min tasting</li>
+            <li><strong>5:30 PM</strong> Back Imperial Palace · 30 min shower + quick spa reset</li>
+            <li><strong>6:00 PM</strong> 🎶 <strong>Festival Night 3 · 18:00 FREE TERRACE — Ella Rabeson 4TET (Jazz)</strong> at Hip Bar · French jazz vocalist · walk-up</li>
+            <li><strong>7:30 PM</strong> Light dinner on Imperial Palace hotel terrace (you'll have driven 3+ hours today — keep dinner short) · or order in-room before the show</li>
+            <li><strong>9:00 PM</strong> 🎶 <strong>Festival Night 3 · 21:00 TICKETED — Carmen Bradford 4TET (Jazz)</strong> at Salle de l'Europe · <strong>VIP €25–€38</strong> · daughter of Bobby Bradford, Count Basie alum · serious jazz vocals</li>
+            <li><strong>11:00 PM</strong> Casino Impérial 30-min nightcap (Thu 20:00–02:00) · then bed — Friday is the big night</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy:</strong> Skip Chamonix entirely (the round-trip drive + altitude + train + cable car is brutal). Replace with a slow Annecy day: morning Plage d'Albigny + Old Town pastries at <strong>Philippe Rigollot</strong> MOF (opera, vacherin, his signature gateau) · lunch at <strong>Cozna</strong> modern Savoyard · afternoon Spa Deep Nature 2 hr couples · same Festival night anchor.</div>
+          <div class="alts"><strong>Alternative · Doubling down:</strong> Megève for ★★★. Skip Carmen Bradford and the 21:00 Festival ticket. After Mer de Glace, drive 50 min to Megève for an early-evening dinner at <strong>★★★ Flocons de Sel</strong> (Emmanuel Renaut MOF) — mountain herbs/mushrooms/berries/lake fish · book <strong>12 weeks ahead</strong> +33 4 50 21 49 99 · closed Tue/Wed (Thu works). Drive back Annecy late. The Splurge-night variant: two ★★★ in one trip (Clos des Sens Sat + Flocons Thu).</div>
+          <div class="alts"><strong>Alternative · Rainy day:</strong> Aiguille du Midi closes in weather frequently — wind cap or low cloud closes the upper cable car. Skip the summit. Do <strong>Mer de Glace + Montenvers train + ice cave only</strong> (mostly indoor train + cave) + <strong>Musée Alpin Chamonix</strong> + lunch indoors at Le Matafan. Drive back via Megève wine stop. Same Festival night unchanged.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">05</div><div class="date">Fri Aug 21</div></div>
+        <div class="day-content">
+          <h3>Canyoning Angon · spa afternoon · ★★ Yoann Conte (Alpine menu) · 🎶 Radulović headline · Pop Plage till dawn</h3>
+          <ul>
+            <li><strong>08:30 AM</strong> Slow breakfast Imperial Palace · drive 25 min to Talloires-Angon</li>
+            <li><strong>9:30 AM</strong> Meet <a href="https://www.vertical-aventure.com/" target="_blank" rel="noopener">Vertical Aventure</a> at <strong>Angon</strong> (Talloires) for <strong>canyoning Angon Sensation</strong> — cliffs straight into Lake Annecy · several abseils + few jumps · <strong>€85/pp · 3 h</strong> · book <strong>3–7 days ahead</strong>. Easier alt: Discovery €60. Harder: Performance higher rate. Other outfitters: Monté Médio, Evolution 2, YouCanyon, Takamaka.</li>
+            <li><strong>1:00 PM</strong> Lunch in <strong>Talloires village</strong> — Auberge du Père Bise's casual <strong>L'Office</strong> (no Michelin theatrics — féra grillée + Apremont) or village brasserie. Keep light — Yoann Conte tasting tonight.</li>
+            <li><strong>3:00 PM</strong> Drive 15 min back Imperial Palace · check in with the spa</li>
+            <li><strong>3:30 PM</strong> <strong>Sensori Spa afternoon</strong> at Imperial Palace — couples 90-min massage + thermal pool + hammam · book 2+ weeks ahead</li>
+            <li><strong>6:00 PM</strong> 🎶 <strong>Festival Night 4 · 18:00 FREE TERRACE — Azahar (World music)</strong> at Hip Bar · flamenco-fusion · walk-up · <em>quick pre-dinner half-hour only — Yoann Conte demands punctuality</em></li>
+            <li><strong>7:00 PM</strong> Drive 15 min east shore to <strong><a href="https://yoann-conte.com/" target="_blank" rel="noopener">La Maison Bleue · La Table de Yoann Conte ★★</a></strong> at Veyrier-du-Lac · Yoann Conte (Bocuse alum, Brittany roots) · <strong>specify "Terre d'Adoption" Alpine terroir menu when booking — skip the "Bretagne natale" Brittany seafood menu</strong> for Joann · €320–€420/pp ex drinks · €85 lunch "Premier de cordée" · book <strong>10 weeks ahead</strong> +33 4 50 09 97 49 · <strong>Joann-OK with Alpine menu order</strong></li>
+            <li><strong>9:30 PM</strong> Out of dinner with timing — drive 15 min back to Imperial Palace · arrive 9:50 PM for 21:00 Festival call. <em>Tight — the alternative is to compress the Yoann Conte tasting (request shorter menu when booking) or to ditch the 21:00 ticket if a slower meal is preferred.</em></li>
+            <li><strong>9:00 PM (or 21:30 if tasting runs long)</strong> 🎶 <strong>Festival Night 4 · 21:00 TICKETED — Nemanja Radulović &amp; Double Sens (Classical)</strong> at Salle de l'Europe · <strong>VIP €25–€38 · HEADLINE NIGHT · sells out first</strong> · Serbian-French superstar violinist with chamber ensemble · book NOW</li>
+            <li><strong>10:45 PM</strong> Out of the show · walk to <strong>Pop Plage / Le Pop Night Club</strong> in Imperial Palace gardens — <strong>Fri Thu–Sat 23:00 until dawn</strong> · "THE Annecy summer party venue" lakefront · cover ~€20–€30 · Fri is the play</li>
+            <li><strong>02:00–03:00 AM</strong> Pop Plage peak crowd · alt: drive 5 min to <strong>Le Garage</strong> 23:00–05:00 if Pop Plage feels too touristy</li>
+            <li><strong>03:30 AM</strong> Walk back along the lake (3 min)</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy:</strong> Drop canyoning (the cliffs-into-the-lake abseil set is no joke). Replace with a half-day <strong>license-free 8-seat electric GoBoat</strong> from <a href="https://www.le-deck-veyrier.fr/" target="_blank" rel="noopener">Le Deck de Veyrier</a> (€190 morning · €230 afternoon · €1,000 CC deposit · book 1–2 weeks Aug) — drive the lake, swim from the boat, pull up to lakeside bistros. Same Yoann Conte + Radulović evening. The reservation-permitting variant.</div>
+          <div class="alts"><strong>Alternative · Doubling down:</strong> Replace Yoann Conte with <strong>Maison Benoît Vidal ★★</strong> (Annecy-le-Vieux · 20 covers · pike/trout/crayfish + foraged elderberry/sorrel/caraway · €74 lunch / €185–€215 dinner tasting · closed Mon–Tue · book 8 weeks +33 4 50 88 73 18) — closer to the Festival venue, easier 21:00 transition, less expensive, equally Joann-friendly. Pair with the same Radulović headline + Pop Plage finish.</div>
+          <div class="alts"><strong>Alternative · Rainy day:</strong> Canyoning cancels in heavy rain. Pivot: <strong>Aix-les-Bains thermal spa day</strong> (50 min drive south) — Thermes Chevalley spa morning + lunch at <a href="https://www.atmospheres-hotel.com/" target="_blank" rel="noopener">★ Atmosphères</a> (Alain Perrillat-Mercerot · Le Bourget-du-Lac · France's largest natural lake panorama · €115–€140 Tue–Sat) + return Annecy 17:00. Same Yoann Conte + Radulović night.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">06</div><div class="date">Sat Aug 22</div></div>
+        <div class="day-content">
+          <h3>Geneva day · OR Mont Veyrier hike · OR La Tournette extreme · 🎶 Festival Night 5 TBD · ★★★ Clos des Sens finale</h3>
+          <ul>
+            <li><strong>09:00 AM</strong> Pick one of three Saturday spines:</li>
+            <li><strong>OPTION A — Geneva / Carouge day trip (recommended for energy budget after Friday late night):</strong>
+              <ul style="margin-top: 0.4rem; padding-left: 0;">
+                <li>10:00 AM Drive Annecy → Geneva 40 min via A41 north</li>
+                <li>10:30 AM Bains des Pâquis lakeside baths + saturday market browse</li>
+                <li>12:30 PM Lunch in <strong>Carouge</strong> at <a href="https://www.cafedusoleil.ch/" target="_blank" rel="noopener">Café du Soleil</a> (legendary cheese fondue) or one of the wine bars on Rue Saint-Victor</li>
+                <li>2:30 PM Old Town Geneva walk · Jet d'Eau · Patek Philippe Museum (open till 18:00)</li>
+                <li>5:00 PM Drive back Annecy 40 min</li>
+              </ul>
+            </li>
+            <li><strong>OPTION B — Mont Veyrier loop (moderate · the lake-view hike):</strong> 4 km loop east of Annecy · ~3 h round trip · full panorama over the lake · free · parking at Veyrier-du-Lac · the "I want a hike" without committing to La Tournette</li>
+            <li><strong>OPTION C — La Tournette guided summit (EXTREME · only with a guide):</strong> 2,351 m · 11.4 km / 6 h round trip · +2,366 m vertical · <strong>final pitch chains + iron ladder "extreme exposure" not for unsteady</strong> · <a href="https://annecymountainguide.com/" target="_blank" rel="noopener">Bureau des Guides d'Annecy</a> guided group hike — book 1 week. Means ditching the Festival ticket + dinner-out tonight; will absolutely fatigue Sunday.</li>
+            <li><strong>6:00 PM</strong> Back at Imperial Palace · spa reset</li>
+            <li><strong>6:00 PM</strong> 🎶 <strong>Festival Night 5 · 18:00 FREE TERRACE — 2026 lineup TBD as of June</strong> at Hip Bar · check festival site closer to date — Sat usually a higher-profile slot than weekday opens</li>
+            <li><strong>8:00 PM</strong> Drive 8 min Annecy-le-Vieux to <strong><a href="https://closdessens.com/" target="_blank" rel="noopener">Le Clos des Sens ★★★</a></strong> · Franck Derouet + Thomas Lorival (succeeded Laurent + Martine Petit 2023) · <strong>vegetal + lake-fish · 100% local within 100 km</strong> · 1,500 m² permaculture garden · in-house garum · foraged greens · <em>Plein d'Envies</em> tasting ~€280/pp + paired wine ~€185 · 4-hour experience · <strong>book 12 weeks ahead via closdessens.com</strong> · <strong>Joann-perfect</strong>: zero ocean seafood · we skip Sat Festival ticket because Clos des Sens IS the night</li>
+            <li><strong>00:30 AM</strong> Drive back · Pop Plage Saturday peak crowd OR Casino Impérial Fri–Sat 04:00 close · pick one for ~90 min</li>
+            <li><strong>02:30 AM</strong> Bed</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy:</strong> Drop Geneva and the hike. Sleep until 11:00 AM. <strong>Long Sensori Spa afternoon couples</strong> + lake swim at Plage d'Albigny. Light lunch on hotel terrace. Same Clos des Sens night + same Festival 18:00 free terrace. The "recover from Friday" play.</div>
+          <div class="alts"><strong>Alternative · Doubling down:</strong> All three options compressed — Mont Veyrier moderate hike morning (3 h) + Geneva afternoon (drive 40 min north after hike, late lunch Carouge) + 18:00 back for free terrace + Clos des Sens + post-dinner club. Very ambitious; reserve only if the trip's energy budget has held strong through Day 5.</div>
+          <div class="alts"><strong>Alternative · Rainy day:</strong> All three options pivot indoors. Geneva: museums + Carouge boutiques + indoor lunch — minimal impact. Veyrier hike: cancel; replace with <strong>Annecy Old Town</strong> + Château d'Annecy museum + Palais de l'Île + indoor pastries. La Tournette: absolutely cancel in rain — chains + ladder + storm = lethal. Same Clos des Sens night.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">07</div><div class="date">Sun Aug 23</div></div>
+        <div class="day-content">
+          <h3>Slow morning · ★★ Père Bise Talloires Sunday lunch · Talloires swim · 🎶 Festival Night 6 final · Caverivière Comedy ⚠️</h3>
+          <ul>
+            <li><strong>09:30 AM</strong> Slow brunch at Imperial Palace lakeside terrace</li>
+            <li><strong>10:30 AM</strong> Stroll Old Town · Palais de l'Île + Pont des Amours · final pastries at <strong>Philippe Rigollot</strong> MOF (vacherin, signature gateau)</li>
+            <li><strong>12:00 PM</strong> Drive 25 min east shore to Talloires</li>
+            <li><strong>12:30 PM</strong> <strong><a href="https://www.aubergedupere-bise.com/" target="_blank" rel="noopener">L'Auberge du Père Bise ★★ + Green Star · Jean Sulpice</a></strong> · Talloires lakefront · R&amp;C since 1973 · holds stars since 1928 (oldest Michelin presence on the lake) · 6–8 step alpine tasting · <strong>féra de lac, game, garden herbs, saffron de Savoie</strong> · lakeside terrace dining at midday · ~€220–€280/pp Sun lunch tasting · book <strong>10 weeks ahead</strong> · <strong>Sunday lunch is the high-demand slot — book first</strong> · the elegant Sunday substitute for the non-existent Annecy Classic Festival</li>
+            <li><strong>3:30 PM</strong> Off the terrace · 5-min walk to <strong>Plage de Talloires</strong> for a final lake swim · the storybook bay view back at Père Bise + Mont Tournette over the water</li>
+            <li><strong>4:30 PM</strong> Drive back Imperial Palace · 45 min Sensori Spa final session · last lake-view hammam</li>
+            <li><strong>6:00 PM</strong> 🎶 <strong>Festival Night 6 · 18:00 FREE TERRACE — People Aki! (Ska)</strong> at Hip Bar · Spanish ska-fusion · the most upbeat free terrace of the week · walk-up · drink in hand for the sunset</li>
+            <li><strong>7:30 PM</strong> Light final dinner at <strong>Le Freti</strong> (12 Rue Sainte-Claire) — Savoyard institution since 1974 · 15+ fondue variants · the trip's final cheese-and-cured-meat anchor before the long flight tomorrow · €55/pp · walk-in usually OK Sun early-evening</li>
+            <li><strong>9:00 PM</strong> 🎶 <strong>Festival Night 6 · 21:00 TICKETED — Philippe Caverivière (Comedy)</strong> at Salle de l'Europe · <strong>VIP €25–€38</strong> · <strong>⚠️ French stand-up = language barrier</strong> · French TV comedy host known for political/news satire — most jokes won't translate · <strong>SKIP if not French-fluent</strong></li>
+            <li><strong>10:30 PM</strong> If skipping the comedy: 23:00 final <strong>Casino Impérial nightcap</strong> (Sun 20:00–02:00) — last roulette of the trip</li>
+            <li><strong>00:00 PM (Sun)</strong> Bed early — Monday flight</li>
+            <li><strong>Mon Aug 24 06:00 AM</strong> Check out · drive GVA 50 min · return rental · 09:55 AM Swiss LX2811 GVA→ZRH · 13:30 LX40 ZRH→LAX 12h 05m · arrive LAX 16:35 same day</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy:</strong> Drop Père Bise (the long Sun lunch + Talloires swim is a half-day). Just brunch + slow Old Town wandering · Le Freti early dinner · skip the Caverivière comedy (language barrier anyway) · early Casino + bed.</div>
+          <div class="alts"><strong>Alternative · Doubling down · "Extend by one day":</strong> Push the departure to Mon Aug 24 evening or Tue Aug 25 morning. Mon Aug 24 unlocks: <strong>Le Brise Glace reopens that evening</strong> (the city's main contemporary music venue) + <strong>UTMB Chamonix Day 1 buzz starts</strong> + <strong>Festival Night 7: Francesca Tandoi Jazz free + Peter Cincotti Jazz ticketed</strong> (Cincotti = better-known headliner than Caverivière). The 1-extra-night extension is the highest-ROI add-on if your work calendar permits.</div>
+          <div class="alts"><strong>Alternative · Rainy day:</strong> Père Bise has indoor dining room (the famous terrace is a sunny-day-only experience). Same lunch unchanged. Talloires swim cancels — replace with stroll through Talloires village + visit to <a href="https://abbaye-talloires.com/" target="_blank" rel="noopener">Abbaye de Talloires</a> 1018-Benedictine grounds (NOT a Classic Festival venue in 2026 — they have their own concerts Aug 29–31 after departure but the abbey grounds + chapel are open all summer).</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="destination" id="budget">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">All-in, Two Travelers, USD</span>
+      <h2>Budget</h2>
+      <p>Aug 17–23 Annecy at the Imperial Palace (5 nights), 3 Michelin tables, paragliding + Aiguille du Midi + boat day, full Festival run. <strong>Standard tier ~$13,400</strong> — fits $9–15K band.</p>
+    </div>
+    <p style="text-align: center; color: var(--muted); margin-top: 1rem;">Flights LAX↔GVA via ZRH on Swiss ~$2,400 · Imperial Palace lake-view 5 nights ~$3,800 · Le Clos des Sens ★★★ + La Ciboulette ★★ + Père Bise ★★ ~$1,400 · 4 Festival show tickets ~$240 · Paragliding ×2 + Aiguille du Midi ×2 + boat ×2 ~$1,100 · Wine + Savoyard dinners + lunches ~$1,800 · Car GVA→Annecy 6 days + parking ~$650 · Casino + cushion ~$2,010</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Built for Mark · August 17–23, 2026 · LAX origin · Imperial Festival anchor · Itinerary No. 03E-2 · <a href="../index.html">all trips</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
+

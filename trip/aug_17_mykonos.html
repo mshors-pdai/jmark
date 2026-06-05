@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>August 17–23, 2026 — Mykonos · XLSIOR Week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --myk-sea: #1d6fb8;
+    --myk-deep: #0e3d6f;
+    --myk-stone: #d8c9a8;
+    --myk-stone-deep: #8e7b54;
+    --myk-clay: #d35d3a;
+    --myk-olive: #6b8a55;
+    --myk-cream: #f1f4f9;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.6; background: #fafbfd; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
+  h3 { font-size: 1.6rem; line-height: 1.25; }
+  h4 { font-size: 1.15rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; }
+  a { color: inherit; }
+
+  .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+  .back-bar a.back-link:hover { color: var(--myk-clay); }
+  .back-bar a.back-link .arrow { display: inline-block; transition: transform 0.2s; }
+  .back-bar a.back-link:hover .arrow { transform: translateX(-3px); }
+  .back-bar .brand-mini { font-family: 'Playfair Display', serif; font-size: 0.92rem; color: rgba(255,255,255,0.7); letter-spacing: -0.02em; text-decoration: none; }
+  .back-bar .brand-mini:hover { color: white; }
+  .back-bar .brand-mini .dot { color: var(--myk-clay); }
+  .back-bar .meta-mini { display: none; font-size: 0.74rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
+  @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
+
+  .topnav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 1rem 0; }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; }
+  .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
+  .topnav .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .topnav .tab { padding: 0.5rem 1.25rem; border-radius: 999px; text-decoration: none; color: var(--myk-deep); font-size: 0.9rem; font-weight: 500; transition: all 0.2s; border: 1px solid var(--myk-sea); }
+  .topnav .tab:hover { background: var(--myk-sea); color: white; }
+
+  .intro-hero { padding: 6rem 0 4rem; text-align: center; background: linear-gradient(180deg, var(--myk-cream) 0%, #fafbfd 100%); }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--myk-clay); }
+  .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
+  .intro-hero h1 em { font-style: italic; color: var(--myk-sea); font-weight: 400; }
+  .intro-hero .lede { max-width: 740px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
+  .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+
+  .xlsior-banner { max-width: 1100px; margin: 2.5rem auto 0; padding: 1.75rem 2rem; background: linear-gradient(135deg, rgba(211,93,58,0.12), rgba(211,93,58,0.06)); border: 2px solid var(--myk-clay); border-radius: 16px; text-align: left; }
+  .xlsior-banner .banner-head { display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.75rem; }
+  .xlsior-banner .banner-head .warn { font-size: 1.6rem; }
+  .xlsior-banner .banner-head h4 { color: var(--myk-clay); margin: 0; font-size: 1.2rem; }
+  .xlsior-banner p { color: #333; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .xlsior-banner p:last-child { margin-bottom: 0; }
+  .xlsior-banner strong { color: var(--myk-clay); }
+  .xlsior-banner .score-tag { display: inline-block; padding: 0.2rem 0.7rem; background: var(--myk-clay); color: white; border-radius: 999px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; margin-right: 0.4rem; }
+  .xlsior-banner .score-tag.muted { background: var(--myk-stone-deep); }
+
+  .destination { padding: 6rem 0 4rem; background: var(--myk-cream); }
+  .hero-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.12); margin-bottom: 4rem; }
+  .hero-card .hero-image { min-height: 500px; background-size: cover; background-position: center; position: relative;
+    background-image: linear-gradient(135deg, rgba(14,61,111,0.20), rgba(216,201,168,0.40)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Mykonos_Chora.jpg/1280px-Mykonos_Chora.jpg');
+    background-color: var(--myk-sea); }
+  .hero-card .hero-content { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; background: white; }
+  .hero-card .eyebrow { margin-bottom: 1.25rem; color: var(--myk-clay); }
+  .hero-card h2 { margin-bottom: 1.5rem; color: var(--myk-deep); }
+  .hero-card .tagline { font-size: 1.15rem; color: var(--muted); margin-bottom: 2rem; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .stat .stat-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.1; margin-bottom: 0.2rem; color: var(--myk-deep); }
+  .stat .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 720px; }
+  .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--myk-clay); }
+  .section-header h2 { margin-bottom: 1rem; color: var(--myk-deep); }
+  .section-header p { color: var(--muted); font-size: 1.05rem; }
+
+  .flight-box { background: white; border-radius: 16px; padding: 2.5rem; max-width: 920px; margin: 2rem auto 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .flight-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+  .flight-row:last-of-type { border-bottom: none; }
+  .flight-airport .code { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1; font-weight: 700; color: var(--myk-deep); }
+  .flight-airport .city { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; }
+  .flight-line { text-align: center; color: var(--muted); }
+  .flight-line .dash { height: 1px; background: var(--line); position: relative; margin: 0.5rem 0; }
+  .flight-line .dash::after { content: '⟶'; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: white; padding: 0 0.5rem; color: var(--myk-clay); }
+  .flight-line .info { font-size: 0.8rem; }
+  .flight-meta { display: flex; gap: 2rem; justify-content: center; padding-top: 1.5rem; margin-top: 1rem; border-top: 2px solid var(--line); }
+  .flight-meta .item { text-align: center; }
+  .flight-meta .item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 0.3rem; }
+  .flight-meta .item .val { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--myk-deep); }
+
+  .only-this-week { max-width: 1100px; margin: 0 auto 4rem; padding: 3rem; background: linear-gradient(135deg, #f1f4f9, #dee6f0); border-radius: 24px; }
+  .only-this-week .head { text-align: center; margin-bottom: 2.5rem; }
+  .only-this-week h3 { color: var(--myk-deep); font-size: 2rem; margin-top: 0.5rem; }
+  .only-this-week .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .event-card { background: white; border-radius: 16px; padding: 2rem; border-left: 4px solid var(--myk-sea); }
+  .event-card.clay { border-left-color: var(--myk-clay); }
+  .event-card.olive { border-left-color: var(--myk-olive); }
+  .event-card.stone { border-left-color: var(--myk-stone); }
+  .event-card.xlsior { border-left-color: var(--myk-clay); border-left-width: 6px; background: linear-gradient(135deg, white, rgba(211,93,58,0.04)); }
+  .event-card .head { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .event-card .icon { font-size: 2.2rem; }
+  .event-card h4 { margin: 0; color: var(--myk-deep); }
+  .event-card h4.clay { color: var(--myk-clay); }
+  .event-card h4.olive { color: var(--myk-olive); }
+  .event-card h4.stone { color: var(--myk-stone-deep); }
+  .event-card .when { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
+  .event-card p { font-size: 0.95rem; color: #333; margin-bottom: 1rem; }
+  .event-card .book-link { display: inline-block; padding: 0.4rem 0.9rem; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--myk-clay); border: 1.5px solid var(--myk-clay); }
+  .event-card .book-link:hover { background: var(--myk-clay); color: white; }
+  .bonus-callout { margin-top: 2rem; padding: 1.5rem 2rem; background: rgba(29,111,184,0.06); border-radius: 12px; border-left: 4px solid var(--myk-sea); }
+  .bonus-callout h4 { margin-bottom: 0.5rem; color: var(--myk-deep); }
+  .bonus-callout p { font-size: 0.95rem; color: #333; margin: 0; }
+  .bonus-callout a { color: var(--myk-sea); font-weight: 600; }
+
+  .glance-table { max-width: 1000px; margin: 0 auto 4rem; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .glance-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .glance-table th { background: var(--myk-deep); color: white; padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600; }
+  .glance-table td { padding: 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .glance-table tr:last-child td { border-bottom: none; }
+  .glance-table tr:nth-child(even) td { background: rgba(29,111,184,0.04); }
+  .glance-table td.daynum { font-weight: 600; color: var(--myk-clay); }
+
+  .itinerary { max-width: 950px; margin: 0 auto; }
+  .day { display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
+  .day:last-child { border-bottom: none; }
+  .day-number .num { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1; font-weight: 600; font-style: italic; color: var(--myk-clay); }
+  .day-number .date { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .day-content h3 { margin-bottom: 0.75rem; color: var(--myk-deep); }
+  .day-content ul { list-style: none; }
+  .day-content ul li { padding: 0.45rem 0 0.45rem 1.5rem; position: relative; color: #333; }
+  .day-content ul li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 6px; height: 6px; border-radius: 50%; background: var(--myk-clay); }
+  .day-content ul li strong { color: var(--myk-deep); }
+  .day-content ul li a { color: var(--myk-sea); text-decoration: none; border-bottom: 1px dotted; }
+  .alts { background: rgba(211,93,58,0.06); border-left: 3px solid var(--myk-clay); padding: 0.85rem 1rem; margin: 0.75rem 0 0.25rem 1.5rem; border-radius: 0 6px 6px 0; font-size: 0.88rem; color: #444; }
+  .alts strong { color: var(--myk-clay); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.25rem; }
+
+  .hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .hotel-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+  .hotel-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .hotel-card .hotel-image { height: 200px; background-size: cover; background-position: center; position: relative; background-color: var(--myk-stone); }
+  .hotel-card .hotel-tier { position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.95); padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: var(--myk-deep); z-index: 2; }
+  .hotel-card .hotel-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .hotel-card .hotel-body h4 { margin-bottom: 0.25rem; color: var(--myk-deep); }
+  .hotel-card .hotel-body .loc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+  .hotel-card .hotel-body p { font-size: 0.93rem; color: #333; margin-bottom: 1rem; line-height: 1.55; }
+  .hotel-card .hotel-meta { display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.85rem; margin-top: auto; }
+  .hotel-card .hotel-meta .price { font-weight: 600; color: var(--myk-deep); }
+  .hotel-card .book-link { display: inline-block; padding: 0.35rem 0.85rem; font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--myk-clay); border: 1.5px solid var(--myk-clay); align-self: flex-start; margin-top: 0.5rem; }
+  .hotel-card .book-link:hover { background: var(--myk-clay); color: white; }
+
+  .wine-block { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; max-width: 1100px; margin: 0 auto 2rem; background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.06); align-items: center; }
+  .wine-block .wine-image { min-height: 360px; background-size: cover; background-position: center; background-color: var(--myk-stone); }
+  .wine-block.myk-wine .wine-image { background-image: linear-gradient(135deg, rgba(29,111,184,0.25), rgba(107,138,85,0.40)), url('https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80'); }
+  .wine-block.mainland .wine-image { background-image: linear-gradient(135deg, rgba(211,93,58,0.25), rgba(216,201,168,0.40)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80'); }
+  .wine-block .wine-text { padding: 3rem 2.5rem 3rem 0; }
+  .wine-block .eyebrow { color: var(--myk-clay); }
+  .wine-block h3 { color: var(--myk-deep); margin-bottom: 1rem; }
+  .wine-block p { color: #333; font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .winery-list .winery { padding: 0.85rem 0; border-bottom: 1px dashed var(--line); }
+  .winery-list .winery:last-child { border-bottom: none; }
+  .winery-list .name { font-weight: 600; color: var(--myk-deep); margin-bottom: 0.2rem; }
+  .winery-list .name a { color: var(--myk-clay); text-decoration: none; }
+  .winery-list .desc { font-size: 0.88rem; color: var(--muted); }
+
+  .food-list { max-width: 950px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .food-row { display: grid; grid-template-columns: 1fr 1.6fr auto; gap: 1.5rem; padding: 1.5rem; border-bottom: 1px solid var(--line); align-items: center; }
+  .food-row:last-child { border-bottom: none; }
+  .food-row .place { font-family: 'Playfair Display', serif; font-weight: 600; color: var(--myk-deep); font-size: 1.1rem; }
+  .food-row .place .stars { color: var(--myk-clay); margin-left: 0.4rem; font-size: 0.9rem; }
+  .food-row .place .meta { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0; }
+  .food-row .desc { font-size: 0.92rem; color: #333; line-height: 1.55; }
+  .food-row .drive { font-size: 0.78rem; color: var(--muted); text-align: right; white-space: nowrap; }
+
+  .activities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1100px; margin: 0 auto; }
+  .activity { background: white; border-radius: 12px; padding: 1.75rem 1.25rem; text-align: center; transition: transform 0.2s; border: 1px solid var(--line); }
+  .activity:hover { transform: translateY(-2px); }
+  .activity .icon { font-size: 2.2rem; margin-bottom: 0.85rem; display: block; }
+  .activity h4 { margin-bottom: 0.5rem; font-size: 1rem; color: var(--myk-deep); }
+  .activity h4 a { color: inherit; text-decoration: none; }
+  .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+  .nightlife { max-width: 1100px; margin: 0 auto 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .nightlife-col { background: #15161a; color: white; padding: 2rem; border-radius: 16px; }
+  .nightlife-col h3 { color: var(--myk-clay); margin-bottom: 1.25rem; font-style: italic; }
+  .nightlife-col .venue { padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nightlife-col .venue:last-child { border-bottom: none; }
+  .nightlife-col .venue .vname { font-family: 'Playfair Display', serif; font-weight: 600; color: white; font-size: 1.05rem; }
+  .nightlife-col .venue .vmeta { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
+  .nightlife-col .venue .vdesc { font-size: 0.88rem; color: rgba(255,255,255,0.75); margin-top: 0.5rem; line-height: 1.5; }
+
+  .score-grid { max-width: 1000px; margin: 0 auto 3rem; }
+  .score-row { display: grid; grid-template-columns: 1fr auto 70px; gap: 1rem; padding: 1.1rem 1.5rem; background: white; border-radius: 8px; margin-bottom: 0.6rem; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .score-row .axis { font-weight: 600; color: var(--myk-deep); }
+  .score-row .axis .tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-left: 0.5rem; font-weight: 500; }
+  .score-row .reason { font-size: 0.88rem; color: #444; max-width: 480px; text-align: right; }
+  .score-row .num { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--myk-clay); font-weight: 600; }
+  .score-row.total { background: var(--myk-deep); color: white; }
+  .score-row.total .axis { color: white; }
+  .score-row.total .num { color: white; font-size: 1.9rem; }
+
+  .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
+  .booking .section-header h2 { color: white; }
+  .booking .section-header p { color: rgba(255,255,255,0.7); }
+  .booking .section-header .eyebrow { color: rgba(255,255,255,0.7); }
+  .steps { max-width: 850px; margin: 0 auto; }
+  .step { display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .step:last-child { border-bottom: none; }
+  .step .stepnum { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--myk-clay); font-style: italic; }
+  .step h4 { color: white; margin-bottom: 0.5rem; }
+  .step p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem; }
+  .step p strong { color: white; }
+  .step .meta-line { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+  .step .meta-line a { color: var(--myk-stone); text-decoration: none; }
+
+  .adversarial { max-width: 950px; margin: 4rem auto 0; padding: 2.5rem; background: rgba(255,255,255,0.04); border-radius: 16px; border-left: 4px solid var(--myk-clay); }
+  .adversarial h3 { color: white; margin-bottom: 1rem; }
+  .adversarial p { color: rgba(255,255,255,0.78); font-size: 0.95rem; margin-bottom: 1rem; }
+  .adversarial p strong { color: var(--myk-clay); }
+
+  .budget-table { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px; }
+  .budget-table .head { text-align: center; margin-bottom: 2.5rem; }
+  .budget-table h3 { color: white; margin-top: 0.5rem; }
+  .budget-table .head p { color: rgba(255,255,255,0.6); margin-top: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 0.95rem; }
+  .budget-table table { width: 100%; border-collapse: collapse; color: white; font-size: 0.95rem; }
+  .budget-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
+  .budget-table th.item { text-align: left; color: rgba(255,255,255,0.6); width: 38%; }
+  .budget-table th.tier { text-align: center; color: rgba(255,255,255,0.85); width: 21%; font-size: 0.92rem; }
+  .budget-table th.standard { color: var(--myk-clay); font-weight: 700; font-size: 1rem; background: rgba(211,93,58,0.14); }
+  .budget-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .budget-table td.item { color: rgba(255,255,255,0.85); }
+  .budget-table td.tier { text-align: center; }
+  .budget-table td.standard { text-align: center; background: rgba(211,93,58,0.06); }
+  .budget-table td.std-mark { font-weight: 600; }
+  .budget-table td.dim { color: rgba(255,255,255,0.3); }
+  .budget-table tfoot td { padding: 1.5rem 0.75rem 0.5rem; font-family: 'Playfair Display', serif; border-top: 2px solid rgba(255,255,255,0.25); border-bottom: none; }
+  .budget-table tfoot td.total-label { font-size: 1.3rem; color: white; }
+  .budget-table tfoot td.tier { font-size: 1.4rem; color: white; }
+  .budget-table tfoot td.standard { font-size: 1.65rem; color: var(--myk-clay); font-weight: 700; }
+  .budget-table .footnote { text-align: center; color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-top: 2rem; line-height: 1.6; }
+
+  footer { background: #0d0d0d; color: rgba(255,255,255,0.6); padding: 2.5rem 0; text-align: center; font-size: 0.85rem; }
+
+  @media (max-width: 900px) {
+    .hero-card { grid-template-columns: 1fr; }
+    .hero-card .hero-image { min-height: 280px; }
+    .hero-card .hero-content { padding: 2.5rem 2rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .day { grid-template-columns: 1fr; gap: 1rem; }
+    .day-number .num { font-size: 3rem; }
+    .hotels-grid { grid-template-columns: 1fr 1fr; }
+    .activities { grid-template-columns: repeat(2, 1fr); }
+    .flight-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .only-this-week .grid { grid-template-columns: 1fr; }
+    .wine-block { grid-template-columns: 1fr; }
+    .wine-block .wine-text { padding: 2rem; }
+    .nightlife { grid-template-columns: 1fr; }
+    .topnav .tabs { flex-wrap: wrap; }
+    .container { padding: 0 1.25rem; }
+    .step { grid-template-columns: 60px 1fr; gap: 1rem; }
+    .food-row { grid-template-columns: 1fr; gap: 0.6rem; }
+    .food-row .drive { text-align: left; }
+    .score-row { grid-template-columns: 1fr; }
+    .score-row .reason { text-align: left; }
+    .score-row .num { text-align: left; }
+  }
+  @media (max-width: 600px) {
+    .hotels-grid, .activities { grid-template-columns: 1fr; }
+    .intro-hero .meta { gap: 1.5rem; }
+    .topnav { padding: 0.6rem 0; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .brand { font-size: 1rem; }
+    .topnav .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+    .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    .glance-table, .budget-table { overflow-x: auto; }
+    .glance-table table, .budget-table table { min-width: 540px; }
+    h2 { font-size: 1.8rem !important; }
+    .day-number .num { font-size: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
+    <span class="meta-mini">Itinerary No. 03G-2 · Mykonos · Aug 17–23 · <a href="./aug_11_mykonos.html" style="color: var(--myk-clay); text-decoration: none;">compare v1 (Aug 11) ↗</a></span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<nav class="topnav">
+  <div class="container">
+    <div class="brand">August 17 → 23, 2026</div>
+    <div class="tabs">
+      <a href="#itinerary" class="tab">Itinerary</a>
+      <a href="#hotels" class="tab">Hotels</a>
+      <a href="#wine" class="tab">Wine</a>
+      <a href="#food" class="tab">Food</a>
+      <a href="#activities" class="tab">Activities</a>
+      <a href="#nightlife" class="tab">Nightlife</a>
+      <a href="#score" class="tab">Score</a>
+      <a href="#book" class="tab">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">Greece · Cyclades · 5 Hotel Nights · Option G-2</span>
+    <h1>Mykonos — <em>XLSIOR Week.</em></h1>
+    <p class="lede">
+      The Aegean overdrive pick — shifted one week later. Five nights at <strong>Belvedere Hotel</strong> on Mykonos Town's hillside — Matsuhisa Mykonos on property, 10-minute walks to Little Venice, the 16th-century windmills, and every Matogianni-street bar. Days for <strong>Delos morning</strong>, <strong>private rib to Rhenia + Spilia sea-cave lunch</strong>, beach-club afternoons at Nammos or Principote, late dinners at Beefbar + Kiki's grilled lamb. <strong>Critical calendar overlap: XLSIOR Festival Aug 20–25 lands on 5 of your 5 nights</strong> — the world's largest gay-circuit festival dominates Cavo Paradiso, Jackie O', SantAnna, and several beach clubs all week. The trip's vibe-tier depends entirely on whether that overlap is feature or bug (read the banner). Solomun runs Alemagou all summer; Scorpios cycles Peggy Gou, Dixon, Keinemusik, Adam Port, Luciano through the month. Zero Michelin stars on the island — but <strong>Matsuhisa, Beefbar, Spilia in a sea cave, and Kiki's no-electricity grilled lamb</strong> cover the food caliber regardless.
+    </p>
+    <div class="meta">
+      <div class="meta-item"><div class="label">Departure</div><div class="value">Mon, Aug 17</div></div>
+      <div class="meta-item"><div class="label">Return</div><div class="value">Sun, Aug 23</div></div>
+      <div class="meta-item"><div class="label">Travelers</div><div class="value">Two</div></div>
+      <div class="meta-item"><div class="label">Origin</div><div class="value">LAX</div></div>
+    </div>
+
+    <div class="xlsior-banner">
+      <div class="banner-head">
+        <span class="warn">⚠️</span>
+        <h4>XLSIOR Festival Aug 20–25, 2026 — overlaps 5 of 5 nights</h4>
+      </div>
+      <p><strong>The world's largest gay-circuit festival lands on Mykonos Aug 20–25</strong>, programmed across Cavo Paradiso, Jackie O' Beach, SantAnna, Super Paradise, and pop-up venues. ~30,000 attendees from 70+ countries descend on Chora — Mykonos's gay-capital identity goes into overdrive. Headliners (Offer Nissim, Tony Moran, Abel, Alyson Calagna, Steve Pitron) run nightly main parties from midnight–sunrise.</p>
+      <p><span class="score-tag">Score 33 / 39</span> <strong>if vibe-aligned</strong> — XLSIOR becomes the trip's centerpiece, four of the most-iconic circuit nights in the world bookend Beefbar + Spilia + Kiki's. The week's energy is unmatched in Europe.</p>
+      <p><span class="score-tag muted">Score 28–31 / 39</span> <strong>if not vibe-aligned</strong> — Mykonos's restaurants and beach clubs are still excellent, but Cavo Paradiso and Jackie O' are programmed for the XLSIOR crowd all week, prices spike 20–30%, dining reservations get tight, and the Chora alley energy is wall-to-wall. The Aug 11 itinerary (Diplo + Perseids + Dekapentavgoustos, no XLSIOR) is the better fit for "Mykonos without the circuit-week intensity."</p>
+    </div>
+
+    <div class="meta">
+      <div class="meta-item"><div class="label">Departure</div><div class="value">Mon, Aug 17</div></div>
+      <div class="meta-item"><div class="label">Return</div><div class="value">Sun, Aug 23</div></div>
+      <div class="meta-item"><div class="label">Travelers</div><div class="value">Two</div></div>
+      <div class="meta-item"><div class="label">Origin</div><div class="value">LAX</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="destination" id="itinerary">
+  <div class="container">
+
+    <div class="hero-card">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Option G-2 · Greece · Cyclades</span>
+        <h2>Mykonos —<br>five nights, XLSIOR week</h2>
+        <p class="tagline">Single-base 5 nights at Belvedere on Mykonos Town's hillside — Matsuhisa Mykonos on property, sunset cocktail at 180° Sunset Bar (a 4-minute walk uphill), the entire Matogianni-street bar crawl below. Days for Delos UNESCO morning, a private rib to Rhenia + Spilia sea-cave lunch, beach-club afternoons (Nammos / Principote), late dinners at Beefbar + Kiki's grilled lamb. <strong>XLSIOR Festival opens Aug 20 and runs through the rest of your stay</strong> — Cavo Paradiso, Jackie O', SantAnna all programmed for the world's biggest gay-circuit festival. 28–34°C with the Meltemi cooling the afternoons + cancelling 30%+ of boat days.</p>
+        <div class="stats">
+          <div class="stat"><div class="stat-value">28–34°C</div><div class="stat-label">August High</div></div>
+          <div class="stat"><div class="stat-value">Top 3 EU</div><div class="stat-label">Nightlife Tier</div></div>
+          <div class="stat"><div class="stat-value">XLSIOR</div><div class="stat-label">Aug 20–25 Overlap</div></div>
+          <div class="stat"><div class="stat-value">25 min</div><div class="stat-label">Delos Ferry RT</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="eyebrow">Getting There</span>
+      <h2>Flight Plan</h2>
+      <p>No US nonstop to JMK (Mykonos's runway is short — narrow-body only). <strong>The workhorse is LAX → ATH connection on Lufthansa, Air France, or Delta/KLM, then the 35-minute hop ATH→JMK on Aegean</strong>. Land Athens early afternoon Tue, taxi between terminals, into Mykonos Town by 6 PM. Aegean Airlines runs ~10 daily ATH→JMK rotations in August.</p>
+    </div>
+    <div class="flight-box">
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">LAX</div><div class="city">Los Angeles · Mon Aug 17 · dep 4:30 PM</div></div>
+        <div class="flight-line"><div class="info">Lufthansa LH453</div><div class="dash"></div><div class="info">11h 25m nonstop</div></div>
+        <div class="flight-airport"><div class="code">MUC</div><div class="city">Munich · Tue Aug 18 · arr 12:55 PM</div></div>
+      </div>
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">MUC</div><div class="city">Munich · 1h 50m layover</div></div>
+        <div class="flight-line"><div class="info">Lufthansa LH1754</div><div class="dash"></div><div class="info">2h 10m</div></div>
+        <div class="flight-airport"><div class="code">ATH</div><div class="city">Athens · arr 4:55 PM · taxi terminal-to-terminal</div></div>
+      </div>
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">ATH</div><div class="city">Athens · 1h 25m layover</div></div>
+        <div class="flight-line"><div class="info">Aegean A3 350</div><div class="dash"></div><div class="info">35 min</div></div>
+        <div class="flight-airport"><div class="code">JMK</div><div class="city">Mykonos · arr <strong>6:55 PM</strong> · 15 min taxi to Belvedere</div></div>
+      </div>
+      <div class="flight-meta">
+        <div class="item"><div class="label">Est. Round-trip</div><div class="val">$1,150–$1,750</div></div>
+        <div class="item"><div class="label">At Belvedere by</div><div class="val">7:45 PM</div></div>
+        <div class="item"><div class="label">Carrier</div><div class="val">LH + Aegean</div></div>
+      </div>
+    </div>
+    <p style="text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;">Backup routings: <strong>Delta/Air France LAX→CDG→ATH→JMK</strong> (often cheapest), <strong>KLM LAX→AMS→ATH→JMK</strong>, <strong>Turkish LAX→IST→JMK direct in season</strong>, or <strong>Emirates LAX→DXB→ATH→JMK</strong>. Aegean's ATH→JMK lasts ~35 min and runs through 23:00 in August — a delayed long-haul can still catch the last hop. Avoid sub-90-minute ATH layovers (Schengen entry queue is 30–45 min Aug). <strong>Note: XLSIOR week (Aug 20–25) inflates JMK arrival demand from Aug 18–20</strong> — book flights 60+ days out. <a href="https://www.skyscanner.com/routes/lax/jmk/los-angeles-international-to-mykonos.html" target="_blank" rel="noopener" style="color: var(--myk-clay);">Skyscanner LAX→JMK →</a></p>
+
+    <div class="section-header">
+      <span class="eyebrow">Day by Day</span>
+      <h2>The Itinerary</h2>
+      <p>Single base — <strong>5 nights at Belvedere Hotel, Mykonos Town hillside</strong>. Zero ferry-day-moves, zero check-in friction; you sleep in one bed, you unpack once, you walk down the hill to Matogianni-street dinner each night and back up to Matsuhisa or to bed. Days are stacked so the marquee weather-dependent days (Delos, Rhenia rib, Korfos) land in the first three. <strong>XLSIOR Festival opens Thu Aug 20</strong> — every evening from Aug 20 forward has a marquee XLSIOR option (Cavo Paradiso main parties, Jackie O' Beach pool, SantAnna marathon). The day plan offers both lean-in and skip-it routes for every XLSIOR night. <strong>Meltemi wind cancels ~30% of August boat days</strong>; alternates are baked into every Meltemi-vulnerable slot below.</p>
+    </div>
+
+    <div class="only-this-week">
+      <div class="head">
+        <span class="eyebrow" style="color: var(--myk-clay);">Only This Week</span>
+        <h3>Don't-Miss Events on Your Exact Dates</h3>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 720px; margin-left: auto; margin-right: auto;">The week's centerpiece is the <strong>XLSIOR Festival Aug 20–25</strong> — five days/nights of marquee circuit parties across Cavo Paradiso, Jackie O', SantAnna, Super Paradise. The Solomun Alemagou residency runs June–Sept and overlaps your full stay; Scorpios cycles Peggy Gou / Dixon / Keinemusik / Adam Port / Luciano through August (verify the daily lineup on arrival). <strong>What you just missed:</strong> Dekapentavgoustos (Aug 15) was 2 days before arrival; the Perseid peak (Aug 12–13) was a week before; Diplo at Cavo (confirmed Aug 16) was the night before you land.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="event-card xlsior">
+          <div class="head">
+            <span class="icon">🏳️‍🌈</span>
+            <div>
+              <h4 class="clay">XLSIOR Festival 2026 — opening night Aug 20</h4>
+              <div class="when"><strong>Thu Aug 20 → Mon Aug 25</strong> · world's largest gay-circuit festival · 5 of your 5 nights overlap</div>
+            </div>
+          </div>
+          <p><strong>The single largest event on your calendar.</strong> XLSIOR has dominated late-August Mykonos for 15 years — 30,000+ attendees from 70+ countries across six days and nights. The official program for 2026 historically runs: <strong>Opening Party (Thu Aug 20)</strong> at Cavo Paradiso with Offer Nissim or Abel headlining; <strong>Pool Parties (Fri Aug 21)</strong> at Jackie O' Beach Club + SantAnna afternoons; <strong>Cavo Main Party (Sat Aug 22)</strong> — the week's marquee, 3,000-cap cliffside bowl runs midnight–sunrise; <strong>Sunday Closing (Sun Aug 23)</strong> at Super Paradise. Tickets €40–€120 GA depending on night, table service €600–€1,500. <strong>If vibe-aligned, this is the entire trip.</strong> If not, every other restaurant + beach club still runs — but expect spillover energy in Chora alleys.</p>
+          <a href="https://www.xlsiorfestival.com/" target="_blank" rel="noopener" class="book-link">XLSIOR 2026 →</a>
+        </div>
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">🎧</span>
+            <div>
+              <h4>Cavo Paradiso XLSIOR programming Aug 20 + 22</h4>
+              <div class="when"><strong>Thu Aug 20 + Sat Aug 22</strong> — opening + main parties · doors midnight, sunrise close</div>
+            </div>
+          </div>
+          <p>The Aegean's most iconic open-air club — 3,000-capacity cliffside venue above Paradise Beach, since 1993. <strong>During XLSIOR week, Cavo Paradiso is functionally the festival's main stage</strong> — Thu Aug 20 opening and Sat Aug 22 main party are the biggest nights of the entire Mykonos summer. Historic headliners: Offer Nissim, Steve Pitron, Abel Aguilera, Tony Moran. GA €60–€120 (verify 2026), bottle service €800–€1,500 for tables. Sets run 01:00–07:00. <strong>Taxi out (€40 each way) — don't drive after Cavo</strong>. If you'd rather skip XLSIOR Cavo nights, Wed Aug 19 + Fri Aug 21 + Sun Aug 23 have non-XLSIOR Cavo programming on most calendars.</p>
+          <a href="https://cavoparadiso.gr/" target="_blank" rel="noopener" class="book-link">Cavo Paradiso 2026 →</a>
+        </div>
+
+        <div class="event-card stone">
+          <div class="head">
+            <span class="icon">🍸</span>
+            <div>
+              <h4 class="stone">Jackie O' Beach Club — XLSIOR pool day Fri Aug 21</h4>
+              <div class="when"><strong>Fri Aug 21</strong> — Super Paradise Beach · sunset DJ + drag + pool · XLSIOR signature daytime</div>
+            </div>
+          </div>
+          <p>The longtime queen of Mykonos's gay scene, the pool-and-DJ daytime venue on Super Paradise Beach. <strong>The Friday XLSIOR pool day at Jackie O' is the week's "where do we start" anchor</strong> — pool parties from 14:00, drag shows + go-go performers, sunset DJ set runs into the 22:00 dinner hour. €40 cover during XLSIOR week, daybeds €200+ min spend. Even off XLSIOR programming, Jackie O' is the most-fun mid-day stop on the island for the gay crowd. <strong>If not vibe-aligned, swap to Principote (Panormos) or Buddha-Bar Beach (Ornos) for a quieter beach-club afternoon</strong>.</p>
+          <a href="https://www.jackieomykonos.com/" target="_blank" rel="noopener" class="book-link">Jackie O' →</a>
+        </div>
+
+        <div class="event-card clay">
+          <div class="head">
+            <span class="icon">🕺</span>
+            <div>
+              <h4 class="clay">Solomun at Alemagou (residency)</h4>
+              <div class="when"><strong>Early June → late Sept 2026</strong> — Solomun's Cycladic home, dates posted weekly</div>
+            </div>
+          </div>
+          <p>Solomun's summer Mykonos residency runs at <strong>Alemagou Ftelia</strong> — the Meltemi-protected boho beach restaurant + DJ pop-up on the north-coast Ftelia bay. The Bosnian-German house heavyweight has anchored Alemagou for the last several summers, with 4–6 dates per month across June–September. Verify the Aug 17–23 dates on arrival — historically Solomun plays one mid-week and one weekend show per month here, and during XLSIOR week Alemagou typically retains its non-XLSIOR programming as the "house-music alternative" to the circuit nights. Even on non-Solomun nights, Alemagou's sunset DJ slot (jazz/funk/house) + 200-label wine list + Cycladic food is the trip's most-civilized beach-club hour.</p>
+          <a href="https://www.alemagou.gr/" target="_blank" rel="noopener" class="book-link">Alemagou 2026 →</a>
+        </div>
+
+        <div class="event-card olive">
+          <div class="head">
+            <span class="icon">🎻</span>
+            <div>
+              <h4 class="olive">Mykonos Summer Festival</h4>
+              <div class="when">Runs <strong>throughout August 2026</strong> — open-air at Kato Mili windmills + Archaeological Museum courtyard</div>
+            </div>
+          </div>
+          <p>The municipality's open-air cultural festival — classical and Greek folk concerts, traditional dance, theatre, contemporary art installations — programmed at heritage venues across Chora: the <strong>Kato Mili windmill row</strong> (the 16th-century landmark, 7 of the original 16 windmills still on the hill above Little Venice), the <strong>Archaeological Museum courtyard</strong>, and Manto Mavrogenous Square. Programs land late June; expect 2–3 evening events per week through August at €0–€20. Provides a genuinely quiet civic-culture counterweight to the XLSIOR week intensity — most events are at the windmill row or the museum and run 20:30–22:30.</p>
+          <a href="https://www.mykonos.gr/en/mykonos-events/" target="_blank" rel="noopener" class="book-link">Mykonos events →</a>
+        </div>
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">⛪</span>
+            <div>
+              <h4>Panagia Tourliani · Ano Mera year-round</h4>
+              <div class="when"><strong>Year-round</strong> — 1542 monastery · post-Dekapentavgoustos calm · tavernas + bouzouki nights</div>
+            </div>
+          </div>
+          <p>The 1542 monastery in Ano Mera village center — the marquee Dekapentavgoustos Panigyri (Aug 14–15) is past by your arrival, but the post-feast week (Aug 17–21) is the village's calmest stretch of summer. The square is still set with long tables most evenings, traditional Cycladic music (bouzouki + violin + laouto) plays in 2–3 tavernas, and the monastery courtyard is open 09:00–13:00 + 17:00–19:00 for visitors. <strong>The non-XLSIOR escape valve</strong> for anyone who wants a Cycladic village dinner with grilled lamb + house wine instead of a circuit party.</p>
+          <a href="https://www.discovergreece.com/cyclades/mykonos/spirituality/panagia-tourliani-monastery" target="_blank" rel="noopener" class="book-link">Ano Mera guide →</a>
+        </div>
+
+      </div>
+
+      <div class="bonus-callout">
+        <h4>What you <em>just</em> missed — last week's calendar (Aug 11–16)</h4>
+        <p>The week before your arrival had the year's tightest cluster: <strong>Perseid Meteor peak Aug 12–13 (moonless sky, decade-best year)</strong>, <strong>Dekapentavgoustos Aug 15 (Greece's biggest summer holiday + Ano Mera Panigyri Aug 14–15)</strong>, the <strong>Tinos Pilgrimage Aug 15</strong> (Greek Orthodoxy's most important pilgrimage), and <strong>Diplo at Cavo Paradiso confirmed Sun Aug 16</strong>. If the XLSIOR overlap on your dates feels like a drawback rather than the centerpiece, the <a href="./aug_11_mykonos.html" style="color: var(--myk-sea); font-weight: 600;">Aug 11–17 option</a> (Option G, score 32/39) is the Mykonos week without circuit-festival intensity. Otherwise: this week trades that quartet for XLSIOR, which is its own kind of once-a-year.</p>
+      </div>
+    </div>
+
+    <div class="glance-table">
+      <table>
+        <thead>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner + Late</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="daynum">1</td><td>Mon Aug 17</td><td>Arrive · Scorpios sunset</td><td>JMK 6:55 PM · check Belvedere · short Little Venice walk · Scorpios sunset ritual 19:55 · the slow opening</td><td><strong>Scorpios</strong> sunset + Aegean small plates · 180° Sunset nightcap</td></tr>
+          <tr><td class="daynum">2</td><td>Tue Aug 18</td><td>South-coast beach clubs</td><td>Belvedere pool morning · Nammos lunch (Psarou) or Principote (Panormos) daybed afternoon · Caprice Bar sunset</td><td><strong>Koursaros</strong> veal chops · Matogianni crawl · Astra Bar</td></tr>
+          <tr><td class="daynum">3</td><td>Wed Aug 19</td><td>Delos morning · Little Venice sunset</td><td>Public ferry to Delos UNESCO 09:00 · 3 h archaeology + return · Belvedere afternoon · Kato Mili windmills walk</td><td><strong>Matsuhisa</strong> Nobu omakase · Interni · Bonbonniere</td></tr>
+          <tr><td class="daynum">4</td><td>Thu Aug 20 ⚠️</td><td>XLSIOR opens · Ano Mera fallback</td><td>Quiet morning · choice: Jackie O' afternoon → Cavo Paradiso XLSIOR opening · OR · Ano Mera tavernas + Paraga sundown</td><td><strong>Spilia</strong> sea-cave dinner · Cavo XLSIOR opening (vibe-aligned) / Skandinavian + Bonbonniere</td></tr>
+          <tr><td class="daynum">5</td><td>Fri Aug 21 ⚠️</td><td>Rhenia rib + Spilia · Cavo XLSIOR DJ</td><td>Private rib Mykonos→Rhenia 10:00 · swim/snorkel · lunch at Spilia · sunset back to Chora</td><td><strong>Beefbar</strong> or COOZEST · Cavo Paradiso XLSIOR DJ night · or Alemagou late</td></tr>
+          <tr><td class="daynum">6</td><td>Sat Aug 22 ⚠️</td><td>Beefbar · Kiki's · XLSIOR main party night</td><td>Kiki's no-electricity lamb lunch · Agios Sostis swim · Mykonos Horseland Fokos ride · Profitis Ilias sunset</td><td><strong>Beefbar</strong> Bill &amp; Coo Coast · <strong>Cavo Paradiso XLSIOR main</strong> (vibe-aligned) / Toy Room Semeli</td></tr>
+          <tr><td class="daynum">7</td><td>Sun Aug 23</td><td>Slow morning · Departure</td><td>Late Belvedere breakfast · Kastro neighborhood + Panagia Paraportiani walk · transfer JMK</td><td>On the plane</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="itinerary">
+
+      <div class="day">
+        <div class="day-number"><div class="num">01</div><div class="date">Mon Aug 17</div></div>
+        <div class="day-content">
+          <h3>Arrive JMK → Belvedere → Scorpios sunset → 180° nightcap</h3>
+          <ul>
+            <li><strong>6:55 PM</strong> Land JMK · Aegean A3 350 from ATH · prearranged transfer to <a href="https://www.belvederehotel.com/" target="_blank" rel="noopener">Belvedere Hotel</a> · 15 min, ~€25</li>
+            <li><strong>7:30 PM</strong> Check Belvedere · Deluxe Sea View Room, terrace facing Mykonos Town &amp; Delos, hillside pool already lit · 5-min uphill walk to 180° / 8-min downhill to Matogianni Street</li>
+            <li><strong>8:15 PM</strong> Quick shower + change · taxi to <strong><a href="https://scorpiosmykonos.com/" target="_blank" rel="noopener">Scorpios Paraga</a></strong> (15 min, €25) — the trip's must-do beach club, the Cycladic boho-chic original. <strong>Sunset ritual 19:55</strong> (live percussion + horn). You'll miss the ritual itself by 5–10 minutes given the flight + transfer; you'll land in time for the dinner service at 21:00 with the sunset still pink over Delos.</li>
+            <li><strong>9:00 PM</strong> Dinner at Scorpios — Med-Aegean small plates + grilled fish + lamb. Aim for the courtyard or terrace seats with the dance floor at the periphery. <strong>Daybed minimum spend €150–€250/pp</strong> applies even at dinner; reserve via scorpiosmykonos.com 30+ days out. 350-label wine list.</li>
+            <li><strong>11:30 PM</strong> Taxi back to Mykonos Town · walk uphill 4 min from Belvedere to <strong><a href="https://180.bar/" target="_blank" rel="noopener">180° Sunset Bar</a></strong> for a single nightcap before close (23:00). <strong>€30 walk-in cover</strong> (includes one drink). Sleep early — XLSIOR doesn't start until Thu and Day 2 is a beach-club day.</li>
+            <li><strong>12:30 AM</strong> Sleep at Belvedere · the easy arrival night</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Late-flight swap:</strong> If LH453 is delayed (Aug Schengen entry queues can hit 90 min in Athens), skip Scorpios and do a Belvedere onsite dinner — <strong>Matsuhisa lounge service</strong> (à la carte, no reservation needed) on the terrace overlooking Delos. Sunset cocktail at the Belvedere main pool deck. In bed by 11.</div>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Scorpios entirely. Walk down from Belvedere to <strong>Caprice Bar in Little Venice</strong> for sunset (terrace literally 5 feet from the sea, the windmills overhead). Late dinner at <strong>Koursaros</strong> on Matogianni — the "excellent veal chops" arrival-night anchor. In bed by 1.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Scorpios sunset + 21:00 dinner + 23:30 walk to <strong>SantAnna Mykonos</strong> Paraga (Olympic-sized pool, poolside DJ, the after-Scorpios destination for the late crowd). Walk-in €40–€50, daybeds €300+. Sakis Grill at 3 AM. In bed by 4.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">02</div><div class="date">Tue Aug 18</div></div>
+        <div class="day-content">
+          <h3>Belvedere pool morning · Nammos or Principote daybed · Caprice sunset · Koursaros + Matogianni</h3>
+          <ul>
+            <li><strong>10:00 AM</strong> Slow breakfast on Belvedere terrace — organic spread, Delos in the channel below, the iconic arrival morning</li>
+            <li><strong>11:30 AM</strong> Belvedere pool deck — book the day-bed cabana, the south-west facing pool catches sun through 16:30. The pre-XLSIOR week is calm; pool capacity is still moderate.</li>
+            <li><strong>1:00 PM</strong> Taxi 10 min south to <strong><a href="https://www.nammos.com/" target="_blank" rel="noopener">Nammos at Psarou Beach</a></strong> for <strong>the celebrity-HQ lunch experience</strong> — champagne shower theatre at 14:00, Black Pearl-aged caviar service, Wagyu cuts, Aegean sea bass. <strong>Sunbed minimum €150–€200/pp</strong>; reserve 30+ days out. Even if you skip the sunbed, the lunch is the trip's most-cinematic. €200–€400/pp all-in.</li>
+            <li><strong>4:00 PM</strong> Stay at Psarou for the daybed afternoon · OR · taxi 15 min to <strong><a href="https://www.principote.com/" target="_blank" rel="noopener">Principote (Panormos Bay)</a></strong> for the bohemian-elegant alternative — couples-friendly, less aggressive DJ scene, the Panormos cove setting. Daybed min ~€120/pp. The "we want Scorpios energy without the noise" pick.</li>
+            <li><strong>7:00 PM</strong> Taxi back to Belvedere · shower + change</li>
+            <li><strong>8:00 PM</strong> Walk down to Little Venice for sunset at <strong><a href="https://capricemykonos.com/" target="_blank" rel="noopener">Caprice Bar</a></strong> — 30-year landmark, terrace literally <strong>5 feet from the sea</strong> with the windmills overhead, signature "Caprice Turquoise" cocktail. Sunset over Delos is the trip's iconic visual moment. Sunset is ~20:00 mid-Aug.</li>
+            <li><strong>10:00 PM</strong> Late dinner at <strong><a href="https://koursarosrestaurant.gr/" target="_blank" rel="noopener">Koursaros</a></strong> on Matogianni — 20-year institution, Med-Japanese crossover, the "excellent veal chops" Joann needs. Reserve 7 days ahead.</li>
+            <li><strong>12:00 AM</strong> <strong><a href="https://www.facebook.com/AstraBarMykonos/" target="_blank" rel="noopener">Astra Bar</a></strong> on Matogianni — the retro observatory-dome bar with Athens DJs spinning till 3 AM. Quieter, more grown-up than Skandinavian.</li>
+            <li><strong>1:30 AM</strong> Sakis Grill House gyro on the walk back uphill · bed by 2</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Meltemi-windy swap:</strong> Nammos is Meltemi-tolerant (south-facing Psarou cove) but the upper sunbeds get gusty. <strong>Buddha-Bar Beach at Santa Marina Ornos</strong> is the cleanest sheltered alternative — private bay, sunset DJ daily, same Aegean-sea-bass + Wagyu menu, no daybed minimum if you eat at the restaurant. 10-min taxi from Chora.</div>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Nammos lunch (saves $400+ minimum spend). Long Belvedere pool morning, lunch at <strong>Hippie Fish (Agios Ioannis)</strong> beachside taverna (€60–€90/pp), light beach afternoon, sunset at Caprice, early Koursaros dinner. In bed by midnight.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Nammos lunch + Principote afternoon (transfer between via private 25-min shuttle). Two daybed minimums (~$700 combined) but maximum south-coast beach-club density. Sunset at Buddha-Bar Beach. Skip Koursaros, dinner at <strong>Matsuhisa</strong> instead — moving the Belvedere Nobu night earlier in the week.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">03</div><div class="date">Wed Aug 19</div></div>
+        <div class="day-content">
+          <h3>Delos UNESCO morning · Little Venice sunset · <em>Matsuhisa Nobu omakase</em></h3>
+          <ul>
+            <li><strong>8:00 AM</strong> Early breakfast at Belvedere — Delos is shadeless and brutal by noon, the 09:00 ferry is the move</li>
+            <li><strong>9:00 AM</strong> Walk down to <strong>Old Port</strong> (15-min downhill) · <strong>public ferry to Delos</strong> (€25 RT + €20 site entry, 25-min crossing) — small displacement boats that handle Meltemi well. Arrive Delos ~09:35.</li>
+            <li><strong>9:45 AM</strong> <strong>Delos UNESCO archaeology guided walk</strong> (2.5 h, €15/pp guide-led, book onsite or via Get Your Guide) — birthplace of Apollo + Artemis, the Terrace of the Lions, the House of Dionysus mosaics, the Theatre. <strong>Hat + 2 L water + closed-toe shoes mandatory</strong>. The site is shadeless and brutal by noon.</li>
+            <li><strong>12:30 PM</strong> Return ferry · arrive Old Port ~13:00 · taxi 5 min uphill to Belvedere</li>
+            <li><strong>2:00 PM</strong> Lunch at <strong><a href="https://joannas-nikos-mykonos.com/" target="_blank" rel="noopener">Joanna's Niko's Place</a></strong> on Mykonos Town's main square — classic taverna, no fuss, beef souvlaki + Greek salad + tzatziki. €15–€25/pp.</li>
+            <li><strong>3:00 PM</strong> Belvedere pool — long siesta hour, recovery before Matsuhisa</li>
+            <li><strong>7:00 PM</strong> Walk down to <strong>Little Venice</strong> for the sunset walk — Caprice Bar terrace (second visit, the Aegean's most-photogenic hour), <strong>Kato Mili windmill hill</strong> 5-min above with the Meltemi turning the sails. Iconic Mykonos.</li>
+            <li><strong>8:00 PM</strong> Walk uphill to Belvedere · short shower + change</li>
+            <li><strong>9:00 PM</strong> Dinner at <strong><a href="https://www.matsuhisamykonos.com/" target="_blank" rel="noopener">Matsuhisa Mykonos</a></strong> on Belvedere's terrace — <strong>omakase ~€220/pp</strong> or à la carte: black cod miso, yellowtail jalapeño sashimi, wagyu ribeye over rice, truffle tempura. 350-label wine list (Burgundy + Champagne are the buys here). Reserve via <a href="https://www.sevenrooms.com/reservations/matsuhisamykonos" target="_blank" rel="noopener">SevenRooms</a> 30+ days out.</li>
+            <li><strong>11:30 PM</strong> Walk 8 minutes downhill to <strong><a href="https://www.interni-restaurant.gr/" target="_blank" rel="noopener">Interni</a></strong> on Matogianni — dinner-to-DJ club since 2000, open 19:30–01:30, electronic + downtempo. €250/pp min spend if you reserve a table; otherwise standing room at the bar. The natural Matsuhisa-to-club transition.</li>
+            <li><strong>1:30 AM</strong> Short walk through the alleys to <strong>Bonbonniere</strong> — high-end nightclub with shisha lounges + signature Fabergé-egg champagne shows.</li>
+            <li><strong>3:30 AM</strong> Walk uphill to Belvedere · the alley walk is well-lit + safe + extremely Mykonos.</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Meltemi-windy swap:</strong> Public Delos ferry cancels in 40+ knot Meltemi (rare on big boats; the smaller Delos ferries can suspend). Plan B: <strong>Mykonos Archaeological Museum</strong> + the <strong>Kastro neighborhood</strong> + <strong>Lena's House</strong> (preserved 19th-c townhouse, free) — same Cycladic context, no boat. Afternoon at Belvedere pool. Matsuhisa unchanged.</div>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Delos entirely. Long Belvedere breakfast, Archaeological Museum (€6, 1 h) for the famous "Mykonos Vase" + Cycladic context, lunch at Joanna's Niko's. Afternoon pool. Matsuhisa unchanged but bed by 1 AM after dinner only.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Replace the public ferry with a <strong>private catamaran charter to Delos + Rhenia</strong> ($1,600–$3,000 6–8 pax via <a href="https://www.cdyachting.com/" target="_blank" rel="noopener">CD Yachting</a>) — 7 hours, lunch onboard, return drops you at Scorpios Paraga for the sunset ritual. Move Matsuhisa to Day 5 night, do Scorpios + SantAnna tonight. The "stack two marquee Aegean nights back-to-back" path.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">04</div><div class="date">Thu Aug 20 ⚠️</div></div>
+        <div class="day-content">
+          <h3>XLSIOR opens · choose lane: Jackie O' → Cavo (vibe-aligned) OR Ano Mera + Paraga sundown (skip XLSIOR)</h3>
+          <ul>
+            <li><strong>10:30 AM</strong> Slow Belvedere breakfast — the Thursday morning of XLSIOR week is the calm before the storm. Pool capacity is moderate through 13:00.</li>
+            <li><strong>12:00 PM</strong> <strong>Decision point.</strong> The day forks in two:</li>
+            <li style="padding-left: 1.5rem; list-style: none;">
+              <div class="alts" style="margin-left: 0; margin-top: 0.5rem;"><strong>Lane A — XLSIOR vibe-aligned (the lean-in plan):</strong></div>
+            </li>
+            <li><strong>1:30 PM</strong> Taxi 20 min to <strong><a href="https://www.jackieomykonos.com/" target="_blank" rel="noopener">Jackie O' Beach Club</a></strong> on Super Paradise · the unofficial XLSIOR Thursday warm-up venue. <strong>Pool party + DJ + drag from 14:00</strong>, €40 cover, daybed €200+ min. The week's first XLSIOR-energy hit.</li>
+            <li><strong>6:00 PM</strong> Taxi back to Belvedere · long shower + change</li>
+            <li><strong>8:00 PM</strong> Dinner at <strong><a href="https://www.spiliarestaurantmykonos.com/" target="_blank" rel="noopener">Spilia Seaside</a></strong> at Agia Anna Bay (4WD-only or boat-shuttle access from Kalafati) — <strong>built inside a natural sea cave</strong>, candles in the rock walls. Mediterranean menu with Wagyu beef + raw bar + truffle pasta. The trip's most-romantic setting. Reservation 30+ days out essential.</li>
+            <li><strong>11:30 PM</strong> Taxi to <strong><a href="https://cavoparadiso.gr/" target="_blank" rel="noopener">Cavo Paradiso</a></strong> for the <strong>XLSIOR Opening Party</strong> — historic headliners Offer Nissim, Abel Aguilera, or Steve Pitron. Doors midnight, sets run 01:00–sunrise. <strong>€60–€120 GA, €800–€1,500 bottle service for table</strong>. Booking via Cavo's site + XLSIOR's site (cross-listed). The week's first marquee night.</li>
+            <li><strong>5:30 AM</strong> Sunrise taxi back from Cavo · sleep at Belvedere</li>
+            <li style="padding-left: 1.5rem; list-style: none;">
+              <div class="alts" style="margin-left: 0; margin-top: 0.5rem;"><strong>Lane B — Skip XLSIOR (the parallel-track plan):</strong></div>
+            </li>
+            <li><strong>2:00 PM</strong> Taxi 20 min to <strong>Ano Mera village</strong> · long taverna lunch at one of the village square spots (no marquee name; the tavernas around the <strong>Panagia Tourliani Monastery 1542</strong> square run set menus of grilled lamb + Cycladic salad + house wine for €25–€35/pp). Visit the monastery courtyard 17:00 reopen.</li>
+            <li><strong>5:30 PM</strong> Drive (taxi) 25 min south to <strong>Paraga Beach</strong> · sunset cocktail at <strong>Scorpios's beach-bar service</strong> (no daybed reservation needed for the bar tier) — sunset ritual at 19:55 if Thursday's lineup runs it.</li>
+            <li><strong>8:00 PM</strong> Dinner at <strong>Spilia Seaside</strong> (same as Lane A) — the sea-cave dinner is XLSIOR-neutral and is your romance-anchor night.</li>
+            <li><strong>11:30 PM</strong> Skip Cavo entirely · taxi to Chora · <strong>Skandinavian Bar</strong> + <strong>Bonbonniere</strong> for the Mykonos Town crawl (raucous since 1978 + design-forward shisha lounge). XLSIOR's pull on these venues is moderate — they're not on the official program. Bed 2:30.</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Meltemi-windy swap:</strong> Spilia is Meltemi-tolerant (the cave shelters the dining room). Cavo is Meltemi-tolerant (partial enclosure). Jackie O' pool is Meltemi-exposed (the pool deck gets gusty); swap to <strong>Beefbar at Bill &amp; Coo The Coast</strong> for a sheltered Agios Ioannis afternoon instead.</div>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Belvedere pool all day. Early Spilia 19:30. Skip both Jackie O' + Cavo. Bonbonniere nightcap. Bed 1 AM.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">05</div><div class="date">Fri Aug 21 ⚠️</div></div>
+        <div class="day-content">
+          <h3>Private rib Mykonos → Rhenia · Spilia lunch · Cavo XLSIOR DJ night (vibe-aligned)</h3>
+          <ul>
+            <li><strong>9:00 AM</strong> Belvedere breakfast on the terrace</li>
+            <li><strong>10:00 AM</strong> Walk down to <strong>Old Port</strong> · <strong>private RIB charter to Rhenia + sea-cave coves</strong> via <a href="https://www.boatbookings.com/" target="_blank" rel="noopener">Boatbookings</a> or local operator <a href="https://www.donblue.gr/" target="_blank" rel="noopener">Don Blue</a> — €600–€900 half-day 2-pax with skipper, faster + more agile than a catamaran, ideal for Rhenia's sea-cave snorkeling spots. 25-min crossing.</li>
+            <li><strong>11:00 AM</strong> Anchor at <strong>Rhenia's western bay</strong> — uninhabited island north of Delos, ancient Athenian cemetery, white-sand crescent bays with sea-cave snorkeling. Swim + snorkel + paddleboard (kit on the RIB). The Meltemi-exposed northern bay vs. the sheltered southern is the call your skipper makes.</li>
+            <li><strong>1:30 PM</strong> Re-board RIB · 30-min run east-around-Delos to <strong>Agia Anna Bay</strong> for lunch at <strong><a href="https://www.spiliarestaurantmykonos.com/" target="_blank" rel="noopener">Spilia Seaside</a></strong>'s lunch service (14:00–17:00) — the sea-cave dining room is a different experience by daylight (raw bar + grilled fish + Wagyu carpaccio + a Greek white flight from the cellar). Reservation 14 days out. €150–€220/pp.</li>
+            <li><strong>4:00 PM</strong> Re-board RIB · run back along the south coast (Paranga, Paradise, Platis Gialos) for the scenic return · drop at Old Port ~17:30</li>
+            <li><strong>6:30 PM</strong> Back at Belvedere · pool deck wind-down + change</li>
+            <li><strong>9:00 PM</strong> Dinner at <strong><a href="https://www.beefbar.com/restaurant/mykonos/" target="_blank" rel="noopener">Beefbar Mykonos</a></strong> at Bill &amp; Coo The Coast — <strong>the meat-temple branch</strong> Joann came for. Kobe gyros, USDA + Wagyu + Greek prime cuts. €120–€220/pp. Reserve via <a href="https://www.beefbar.com/restaurant/mykonos/" target="_blank" rel="noopener">beefbar.com</a> 30+ days out. <strong>Friday XLSIOR week is the second-tightest restaurant night of the trip</strong>.</li>
+            <li><strong>11:30 PM</strong> <strong>Decision point.</strong> Two paths:</li>
+            <li style="padding-left: 1.5rem; list-style: none;">
+              <div class="alts" style="margin-left: 0; margin-top: 0.5rem;"><strong>Lane A — XLSIOR vibe-aligned:</strong> Taxi to <strong>Cavo Paradiso XLSIOR DJ night</strong> (Friday programming, often the more electronic / less circuit-pop sets). €40–€80 GA. Sets 01:00–sunrise.</div>
+            </li>
+            <li style="padding-left: 1.5rem; list-style: none;">
+              <div class="alts" style="margin-left: 0; margin-top: 0.5rem;"><strong>Lane B — Skip XLSIOR:</strong> Taxi to <strong>Alemagou Ftelia</strong> — the Meltemi-protected boho restaurant + DJ slot, Solomun's residency stage, jazz/funk/house DJ till 02:00. The non-XLSIOR house-music alternative.</div>
+            </li>
+            <li><strong>4:00 AM</strong> Sunrise / sleep — wherever you ended up</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Meltemi-windy swap:</strong> RIB to Rhenia cancels in 35+ knot Meltemi. Plan B: <strong>Public ferry to Delos at 10:00</strong> (€25 RT, big-boat tolerant), do the archaeology walk you skipped Wed (or repeat), return at 14:00. Lunch at <strong>Buddha-Bar Beach Santa Marina</strong> (south-facing, sheltered). Beefbar + late unchanged.</div>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the RIB (saves $700–$900). Long Belvedere pool morning, lunch at <strong>Hippie Fish Agios Ioannis</strong> (€60–€90/pp), pool afternoon. Beefbar dinner. Skip Cavo + Alemagou both — bed by 1.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> RIB + Spilia + Beefbar + Cavo XLSIOR — the maximalist day. Or swap Beefbar for COOZEST (same Bill &amp; Coo property, modern Med + lamb, quieter), then Cavo. Or add an 08:00 dive on the <strong>Anna II wreck</strong> (€100–€150 via <a href="https://godivemykonos.com/" target="_blank" rel="noopener">GoDive</a>) before the 10:00 RIB.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">06</div><div class="date">Sat Aug 22 ⚠️</div></div>
+        <div class="day-content">
+          <h3>Kiki's no-electricity lamb · Mykonos Horseland Fokos · <em>XLSIOR Cavo main party</em></h3>
+          <ul>
+            <li><strong>10:30 AM</strong> Late Belvedere breakfast — Saturday XLSIOR week needs the late start</li>
+            <li><strong>12:00 PM</strong> Taxi 25 min north to <strong>Agios Sostis Beach</strong> for <strong>Kiki's Tavern</strong> — <em>no signs, no phone, no website, no electricity, no reservations</em>, lunch only, cash only · charcoal grill outside the kitchen, grilled lamb chops (paidakia), local Mykonian salad, house wine. <strong>Queue from noon</strong> — 90-min wait is standard at peak Aug Sat, but the rosemary-charred lamb is the trip's most-talked-about meal. <strong>Joann's favorite</strong>: meat-forward, no seafood pressure, mountain herbs.</li>
+            <li><strong>3:00 PM</strong> Walk along Agios Sostis cove for the post-lunch swim · the bay is undeveloped, no umbrellas, BYO towel</li>
+            <li><strong>4:00 PM</strong> Taxi 10 min to <strong><a href="https://www.mykonos-horseland.com/" target="_blank" rel="noopener">Mykonos Horseland</a></strong> in Ano Mera · <strong>2-h horseback ride to Fokos Beach</strong> (€130/pp) along the Cycladic ridge with views down to Panormos · <strong>or the 3.5-h ride with sea-swim included (€180/pp)</strong>, Joann on a calmer horse. Beginner-friendly, helmets provided, the trip's quiet romance hour.</li>
+            <li><strong>7:00 PM</strong> Quad-rental or taxi up to <strong>Profitis Ilias Vorniotis 372 m</strong> for the sunset hike (1 h round trip from the chapel road end) — Mykonos's highest point, 360° Cyclades view. Sunset is ~19:55.</li>
+            <li><strong>8:30 PM</strong> Back at Belvedere · shower + change</li>
+            <li><strong>9:30 PM</strong> Dinner at <strong><a href="https://bill-coo-thecoast.com/restaurants/coozest/" target="_blank" rel="noopener">COOZEST</a></strong> at Bill &amp; Coo The Coast (chef Olga Eleftheroglou's modern Med) — quieter, more refined than Beefbar, lamb mains, fava with caramelized onions, grilled local fish. €100–€160/pp. <strong>Saturday XLSIOR week is the tightest restaurant night of the trip</strong> — book 45+ days out. (Beefbar is also onsite if you'd rather repeat that meal.)</li>
+            <li><strong>11:45 PM</strong> <strong>Decision point — the trip's biggest one.</strong> Two paths:</li>
+            <li style="padding-left: 1.5rem; list-style: none;">
+              <div class="alts" style="margin-left: 0; margin-top: 0.5rem;"><strong>Lane A — XLSIOR vibe-aligned (the marquee night):</strong> Taxi to <strong>Cavo Paradiso XLSIOR Main Party</strong> — <strong>the week's biggest single night</strong>, 3,000-cap bowl over Paradise Beach, sunrise close. Headline DJs (verify 2026 lineup at xlsiorfestival.com). €80–€150 GA, €1,000–€1,500 bottle service. The one-of-a-kind XLSIOR night.</div>
+            </li>
+            <li style="padding-left: 1.5rem; list-style: none;">
+              <div class="alts" style="margin-left: 0; margin-top: 0.5rem;"><strong>Lane B — Skip XLSIOR:</strong> Taxi back to Chora · <strong>Toy Room (upstairs at Semeli)</strong> for the London-club-model hip-hop/R&amp;B/house room — VIP-led, bottle-service oriented, Matogianni-walkable from a Belvedere taxi-drop. Bed 3 AM.</div>
+            </li>
+            <li><strong>5:30 AM</strong> Sunrise / sleep · this is the trip's peak night either way</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Meltemi-windy swap:</strong> Kiki's is Meltemi-tolerant. Horseback is Meltemi-tolerant. Cavo is Meltemi-tolerant. <strong>Profitis Ilias sunset is wind-sensitive</strong> — 30+ knot Meltemi makes the ridge cold + unstable; swap to <strong>180° Sunset Bar</strong> or <strong>Buddha-Bar Beach</strong> sunset.</div>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip Cavo entirely (whichever lane). COOZEST 21:00, Belvedere rooftop bar nightcap, bed by 1 AM. Best if Friday was a 4 AM finish.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Add 08:00 <strong>Anna II wreck dive</strong> (€100–€150 via GoDive Mykonos), Kiki's at 12:30, horseback Fokos 16:00, Profitis Ilias sunset, COOZEST 21:00, Cavo XLSIOR main 01:00. The triple-event day; only sustainable on this trip if Day 1 + Day 2 stayed contained.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">07</div><div class="date">Sun Aug 23</div></div>
+        <div class="day-content">
+          <h3>Slow morning · Kato Mili windmills + Panagia Paraportiani · Departure</h3>
+          <ul>
+            <li><strong>10:30 AM</strong> Slow Belvedere breakfast on the terrace · Delos in the haze across the channel</li>
+            <li><strong>11:30 AM</strong> Last Mykonos Town walk — <strong>Kato Mili windmill row</strong> (the 16th-c landmark, 7 of 16 still on the hill), the <strong>Kastro neighborhood</strong>, <strong>Panagia Paraportiani</strong> (the 5-stacked-chapel landmark up close — the most-photographed church in the Cyclades). 90 min loop down through Little Venice. Sunday-late-morning Chora is quieter than the XLSIOR-week nights led you to expect.</li>
+            <li><strong>1:00 PM</strong> Quick lunch at <strong>Joanna's Niko's Place</strong> on Mykonos Town's main square — classic taverna, no fuss, beef souvlaki + Greek salad + tzatziki. €15–€25/pp.</li>
+            <li><strong>2:30 PM</strong> Pre-arranged transfer back to Belvedere to collect bags + check out</li>
+            <li><strong>3:30 PM</strong> Taxi to JMK (15 min, ~€25)</li>
+            <li><strong>5:55 PM</strong> Aegean A3 351 JMK → ATH (35 min)</li>
+            <li><strong>7:00 PM</strong> Arrive ATH · 2-hour layover · 7-Eleven dinner</li>
+            <li><strong>9:00 PM</strong> Lufthansa LH1755 ATH → MUC (2h 25m)</li>
+            <li><strong>11:25 PM</strong> Arrive MUC · 1h 30m layover</li>
+            <li><strong>(early AM Aug 24)</strong> Lufthansa LH452 MUC → LAX (11h 50m) · arrive LAX ~3 PM Mon Aug 24 (gain 9 hours)</li>
+          </ul>
+          <div class="alts"><strong>Alternative · XLSIOR closing party stay:</strong> XLSIOR's official closing party is Sun Aug 23 at Super Paradise (afternoon → night). If you flex return by one night to a Monday Aug 24 departure, you bracket the entire XLSIOR week including closing. Belvedere extension or downgrade to <strong>Boheme Mykonos</strong> ($350/night) for the Monday savings.</div>
+          <div class="alts"><strong>Alternative · Long-day departure:</strong> Skip the museum walk. Sleep in until 11, pool until 1, lunch at Belvedere's onsite Matsuhisa lounge for an early black-cod nigiri farewell, 3:30 PM taxi.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="hotels">
+      <span class="eyebrow">Where to Stay</span>
+      <h2>One Base · 5 Nights Belvedere</h2>
+      <p>Single base — <strong>5 nights at Belvedere Hotel</strong>, Mykonos Town's hillside, walking-distance to every Chora restaurant + bar + windmill + sunset bar + the Old Port for Delos ferries. Matsuhisa Mykonos is on property. <strong>XLSIOR week (Aug 20–25) inflates Mykonos hotel rates 20–40% across the board</strong> — Belvedere is the best value-meets-access pick at standard tier; the Cavo Tagoo splurge ($25K+ all-in for 5 nights in XLSIOR week) blows the $9–15K trip band. Alternatives: <strong>Bill &amp; Coo The Coast</strong> (Beefbar + COOZEST onsite — relevant for Day 5/6), <strong>Santa Marina</strong> (Marriott on Ornos with Buddha-Bar Beach private bay), <strong>Kensho Psarou</strong> (walk to Nammos), <strong>Boheme Tagoo</strong> (the value-tier base).</p>
+    </div>
+    <div class="hotels-grid">
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(29,111,184,0.25), rgba(211,93,58,0.40)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80');">
+          <span class="hotel-tier">★ Mykonos · 5 nights</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Belvedere Hotel Mykonos</h4>
+          <div class="loc">Mykonos Town hillside · 10-min walk to Little Venice + Old Port · Matsuhisa onsite</div>
+          <p>The sweet-spot 5-star pick. Hillside above Chora, <strong>Matsuhisa Mykonos on property</strong> (Nobu's only Greek outpost), main pool deck with sunset-over-Delos views, sea-view rooms + suites with private terraces. 10-minute walk down to Matogianni Street + Little Venice + Old Port; 4-min uphill to 180° Sunset Bar. <strong>Request a Deluxe Sea View Room facing south-west</strong> (the Delos channel + sunset side). XLSIOR week pushes nightly avg to <strong>$330–$520 in Aug 20–25</strong> — still meaningfully under Cavo Tagoo or Bill &amp; Coo for the same walking-access advantage.</p>
+          <div class="hotel-meta">
+            <span class="price">$330–$700 / night XLSIOR week</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.belvederehotel.com/" target="_blank" rel="noopener" class="book-link">Book direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(107,138,85,0.30), rgba(216,201,168,0.40)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80');">
+          <span class="hotel-tier">Beef &amp; resort</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Bill &amp; Coo The Coast</h4>
+          <div class="loc">Agios Ioannis · adults-only · Beefbar + COOZEST onsite</div>
+          <p>The Agios Ioannis bay resort — <strong>adults-only</strong>, sea-view rooms + plunge-pool suites, infinity pool deck over a small private bay. <strong>Beefbar Mykonos + COOZEST (chef Olga Eleftheroglou) are both onsite</strong> — Day 5 + Day 6 dinners land without a taxi. 10-min taxi to Mykonos Town for nightlife. <strong>XLSIOR-week pricing: $800–$1,400 / night</strong>. The pick if a beach-resort base is the priority and you're happy to taxi for Chora + Cavo nights.</p>
+          <div class="hotel-meta">
+            <span class="price">$800–$1,400 / night</span>
+            <span>★★★★★ LHW</span>
+          </div>
+          <a href="https://bill-coo-thecoast.com/" target="_blank" rel="noopener" class="book-link">Bill &amp; Coo Coast →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(29,111,184,0.30), rgba(216,201,168,0.40)), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80');">
+          <span class="hotel-tier">Buddha Beach onsite</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Santa Marina (Marriott Luxury Collection)</h4>
+          <div class="loc">Ornos · private bay · Buddha-Bar Beach onsite · 10 min taxi to Chora</div>
+          <p>The full-service resort pick — Marriott Luxury Collection, <strong>private bay, Buddha-Bar Beach onsite</strong> (sunset DJs daily, beach-club energy without the taxi), 100+ rooms including bay-view suites + villas with private pools. From <strong>$750 / night XLSIOR week</strong>. The pick if you want a beach-club hour built into the property and don't mind taxi-for-Matogianni-nights. Bonvoy points + Amex Platinum FHR benefits often apply (upgrade + breakfast).</p>
+          <div class="hotel-meta">
+            <span class="price">$750–$1,600 / night</span>
+            <span>★★★★★ Marriott</span>
+          </div>
+          <a href="https://www.marriott.com/en-us/hotels/jmkak-santa-marina-a-luxury-collection-resort-mykonos/" target="_blank" rel="noopener" class="book-link">Santa Marina →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(211,93,58,0.25), rgba(107,138,85,0.40)), url('https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=800&q=80');">
+          <span class="hotel-tier">Nammos-adjacent</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Kensho Psarou</h4>
+          <div class="loc">Psarou · walk to Nammos · boutique · Adler bar</div>
+          <p>Boutique 5-star at the head of Psarou Bay — <strong>5-min walk to Nammos</strong>, the trip's celebrity-HQ beach club. Sea-view rooms + suites with plunge pools, infinity pool deck, Adler bar. From <strong>€750+ / night XLSIOR week</strong>. The pick if you're skipping XLSIOR for nightly Nammos table service + Psarou-cove living. 15-min taxi to Mykonos Town. <strong>The least-XLSIOR-impacted location</strong> on the island — Psarou stays celebrity-glamour even on Cavo main-party nights.</p>
+          <div class="hotel-meta">
+            <span class="price">$850–$1,700 / night</span>
+            <span>★★★★★ SLH</span>
+          </div>
+          <a href="https://www.kenshomykonos.com/" target="_blank" rel="noopener" class="book-link">Kensho direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(29,111,184,0.30), rgba(211,93,58,0.40)), url('https://images.unsplash.com/photo-1455587734955-081b22074882?w=800&q=80');">
+          <span class="hotel-tier">Value boutique</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Boheme Mykonos · Tagoo</h4>
+          <div class="loc">Tagoo · 10-min walk to Mykonos Town · boutique · pool deck</div>
+          <p>Small Cycladic boutique — 25 rooms, whitewash + wood + linen interiors, sea-view pool. <strong>$350–$550 / night XLSIOR week</strong> — the value-tier base if Belvedere is sold out or feels overbooked. 10-min walk to Chora along the same coast road as Cavo Tagoo. No marquee restaurant onsite, but the location is functionally equivalent to Belvedere at meaningfully lower cost. Best for: travelers who'd rather put the saved $200/night into Cavo Paradiso XLSIOR bottle service or a private RIB upgrade.</p>
+          <div class="hotel-meta">
+            <span class="price">$350–$550 / night</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.bohememykonos.com/" target="_blank" rel="noopener" class="book-link">Boheme direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(211,93,58,0.30), rgba(216,201,168,0.40)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80');">
+          <span class="hotel-tier">⚠️ Out-of-band splurge</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Cavo Tagoo Mykonos (skip — blows band)</h4>
+          <div class="loc">Tagoo · 10-min walk to Mykonos Town · cliffside · Cave Pool Suites</div>
+          <p>The cliffside splash — iconic infinity pool over the Aegean, <strong>Cave Pool Suites carved into the rock</strong>. <strong>XLSIOR-week pricing pushes the Cave Pool Suite to ~$2,500+/night, all-in trip ~$25–30K</strong> — meaningfully above your $9–15K band. Listed for reference + context only. If splurge mode is on for one night, do a single Day 5 night here and 4 nights at Belvedere — the Day 5 post-RIB-and-Spilia night is the right "we splurged once" moment.</p>
+          <div class="hotel-meta">
+            <span class="price">$2,200–$3,400 / night</span>
+            <span>★★★★★ blows band</span>
+          </div>
+          <a href="https://www.cavotagoo.gr/" target="_blank" rel="noopener" class="book-link">Cavo Tagoo →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="wine">
+      <span class="eyebrow">The Glass</span>
+      <h2>Assyrtiko, Athiri, Malagouzia</h2>
+      <p>Mykonos itself is not a wine destination — but the broader Cyclades is one of Greece's most distinctive wine zones. <strong>Mykonos Vioma</strong> in Ano Mera is the only working organic vineyard on the island (biodynamic since 1994, planted to Asyrtiko / Athiri / Malagouzia / Mandilaria). With Dekapentavgoustos past, the Aug 17–23 window is the year's best Vioma visit window — vintage is in, the harvest team is back from the fields, the tour-plus-farm-lunch slots are bookable 3 days ahead instead of 14. Santorini is the bigger trophy but the no-overnight Aug schedule means a same-day round-trip from Mykonos isn't viable (last ferry back is ~18:00). The wine ceiling is real but the catalog is small versus Mallorca or the Côte d'Azur.</p>
+    </div>
+
+    <div class="wine-block myk-wine">
+      <div class="wine-image"></div>
+      <div class="wine-text">
+        <span class="eyebrow">Mykonos · only working organic vineyard</span>
+        <h3>Mykonos Vioma Vineyard</h3>
+        <p>The island's lone wine experience — <strong>biodynamic since 1994</strong>, owned + run by the Asimomitis family, planted on a dry-stone-terraced patch in Ano Mera. Asyrtiko (the famous mineral-citrus Cycladic white), Athiri, Malagouzia, and the indigenous red Mandilaria. <strong>Half-day visit:</strong> a 90-minute farm + winery + tasting experience, often with farm-grilled goat or chicken sourced from neighbor farms. €50–€80/pp depending on the menu. The Aug 17–23 window is the post-harvest week — easier to book, vineyard team is on-site.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://mykonosvioma.com/" target="_blank" rel="noopener">Mykonos Vioma Vineyard ↗</a></div>
+            <div class="desc">Ano Mera · 8 vine varieties on a dry-stone-walled terrace · book by phone or website 3 days ahead · pair with the Thu Aug 20 Ano Mera detour or the Sat Aug 22 horseback morning · €50–€80/pp tasting + farm food</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.toinos.com/" target="_blank" rel="noopener">T-Oinos Clos Stegasta (Tinos) ↗</a></div>
+            <div class="desc">Tinos · <strong>cult biodynamic Assyrtiko</strong>, single-vineyard "Clos Stegasta" + the entry "Mavrotragano" red · <strong>SeaJets Mykonos↔Tinos 25 min</strong> for a half-day add-on · book 7+ days out · the wine trip's marquee tasting · ~€80/pp</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.kechrisestate.gr/" target="_blank" rel="noopener">Kechris (mainland — restaurant wine lists) ↗</a></div>
+            <div class="desc">Not visitable on this trip, but Matsuhisa Mykonos + Alemagou + Spilia carry Kechris's "Tear of the Pine" retsina — Greece's modern retsina pioneer · order it at one of those tables as the trip's resin-perfumed Greek-white peak</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.santowines.gr/en/" target="_blank" rel="noopener">Santo Wines (Santorini, skip-for-trip) ↗</a></div>
+            <div class="desc">Santorini · <strong>not viable as a day trip from Mykonos in August</strong> (Aegean ferries don't run a return same-day for the Aug schedule) · only if you swap a Mykonos night for a Santorini overnight · listed for reference + because Matsuhisa's wine list opens with Santo Assyrtiko</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wine-block mainland" style="margin-top: 2rem;">
+      <div class="wine-image" style="order: 2;"></div>
+      <div class="wine-text" style="order: 1;">
+        <span class="eyebrow">Alemagou + Matsuhisa = the de-facto wine list</span>
+        <h3>The 200-Label + 350-Label Move</h3>
+        <p>The trip's wine ceiling isn't a winery — it's the wine lists at <strong>Alemagou</strong> (200 labels, heavy Greek + Italian biodynamic) and <strong>Matsuhisa Mykonos</strong> (350 labels, Burgundy + Champagne + cult Cali). Both lists carry depth most boutique European wine bars don't. At Alemagou, the play is a Cyclades-focused flight: Assyrtiko by Sigalas → Athiri by Mykonos Vioma → an aged Mavrotragano. At Matsuhisa, the play is Champagne + Burgundy with Nobu's Japanese-Peruvian fusion — the wine pairing menu is the easiest path. <strong>During XLSIOR week, Alemagou holds its non-circuit identity</strong> — the wine cellar + 18:00 DJ slot are unchanged, making it the trip's "civilized hour" anchor.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://www.alemagou.gr/" target="_blank" rel="noopener">Alemagou wine list ↗</a></div>
+            <div class="desc">Ftelia · 200-label, Greek-heavy + Italian biodynamic + cult French · the trip's most distinctive Cycladic wine flight · pair with the Aug 21 Lane B night (the non-XLSIOR alternative to Cavo)</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.matsuhisamykonos.com/" target="_blank" rel="noopener">Matsuhisa Mykonos wine list ↗</a></div>
+            <div class="desc">Belvedere · 350-label, Champagne + Burgundy + cult California · the omakase wine pairing ~€140 is the easy path · or order half-bottles of Krug NV + a Chablis Premier Cru</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://scorpiosmykonos.com/" target="_blank" rel="noopener">Scorpios wine bar ↗</a></div>
+            <div class="desc">Paraga · sunset wine ritual hour 19:30 · Greek + Italian by the glass, mineral-driven · pair with the Day 1 arrival sunset</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" id="food">
+      <span class="eyebrow">The Table</span>
+      <h2>Zero ★ — but Matsuhisa, Beefbar, Spilia, Kiki's</h2>
+      <p>The 2026 Michelin Guide Greece expansion <strong>added Santorini + Thessaloniki but not Mykonos</strong> — the island has zero Michelin stars. That's the honest food-caliber ceiling versus San Sebastián or Mallorca. But the non-Michelin top tier on Mykonos is genuinely high: <strong>Matsuhisa Mykonos</strong> (Nobu's only Greek outpost), <strong>Beefbar</strong> (the Mykonos branch of the Monaco-rooted meat temple), <strong>Spilia Seaside</strong> (the natural sea-cave restaurant at Agia Anna, boat-or-4WD access), and <strong>Kiki's Tavern</strong> (no electricity, no signs, no phone, lamb-chops over charcoal — Greece's most-talked-about taverna). <strong>XLSIOR week (Aug 20–25) pushes all of these to 45+ day reservation lead times</strong>; Sat Aug 22 + Sun Aug 23 are the tightest restaurant nights of the Greek summer. The Greek meat tradition (souvlaki, gyros, paidakia, kleftiko, moussaka, soutzoukakia) is meat-forward enough that Joann's seafood reluctance is a non-issue.</p>
+    </div>
+
+    <div class="food-list">
+      <div class="food-row">
+        <div class="place">Matsuhisa Mykonos <span class="stars">★ Nobu</span><span class="meta">Belvedere Hotel · Mykonos Town hillside · Japanese-Peruvian · 19:00–01:00</span></div>
+        <div class="desc"><strong>Nobu Matsuhisa's only Greek restaurant</strong>, on Belvedere's terrace overlooking Delos channel + sunset. Omakase ~€220/pp, à la carte hits include <strong>black cod miso, yellowtail jalapeño sashimi, wood-fired Wagyu ribeye, truffle tempura, lobster tacos</strong>. 350-label wine list. <strong>Day 3 (Wed Aug 19) is the move</strong> — pre-XLSIOR, easier to book, calmer dining room. Reserve via <a href="https://www.sevenrooms.com/reservations/matsuhisamykonos" target="_blank" rel="noopener">SevenRooms</a> 30+ days out.</div>
+        <div class="drive">on-property</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Beefbar Mykonos <span class="stars">meat temple</span><span class="meta">Bill &amp; Coo The Coast · Agios Ioannis · 10 min taxi from Chora · 19:00–24:00</span></div>
+        <div class="desc"><strong>The dedicated meat-temple branch</strong> of the Riccardo Giraudi (Monaco-founded) Beefbar global group. Kobe gyros (signature), prime cuts from USDA + Australian Wagyu + Greek beef, lamb chops, served on a terrace over the Agios Ioannis bay. <strong>For Joann this is the calibration meal — meat-forward, no seafood pressure</strong>. €120–€220/pp. <strong>Day 5 (Fri Aug 21) — book 45+ days out for XLSIOR week</strong>. Reserve via <a href="https://www.beefbar.com/restaurant/mykonos/" target="_blank" rel="noopener">beefbar.com</a>.</div>
+        <div class="drive">10 min Chora</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Spilia Seaside <span class="stars">sea-cave dinner</span><span class="meta">Agia Anna Bay · boat or 4WD access only · 14:00–23:30</span></div>
+        <div class="desc"><strong>Built inside a natural sea cave</strong>, candles in the rock walls, waves audible against the cave mouth. Mediterranean menu with raw bar (oysters + sea urchin) + grilled fish + Wagyu cuts + truffle pasta. The trip's most-romantic dinner setting. Reach by 4WD shuttle from Kalafati village (operators send a Jeep) or by private boat from Mykonos Town. <strong>Day 4 (Thu Aug 20) dinner or Day 5 (Fri Aug 21) post-RIB lunch</strong> — both work. Reservation 30+ days out essential, 45+ for Sat Aug 22.</div>
+        <div class="drive">25 min + boat</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Kiki's Tavern <span class="stars">no electricity</span><span class="meta">Agios Sostis Beach · cash only · 12:30–17:00 lunch only · no reservations</span></div>
+        <div class="desc"><strong>No phone, no website, no signs, no electricity</strong>, no reservations — the kitchen runs entirely on a charcoal grill. Lunch only. Lamb chops (paidakia) over coals + rosemary, Mykonian salad, fava, house wine. <strong>Queue from noon</strong>; 90-min wait at peak Aug Sat is standard. The grilled lamb is the trip's most-talked-about plate. <strong>Day 6 (Sat Aug 22) lunch — Joann's anchor meal</strong>: meat-forward, mountain herbs, no seafood pressure. Cash only.</div>
+        <div class="drive">25 min Chora</div>
+      </div>
+      <div class="food-row">
+        <div class="place">COOZEST <span class="stars">modern Med</span><span class="meta">Bill &amp; Coo The Coast · chef Olga Eleftheroglou · 19:00–24:00</span></div>
+        <div class="desc">Same property as Beefbar but different room + different chef — Olga Eleftheroglou's modern Mediterranean with <strong>lamb mains, grilled local fish, fava with caramelized onions</strong>. Quieter than Beefbar, more refined. <strong>Day 6 (Sat Aug 22) dinner</strong>: the trip's tightest restaurant night of the year, COOZEST is the slightly easier booking than Beefbar's bigger room. €100–€160/pp. Reserve via <a href="https://bill-coo-thecoast.com/restaurants/coozest/" target="_blank" rel="noopener">bill-coo-thecoast.com</a>.</div>
+        <div class="drive">10 min Chora</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Interni <span class="stars">dinner-to-club since 2000</span><span class="meta">Matogianni Street · Mykonos Town · 19:30–01:30 · €250/pp min spend</span></div>
+        <div class="desc">Open since 2000 — the Mykonos Town original of the dinner-to-DJ-club format. Modern Mediterranean small plates, sushi bar, charcuterie. The DJ slot ramps from 22:30 with table service running till close. <strong>The natural Matsuhisa-to-club transition on Wed Aug 19 night</strong>. Walk-in tables available off-peak; reserve via Resy or phone for XLSIOR-week nights.</div>
+        <div class="drive">Mykonos Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Koursaros <span class="stars">since 2005</span><span class="meta">Mykonos Town · 20-year institution · Med-Japanese hybrid · 19:00–24:00</span></div>
+        <div class="desc">Mykonos Town veteran — Med + Japanese crossover, <strong>"excellent veal chops"</strong> (per repeat Tripadvisor consensus), truffle pasta, octopus + tartare. <strong>The Day 2 (Tue Aug 18) Matogianni anchor</strong> — calmer + earlier than Matsuhisa, walking distance from Belvedere, Joann-friendly menu. Reserve 7+ days out for Aug.</div>
+        <div class="drive">Mykonos Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Hippie Fish <span class="stars">beachside Med</span><span class="meta">Agios Ioannis Beach · 12:00–24:00 · seafood + meat</span></div>
+        <div class="desc">Long-running Agios Ioannis beach taverna — beachside terrace, Greek seafood + grilled meats + Mediterranean small plates. The Meltemi-sheltered (south-facing) lunch alternative to Nammos for the Aug 18 day. Mid-range pricing. €60–€90/pp.</div>
+        <div class="drive">15 min Chora</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Nammos <span class="stars">celebrity HQ</span><span class="meta">Psarou Beach · 12:00–24:00 · sunbed min spend €150–€200/pp</span></div>
+        <div class="desc">The celebrity HQ. Champagne-shower theatre at the lunch service, signature Black Pearl-aged caviar service, Wagyu cuts, Aegean sea bass. <strong>Sunbed minimum €150–€200/pp</strong>, reserve 30+ days. <strong>Day 2 (Tue Aug 18) lunch is the move</strong> — pre-XLSIOR, calmer than the Aug 20–23 stretch when XLSIOR overflow lands at Psarou too. €200–€400/pp all-in. Reserve at <a href="https://www.nammos.com/" target="_blank" rel="noopener">nammos.com</a>.</div>
+        <div class="drive">10 min Chora</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Scorpios <span class="stars">boho beach club</span><span class="meta">Paraga Bay · 13:00–02:00 · sunset ritual 19:55 · daybed min €150–€250/pp</span></div>
+        <div class="desc">The Cycladic boho-chic original. Sunset ritual at 19:55 (live percussion + horn). Med-Aegean cuisine (grilled fish, lamb, vegetables, fava). <strong>Beach club + restaurant + dance floor in one venue</strong>. <strong>Day 1 (Mon Aug 17) arrival dinner</strong> — Scorpios is the strongest arrival anchor pre-XLSIOR. Day-bed min spend €150–€250/pp depending on location. Reserve via <a href="https://scorpiosmykonos.com/" target="_blank" rel="noopener">scorpiosmykonos.com</a>.</div>
+        <div class="drive">15 min Chora</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Alemagou <span class="stars">200-label cellar</span><span class="meta">Ftelia · 12:00–02:00 · daybed min €120–€180/pp · the wine list</span></div>
+        <div class="desc">The Meltemi-protected boho restaurant + lounge on Ftelia's north-coast bay. Jazz/funk DJ slot, Cycladic + Med cuisine, <strong>200-label wine list (the trip's deepest Greek wine cellar)</strong>. Solomun's residency stage. <strong>The non-XLSIOR alternative for Fri Aug 21 night</strong> — Alemagou retains its non-circuit identity all summer.</div>
+        <div class="drive">15 min Chora</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Sakis Grill House <span class="stars">since 1986</span><span class="meta">Mykonos Town · 4 PM–4 AM · gyros + souvlaki · cash + card</span></div>
+        <div class="desc">Mykonos Town's institution-grade gyro stand since 1986. <strong>Best gyro on the island</strong> per local consensus (the late-night kebabs are post-Scorpios / post-SantAnna fuel). €4–€8 a meal. The 4 AM walk-back stop after Cavo or SantAnna or Skandinavian.</div>
+        <div class="drive">Mykonos Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Jimmy's Gyros <span class="stars">late-night sweet spot</span><span class="meta">Mykonos Town · ~14:00–04:00 (Sakis backup)</span></div>
+        <div class="desc">Sakis's backup when Sakis is closed or the line is 30-min deep. Souvlaki + gyros + chicken pita + small Greek salad. The 4 AM consensus is "either is fine, Sakis is better but Jimmy's is open more reliably." <a href="https://www.facebook.com/JimmysGyrosMykonos/" target="_blank" rel="noopener">Locator</a>.</div>
+        <div class="drive">Mykonos Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Joanna's Niko's Place <span class="stars">classic taverna</span><span class="meta">Mykonos Town main square · 12:00–23:00 · budget-friendly</span></div>
+        <div class="desc">Old-school family taverna on Manto Mavrogenous Square. Beef souvlaki, moussaka, gemista (stuffed vegetables), Greek salad. <strong>€15–€25/pp lunch</strong>. The "we just need a normal taverna meal" reset between marquee nights. No reservations. Day 3 + Day 7 lunch anchor.</div>
+        <div class="drive">Mykonos Town</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Selene (Santorini) <span class="stars">★ — skip for trip</span><span class="meta">Pyrgos, Santorini · 2026 added to Michelin Guide Greece</span></div>
+        <div class="desc">Santorini's marquee ★, in the inland village of Pyrgos. <strong>Skip for this trip</strong> — Santorini's no-overnight-return Aegean ferry schedule for Aug doesn't allow a day-trip. Listed for context: this is the closest Michelin star to Mykonos and the reason the island feels "between two stars" (Athens to the west, Santorini to the south). <a href="https://www.selenerestaurant.com/" target="_blank" rel="noopener">selenerestaurant.com</a> · 2 h ferry + overnight required.</div>
+        <div class="drive">2h+ ferry</div>
+      </div>
+    </div>
+
+    <div class="section-header" id="activities">
+      <span class="eyebrow">Beyond the Table</span>
+      <h2>The Cycladic Activity Catalog</h2>
+      <p>The trip's other selling point — Mykonos isn't only a club island; the Meltemi makes it a world-class water-sports zone, the Delos UNESCO archaeology is genuinely top-tier, and Tinos's hiking + church network is a one-day add-on. <strong>Top picks for this couple:</strong> Delos public ferry archaeology walk, Rhenia private RIB swim/snorkel, Mykonos Horseland Fokos ride, Kiki's lunch + Agios Sostis swim, Profitis Ilias sunset, Mykonos Town walk, Anna II wreck dive, Mykonos Vioma vineyard. The catalog:</p>
+    </div>
+
+    <div class="activities">
+
+      <div class="activity">
+        <span class="icon">🏺</span>
+        <h4><a href="http://odysseus.culture.gr/h/3/eh351.jsp?obj_id=2378" target="_blank" rel="noopener">Delos Public Ferry</a></h4>
+        <p>Old Port ferry €25 RT + €20 site entry · 25-min crossing each way · 4–5 daily departures Aug 09:00–17:00 · the Day 3 morning anchor. Guided walk €15/pp onsite. Hat + water mandatory.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">⛵</span>
+        <h4><a href="https://www.donblue.gr/" target="_blank" rel="noopener">Rhenia Private RIB</a></h4>
+        <p>Don Blue or Boatbookings · <strong>€600–€900 half-day 2-pax private RIB</strong> to Rhenia sea-cave coves + Spilia lunch · skipper-led · the Day 5 morning move · 6h on the water, lunch at Spilia included.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🪁</span>
+        <h4><a href="https://www.dpc-mykonos.com/" target="_blank" rel="noopener">Korfos Kitesurfing</a></h4>
+        <p>Duotone Pro Center Mykonos (DPC) at <strong>Korfos Bay</strong> · IKO-certified · 15–30 knot Meltemi May–Sept · beginner 2-h lesson €80–€150 · rental €60/h certified · flat-water lagoon, world-class.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🤿</span>
+        <h4><a href="https://godivemykonos.com/" target="_blank" rel="noopener">Anna II Wreck Dive</a></h4>
+        <p>GoDive Mykonos · <strong>62m Greek cargo ship sunk 1995 at 25 m depth SE Mykonos</strong> · two-tank boat €100–€150 certified · "Try a Dive" intro €90 non-certified · iconic Aegean wreck.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🌅</span>
+        <h4><a href="https://en.wikipedia.org/wiki/Profitis_Ilias_Vorniotis" target="_blank" rel="noopener">Profitis Ilias 372 m</a></h4>
+        <p>Mykonos's highest peak · chapel road climbs to within 200 m of the summit · 2-h round trip on foot from the road end · sunset vantage · 360° Cyclades view. The Day 6 pre-Cavo sunset move.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🐎</span>
+        <h4><a href="https://www.mykonos-horseland.com/" target="_blank" rel="noopener">Mykonos Horseland</a></h4>
+        <p>Ano Mera-based · ride to <strong>Fokos Beach</strong> 2 h €130/pp · 3.5-h beach ride + sea swim included €180/pp · beginner-friendly · the Day 6 quiet romance hour.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🛐</span>
+        <h4><a href="https://panagiatinou.gr/en/" target="_blank" rel="noopener">Tinos Pilgrimage</a></h4>
+        <p>Post-Dekapentavgoustos quiet · 25-min SeaJets from Mykonos · Panagia Megalochari church visitable any day · <strong>T-Oinos winery 15 min from Tinos Town</strong> · half-day add-on for the wine-focused traveler.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">⛪</span>
+        <h4><a href="https://www.mykonos.gr/en/mykonos-attractions/" target="_blank" rel="noopener">Panagia Paraportiani</a></h4>
+        <p>The most-photographed church in the Cyclades · <strong>5 stacked whitewash chapels, 16th c</strong> · Kastro neighborhood of Mykonos Town · free, walk-up · the trip's iconic 5-min stop on Day 7 morning.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🪟</span>
+        <h4><a href="https://en.wikipedia.org/wiki/Windmills_of_Kimolos_and_Mykonos" target="_blank" rel="noopener">Kato Mili Windmills</a></h4>
+        <p>The 16th-c Mykonos Town windmill row · <strong>7 of 16 remain on the hill</strong> · best at sunset from below (Little Venice waterfront) · 5-min walk through the alleys · trip's defining visual.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🍷</span>
+        <h4><a href="https://mykonosvioma.com/" target="_blank" rel="noopener">Mykonos Vioma Vineyard</a></h4>
+        <p>Ano Mera · the island's <strong>only organic vineyard, biodynamic since 1994</strong> · 90-min tour + tasting + farm food €50–€80/pp · Asyrtiko + Athiri + Malagouzia + Mandilaria · book 3 days ahead.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🌊</span>
+        <h4><a href="https://www.mykonos-explorer.com/sup-mykonos" target="_blank" rel="noopener">SUP Ornos</a></h4>
+        <p>Mykonos SUP School at Ornos Bay · south-facing Meltemi-sheltered · €40/h rental · €70 2-h guided to Agios Ioannis · the calm-water alternative to Korfos kitesurf.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🛵</span>
+        <h4><a href="https://www.apollon-rent-a-car.gr/" target="_blank" rel="noopener">Quad ATV Rental</a></h4>
+        <p>Apollon + Rental Center · <strong>€25–€80/day quad ATV</strong> · drivers 23+ helmet mandatory · the iconic Mykonos transit but <strong>accident rate is the highest single risk on the island</strong> — avoid post-club rides.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🪂</span>
+        <h4><a href="https://watergames.gr/" target="_blank" rel="noopener">Parasailing Paradise</a></h4>
+        <p>Paradise Beach water-sports stand · parasailing 12–15 min €70/pp · banana boat €25/pp · jet ski €60–€90/30 min at Platis Gialos. The "we did the cliché Aegean water sports" hour.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏖️</span>
+        <h4><a href="https://www.mykonos.gr/en/beaches/" target="_blank" rel="noopener">Agios Sostis Beach</a></h4>
+        <p>Kiki's Tavern's bay · undeveloped north-coast cove · no umbrellas, BYO towel · Meltemi-exposed (windy) but stunning · the Day 6 post-Kiki's swim spot.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🗿</span>
+        <h4><a href="https://www.mykonos.gr/en/mykonos-attractions/archaeological-museum/" target="_blank" rel="noopener">Archaeological Museum</a></h4>
+        <p>Mykonos Town · 1902 building, Cycladic + Delos finds · the famous "Mykonos Vase" (with Trojan Horse relief, ~670 BC) · €6 entry · open-air courtyard hosts Mykonos Summer Festival evenings · 1-h visit.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏝️</span>
+        <h4><a href="https://www.seajets.gr/en/" target="_blank" rel="noopener">SeaJets Mykonos↔Tinos</a></h4>
+        <p>25-min crossings, €25 each way, 6+ daily Aug · <strong>also 50-min crossings to Paros + Naxos for a different-island day</strong>. Useful for the Tinos T-Oinos winery half-day add-on (Day 4 Lane B alternative).</p>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="nightlife">
+      <span class="eyebrow">After Dark</span>
+      <h2>The Cycladic Late-Night Map · XLSIOR Week</h2>
+      <p>Mykonos's late-night map has two zones: <strong>the beach clubs</strong> (Scorpios, Nammos, SantAnna, Alemagou, Principote, Buddha-Bar Beach, Jackie O' — daybed minimums apply, reserve 30+ days for XLSIOR week) for the 14:00–02:00 daybed-to-DJ slot, and <strong>Mykonos Town</strong> (180° Sunset, Interni, Bonbonniere, Skandinavian, Astra, Caprice, Toy Room — walking distance from Belvedere) for the 19:00–04:00 dinner-to-bar-to-club crawl. <strong>Cavo Paradiso is XLSIOR's main stage</strong> Aug 20 + Aug 22 + Aug 23; Wed Aug 19 + Fri Aug 21 typically have non-XLSIOR programming. <strong>Hours are summer Aug 2026; verify on arrival — XLSIOR pricing inflates everything 30–50% during festival week.</strong></p>
+    </div>
+
+    <div class="nightlife">
+      <div class="nightlife-col">
+        <h3>Beach clubs · daybed + DJ + sunset</h3>
+        <div class="venue">
+          <div class="vname">Scorpios (Paraga)</div>
+          <div class="vmeta">Sunset ritual 19:55 · daybed min €150–€250/pp · 13:00–02:00 · Aug DJ rotation</div>
+          <div class="vdesc">The Cycladic boho-chic original. Sunset ceremony at 19:55 (live percussion + horn). Med-Aegean cuisine, restaurant + dance floor in one venue. <strong>Day 1 (Mon Aug 17) arrival anchor</strong>. Aug 2026 DJ rotation: Peggy Gou, Dixon, Keinemusik, Adam Port, Luciano — verify the daily lineup on arrival. Holds non-XLSIOR identity through the week.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Nammos (Psarou)</div>
+          <div class="vmeta">Sunbed min €150–€200/pp · celebrity HQ · 12:00–24:00 · Black Pearl caviar</div>
+          <div class="vdesc">The celebrity HQ. Champagne-shower theatre at lunch, Black Pearl-aged caviar service, the Wagyu + Aegean sea bass play. <strong>Day 2 (Tue Aug 18) lunch is the move</strong> — pre-XLSIOR, calmer than Aug 20–23. €200–€400/pp all-in.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Jackie O' Beach (Super Paradise)</div>
+          <div class="vmeta">⚠️ XLSIOR pool day Fri Aug 21 · drag + DJ · 14:00–24:00 · €40 cover</div>
+          <div class="vdesc"><strong>The longtime queen of Mykonos's gay scene</strong>, the pool-and-DJ daytime venue. XLSIOR week makes Jackie O' the Friday afternoon warm-up for Cavo at night. €40 cover XLSIOR week, daybed €200+ min. <strong>Day 4 (Thu Aug 20) Lane A afternoon</strong> if XLSIOR vibe-aligned; otherwise swap for Principote or Buddha-Bar Beach.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">SantAnna (Paraga)</div>
+          <div class="vmeta">Olympic-pool dancefloor · 12:00–02:00 · VIP poolside €300 high season · ⚠️ XLSIOR overlap</div>
+          <div class="vdesc">Olympic-sized pool with a poolside DJ booth — the after-Scorpios destination for the late crowd. <strong>XLSIOR programs marathon pool parties here through the week</strong>; even non-XLSIOR daybed access gets full. Daybed €300 high season + XLSIOR markup, walk-in €40–€50 entry late.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Alemagou (Ftelia)</div>
+          <div class="vmeta">Meltemi-protected · 200-label cellar · 12:00–02:00 · Solomun residency · non-XLSIOR</div>
+          <div class="vdesc">Meltemi-protected (north-bay south-facing), jazz/funk DJ slot from 18:00, Cycladic + Med cuisine. The trip's deepest Greek wine cellar. <strong>Solomun's residency stage</strong> Jun–Sept. <strong>The non-XLSIOR-week alternative for Fri Aug 21 (Lane B)</strong> — Alemagou holds its house identity through the circuit week.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Principote (Panormos)</div>
+          <div class="vmeta">Bohemian-elegant · 12:00–24:00 · couples-friendly · daybed min</div>
+          <div class="vdesc">The most-couples-friendly of the marquee beach clubs — bohemian-elegant boho, less aggressive DJ scene, Panormos Bay setting. <strong>The Day 2 alternative to Nammos</strong>, and the "we want a non-XLSIOR beach club afternoon" pick all week.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Buddha-Bar Beach (Santa Marina, Ornos)</div>
+          <div class="vmeta">Onsite at Santa Marina resort · sunset DJ daily · 12:00–24:00 · least XLSIOR-impacted</div>
+          <div class="vdesc">Onsite at Santa Marina · private bay, sunset DJ slot daily 18:00–24:00. The Meltemi-sheltered (south-facing) alternative to Scorpios + Alemagou. <strong>The least XLSIOR-impacted beach club</strong> — Santa Marina's resort-guests-and-day-pass model keeps the crowd contained even during festival week.</div>
+        </div>
+      </div>
+
+      <div class="nightlife-col">
+        <h3>Mykonos Town &amp; Cavo · bars + clubs</h3>
+        <div class="venue">
+          <div class="vname">180° Sunset Bar</div>
+          <div class="vmeta">Highest point of Mykonos Town · 18:30–23:00 · €30 walk-in / €70+ reserved</div>
+          <div class="vdesc">Highest vantage in Chora, opens 1.5 h pre-sunset, closes 23:00. €30 walk-in (one drink included), €70+ for reserved front-row sunset table. Books via SevenRooms. The Day 1 nightcap anchor. Closes at 23:00 — civilized counterweight to XLSIOR Cavo nights.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Interni</div>
+          <div class="vmeta">Matogianni · 19:30–01:30 · €250/pp min spend · since 2000</div>
+          <div class="vdesc">Mykonos Town's dinner-to-DJ original. Modern Med + sushi bar, charcuterie. DJ ramps from 22:30 with table service till close. <strong>The Matsuhisa-to-club transition on Wed Aug 19</strong>. Walk-in tables off-peak; reserve XLSIOR-week nights 14+ days out.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Bonbonniere</div>
+          <div class="vmeta">High-end nightclub · shisha lounges · Fabergé-egg champagne shows</div>
+          <div class="vdesc">High-end nightclub with shisha lounges + signature Fabergé-egg champagne shows. Wear-good-shoes territory. Bottle-service led, but standing room available. The Day 3 third stop after Interni; also the Day 4 Lane B late if skipping XLSIOR.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Skandinavian Bar</div>
+          <div class="vmeta">Since 1978 · bi-level · 21:00–03:00 · raucous late</div>
+          <div class="vdesc">Mykonos institution — bi-level, packed by midnight, raucous till 3 AM. The original drinking-and-singing bar of the island, more "young + sweaty + loud" than "design-forward." Day 4 Lane B late-late crawl-end if skipping Cavo XLSIOR.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Astra Bar</div>
+          <div class="vmeta">Matogianni · retro observatory dome · Athens DJs · 22:00–03:00</div>
+          <div class="vdesc">Retro observatory-dome ceiling, Athens DJs spinning a smarter electronic mix than Skandinavian's pop crowd. Day 2 post-Koursaros first stop, before Skandinavian or back uphill.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Caprice Bar</div>
+          <div class="vmeta">Little Venice · 5 ft from sea · 30-year landmark · 18:30–02:00</div>
+          <div class="vdesc">Little Venice's 30-year landmark — terrace literally 5 feet from the sea, the windmills overhead. Signature "Caprice Turquoise" cocktail. Sunset over Delos. Day 2 + Day 3 sunset anchor (twice on the trip; the second visit is the iconic photograph).</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Toy Room (upstairs at Semeli)</div>
+          <div class="vmeta">Basement London-club model · hip-hop/R&amp;B · VIP-led</div>
+          <div class="vdesc">London Toy Room's Mykonos outpost — upstairs at Semeli, basement-club vibe, hip-hop + R&amp;B + house. VIP-led, bottle-service oriented. <strong>Day 6 (Sat Aug 22) Lane B alternative</strong> if skipping Cavo XLSIOR main party — walk from Belvedere instead of taxi to the cliff.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Cavo Paradiso ⚠️</div>
+          <div class="vmeta">⚠️ XLSIOR main stage Aug 20 + 22 · Paradise Beach cliffside · 3,000 cap · midnight–sunrise · GA €60–€150</div>
+          <div class="vdesc">The iconic Aegean cliffside club above Paradise Beach. 3,000-cap bowl. <strong>During XLSIOR week, Cavo IS the festival's main stage</strong> — Thu Aug 20 opening + Sat Aug 22 main party are the biggest nights of the Mediterranean summer. Headliners: Offer Nissim, Steve Pitron, Abel Aguilera, Tony Moran. €60–€150 GA XLSIOR-week, €800–€1,500 bottle service. Wed Aug 19 + Fri Aug 21 = non-XLSIOR programming typically. Taxi each way — never drive a quad after Cavo.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" id="score">
+      <span class="eyebrow">Adversarial Scoring</span>
+      <h2>Re-scored — XLSIOR Splits the Outcome</h2>
+      <p>Scored 0–3 per axis. Hard criteria ×2, soft ×1. Total /39. <strong>The big change vs. Option G (Aug 11–17) is the XLSIOR overlap</strong> — it's either the trip's centerpiece (33/39) or a 4-point drag (28/39) depending on vibe alignment. The two scores below show both reads: nightlife maxes either way; activity density holds; food caliber is unchanged (no Michelin); weather + safety unchanged; XLSIOR shifts the romance/hotel axis and dampens the calmer-civic-Greek-culture vibe of Option G (no Perseids, no Dekapentavgoustos, no Tinos pilgrimage).</p>
+    </div>
+
+    <div class="score-grid">
+      <div class="score-row">
+        <div class="axis">Food caliber <span class="tag">Hard ×2</span></div>
+        <div class="reason"><strong>Zero Michelin stars on Mykonos</strong> — the 2026 Greek expansion added Santorini + Thessaloniki but not Mykonos. But the non-Michelin top tier is genuinely high: Matsuhisa, Beefbar, Spilia, COOZEST, Koursaros, Kiki's. <strong>XLSIOR week tightens reservation windows to 45+ days for marquee dinners</strong>; otherwise identical to Option G. <strong>2/3</strong>.</div>
+        <div class="num">2 × 2 = 4</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Nightlife &amp; late energy <span class="tag">Hard ×2</span></div>
+        <div class="reason"><strong>Best in the Mediterranean — XLSIOR makes it untouchable.</strong> If vibe-aligned: Cavo Paradiso XLSIOR Aug 20 opening + Aug 22 main party + Aug 23 closing are the year's most-iconic European circuit nights. Scorpios + Alemagou + Nammos still operate. Solomun residency overlaps. <strong>3/3 max either way</strong> (the XLSIOR overlap can't drag this axis below ceiling).</div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Activity density <span class="tag">Hard ×2</span></div>
+        <div class="reason">Sailing (Rhenia private RIB + Delos public ferry), kitesurfing (Korfos), scuba (Anna II wreck), horseback (Mykonos Horseland), hiking (Profitis Ilias 372 m + Tinos trails), day-ferry to Tinos/Paros/Naxos, UNESCO walking (Delos), Cycladic town walking (Chora + Ano Mera), Vioma vineyard, quad ATV, parasailing, SUP, jet ski. Unchanged from Option G. <strong>3/3 max.</strong></div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Weather <span class="tag">Hard ×2</span></div>
+        <div class="reason">28–34°C days, <strong>~0 rain days</strong> in Aug avg, 12 h sunshine, Aegean at 25°C. <strong>Meltemi (NE wind)</strong> blows 15–30 knots most days + can spike to 40 knots — cancels ~30% of August boat days. Heat is intense on Delos (shadeless ruins). Aug 17–23 is the peak Meltemi window historically. <strong>2/3</strong>.</div>
+        <div class="num">2 × 2 = 4</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Safety &amp; late walkability <span class="tag">Hard ×2</span></div>
+        <div class="reason">Mykonos Town is highly walkable + well-lit + safe — Greek tourist police presence at peak. Pickpocket risk in Matogianni crowds + at the Old Port is moderate; <strong>XLSIOR week inflates crowd density 40%+ in Chora</strong> Aug 20–23. ATV accidents remain the single biggest risk. Taxi everything after midnight, especially XLSIOR nights. <strong>2/3</strong>.</div>
+        <div class="num">2 × 2 = 4</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Wine <span class="tag">Soft ×1</span></div>
+        <div class="reason">Mykonos Vioma + Tinos T-Oinos + Alemagou's 200-label list + Matsuhisa's 350-label list. Aug 17–23 is the post-harvest week — easier to book Vioma. <strong>Unique Greek varieties (Assyrtiko, Athiri, Malagouzia, Mandilaria)</strong> remain "drinkable only here." Catalog is small versus Mallorca's 70+ producers. <strong>2/3</strong>.</div>
+        <div class="num">2</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Romance / hotel quality <span class="tag">Soft ×1 · ⚠️ XLSIOR splits this</span></div>
+        <div class="reason">Belvedere + Bill &amp; Coo The Coast + Santa Marina are all top-of-Aegean. 180° Sunset + Little Venice + Caprice + Spilia sea-cave dinner are unchanged. <strong>If XLSIOR vibe-aligned, the festival becomes part of the romance (couples-trip-to-the-circuit-fest energy) — 3/3.</strong> <strong>If not vibe-aligned, the wall-to-wall Chora energy + Cavo+Jackie O'+SantAnna XLSIOR overlap dampens the quieter-romance hours — 2/3</strong>. The decisive split axis.</div>
+        <div class="num">3 OR 2</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Joann seafood tolerance <span class="tag">Soft ×1 · lower seafood = higher</span></div>
+        <div class="reason"><strong>The Greek meat tradition is the perfect Joann fit.</strong> Souvlaki, gyros, paidakia (lamb chops), kleftiko, moussaka, soutzoukakia, the Kobe gyros at Beefbar. Kiki's is grilled-lamb-only. Matsuhisa has wood-fired Wagyu ribeye. Spilia has Wagyu beef cuts. Seafood pressure is genuinely zero on this trip. <strong>3/3 max.</strong></div>
+        <div class="num">3</div>
+      </div>
+      <div class="score-row total">
+        <div class="axis">Weighted total · XLSIOR vibe-aligned</div>
+        <div class="reason">Hard 24/30 + Soft 9/9. Nightlife + activity + Joann all max; food + wine solid (no Michelin); weather + safety capped by Meltemi + ATV risk + crowd density; <strong>romance/hotel maxes because XLSIOR is the trip's centerpiece</strong>. <strong>33 / 39</strong> — the highest-scoring Mykonos option, beating Option G (32/39) on the romance axis if (and only if) XLSIOR is the lead reason for going.</div>
+        <div class="num">33 / 39</div>
+      </div>
+      <div class="score-row total" style="background: var(--myk-stone-deep);">
+        <div class="axis">Weighted total · XLSIOR not vibe-aligned</div>
+        <div class="reason">Hard 24/30 + Soft 8/9 → minus crowd-density drag on safety (could go to 1/3 = ×2 = -2) and romance dropping to 2/3 = -1. <strong>28–31 / 39</strong>. Beach clubs feel busier; reservations harder; price markup 20–40%. Option G (Aug 11–17) is the better fit for this read — same Cycladic-nightlife experience minus the circuit-festival overlay, plus Perseids + Dekapentavgoustos + Diplo Aug 16.</div>
+        <div class="num">28–31 / 39</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="booking" id="book">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="eyebrow">Make It Real</span>
+      <h2>Book These Now · XLSIOR Week Lead Times</h2>
+      <p>Twelve actions, ranked by lead time. <strong>XLSIOR week (Aug 20–25) lead times are 30–50% longer than Option G's Aug 11–17 window</strong> — Belvedere + Matsuhisa + Beefbar + Spilia + Scorpios daybed + Alemagou daybed + Cavo Paradiso XLSIOR Aug 20 + Aug 22 + Aegean ATH→JMK all need advance booking. Kiki's Tavern is the only thing you cannot reserve — walk-in lunch only.</p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="stepnum">01</div>
+        <div>
+          <h4>Book Belvedere Hotel Mykonos (5 nights, Mon Aug 17 → Sat Aug 22 + Sat Aug 22 → Sun Aug 23)</h4>
+          <p>Request a <strong>Deluxe Sea View Room facing south-west</strong> (sunset + Delos channel). XLSIOR-week nightly avg $330–$520 (vs. $277–$359 Option G week). Direct via Belvedere + boutique sites (Splendia, LHW for Belvedere Eden Collection) often match. <strong>Amex FHR / Virtuoso typically show upgrade + breakfast + property credit benefits</strong> — check before booking direct.</p>
+          <div class="meta-line">120 days out for XLSIOR week · <a href="https://www.belvederehotel.com/" target="_blank" rel="noopener">belvederehotel.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">02</div>
+        <div>
+          <h4>Reserve Cavo Paradiso XLSIOR — Thu Aug 20 opening OR Sat Aug 22 main</h4>
+          <p>Doors midnight, sets 01:00–sunrise. <strong>XLSIOR tickets — GA €60–€150</strong> via xlsiorfestival.com + Cavo's own ticketing (cross-listed). <strong>Bottle service tables €800–€1,500</strong> via the Cavo Paradiso reservations email. <strong>Aug 22 main party sells out 60+ days out</strong>; Aug 20 opening 45+ days out. The week's marquee bookings.</p>
+          <div class="meta-line">60+ days out for Aug 22 main · <a href="https://www.xlsiorfestival.com/" target="_blank" rel="noopener">xlsiorfestival.com</a> · <a href="https://cavoparadiso.gr/" target="_blank" rel="noopener">cavoparadiso.gr</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">03</div>
+        <div>
+          <h4>Reserve Matsuhisa Mykonos (Wed Aug 19, 21:00)</h4>
+          <p>Nobu's only Greek outpost. <strong>Choose the omakase ~€220/pp + wine pairing ~€140/pp</strong>, or à la carte. Reservation via SevenRooms requires CC, cancellable to 24 h. <strong>Wed Aug 19 is the pre-XLSIOR move</strong> — easier to book than Aug 20+ dates, calmer dining room. Book 30+ days ahead.</p>
+          <div class="meta-line">30+ days out · <a href="https://www.sevenrooms.com/reservations/matsuhisamykonos" target="_blank" rel="noopener">SevenRooms · matsuhisamykonos</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">04</div>
+        <div>
+          <h4>Reserve Beefbar Mykonos (Fri Aug 21, 21:00) and/or COOZEST (Sat Aug 22, 21:30)</h4>
+          <p>The meat temple + the modern Med sister room. <strong>Joann's calibration meals</strong> — Kobe gyros, Wagyu cuts. €120–€220/pp Beefbar, €100–€160/pp COOZEST. <strong>Sat Aug 22 is the season's tightest restaurant night</strong>; book 45+ days out. Reservations via <a href="https://www.beefbar.com/restaurant/mykonos/" target="_blank" rel="noopener">beefbar.com</a> + <a href="https://bill-coo-thecoast.com/restaurants/coozest/" target="_blank" rel="noopener">bill-coo-thecoast.com/restaurants/coozest/</a>.</p>
+          <div class="meta-line">45+ days out · <a href="https://www.beefbar.com/restaurant/mykonos/" target="_blank" rel="noopener">beefbar.com/restaurant/mykonos</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">05</div>
+        <div>
+          <h4>Book LAX↔ATH + Aegean ATH→JMK flights</h4>
+          <p>LH453 LAX→MUC (dep Mon Aug 17) + LH1754 MUC→ATH + <strong>A3 350 ATH→JMK (35-min Aegean hop, arrives 6:55 PM Tue)</strong>. Return: A3 351 JMK→ATH + LH1755 ATH→MUC + LH452 MUC→LAX. Estimated $1,150–$1,750 RT/pp combined. <strong>XLSIOR-week inbound demand peaks Aug 18–20</strong>; book 60+ days out. Aegean ATH→JMK runs 10× daily Aug. Avoid sub-90-min ATH layovers.</p>
+          <div class="meta-line">60–90 days out · <a href="https://en.aegeanair.com/" target="_blank" rel="noopener">aegeanair.com</a> · <a href="https://www.skyscanner.com/routes/lax/jmk/los-angeles-international-to-mykonos.html" target="_blank" rel="noopener">Skyscanner LAX→JMK</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">06</div>
+        <div>
+          <h4>Reserve Scorpios dinner + sunset (Mon Aug 17, 20:30 arrival)</h4>
+          <p>Daybed minimum spend €150–€250/pp depending on location. Sunset ritual 19:55 (you'll miss it by 10 min on arrival night; the dinner service at 21:00 is the play). <strong>Reserve via the Scorpios website 30+ days out</strong>. CC required.</p>
+          <div class="meta-line">30+ days out · <a href="https://scorpiosmykonos.com/" target="_blank" rel="noopener">scorpiosmykonos.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">07</div>
+        <div>
+          <h4>Reserve Spilia Seaside (Thu Aug 20, 20:00 OR Fri Aug 21 lunch)</h4>
+          <p>Sea-cave dinner at Agia Anna Bay — boat or 4WD shuttle access. <strong>Thu Aug 20 dinner is the romance-anchor night</strong>; Fri Aug 21 lunch (post-RIB) is the daylight alternative. Reserve via phone +30 22890 77750 or restaurant's reservation site, 30+ days out (45+ for the Sat Aug 22 alternative).</p>
+          <div class="meta-line">30+ days out · <a href="https://www.spiliarestaurantmykonos.com/" target="_blank" rel="noopener">spiliarestaurantmykonos.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">08</div>
+        <div>
+          <h4>Reserve the Rhenia private RIB charter (Fri Aug 21, 10:00 AM)</h4>
+          <p>€600–€900 half-day 2-pax with skipper via Don Blue or Boatbookings. <strong>Specify Rhenia western bay swim/snorkel + Spilia lunch drop at Agia Anna</strong> for the seamless transition. Cancellation 7 days out + weather-cancellation clause for Meltemi 35+ knots. <strong>Public ferry backup: Delos €25 RT + €20 entry from Old Port at 09:00.</strong></p>
+          <div class="meta-line">21+ days out · <a href="https://www.donblue.gr/" target="_blank" rel="noopener">donblue.gr</a> · <a href="https://www.boatbookings.com/" target="_blank" rel="noopener">boatbookings.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">09</div>
+        <div>
+          <h4>Reserve Nammos sunbed lunch (Tue Aug 18, 13:00)</h4>
+          <p>Sunbed minimum €150–€200/pp (vs. €200+ XLSIOR-week markup on Wed Aug 19+). <strong>Tue Aug 18 is the pre-XLSIOR move</strong> — calmer than Aug 20–23. Black Pearl caviar + Wagyu + champagne theatre. Reserve at <a href="https://www.nammos.com/" target="_blank" rel="noopener">nammos.com</a> 30+ days out.</p>
+          <div class="meta-line">30+ days out · <a href="https://www.nammos.com/" target="_blank" rel="noopener">nammos.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">10</div>
+        <div>
+          <h4>Reserve Alemagou daybed (Fri Aug 21, 13:30 OR late slot)</h4>
+          <p>Daybed min €120–€180/pp; reservation includes the 200-label wine list + the sunset DJ slot. <strong>Lane B alternative for the Fri Aug 21 night</strong> — non-XLSIOR house-music programming, Solomun's residency stage. Book via Alemagou's reservation page.</p>
+          <div class="meta-line">21+ days out · <a href="https://www.alemagou.gr/" target="_blank" rel="noopener">alemagou.gr</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">11</div>
+        <div>
+          <h4>Reserve Mykonos Horseland Fokos ride (Sat Aug 22, 16:00)</h4>
+          <p>2-h or 3.5-h horseback ride to Fokos Beach (€130 or €180/pp with sea-swim). Helmets provided, beginner-friendly. Reserve via website 7+ days out for Aug peak. The Day 6 quiet-romance hour before Profitis Ilias sunset + COOZEST/Beefbar + Cavo XLSIOR main.</p>
+          <div class="meta-line">7+ days out · <a href="https://www.mykonos-horseland.com/" target="_blank" rel="noopener">mykonos-horseland.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">12</div>
+        <div>
+          <h4>Optional: Reserve Jackie O' Beach for Thu Aug 20 OR Tinos SeaJets for the wine half-day</h4>
+          <p><strong>Jackie O' XLSIOR pool day (Thu Aug 20 afternoon)</strong>: €40 cover, daybed €200+ min · book via <a href="https://www.jackieomykonos.com/" target="_blank" rel="noopener">jackieomykonos.com</a> 14+ days out. <strong>OR Tinos SeaJets for the wine-focused half-day</strong>: 25-min crossing, €25 each way · <a href="https://www.seajets.gr/en/" target="_blank" rel="noopener">seajets.gr</a> for the T-Oinos Clos Stegasta tasting visit (book the winery 7+ days out at <a href="https://www.toinos.com/" target="_blank" rel="noopener">toinos.com</a>). Choose based on which Day 4 lane.</p>
+          <div class="meta-line">14+ days out · vibe-aligned: Jackie O' · skip-XLSIOR: Tinos+T-Oinos</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="adversarial">
+      <h3>Adversarial honesty — XLSIOR is the load-bearing axis</h3>
+      <p><strong>vs. Option G (Aug 11–17):</strong> Same island, same hotels, same restaurants, same activity catalog. The G option scores 32/39 with <strong>Perseids + Dekapentavgoustos + Tinos pilgrimage + Diplo at Cavo Aug 16</strong> as the calendar centerpieces. The G-2 option (this one) scores 33/39 with <strong>XLSIOR Festival Aug 20–25</strong> as the centerpiece — but only if vibe-aligned. <strong>If XLSIOR isn't the draw, G is strictly better</strong> — quieter Chora, calmer restaurant reservations, no festival-week 20–40% price markup, plus four marquee Greek-culture events the G-2 week doesn't have. The choice between G and G-2 is purely a vibe question, not a quality question.</p>
+      <p><strong>vs. San Sebastián:</strong> SS has <strong>3 ★★★ + multiple ★★ + Bib Gourmands</strong> — the Basque Country has more top-50-world-list restaurants per capita than any region on earth. Mykonos has <strong>zero Michelin stars</strong>. Pintxos breadth (50+ bars across the Parte Vieja) crushes Mykonos for casual-eating density. <strong>If food caliber is the top axis, SS wins outright.</strong></p>
+      <p><strong>vs. Mallorca:</strong> Belmond La Residencia + Castell Son Claret + Cap Rocat give Mallorca an objectively higher hotel ceiling. <strong>Voro ★★ in Canyamel</strong> and Maca de Castro ★ in Port d'Alcúdia tier Mallorca above Mykonos for food. Mallorca's wine catalog (70+ producers) is wider. <strong>Mallorca wins if hotel intimacy + food ceiling + wine breadth are priorities, especially if Joann tires of clubs after 2 nights — and the XLSIOR week's circuit intensity raises that risk meaningfully</strong>.</p>
+      <p><strong>vs. Côte d'Azur:</strong> Loses on Michelin density (the Côte has dozens of stars within 60 min). Loses on aspirational hotels (Hôtel du Cap-Eden-Roc, La Réserve Ramatuelle). Wins on raw nightlife (no Côte venue matches Cavo Paradiso XLSIOR). Mykonos costs ~30% less than Antibes for an equivalent 5-night stay, even with the XLSIOR markup.</p>
+      <p><strong>XLSIOR-specific weaknesses:</strong> (1) <strong>Price markup 20–40%</strong> across hotels, beach clubs, and restaurants Aug 20–25 — Belvedere jumps from $277–$359 (Option G week) to $330–$520. (2) <strong>Reservation windows tighten 30–50%</strong> — Sat Aug 22 Beefbar/COOZEST needs 45+ days. (3) <strong>Crowd density in Chora is wall-to-wall</strong> — XLSIOR brings 30,000 attendees, Matogianni alleys are 5-deep most nights. (4) <strong>Cavo Paradiso + Jackie O' + SantAnna are programmed for XLSIOR</strong> — non-vibe-aligned travelers find those venues taken over for the week. (5) <strong>No Perseid peak (was Aug 12–13), no Dekapentavgoustos (was Aug 15), no Tinos pilgrimage day, no Diplo Aug 16 Cavo</strong> — Option G's marquee Greek-culture events all happened the week before. (6) <strong>Quad ATV accident risk + pickpocket density</strong> rise with the XLSIOR crowd. (7) Tourist density at the +40% mark vs. Option G's +0% baseline.</p>
+    </div>
+
+    <div class="budget-table">
+      <div class="head">
+        <span class="eyebrow">All-In For Two Travelers · capped at band</span>
+        <h3>Budget by Tier</h3>
+        <p>USD, XLSIOR-week peak (Aug 17–23). <strong>Standard tier matches the day-by-day above</strong> and is capped at $14,000 to stay within the $9–15K band — the Cavo Tagoo splurge ($25K+) would blow the band and is intentionally excluded from the Standard column. Mykonos XLSIOR week runs ~5–10% over Option G (Aug 11–17) Standard at the same hotel + restaurant tier.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th class="item">Item</th>
+            <th class="tier">Budget</th>
+            <th class="tier standard">Standard ★</th>
+            <th class="tier">Splurge (caps at band)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="item">Flights · LAX↔JMK (×2)</td><td class="tier">$2,300<br><span style="font-size: 0.75rem; opacity: 0.7;">economy basic</span></td><td class="tier standard std-mark">$2,900<br><span style="font-size: 0.75rem; opacity: 0.7;">LH + Aegean economy</span></td><td class="tier">$3,600<br><span style="font-size: 0.75rem; opacity: 0.7;">economy flex</span></td></tr>
+          <tr><td class="item">Hotel · 5 nights (XLSIOR-week markup)</td><td class="tier">$1,750<br><span style="font-size: 0.75rem; opacity: 0.7;">Boheme value tier</span></td><td class="tier standard std-mark">$2,500<br><span style="font-size: 0.75rem; opacity: 0.7;">Belvedere sea-view</span></td><td class="tier">$4,000<br><span style="font-size: 0.75rem; opacity: 0.7;">Belvedere suite or 1n Cavo Tagoo</span></td></tr>
+          <tr><td class="item">Beach club daybeds · Scorpios + Nammos + Principote</td><td class="tier">$450<br><span style="font-size: 0.75rem; opacity: 0.7;">walk-in entries</span></td><td class="tier standard std-mark">$1,400<br><span style="font-size: 0.75rem; opacity: 0.7;">Scorpios dinner + Nammos sunbed</span></td><td class="tier">$2,200<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Principote daybed</span></td></tr>
+          <tr><td class="item">Marquee dinners (Matsuhisa + Beefbar/COOZEST + Spilia)</td><td class="tier">$500<br><span style="font-size: 0.75rem; opacity: 0.7;">Koursaros only</span></td><td class="tier standard std-mark">$1,900<br><span style="font-size: 0.75rem; opacity: 0.7;">Matsuhisa omakase + Beefbar + Spilia</span></td><td class="tier">$2,400<br><span style="font-size: 0.75rem; opacity: 0.7;">+ COOZEST</span></td></tr>
+          <tr><td class="item">Other dinners + tavernas + lunches</td><td class="tier">$400</td><td class="tier standard std-mark">$700<br><span style="font-size: 0.75rem; opacity: 0.7;">Kiki's + Koursaros + Hippie Fish + Joanna's</span></td><td class="tier">$900</td></tr>
+          <tr><td class="item">Rhenia RIB + Delos ferry</td><td class="tier">$130<br><span style="font-size: 0.75rem; opacity: 0.7;">public ferries only</span></td><td class="tier standard std-mark">$900<br><span style="font-size: 0.75rem; opacity: 0.7;">Rhenia RIB half-day + Delos ferry</span></td><td class="tier">$1,400<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Anna II dive</span></td></tr>
+          <tr><td class="item">Horseback + Profitis Ilias + activities</td><td class="tier">$180<br><span style="font-size: 0.75rem; opacity: 0.7;">horseback only</span></td><td class="tier standard std-mark">$400<br><span style="font-size: 0.75rem; opacity: 0.7;">horseback Fokos + walks</span></td><td class="tier">$800<br><span style="font-size: 0.75rem; opacity: 0.7;">+ kitesurf lesson + private guide</span></td></tr>
+          <tr><td class="item">⚠️ Cavo Paradiso XLSIOR (Aug 20 or 22)</td><td class="tier">$200<br><span style="font-size: 0.75rem; opacity: 0.7;">2× GA tickets one night</span></td><td class="tier standard std-mark">$750<br><span style="font-size: 0.75rem; opacity: 0.7;">2× nights GA · or 1 night small table</span></td><td class="tier">$1,500<br><span style="font-size: 0.75rem; opacity: 0.7;">bottle service Aug 22 main</span></td></tr>
+          <tr><td class="item">Mykonos Town clubs · Interni + Bonbonniere + 180°</td><td class="tier">$220</td><td class="tier standard std-mark">$650<br><span style="font-size: 0.75rem; opacity: 0.7;">180° reserved + Interni min</span></td><td class="tier">$1,200</td></tr>
+          <tr><td class="item">Optional: Jackie O' / Tinos+T-Oinos day</td><td class="tier">$60<br><span style="font-size: 0.75rem; opacity: 0.7;">walk-in only</span></td><td class="tier standard std-mark">$250<br><span style="font-size: 0.75rem; opacity: 0.7;">Jackie O' OR T-Oinos+SeaJets</span></td><td class="tier">$500<br><span style="font-size: 0.75rem; opacity: 0.7;">both, with daybed</span></td></tr>
+          <tr><td class="item">Mykonos Vioma + tastings + Matsuhisa pairing</td><td class="tier">$120</td><td class="tier standard std-mark">$400<br><span style="font-size: 0.75rem; opacity: 0.7;">Vioma + Matsuhisa pairing + Alemagou flight</span></td><td class="tier">$700</td></tr>
+          <tr><td class="item">Transfers + taxis + JMK</td><td class="tier">$320</td><td class="tier standard std-mark">$700<br><span style="font-size: 0.75rem; opacity: 0.7;">taxis daily + Cavo round trips</span></td><td class="tier">$1,100<br><span style="font-size: 0.75rem; opacity: 0.7;">private driver days</span></td></tr>
+          <tr><td class="item">Cushion / tips / incidentals</td><td class="tier">$280</td><td class="tier standard std-mark">$550</td><td class="tier">$900</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="total-label">Total · two travelers, all-in</td>
+            <td class="tier">$6,910</td>
+            <td class="standard">$14,000</td>
+            <td class="tier">$21,200</td>
+          </tr>
+        </tfoot>
+      </table>
+      <p class="footnote">
+        <strong>Honest read:</strong> Mykonos XLSIOR-week Standard ($14,000) caps at the top of the $9–15K band — XLSIOR-week hotel + Cavo markups eat most of the headroom. If you'd rather go softer on Cavo (drop to one GA night) and pocket $400, you land at $13,600. <strong>If XLSIOR vibe-aligned, the trip's score is 33/39 — the highest-scoring Mykonos option.</strong> If not, Option G (Aug 11–17, $13,700 Standard, 32/39) is the strictly-better fit — same week-of-Mykonos at lower cost, plus Perseids + Dekapentavgoustos + Diplo Aug 16. Splurge tier ($21,200) intentionally caps below Cavo Tagoo levels to stay within band; for the cliff-suite experience, a 1-night Cavo Tagoo + 4-night Belvedere split lands in the splurge column.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Built for Mark · August 17–23, 2026 · LAX origin · 5 hotel nights · ⚠️ XLSIOR Festival overlap (Aug 20–25) · Itinerary No. 03G-2 · <a href="../index.html">all trips</a> · <a href="./aug_11_mykonos.html">compare Option G (Aug 11)</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

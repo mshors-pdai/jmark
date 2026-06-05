@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>August 17–23, 2026 — Cassis &amp; the Calanques · Provence Booked Baseline (Shifted)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --provence-lavender: #5a4a7a;
+    --provence-lavender-deep: #3d3155;
+    --provence-terra: #c4622d;
+    --provence-terra-deep: #8f4720;
+    --provence-olive: #8a8f5a;
+    --provence-cream: #faf4e8;
+    --provence-sky: #4a90a4;
+    --provence-stone: #c1a875;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); line-height: 1.6; background: #fafaf7; }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
+  h3 { font-size: 1.6rem; line-height: 1.25; }
+  h4 { font-size: 1.15rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .eyebrow { font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; font-weight: 600; opacity: 0.7; }
+  a { color: inherit; }
+
+  .back-bar { background: #1a1a1a; color: rgba(255,255,255,0.88); padding: 0.55rem 0; font-family: 'Inter', sans-serif; font-size: 0.82rem; }
+  .back-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .back-bar a.back-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 500; letter-spacing: 0.06em; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+  .back-bar a.back-link:hover { color: var(--provence-terra); }
+  .back-bar a.back-link .arrow { display: inline-block; transition: transform 0.2s; }
+  .back-bar a.back-link:hover .arrow { transform: translateX(-3px); }
+  .back-bar .brand-mini { font-family: 'Playfair Display', serif; font-size: 0.92rem; color: rgba(255,255,255,0.7); letter-spacing: -0.02em; text-decoration: none; }
+  .back-bar .brand-mini:hover { color: white; }
+  .back-bar .brand-mini .dot { color: var(--provence-terra); }
+  .back-bar .meta-mini { display: none; font-size: 0.74rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; }
+  @media (min-width: 700px) { .back-bar .meta-mini { display: inline; } }
+
+  .topnav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding: 1rem 0; }
+  .topnav .container { display: flex; justify-content: space-between; align-items: center; }
+  .topnav .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; }
+  .topnav .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .topnav .tab { padding: 0.5rem 1.25rem; border-radius: 999px; text-decoration: none; color: var(--provence-lavender); font-size: 0.9rem; font-weight: 500; transition: all 0.2s; border: 1px solid var(--provence-lavender); }
+  .topnav .tab:hover { background: var(--provence-lavender); color: white; }
+
+  .intro-hero { padding: 6rem 0 4rem; text-align: center; background: linear-gradient(180deg, var(--provence-cream) 0%, #fafaf7 100%); }
+  .intro-hero .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--provence-terra); }
+  .intro-hero h1 { max-width: 900px; margin: 0 auto 1.5rem; }
+  .intro-hero h1 em { font-style: italic; color: var(--provence-terra); font-weight: 400; }
+  .intro-hero .lede { max-width: 760px; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.1rem; }
+  .intro-hero .meta { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); max-width: 800px; margin-left: auto; margin-right: auto; }
+  .intro-hero .meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
+  .intro-hero .meta-item .value { font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+
+  .booked-banner { max-width: 1000px; margin: 2rem auto 0; padding: 1rem 2rem; background: rgba(196,98,45,0.08); border: 1.5px solid var(--provence-terra); border-radius: 999px; text-align: center; font-size: 0.92rem; color: var(--provence-terra-deep); font-weight: 500; }
+  .booked-banner strong { color: var(--provence-terra); }
+
+  .destination { padding: 6rem 0 4rem; background: var(--provence-cream); }
+  .hero-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.12); margin-bottom: 4rem; }
+  .hero-card .hero-image { min-height: 500px; background-size: cover; background-position: center; position: relative;
+    background-image: linear-gradient(135deg, rgba(196,98,45,0.25), rgba(90,74,122,0.35)), url('https://images.unsplash.com/photo-1568849676085-51415703900f?w=1200&q=80');
+    background-color: var(--provence-terra); }
+  .hero-card .hero-content { padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center; background: white; }
+  .hero-card .eyebrow { margin-bottom: 1.25rem; color: var(--provence-terra); }
+  .hero-card h2 { margin-bottom: 1.5rem; color: var(--provence-lavender); }
+  .hero-card .tagline { font-size: 1.15rem; color: var(--muted); margin-bottom: 2rem; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .stat .stat-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.1; margin-bottom: 0.2rem; color: var(--provence-lavender); }
+  .stat .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+
+  .section-header { text-align: center; margin: 5rem auto 3rem; max-width: 740px; }
+  .section-header .eyebrow { margin-bottom: 1rem; display: inline-block; color: var(--provence-terra); }
+  .section-header h2 { margin-bottom: 1rem; color: var(--provence-lavender); }
+  .section-header p { color: var(--muted); font-size: 1.05rem; }
+
+  .flight-box { background: white; border-radius: 16px; padding: 2.5rem; max-width: 920px; margin: 2rem auto 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .flight-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+  .flight-row:last-of-type { border-bottom: none; }
+  .flight-airport .code { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1; font-weight: 700; color: var(--provence-lavender); }
+  .flight-airport .city { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; }
+  .flight-line { text-align: center; color: var(--muted); }
+  .flight-line .dash { height: 1px; background: var(--line); position: relative; margin: 0.5rem 0; }
+  .flight-line .dash::after { content: '⟶'; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: white; padding: 0 0.5rem; color: var(--provence-terra); }
+  .flight-line .info { font-size: 0.8rem; }
+  .flight-meta { display: flex; gap: 2rem; justify-content: center; padding-top: 1.5rem; margin-top: 1rem; border-top: 2px solid var(--line); }
+  .flight-meta .item { text-align: center; }
+  .flight-meta .item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 0.3rem; }
+  .flight-meta .item .val { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--provence-lavender); }
+
+  .only-this-week { max-width: 1100px; margin: 0 auto 4rem; padding: 3rem; background: linear-gradient(135deg, #faf4e8, #f0e3d0); border-radius: 24px; }
+  .only-this-week .head { text-align: center; margin-bottom: 2.5rem; }
+  .only-this-week h3 { color: var(--provence-lavender); font-size: 2rem; margin-top: 0.5rem; }
+  .only-this-week .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .event-card { background: white; border-radius: 16px; padding: 2rem; border-left: 4px solid var(--provence-lavender); }
+  .event-card.terra { border-left-color: var(--provence-terra); }
+  .event-card.olive { border-left-color: var(--provence-olive); }
+  .event-card.sky { border-left-color: var(--provence-sky); }
+  .event-card.stone { border-left-color: var(--provence-stone); }
+  .event-card .head { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .event-card .icon { font-size: 2.2rem; }
+  .event-card h4 { margin: 0; color: var(--provence-lavender); }
+  .event-card h4.terra { color: var(--provence-terra); }
+  .event-card h4.olive { color: var(--provence-olive); }
+  .event-card h4.sky { color: var(--provence-sky); }
+  .event-card h4.stone { color: var(--provence-terra-deep); }
+  .event-card .when { font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem; }
+  .event-card p { font-size: 0.95rem; color: #333; margin-bottom: 1rem; }
+  .event-card .book-link { display: inline-block; padding: 0.4rem 0.9rem; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--provence-terra); border: 1.5px solid var(--provence-terra); }
+  .event-card .book-link:hover { background: var(--provence-terra); color: white; }
+  .bonus-callout { margin-top: 2rem; padding: 1.5rem 2rem; background: rgba(90,74,122,0.06); border-radius: 12px; border-left: 4px solid var(--provence-lavender); }
+  .bonus-callout h4 { margin-bottom: 0.5rem; color: var(--provence-lavender); }
+  .bonus-callout p { font-size: 0.95rem; color: #333; margin: 0; }
+  .bonus-callout a { color: var(--provence-lavender); font-weight: 600; }
+
+  .glance-table { max-width: 1000px; margin: 0 auto 4rem; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .glance-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .glance-table th { background: var(--provence-lavender); color: white; padding: 1rem; text-align: left; font-family: 'Playfair Display', serif; font-weight: 600; }
+  .glance-table td { padding: 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .glance-table tr:last-child td { border-bottom: none; }
+  .glance-table tr:nth-child(even) td { background: rgba(90,74,122,0.04); }
+  .glance-table td.daynum { font-weight: 600; color: var(--provence-terra); }
+
+  .itinerary { max-width: 950px; margin: 0 auto; }
+  .day { display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; padding: 2.5rem 0; border-bottom: 1px solid var(--line); }
+  .day:last-child { border-bottom: none; }
+  .day-number .num { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1; font-weight: 600; font-style: italic; color: var(--provence-terra); }
+  .day-number .date { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .day-content h3 { margin-bottom: 0.75rem; color: var(--provence-lavender); }
+  .day-content ul { list-style: none; }
+  .day-content ul li { padding: 0.45rem 0 0.45rem 1.5rem; position: relative; color: #333; }
+  .day-content ul li::before { content: ''; position: absolute; left: 0; top: 0.95rem; width: 6px; height: 6px; border-radius: 50%; background: var(--provence-terra); }
+  .day-content ul li strong { color: var(--provence-lavender); }
+  .day-content ul li a { color: var(--provence-sky); text-decoration: none; border-bottom: 1px dotted; }
+  .alts { background: rgba(196,98,45,0.06); border-left: 3px solid var(--provence-terra); padding: 0.85rem 1rem; margin: 0.75rem 0 0.25rem 1.5rem; border-radius: 0 6px 6px 0; font-size: 0.88rem; color: #444; }
+  .alts strong { color: var(--provence-terra); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.25rem; }
+
+  .hotels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .hotel-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+  .hotel-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  .hotel-card .hotel-image { height: 200px; background-size: cover; background-position: center; position: relative; background-color: var(--provence-olive); }
+  .hotel-card .hotel-tier { position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.95); padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; color: var(--provence-lavender); z-index: 2; }
+  .hotel-card .hotel-tier.booked { background: var(--provence-terra); color: white; }
+  .hotel-card .hotel-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .hotel-card .hotel-body h4 { margin-bottom: 0.25rem; color: var(--provence-lavender); }
+  .hotel-card .hotel-body .loc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+  .hotel-card .hotel-body p { font-size: 0.93rem; color: #333; margin-bottom: 1rem; line-height: 1.55; }
+  .hotel-card .hotel-meta { display: flex; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.85rem; margin-top: auto; }
+  .hotel-card .hotel-meta .price { font-weight: 600; color: var(--provence-lavender); }
+  .hotel-card .book-link { display: inline-block; padding: 0.35rem 0.85rem; font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; border-radius: 999px; transition: all 0.2s; color: var(--provence-terra); border: 1.5px solid var(--provence-terra); align-self: flex-start; margin-top: 0.5rem; }
+  .hotel-card .book-link:hover { background: var(--provence-terra); color: white; }
+
+  .wine-block { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; max-width: 1100px; margin: 0 auto 2rem; background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.06); align-items: center; }
+  .wine-block .wine-image { min-height: 360px; background-size: cover; background-position: center; background-color: var(--provence-olive); }
+  .wine-block.cassis .wine-image { background-image: linear-gradient(135deg, rgba(74,144,164,0.25), rgba(193,168,117,0.40)), url('https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&q=80'); }
+  .wine-block.bandol .wine-image { background-image: linear-gradient(135deg, rgba(196,98,45,0.25), rgba(138,143,90,0.40)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80'); }
+  .wine-block .wine-text { padding: 3rem 2.5rem 3rem 0; }
+  .wine-block .eyebrow { color: var(--provence-terra); }
+  .wine-block h3 { color: var(--provence-lavender); margin-bottom: 1rem; }
+  .wine-block p { color: #333; font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .winery-list .winery { padding: 0.85rem 0; border-bottom: 1px dashed var(--line); }
+  .winery-list .winery:last-child { border-bottom: none; }
+  .winery-list .name { font-weight: 600; color: var(--provence-lavender); margin-bottom: 0.2rem; }
+  .winery-list .name a { color: var(--provence-terra); text-decoration: none; }
+  .winery-list .desc { font-size: 0.88rem; color: var(--muted); }
+
+  .food-list { max-width: 950px; margin: 0 auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+  .food-row { display: grid; grid-template-columns: 1fr 1.6fr auto; gap: 1.5rem; padding: 1.5rem; border-bottom: 1px solid var(--line); align-items: center; }
+  .food-row:last-child { border-bottom: none; }
+  .food-row .place { font-family: 'Playfair Display', serif; font-weight: 600; color: var(--provence-lavender); font-size: 1.1rem; }
+  .food-row .place .stars { color: var(--provence-terra); margin-left: 0.4rem; font-size: 0.9rem; }
+  .food-row .place .meta { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0; }
+  .food-row .desc { font-size: 0.92rem; color: #333; line-height: 1.55; }
+  .food-row .drive { font-size: 0.78rem; color: var(--muted); text-align: right; white-space: nowrap; }
+  .food-row.booked { background: rgba(196,98,45,0.05); }
+  .food-row.booked .place .stars { color: var(--provence-terra-deep); }
+
+  .activities { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; max-width: 1100px; margin: 0 auto; }
+  .activity { background: white; border-radius: 12px; padding: 1.75rem 1.25rem; text-align: center; transition: transform 0.2s; border: 1px solid var(--line); }
+  .activity:hover { transform: translateY(-2px); }
+  .activity .icon { font-size: 2.2rem; margin-bottom: 0.85rem; display: block; }
+  .activity h4 { margin-bottom: 0.5rem; font-size: 1rem; color: var(--provence-lavender); }
+  .activity h4 a { color: inherit; text-decoration: none; }
+  .activity p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+  .nightlife { max-width: 1100px; margin: 0 auto 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .nightlife-col { background: #15161a; color: white; padding: 2rem; border-radius: 16px; }
+  .nightlife-col h3 { color: var(--provence-terra); margin-bottom: 1.25rem; font-style: italic; }
+  .nightlife-col .venue { padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nightlife-col .venue:last-child { border-bottom: none; }
+  .nightlife-col .venue .vname { font-family: 'Playfair Display', serif; font-weight: 600; color: white; font-size: 1.05rem; }
+  .nightlife-col .venue .vmeta { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
+  .nightlife-col .venue .vdesc { font-size: 0.88rem; color: rgba(255,255,255,0.75); margin-top: 0.5rem; line-height: 1.5; }
+
+  .score-grid { max-width: 1000px; margin: 0 auto 3rem; }
+  .score-row { display: grid; grid-template-columns: 1fr auto 70px; gap: 1rem; padding: 1.1rem 1.5rem; background: white; border-radius: 8px; margin-bottom: 0.6rem; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .score-row .axis { font-weight: 600; color: var(--provence-lavender); }
+  .score-row .axis .tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-left: 0.5rem; font-weight: 500; }
+  .score-row .reason { font-size: 0.88rem; color: #444; max-width: 480px; text-align: right; }
+  .score-row .num { text-align: center; font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--provence-terra); font-weight: 600; }
+  .score-row.total { background: var(--provence-lavender); color: white; }
+  .score-row.total .axis { color: white; }
+  .score-row.total .num { color: white; font-size: 1.9rem; }
+
+  .booking { background: #1a1a1a; color: white; padding: 6rem 0; }
+  .booking .section-header h2 { color: white; }
+  .booking .section-header p { color: rgba(255,255,255,0.7); }
+  .booking .section-header .eyebrow { color: rgba(255,255,255,0.7); }
+  .steps { max-width: 850px; margin: 0 auto; }
+  .step { display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .step:last-child { border-bottom: none; }
+  .step .stepnum { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1; color: var(--provence-terra); font-style: italic; }
+  .step .stepnum.booked { color: var(--provence-stone); position: relative; }
+  .step .stepnum.booked::after { content: 'BOOKED'; position: absolute; top: 0; right: 0; font-family: 'Inter', sans-serif; font-size: 0.55rem; font-style: normal; font-weight: 700; letter-spacing: 0.1em; color: var(--provence-stone); background: rgba(193,168,117,0.15); padding: 0.15rem 0.45rem; border-radius: 4px; transform: translateY(-4px); }
+  .step h4 { color: white; margin-bottom: 0.5rem; }
+  .step p { color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 0.75rem; }
+  .step p strong { color: white; }
+  .step .meta-line { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+  .step .meta-line a { color: var(--provence-stone); text-decoration: none; }
+
+  .adversarial { max-width: 950px; margin: 4rem auto 0; padding: 2.5rem; background: rgba(255,255,255,0.04); border-radius: 16px; border-left: 4px solid var(--provence-terra); }
+  .adversarial h3 { color: white; margin-bottom: 1rem; }
+  .adversarial p { color: rgba(255,255,255,0.78); font-size: 0.95rem; margin-bottom: 1rem; }
+  .adversarial p strong { color: var(--provence-terra); }
+
+  .budget-table { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; background: rgba(255,255,255,0.04); border-radius: 16px; }
+  .budget-table .head { text-align: center; margin-bottom: 2.5rem; }
+  .budget-table h3 { color: white; margin-top: 0.5rem; }
+  .budget-table .head p { color: rgba(255,255,255,0.6); margin-top: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 0.95rem; }
+  .budget-table table { width: 100%; border-collapse: collapse; color: white; font-size: 0.95rem; }
+  .budget-table th { padding: 1rem 0.75rem; font-family: 'Playfair Display', serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
+  .budget-table th.item { text-align: left; color: rgba(255,255,255,0.6); width: 38%; }
+  .budget-table th.tier { text-align: center; color: rgba(255,255,255,0.85); width: 21%; font-size: 0.92rem; }
+  .budget-table th.standard { color: var(--provence-terra); font-weight: 700; font-size: 1rem; background: rgba(196,98,45,0.14); }
+  .budget-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .budget-table td.item { color: rgba(255,255,255,0.85); }
+  .budget-table td.tier { text-align: center; }
+  .budget-table td.standard { text-align: center; background: rgba(196,98,45,0.06); }
+  .budget-table td.std-mark { font-weight: 600; }
+  .budget-table td.dim { color: rgba(255,255,255,0.3); }
+  .budget-table tfoot td { padding: 1.5rem 0.75rem 0.5rem; font-family: 'Playfair Display', serif; border-top: 2px solid rgba(255,255,255,0.25); border-bottom: none; }
+  .budget-table tfoot td.total-label { font-size: 1.3rem; color: white; }
+  .budget-table tfoot td.tier { font-size: 1.4rem; color: white; }
+  .budget-table tfoot td.standard { font-size: 1.65rem; color: var(--provence-terra); font-weight: 700; }
+  .budget-table .footnote { text-align: center; color: rgba(255,255,255,0.55); font-size: 0.85rem; margin-top: 2rem; line-height: 1.6; }
+
+  footer { background: #0d0d0d; color: rgba(255,255,255,0.6); padding: 2.5rem 0; text-align: center; font-size: 0.85rem; }
+
+  @media (max-width: 900px) {
+    .hero-card { grid-template-columns: 1fr; }
+    .hero-card .hero-image { min-height: 280px; }
+    .hero-card .hero-content { padding: 2.5rem 2rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .day { grid-template-columns: 1fr; gap: 1rem; }
+    .day-number .num { font-size: 3rem; }
+    .hotels-grid { grid-template-columns: 1fr 1fr; }
+    .activities { grid-template-columns: repeat(2, 1fr); }
+    .flight-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .only-this-week .grid { grid-template-columns: 1fr; }
+    .wine-block { grid-template-columns: 1fr; }
+    .wine-block .wine-text { padding: 2rem; }
+    .nightlife { grid-template-columns: 1fr; }
+    .topnav .tabs { flex-wrap: wrap; }
+    .container { padding: 0 1.25rem; }
+    .step { grid-template-columns: 60px 1fr; gap: 1rem; }
+    .food-row { grid-template-columns: 1fr; gap: 0.6rem; }
+    .food-row .drive { text-align: left; }
+    .score-row { grid-template-columns: 1fr; }
+    .score-row .reason { text-align: left; }
+    .score-row .num { text-align: left; }
+  }
+  @media (max-width: 600px) {
+    .hotels-grid, .activities { grid-template-columns: 1fr; }
+    .intro-hero .meta { gap: 1.5rem; }
+    .topnav { padding: 0.6rem 0; }
+    .topnav .container { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .topnav .brand { font-size: 1rem; }
+    .topnav .tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.25rem; }
+    .topnav .tab { white-space: nowrap; font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    .glance-table, .budget-table { overflow-x: auto; }
+    .glance-table table, .budget-table table { min-width: 540px; }
+    h2 { font-size: 1.8rem !important; }
+    .day-number .num { font-size: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <div class="container">
+    <a href="../index.html" class="back-link"><span class="arrow">←</span> All trips</a>
+    <span class="meta-mini">Itinerary No. 03A-2 · Provence · Aug 17–23 · <a href="./aug_11_provence.html" style="color: var(--provence-terra); text-decoration: none;">compare original Aug 11 window ↗</a></span>
+    <a href="../index.html" class="brand-mini">j<span class="dot">.</span>mark</a>
+  </div>
+</div>
+
+<nav class="topnav">
+  <div class="container">
+    <div class="brand">August 17 → 23, 2026</div>
+    <div class="tabs">
+      <a href="#itinerary" class="tab">Itinerary</a>
+      <a href="#hotels" class="tab">Hotels</a>
+      <a href="#wine" class="tab">Wine</a>
+      <a href="#food" class="tab">Food</a>
+      <a href="#activities" class="tab">Activities</a>
+      <a href="#nightlife" class="tab">Nightlife</a>
+      <a href="#score" class="tab">Score</a>
+      <a href="#book" class="tab">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<section class="intro-hero">
+  <div class="container">
+    <span class="eyebrow">France · Provence · 5 Hotel Nights · Booked Baseline Shifted +6 Days</span>
+    <h1>Cassis &amp;<br>the Calanques — <em>shifted.</em></h1>
+    <p class="lede">
+      The same booked baseline (<strong>La Villa Madie ★★★</strong>, <strong>L'Eden Boat</strong> private RIB, <strong>AF65 LAX→CDG</strong>), shifted +6 days into the Aug 17–23 window. The bones are intact. <strong>What's lost:</strong> the Perseid peak (Aug 12–13), the Cassis Assumption Day fireworks + bal (Aug 15), the Bandol "Terrasses des Aoûtiennes" + Bandol Aoûtiennes 5-stage music nights weekend anchor (Aug 15 weekend), and the final week of the <strong>Festival International de Piano de La Roque d'Anthéron</strong> (closes Aug 16). <strong>What remains:</strong> the booked ★★★, the booked boat, Bandol's Mourvèdre estates, Cassis whites at the doorstep, the Calanques, Marseille's nightlife circuit 35 min away, and lower hotel pressure as French school re-entry approaches.
+    </p>
+    <div class="meta">
+      <div class="meta-item"><div class="label">Departure</div><div class="value">Mon, Aug 17</div></div>
+      <div class="meta-item"><div class="label">Return</div><div class="value">Sun, Aug 23</div></div>
+      <div class="meta-item"><div class="label">Travelers</div><div class="value">Two</div></div>
+      <div class="meta-item"><div class="label">Origin</div><div class="value">LAX</div></div>
+    </div>
+    <div class="booked-banner">
+      <strong>Status:</strong> The booked baseline shifted +6 days · Villa Madie ★★★ · L'Eden Boat private RIB · AF65 LAX→CDG — <strong>locked for this window (re-pricing if shifting from Aug 11 dates)</strong>
+    </div>
+  </div>
+</section>
+
+<section class="destination" id="itinerary">
+  <div class="container">
+
+    <div class="hero-card">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Option A-2 · France · Provence · Booked Baseline Shifted</span>
+        <h2>Cassis +<br>the Calanques — shifted</h2>
+        <p class="tagline">The booked baseline, shifted +6 days. <strong>Villa Madie ★★★ + L'Eden Boat + AF65 LAX→CDG already locked for this window (re-pricing if shifting).</strong> The Perseid peak, Aug 15 fireworks, and Bandol Aoûtiennes weekend music circuit are now past — the score weakens from 31.5/39 to <strong>30/39</strong>. The decision-fatigue default: only pick this window if you don't want to switch from the booked plan. Working fishing port at the foot of Cap Canaille (Europe's highest sea cliff, 399 m), limestone fjords carved into 23°C turquoise Med water, the only AOC wine region in France made of a single white-on-white village (Cassis) sitting 30 minutes from one of France's most under-traveled red-wine zones (Bandol). One base for five nights. Every cultural day-trip — Aix, Marseille — inside 35–75 minutes.</p>
+        <div class="stats">
+          <div class="stat"><div class="stat-value">75–85°F</div><div class="stat-label">August High</div></div>
+          <div class="stat"><div class="stat-value">★★★ + ★</div><div class="stat-label">Michelin in Radius</div></div>
+          <div class="stat"><div class="stat-value">Bandol</div><div class="stat-label">Signature Wine</div></div>
+          <div class="stat"><div class="stat-value">35 min</div><div class="stat-label">Cassis → Marseille</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="eyebrow">Getting There</span>
+      <h2>Flight Plan</h2>
+      <p>Air France daytime nonstop LAX→CDG, short hop to Marseille. Lands MRS <strong>1:05 PM Tue Aug 18</strong> — 35-min drive to Cassis, pool by 2:30 PM, swim by 4. <strong>No nonstop LAX→MRS exists</strong>; minimum one connection adds 4–5 hours friction each end vs. Barcelona/Madrid/Lisbon-bound trips. <strong>AF65 outbound is locked for this window.</strong></p>
+    </div>
+    <div class="flight-box">
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">LAX</div><div class="city">Los Angeles · Mon Aug 17 · dep 1:40 PM</div></div>
+        <div class="flight-line"><div class="info">Air France AF65 (locked)</div><div class="dash"></div><div class="info">10h 55m nonstop</div></div>
+        <div class="flight-airport"><div class="code">CDG</div><div class="city">Paris · Tue Aug 18 · arr 9:35 AM</div></div>
+      </div>
+      <div class="flight-row">
+        <div class="flight-airport"><div class="code">CDG</div><div class="city">Paris · 2h layover</div></div>
+        <div class="flight-line"><div class="info">Air France AF Connect</div><div class="dash"></div><div class="info">1h 30m</div></div>
+        <div class="flight-airport"><div class="code">MRS</div><div class="city">Marseille · arr <strong>1:05 PM</strong> · 35-min drive Cassis</div></div>
+      </div>
+      <div class="flight-meta">
+        <div class="item"><div class="label">Est. Round-trip</div><div class="val">$900–$1,400</div></div>
+        <div class="item"><div class="label">At hotel by</div><div class="val">2:30 PM</div></div>
+        <div class="item"><div class="label">Carrier</div><div class="val">Air France</div></div>
+      </div>
+    </div>
+    <p style="text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 1rem; max-width: 760px; margin-left: auto; margin-right: auto;">Return: AF Connect MRS→CDG + <strong>AF64 CDG→LAX</strong> (~11h nonstop) Sun Aug 23 — arrive LAX same day, gain 9 hours. Backup routings: <strong>Delta LAX→AMS→MRS</strong> (KLM SkyTeam codeshare), <strong>Lufthansa LAX→FRA→MRS</strong>, <strong>United LAX→MUC→MRS</strong>. <a href="https://www.skyscanner.com/routes/lax/mrs/los-angeles-international-to-marseille-provence.html" target="_blank" rel="noopener" style="color: var(--provence-terra);">Skyscanner LAX→MRS →</a></p>
+
+    <div class="section-header">
+      <span class="eyebrow">Day by Day</span>
+      <h2>The Itinerary</h2>
+      <p>One base — a Cassis 5★ for all five nights. Every dinner, every winery, every cultural day-trip inside a 75-minute radius. Each day below carries 2–3 alternatives per slot: rainy / low-energy / doubling-down swaps. <strong>The fire-closure asterisk:</strong> Calanques National Park sets daily access status at 17:00 the prior day Jun 1–Sep 30 — Green / Yellow / Orange / Red / Black. Check the <a href="https://www.calanques-parcnational.fr/" target="_blank" rel="noopener" style="color: var(--provence-terra);">MesCalanques app</a> + <a href="https://simba.bouches-du-rhone.gouv.fr/" target="_blank" rel="noopener" style="color: var(--provence-terra);">simba.bouches-du-rhone.gouv.fr</a> the night before any hike day. <strong>Late August can be the peak fire-risk window</strong> — after weeks of heat accumulation, red days are statistically more common than early August.</p>
+    </div>
+
+    <div class="only-this-week">
+      <div class="head">
+        <span class="eyebrow" style="color: var(--provence-terra);">What's On This Week</span>
+        <h3>The Aug 17–23 Window — Honest Read</h3>
+        <p style="color: var(--muted); margin-top: 0.75rem; max-width: 720px; margin-left: auto; margin-right: auto;">The Aug 17–23 window is structurally weaker on calendar anchors than Aug 11–17. <strong>The Perseid peak is past (Aug 12–13).</strong> <strong>Cassis Assumption Day fireworks + bal is past (Aug 15).</strong> <strong>Bandol "Aoûtiennes" Aug 15 weekend music anchor is past.</strong> <strong>Roque d'Anthéron piano festival closes Aug 16</strong> — every concert is past. What remains: the booked Villa Madie ★★★ + L'Eden Boat, Bandol's wineries (open year-round), Cassis Quai des Artistes nightly market through Aug 31, the Cassis Wed/Fri food market, and the Calanques themselves. The wine day moves from Friday to <strong>Wed Aug 19</strong> as the anchor of the trip.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="event-card terra">
+          <div class="head">
+            <span class="icon">🚤</span>
+            <div>
+              <h4 class="terra">L'Eden Boat private Calanques RIB · LOCKED</h4>
+              <div class="when"><strong>Thu Aug 20</strong> · departure Cassis Port · half-day private + shared option</div>
+            </div>
+          </div>
+          <p><strong>Locked for this window.</strong> Private RIB (rigid inflatable) into the Calanques National Park — mask + snorkel + drinks aboard, swim stops in coves between sea cliffs, Cap Canaille from the water, Bandol coast extension if winds cooperate. The crown of Day 4. Re-confirm 7 days out at +33 4 69 00 22 83 or <a href="https://rent.ledenboat.com/" target="_blank" rel="noopener" style="color: var(--provence-terra-deep); font-weight: 600;">rent.ledenboat.com</a>. <strong>Weather rule:</strong> RIB sails in light rain; cancels in mistral + 3 m+ swell — verify 24h forecast and shift to a Bandol-focused day swap if needed. The boat operator confirms by 19:00 the night before for the next morning. Evening at Cap Canaille sunset point caps the day.</p>
+          <a href="https://rent.ledenboat.com/" target="_blank" rel="noopener" class="book-link">L'Eden Boat →</a>
+        </div>
+
+        <div class="event-card">
+          <div class="head">
+            <span class="icon">🍷</span>
+            <div>
+              <h4>Bandol Wine Day · the new anchor</h4>
+              <div class="when"><strong>Wed Aug 19</strong> · Château Pradeaux + Domaine Tempier + Domaine de Terrebrune (verify)</div>
+            </div>
+          </div>
+          <p>With the Aug 15 Bandol Aoûtiennes weekend now past, the Bandol wine day moves from Friday to <strong>Wednesday Aug 19</strong> as the structural anchor of the week. Three estate visits: <strong>Château Pradeaux</strong> (St-Cyr-sur-Mer, Portalis family, old-school by-appointment), <strong>Domaine Tempier</strong> (Plan du Castellet, the iconic Bandol), <strong>Domaine de Terrebrune</strong> (Ollioules — <em>verify 2026 August opening status, was closed late Aug 2025</em>; substitute Château de Pibarnon or Domaine de la Bégude if closed). Lunch at <strong>L'Escourtin</strong> in Le Castellet. Driver-led €500–€900 full-day 2-pax August. Cap the day with the booked <strong>La Villa Madie ★★★ — LOCKED Wed Aug 19</strong>.</p>
+          <a href="https://www.domainetempier.com/" target="_blank" rel="noopener" class="book-link">Domaine Tempier →</a>
+        </div>
+
+        <div class="event-card sky">
+          <div class="head">
+            <span class="icon">🎨</span>
+            <div>
+              <h4 class="sky">Cassis Quai des Artistes + Marché Nocturne</h4>
+              <div class="when"><strong>Every evening through Aug 31</strong> · 19:00–midnight · Place Baragnon + Place Clémenceau</div>
+            </div>
+          </div>
+          <p>Daily painters, photographers, portraitists, engravers, plus artisans, foodmakers, jewelers. Free. <strong>Still running every night of your window.</strong> Built into your evening walks — the default post-dinner anchor every night you're not in Marseille. <strong>Pair it</strong> with the <strong>Wed Aug 19 + Fri Aug 21 food market 09:00–13:00 Place Baragnon</strong> — Wednesday morning is the day-of-Bandol-day market stop; Friday morning is the pre-Aix-day stop. This is the soft constant of the trip.</p>
+          <a href="https://www.cassis.fr/les-marches-de-lete-le-quai-des-artistes/" target="_blank" rel="noopener" class="book-link">Cassis events page →</a>
+        </div>
+
+        <div class="event-card olive">
+          <div class="head">
+            <span class="icon">🦞</span>
+            <div>
+              <h4 class="olive">Cassis Fête des Pêcheurs (late Aug pattern)</h4>
+              <div class="when"><strong>Verify 2026 calendar</strong> · traditional fishermen's fête typically late Aug</div>
+            </div>
+          </div>
+          <p>Cassis has a historic fishermen's fête (Fête de la Saint-Pierre also runs late June) — <strong>verify the 2026 program with Cassis Office du Tourisme</strong> at +33 8 92 25 98 92 or office-tourisme@cassis.fr. If a late-Aug fête lands inside Aug 17–23, this becomes the Aug 15 fireworks replacement. Honest read: no guaranteed Cassis village-event anchor for this window unlike the Aug 11–17 trip, which is one of the reasons the score drops 1.5 points.</p>
+          <a href="https://www.cassis.fr/" target="_blank" rel="noopener" class="book-link">Cassis OT →</a>
+        </div>
+
+        <div class="event-card stone">
+          <div class="head">
+            <span class="icon">🌃</span>
+            <div>
+              <h4 class="stone">Marseille late-night circuit · R2 / Trolleybus / Cours Julien</h4>
+              <div class="when"><strong>Every Thu–Sat night</strong> · 35-min drive from Cassis · Marseille R2 Rooftop / Trolleybus / Cours Julien</div>
+            </div>
+          </div>
+          <p>With Cassis genuinely sleepy this window (no Aug 15 bal, no late-night village fête anchor), Marseille is the nightlife move. <strong>R2 Rooftop des Terrasses</strong> Thu–Sun 19:00–02:00 (Les Terrasses du Port building, 1,500-cap, DJs, 360° harbor view); <strong>Trolleybus</strong> Thu–Sat 23:30–06:00 (24 quai Rive Neuve, 17th-c stone vaults, 3 dance rooms, ~€10 entry); <strong>Cours Julien</strong> artist district (Lulo Bar, Le Pulse, La Tasca, Baby Club for electronic). Pair with a Marseille dinner — Une Table au Sud ★ or Bokeria — and Uber back to Cassis (~€55, 35 min) or sleep at Sofitel Vieux Port. <strong>Built into Day 5 (Fri Aug 21).</strong></p>
+          <a href="https://www.lerooftopdesterrasses.com/" target="_blank" rel="noopener" class="book-link">R2 Rooftop →</a>
+        </div>
+
+        <div class="event-card terra">
+          <div class="head">
+            <span class="icon">⚠️</span>
+            <div>
+              <h4 class="terra">Calanques fire-closure risk · late Aug peak</h4>
+              <div class="when"><strong>Every day Jun 1 → Sep 30</strong> · check 17:00 night before · MesCalanques app</div>
+            </div>
+          </div>
+          <p><strong>Late August can be the structurally worst Calanques fire-closure window of the season</strong> — heat has accumulated for weeks, soils are dry, mistral wind events spike risk. Daily access status set 17:00 the prior evening: <strong>Green</strong> = open all-day; <strong>Yellow/Orange</strong> = 06:00–11:00 only; <strong>Red</strong> = land access forbidden (Route des Crêtes closed, boats sail but no landing); <strong>Black</strong> = full closure. Check <strong>MesCalanques app</strong> + <a href="https://simba.bouches-du-rhone.gouv.fr/" target="_blank" rel="noopener" style="color: var(--provence-terra-deep); font-weight: 600;">simba.bouches-du-rhone.gouv.fr</a> + <a href="https://www.calanques-parcnational.fr/" target="_blank" rel="noopener" style="color: var(--provence-terra-deep); font-weight: 600;">calanques-parcnational.fr</a> the night before any hike day. The Sat Aug 22 dawn hike is the most at-risk; the L'Eden Boat RIB day Thu is more resilient. Have a spa-day / Aix-day swap ready.</p>
+          <a href="https://www.calanques-parcnational.fr/" target="_blank" rel="noopener" class="book-link">Calanques NP →</a>
+        </div>
+
+      </div>
+
+      <div class="bonus-callout">
+        <h4>⚠️ Honest read — why this window scores 1.5 points lower</h4>
+        <p>The Aug 11–17 window had <strong>six</strong> simultaneous calendar anchors: Perseid peak under a new moon, Cassis Assumption Day fireworks + bal, the final week of Roque d'Anthéron piano festival, the Bandol "Terrasses des Aoûtiennes" 5-stage August music circuit, the Cassis Quai des Artistes nightly, and L'Eden Boat. The Aug 17–23 window keeps the last two (Quai des Artistes + L'Eden Boat) and the booked ★★★ Villa Madie — but loses every other anchor. The week is <strong>structurally quieter in the village</strong>, which deepens the "Cassis last-seating 21:30" problem. Marseille becomes more important, not less. <strong>The compensation:</strong> hotel pressure starts easing as French school re-entry approaches (rentrée scolaire), some restaurant tables become bookable on shorter notice, and the Calanques begin to feel marginally less mobbed by mid-week. Net: 30/39 vs 31.5/39 for Aug 11–17.</p>
+      </div>
+    </div>
+
+    <div class="glance-table">
+      <table>
+        <thead>
+          <tr><th>Day</th><th>Date</th><th>Theme</th><th>Highlight</th><th>Dinner + Late</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="daynum">1</td><td>Mon Aug 17 / Tue Aug 18</td><td>Arrive · mellow stack</td><td>AF65 LAX→CDG · AF Connect to MRS 13:05 · Cassis check-in 14:30 · Plage du Bestouan swim · sunset port walk Quai des Baux</td><td><strong>La Presqu'île</strong> (Michelin-listed cliffside) · Quai des Artistes stroll</td></tr>
+          <tr><td class="daynum">2</td><td>Tue Aug 18</td><td>Calanques de Cassis boat or hike</td><td>Bateliers Cassidiens boat (En Vau / Port-Pin / Port-Miou) OR dawn hike if fire status Green · check simba.bouches-du-rhone.gouv.fr · lunch <strong>La Presqu'île</strong></td><td><strong>Le Bistrot</strong> port-side · Bar de la Marine nightcap</td></tr>
+          <tr><td class="daynum">3</td><td>Wed Aug 19</td><td>Bandol wine day · ★★★</td><td>Driver pickup · Pradeaux → Tempier → Terrebrune/Pibarnon · lunch <strong>L'Escourtin</strong> Le Castellet · home to change</td><td><strong>La Villa Madie ★★★ — LOCKED</strong> · Le Big Ben Cassis nightclub</td></tr>
+          <tr><td class="daynum">4</td><td>Thu Aug 20</td><td>L'Eden Boat day · LOCKED</td><td>09:00 private RIB Cassis → Calanques + Bandol coast · cliff-jump Port-Pin · swim En Vau · lunch on board</td><td>Cap Canaille sunset point · port-side dinner · Casino de Cassis</td></tr>
+          <tr><td class="daynum">5</td><td>Fri Aug 21</td><td>Aix OR Marseille day</td><td>Aix-en-Provence Cours Mirabeau · Cézanne studio · market lunch <strong>Le Mas Bottero</strong> · OR Marseille MUCEM + Vieux Port</td><td><strong>R2 Rooftop Marseille</strong> if seeking late nightlife (rare in Cassis) · Trolleybus</td></tr>
+          <tr><td class="daynum">6</td><td>Sat Aug 22</td><td>Calanques En Vau dawn + beach</td><td>06:00 dawn Port-Miou → En Vau (fire status permitting) · beach Plage du Bestouan · lunch <strong>Chez Gilbert</strong> seafood platter</td><td><strong>Fleurs de Thym</strong> OR back to Villa Madie if extending tasting</td></tr>
+          <tr><td class="daynum">7</td><td>Sun Aug 23</td><td>Departure</td><td>Slow morning · brunch <strong>La Presqu'île</strong> · drive MRS · AF Connect CDG · AF64 CDG→LAX</td><td>Arrive LAX same day</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="itinerary">
+
+      <div class="day">
+        <div class="day-number"><div class="num">01</div><div class="date">Mon→Tue Aug 17–18</div></div>
+        <div class="day-content">
+          <h3>Arrive Marseille → Cassis · mellow stack · sunset port walk · La Presqu'île</h3>
+          <ul>
+            <li><strong>Mon Aug 17 · 1:40 PM LAX</strong> · Air France AF65 nonstop LAX→CDG (10h 55m). The locked outbound — already in the booked baseline for this window.</li>
+            <li><strong>Tue Aug 18 · 9:35 AM CDG</strong> · arrive Paris · 2-h layover</li>
+            <li><strong>11:35 AM CDG</strong> · Air France AF Connect to MRS (1h 30m)</li>
+            <li><strong>1:05 PM</strong> Land MRS · rental car pickup (~30 min process) · drive 30 min along the coastal corniche to <strong>Cassis</strong>, drop-off at <a href="https://www.les-roches-blanches-cassis.com/en/" target="_blank" rel="noopener">Les Roches Blanches Cassis</a> or <a href="https://www.hoteldelaplagemahogany.com/en/" target="_blank" rel="noopener">Hôtel de la Plage Mahogany</a> (5★ alternatives — see Hotels section)</li>
+            <li><strong>2:30 PM</strong> Check in · drop bags, change, power-nap 1 hour</li>
+            <li><strong>4:30 PM</strong> Walk down to <strong>Plage du Bestouan</strong> or <strong>Plage de la Grande Mer</strong> (Cassis sea temperature 23 °C peak August) — 30-min swim, reset the body clock</li>
+            <li><strong>6:00 PM</strong> Walk the Quai des Baux · port-side aperitif at <strong>Bar de la Marine</strong> (5 quai des Baux) — quintessential Cassis sundowner, local rosé, harbor view</li>
+            <li><strong>7:30 PM</strong> Sunset on the port watching the boats come in · slow before dinner</li>
+            <li><strong>8:30 PM</strong> Dinner at <strong><a href="https://www.la-presquile.fr/" target="_blank" rel="noopener">La Presqu'île</a></strong> · Michelin-Guide-listed · cliffside terrace on Cap Canaille rocks · evening menu €74–€105 · closed Sun eve / Mon all day / Thu eve — Tuesday Aug 18 is open. Reserve 2–3 weeks ahead</li>
+            <li><strong>10:30 PM</strong> <strong>Quai des Artistes stroll</strong> · painters + portraitists + foodmakers Place Baragnon &amp; Place Clémenceau 19:00–midnight nightly through Aug 31 · soft post-dinner anchor</li>
+            <li><strong>11:30 PM</strong> Nightcap at <strong>Les Caves du Port</strong> or <strong>Le Loup Bar</strong> (14 quai des Baux) — port-side wine bars, walk-up · in bed 00:30</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip La Presqu'île. Eat in at the hotel. Sunset apéro on the property's terrace; sleep at 22:00 to be sharp for Day 2. Jet-lag from a 10-hour eastward flight is real — this is the right swap if either of you didn't sleep on the plane.</div>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Add a second dinner spot. Drive 35 min to Marseille's <strong>Une Table au Sud ★</strong> on the Vieux Port second-floor terrace (chef Ludovic Turac, Top Chef alum, meat-friendly throughline). The arrival-night jet-lag math is brutal (you'll have been awake ~28 hours) — only worth it if you're sleep-disciplined or want a Michelin opener.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Light rain rare in August but possible. Swap La Presqu'île (exposed cliffside terrace) for <strong>La Brasserie du Corton</strong> — Dimitri Droisneau's bistro just above his ★★★, €70 menu (beef tartare + oysters, Marseille sausage, octopus + fennel + squid-ink gnocchi, poultry supreme + pomme paillasson, lemon tart). Indoor + covered terrace. The non-fancy preview of Wednesday's three-star night.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">02</div><div class="date">Tue Aug 18</div></div>
+        <div class="day-content">
+          <h3>Calanques de Cassis · boat tour or dawn hike · La Presqu'île lunch · Le Bistrot dinner</h3>
+          <ul>
+            <li><strong>07:30</strong> <strong>CHECK FIRE STATUS</strong> · <a href="https://simba.bouches-du-rhone.gouv.fr/" target="_blank" rel="noopener">simba.bouches-du-rhone.gouv.fr</a> + MesCalanques app — set the night before but re-check morning of. If Green, dawn hike option is in play. If Yellow/Orange, hike only 06:00–11:00. If Red, switch to boat tour (boats sail, no landing).</li>
+            <li><strong>08:00</strong> Coffee + pastries from the boulangerie on Quai des Baux · watch the fish boats unload</li>
+            <li><strong>09:00 (BOAT OPTION)</strong> <strong><a href="https://www.bateliers-cassis.com/" target="_blank" rel="noopener">Bateliers Cassidiens</a></strong> · scheduled boat tours 3 circuits: 3-calanque (€19, 45 min — Port-Miou / Port-Pin / En Vau), 5-calanque (€25, 65 min), 8-calanque (€32, 90 min). Walk-up at Quai St-Pierre or book ahead. <strong>The boat is the rain-resilient + red-day-resilient option.</strong></li>
+            <li><strong>09:00 (HIKE OPTION, GREEN DAY)</strong> <strong>Port-Miou → Port-Pin → En Vau</strong> · 3-h round-trip from Cassis · 3L water + hat + real shoes. Eastern light on the white cliffs is the photo of the trip. Final En Vau section steep + slippery. Swim 23°C in En Vau · hike back same route 90 min</li>
+            <li><strong>12:30</strong> Lunch at <strong><a href="https://www.la-presquile.fr/" target="_blank" rel="noopener">La Presqu'île</a></strong> · Michelin-Guide-listed lunch menu €52 weekday · cliffside terrace · easier reservation than dinner, walk-up sometimes available</li>
+            <li><strong>14:30</strong> Pool + siesta at the hotel · or beach hour at Plage du Bestouan</li>
+            <li><strong>16:30</strong> Optional Cassis winery walk — <strong><a href="https://www.clossaintemagdeleine.fr/" target="_blank" rel="noopener">Clos Sainte Magdeleine</a></strong> 10-min walk from port · Tue–Sat · €12 visit + €3 for 3-vintage flight · the cinematography of the Cassis AOC. Walk-in tolerated late-afternoon Tue, but book 1 week ahead.</li>
+            <li><strong>18:30</strong> Apéro at <strong>La Maison de Jo et Gaby</strong> wine bar · Cassis AOC + Côtes de Provence by the glass</li>
+            <li><strong>20:00</strong> Dinner at <strong>Le Bistrot</strong> · port-side, modern Provençal with seafood + meat balance · or <strong>Le Canaille Brasserie</strong> port-side brasserie classics + fresh seafood + meat options · 4.1 rating · takes 21:30 reservations in August</li>
+            <li><strong>22:00</strong> Quai des Artistes nightly market · port walk · nightcap <strong>Bar de la Marine</strong> · in bed by 23:30</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Do both — Bateliers boat 09:00 followed by short Port-Miou → Port-Pin half-hike in afternoon. Cooler 17:00 light. Dinner moved later to 21:30 Le Canaille. Cap the day with the Sisley Spa Roches Blanches couples massage 16:00.</div>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the hike entirely. Pool morning, lunch La Presqu'île, afternoon at Plage du Bestouan with a paperback, dinner in. The day-after-arrival is the right slot for this if jet-lag still has you.</div>
+          <div class="alts"><strong>Alternative · Rainy / red-flag day swap:</strong> Spa-stack the afternoon — Sisley Spa day pass at <strong>Les Roches Blanches</strong> (4 treatment rooms + mosaic hammam + sea-panoramic relaxation + Technogym, €60–€100/pp day pass with treatment add-on). Couples massage 16:00. Evening: <strong>Casino de Cassis</strong> (Groupe Barrière, blackjack + English roulette + poker, 20:00 opening for traditional games, open till 03:00 nightly / 04:00 Fri-Sat).</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">03</div><div class="date">Wed Aug 19</div></div>
+        <div class="day-content">
+          <h3>Bandol wine day · driver-led · <em>La Villa Madie ★★★ — LOCKED</em> · Le Big Ben nightclub</h3>
+          <ul>
+            <li><strong>08:30</strong> Breakfast at the hotel · Cassis food market 09:00–13:00 Place Baragnon if you want to swing through pre-pickup</li>
+            <li><strong>10:00</strong> Private driver pickup · <strong>Provence Wine Tours / Deluxe France / Planet Provence</strong> (book 3–4 weeks ahead) · ~€500–€900 full-day private 2-pax August</li>
+            <li><strong>10:45</strong> <strong><a href="https://www.chateau-pradeaux.com/" target="_blank" rel="noopener">Château Pradeaux</a></strong> · St-Cyr-sur-Mer · Cyrille Portalis old-school by-appointment vertical-tasting culture · the late-morning anchor. Call ahead 1 week — the Portalis family runs the estate the way it ran in the 1960s, time slows down inside the cellar.</li>
+            <li><strong>13:00</strong> Lunch at <strong>L'Escourtin</strong> · Le Castellet medieval village · Provençal classics, terrace with views over the Bandol vineyards · meat-forward menu, Joann-friendly</li>
+            <li><strong>15:00</strong> <strong><a href="https://www.domainetempier.com/en/homepage/" target="_blank" rel="noopener">Domaine Tempier</a></strong> · 1082 chemin des Fanges, Plan du Castellet · Mon–Fri 09:00–12:00 / 14:00–18:00, appointment recommended walk-in tolerated · all 3 colors · Véronique Peyraud's tasting room · the iconic Bandol that put the appellation on every serious list</li>
+            <li><strong>17:00</strong> Third estate · <strong><a href="https://www.terrebrune.fr/" target="_blank" rel="noopener">Domaine de Terrebrune</a></strong> (Ollioules) · <strong>verify 2026 August opening status</strong> (was closed late Aug 2025; if closed substitute <strong>Château de Pibarnon</strong> or <strong>Domaine de la Bégude</strong>). +33 4 94 74 01 30 to verify. Late-afternoon by-appointment.</li>
+            <li><strong>18:30</strong> Back to Cassis (40 min) · shower + change for ★★★</li>
+            <li><strong>19:30 → 22:30</strong> Dinner at <strong><a href="https://lavillamadie.com/en/reservation/" target="_blank" rel="noopener">La Villa Madie ★★★</a> — LOCKED Wed Aug 19</strong> · Anse de Corton · chef Dimitri Droisneau (Normandy, ex-Bristol / Lucas Carton / Tour d'Argent) · menus €195–€380 · Thu–Mon 12:00–13:15 / 19:00–21:15 — <strong>note Wed is closed in standard schedule; verify the LOCKED reservation honors a Wed exception, or shift to Thu Aug 20 (boat day evening) or Fri Aug 21</strong>. <strong>For Joann (non-seafood): call ahead 7 days out to request chef ensure 2–3 non-seafood courses substituted</strong> — the menu has a vegetable + meat throughline (lamb, pigeon, truffle vegetable courses); a ★★★ kitchen handles dietary precisions cleanly</li>
+            <li><strong>22:30</strong> Drive back to town (3 km) · nightcap at <strong>Bar de la Marine</strong> + late Quai des Artistes browse</li>
+            <li><strong>00:30 → 03:00</strong> <strong><a href="https://www.guide-casino.com/casino-de-cassis.htm" target="_blank" rel="noopener">Le Big Ben</a></strong> · Cassis's only true nightclub · Thu/Fri/Sat midnight onwards Jul–Aug only · <strong>note: Wed Aug 19 = closed</strong>; the casino traditional-games room is the Wed alt (Cassis Casino open till 03:00 nightly)</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> 4-estate Bandol day. Add Château de Pibarnon at 10:45 (highest estate in the appellation, amphitheater views), shift Pradeaux to 13:30, Tempier 15:30, Terrebrune/Bégude 17:00. Skip L'Escourtin formal lunch — packed picnic at Pibarnon's terrace. Tighter, more wine intake — only if you're driving with a designated sober driver (which the private operator handles).</div>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> 2 Bandol estates only (Pradeaux + Tempier). Long lunch port-side in Bandol instead of L'Escourtin — Bandol harbor restaurants, walk-up. Nap 16:00–18:30 before Villa Madie. The right swap if Tuesday's hike was hard.</div>
+          <div class="alts"><strong>Alternative · Villa Madie shift:</strong> If the booked Villa Madie reservation is actually Thu Aug 20 not Wed Aug 19 (verify — Villa Madie's standard schedule closes Wed), shift Bandol day to Thu and L'Eden Boat to Wed. The L'Eden Boat schedule is more flexible than the ★★★ table.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">04</div><div class="date">Thu Aug 20</div></div>
+        <div class="day-content">
+          <h3><em>L'Eden Boat private RIB · LOCKED</em> · Bandol coast · Cap Canaille sunset</h3>
+          <ul>
+            <li><strong>08:30</strong> Coffee + pastries from the boulangerie on Quai des Baux · walk to the harbor · meet L'Eden Boat at the port</li>
+            <li><strong>09:00</strong> <strong>L'Eden Boat departure · LOCKED for this window</strong> — private RIB into the Calanques National Park <em>and Bandol coast extension</em> if winds cooperate · mask + snorkel + drinks aboard · <a href="https://rent.ledenboat.com/" target="_blank" rel="noopener">rent.ledenboat.com</a> / +33 4 69 00 22 83 · cliff-jump stops Port-Pin, swim En Vau, pass under Cap Canaille from sea, secluded cove anchorages, optional Bandol coast lunch anchorage</li>
+            <li><strong>13:00</strong> Lunch on board (RIB picnic provisions — operator can pre-arrange a catered Provençal lunch for ~€80/pp) OR anchor at <strong>Calanque de Sormiou</strong> for <strong>Le Château</strong> (boat-in seafood bouillabaisse for Mark / grill / lamb for Joann)</li>
+            <li><strong>16:00</strong> Return Cassis port · shower + nap at the hotel (sun-burned, salt-crusted, perfect)</li>
+            <li><strong>18:30</strong> <strong>Cap Canaille sunset point</strong> · drive 15 min to <strong>Route des Crêtes / Cap Canaille summit</strong> · 399 m, France's highest sea cliff · pull-off near Pas de la Colle · the southwest-facing belvedere for the sunset over the Mediterranean. Bring a bottle of Bandol rosé · 19:00 sunset around the Aug 20 horizon. <strong>The substitute "moonless Perseid drive" for this window</strong> — not meteor-spectacular but the same dramatic vantage.</li>
+            <li><strong>20:30</strong> Dinner port-side · <strong>Le Bonaparte / Le Marin / Brasserie Le Grand Large</strong> · covered terraces, harbor view, last-seating typically 21:30 in Cassis</li>
+            <li><strong>22:00</strong> Quai des Artistes browse · port walk · nightcap at <strong>Bar de la Marine</strong></li>
+            <li><strong>23:30 → 03:00</strong> <strong>Casino de Cassis</strong> (Groupe Barrière) · jeux traditionnels (blackjack, English roulette, poker) from 20:00 nightly · open till 03:00 Thursdays · the deepest late option in Cassis itself this night</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Drive to Marseille after Cap Canaille sunset (35 min). Dinner at <strong>Une Table au Sud ★</strong> 20:30 (chef Ludovic Turac · Vieux Port view · the Joann-friendliest Michelin in Marseille). Then <strong>R2 Rooftop des Terrasses</strong> Thu 19:00–02:00. Then <strong>Trolleybus</strong> Thu 23:30–06:00 (3 dance rooms, 17th-c stone vaults). Sleep at Sofitel Vieux Port — not driving back. The deepest nightlife evening of the trip.</div>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Stay in Cassis after the boat day · skip Cap Canaille drive · dinner at <strong>La Brasserie du Corton</strong> (Droisneau's bistro, €70 menu, terrace overlooking Anse Corton) · early to bed. The right swap if Joann's sun-burned or the boat was rougher than expected.</div>
+          <div class="alts"><strong>Alternative · Rainy / wind day:</strong> RIB sails in light rain but cancels in mistral + 3 m+ swell — L'Eden Boat operator confirms by 19:00 the night before. If cancelled, shift to a Bandol-day swap (the wine day is rain-resilient — move Wed plans to Thu, but you've already done them), or drive to Marseille for <strong>Cosquer Méditerranée</strong> (Villa Méditerranée 09:30–19:30, reconstructed cave paintings, €18, book ahead — sells out by 11:00 weekends) + <strong>MuCEM</strong> + Fort Saint-Jean afternoon.</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">05</div><div class="date">Fri Aug 21</div></div>
+        <div class="day-content">
+          <h3>Aix-en-Provence OR Marseille day-trip · R2 Rooftop Marseille for late nightlife</h3>
+          <ul>
+            <li><strong>09:00</strong> Cassis food market 09:00–13:00 Place Baragnon · espresso + pastries</li>
+            <li><strong>10:30 (AIX OPTION)</strong> Drive 45 min to <strong>Aix-en-Provence</strong> · park near the ring</li>
+            <li><strong>11:00</strong> <strong><a href="https://www.cezanne-en-provence.com/" target="_blank" rel="noopener">Atelier Cézanne (Les Lauves)</a></strong> guided tour · reopens Jul 4–Oct 31 2026, 09:00–18:00 daily Jul–Sep, €9.50–€15 · <strong>guided tour only, mandatory booking through Aix Tourist Office</strong> 2–3 weeks ahead. The hill studio where Cézanne died — preserved with his easel, palette, and the still-life setup of the late period</li>
+            <li><strong>12:30</strong> Lunch at <strong>Le Mas Bottero</strong> (Aix area · Nicolas Bottero, modern Provençal, meat + fish balance, Joann-friendly) — book 1 week ahead. Or <strong>Mickaël Féval ★</strong> in downtown Aix for the Michelin lunch (modern French, meat + fish balance, less seafood-monolithic than Marseille)</li>
+            <li><strong>14:30</strong> <strong>Cours Mirabeau</strong> walk · plane-tree-lined boulevard · <strong>Musée Granet</strong> (Cézanne + 19th-c French painting) · Marché aux fleurs Place de l'Hôtel de Ville · boutiques · 16:30 coffee on a Cours Mirabeau terrace</li>
+            <li><strong>17:30</strong> Drive 35 min to <strong>Marseille</strong> (chained on the way back to Cassis) · park near Vieux Port</li>
+            <li><strong>18:30 (MARSEILLE EVENING)</strong> Sunset cocktails <strong>Ciel Rooftop</strong> (Italian top-floor, view to Notre-Dame de la Garde, reservations advised)</li>
+            <li><strong>20:30</strong> Dinner at <strong><a href="https://www.unetableausud.com/" target="_blank" rel="noopener">Une Table au Sud ★</a></strong> · 2 quai du Port, 2nd floor · panoramic Vieux Port view · chef Ludovic Turac (<em>Top Chef</em> alum, youngest ★ chef in France in 2015) · South-of-France cuisine + 250+ wine list · <strong>more meat-friendly than Marseille's seafood specialists — best Joann-compatible Michelin in the city</strong></li>
+            <li><strong>22:30 → 02:00</strong> <strong>R2 Rooftop des Terrasses</strong> · 9 quai du Lazaret 13002 · Les Terrasses du Port · Thu–Sun 19:00–02:00 · 1,500-cap, DJs + artists, 360° harbor view, cocktails ~€13. VIP reservations available. <strong>The late-night save for the trip</strong> — Cassis genuinely sleepy this window without the Aug 15 anchor.</li>
+            <li><strong>02:00</strong> Uber back to Cassis (~€55, 35 min) · in bed 03:00 OR sleep at <strong>Sofitel Vieux Port</strong> + drive back morning of Day 6 (the cleaner play if you went deep at R2)</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Marseille-only doubling down swap:</strong> Skip Aix. Spend the whole day in Marseille. <strong>MUCEM</strong> + Fort Saint-Jean morning (Museum of European + Mediterranean Civilizations, daily ex-Tue, indoor + covered walkway), <strong>Vieux Port</strong> + <strong>Le Panier</strong> old quarter afternoon, <strong>Cosquer Méditerranée</strong> if not seen, then Une Table au Sud + R2 + Trolleybus through the night. Sleep at Sofitel Vieux Port.</div>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Drop Marseille. Aix day only — Cézanne morning, long lunch, Musée Granet, back to Cassis by 17:00, dinner at <strong>La Brasserie du Corton</strong> in Cassis, quiet night. The right swap if Wednesday's Bandol + Villa Madie ran long.</div>
+          <div class="alts"><strong>Alternative · Rainy day swap:</strong> Marseille covered options work in rain — MUCEM, Cosquer, Le Panier covered alleys. Aix Atelier Cézanne is indoor. Replace the Ciel Rooftop sunset cocktail with a <strong>La Caravelle</strong> jazz-bar drink (34 quai du Port, 1st floor Hotel Belle-Vue, daily 07:00–02:00).</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">06</div><div class="date">Sat Aug 22</div></div>
+        <div class="day-content">
+          <h3>Dawn Calanques hike · beach + seafood platter · Fleurs de Thym or Villa Madie return</h3>
+          <ul>
+            <li><strong>06:00</strong> <strong>DAWN START.</strong> Cassis → <strong>Port-Miou → Port-Pin → En Vau</strong> hike. <strong>CRITICAL: check MesCalanques + simba.bouches-du-rhone.gouv.fr the night before for fire-color status.</strong> 3L water + hat + real shoes. The eastern light on the white cliffs is the photo of the trip. Cooler at dawn (~22°C) than midday (~32°C).</li>
+            <li><strong>10:30</strong> Swim Calanque d'En Vau · 23 °C water, pebble beach, dramatic 200 m cliff walls · return either by boat-taxi (if running) or hike same route 90 min back</li>
+            <li><strong>13:00</strong> Lunch at <strong>Chez Gilbert</strong> port-side Cassis · the seafood-platter house · ½ Cassis terroir-driven, plateau de fruits de mer the move for Mark, grilled meat for Joann. Walk-up usually OK at 13:00 Sat</li>
+            <li><strong>14:30</strong> Beach time at <strong>Plage du Bestouan</strong> (Cassis's nicest swim beach, 15-min walk from port) — paperback + naps + 23°C water</li>
+            <li><strong>17:00</strong> Pool back at the hotel · or Sisley Spa Roches Blanches couples massage (~€280/pp, book 3+ days ahead)</li>
+            <li><strong>19:00</strong> Apéro at <strong>Bar de la Marine</strong> · sunset on the port</li>
+            <li><strong>20:30</strong> Dinner — <strong>FINAL-NIGHT CHOICE</strong> (pick one):</li>
+            <li>🥇 <strong>Fleurs de Thym</strong> · Cassis · modern Provençal · the Joann-friendly Cassis dinner pick that's not La Presqu'île. Book 1 week ahead</li>
+            <li>🥈 <strong>La Villa Madie ★★★</strong> return — only if your booked res can be extended to Saturday Aug 22 (verify with Villa Madie 7 days out; they sometimes allow regulars a second seating). The "go back for more" splurge play.</li>
+            <li>🥉 <strong>La Brasserie du Corton</strong> Cassis (Droisneau bistro, €70 menu) — calm wrap-up, no drive, the meat-throughline bistro of a ★★★ kitchen. The right swap if Friday's Marseille night went deep.</li>
+            <li>🍸 <strong>OR — Marseille final night:</strong> drive 35 min to Marseille for <strong>Le Petit Nice Passédat ★★★</strong> on Anse de Maldormé (Relais &amp; Châteaux hotel on-site, sleep over, easy drive to MRS Sunday morning) — accept the heavy seafood DNA as the closer</li>
+            <li><strong>22:30</strong> Quai des Artistes nightly browse · last port walk · <strong>Le Big Ben</strong> Cassis nightclub midnight onwards Sat (Thu/Fri/Sat Jul–Aug only) for the last-night dance · in bed 02:00</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Doubling down swap:</strong> Add dawn hike + R2 Rooftop Marseille after dinner. Skip Cassis evening entirely. Drive to Marseille post-dinner for one more R2 Sat night (the busiest of the week — Sat 19:00–02:00). Uber back 02:30.</div>
+          <div class="alts"><strong>Alternative · Low energy swap:</strong> Skip the dawn hike. Slow morning pool · brunch at La Presqu'île 11:00 · beach 14:00 · early dinner Le Bistrot · in bed 22:00. The right swap if Friday's Marseille night went past 02:00.</div>
+          <div class="alts"><strong>Alternative · Rainy / red-flag day swap:</strong> Hike cancelled by fire status. <strong>Cosquer Méditerranée</strong> morning (Villa Méditerranée, Marseille, 09:30–19:30 weekends + holidays, €18, <strong>book ahead — sells out by 11:00</strong>) · Marseille Vieux Port lunch · back for Cassis dinner. Or: full spa day at Sisley Spa Roches Blanches + couples massage + hammam ritual (~€280/pp).</div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-number"><div class="num">07</div><div class="date">Sun Aug 23</div></div>
+        <div class="day-content">
+          <h3>Slow morning · brunch La Presqu'île · drive MRS · AF Connect CDG · AF64 LAX</h3>
+          <ul>
+            <li><strong>08:30</strong> Final breakfast on the hotel terrace</li>
+            <li><strong>10:00</strong> Last swim at <strong>Plage du Bestouan</strong> · last espresso on Quai des Baux watching the boats come in</li>
+            <li><strong>11:30</strong> Brunch at <strong>La Presqu'île</strong> · Sunday lunch terrace · 1-h cliffside send-off</li>
+            <li><strong>13:30</strong> Check out the hotel · drive MRS (45 min)</li>
+            <li><strong>15:30</strong> Drop rental at MRS</li>
+            <li><strong>17:00</strong> Air France AF Connect MRS → CDG (1h 30m)</li>
+            <li><strong>19:30</strong> AF64 CDG → LAX (~11h nonstop)</li>
+            <li><strong>22:30 same day</strong> Arrive LAX (gain 9 hours on the way back)</li>
+          </ul>
+          <div class="alts"><strong>Alternative · Sleep Marseille Sat night:</strong> If you flipped Sat dinner to Le Petit Nice Passédat ★★★ and slept on-site, Sun morning is a 30-min drive from Maldormé to MRS — no Cassis morning. The trade: lose the final Bestouan swim, gain the calmest morning-of-departure logistics.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="hotels">
+      <span class="eyebrow">Where to Stay</span>
+      <h2>Five Cassis 5★ + One Marseille Final-Night Flip</h2>
+      <p>The original booking was The Address Cassis for the Aug 11–17 window. <strong>For Aug 17–23, re-price both Les Roches Blanches and Hôtel de la Plage Mahogany as the top picks</strong> — both are 5★ adults-skewed Cassis hotels with sea views, both have spas, both run €600–€900/night for the window (Standard tier targets $3,000–$3,500 for 5 nights). The Address remains available as the originally-booked alternative if Eric &amp; Sabine can carry over to the new dates. Marseille's Le Petit Nice Passédat is the final-night flip if Sat Aug 22 dinner goes there.</p>
+    </div>
+    <div class="hotels-grid">
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(196,98,45,0.30), rgba(74,144,164,0.40)), url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80');">
+          <span class="hotel-tier booked">Standard pick · 5 nights</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Les Roches Blanches Cassis</h4>
+          <div class="loc">Late-19th-c mansion · cliffside · between marina + Calanques</div>
+          <p>The 1885 grande-dame, restored by Maisons Pariente. <strong>2 outdoor pools, Sisley Spa, Technogym, 3 restaurants</strong> (Les Belles Canailles is the flagship — chef Nicolas Sintes, 180° terrace, the right pick for a non-Villa-Madie "special but not 3-hour" dinner). Tucked between Cassis marina + the Calanques. The hotel-as-property pick if you'd rather have a single resort do every meal + spa than walk into town for dinners. <strong>Pricing softer in late Aug than mid-Aug as French school re-entry approaches.</strong></p>
+          <div class="hotel-meta">
+            <span class="price">€600–€1,200 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.roches-blanches-cassis.com/en/" target="_blank" rel="noopener" class="book-link">Roches Blanches direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(196,98,45,0.25), rgba(193,168,117,0.40)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80');">
+          <span class="hotel-tier booked">Standard pick · 5 nights</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hôtel de la Plage Mahogany</h4>
+          <div class="loc">Plage du Bestouan beachfront · 5-min walk to port · sea views</div>
+          <p>5★ beachfront on Plage du Bestouan — the rare Cassis hotel that's <em>directly on the beach</em>. Restaurant + bar, sea-facing rooms, walk-out swim access. The hotel that lets you skip the 15-min downhill walk from cliffside hotels: walk out the front door, swim. <strong>The right pick if "beach hotel" is the dominant adjective</strong>; the trade vs. Roches Blanches is less spa, no pool (the beach is the pool), smaller property.</p>
+          <div class="hotel-meta">
+            <span class="price">€550–€950 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.hoteldelaplagemahogany.com/en/" target="_blank" rel="noopener" class="book-link">Plage Mahogany direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(196,98,45,0.30), rgba(90,74,122,0.40)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80');">
+          <span class="hotel-tier">Originally booked</span>
+        </div>
+        <div class="hotel-body">
+          <h4>The Address Cassis</h4>
+          <div class="loc">Adults-only 5★ B&amp;B · 15-min walk down to port · 9.8/10 Booking</div>
+          <p>The originally-booked baseline (for the Aug 11–17 window). Adults-only 5★ B&amp;B, outdoor pool + garden + free parking + EV charging. Hosts <strong>Eric &amp; Sabine</strong> are central to the experience — guest reviews are explicit about them. <strong>Michelin-quality private dinner one night/week on request.</strong> Sea views, hot tubs in some rooms. No rooftop bar — late-evening on-property is intentionally limited; for nightlife you walk into town. <strong>For Aug 17–23: re-price and verify availability</strong> — they may carry over the deposit if you shift dates with them directly.</p>
+          <div class="hotel-meta">
+            <span class="price">€420–€680 / night</span>
+            <span>★★★★★</span>
+          </div>
+          <a href="https://www.theaddress-cassis.com/" target="_blank" rel="noopener" class="book-link">Re-price direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(90,74,122,0.25), rgba(193,168,117,0.40)), url('https://images.unsplash.com/photo-1551516114-c39ed83b3946?w=800&q=80');">
+          <span class="hotel-tier">Best value</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Hôtel &amp; Spa des Calanques</h4>
+          <div class="loc">Plage du Bestouan · 3-min walk to port · sea-water spa</div>
+          <p>Boutique 38-room hotel directly facing Plage du Bestouan, with a sea-water spa, garden pool, direct walking access to the Port-Miou trailhead. <strong>Quieter than Les Roches Blanches, half the price, room views nearly as good.</strong> The pick if the 5★ options are unavailable + you want a substitute that still walks-everywhere to Cassis old town.</p>
+          <div class="hotel-meta">
+            <span class="price">€380–€620 / night</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.hoteldescalanquescassis.com/en/" target="_blank" rel="noopener" class="book-link">Hôtel des Calanques →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(138,143,90,0.30), rgba(196,98,45,0.40)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80');">
+          <span class="hotel-tier">Vineyard B&amp;B</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Maison 9</h4>
+          <div class="loc">In the Cassis vineyards · 10-min drive to port · 4 suites</div>
+          <p>A converted 19th-c property inside the AOC Cassis vineyards. Just <strong>four suites</strong>, crisp white linens, private terraces, kitchenettes, a garden pool, breakfast among the vines. The hideaway pick — quietest of every option, walkable to two Cassis wineries. The trade vs. the cliffside 5★s: you drive into Cassis for dinners + nightlife rather than walking. <strong>For Aug 17–23 you bypass the Aug 15 fireworks-night logistics nightmare entirely</strong>, so the drive-in friction is lower this window than for the Aug 11–17 trip.</p>
+          <div class="hotel-meta">
+            <span class="price">€310–€450 / night</span>
+            <span>★★★★</span>
+          </div>
+          <a href="https://www.maison9.net/booking-bed-and-breakfast-cassis/?lang=en" target="_blank" rel="noopener" class="book-link">Maison 9 direct →</a>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-image" style="background-image: linear-gradient(135deg, rgba(90,74,122,0.25), rgba(193,168,117,0.40)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80');">
+          <span class="hotel-tier">Final-night flip</span>
+        </div>
+        <div class="hotel-body">
+          <h4>Le Petit Nice Passédat (Marseille)</h4>
+          <div class="loc">17 Anse de Maldormé 13007 · Relais &amp; Châteaux · ★★★ on-site</div>
+          <p>The final-night Marseille flip. 5-star R&amp;C on the Anse de Maldormé · <strong>Le Petit Nice ★★★ on-site</strong> (chef Gérald Passédat) · free minibar, Wellness spa, €361 entry up to €1,300+ suites · accept the heavy seafood DNA as the closer. The play: <strong>shift one Cassis night (Sat Aug 22) here</strong> for a relaxed final dinner without a 35-min drive back, plus an airport-bound Sunday morning down the corniche to MRS.</p>
+          <div class="hotel-meta">
+            <span class="price">€361–€1,300 / night</span>
+            <span>★★★★★ R&amp;C</span>
+          </div>
+          <a href="https://www.passedat.fr/" target="_blank" rel="noopener" class="book-link">Passédat direct →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="wine">
+      <span class="eyebrow">The Glass</span>
+      <h2>Two AOCs, 30 Minutes Apart</h2>
+      <p>Cassis whites (Clairette + Marsanne, 12 estates total, France's first AOC 1936) at the doorstep, with Bandol's Mourvèdre heavyweights 30 minutes east. <strong>For this window, the Bandol day moves from Friday to Wed Aug 19</strong> as the structural anchor (with the Aug 15 Aoûtiennes weekend past). <strong>Note:</strong> verify Domaine de Terrebrune 2026 August opening status (was closed late Aug 2025); have Château de Pibarnon or Domaine de la Bégude as substitute.</p>
+    </div>
+
+    <div class="wine-block cassis">
+      <div class="wine-image"></div>
+      <div class="wine-text">
+        <span class="eyebrow">Cassis AOC · whites at the doorstep</span>
+        <h3>France's First AOC (1936)</h3>
+        <p>Mineral, herb-scented whites from <strong>Clairette and Marsanne</strong>, ripened on terraces between the limestone cliffs and the sea. Only 12 estates produce Cassis AOC. The microclimate — sheltered by Cap Canaille's wind shadow — is what makes them unmistakable. Most estates are 5–15 minutes from the port; some you can walk to. Built into Day 2 afternoon as an optional walk.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://www.clossaintemagdeleine.fr/" target="_blank" rel="noopener">Clos Sainte Magdeleine ↗</a></div>
+            <div class="desc">10-min walk from port · on the cliffs under Cap Canaille · Provence's most beautiful winery setting. Tue–Sat · €12 visit + €3 for 3-vintage flight · ~1h · book ahead. The Day 2 afternoon stop.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.domainedubagnol.fr/" target="_blank" rel="noopener">Domaine du Bagnol ↗</a></div>
+            <div class="desc">Under Cap Canaille, 200 m from the sea, 10-min walk from harbor · 1-h commented tour + tasting €12/adult · book via OT Cassis. Benchmark Cassis white — the alt to Clos Sainte Magdeleine.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.barbanau.com/" target="_blank" rel="noopener">Clos Val Bruyère (Château Barbanau) ↗</a></div>
+            <div class="desc">Mon–Sat 10–12 / 15–18, closed Sun · +33 4 42 73 14 60 · 5-ha clay-limestone parcel near the sea · the third-estate option if you want to chain three Cassis estates.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.domaine-du-paternel.fr/" target="_blank" rel="noopener">Domaine du Paternel ↗</a></div>
+            <div class="desc">Third-generation Santini family · vineyards in Cassis AOC, Bandol AOC, AND Saint-Cyr — taste all three appellations from one cellar (rare configuration). Walk-in friendly.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wine-block bandol" style="margin-top: 2rem;">
+      <div class="wine-image" style="order: 2;"></div>
+      <div class="wine-text" style="order: 1;">
+        <span class="eyebrow">Bandol AOC · Mourvèdre heartland · 30 min east</span>
+        <h3>The Reds That Belong to Paris ★★★ Lists</h3>
+        <p>Bandol is Provence taken seriously. <strong>At least 50% Mourvèdre</strong> in every red and rosé — a grape that needs heat to ripen and gives back wines that age for decades. Vineyards climb amphitheaters above the sea. This is the Provence wine list at three-star restaurants in Paris, made by families you've never heard of. <strong>For Aug 17–23: the wine day is Wed Aug 19</strong> — the structural anchor of the trip. <strong>Verify Domaine de Terrebrune 2026 Aug opening</strong> (was closed late Aug 2025); substitute Château de Pibarnon or Domaine de la Bégude if needed.</p>
+        <div class="winery-list">
+          <div class="winery">
+            <div class="name"><a href="https://www.chateau-pradeaux.com/" target="_blank" rel="noopener">Château Pradeaux ↗</a></div>
+            <div class="desc">St-Cyr-sur-Mer · Portalis family vertical-tasting culture · call ahead 1 week · the Day 3 morning anchor. Old-school by-appointment style — the wines reward patience.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.domainetempier.com/en/homepage/" target="_blank" rel="noopener">Domaine Tempier ↗</a></div>
+            <div class="desc">1082 chemin des Fanges, Plan du Castellet · Mon–Fri 09:00–12:00 / 14:00–18:00 (appointment recommended, walk-in tolerated) · all 3 colors · Véronique Peyraud's tasting room · the iconic Bandol that put the appellation on every serious list. Day 3 mid-afternoon.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.terrebrune.fr/" target="_blank" rel="noopener">Domaine de Terrebrune ↗ (verify)</a></div>
+            <div class="desc">Ollioules · the schist-soil Bandol estate · <strong>verify 2026 August opening status</strong> — was closed late Aug 2025 (Aug 31 2025–Jun 29 2026 schedule). Call +33 4 94 74 01 30. The Day 3 late-afternoon target if open.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.pibarnon.com/en/" target="_blank" rel="noopener">Château de Pibarnon ↗ (substitute)</a></div>
+            <div class="desc">410 chemin de la Croix des Signaux, La Cadière-d'Azur · by appointment Mon–Sat · free up to 6 (some sources 8); €15/pp groups · highest estate in the Bandol appellation · amphitheater views, terrace tasting. <strong>The Terrebrune substitute</strong> if Aug 19 closed.</div>
+          </div>
+          <div class="winery">
+            <div class="name"><a href="https://www.domainedelabegude.fr/" target="_blank" rel="noopener">Domaine de la Bégude ↗ (alt substitute)</a></div>
+            <div class="desc">Le Castellet · 410 m elevation, highest single-estate Bandol vineyard · Tue–Sat 10–13 / 14–18 · activities €15–€89 (cellar tour, food-wine pairing, 4×4 vineyard + picnic) · advance booking required · alt substitute or lunch-stop.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width: 950px; margin: 2rem auto 0; padding: 1.5rem 2rem; background: rgba(196,98,45,0.06); border-radius: 12px; border-left: 4px solid var(--provence-terra); font-size: 0.92rem; color: #333;">
+      <strong style="color: var(--provence-terra-deep);">Driver-led day-tours for Day 3 (Wed Aug 19):</strong> <a href="https://provincewinetours.com/" target="_blank" rel="noopener" style="color: var(--provence-terra); font-weight: 600;">Provence Wine Tours</a> (tailor-made Bandol + Cassis), <strong>Deluxe France</strong> (full-day private), <a href="https://planetprovence.com/" target="_blank" rel="noopener" style="color: var(--provence-terra); font-weight: 600;">Planet Provence</a> (private + free pickup within 10 km of Aix). Budget <strong>€500–€900 full-day private 2-pax August</strong>. Book 2–4 weeks ahead. Half-day winery hops in Cassis are walkable so no driver needed for the Day 2 afternoon Cassis option.
+    </div>
+
+    <div class="section-header" id="food">
+      <span class="eyebrow">The Table</span>
+      <h2>★★★ Locked + ★ Backup in Marseille + Cassis Bistros</h2>
+      <p><strong>La Villa Madie ★★★ (LOCKED for this window — verify exact night, standard Madie schedule closes Wed)</strong> is the centerpiece. The radius around Cassis carries <strong>3 Michelin ★★★ within 35 min</strong> (Villa Madie in Cassis itself; Le Petit Nice Passédat + AM par Alexandre Mazzia in Marseille) plus <strong>1 Michelin ★ (Une Table au Sud, Marseille)</strong>. Few places on Earth match this density. The Joann factor: Villa Madie's menu has a vegetable + meat throughline (lamb, pigeon, truffle) — <strong>call ahead 7 days out for non-seafood substitutions</strong>. Cassis itself is the bouillabaisse and seafood capital of Provence — Joann-seafood tolerance scoring holds at 1.5/3 (unchanged from Aug 11–17 window).</p>
+    </div>
+
+    <div class="food-list">
+      <div class="food-row booked">
+        <div class="place">La Villa Madie <span class="stars">★★★ · LOCKED this window</span><span class="meta">Anse de Corton, Cassis · chef Dimitri Droisneau · €195–€380 tasting</span></div>
+        <div class="desc"><strong>The locked centerpiece.</strong> Chef Dimitri Droisneau (Normandy, ex-Bristol / Lucas Carton / Tour d'Argent). Anse de Corton terrace. Thu–Mon 12:00–13:15 / 19:00–21:15, <strong>closed Tue + Wed</strong> in standard schedule — <strong>verify locked-reservation night for this window</strong> (Wed Aug 19 would require an exception; more likely Thu Aug 20 or Fri Aug 21). +33 4 96 18 00 00. <strong>For Joann (non-seafood):</strong> menu carries a lamb / pigeon / truffle-vegetable throughline; call ahead 7 days out to request the kitchen substitute 2–3 non-seafood courses. ★★★ kitchens handle dietary precisions cleanly. <a href="https://lavillamadie.com/en/reservation/" target="_blank" rel="noopener">lavillamadie.com/en/reservation</a></div>
+        <div class="drive">Cassis · walk</div>
+      </div>
+      <div class="food-row">
+        <div class="place">La Brasserie du Corton <span class="stars">€70 menu</span><span class="meta">Anse de Corton, Cassis · Droisneau's bistro · open Thu–Mon</span></div>
+        <div class="desc">Same property as Villa Madie, just above the ★★★ — Droisneau's bistronomic sister, €70 menu, terrace overlooking Anse Corton. Beef tartare + oysters, Marseille sausage, octopus + fennel + squid-ink gnocchi, poultry supreme + pomme paillasson, lemon tart. The Joann-friendly preview of Villa Madie's vocabulary at a third of the price — and the right rainy-night or low-energy alternative.</div>
+        <div class="drive">Cassis · walk</div>
+      </div>
+      <div class="food-row">
+        <div class="place">La Presqu'île <span class="stars">Michelin-listed</span><span class="meta">Cassis · perched on Cap Canaille rocks · €74–€105 evening</span></div>
+        <div class="desc">Michelin-Guide-listed cliffside terrace. Lunch €52 weekday, evening €74–€105. <strong>Closed Sun eve, Mon all day, Thu eve.</strong> Provençal / Méditerranée. The Day 1 arrival dinner + the Day 7 Sunday brunch send-off. Reserve 2–3 weeks ahead.</div>
+        <div class="drive">Cassis · walk</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Une Table au Sud <span class="stars">★</span><span class="meta">Marseille · 2 quai du Port 2nd · Vieux Port view · chef Ludovic Turac</span></div>
+        <div class="desc">Chef <strong>Ludovic Turac</strong> — <em>Top Chef</em> alum, youngest ★ chef in France in 2015. Panoramic Vieux Port 2nd-floor terrace. South-of-France cuisine + 250+ wine list. <strong>More meat-friendly than Marseille's seafood specialists — best Joann-compatible Michelin in the city.</strong> The Day 5 Fri Aug 21 Marseille dinner. <a href="https://www.unetableausud.com/" target="_blank" rel="noopener">unetableausud.com</a></div>
+        <div class="drive">35 min Marseille</div>
+      </div>
+      <div class="food-row">
+        <div class="place">L'Escourtin <span class="stars">Provençal classics</span><span class="meta">Le Castellet · Bandol vineyard views · meat-forward</span></div>
+        <div class="desc">The Day 3 Wed Aug 19 Bandol wine-day lunch. Medieval Le Castellet village, terrace overlooking the Bandol vineyards. Provençal classics, meat-forward menu (lamb, daube, grilled cuts), Joann-friendly. Book 1 week ahead — village restaurants compress fast in August.</div>
+        <div class="drive">30 min Bandol</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Fleurs de Thym <span class="stars">modern Provençal</span><span class="meta">Cassis · Joann-friendly · meat + fish balance</span></div>
+        <div class="desc">The Day 6 Sat Aug 22 final-Cassis-night dinner. Modern Provençal, meat + fish balance, calm dining room. The "not La Presqu'île, not La Brasserie du Corton" alternative — the third Joann-friendly Cassis option. Book 1 week ahead.</div>
+        <div class="drive">Cassis · walk</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Chez Gilbert <span class="stars">seafood platter house</span><span class="meta">Cassis · port-side · plateaux de fruits de mer</span></div>
+        <div class="desc">The Day 6 Sat Aug 22 lunch · port-side seafood-platter house · Provençal classics + grilled meat for Joann · walk-up at 13:00 usually OK · the institutional lunch spot in Cassis.</div>
+        <div class="drive">Cassis · walk</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Le Bistrot <span class="stars">port-side modern</span><span class="meta">Cassis · Quai des Baux · modern Provençal · meat + seafood</span></div>
+        <div class="desc">Day 2 Tue Aug 18 dinner. Port-side modern Provençal, balanced menu, mid-tier price. The "between La Presqu'île ceiling and casual" Cassis dinner. Reserve 1 week ahead.</div>
+        <div class="drive">Cassis · walk</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Le Petit Nice Passédat <span class="stars">★★★</span><span class="meta">Marseille · 17 Anse de Maldormé 13007 · chef Gérald Passédat · R&amp;C hotel on-site</span></div>
+        <div class="desc">Heavy seafood DNA. Chef <strong>Gérald Passédat</strong>. Hotel on-site (Relais &amp; Châteaux), free minibar, Wellness spa, €361 entry rooms to €1,300+ suites. <strong>The final-night flip option</strong> if you'd add a Marseille night: ★★★ dinner without the 35-min drive back, airport-bound Sunday. <a href="https://www.passedat.fr/" target="_blank" rel="noopener">passedat.fr</a></div>
+        <div class="drive">35 min Marseille</div>
+      </div>
+      <div class="food-row">
+        <div class="place">AM par Alexandre Mazzia <span class="stars">★★★</span><span class="meta">Marseille · 9 rue François Rocca 13008 · Wed–Sat · tasting only · €275–€395</span></div>
+        <div class="desc">Tasting-menu only ~20+ small-plate courses, very seafood + African-spice forward. <strong>€275–€395 lunch / €335–€395 dinner</strong>, wine on top. +33 4 91 24 83 63. ⚠️ <strong>Joann would struggle</strong> — flag this. The pick only if you're willing to write off one of three ★★★ slots for chef-courage.</div>
+        <div class="drive">35 min Marseille</div>
+      </div>
+      <div class="food-row">
+        <div class="place">L'Épuisette <span class="stars">★</span><span class="meta">Marseille · Vallon des Auffes fishing harbor · cliff-side · Tue–Sat</span></div>
+        <div class="desc">Cliff-side over Vallon des Auffes fishing harbor. Tue–Sat 12:00–13:30 / 19:30–21:30. +33 4 91 52 17 82. <strong>Heavily seafood — skip for Joann.</strong> Listed for completeness; only worth it if Mark goes solo for a lunch.</div>
+        <div class="drive">35 min Marseille</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Les Belles Canailles <span class="stars">in Roches Blanches</span><span class="meta">Cassis · chef Nicolas Sintes · 180° panoramic terrace</span></div>
+        <div class="desc">Modern Mediterranean inside Hôtel Les Roches Blanches. 180° terrace facing Cap Canaille. Local lamb + seasonal vegetables — Joann-friendly path through a heavy-seafood town. The right "stay in the hotel" night option.</div>
+        <div class="drive">Cassis · walk</div>
+      </div>
+      <div class="food-row">
+        <div class="place">La Vieille Auberge <span class="stars">classic meat-grill</span><span class="meta">Cassis · port-side · beef fillet + duck breast + grilled meats</span></div>
+        <div class="desc">The Joann safe haven. Beef fillet, duck breast, grilled meats, port-side terrace. Walk-up at 12:30. The Tuesday-or-Saturday lunch when you've just hiked or wine-day'd and Joann wants protein not fish.</div>
+        <div class="drive">Cassis · walk</div>
+      </div>
+      <div class="food-row">
+        <div class="place">La Nonna d'Oro <span class="stars">fresh Italian</span><span class="meta">Cassis · on the port · pasta-forward</span></div>
+        <div class="desc">Fresh Italian on the port — pasta-forward, the other Joann safe haven if grilled meats feel one-note. Lighter dinner option after a heavy lunch.</div>
+        <div class="drive">Cassis · walk</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Le Canaille Brasserie <span class="stars">4.1 rating</span><span class="meta">Cassis · port-side · brasserie classics + seafood + meat balance</span></div>
+        <div class="desc">Port-side brasserie, fresh seafood + brasserie classics, takes 21:30 reservations in August. The Day 2 late dinner alt or any-night late seating in Cassis.</div>
+        <div class="drive">Cassis · walk</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Bokeria Kitchen &amp; Wine (Marseille) <span class="stars">modern Med</span><span class="meta">Marseille · former fish-market hall · industrial-chic</span></div>
+        <div class="desc">Set in Marseille's old fish-market hall — modern pan-Mediterranean, <strong>oxtail risotto, eggplant parmesan, sea bass with sun-dried tomato</strong>. Strong Provençal + Italian wine list. Better balance of meat + fish than most Marseille addresses; Joann-friendly. Alt for Day 5 Marseille night if you'd rather skip Une Table au Sud's seafood lean.</div>
+        <div class="drive">35 min Marseille</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Mickaël Féval <span class="stars">★</span><span class="meta">Aix-en-Provence · modern French · meat-friendly</span></div>
+        <div class="desc">Aix's downtown ★. Modern French, meat + fish balance, less seafood-monolithic than Marseille. The Day 5 Aix-trip lunch alt to Le Mas Bottero. Reserve 2 weeks ahead.</div>
+        <div class="drive">35 min Aix</div>
+      </div>
+      <div class="food-row">
+        <div class="place">Le Mas Bottero <span class="stars">modern Provençal</span><span class="meta">Aix area · Nicolas Bottero · meat + fish balance</span></div>
+        <div class="desc">The Day 5 Aix lunch pick. Modern Provençal kitchen, market-driven menu, Joann-friendly. Country-Aix setting with terrace. Book 1 week ahead.</div>
+        <div class="drive">40 min Aix area</div>
+      </div>
+    </div>
+
+    <div class="section-header" id="activities">
+      <span class="eyebrow">Beyond the Table</span>
+      <h2>The Activity Catalog</h2>
+      <p>The August fragility caveat is sharper this window: <strong>late August is statistically the peak fire-closure window</strong>. Outdoor windows compress to 06:00–11:00 + 17:00–21:00 most days. Hike days are red-day-fragile (check MesCalanques + simba.bouches-du-rhone.gouv.fr). Boat days are weather-fragile but more resilient. Water + wine + culture + Marseille late-nights stack into 5 days — pick aggressively. <strong>The piano festival closed Aug 16</strong>, so no Roque d'Anthéron concerts available for this window.</p>
+    </div>
+
+    <div class="activities">
+
+      <div class="activity">
+        <span class="icon">🚤</span>
+        <h4><a href="https://rent.ledenboat.com/" target="_blank" rel="noopener">L'Eden Boat (LOCKED)</a></h4>
+        <p>Private + shared RIB into the Calanques · mask + snorkel + drinks aboard · half + full-day · +33 4 69 00 22 83. <strong>Day 4 Thu Aug 20 anchor.</strong> RIB sails in light rain.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">⛵</span>
+        <h4><a href="https://www.bateliers-cassis.com/" target="_blank" rel="noopener">Bateliers Cassidiens</a></h4>
+        <p>Walk-up boat tours · 10:00–16:00 scheduled circuits 3 routes €19–€32/pp. No swim stops on the cheaper circuits. The Day 2 Tue Aug 18 anchor if hike fire-status closes.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🛶</span>
+        <h4><a href="https://www.raskaskayak.com/" target="_blank" rel="noopener">Raskas Kayak</a></h4>
+        <p>€35/adult half-day · 3 slots 08:15–12:30 / 13:00–16:30 / <strong>17:00–21:00 SUNSET</strong>. The sunset slot through Port-Miou + En Vau golden-hour. Day 2 or Day 6 anchor option.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏄</span>
+        <h4><a href="https://www.cassis.fr/cassis-sports-nautiques-cssc/" target="_blank" rel="noopener">SUP Plage de la Grande Mer</a></h4>
+        <p>Stand-up paddle rental €12–€20/hr. Walk-up at Grande Mer beach. Any-day sunset SUP into the Port-Miou inlet with rosé + olives in a dry-bag.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🤿</span>
+        <h4><a href="https://www.cassis-services-plongee.fr/" target="_blank" rel="noopener">Cassis Calanques Plongée</a></h4>
+        <p>Marie + Jean-Marie Sola · Cassis Harbour · open Mar 14–Dec 18 2026 · Calanques dive sites groupers/octopus/seahorses/wrecks. 1-tank morning dive ~€55, 2-tank ~€85.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏍️</span>
+        <h4><a href="https://www.so-jet.fr/" target="_blank" rel="noopener">SO JET Jet Ski</a></h4>
+        <p>Marseille / La Ciotat · from €75 1-h delivery (Cassis prohibits jet ski in-port) · +33 7 81 05 20 12. The high-energy 1-hour swap for an afternoon.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🥾</span>
+        <h4><a href="https://www.calanques-parcnational.fr/" target="_blank" rel="noopener">Port-Miou → En Vau</a></h4>
+        <p>The classic 3-h round-trip · <strong>dawn start in late August · check MesCalanques + simba.bouches-du-rhone.gouv.fr night before for fire status</strong>. Final En Vau section steep + slippery. Day 6 Sat Aug 22 anchor.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">⛰️</span>
+        <h4><a href="https://www.calanques-parcnational.fr/" target="_blank" rel="noopener">Cap Canaille Route des Crêtes</a></h4>
+        <p>399 m, France's highest sea cliff. Drive Mon–Sat OR hike every Sunday Apr 27–Sep 28 2026 (cars closed, free shuttles Gorguettes / Casino / Pas de la Colle). <strong>The Day 4 Thu Aug 20 sunset point.</strong></p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🧗</span>
+        <h4><a href="https://www.calanques-parcnational.fr/" target="_blank" rel="noopener">Sugiton (reservation)</a></h4>
+        <p>30-min belvedere from Luminy. <strong>Reservations open 11 Jun 2026 09:00 CET FREE</strong> calanques-parcnational.fr up to 5 ppl. Book 3 days out until 18:00 day before. QR code at entry. Same system for Pierres Tombées.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🍷</span>
+        <h4><a href="https://www.domainetempier.com/en/homepage/" target="_blank" rel="noopener">Bandol AOC</a></h4>
+        <p>Pradeaux + Tempier + Terrebrune (verify) + Pibarnon + Bégude. Mourvèdre-led reds + rosés. Day 3 Wed Aug 19 driver-led route · book 2–3 weeks ahead.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🥂</span>
+        <h4><a href="https://www.clossaintemagdeleine.fr/" target="_blank" rel="noopener">Cassis AOC</a></h4>
+        <p>Clos Sainte Magdeleine + Domaine du Bagnol + Clos Val Bruyère + Domaine du Paternel. Walk + €12/visit. Day 2 afternoon optional.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🎨</span>
+        <h4><a href="https://www.cezanne-en-provence.com/" target="_blank" rel="noopener">Atelier Cézanne Aix</a></h4>
+        <p>Les Lauves · reopens Jul 4–Oct 31 2026 daily 09:00–18:00 · €9.50–€15 · <strong>guided tour only, mandatory booking through Aix Tourist Office</strong>. 2–3 weeks ahead. Day 5 Fri Aug 21 anchor.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🦴</span>
+        <h4><a href="https://www.grotte-cosquer.com/" target="_blank" rel="noopener">Cosquer Méditerranée</a></h4>
+        <p>Marseille · Villa Méditerranée · 09:30–19:30 weekends + holidays · €18 · <strong>book online — sells out by 11:00 weekends</strong>. The reconstructed underwater cave paintings; rainy-day swap anchor.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🏛️</span>
+        <h4><a href="https://www.mucem.org/" target="_blank" rel="noopener">MuCEM Marseille</a></h4>
+        <p>Museum of European + Mediterranean Civilizations + Fort Saint-Jean · daily except Tue 10:00–19:00 · the covered late-afternoon Marseille anchor.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🧖</span>
+        <h4><a href="https://www.roches-blanches-cassis.com/en/spa/" target="_blank" rel="noopener">Sisley Spa Roches Blanches</a></h4>
+        <p>4 treatment rooms + mosaic hammam + sea-panoramic relaxation + Technogym. Day pass €60–€100/pp with treatment add-on. Couples 2-h ritual ~€280/pp.</p>
+      </div>
+
+      <div class="activity">
+        <span class="icon">🎰</span>
+        <h4><a href="https://www.guide-casino.com/casino-de-cassis.htm" target="_blank" rel="noopener">Casino de Cassis</a></h4>
+        <p>Groupe Barrière · slots daytime, jeux traditionnels (blackjack, English roulette, poker) from 20:00 nightly · open till 03:00 nightly / 04:00 Fri-Sat. The deepest Cassis late option outside Le Big Ben.</p>
+      </div>
+
+    </div>
+
+    <div class="section-header" id="nightlife">
+      <span class="eyebrow">After Dark</span>
+      <h2>Cassis Sleepier Without Aug 15 · Marseille IS the Save</h2>
+      <p>Honest read for this window: Cassis last dinner seatings 21:00–21:30, last call port-side ~01:00, casino till 03:00 (04:00 Fri/Sat/eve-holiday), only one real nightclub (<strong>Le Big Ben</strong>, Thu/Fri/Sat midnight onwards Jul–Aug only). <strong>Without the Aug 15 Bandol Aoûtiennes weekend + Cassis fireworks bal + Roque d'Anthéron concerts of the Aug 11–17 window, Cassis is structurally quieter this window.</strong> For 22:00+ play, Marseille is mandatory not optional — 35 min by car, R2 Rooftop / Trolleybus / Cours Julien circuit. The Quai des Artistes nightly market is the soft post-dinner anchor every night through Aug 31. Below: both maps.</p>
+    </div>
+
+    <div class="nightlife">
+      <div class="nightlife-col">
+        <h3>Cassis · the port + the casino + one club</h3>
+        <div class="venue">
+          <div class="vname">Quai des Artistes + Marché Nocturne</div>
+          <div class="vmeta">Every night 19:00–midnight through Aug 31 · Place Baragnon + Place Clémenceau · free</div>
+          <div class="vdesc">Painters, photographers, portraitists, engravers + artisans + foods. The default post-dinner anchor every night this window. Walk-through, occasional buy. <strong>Still running every night Aug 17–23.</strong></div>
+        </div>
+        <div class="venue">
+          <div class="vname">Bar de la Marine</div>
+          <div class="vmeta">5 quai des Baux · daily · harbor-view</div>
+          <div class="vdesc">Quintessential port-side Cassis aperitif + late drink, harbor view. The Day 1 sundowner spot, the post-Villa-Madie nightcap. Closes around 01:00 in August.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Bar Le Port + Le Loup Bar + Les Caves du Port</div>
+          <div class="vmeta">Quai des Baux strip · cocktails + local wine · port-side</div>
+          <div class="vdesc">Three side-by-side port-side bars on Quai des Baux. Le Loup Bar (14) is the cocktail-forward one; Les Caves du Port has the deeper wine list; Bar Le Port (3) splits the difference. Walk between in 90 seconds.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">La Maison de Jo et Gaby</div>
+          <div class="vmeta">Wine bar · pre-dinner slow · candlelit</div>
+          <div class="vdesc">Cassis's quieter pre-dinner wine bar — Côtes de Provence + Cassis AOC + Bandol by the glass. Light plates. The "slow down before the late dinner" stop.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Casino de Cassis (Groupe Barrière)</div>
+          <div class="vmeta">Daily 10:00–03:00 · Fri/Sat/holiday-eves till 04:00 · jeux from 20:00</div>
+          <div class="vdesc">Slot machines daytime. Jeux traditionnels (blackjack, English roulette, poker) from 20:00 nightly. The only true post-midnight Cassis play outside Le Big Ben.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Le Big Ben</div>
+          <div class="vmeta">Cassis's only nightclub · Thu/Fri/Sat midnight onwards · Jul-Aug only</div>
+          <div class="vdesc">Cassis's only true nightclub — open midnight onwards Thu/Fri/Sat in Jul + Aug only. House + Top 40 + EDM. Available Thu Aug 20 / Fri Aug 21 / Sat Aug 22 this window.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">— What's missing this window —</div>
+          <div class="vmeta">Calendar gap vs Aug 11–17 trip</div>
+          <div class="vdesc"><strong>The Aug 15 fireworks + bal at Place Baragnon is past.</strong> No equivalent late-street-party anchor in the Aug 17–23 window unless you catch a localized fête (verify Cassis OT). The biggest single reason Nightlife drops from 1.5 to 1.0 vs the prior window.</div>
+        </div>
+      </div>
+
+      <div class="nightlife-col">
+        <h3>Marseille · 35 min away · mandatory this window</h3>
+        <div class="venue">
+          <div class="vname">R2 Rooftop des Terrasses</div>
+          <div class="vmeta">9 quai du Lazaret 13002 · Thu–Sun 19:00–02:00 · 1,500-cap · DJs + 360° harbor</div>
+          <div class="vdesc">Les Terrasses du Port building. Massive cap, multiple DJ stages, 360° harbor + city view, cocktails ~€13. VIP table reservations available. <strong>The Day 5 Fri Aug 21 anchor — mandatory for this window.</strong></div>
+        </div>
+        <div class="venue">
+          <div class="vname">Trolleybus</div>
+          <div class="vmeta">24 quai Rive Neuve 7th · Thu–Sat 23:30–06:00 · ~€10 entry</div>
+          <div class="vdesc">17th-century stone-vaulted club, 3 dance rooms (pop-rock / house-electro / soul-funk-RnB). Marseille's longest-running serious nightclub. The Day 4 Thu / Day 5 Fri / Day 6 Sat doubling-down option.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Ciel Rooftop</div>
+          <div class="vmeta">Vieux Port area · Italian top-floor · view to Notre-Dame de la Garde</div>
+          <div class="vdesc">Top-floor Italian-run rooftop, sunset cocktails over the Vieux Port + Notre-Dame de la Garde view. Reservations advised. The Day 5 sunset start before Une Table au Sud.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Dantès Skylounge (Sofitel Vieux Port)</div>
+          <div class="vmeta">7th floor Sofitel · premium cocktails €16–€22 · walk-in only</div>
+          <div class="vdesc">7th-floor Sofitel rooftop. Premium cocktails, no reservations (walk-in only), harbor view. The "quiet rooftop" option if R2 is too loud.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Les Réformés Rooftop (Artplexe Cinema)</div>
+          <div class="vmeta">Atop Artplexe Cinema La Canebière · 360° city · live music several nights</div>
+          <div class="vdesc">On top of the Artplexe Cinema on La Canebière, 360° city + Notre-Dame de la Garde view. Live music programmed several nights weekly. The cultural-evening end-cap, less club-y.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">La Caravelle</div>
+          <div class="vmeta">34 quai du Port, 1st floor Hotel Belle-Vue · daily 07:00–02:00 · jazz-bar</div>
+          <div class="vdesc">Daily 07:00–02:00, balcony view, the most atmospheric jazz-bar in town. <strong>Note:</strong> live jazz concerts Wed + Fri only Oct–May (August = no live jazz, but the bar's still the move).</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Cours Julien · Lulo Bar · Le Pulse · L'ID FIXE · La Tasca</div>
+          <div class="vmeta">Cours Julien artist district · tapas + creative cocktails + late dinners</div>
+          <div class="vdesc">The artist hood — bars + street art + late dinners. <strong>Lulo Bar</strong> (tapas, lively), <strong>Le Pulse</strong> (creative cocktails), <strong>L'ID FIXE</strong>, <strong>La Tasca</strong> (Spanish/Provençal/Corsican tapas), <strong>Baby Club</strong> (electronic — house/deep house/techno). The walk-between district for a Marseille night.</div>
+        </div>
+        <div class="venue">
+          <div class="vname">Late dinners Marseille (open past 22:30)</div>
+          <div class="vmeta">Le Cercle Rouge · Au Mas de Lulli · La Cantinetta · Le Nul Part Ailleurs</div>
+          <div class="vdesc"><strong>Le Cercle Rouge</strong> (41 rue Thiers 1st, Tue–Sun 19:30–02:00, Corsican + tapas) · <strong>Au Mas de Lulli</strong> (4 rue de Lulli 1st, Italian, weekdays till 02:00, Thu–Sat till 05:00) · <strong>La Cantinetta</strong> (24 Cours Julien 6th, pasta-forward) · <strong>Le Nul Part Ailleurs</strong> (18 quai Rive Neuve 7th, 19:30–midnight). The Joann-tolerant late-dinner roster.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width: 950px; margin: 2rem auto 0; padding: 1.5rem 2rem; background: rgba(74,144,164,0.06); border-radius: 12px; border-left: 4px solid var(--provence-sky); font-size: 0.92rem; color: #333;">
+      <strong style="color: var(--provence-sky);">Safety note:</strong> Cassis very safe at all hours. Marseille Vieux Port safe at night (high police presence, bright lights, people till midnight). Le Panier rewarding day, after 22:00 stick to lit primary streets. Pickpocket risk in Vieux Port crowds — split valuables, no waist-pack with phone visible. Uber back Cassis after midnight (~€55, 35 min) is the default. Aix is small + quiet — Place Richelme + Cardeurs string-lit terraces feel like a postcard at 23:00.
+    </div>
+
+    <div class="section-header" id="score">
+      <span class="eyebrow">Adversarial Scoring</span>
+      <h2>Re-scored for the Aug 17–23 Window</h2>
+      <p>Scored 0–3 per axis. Hard criteria ×2, soft ×1. Total /39. Honest read for this window: <strong>30/39 vs 31.5/39 for Aug 11–17</strong> — the 1.5-point gap comes entirely from Nightlife (-0.5 raw → -1 weighted, no Aug 15 anchor) and the calendar-anchor loss baked into the qualitative read of Activity Density. Food caliber + weather + safety + wine + romance + hotel all hold. Joann-seafood unchanged. <strong>The booked baseline weakens this window because the Aug 15 weekend anchors are past.</strong></p>
+    </div>
+
+    <div class="score-grid">
+      <div class="score-row">
+        <div class="axis">Food caliber <span class="tag">Hard ×2</span></div>
+        <div class="reason"><strong>La Villa Madie ★★★ in Cassis itself</strong> (LOCKED) + Le Petit Nice Passédat ★★★ + AM par Mazzia ★★★ + Une Table au Sud ★ + L'Épuisette ★ all within 35-min radius. Mickaël Féval ★ in Aix. La Brasserie du Corton + Les Belles Canailles + La Presqu'île Michelin-listed in Cassis. Few places on Earth match this density. <strong>3/3 max — unchanged.</strong></div>
+        <div class="num">3 × 2 = 6</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Nightlife &amp; late energy <span class="tag">Hard ×2</span></div>
+        <div class="reason">Cassis sleepy after 23:30 — Le Big Ben + Casino only real late options. <strong>The Aug 15 fireworks + bal anchor is past · the Bandol "Aoûtiennes" Aug 15 weekend music circuit is past · Roque d'Anthéron closed Aug 16.</strong> Marseille saves it (R2 / Trolleybus / Cours Julien) but mandatory 35-min drive each way. Quai des Artistes nightly is the soft anchor. <strong>1.0/3 — drops from 1.5.</strong></div>
+        <div class="num">1.0 × 2 = 2</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Activity density <span class="tag">Hard ×2</span></div>
+        <div class="reason">Water (boat / kayak / SUP / jet ski / scuba) + hike (Calanques / Cap Canaille / Sugiton) + wine (Cassis + Bandol) + culture (Aix Cézanne / Marseille MuCEM + Cosquer) all stack tight. But <strong>late August fire closures are statistically more frequent than early August</strong> after weeks of heat accumulation; heat compresses outdoor windows 06–11 + 17–21; tight scheduling is brittle. No piano festival, no Aug 15 anchor — fewer "only this week" lock-ins. <strong>2.5/3 — unchanged in raw score; quality slightly weaker.</strong></div>
+        <div class="num">2.5 × 2 = 5</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Weather <span class="tag">Hard ×2</span></div>
+        <div class="reason">75–85°F highs, low humidity, 13.5 mph avg wind (calmest month), water 23°C peak. Late-summer heat spikes drive fire closures more this window than mid-Aug. Lower bug pressure than Languedoc but tiger mosquito established. 2.5/3.</div>
+        <div class="num">2.5 × 2 = 5</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Safety &amp; late walkability <span class="tag">Hard ×2</span></div>
+        <div class="reason">Cassis unusually safe at all hours. Marseille Vieux Port safe at night with police till midnight; Le Panier more care after 22:00 but not dangerous. Aix small + quiet. Strong overall. 2.5/3.</div>
+        <div class="num">2.5 × 2 = 5</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Wine <span class="tag">Soft ×1</span></div>
+        <div class="reason">Bandol Mourvèdre — Pradeaux + Tempier + Terrebrune (verify) + Pibarnon + Bégude — and Cassis AOC whites — Clos Ste Magdeleine + Bagnol + Val Bruyère + Paternel — at the doorstep, no driver needed for half-days. Driver-led full-day Bandol €500–€900. <strong>3/3 — unchanged.</strong></div>
+        <div class="num">3</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Romance / hotel quality <span class="tag">Soft ×1</span></div>
+        <div class="reason">Les Roches Blanches Sisley Spa + Hôtel de la Plage Mahogany beachfront + The Address (originally booked) + Le Petit Nice Passédat ★★★ R&amp;C if you flip the last night — multiple romantic anchors. Cassis sunset port-side aperitif on Quai des Baux is the romance moment of moments. <strong>3/3 — unchanged.</strong></div>
+        <div class="num">3</div>
+      </div>
+      <div class="score-row">
+        <div class="axis">Joann seafood tolerance <span class="tag">Soft ×1 · lower seafood = higher</span></div>
+        <div class="reason">Cassis IS bouillabaisse capital — <strong>still the seafood capital of Provence, unchanged this window</strong>. Villa Madie ★★★ + Petit Nice + AM + L'Épuisette are seafood-heavy. Une Table au Sud + Brasserie du Corton + Fleurs de Thym + La Vieille Auberge + La Presqu'île + Bandol estates + Cassis bistros + Bokeria (Marseille) rescue the path but it's constant negotiation. <strong>Below Basque, well below Italy. 1.5/3 — unchanged.</strong></div>
+        <div class="num">1.5</div>
+      </div>
+      <div class="score-row total">
+        <div class="axis">Weighted total</div>
+        <div class="reason">Hard 23/30 (was 24/30; lose 1 point on Nightlife) + Soft 7.5/9 (unchanged). Food + romance + wine top tier; weather + safety strong; activity density brittle on late-Aug fire-closures; <strong>nightlife is the structural soft spot — sharper this window without the Aug 15 anchors</strong>; Joann-seafood the negotiated axis. <strong>The booked baseline shifted, scoring honestly.</strong></div>
+        <div class="num">30 / 39</div>
+      </div>
+    </div>
+
+    <div style="max-width: 950px; margin: 1rem auto 0; padding: 1.5rem 2rem; background: rgba(196,98,45,0.08); border-radius: 12px; border-left: 4px solid var(--provence-terra); font-size: 0.95rem; color: #333;">
+      <strong style="color: var(--provence-terra-deep);">Verdict — Aug 17–23 vs Aug 11–17:</strong> Booked baseline. <strong>Weaker this window than Aug 11–17 because the Aug 15 Bandol Aoûtiennes anchor, Cassis Assumption fireworks + bal, Roque d'Anthéron piano festival, and Perseid peak are all past.</strong> Still has Villa Madie ★★★, L'Eden Boat, Bandol wineries, Calanques, Marseille within 35 min. <strong>Decision-fatigue default — only pick this window if you don't want to switch from the booked plan.</strong> The shift loses 1.5 points (30/39 vs 31.5/39); the booked deposits offset some of that loss in pure dollar terms; the "deposits down, don't re-think it" psychology is the real argument for this window over Aug 11–17.
+    </div>
+
+  </div>
+</section>
+
+<section class="booking" id="book">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="eyebrow">Make It Real</span>
+      <h2>Confirm + Book These Now</h2>
+      <p>Three items already locked — re-confirm 7 days out, and verify the Villa Madie reservation night (the standard schedule closes Wed Aug 19). Twelve more, ranked by lead-time. <strong>Late August in the Calanques is still high-demand though slightly softer than mid-Aug; Villa Madie + hotel + L'Eden Boat were booked early for a reason.</strong></p>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="stepnum booked">01</div>
+        <div>
+          <h4>Re-price + re-book Cassis 5★ (5 nights, Tue Aug 18 → Sun Aug 23)</h4>
+          <p><strong>Re-price both Les Roches Blanches and Hôtel de la Plage Mahogany for this window.</strong> If the original Address Cassis booking can be shifted, ask Eric &amp; Sabine if they'll carry over the deposit. Late-Aug rates run softer than mid-Aug as French school re-entry approaches. Standard tier $3,000–$3,500 for 5 nights for two travelers.</p>
+          <div class="meta-line">Re-confirm 7 days out · <a href="https://www.roches-blanches-cassis.com/en/" target="_blank" rel="noopener">roches-blanches-cassis.com</a> · <a href="https://www.hoteldelaplagemahogany.com/en/" target="_blank" rel="noopener">hoteldelaplagemahogany.com</a> · <a href="https://www.theaddress-cassis.com/" target="_blank" rel="noopener">theaddress-cassis.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum booked">02</div>
+        <div>
+          <h4>Verify La Villa Madie ★★★ night (LOCKED — exact night TBD)</h4>
+          <p><strong>Locked for this window.</strong> Call 7 days out: (1) <strong>verify exact night</strong> — standard Madie schedule closes Wed Aug 19; locked reservation may be Thu Aug 20 (boat-day evening) or Fri Aug 21; (2) re-confirm Joann's non-seafood substitution request (lamb, pigeon, truffle-vegetable courses available — ★★★ kitchen handles cleanly); (3) confirm wine pairing approach (full / by-glass / no pairing). +33 4 96 18 00 00 or via the website reservation portal.</p>
+          <div class="meta-line">Re-confirm 7 days out · <a href="https://lavillamadie.com/en/reservation/" target="_blank" rel="noopener">lavillamadie.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum booked">03</div>
+        <div>
+          <h4>Re-confirm L'Eden Boat private RIB (Thu Aug 20, 09:00 Cassis Port)</h4>
+          <p><strong>Locked for this window.</strong> Re-confirm 7 days out, then again 24 h out for weather. Operator confirms by 19:00 the night before for next-morning sails — they cancel mistral + 3 m+ swell. <strong>Late August mistral risk is meaningful</strong> — have a Bandol-day or Aix-day swap ready as Plan B. Bring: swimsuits, sun shirts, dry-bag, reef-safe sunscreen, GoPro.</p>
+          <div class="meta-line">Re-confirm 7 days out + 24 h out · +33 4 69 00 22 83 · <a href="https://rent.ledenboat.com/" target="_blank" rel="noopener">rent.ledenboat.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum booked">04</div>
+        <div>
+          <h4>Re-price AF65 LAX→CDG + return CDG→LAX for Aug 17 / Aug 23</h4>
+          <p><strong>AF65 outbound locked for this window.</strong> AF65 LAX→CDG (dep 1:40 PM Mon Aug 17, arr 9:35 AM Tue Aug 18) + AF Connect CDG→MRS (arr 1:05 PM). Return: AF Connect MRS→CDG + <strong>AF64 CDG→LAX</strong> Sun Aug 23. <strong>$900–$1,400 RT/pp estimated</strong>; verify exact 2026 schedule and the re-pricing if shifting from the originally-booked Aug 11 dates. <strong>Late-Aug return is softer-priced than mid-Aug.</strong></p>
+          <div class="meta-line">Verify now · <a href="https://www.airfrance.us/" target="_blank" rel="noopener">airfrance.us</a> · <a href="https://www.skyscanner.com/routes/lax/mrs/los-angeles-international-to-marseille-provence.html" target="_blank" rel="noopener">Skyscanner LAX→MRS</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">05</div>
+        <div>
+          <h4>Reserve Bandol private driver day (Wed Aug 19)</h4>
+          <p>Full-day private driver for the Pradeaux → Tempier → Terrebrune (verify) → Pibarnon/Bégude (substitute) route. <strong>€500–€900 for 2-pax August.</strong> Operators: <strong>Provence Wine Tours</strong> (tailor-made Bandol + Cassis), <strong>Deluxe France</strong> (full-day private), <strong>Planet Provence</strong> (private + free pickup within 10 km Aix). Book 2–4 weeks ahead; specify Cassis-pickup-to-Cassis-drop, English-speaking driver, all winery confirmations pre-arranged.</p>
+          <div class="meta-line">2–4 weeks out · <a href="https://provincewinetours.com/" target="_blank" rel="noopener">provincewinetours.com</a> · <a href="https://planetprovence.com/" target="_blank" rel="noopener">planetprovence.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">06</div>
+        <div>
+          <h4>Reserve Bandol estates — verify Terrebrune Aug 2026 status</h4>
+          <p><strong>Domaine Tempier</strong> 1 week ahead by phone or email (walk-in tolerated Mon–Fri but appointment preferred). <strong>Château Pradeaux</strong> call ahead 1 week — old-school by-appointment culture. <strong>Domaine de Terrebrune (Ollioules) — call +33 4 94 74 01 30 NOW to verify Aug 2026 opening status</strong> (was closed late Aug 2025). If closed: substitute <strong>Château de Pibarnon</strong> 1 week ahead or <strong>Domaine de la Bégude</strong> 2–3 weeks ahead for food + wine pairing lunch. Your driver-operator can coordinate the final lineup.</p>
+          <div class="meta-line">1–3 weeks out depending on estate · linked in Wine section above</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">07</div>
+        <div>
+          <h4>Reserve L'Escourtin Le Castellet lunch (Wed Aug 19, 13:00)</h4>
+          <p>The Bandol wine-day lunch · Le Castellet medieval village · Provençal classics, terrace with Bandol vineyard views · meat-forward menu, Joann-friendly. Book 1 week ahead — village restaurants compress fast in August. Driver-operator can coordinate.</p>
+          <div class="meta-line">1 week out · phone direct via the Le Castellet office</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">08</div>
+        <div>
+          <h4>Reserve Cassis estates — Clos Sainte Magdeleine · Domaine du Bagnol (Day 2 afternoon optional)</h4>
+          <p>Both within 10-min walk from port. <strong>Clos Sainte Magdeleine</strong> 1 week ahead — Tue–Sat, €12 visit + €3 tasting. <strong>Domaine du Bagnol</strong> 1 week ahead — book via OT Cassis (Office du Tourisme — they handle Bagnol bookings) or direct, €12/adult 1-h tour + tasting. Optional add-on Day 2 Tue Aug 18 afternoon.</p>
+          <div class="meta-line">1 week out · linked in Wine section above</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">09</div>
+        <div>
+          <h4>Reserve Une Table au Sud ★ (Fri Aug 21, ~20:30)</h4>
+          <p>Chef Ludovic Turac's Vieux Port ★. <strong>2–3 weeks ahead</strong>; specify 2nd-floor terrace if possible (panoramic Vieux Port). Note Joann-friendly meat-throughline kitchen vs. Marseille's seafood specialists. The Day 5 Marseille night anchor. <a href="https://www.unetableausud.com/" target="_blank" rel="noopener">unetableausud.com</a> or call.</p>
+          <div class="meta-line">2–3 weeks out · <a href="https://www.unetableausud.com/" target="_blank" rel="noopener">unetableausud.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">10</div>
+        <div>
+          <h4>Reserve Atelier Cézanne guided tour Aix (Fri Aug 21, 11:00)</h4>
+          <p>Atelier Cézanne (Les Lauves) reopens Jul 4–Oct 31 2026 daily 09:00–18:00, €9.50–€15. <strong>Guided tour only, mandatory booking through Aix Tourist Office (not at the door).</strong> 2–3 weeks ahead. Bring print/email confirmation. Pair with Cours Mirabeau + Musée Granet + Le Mas Bottero or Mickaël Féval ★ lunch.</p>
+          <div class="meta-line">2–3 weeks out · Aix OT site · <a href="https://www.cezanne-en-provence.com/" target="_blank" rel="noopener">cezanne-en-provence.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">11</div>
+        <div>
+          <h4>Reserve Le Mas Bottero (Fri Aug 21 lunch) OR Mickaël Féval ★ (alt)</h4>
+          <p><strong>Le Mas Bottero</strong> Aix-area country setting, modern Provençal, market-driven menu, terrace · book 1 week ahead. Or <strong>Mickaël Féval ★</strong> downtown Aix for the Michelin lunch · 2 weeks ahead. Either is Joann-friendly meat + fish balance.</p>
+          <div class="meta-line">1–2 weeks out · phone direct</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">12</div>
+        <div>
+          <h4>Reserve Cassis dinners — La Presqu'île · Le Bistrot · Fleurs de Thym · La Brasserie du Corton</h4>
+          <p><strong>La Presqu'île</strong> 2–3 weeks ahead for the Day 1 Tue Aug 18 evening menu + Day 7 Sun Aug 23 brunch (closed Sun eve / Mon all day / Thu eve — Tue is open). <strong>Le Bistrot</strong> 1 week ahead for Day 2 Tue Aug 18 dinner. <strong>Fleurs de Thym</strong> 1 week ahead for Day 6 Sat Aug 22 final Cassis night. <strong>La Brasserie du Corton</strong> 1–2 weeks ahead — the Droisneau bistro is the fallback / low-energy / rainy-night choice on multiple days.</p>
+          <div class="meta-line">1–3 weeks out · phone direct</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">13</div>
+        <div>
+          <h4>Reserve Cosquer Méditerranée + MuCEM (rainy / red-flag-day backup)</h4>
+          <p><strong>Cosquer Méditerranée</strong> at Villa Méditerranée, Marseille, 09:30–19:30 weekends + holidays, €18 — <strong>book online 1–2 weeks ahead; sells out by 11:00 weekends</strong>. MuCEM is daily ex-Tue, walk-up OK but pre-book for high-summer crowds. Hold these reservations even if you don't end up using them — they're the rainy / red-flag-day insurance for Day 2 or Day 6.</p>
+          <div class="meta-line">1–2 weeks out · <a href="https://www.grotte-cosquer.com/" target="_blank" rel="noopener">grotte-cosquer.com</a> · <a href="https://www.mucem.org/" target="_blank" rel="noopener">mucem.org</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">14</div>
+        <div>
+          <h4>Reserve sunset Raskas Kayak (Day 2 or Day 6, 17:00–21:00 slot)</h4>
+          <p>€35/pp 3-h sunset slot through Port-Miou + Port-Pin at golden hour. <strong>The sunset slot books fastest — 1 week ahead minimum, ideally 2 weeks</strong>. Walk-up risk: turned away. Bring water shoes, dry-bag, hat.</p>
+          <div class="meta-line">1–2 weeks out · <a href="https://www.raskaskayak.com/" target="_blank" rel="noopener">raskaskayak.com</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">15</div>
+        <div>
+          <h4>Reserve Sisley Spa Roches Blanches day pass / couples ritual</h4>
+          <p>Day pass €60–€100/pp with treatment add-on; couples 2-h ritual ~€280/pp. <strong>Book 1 week ahead</strong> for any specific time slot (the spa is open to non-guests but capacity-limited). The Day 2 or Day 6 rainy-day / low-energy insurance. Comes free if you're staying at Roches Blanches.</p>
+          <div class="meta-line">1 week out · <a href="https://www.roches-blanches-cassis.com/en/spa/" target="_blank" rel="noopener">roches-blanches-cassis.com/en/spa</a></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="stepnum">16</div>
+        <div>
+          <h4>Optional · R2 Rooftop Marseille VIP table (Fri Aug 21)</h4>
+          <p>R2 Rooftop des Terrasses Thu–Sun 19:00–02:00 · 1,500-cap · DJs · 360° harbor view. Walk-up OK but VIP table reservations available — <strong>$300–$600 minimum spend for table + bottle service</strong>. The Day 5 anchor for late nightlife. Book 1 week ahead for Friday.</p>
+          <div class="meta-line">1 week out · <a href="https://www.lerooftopdesterrasses.com/" target="_blank" rel="noopener">lerooftopdesterrasses.com</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="adversarial">
+      <h3>Adversarial honesty — why this window scores 30/39 instead of 31.5/39</h3>
+      <p><strong>1 · The Aug 15 weekend anchors are past.</strong> Bandol "Terrasses des Aoûtiennes" 5-stage music nights peaked over Aug 15; Cassis Assumption Day fireworks + bal at Place Baragnon was Aug 15; Roque d'Anthéron piano festival closed Aug 16; Perseid peak was Aug 12–13 with the moonless sky vantage already gone. <strong>This window is structurally quieter in the village</strong>, which deepens the "Cassis last-seating 21:30" nightlife problem.</p>
+      <p><strong>2 · Late August is statistically the worst Calanques fire-closure window.</strong> Heat accumulation through July + early August dries soils; mistral wind events spike risk; red days are more common than early August. The boat day is red-day-resistant; hike days are not. You may genuinely lose the En Vau hike Day 6. Have a spa-day or Aix-day swap ready.</p>
+      <p><strong>3 · Cassis is STILL bouillabaisse capital.</strong> Half the Michelin you've heard of (Villa Madie / Petit Nice / L'Épuisette / AM) is seafood-forward. Even Une Table au Sud is Mediterranean-leaning. <strong>Unless Joann pivots toward "I'll order the lamb" on every menu,</strong> the dining itinerary is constantly negotiated. Unchanged from Aug 11–17.</p>
+      <p><strong>4 · Marseille becomes mandatory not optional this window.</strong> Without the Aug 15 fireworks + bal anchor, Cassis genuinely runs slow after 23:30. The R2 Rooftop / Trolleybus / Cours Julien circuit in Marseille is the entire late-nightlife strategy for the week — 35 min away, mandatory Friday Aug 21, optional Thursday Aug 20.</p>
+      <p><strong>5 · Verify Villa Madie's locked night.</strong> Standard Madie schedule closes Tue + Wed. The locked reservation must be Thu Aug 20 / Fri Aug 21 / Sat Aug 22 / Sun Aug 23 — call 7 days out to confirm exactly which.</p>
+      <p><strong>6 · Verify Domaine de Terrebrune Aug 2026 status.</strong> Was closed late August 2025 (Aug 31 2025–Jun 29 2026 schedule). Call +33 4 94 74 01 30 now. Substitute Château de Pibarnon or Domaine de la Bégude in the Wed Aug 19 itinerary if closed.</p>
+      <p><strong>The compensating arguments:</strong> Hotel pressure starts easing as French school re-entry approaches (rentrée scolaire). Some restaurant tables become bookable on shorter notice. The Calanques begin to feel marginally less mobbed by mid-week. Air France late-Aug return pricing is softer than mid-Aug. <strong>And: the booked deposits are sunk for THIS window if AF65 + Villa Madie + L'Eden Boat were locked here.</strong> The decision-fatigue default — only pick this window if you don't want to switch from the booked plan. If the deposits can be moved cheaply to Aug 11–17 for a 1.5-point gain, do that. If they can't, stay here and maximize on the unchanged strengths: Villa Madie ★★★, L'Eden Boat, Bandol Mourvèdre, the Calanques, and a Marseille-mandatory late-nightlife strategy.</p>
+    </div>
+
+    <div class="budget-table">
+      <div class="head">
+        <span class="eyebrow">All-In For Two Travelers</span>
+        <h3>Budget by Tier · Aug 17–23 Window</h3>
+        <p>USD, late-August (post-rentrée-approach softening). Move items across tiers freely. <strong>Standard tier matches the day-by-day above</strong>. Provence Standard $11–12K runs slightly below Aug 11–17 Standard ($11,080) because hotel rates soften late-Aug and no piano-festival tickets are bookable.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th class="item">Item</th>
+            <th class="tier">Budget</th>
+            <th class="tier standard">Standard ★</th>
+            <th class="tier">Splurge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="item">Flights · AF65 LAX↔MRS via CDG (×2) · re-priced</td><td class="tier">$1,750<br><span style="font-size: 0.75rem; opacity: 0.7;">economy basic</span></td><td class="tier standard std-mark">$2,300<br><span style="font-size: 0.75rem; opacity: 0.7;">economy + bag · late-Aug softer</span></td><td class="tier">$6,300<br><span style="font-size: 0.75rem; opacity: 0.7;">premium economy</span></td></tr>
+          <tr><td class="item">Hotel · 5 nights Cassis 5★</td><td class="tier">$2,100<br><span style="font-size: 0.75rem; opacity: 0.7;">Hôtel des Calanques</span></td><td class="tier standard std-mark">$3,200<br><span style="font-size: 0.75rem; opacity: 0.7;">Roches Blanches OR Plage Mahogany</span></td><td class="tier">$5,000<br><span style="font-size: 0.75rem; opacity: 0.7;">Roches Blanches sea-view suite</span></td></tr>
+          <tr><td class="item">+ Marseille hotel night (final-night flip)</td><td class="tier dim">—</td><td class="tier standard dim">—</td><td class="tier">$1,200<br><span style="font-size: 0.75rem; opacity: 0.7;">Le Petit Nice Passédat</span></td></tr>
+          <tr><td class="item">Michelin · Villa Madie ★★★ + Une Table au Sud ★</td><td class="tier">$300<br><span style="font-size: 0.75rem; opacity: 0.7;">skip ★★★, La Presqu'île only</span></td><td class="tier standard std-mark">$1,400<br><span style="font-size: 0.75rem; opacity: 0.7;">Villa Madie €280/pp + Une Table au Sud €130/pp</span></td><td class="tier">$2,300<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Petit Nice ★★★ + wine pairings</span></td></tr>
+          <tr><td class="item">Other dinners + Brasserie du Corton + Cassis bistros</td><td class="tier">$450</td><td class="tier standard std-mark">$760<br><span style="font-size: 0.75rem; opacity: 0.7;">Presqu'île + Le Bistrot + Fleurs de Thym + Corton</span></td><td class="tier">$1,200</td></tr>
+          <tr><td class="item">L'Eden Boat day (LOCKED)</td><td class="tier">$150<br><span style="font-size: 0.75rem; opacity: 0.7;">shared half-day</span></td><td class="tier standard std-mark">$650<br><span style="font-size: 0.75rem; opacity: 0.7;">private RIB full-day (LOCKED)</span></td><td class="tier">$1,400<br><span style="font-size: 0.75rem; opacity: 0.7;">crewed yacht charter</span></td></tr>
+          <tr><td class="item">Bandol wine driver day (Wed Aug 19)</td><td class="tier">$100<br><span style="font-size: 0.75rem; opacity: 0.7;">self-drive 2 estates</span></td><td class="tier standard std-mark">$600<br><span style="font-size: 0.75rem; opacity: 0.7;">private driver 3–4 estates + L'Escourtin lunch</span></td><td class="tier">$950<br><span style="font-size: 0.75rem; opacity: 0.7;">luxury driver + Bégude pairing lunch</span></td></tr>
+          <tr><td class="item">Cassis winery tastings · no piano festival this window</td><td class="tier">$60</td><td class="tier standard std-mark">$120<br><span style="font-size: 0.75rem; opacity: 0.7;">2 Cassis estates · piano festival closed Aug 16</span></td><td class="tier">$280<br><span style="font-size: 0.75rem; opacity: 0.7;">3 estates + Marseille opera if running</span></td></tr>
+          <tr><td class="item">Cultural — Cézanne · Cosquer · MuCEM</td><td class="tier">$60</td><td class="tier standard std-mark">$180<br><span style="font-size: 0.75rem; opacity: 0.7;">Cézanne guided + Cosquer + MuCEM</span></td><td class="tier">$380<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Musée Granet + Marseille guided</span></td></tr>
+          <tr><td class="item">Activities · kayak · SUP · spa</td><td class="tier">$100</td><td class="tier standard std-mark">$420<br><span style="font-size: 0.75rem; opacity: 0.7;">Raskas sunset + SUP + Sisley day pass</span></td><td class="tier">$900<br><span style="font-size: 0.75rem; opacity: 0.7;">+ Sisley couples 2-h ritual + scuba</span></td></tr>
+          <tr><td class="item">Marseille nightlife · R2 · Trolleybus · cocktails</td><td class="tier">$80</td><td class="tier standard std-mark">$350<br><span style="font-size: 0.75rem; opacity: 0.7;">R2 + La Caravelle + late dinner Marseille · MANDATORY this window</span></td><td class="tier">$800<br><span style="font-size: 0.75rem; opacity: 0.7;">+ VIP table R2 + Trolleybus + Ciel</span></td></tr>
+          <tr><td class="item">Rental car + fuel + parking + tolls</td><td class="tier">$300</td><td class="tier standard std-mark">$480<br><span style="font-size: 0.75rem; opacity: 0.7;">7-day compact + tolls</span></td><td class="tier">$950<br><span style="font-size: 0.75rem; opacity: 0.7;">EV/upgrade + airport drop</span></td></tr>
+          <tr><td class="item">Cushion / tips / incidentals</td><td class="tier">$200</td><td class="tier standard std-mark">$350</td><td class="tier">$650</td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="total-label">Total · two travelers, all-in</td>
+            <td class="tier">$5,650</td>
+            <td class="standard">$10,810</td>
+            <td class="tier">$22,310</td>
+          </tr>
+        </tfoot>
+      </table>
+      <p class="footnote">
+        <strong>Honest read:</strong> Aug 17–23 Standard ($10,810) runs ~$270 under Aug 11–17 Standard ($11,080) — late-Aug hotel rates soften slightly, no piano festival tickets, smaller cushion for Aug 15 fireworks-night dinner premium pricing. Standard band $11–12K target met. <strong>The trade is structural calendar weakness</strong> — you save ~3% on cost but lose 1.5 score-points (30/39 vs 31.5/39) because the Aug 15 weekend anchors are past. If Villa Madie / hotel / L'Eden Boat / AF65 weren't already locked for this window, the recommendation flexes back to Aug 11–17. They're locked. Maximize on actual strengths: shift the wine day to Wed, make Marseille nightlife mandatory not optional, plan around fire-closure risk, and let Cassis carry the romance + Villa Madie ★★★ piece. <strong>The decision-fatigue default — only pick this window if you don't want to switch from the booked plan.</strong>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Built for Mark · August 17–23, 2026 · LAX origin · booked baseline shifted · Itinerary No. 03A-2 · <a href="../index.html">all trips</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
